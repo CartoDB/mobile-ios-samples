@@ -6,6 +6,6 @@
 @interface  MyVectorElementEventListener : NTVectorElementEventListener
 
 -(void)setMapView:(NTMapView*)mapView vectorDataSource:(NTLocalVectorDataSource*)vectorDataSource;
--(void)onVectorElementClicked:(NTVectorElementClickInfo*)clickInfo;
+-(BOOL)onVectorElementClicked:(NTVectorElementClickInfo*)clickInfo;
 
 @end

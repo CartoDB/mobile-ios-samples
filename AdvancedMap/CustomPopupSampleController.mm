@@ -1,5 +1,5 @@
 #import "VectorMapSampleBaseController.h"
-#import "CustomPopup.h"
+#import "MyCustomPopupHandler.h"
 
 /*
  * A sample demonstrating how to create and use custom popups.
@@ -42,7 +42,17 @@
 	[vectorDataSource add:marker];
 	
 	// Add custom popup
-	CustomPopup* popup = [[CustomPopup alloc] initWithBaseBillboard:marker text:@"custom popup\nattached to marker"];
+    // Create custom style for the popup - use special attachment anchor point a bit right from the center
+    NTPopupStyleBuilder* styleBuilder = [[NTPopupStyleBuilder alloc] init];
+    [styleBuilder setAttachAnchorPointX:0.5f attachAnchorPointY:0];
+    NTPopupStyle* style = [styleBuilder buildStyle];
+
+    // Create custom popup handler that is responsible for drawing and responding to click events
+    MyCustomPopupHandler* popupHandler = [[MyCustomPopupHandler alloc] initWithText:@"custom popup\nattached to marker"];
+    
+    // Create custom popup
+    NTCustomPopup* popup = [[NTCustomPopup alloc] initWithBaseBillboard:marker style:style popupHandler:popupHandler];
+    [popup setAnchorPointX:-1.0f anchorPointY:0.0f];
 	[vectorDataSource add:popup];
 }
 

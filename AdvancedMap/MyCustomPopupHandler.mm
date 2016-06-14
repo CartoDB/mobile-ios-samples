@@ -1,4 +1,4 @@
-#import "CustomPopup.h"
+#import "MyCustomPopupHandler.h"
 
 static const int SCREEN_PADDING = 10;
 static const int POPUP_PADDING = 10;
@@ -9,39 +9,37 @@ static const int TEXT_COLOR = 0xff000000;
 static const int STROKE_COLOR = 0xff000000;
 static const int BACKGROUND_COLOR = 0xffffffff;
 
-@interface CustomPopup ()
-{
-@private
-	NSString* _text;
-	NTPopupStyle* _style;
+@interface MyCustomPopupHandler () {
+
 }
+
+@property( strong, nonatomic) NSString* text;
+
 @end
 
-@implementation CustomPopup
+@implementation MyCustomPopupHandler
 
--(id)initWithBaseBillboard: (NTBillboard*)baseBillboard text: (NSString*)text {
-	// Create custom style for the popup - use special attachment anchor point a bit right from the center
-	NTPopupStyleBuilder* styleBuilder = [[NTPopupStyleBuilder alloc] init];
-	[styleBuilder setAttachAnchorPointX:0.5f attachAnchorPointY:0];
-	NTPopupStyle* style = [styleBuilder buildStyle];
-
-	if (self = [super initWithBaseBillboard:baseBillboard style:style]) {
-		self->_text = text;
-		self->_style = style;
-	}
+-(id)initWithText:(NSString*)text {
+    self = [super init];
+    self.text = text;
 	return self;
 }
 
--(NTBitmap*)drawBitmap: (NTScreenPos*)anchorScreenPos screenWidth: (float)screenWidth screenHeight: (float)screenHeight dpToPX: (float)dpToPX {
-	
-	// Calculate scaled dimensions
-	float pxToDP = 1 / dpToPX;
-	if ([_style isScaleWithDPI]) {
+-(NTBitmap*)onDrawPopup:(NTPopupDrawInfo*)drawInfo
+{
+    NTPopupStyle* style = [[drawInfo getPopup] getStyle];
+
+    // Calculate scaled dimensions
+    float dpToPX = [drawInfo getDPToPX];
+    float pxToDP = 1 / dpToPX;
+	if ([style isScaleWithDPI]) {
 		dpToPX = 1;
 	} else {
 		pxToDP = 1;
 	}
 	
+    float screenWidth = [[drawInfo getScreenBounds] getWidth];
+    float screenHeight = [[drawInfo getScreenBounds] getHeight];
 	screenWidth *= pxToDP;
 	screenHeight *= pxToDP;
 	
@@ -75,7 +73,7 @@ static const int BACKGROUND_COLOR = 0xffffffff;
 	int maxTextWidth = maxPopupWidth - screenPadding * 2 - strokeWidth;
 	
 	// Measure text and description sizes
-	NSString* text = self->_text;
+	NSString* text = self.text;
 	NSLineBreakMode textBreakMode = NSLineBreakByWordWrapping;
 	CGSize textSize = CGSizeMake(0, 0);
 	if (text) {
@@ -110,8 +108,8 @@ static const int BACKGROUND_COLOR = 0xffffffff;
 	// Calculate anchor point and triangle position
 	int triangleOffsetX = 0;
 	int triangleOffsetY = (popupHeight - triangleHeight) / 2;
-	[self setAnchorPointX:-1 anchorPointY:0];
-	
+//	[self setAnchorPointX:-1 anchorPointY:0];
+//
 	// Stroke background
 	[strokeUIColor setStroke];
 	[backgroundPath stroke];
@@ -154,7 +152,7 @@ static const int BACKGROUND_COLOR = 0xffffffff;
 	CGPathRelease(path);
 	UIGraphicsEndImageContext();
 	
-	if (![_style isScaleWithDPI] || ([_style isScaleWithDPI] && dpToPX >= 1)) {
+	if (![style isScaleWithDPI] || ([style isScaleWithDPI] && dpToPX >= 1)) {
 		// The bitmap doesnt have to be power of two if the generated texture will never be
 		// downscaled and thus doesn't need mipmaps
 		return [NTBitmapUtils createBitmapFromUIImage:image];
@@ -163,6 +161,13 @@ static const int BACKGROUND_COLOR = 0xffffffff;
 		// texture rectangle isn't supported
 		return [NTBitmapUtils createBitmapFromUIImage:image];
 	}
+}
+
+-(BOOL)onPopupClicked:(NTPopupClickInfo *)popupClickInfo
+{
+    NTScreenPos* clickPos = [popupClickInfo getElementClickPos];
+    NSLog(@"Popup clicked: %f, %f", [clickPos getX], [clickPos getY]);
+    return YES;
 }
 
 @end

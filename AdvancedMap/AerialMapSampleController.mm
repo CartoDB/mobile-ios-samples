@@ -23,12 +23,13 @@
 	[self.mapView setRotation:0 durationSeconds:0];
 	
 	// Initialize a Bing raster data source
-	NTHTTPTileDataSource* baseRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:1 maxZoom:19 baseURL:@"http://ecn.t3.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=471&mkt=en-US"];
+	NTHTTPTileDataSource* baseRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:1 maxZoom:17 baseURL:@"http://ecn.t3.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=471&mkt=en-US"];
 
 	// Initialize a raster layer with the previous data source
 	NTRasterTileLayer* rasterLayer = [[NTRasterTileLayer alloc] initWithDataSource:baseRasterTileDataSource];
 	//[rasterLayer setPreloading:NO];
-	// Add the previous raster layer to the map
+
+    // Add the previous raster layer to the map
 	[[self.mapView getLayers] add:rasterLayer];
 }
 

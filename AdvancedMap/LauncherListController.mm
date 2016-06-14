@@ -22,7 +22,8 @@
              @{ @"name": @"Clustered Random points", @"controller": @"ClusteredRandomPointsController" },
              @{ @"name": @"Clustered GeoJSON points", @"controller": @"ClusteredGeoJsonController" },
              @{ @"name": @"Offline Routing", @"controller": @"OfflineRoutingController" },
-             ];
+             @{ @"name": @"Carto VisJSON Sample", @"controller": @"CartoVisJSONSampleController" },
+            ];
 }
 
 - (void)loadView

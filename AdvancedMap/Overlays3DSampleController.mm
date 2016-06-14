@@ -51,12 +51,14 @@
 	[polygon3D setMetaDataElement:@"ClickText" element:@"3D Polygon"];
 	[vectorDataSource add:polygon3D];
 	
-	//Add a 3D model database layer
+    /*
+	// Add a 3D model database layer - this is only supported in special SDK build
 	NSString* fullpath = [[NSBundle mainBundle] pathForResource:@"saku_ios_4bpp" ofType:@"nmldb"];
 	NTSqliteNMLModelLODTreeDataSource* nmlDataSource = [[NTSqliteNMLModelLODTreeDataSource alloc] initWithProjection:proj fileName:fullpath];
 	NTNMLModelLODTreeLayer* nmlLayer = [[NTNMLModelLODTreeLayer alloc] initWithDataSource:nmlDataSource];
 	[nmlLayer setVisibleZoomRange:[[NTMapRange alloc] initWithMin:12 max:25]];
 	[[self.mapView getLayers] add:nmlLayer];
+    */
 	
 	// Add a single 3D model to map
 	NTBinaryData* modelData = [NTAssetUtils loadAsset:@"fcd_auto.nml"];

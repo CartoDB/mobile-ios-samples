@@ -19,7 +19,7 @@
     _vectorDataSource = vectorDataSource;
 }
 
--(void)onVectorElementClicked:(NTVectorElementClickInfo*)clickInfo
+-(BOOL)onVectorElementClicked:(NTVectorElementClickInfo*)clickInfo
 {
     // Remove old click label
     if (_oldClickLabel)
@@ -51,7 +51,7 @@
     if ([vectorElement isKindOfClass:[NTBalloonPopup class]]){
         if([clickText isEqualToString:@"cluster"]){
             [_mapView zoom:2.0f targetPos:[clickInfo getElementClickPos] durationSeconds:0.5f];
-            return;
+            return YES;
         }
     }
     
@@ -77,6 +77,7 @@
     _oldClickLabel = clickPopup;
     
     NSLog(@"Vector element clicked, metadata : '%@' desc %@", clickText, desc);
+    return YES;
 }
 
 @end
