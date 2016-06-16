@@ -6,11 +6,11 @@
  * A sample demonstrating how to use high-level Carto VisJSON API.
  * A list of different visjson URLs can be selected from the menu.
  * CartoVisLoader class is used to load and configure all corresponding layers.
- * Items on overlay layers are clickable, this is implemented using
+ * Items on overlay layers are clickable, this is implemented using custom UTFGridEventListener.
  */
 @interface CartoVisJSONSampleController : MapSampleBaseController
 
-@property NSString* visjsonURL;
+@property NSString* visJSONURL;
 
 @end
 
@@ -39,7 +39,7 @@
 
 @implementation CartoVisJSONSampleController
 
--(NSDictionary*)visjsonURLs
+-(NSDictionary*)visJSONURLs
 {
     return @{
              @"circle": @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json",
@@ -62,11 +62,13 @@
         
         // Create VIS loader
         NTCartoVisLoader* loader = [[NTCartoVisLoader alloc] init];
+        [loader setDefaultVectorLayerMode:YES];
         MyCartoVisBuilder* visBuilder = [[MyCartoVisBuilder alloc] init];
         visBuilder.vectorLayer = vectorLayer;
         visBuilder.mapView = self.mapView;
-        [loader loadVis:visBuilder visURL:self.visjsonURL];
+        [loader loadVis:visBuilder visURL:self.visJSONURL];
         
+        // Add the created popup overlay layer on top of all visJSON layers
         [[self.mapView getLayers] add:vectorLayer];
     });
 }
@@ -92,7 +94,7 @@
     [NTLog setShowInfo:true];
 
     // Set default vis
-    self.visjsonURL = @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json";
+    self.visJSONURL = @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json";
     [self updateVis];
     
     // Create menu
@@ -134,6 +136,16 @@
 
 @implementation MyCartoVisBuilder
 
+-(void)setCenter:(NTMapPos *)mapPos
+{
+    [self.mapView setFocusPos:[[[self.mapView getOptions] getBaseProjection] fromWgs84:mapPos] durationSeconds:1.0f];
+}
+
+-(void)setZoom:(float)zoom
+{
+    [self.mapView setZoom:zoom durationSeconds:1.0f];
+}
+
 -(void)addLayer:(NTLayer *)layer attributes:(NTVariant *)attributes
 {
     // Add the layer to the map view
@@ -161,13 +173,13 @@
         self.sampleController = sampleController;
         
         // Custom initialization
-        NSInteger selectedVis = [[[sampleController visjsonURLs] allValues] indexOfObject:sampleController.visjsonURL];
+        NSInteger selectedVis = [[[sampleController visJSONURLs] allValues] indexOfObject:sampleController.visJSONURL];
         _dropDownVis = [[VPPDropDown alloc] initSelectionWithTitle:@"Sample"
                                                             tableView:self.tableView
                                                             indexPath:[NSIndexPath indexPathForRow:0 inSection:0]
                                                             delegate:self
                                                             selectedIndex:(int)selectedVis
-                                                            elementTitles:[[sampleController visjsonURLs] allKeys]];
+                                                            elementTitles:[[sampleController visJSONURLs] allKeys]];
         [_dropDownVis setExpanded:YES];
     }
     return self;
@@ -206,7 +218,7 @@
 - (void) dropDown:(VPPDropDown *)dropDown elementSelected:(VPPDropDownElement *)element atGlobalIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell* cell = [[self tableView] cellForRowAtIndexPath:indexPath];
     if (dropDown == _dropDownVis) {
-        self.sampleController.visjsonURL = [[self.sampleController visjsonURLs] objectForKey:cell.textLabel.text];
+        self.sampleController.visJSONURL = [[self.sampleController visJSONURLs] objectForKey:cell.textLabel.text];
         [self.sampleController updateVis];
         [self.navigationController popViewControllerAnimated:YES];
     }
