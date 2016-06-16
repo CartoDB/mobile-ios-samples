@@ -165,7 +165,7 @@
 }
 
 -(void)setStart:(NTMapPos *)mapPos{
-    [_routeDataSource removeAll];
+    [_routeDataSource clear];
     [_stopMarker setVisible:NO];
     [_startMarker setPos:mapPos];
     [_startMarker setVisible:YES];

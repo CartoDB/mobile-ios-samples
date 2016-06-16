@@ -113,7 +113,7 @@
 -(BOOL)onUTFGridClicked:(NTUTFGridClickInfo *)utfGridClickInfo
 {
     NTLocalVectorDataSource* dataSource = (NTLocalVectorDataSource*)[self.vectorLayer getDataSource];
-    [dataSource removeAll];
+    [dataSource clear];
     
     NTBalloonPopup* clickPopup = [[NTBalloonPopup alloc] init];
     NTBalloonPopupStyleBuilder* styleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
