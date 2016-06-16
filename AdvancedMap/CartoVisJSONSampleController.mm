@@ -45,7 +45,12 @@
              @"circle": @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json",
              @"test": @"http://documentation.cartodb.com/api/v2/viz/3ec995a8-b6ae-11e4-849e-0e4fddd5de28/viz.json",
              @"countries": @"http://documentation.cartodb.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json",
-             @"dots": @"https://documentation.cartodb.com/api/v2/viz/236085de-ea08-11e2-958c-5404a6a683d5/viz.json"
+             @"dots": @"https://documentation.cartodb.com/api/v2/viz/236085de-ea08-11e2-958c-5404a6a683d5/viz.json",
+             @"puffers": @"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/48569e58-2cc4-11e6-b1fa-0e31c9be1b51/viz.json",
+             @"israel":@"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/8336e3ee-267e-11e6-8410-0e787de82d45/viz.json",
+             @"micello": @"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/69f3eebe-33b6-11e6-8634-0e5db1731f59/viz.json",
+             @"tinmap": @"https://team.cartodb.com/u/abel/api/v2/viz/f35f0a90-1781-11e6-a32d-0ecd1babdde5/viz.json"
+             
              };
 }
 
