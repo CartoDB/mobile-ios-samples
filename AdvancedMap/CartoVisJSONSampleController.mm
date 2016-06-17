@@ -11,6 +11,7 @@
 @interface CartoVisJSONSampleController : MapSampleBaseController
 
 @property NSString* visJSONURL;
+@property NTAssetPackage* fontsAssetPackage;
 
 @end
 
@@ -67,6 +68,7 @@
         
         // Create VIS loader
         NTCartoVisLoader* loader = [[NTCartoVisLoader alloc] init];
+        [loader setVectorTileAssetPackage:self.fontsAssetPackage];
         [loader setDefaultVectorLayerMode:YES];
         MyCartoVisBuilder* visBuilder = [[MyCartoVisBuilder alloc] init];
         visBuilder.vectorLayer = vectorLayer;
@@ -97,6 +99,10 @@
 
     [NTLog setShowDebug:true];
     [NTLog setShowInfo:true];
+    
+    // Load fonts package
+    NTBinaryData* fontsData = [NTAssetUtils loadAsset:@"carto-fonts.zip"];
+    self.fontsAssetPackage = [[NTZippedAssetPackage alloc] initWithZipData:fontsData];
 
     // Set default vis
     self.visJSONURL = @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json";
