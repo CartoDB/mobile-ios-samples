@@ -10,18 +10,18 @@
     return @[
              @{ @"name": @"Pin Sample", @"controller": @"PinSampleController" },
              @{ @"name": @"2D OverlaysSample", @"controller": @"Overlays2DSampleController" },
-             @{ @"name": @"Map Listener Sample", @"controller": @"MapListenerSampleController" },
              @{ @"name": @"3D Overlays Sample", @"controller": @"Overlays3DSampleController" },
+             @{ @"name": @"Map Listener Sample", @"controller": @"MapListenerSampleController" },
              @{ @"name": @"Offline Vector Map Sample", @"controller": @"OfflineVectorMapSampleController" },
+             @{ @"name": @"Offline Routing", @"controller": @"OfflineRoutingController" },
+             @{ @"name": @"Package Manager Sample", @"controller": @"PackageManagerController" },
              @{ @"name": @"Aerial Map Sample", @"controller": @"AerialMapSampleController" },
              @{ @"name": @"Hillshade Topo Map Sample", @"controller": @"HillshadeSampleController" },
-             @{ @"name": @"Custom Raster Data Source Sample", @"controller": @"CustomRasterDataSourceSampleController" },
              @{ @"name": @"Ground Overlay Sample", @"controller": @"GroundOverlaySampleController" },
+             @{ @"name": @"Custom Raster Data Source Sample", @"controller": @"CustomRasterDataSourceSampleController" },
              @{ @"name": @"Custom Popup Sample", @"controller": @"CustomPopupSampleController" },
-             @{ @"name": @"Package Manager Sample", @"controller": @"PackageManagerController" },
              @{ @"name": @"Clustered Random points", @"controller": @"ClusteredRandomPointsController" },
              @{ @"name": @"Clustered GeoJSON points", @"controller": @"ClusteredGeoJsonController" },
-             @{ @"name": @"Offline Routing", @"controller": @"OfflineRoutingController" },
              @{ @"name": @"Carto VisJSON Sample", @"controller": @"CartoVisJSONSampleController" },
             ];
 }

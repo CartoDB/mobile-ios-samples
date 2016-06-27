@@ -224,7 +224,7 @@
             // show line
             NTLine* routeLine = [self calculateRouteLine: route];
             
-            [routeLine setMetaDataElement:@"desc" element:routeDesc];
+            [routeLine setMetaDataElement:@"desc" element:[[NTVariant alloc] initWithString:routeDesc]];
             
             [_routeDataSource add: routeLine];
             
@@ -305,8 +305,8 @@
     
     NTMarker* marker = [[NTMarker alloc] initWithPos:pos style:style];
     
-    [marker setMetaDataElement:@"desc" element:desc];
-    [marker setMetaDataElement:@"title" element:str];
+    [marker setMetaDataElement:@"desc" element:[[NTVariant alloc] initWithString:desc]];
+    [marker setMetaDataElement:@"title" element:[[NTVariant alloc] initWithString:str]];
     
     NSLog(@"Instruction: %@ (%@)", str, desc);
     
@@ -317,7 +317,7 @@
  
     // style for the line
     NTLineStyleBuilder* lineStyleBuilder = [[NTLineStyleBuilder alloc] init];
-    [lineStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFF444444]];
+    [lineStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFF888888]];
     [lineStyleBuilder setWidth:12];
     
     return [[NTLine alloc] initWithPoses:[result getPoints] style:[lineStyleBuilder buildStyle]];
@@ -383,8 +383,8 @@
     // Check the type of vector element
     NTVectorElement* vectorElement = [clickInfo getVectorElement];
     
-    NSString* desc = [vectorElement getMetaDataElement:@"desc"];
-    NSString* title = [vectorElement getMetaDataElement:@"title"];
+    NSString* desc = [[vectorElement getMetaDataElement:@"desc"] getString];
+    NSString* title = [[vectorElement getMetaDataElement:@"title"] getString];
     
     if([desc isEqualToString:@""]){
         return;

@@ -115,7 +115,8 @@
             
             // add all properties as MetaData, so you can use it with click handling
             for (NSString *key in [properties allKeys]) {
-                [popup1 setMetaDataElement:key element:[NSString stringWithFormat:@"%@",[properties valueForKey:key]]];
+                NTVariant* value = [[NTVariant alloc] initWithString:[properties valueForKey:key]];
+                [popup1 setMetaDataElement:key element:value];
             }
             
             [geometryDataSource add:popup1];
@@ -173,7 +174,7 @@
                                                                  title:title
                                                                   desc:desc];
     // set ClickText to enable zoom in for marker
-    [clusterPopup setMetaDataElement:@"ClickText" element:@"cluster"];
+    [clusterPopup setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"cluster"]];
     return clusterPopup;
 }
 

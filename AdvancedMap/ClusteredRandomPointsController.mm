@@ -112,7 +112,7 @@
     }
     
     NTMarker* marker = [[NTMarker alloc] initWithPos:mapPos style:markerStyle];
-    [marker setMetaDataElement:@"elements" element:[@([elements size]) stringValue]];
+    [marker setMetaDataElement:@"elements" element:[[NTVariant alloc] initWithLongVal:[elements size]]];
     return marker;
 }
 

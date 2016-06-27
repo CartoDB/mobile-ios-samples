@@ -1,4 +1,9 @@
 #import "VectorMapSampleBaseController.h"
+#import "MyMapEventListener.h"
+#import "MyVectorElementEventListener.h"
+
+#import <CartoMobileSDK/NTSqliteNMLModelLODTreeDataSource.h>
+#import <CartoMobileSDK/NTNMLModelLODTreeLayer.h>
 
 /**
  * A sample demonstrating how to use 3D vector elements:
@@ -28,7 +33,8 @@
 	
 	// Create 3D polygon style and poses
 	NTPolygon3DStyleBuilder* polygon3DStyleBuilder = [[NTPolygon3DStyleBuilder alloc] init];
-	[polygon3DStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFF3333FF]];
+	[polygon3DStyleBuilder setColor:[[NTColor alloc] initWithColor:0x803333FF]];
+    [polygon3DStyleBuilder setSideColor:[[NTColor alloc] initWithColor:0xFFFFFFFF]];
 	
 	NTMapPosVector* polygon3DPoses = [[NTMapPosVector alloc] init];
 	[polygon3DPoses add:[proj fromWgs84:[[NTMapPos alloc] initWithX:24.635930 y:59.416659]]];
@@ -48,26 +54,50 @@
 	
 	// Add to datasource
 	NTPolygon3D* polygon3D = [[NTPolygon3D alloc] initWithGeometry:[[NTPolygonGeometry alloc] initWithPoses:polygon3DPoses holes:polygon3DHoles] style:[polygon3DStyleBuilder buildStyle] height: 150];
-	[polygon3D setMetaDataElement:@"ClickText" element:@"3D Polygon"];
+	[polygon3D setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Polygon3D"]];
 	[vectorDataSource add:polygon3D];
 	
-    /*
+    
 	// Add a 3D model database layer - this is only supported in special SDK build
+    /*
 	NSString* fullpath = [[NSBundle mainBundle] pathForResource:@"saku_ios_4bpp" ofType:@"nmldb"];
 	NTSqliteNMLModelLODTreeDataSource* nmlDataSource = [[NTSqliteNMLModelLODTreeDataSource alloc] initWithProjection:proj fileName:fullpath];
 	NTNMLModelLODTreeLayer* nmlLayer = [[NTNMLModelLODTreeLayer alloc] initWithDataSource:nmlDataSource];
 	[nmlLayer setVisibleZoomRange:[[NTMapRange alloc] initWithMin:12 max:25]];
 	[[self.mapView getLayers] add:nmlLayer];
     */
+    
+    //[[self.mapView getOptions] setMainLightColor:[[NTColor alloc] initWithColor:0xff202020]];
 	
 	// Add a single 3D model to map
-	NTBinaryData* modelData = [NTAssetUtils loadAsset:@"fcd_auto.nml"];
-	NTMapPos* pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.424939]];
-	NTNMLModel* model = [[NTNMLModel alloc] initWithPos:pos sourceModelData:modelData];
-	[model setMetaDataElement:@"ClickText" element:@"My nice car"];
-	// oversize it 10*, just to make it more visible
-	[model setScale:10];
-	[vectorDataSource add:model];
+    NSArray* assets = @[@"fcd_auto.nml"];
+    int counter = 0;
+    for (NSString* asset in assets) {
+        NTBinaryData* modelData = [NTAssetUtils loadAsset:asset];
+        float dx = (counter++) * 0.001f;
+        NTMapPos* pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469+dx y:59.424939]];
+        NTNMLModel* model = [[NTNMLModel alloc] initWithPos:pos sourceModelData:modelData];
+        [model setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"NMLModel"]];
+        // oversize it 10*, just to make it more visible
+        [model setScale:10];
+        [vectorDataSource add:model];
+    }
+
+    // Create a map event listener
+    MyMapEventListener* mapListener = [[MyMapEventListener alloc] init];
+    [mapListener setMapView:self.mapView vectorDataSource:vectorDataSource];
+    [self.mapView setMapEventListener:mapListener];
+    
+    // Create vector element event listener
+    MyVectorElementEventListener* vectorElementListener = [[MyVectorElementEventListener alloc] init];
+    [vectorElementListener setMapView:self.mapView vectorDataSource:vectorDataSource];
+    for (int i = 0; i < [[self.mapView getLayers] count]; i++) {
+        NTLayer* layer = [[self.mapView getLayers] get:i];
+        if ([layer isKindOfClass:[NTVectorLayer class]]) {
+            NTVectorLayer* vectorLayer = (NTVectorLayer*) layer;
+            [vectorLayer setVectorElementEventListener:vectorElementListener];
+        }
+    }
 }
 
 @end

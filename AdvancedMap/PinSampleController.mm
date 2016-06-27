@@ -37,7 +37,7 @@
 	// First marker
 	NTMapPos* pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.426939]];
 	NTMarker* marker = [[NTMarker alloc] initWithPos:pos style:sharedMarkerStyle];
-	[marker setMetaDataElement:@"ClickText" element:@"Marker nr 1"];
+	[marker setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Marker nr 1"]];
 	[vectorDataSource add:marker];
 }
 

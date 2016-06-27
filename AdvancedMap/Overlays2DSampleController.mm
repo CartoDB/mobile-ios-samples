@@ -47,7 +47,7 @@
 	NTMapPos* pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.651488 y:59.423581]];
 	// Add to datasource
 	NTPoint* point1 = [[NTPoint alloc] initWithPos:pos style:[pointStyleBuilder buildStyle]];
-	[point1 setMetaDataElement:@"ClickText" element:@"Point nr 1"];
+    [point1 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Point nr 1"]];
 	[vectorDataSource1 add:point1];
 	
 	// Second point, create style and position
@@ -56,7 +56,7 @@
 	pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.655994 y:59.422716]];
 	// Add to datasource
 	NTPoint* point2 = [[NTPoint alloc] initWithPos:pos style:[pointStyleBuilder buildStyle]];
-	[point2 setMetaDataElement:@"ClickText" element:@"Point nr 2"];
+	[point2 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Point nr 2"]];
 	[vectorDataSource1 add:point2];
 	
 	// First line, create style and positions
@@ -73,7 +73,7 @@
 	[linePoses add:[proj fromWgs84:[[NTMapPos alloc] initWithX:24.650887 y:59.422707]]];
 	// Add to datasource
 	NTLine* line1 = [[NTLine alloc] initWithGeometry:[[NTLineGeometry alloc] initWithPoses:linePoses] style:[lineStyleBuilder buildStyle]];
-	[line1 setMetaDataElement:@"ClickText" element:@"Line nr 1"];
+	[line1 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Line nr 1"]];
 	[vectorDataSource2 add:line1];
 	
 	// Second line, create style, reuse the same line position
@@ -84,7 +84,7 @@
 	[lineStyleBuilder setWidth:12];
 	// Add to datasource
 	NTLine* line2 = [[NTLine alloc] initWithGeometry:[[NTLineGeometry alloc] initWithPoses:linePoses] style:[lineStyleBuilder buildStyle]];
-	[line2 setMetaDataElement:@"ClickText" element:@"Line nr 2"];
+    [line2 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Line nr 2"]];
 	[vectorDataSource1 add:line2];
 	
 	// Create polygon style and poses
@@ -120,7 +120,7 @@
     [holes add:holePoses2];
 	// Add to datasource
 	NTPolygon* polygon = [[NTPolygon alloc] initWithGeometry:[[NTPolygonGeometry alloc] initWithPoses:polygonPoses holes:holes] style:[polygonStyleBuilder buildStyle]];
-	[polygon setMetaDataElement:@"ClickText" element:@"Polygon"];
+	[polygon setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Polygon"]];
 	[vectorDataSource1 add:polygon];
 	
 	// Load bitmaps for custom markers
@@ -138,7 +138,7 @@
 	NTText* text1 = [[NTText alloc] initWithPos:pos
 										  style:[textStyleBuilder buildStyle]
 										   text:@"Face camera"];
-	[text1 setMetaDataElement:@"ClickText" element:@"Text nr 1"];
+	[text1 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Text nr 1"]];
 	[vectorDataSource1 add:text1];
 	// Add text
 	textStyleBuilder = [[NTTextStyleBuilder alloc] init];
@@ -147,7 +147,7 @@
 	NTText* text2 = [[NTText alloc] initWithPos:pos
 										  style:[textStyleBuilder buildStyle]
 										   text:@"Face camera ground"];
-	[text2 setMetaDataElement:@"ClickText" element:@"Text nr 2"];
+	[text2 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Text nr 2"]];
 	[vectorDataSource1 add:text2];
 	// Add text
 	textStyleBuilder = [[NTTextStyleBuilder alloc] init];
@@ -157,7 +157,7 @@
 	NTText* text3 = [[NTText alloc] initWithPos:pos
 										  style:[textStyleBuilder buildStyle]
 										   text:@"Ground"];
-	[text3 setMetaDataElement:@"ClickText" element:@"Text nr 3"];
+	[text3 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Text nr 3"]];
 	[vectorDataSource1 add:text3];
 	
 	
@@ -169,12 +169,12 @@
 	// First marker
 	pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.426939]];
 	NTMarker* marker1 = [[NTMarker alloc] initWithPos:pos style:sharedMarkerStyle];
-	[marker1 setMetaDataElement:@"ClickText" element:@"Marker nr 1"];
+	[marker1 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Marker nr 1"]];
 	[vectorDataSource1 add:marker1];
 	// Second marker
 	pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.666469 y:59.422939]];
 	NTMarker* marker2 = [[NTMarker alloc] initWithPos:pos style:sharedMarkerStyle];
-	[marker2 setMetaDataElement:@"ClickText" element:@"Marker nr 2"];
+	[marker2 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Marker nr 2"]];
 	[vectorDataSource1 add:marker2];
 	
 	// Load bitmaps to show on the popups
@@ -195,7 +195,7 @@
 														   style:[balloonPopupStyleBuilder buildStyle]
 														   title:@"Popup with pos"
 															desc:@"Images, round"];
-	[popup1 setMetaDataElement:@"ClickText" element:@"Popupcaption nr 1"];
+	[popup1 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Popup nr 1"]];
 	[vectorDataSource1 add:popup1];
 	
 	// Second popup, but instead of giving it a position attach it to a marker
@@ -214,7 +214,7 @@
 																	 style:[balloonPopupStyleBuilder buildStyle]
 																	 title:@"Popup attached to marker"
 																	  desc:@"ru: тест"];
-	[popup2 setMetaDataElement:@"ClickText" element:@"Popupcaption nr 2"];
+	[popup2 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Popup nr 2"]];
 	[vectorDataSource1 add:popup2];
 	
 	// Third popup, create a style and position
@@ -227,7 +227,7 @@
 														   style:[balloonPopupStyleBuilder buildStyle]
 														   title:@"This title will be wrapped if there's not enough space on the screen."
 															desc:@"Description is set to be truncated with three dots, unless the screen is really really big."];
-	[popup3 setMetaDataElement:@"ClickText" element:@"Popupcaption nr 3"];
+	[popup3 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Popup nr 3"]];
 	[vectorDataSource1 add:popup3 ];
 }
 

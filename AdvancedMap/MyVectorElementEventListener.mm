@@ -39,7 +39,7 @@
     // Check the type of vector element
     NTVectorElement* vectorElement = [clickInfo getVectorElement];
     
-    NSString* clickText = [vectorElement getMetaDataElement:@"ClickText"];
+    NSString* clickText = [[vectorElement getMetaDataElement:@"ClickText"] getString];
     
     NSString* desc = @"";
     for(int i=0; i<[[vectorElement getMetaData] size]; i++){
