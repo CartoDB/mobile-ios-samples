@@ -62,8 +62,8 @@
 	// First line, create style and positions
 	NTLineStyleBuilder* lineStyleBuilder = [[NTLineStyleBuilder alloc] init];
 	[lineStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFFFFFFFF]];
-	[lineStyleBuilder setLineJointType:NT_LINE_JOINT_TYPE_ROUND];
-	[lineStyleBuilder setStretchFactor:2];
+	[lineStyleBuilder setLineJoinType:NT_LINE_JOIN_TYPE_ROUND];
+    [lineStyleBuilder setLineEndType:NT_LINE_END_TYPE_SQUARE];
 	[lineStyleBuilder setWidth:8];
 	NTMapPosVector* linePoses = [[NTMapPosVector alloc] init];
 	[linePoses add:[proj fromWgs84:[[NTMapPos alloc] initWithX:24.645565 y:59.422074]]];
@@ -79,6 +79,8 @@
 	// Second line, create style, reuse the same line position
 	lineStyleBuilder = [[NTLineStyleBuilder alloc] init];
 	[lineStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFFCC0F00]];
+    [lineStyleBuilder setLineJoinType:NT_LINE_JOIN_TYPE_ROUND];
+    [lineStyleBuilder setLineEndType:NT_LINE_END_TYPE_SQUARE];
 	[lineStyleBuilder setWidth:12];
 	// Add to datasource
 	NTLine* line2 = [[NTLine alloc] initWithGeometry:[[NTLineGeometry alloc] initWithPoses:linePoses] style:[lineStyleBuilder buildStyle]];

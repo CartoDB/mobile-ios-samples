@@ -66,8 +66,6 @@
 	// First line, create style and positions
 	NTLineStyleBuilder* lineStyleBuilder = [[NTLineStyleBuilder alloc] init];
 	[lineStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFFFFFFFF]];
-	[lineStyleBuilder setLineJointType:NT_LINE_JOINT_TYPE_ROUND];
-	[lineStyleBuilder setStretchFactor:2];
 	[lineStyleBuilder setWidth:8];
 	NTMapPosVector* linePoses = [[NTMapPosVector alloc] init];
 	[linePoses add:[proj fromWgs84:[[NTMapPos alloc] initWithX:24.645565 y:59.422074]]];

@@ -318,8 +318,6 @@
     // style for the line
     NTLineStyleBuilder* lineStyleBuilder = [[NTLineStyleBuilder alloc] init];
     [lineStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFF444444]];
-    [lineStyleBuilder setLineJointType:NT_LINE_JOINT_TYPE_ROUND];
-    [lineStyleBuilder setStretchFactor:2];
     [lineStyleBuilder setWidth:12];
     
     return [[NTLine alloc] initWithPoses:[result getPoints] style:[lineStyleBuilder buildStyle]];
