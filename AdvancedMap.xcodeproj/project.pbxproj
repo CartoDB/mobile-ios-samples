@@ -61,8 +61,6 @@
 		4D4B1F651D082583001C2F30 /* CartoVisJSONSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */; };
 		4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */; };
 		4D9AB3A21D13E3680093A4CF /* carto-fonts.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */; };
-		4D9AB3AB1D1875C10093A4CF /* car1.nml in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AB3A91D1875C00093A4CF /* car1.nml */; };
-		4D9AB3AC1D1875C10093A4CF /* car2.nml in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AB3AA1D1875C10093A4CF /* car2.nml */; };
 		4DAF41AF1AD3C307004E7092 /* GroundOverlaySampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */; };
 		4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
 		4DC8500C1A0E77CA00C5124F /* VectorMapSampleBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */; };
@@ -145,8 +143,6 @@
 		4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CartoVisJSONSampleController.mm; path = AdvancedMap/CartoVisJSONSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageManagerController.mm; path = AdvancedMap/PackageManagerController.mm; sourceTree = SOURCE_ROOT; };
 		4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "carto-fonts.zip"; path = "AdvancedMap/Assets/carto-fonts.zip"; sourceTree = SOURCE_ROOT; };
-		4D9AB3A91D1875C00093A4CF /* car1.nml */ = {isa = PBXFileReference; lastKnownFileType = file; name = car1.nml; path = AdvancedMap/Assets/car1.nml; sourceTree = SOURCE_ROOT; };
-		4D9AB3AA1D1875C10093A4CF /* car2.nml */ = {isa = PBXFileReference; lastKnownFileType = file; name = car2.nml; path = AdvancedMap/Assets/car2.nml; sourceTree = SOURCE_ROOT; };
 		4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GroundOverlaySampleController.mm; path = AdvancedMap/GroundOverlaySampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850071A0E718100C5124F /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LauncherListController.mm; path = AdvancedMap/LauncherListController.mm; sourceTree = SOURCE_ROOT; };
 		4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VectorMapSampleBaseController.h; path = AdvancedMap/VectorMapSampleBaseController.h; sourceTree = SOURCE_ROOT; };
@@ -252,8 +248,6 @@
 		4D4B1F281D018BB6001C2F30 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				4D9AB3A91D1875C00093A4CF /* car1.nml */,
-				4D9AB3AA1D1875C10093A4CF /* car2.nml */,
 				4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */,
 				4D4B1F291D018BC7001C2F30 /* 852-map-toolbar.png */,
 				4D4B1F2A1D018BC7001C2F30 /* 852-map-toolbar@2x.png */,
@@ -410,7 +404,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D9AB3AB1D1875C10093A4CF /* car1.nml in Resources */,
 				4D4B1F441D018BC7001C2F30 /* 852-map-toolbar.png in Resources */,
 				4D4B1F5E1D018BC7001C2F30 /* saku_ios_4bpp.nmldb in Resources */,
 				4D4B1F5D1D018BC7001C2F30 /* rome_ntvt.mbtiles in Resources */,
@@ -440,7 +433,6 @@
 				4D4B1F4E1D018BC7001C2F30 /* direction_upthenright.png in Resources */,
 				4D4B1F571D018BC7001C2F30 /* menu.png in Resources */,
 				4D4B1F5A1D018BC7001C2F30 /* nutibright-contourstyle.zip in Resources */,
-				4D9AB3AC1D1875C10093A4CF /* car2.nml in Resources */,
 				4D4B1F521D018BC7001C2F30 /* jefferson-building-ground-floor.jpg in Resources */,
 				4D4B1F4A1D018BC7001C2F30 /* capitals_3857.geojson in Resources */,
 				4D4B1F5C1D018BC7001C2F30 /* nutiteq-dark.zip in Resources */,
