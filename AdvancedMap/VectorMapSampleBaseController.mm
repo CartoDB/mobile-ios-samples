@@ -33,8 +33,9 @@
 {
     return @{
              @"Basic":		   @"basic",
-             @"NutiBright 2D": @"nutibright-v2a",
-             @"Nutiteq dark": @"nutiteq-dark",
+             @"NutiBright 2D": @"nutibright-v3:default",
+             @"Nutiteq dark": @"nutibright-v3:nutiteq_dark",
+             @"Nutiteq grey": @"nutibright-v3:nutiteq_grey",
              @"NutiBright 3D": @"nutibright3d",
              @"Loose Leaf":	   @"looseleaf"
              };
@@ -55,21 +56,50 @@
 
 - (void)updateBaseLayer
 {
-    // Load vector tile styleset
-    NSString* styleAssetName = [self.vectorStyleName stringByAppendingString: @".zip"];
+
+
+    NTCompiledStyleSet *vectorTileStyleSet;
+    
     BOOL styleBuildings3D = NO;
-    if ([self.vectorStyleName isEqualToString:@"nutibright3d"]) {
-        styleAssetName = @"nutibright-v2a.zip";
+    
+    NSString *vectorStyle = self.vectorStyleName;
+    
+    if ([vectorStyle isEqualToString:@"nutibright3d"]) {
+        vectorStyle = @"nutibright-v3:default";
         styleBuildings3D = YES;
     }
-    NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
-    NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
-    NTCompiledStyleSet *vectorTileStyleSet = [[NTCompiledStyleSet alloc] initWithAssetPackage:assetPackage];
+    
+    if([vectorStyle containsString:@":"]){
+        
+        // Load vector tile styleset, consider also inner style for multi-style package
+        
+        NSArray *elements = [vectorStyle componentsSeparatedByString: @":"];
+        NSString *fileName = elements[0];
+        NSString *styleName = elements[1];
+        
+        NSString* styleAssetName = [fileName stringByAppendingString: @".zip"];
+        
+        NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
+        NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
+        
+        vectorTileStyleSet = [[NTCompiledStyleSet alloc] initWithAssetPackage:assetPackage styleName:styleName];
+        
+    }else{
+        
+        // others are single style packages
+        
+        NSString* styleAssetName = [vectorStyle stringByAppendingString: @".zip"];
+        NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
+        NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
+        vectorTileStyleSet = [[NTCompiledStyleSet alloc] initWithAssetPackage:assetPackage];
+        
+    }
     
     // Create vector tile decoder using the styleset and update style parameters
     self.vectorTileDecoder = [[NTMBVectorTileDecoder alloc] initWithCompiledStyleSet:vectorTileStyleSet];
     [self.vectorTileDecoder setStyleParameter:@"lang" value:self.vectorStyleLanguage];
-    if ([styleAssetName isEqualToString:@"nutibright-v2a.zip"] && styleBuildings3D) { // only OSM Bright style supports this currently
+    
+    if (styleBuildings3D) { // only OSM Bright style supports this currently
         [self.vectorTileDecoder setStyleParameter:@"buildings3d" value:@"1"];
     }
     
@@ -125,7 +155,7 @@
     [self.mapView setRotation:0 durationSeconds:0];
     
     // Set default style parameters and create base layer
-    self.vectorStyleName = @"nutibright-v2a";
+    self.vectorStyleName = @"nutibright-v3:default";
     self.vectorStyleLanguage = @"";
     [self updateBaseLayer];
     

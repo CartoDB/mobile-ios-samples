@@ -44,7 +44,7 @@
     NSString* desc = @"";
     for(int i=0; i<[[vectorElement getMetaData] size]; i++){
         NSString* key =[[vectorElement getMetaData] get_key:i];
-        desc = [NSString stringWithFormat:@"%@%@ = %@\n", desc, key, [[vectorElement getMetaData] get:key]];
+        desc = [NSString stringWithFormat:@"%@%@ = %@", desc, key, [[vectorElement getMetaData] get:key]];
     }
     
     // zoom in for cluster clicks
