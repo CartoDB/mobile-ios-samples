@@ -108,7 +108,7 @@
     
     // We don't use vectorTileDataSource directly (this would be also option),
     // but via caching to cache data locally non-persistently
-    NTTileDataSource* cacheDataSource = [[NTCompressedCacheTileDataSource alloc] initWithDataSource:vectorTileDataSource];
+    NTTileDataSource* cacheDataSource = [[NTMemoryCacheTileDataSource alloc] initWithDataSource:vectorTileDataSource];
     return cacheDataSource;
 }
 
