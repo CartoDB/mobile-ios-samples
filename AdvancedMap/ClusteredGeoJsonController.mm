@@ -34,7 +34,7 @@
                                             alloc] initWithDataSource:vectorDataSource
                                            clusterElementBuilder: [[MyClusterElementBuilder alloc] init]];
     
-    [vectorLayer setMinimumClusterDistance: 50]; // default is 100
+    [vectorLayer setMinimumClusterDistance: 75]; // default is 100
     
     // Add the previous vector layer to the map
     [[self.mapView getLayers] add:vectorLayer];
@@ -68,44 +68,24 @@
 
 -(void)readGeoJsonData: (NSString*) fileName forMapView:(NTMapView*)mapView intoDataSource: (NTLocalVectorDataSource*) geometryDataSource
 {
+    NTBalloonPopupStyleBuilder* balloonPopupStyleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
     
     // load and parse JSON
     NSString* fullpath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"geojson"];
     if (fullpath != nil) {
         
-        // input stream for file
-        NSInputStream *is = [[NSInputStream alloc] initWithFileAtPath:fullpath];
-        [is open];
-        
+        // read geojson string
+        NSString* json = [NSString stringWithContentsOfFile:fullpath encoding:NSUTF8StringEncoding error:nil];
+
         // parse geojson
-        NSError* error;
-        NSDictionary* json = [NSJSONSerialization
-                              JSONObjectWithStream:is
-                              options:kNilOptions
-                              error:&error];
-        
-        
         NTGeoJSONGeometryReader* geoJsonReader = [[NTGeoJSONGeometryReader alloc] init];
-        NTBalloonPopupStyleBuilder* balloonPopupStyleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
-        
-        int i=0;
-        NSArray *features = [json valueForKey:@"features"];
-        for (NSDictionary *feature in features) {
-            i++;
+        NTFeatureCollection* featureCollection = [geoJsonReader readFeatureCollection:json];
+        for (int i = 0; i < [featureCollection getFeatureCount]; i++) {
+            NTGeometry *geom = [[featureCollection getFeature:i] getGeometry];
+            NTVariant *properties = [[featureCollection getFeature:i] getProperties];
             
-            NSDictionary *geometry = [feature valueForKey:@"geometry"];
-            NSDictionary *properties = [feature valueForKey:@"properties"];
-            
-            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:geometry
-                                                               options:NSJSONWritingPrettyPrinted
-                                                                 error:nil];
-            
-            NSString* geomJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];;
-            
-            NTGeometry *geom = [geoJsonReader readGeometry:geomJson];
-            
-            NSString *name = [properties valueForKey:@"Capital"];
-            NSString *country = [properties valueForKey:@"Country"];
+            NSString *name = [[properties getObjectElement:@"Capital"] getString];
+            NSString *country = [[properties getObjectElement:@"Country"] getString];
             
             // Create Popup
             NTBalloonPopup* popup1 = [[NTBalloonPopup alloc] initWithGeometry:geom
@@ -114,16 +94,18 @@
                                                             desc:country];
             
             // add all properties as MetaData, so you can use it with click handling
-            for (NSString *key in [properties allKeys]) {
-                NTVariant* value = [[NTVariant alloc] initWithString:[properties valueForKey:key]];
+            NTStringVector* keys = [properties getObjectKeys];
+            for (int j = 0; j < [keys size]; j++) {
+                NSString* key = [keys get:j];
+                NTVariant* value = [properties getObjectElement:key];
                 [popup1 setMetaDataElement:key element:value];
             }
             
             [geometryDataSource add:popup1];
             
         }
-        [NTLog debug:[NSString stringWithFormat:@"Added %d features", i]];
-    }else{
+        [NTLog debug:[NSString stringWithFormat:@"Added %d features", [featureCollection getFeatureCount]]];
+    } else {
         [NTLog error: [NSString stringWithFormat:@"File %@ not found", fileName]];
     }
 }
