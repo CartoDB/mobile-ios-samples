@@ -141,6 +141,11 @@
 
 @implementation MyCartoVisBuilder
 
+-(void)setDescription:(NTVariant *)descriptionInfo
+{
+    NSLog(@"%@",[descriptionInfo description]);
+}
+
 -(void)setCenter:(NTMapPos *)mapPos
 {
     [self.mapView setFocusPos:[[[self.mapView getOptions] getBaseProjection] fromWgs84:mapPos] durationSeconds:1.0f];
