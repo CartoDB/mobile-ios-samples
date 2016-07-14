@@ -36,8 +36,11 @@
              @"NutiBright 2D": @"nutibright-v3:default",
              @"Nutiteq dark": @"nutibright-v3:nutiteq_dark",
              @"Nutiteq grey": @"nutibright-v3:nutiteq_grey",
+             @"NutiBright 2D": @"nutibright-v2a",
+             @"Nutiteq dark":  @"nutiteq-dark",
              @"NutiBright 3D": @"nutibright3d",
-             @"Loose Leaf":	   @"looseleaf"
+             @"Loose Leaf":	   @"looseleaf",
+             @"MapZen":        @"mapzen"
              };
 }
 
@@ -79,9 +82,9 @@
         
         NSString* styleAssetName = [fileName stringByAppendingString: @".zip"];
         
-        NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
-        NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
-        
+    NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
+    NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
+    
         vectorTileStyleSet = [[NTCompiledStyleSet alloc] initWithAssetPackage:assetPackage styleName:styleName];
         
     }else{
@@ -113,9 +116,7 @@
     [self.vectorTileDecoder setStyleParameter:@"contour_width" value:@"0.8"];
     
     // Create tile data source
-    if (!self.vectorTileDataSource) {
-        self.vectorTileDataSource = [self createTileDataSource];
-    }
+    self.vectorTileDataSource = [self createTileDataSource];
     
     // Create vector tile layer, using previously created data source and decoder
     if (self.baseLayer) {
@@ -130,11 +131,16 @@
 - (NTTileDataSource*)createTileDataSource
 {
     // Create global online vector tile data source
-    NTTileDataSource *vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.osm"];
+    NTTileDataSource* vectorTileDataSource;
+    if ([self.vectorStyleName isEqualToString:@"mapzen"]) {
+        vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"mapzen.osm"];
+    } else {
+        vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.osm"];
+    }
     
     // We don't use vectorTileDataSource directly (this would be also option),
     // but via caching to cache data locally non-persistently
-    NTTileDataSource* cacheDataSource = [[NTCompressedCacheTileDataSource alloc] initWithDataSource:vectorTileDataSource];
+    NTTileDataSource* cacheDataSource = [[NTMemoryCacheTileDataSource alloc] initWithDataSource:vectorTileDataSource];
     return cacheDataSource;
 }
 

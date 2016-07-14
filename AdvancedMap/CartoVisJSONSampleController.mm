@@ -127,14 +127,8 @@
     [styleBuilder setPlacementPriority:10];
     
     // Check the type of the click
-    NSString* clickMsg = @"";
-    NTStringMap* elementInfo = [utfGridClickInfo getElementInfo];
-    for (int i = 0; i < [elementInfo size]; i++) {
-        NSString* key = [elementInfo get_key:i];
-        NSString* val = [elementInfo get:key];
-        clickMsg = [NSString stringWithFormat:@"%@%@=%@\n", clickMsg, key, val];
-    }
-    
+    NTVariant* elementInfo = [utfGridClickInfo getElementInfo];
+    NSString* clickMsg = [elementInfo description];    
     clickPopup = [[NTBalloonPopup alloc] initWithPos:[utfGridClickInfo getClickPos]
                                                style:[styleBuilder buildStyle]
                                                title:@"Clicked"
