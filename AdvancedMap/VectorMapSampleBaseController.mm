@@ -36,8 +36,6 @@
              @"NutiBright 2D": @"nutibright-v3:default",
              @"Nutiteq dark": @"nutibright-v3:nutiteq_dark",
              @"Nutiteq grey": @"nutibright-v3:nutiteq_grey",
-             @"NutiBright 2D": @"nutibright-v2a",
-             @"Nutiteq dark":  @"nutiteq-dark",
              @"NutiBright 3D": @"nutibright3d",
              @"Loose Leaf":	   @"looseleaf",
              @"MapZen":        @"mapzen"
