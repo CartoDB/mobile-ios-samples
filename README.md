@@ -1,9 +1,18 @@
-iOS sample app with Carto Mobile SDK 1.0
+iOS sample app with CARTO Mobile SDK 4.0.0
 ========================================
 
-This is sample for Carto Mobile SDK (http://www.cartodb.com), demonstrating several key features.
+This is sample for CARTO Mobile SDK (http://www.carto.com), demonstrating several key features.
 
-## Features
+## Get started
+  1. After downloading/cloning project you need to get SDK itself
+  1. Get SDK package latest dev build: [sdk4-ios-snapshot-latest.zip](https://nutifront.s3.amazonaws.com/sdk_snapshots/sdk4-ios-snapshot-latest.zip)
+  1. Unzip it and copy *CartoMobileSDK.framework*  to the xCode project root folder
+  1. Open project in xCode, and run on emulator or USB-connected iPhone/iPad
+
+## SDK API documentation
+  * TODO
+
+## Samples included
 1. Creating a map
    - set map location and zoom
    - setting some properties
@@ -23,8 +32,7 @@ This is sample for Carto Mobile SDK (http://www.cartodb.com), demonstrating seve
    - Some are coming when you click on map, or some map object
 7. Add 3D data to map
    - Two offline datasets: building in NMLDB (3D city) format, and simple 3D car in NML (3D model) format. You can reposition, rotate etc NML models via code easily.
-
-## Running
-The project requires Carto Mobile SDK. 
+8. **CARTO Viz.json loading**
+   - Load and auto-configure map view based on some sample CARTO viz.json-s.
 
 The app works on iOS 7 or newer.
