@@ -10,7 +10,7 @@ This is sample for CARTO Mobile SDK (http://www.carto.com), demonstrating severa
   1. Open project in xCode, and run on emulator or USB-connected iPhone/iPad
 
 ## SDK API documentation
-  * TODO
+  * The distro zip has generated HTML reference docs in *docObjC* folder
 
 ## Use in your own app
   * You need license code based on your app ID from carto.com account, see **API Keys > Mobile Apps** section in user profile. 
