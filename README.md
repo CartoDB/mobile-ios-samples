@@ -12,6 +12,11 @@ This is sample for CARTO Mobile SDK (http://www.carto.com), demonstrating severa
 ## SDK API documentation
   * TODO
 
+## Use in your own app
+  * You need license code based on your app ID from carto.com account, see **API Keys > Mobile Apps** section in user profile. 
+  * Enabling Mobile Apps currently requires feature flag definition by superadmin!
+
+
 ## Samples included
 1. Creating a map
    - set map location and zoom
