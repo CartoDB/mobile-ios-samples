@@ -1,4 +1,4 @@
-iOS sample app with CARTO Mobile SDK 4.0.0
+iOS sample app with CARTO Mobile SDK 4.x
 ========================================
 
 This is sample for CARTO Mobile SDK (http://www.carto.com), demonstrating several key features.
