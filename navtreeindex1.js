@@ -28,8 +28,9 @@ var NAVTREEINDEX1 =
 "interface_n_t_carto_online_tile_data_source.html#acab4ff13c59efd02cd78287723657272":[2,0,19,3],
 "interface_n_t_carto_online_tile_data_source.html#aece9059ebf6477b48467e6fbfbcfd4a5":[2,0,19,1],
 "interface_n_t_carto_online_vector_tile_layer.html":[2,0,20],
-"interface_n_t_carto_online_vector_tile_layer.html#a224f3122109682f5dee4ae0fba2a4e20":[2,0,20,2],
-"interface_n_t_carto_online_vector_tile_layer.html#a6921ae853eba061672bf8a31190fe998":[2,0,20,1],
+"interface_n_t_carto_online_vector_tile_layer.html#a224f3122109682f5dee4ae0fba2a4e20":[2,0,20,3],
+"interface_n_t_carto_online_vector_tile_layer.html#a2806e737c3c2548bbaa470db8137ec75":[2,0,20,1],
+"interface_n_t_carto_online_vector_tile_layer.html#a6921ae853eba061672bf8a31190fe998":[2,0,20,2],
 "interface_n_t_carto_online_vector_tile_layer.html#ae42b5ee0a2ba497fadc5d4c9b336ae54":[2,0,20,0],
 "interface_n_t_carto_package_manager.html":[2,0,21],
 "interface_n_t_carto_package_manager.html#a7ad3e95c5fc0e205fc11dbc33075d35b":[2,0,21,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "interface_n_t_label_style.html#ab1aba60dd3c922097908d5ecdffcf967":[2,0,47,5],
 "interface_n_t_label_style.html#aba8b1ab1c96c93587ac694e728bb16a7":[2,0,47,0],
 "interface_n_t_label_style.html#abc0b681da43d1d4ac31e490ab0b5312d":[2,0,47,6],
-"interface_n_t_label_style_builder.html":[2,0,48],
-"interface_n_t_label_style_builder.html#a1c9a9e1f15d5e18cd41b7824e2fbdfec":[2,0,48,11]
+"interface_n_t_label_style_builder.html":[2,0,48]
 };

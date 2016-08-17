@@ -89,6 +89,7 @@ var searchData=
   ['initwithsource_3adatafolder_3a',['initWithSource:dataFolder:',['../interface_n_t_carto_package_manager.html#ad1c2b6566c56083415211370eec92472',1,'NTCartoPackageManager']]],
   ['initwithsource_3astyleassetpackage_3a',['initWithSource:styleAssetPackage:',['../interface_n_t_carto_online_vector_tile_layer.html#ae42b5ee0a2ba497fadc5d4c9b336ae54',1,'NTCartoOnlineVectorTileLayer']]],
   ['initwithstring_3a',['initWithString:',['../interface_n_t_variant.html#a14f83d07a3c682c358402f31eb7fa202',1,'NTVariant']]],
+  ['initwithstyle_3a',['initWithStyle:',['../interface_n_t_carto_online_vector_tile_layer.html#a2806e737c3c2548bbaa470db8137ec75',1,'NTCartoOnlineVectorTileLayer']]],
   ['initwithstyleset_3a',['initWithStyleSet:',['../interface_n_t_torque_tile_decoder.html#a3e7394b332c02cbfb05424ae8dcc3f8e',1,'NTTorqueTileDecoder']]],
   ['initwithtolerance_3a',['initWithTolerance:',['../interface_n_t_douglas_peucker_geometry_simplifier.html#a9d2f9f7c9c17b8708497c553edcc74d4',1,'NTDouglasPeuckerGeometrySimplifier']]],
   ['initwithvar_3a',['initWithVar:',['../interface_n_t_package_meta_info.html#aa938d8792f95bbc5cc4186904d9b0574',1,'NTPackageMetaInfo']]],

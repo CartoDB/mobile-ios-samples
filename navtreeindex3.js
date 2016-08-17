@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"interface_n_t_map_vec.html#a92e439f09ce86ae694219b32e264ebaa":[2,0,67,19],
 "interface_n_t_map_vec.html#aa8f45b8feb738848d45d133677e6c8aa":[2,0,67,3],
 "interface_n_t_map_vec.html#ab6dbeb539bb6035ca2b938e509b9b2f0":[2,0,67,9],
 "interface_n_t_map_vec.html#ac7b18f3eb6cf3aaf82c102714739e737":[2,0,67,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "interface_n_t_persistent_cache_tile_data_source.html#ab4e7893ce0f2db3d78ac3dde25fc4213":[2,0,89,10],
 "interface_n_t_persistent_cache_tile_data_source.html#ae3db02f1dd3a596383b6a6c2d62cefb9":[2,0,89,6],
 "interface_n_t_persistent_cache_tile_data_source.html#ae9b5f0fc7640aa7a3c0f4b11b294074c":[2,0,89,9],
-"interface_n_t_persistent_cache_tile_data_source.html#af28162d07ea637e7b0a2c622602d44d0":[2,0,89,0],
-"interface_n_t_persistent_cache_tile_data_source.html#af7d47a8d2dcd0218673dd35af9ba3691":[2,0,89,7]
+"interface_n_t_persistent_cache_tile_data_source.html#af28162d07ea637e7b0a2c622602d44d0":[2,0,89,0]
 };

@@ -22,10 +22,10 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "interface_n_t_carto_maps_service.html#a92d0a29dcd852c1b13df4a521ec03b24",
-"interface_n_t_label_style_builder.html#a1faff0eaa85226843ac2377347ac0e43",
-"interface_n_t_map_vec.html#aa8f45b8feb738848d45d133677e6c8aa",
-"interface_n_t_point.html",
-"interface_n_t_text.html#ac4e38c08000d49afa86500fb33fe9a4d"
+"interface_n_t_label_style_builder.html#a1c9a9e1f15d5e18cd41b7824e2fbdfec",
+"interface_n_t_map_vec.html#a92e439f09ce86ae694219b32e264ebaa",
+"interface_n_t_persistent_cache_tile_data_source.html#af7d47a8d2dcd0218673dd35af9ba3691",
+"interface_n_t_text.html#ab579a0f7711d09d2eab4cbdee1a9551b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
