@@ -1,7 +1,7 @@
-iOS sample app with CARTO Mobile SDK 4.x
-========================================
+iOS sample app with CARTO Mobile SDK 4
+======================================
 
-This is sample for CARTO Mobile SDK (http://www.carto.com), demonstrating several key features.
+This is sample for CARTO Mobile SDK 4.x (http://www.carto.com), demonstrating several key features.
 
 ## Get started
   1. After downloading/cloning project you need to get SDK itself
