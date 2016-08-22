@@ -12,6 +12,7 @@
 
 @property NSString* visJSONURL;
 @property NTAssetPackage* fontsAssetPackage;
+@property NSTimer* timer;
 
 @end
 
@@ -19,6 +20,7 @@
 
 @property NTMapView* mapView;
 @property NTVectorLayer* vectorLayer;
+@property NTTorqueTileLayer* torqueLayer;
 
 @end
 
@@ -44,14 +46,10 @@
 {
     return @{
              @"circle": @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json",
-             @"test": @"http://documentation.cartodb.com/api/v2/viz/3ec995a8-b6ae-11e4-849e-0e4fddd5de28/viz.json",
              @"countries": @"http://documentation.cartodb.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json",
              @"dots": @"https://documentation.cartodb.com/api/v2/viz/236085de-ea08-11e2-958c-5404a6a683d5/viz.json",
-             @"puffers": @"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/48569e58-2cc4-11e6-b1fa-0e31c9be1b51/viz.json",
              @"israel":@"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/8336e3ee-267e-11e6-8410-0e787de82d45/viz.json",
-             @"micello": @"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/69f3eebe-33b6-11e6-8634-0e5db1731f59/viz.json",
-             @"tinmap": @"https://team.cartodb.com/u/abel/api/v2/viz/f35f0a90-1781-11e6-a32d-0ecd1babdde5/viz.json"
-             
+             @"micello": @"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/69f3eebe-33b6-11e6-8634-0e5db1731f59/viz.json"
              };
 }
 
@@ -73,11 +71,36 @@
         MyCartoVisBuilder* visBuilder = [[MyCartoVisBuilder alloc] init];
         visBuilder.vectorLayer = vectorLayer;
         visBuilder.mapView = self.mapView;
+        visBuilder.torqueLayer = nil;
         [loader loadVis:visBuilder visURL:self.visJSONURL];
+        
+        // Kill old timer, create new timer if Torque layer is used
+        if (self.timer) {
+            [self.timer invalidate];
+            self.timer = nil;
+        }
+        if (visBuilder.torqueLayer) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(onTick:) userInfo:visBuilder.torqueLayer repeats:YES];
+            });
+        }
         
         // Add the created popup overlay layer on top of all visJSON layers
         [[self.mapView getLayers] add:vectorLayer];
     });
+}
+
+- (void)onTick:(NSTimer*)timer
+{
+   // NTTorqueTileDecoder* tmp = [[NTTorqueTileDecoder alloc] initWithStyleSet:nil];
+    
+    NTTorqueTileLayer* torqueLayer = (NTTorqueTileLayer*)timer.userInfo;
+    NTTorqueTileDecoder* torqueDecoder = (NTTorqueTileDecoder*)[torqueLayer getTileDecoder];
+
+    // Loop with wrapping
+    int frameNr = [torqueLayer getFrameNr];
+    frameNr = (frameNr + 1) % [torqueDecoder getFrameCount];
+    [torqueLayer setFrameNr:frameNr];
 }
 
 - (void)showMenu
@@ -116,7 +139,7 @@
 
 @implementation MyUTFGridEventListener
 
--(BOOL)onUTFGridClicked:(NTUTFGridClickInfo *)utfGridClickInfo
+- (BOOL)onUTFGridClicked:(NTUTFGridClickInfo *)utfGridClickInfo
 {
     NTLocalVectorDataSource* dataSource = (NTLocalVectorDataSource*)[self.vectorLayer getDataSource];
     [dataSource clear];
@@ -146,17 +169,17 @@
     NSLog(@"%@",[descriptionInfo description]);
 }
 
--(void)setCenter:(NTMapPos *)mapPos
+- (void)setCenter:(NTMapPos *)mapPos
 {
     [self.mapView setFocusPos:[[[self.mapView getOptions] getBaseProjection] fromWgs84:mapPos] durationSeconds:1.0f];
 }
 
--(void)setZoom:(float)zoom
+- (void)setZoom:(float)zoom
 {
     [self.mapView setZoom:zoom durationSeconds:1.0f];
 }
 
--(void)addLayer:(NTLayer *)layer attributes:(NTVariant *)attributes
+- (void)addLayer:(NTLayer *)layer attributes:(NTVariant *)attributes
 {
     // Add the layer to the map view
     [[self.mapView getLayers] add:layer];
@@ -169,6 +192,11 @@
         myEventListener.infoWindowTemplate = infoWindow;
         NTTileLayer* tileLayer = (NTTileLayer*)layer;
         [tileLayer setUTFGridEventListener:myEventListener];
+    }
+    
+    // Check if torque layer, if yes, then store it
+    if ([layer isKindOfClass:[NTTorqueTileLayer class]]) {
+        self.torqueLayer = (NTTorqueTileLayer*)layer;
     }
 }
 
@@ -225,7 +253,7 @@
     }
 }
 
-- (void) dropDown:(VPPDropDown *)dropDown elementSelected:(VPPDropDownElement *)element atGlobalIndexPath:(NSIndexPath *)indexPath {
+- (void)dropDown:(VPPDropDown *)dropDown elementSelected:(VPPDropDownElement *)element atGlobalIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell* cell = [[self tableView] cellForRowAtIndexPath:indexPath];
     if (dropDown == _dropDownVis) {
         self.sampleController.visJSONURL = [[self.sampleController visJSONURLs] objectForKey:cell.textLabel.text];
