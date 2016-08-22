@@ -38,10 +38,7 @@
              @"Nutiteq grey": @"nutibright-v3:nutiteq_grey",
              @"NutiBright 3D": @"nutibright3d",
              @"Loose Leaf":	   @"looseleaf",
-             @"MapZen":        @"mapzen"
-             @"Loose Leaf":	   @"looseleaf",
              @"MapZen":        @"mapzen",
-             @"LP":        @"LP_style",
              @"Positron@Mapzen": @"positron",
              @"Positron@Basemaps": @"cartodark"
              };
