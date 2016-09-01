@@ -72,7 +72,7 @@
         styleBuildings3D = YES;
     }
     
-    if([vectorStyle containsString:@":"]){
+    if([vectorStyle containsString:@":"]) {
         
         // Load vector tile styleset, consider also inner style for multi-style package
         
@@ -81,19 +81,23 @@
         NSString *styleName = elements[1];
         
         NSString* styleAssetName = [fileName stringByAppendingString: @".zip"];
+        NSString* folder = @"assets/";
         
-    NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
-    NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
+        styleAssetName = [folder stringByAppendingString:styleAssetName];
+        
+        NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
+        NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
     
         vectorTileStyleSet = [[NTCompiledStyleSet alloc] initWithAssetPackage:assetPackage styleName:styleName];
         
-    }else{
+    } else {
         
-        // others are single style packages
+        // Others are single style packages
         
         NSString* styleAssetName = [vectorStyle stringByAppendingString: @".zip"];
         NTBinaryData *vectorTileStyleSetData = [NTAssetUtils loadAsset:styleAssetName];
         NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
+        
         vectorTileStyleSet = [[NTCompiledStyleSet alloc] initWithAssetPackage:assetPackage];
         
     }
