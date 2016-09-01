@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
+		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
+		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
+		ADBFDA7B1D787494003DCBC9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7A1D787494003DCBC9 /* GLKit.framework */; };
+		ADBFDA7D1D7874B8003DCBC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */; };
+		ADBFDA801D787744003DCBC9 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA7F1D787744003DCBC9 /* Assets */; };
+		ADBFDAA21D788082003DCBC9 /* UITableContract.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA981D788082003DCBC9 /* UITableContract.png */; };
+		ADBFDAA31D788082003DCBC9 /* UITableContract@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */; };
+		ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA9A1D788082003DCBC9 /* UITableExpand.png */; };
+		ADBFDAA51D788082003DCBC9 /* UITableExpand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA9B1D788082003DCBC9 /* UITableExpand@2x.png */; };
+		ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA9D1D788082003DCBC9 /* VPPDropDown.m */; };
+		ADBFDAA71D788082003DCBC9 /* VPPDropDownElement.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDAA01D788082003DCBC9 /* VPPDropDownElement.m */; };
+		ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */; };
 		ADC28F761D782FB300796134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F751D782FB300796134 /* main.m */; };
 		ADC28F791D782FB300796134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F781D782FB300796134 /* AppDelegate.m */; };
-		ADC28F7C1D782FB300796134 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F7B1D782FB300796134 /* ViewController.m */; };
 		ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F7D1D782FB300796134 /* Main.storyboard */; };
 		ADC28F811D782FB300796134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F801D782FB300796134 /* Assets.xcassets */; };
 		ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F821D782FB300796134 /* LaunchScreen.storyboard */; };
@@ -33,12 +45,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
+		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
+		ADBFDA741D786F39003DCBC9 /* LauncherListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherListController.h; sourceTree = "<group>"; };
+		ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoVisJsonController.mm; sourceTree = "<group>"; };
+		ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapBaseController.mm; sourceTree = "<group>"; };
+		ADBFDA7A1D787494003DCBC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		ADBFDA7F1D787744003DCBC9 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapBaseController.h; sourceTree = "<group>"; };
+		ADBFDA981D788082003DCBC9 /* UITableContract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UITableContract.png; path = VPPDropDown/UITableContract.png; sourceTree = SOURCE_ROOT; };
+		ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UITableContract@2x.png"; path = "VPPDropDown/UITableContract@2x.png"; sourceTree = SOURCE_ROOT; };
+		ADBFDA9A1D788082003DCBC9 /* UITableExpand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UITableExpand.png; path = VPPDropDown/UITableExpand.png; sourceTree = SOURCE_ROOT; };
+		ADBFDA9B1D788082003DCBC9 /* UITableExpand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UITableExpand@2x.png"; path = "VPPDropDown/UITableExpand@2x.png"; sourceTree = SOURCE_ROOT; };
+		ADBFDA9C1D788082003DCBC9 /* VPPDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPPDropDown.h; path = VPPDropDown/VPPDropDown.h; sourceTree = SOURCE_ROOT; };
+		ADBFDA9D1D788082003DCBC9 /* VPPDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPPDropDown.m; path = VPPDropDown/VPPDropDown.m; sourceTree = SOURCE_ROOT; };
+		ADBFDA9E1D788082003DCBC9 /* VPPDropDownDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPPDropDownDelegate.h; path = VPPDropDown/VPPDropDownDelegate.h; sourceTree = SOURCE_ROOT; };
+		ADBFDA9F1D788082003DCBC9 /* VPPDropDownElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPPDropDownElement.h; path = VPPDropDown/VPPDropDownElement.h; sourceTree = SOURCE_ROOT; };
+		ADBFDAA01D788082003DCBC9 /* VPPDropDownElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPPDropDownElement.m; path = VPPDropDown/VPPDropDownElement.m; sourceTree = SOURCE_ROOT; };
 		ADC28F711D782FB300796134 /* CartoMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CartoMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC28F751D782FB300796134 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADC28F771D782FB300796134 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ADC28F781D782FB300796134 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ADC28F7A1D782FB300796134 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ADC28F7B1D782FB300796134 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ADC28F7E1D782FB300796134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADC28F801D782FB300796134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC28F831D782FB300796134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADBFDA7D1D7874B8003DCBC9 /* libz.tbd in Frameworks */,
+				ADBFDA7B1D787494003DCBC9 /* GLKit.framework in Frameworks */,
+				ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +103,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADBFDA751D787027003DCBC9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		ADBFDA771D7873D0003DCBC9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
+				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		ADBFDA861D787E78003DCBC9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDA741D786F39003DCBC9 /* LauncherListController.h */,
+				ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		ADBFDA871D787F9C003DCBC9 /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFDA981D788082003DCBC9 /* UITableContract.png */,
+				ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */,
+				ADBFDA9A1D788082003DCBC9 /* UITableExpand.png */,
+				ADBFDA9B1D788082003DCBC9 /* UITableExpand@2x.png */,
+				ADBFDA9C1D788082003DCBC9 /* VPPDropDown.h */,
+				ADBFDA9D1D788082003DCBC9 /* VPPDropDown.m */,
+				ADBFDA9E1D788082003DCBC9 /* VPPDropDownDelegate.h */,
+				ADBFDA9F1D788082003DCBC9 /* VPPDropDownElement.h */,
+				ADBFDAA01D788082003DCBC9 /* VPPDropDownElement.m */,
+			);
+			name = Dropdown;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		ADC28F681D782FB300796134 = {
 			isa = PBXGroup;
 			children = (
+				ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */,
+				ADBFDA7A1D787494003DCBC9 /* GLKit.framework */,
+				ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */,
 				ADC28F731D782FB300796134 /* CartoMap.Objective-C */,
 				ADC28F721D782FB300796134 /* Products */,
 			);
@@ -93,10 +170,13 @@
 		ADC28F731D782FB300796134 /* CartoMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				ADBFDA871D787F9C003DCBC9 /* Dropdown */,
+				ADBFDA861D787E78003DCBC9 /* List */,
+				ADBFDA7F1D787744003DCBC9 /* Assets */,
+				ADBFDA771D7873D0003DCBC9 /* Base */,
+				ADBFDA751D787027003DCBC9 /* Map */,
 				ADC28F771D782FB300796134 /* AppDelegate.h */,
 				ADC28F781D782FB300796134 /* AppDelegate.m */,
-				ADC28F7A1D782FB300796134 /* ViewController.h */,
-				ADC28F7B1D782FB300796134 /* ViewController.m */,
 				ADC28F7D1D782FB300796134 /* Main.storyboard */,
 				ADC28F801D782FB300796134 /* Assets.xcassets */,
 				ADC28F821D782FB300796134 /* LaunchScreen.storyboard */,
@@ -219,7 +299,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */,
+				ADBFDAA51D788082003DCBC9 /* UITableExpand@2x.png in Resources */,
+				ADBFDAA31D788082003DCBC9 /* UITableContract@2x.png in Resources */,
+				ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */,
+				ADBFDA801D787744003DCBC9 /* Assets in Resources */,
 				ADC28F811D782FB300796134 /* Assets.xcassets in Resources */,
+				ADBFDAA21D788082003DCBC9 /* UITableContract.png in Resources */,
 				ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,9 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC28F7C1D782FB300796134 /* ViewController.m in Sources */,
+				ADBFDAA71D788082003DCBC9 /* VPPDropDownElement.m in Sources */,
+				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
+				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
+				ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */,
+				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +478,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CartoMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "carto.CartoMap-Objective-C";
@@ -401,6 +494,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CartoMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "carto.CartoMap-Objective-C";
@@ -473,6 +570,7 @@
 				ADC28FA01D782FB400796134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADC28FA11D782FB400796134 /* Build configuration list for PBXNativeTarget "CartoMap.Objective-CTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +579,7 @@
 				ADC28FA31D782FB400796134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADC28FA41D782FB400796134 /* Build configuration list for PBXNativeTarget "CartoMap.Objective-CUITests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +588,7 @@
 				ADC28FA61D782FB400796134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
