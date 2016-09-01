@@ -13,6 +13,11 @@
 		ADC28FBE1D7831C200796134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28FBC1D7831C200796134 /* Main.storyboard */; };
 		ADC28FC01D7831C200796134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC28FBF1D7831C200796134 /* Assets.xcassets */; };
 		ADC28FC31D7831C200796134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28FC11D7831C200796134 /* LaunchScreen.storyboard */; };
+		ADC28FD01D78387D00796134 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FCF1D78387D00796134 /* GLKit.framework */; };
+		ADC28FD21D78389000796134 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FD11D78389000796134 /* Foundation.framework */; };
+		ADC28FD41D78389D00796134 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FD31D78389D00796134 /* libz.tbd */; };
+		ADC28FD61D7838AF00796134 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FD51D7838AF00796134 /* CoreGraphics.framework */; };
+		ADD47B471D783C0200E4B844 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD47B461D783C0200E4B844 /* CartoMobileSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		ADC28FBF1D7831C200796134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC28FC21D7831C200796134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADC28FC41D7831C200796134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC28FCF1D78387D00796134 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		ADC28FD11D78389000796134 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ADC28FD31D78389D00796134 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		ADC28FD51D7838AF00796134 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ADD47B461D783C0200E4B844 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC28FD41D78389D00796134 /* libz.tbd in Frameworks */,
+				ADC28FD61D7838AF00796134 /* CoreGraphics.framework in Frameworks */,
+				ADC28FD21D78389000796134 /* Foundation.framework in Frameworks */,
+				ADC28FD01D78387D00796134 /* GLKit.framework in Frameworks */,
+				ADD47B471D783C0200E4B844 /* CartoMobileSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,11 @@
 		ADC28FA71D7831C200796134 = {
 			isa = PBXGroup;
 			children = (
+				ADC28FD51D7838AF00796134 /* CoreGraphics.framework */,
+				ADC28FD31D78389D00796134 /* libz.tbd */,
+				ADD47B461D783C0200E4B844 /* CartoMobileSDK.framework */,
+				ADC28FD11D78389000796134 /* Foundation.framework */,
+				ADC28FCF1D78387D00796134 /* GLKit.framework */,
 				ADC28FB21D7831C200796134 /* HelloMap.Objective-C */,
 				ADC28FB11D7831C200796134 /* Products */,
 			);
@@ -265,6 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "HelloMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "carto.HelloMap-Objective-C";
@@ -276,6 +300,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "HelloMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "carto.HelloMap-Objective-C";
@@ -302,6 +330,7 @@
 				ADC28FC91D7831C200796134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

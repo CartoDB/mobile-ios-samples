@@ -23,7 +23,6 @@
 		2AD24F7918FEDAA6000969F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F6E18FEDAA6000969F4 /* main.m */; };
 		2AD24F7A18FEDAA6000969F4 /* MyMapEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F7018FEDAA6000969F4 /* MyMapEventListener.mm */; };
 		2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD24F8418FEDB89000969F4 /* Images.xcassets */; };
-		4D0E38381D22B9C000C62BEB /* mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E38371D22B9C000C62BEB /* mapzen.zip */; };
 		4D13E2801A6EB72600FA74DC /* CustomPopupSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */; };
 		4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */; };
 		4D2BE7091A52F86F0013ABB3 /* MapSampleBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */; };
@@ -76,6 +75,7 @@
 		4DEB06DA1A10D3D1003D111C /* AerialMapSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D91A10D3D1003D111C /* AerialMapSampleController.mm */; };
 		4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */; };
+		ADC28FCA1D7835DA00796134 /* mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E38371D22B9C000C62BEB /* mapzen.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -381,7 +381,7 @@
 		2A319B37187C4F8F0004A3CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Nutiteq;
 				TargetAttributes = {
 					2A319B3E187C4F8F0004A3CB = {
@@ -445,8 +445,7 @@
 				4D4B1F521D018BC7001C2F30 /* jefferson-building-ground-floor.jpg in Resources */,
 				4D4B1F4A1D018BC7001C2F30 /* capitals_3857.geojson in Resources */,
 				4D4B1F5C1D018BC7001C2F30 /* nutiteq-dark.zip in Resources */,
-				4D0E38381D22B9C000C62BEB /* mapzen.zip in Resources */,
-				4D0E38381D22B9C000C62BEB /* mapzen.zip in Resources */,
+				ADC28FCA1D7835DA00796134 /* mapzen.zip in Resources */,
 				0C8E6A581D3818DA00CFE0FB /* cartodark.zip in Resources */,
 				4D4B1F561D018BC7001C2F30 /* marker.png in Resources */,
 			);
