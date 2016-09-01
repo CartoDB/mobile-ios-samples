@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CartoMobileSDK/CartoMobileSDK.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
