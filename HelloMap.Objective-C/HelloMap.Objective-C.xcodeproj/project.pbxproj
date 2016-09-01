@@ -7,94 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ADC28FB51D7831C200796134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28FB41D7831C200796134 /* main.m */; };
-		ADC28FB81D7831C200796134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28FB71D7831C200796134 /* AppDelegate.m */; };
-		ADC28FBB1D7831C200796134 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28FBA1D7831C200796134 /* ViewController.m */; };
-		ADC28FBE1D7831C200796134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28FBC1D7831C200796134 /* Main.storyboard */; };
-		ADC28FC01D7831C200796134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC28FBF1D7831C200796134 /* Assets.xcassets */; };
-		ADC28FC31D7831C200796134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28FC11D7831C200796134 /* LaunchScreen.storyboard */; };
-		ADC28FD01D78387D00796134 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FCF1D78387D00796134 /* GLKit.framework */; };
-		ADC28FD21D78389000796134 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FD11D78389000796134 /* Foundation.framework */; };
-		ADC28FD41D78389D00796134 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FD31D78389D00796134 /* libz.tbd */; };
-		ADC28FD61D7838AF00796134 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADC28FD51D7838AF00796134 /* CoreGraphics.framework */; };
-		ADD47B471D783C0200E4B844 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD47B461D783C0200E4B844 /* CartoMobileSDK.framework */; };
+		ADBFDA521D7840B1003DCBC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA511D7840B1003DCBC9 /* main.m */; };
+		ADBFDA551D7840B1003DCBC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA541D7840B1003DCBC9 /* AppDelegate.m */; };
+		ADBFDA581D7840B1003DCBC9 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA571D7840B1003DCBC9 /* ViewController.mm */; };
+		ADBFDA5B1D7840B1003DCBC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA591D7840B1003DCBC9 /* Main.storyboard */; };
+		ADBFDA5D1D7840B1003DCBC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA5C1D7840B1003DCBC9 /* Assets.xcassets */; };
+		ADBFDA601D7840B1003DCBC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA5E1D7840B1003DCBC9 /* LaunchScreen.storyboard */; };
+		ADBFDA6A1D78410F003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA691D78410F003DCBC9 /* CartoMobileSDK.framework */; };
+		ADBFDA6C1D784DF1003DCBC9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA6B1D784DF1003DCBC9 /* GLKit.framework */; };
+		ADBFDA6E1D784E1A003DCBC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA6D1D784E1A003DCBC9 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ADC28FB01D7831C200796134 /* HelloMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADC28FB41D7831C200796134 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ADC28FB61D7831C200796134 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		ADC28FB71D7831C200796134 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ADC28FB91D7831C200796134 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		ADC28FBA1D7831C200796134 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ADC28FBD1D7831C200796134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADC28FBF1D7831C200796134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ADC28FC21D7831C200796134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ADC28FC41D7831C200796134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADC28FCF1D78387D00796134 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		ADC28FD11D78389000796134 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		ADC28FD31D78389D00796134 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		ADC28FD51D7838AF00796134 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		ADD47B461D783C0200E4B844 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
+		ADBFDA4D1D7840B1003DCBC9 /* HelloMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADBFDA511D7840B1003DCBC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ADBFDA531D7840B1003DCBC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ADBFDA541D7840B1003DCBC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ADBFDA561D7840B1003DCBC9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ADBFDA571D7840B1003DCBC9 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		ADBFDA5A1D7840B1003DCBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADBFDA5C1D7840B1003DCBC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADBFDA5F1D7840B1003DCBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADBFDA611D7840B1003DCBC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADBFDA691D78410F003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
+		ADBFDA6B1D784DF1003DCBC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		ADBFDA6D1D784E1A003DCBC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		ADBFDA6F1D784F1E003DCBC9 /* MyCartoVisBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCartoVisBuilder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ADC28FAD1D7831C200796134 /* Frameworks */ = {
+		ADBFDA4A1D7840B1003DCBC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC28FD41D78389D00796134 /* libz.tbd in Frameworks */,
-				ADC28FD61D7838AF00796134 /* CoreGraphics.framework in Frameworks */,
-				ADC28FD21D78389000796134 /* Foundation.framework in Frameworks */,
-				ADC28FD01D78387D00796134 /* GLKit.framework in Frameworks */,
-				ADD47B471D783C0200E4B844 /* CartoMobileSDK.framework in Frameworks */,
+				ADBFDA6E1D784E1A003DCBC9 /* libz.tbd in Frameworks */,
+				ADBFDA6C1D784DF1003DCBC9 /* GLKit.framework in Frameworks */,
+				ADBFDA6A1D78410F003DCBC9 /* CartoMobileSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ADC28FA71D7831C200796134 = {
+		ADBFDA441D7840B1003DCBC9 = {
 			isa = PBXGroup;
 			children = (
-				ADC28FD51D7838AF00796134 /* CoreGraphics.framework */,
-				ADC28FD31D78389D00796134 /* libz.tbd */,
-				ADD47B461D783C0200E4B844 /* CartoMobileSDK.framework */,
-				ADC28FD11D78389000796134 /* Foundation.framework */,
-				ADC28FCF1D78387D00796134 /* GLKit.framework */,
-				ADC28FB21D7831C200796134 /* HelloMap.Objective-C */,
-				ADC28FB11D7831C200796134 /* Products */,
+				ADBFDA6D1D784E1A003DCBC9 /* libz.tbd */,
+				ADBFDA6B1D784DF1003DCBC9 /* GLKit.framework */,
+				ADBFDA691D78410F003DCBC9 /* CartoMobileSDK.framework */,
+				ADBFDA4F1D7840B1003DCBC9 /* HelloMap.Objective-C */,
+				ADBFDA4E1D7840B1003DCBC9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ADC28FB11D7831C200796134 /* Products */ = {
+		ADBFDA4E1D7840B1003DCBC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADC28FB01D7831C200796134 /* HelloMap.Objective-C.app */,
+				ADBFDA4D1D7840B1003DCBC9 /* HelloMap.Objective-C.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADC28FB21D7831C200796134 /* HelloMap.Objective-C */ = {
+		ADBFDA4F1D7840B1003DCBC9 /* HelloMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				ADC28FB61D7831C200796134 /* AppDelegate.h */,
-				ADC28FB71D7831C200796134 /* AppDelegate.m */,
-				ADC28FB91D7831C200796134 /* ViewController.h */,
-				ADC28FBA1D7831C200796134 /* ViewController.m */,
-				ADC28FBC1D7831C200796134 /* Main.storyboard */,
-				ADC28FBF1D7831C200796134 /* Assets.xcassets */,
-				ADC28FC11D7831C200796134 /* LaunchScreen.storyboard */,
-				ADC28FC41D7831C200796134 /* Info.plist */,
-				ADC28FB31D7831C200796134 /* Supporting Files */,
+				ADBFDA531D7840B1003DCBC9 /* AppDelegate.h */,
+				ADBFDA541D7840B1003DCBC9 /* AppDelegate.m */,
+				ADBFDA561D7840B1003DCBC9 /* ViewController.h */,
+				ADBFDA571D7840B1003DCBC9 /* ViewController.mm */,
+				ADBFDA591D7840B1003DCBC9 /* Main.storyboard */,
+				ADBFDA5C1D7840B1003DCBC9 /* Assets.xcassets */,
+				ADBFDA5E1D7840B1003DCBC9 /* LaunchScreen.storyboard */,
+				ADBFDA611D7840B1003DCBC9 /* Info.plist */,
+				ADBFDA501D7840B1003DCBC9 /* Supporting Files */,
+				ADBFDA6F1D784F1E003DCBC9 /* MyCartoVisBuilder.h */,
 			);
 			path = "HelloMap.Objective-C";
 			sourceTree = "<group>";
 		};
-		ADC28FB31D7831C200796134 /* Supporting Files */ = {
+		ADBFDA501D7840B1003DCBC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				ADC28FB41D7831C200796134 /* main.m */,
+				ADBFDA511D7840B1003DCBC9 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -102,13 +96,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADC28FAF1D7831C200796134 /* HelloMap.Objective-C */ = {
+		ADBFDA4C1D7840B1003DCBC9 /* HelloMap.Objective-C */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADC28FC71D7831C200796134 /* Build configuration list for PBXNativeTarget "HelloMap.Objective-C" */;
+			buildConfigurationList = ADBFDA641D7840B1003DCBC9 /* Build configuration list for PBXNativeTarget "HelloMap.Objective-C" */;
 			buildPhases = (
-				ADC28FAC1D7831C200796134 /* Sources */,
-				ADC28FAD1D7831C200796134 /* Frameworks */,
-				ADC28FAE1D7831C200796134 /* Resources */,
+				ADBFDA491D7840B1003DCBC9 /* Sources */,
+				ADBFDA4A1D7840B1003DCBC9 /* Frameworks */,
+				ADBFDA4B1D7840B1003DCBC9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -116,24 +110,24 @@
 			);
 			name = "HelloMap.Objective-C";
 			productName = "HelloMap.Objective-C";
-			productReference = ADC28FB01D7831C200796134 /* HelloMap.Objective-C.app */;
+			productReference = ADBFDA4D1D7840B1003DCBC9 /* HelloMap.Objective-C.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ADC28FA81D7831C200796134 /* Project object */ = {
+		ADBFDA451D7840B1003DCBC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Aare Undo";
 				TargetAttributes = {
-					ADC28FAF1D7831C200796134 = {
+					ADBFDA4C1D7840B1003DCBC9 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
-			buildConfigurationList = ADC28FAB1D7831C200796134 /* Build configuration list for PBXProject "HelloMap.Objective-C" */;
+			buildConfigurationList = ADBFDA481D7840B1003DCBC9 /* Build configuration list for PBXProject "HelloMap.Objective-C" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -141,55 +135,55 @@
 				en,
 				Base,
 			);
-			mainGroup = ADC28FA71D7831C200796134;
-			productRefGroup = ADC28FB11D7831C200796134 /* Products */;
+			mainGroup = ADBFDA441D7840B1003DCBC9;
+			productRefGroup = ADBFDA4E1D7840B1003DCBC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADC28FAF1D7831C200796134 /* HelloMap.Objective-C */,
+				ADBFDA4C1D7840B1003DCBC9 /* HelloMap.Objective-C */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ADC28FAE1D7831C200796134 /* Resources */ = {
+		ADBFDA4B1D7840B1003DCBC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC28FC31D7831C200796134 /* LaunchScreen.storyboard in Resources */,
-				ADC28FC01D7831C200796134 /* Assets.xcassets in Resources */,
-				ADC28FBE1D7831C200796134 /* Main.storyboard in Resources */,
+				ADBFDA601D7840B1003DCBC9 /* LaunchScreen.storyboard in Resources */,
+				ADBFDA5D1D7840B1003DCBC9 /* Assets.xcassets in Resources */,
+				ADBFDA5B1D7840B1003DCBC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ADC28FAC1D7831C200796134 /* Sources */ = {
+		ADBFDA491D7840B1003DCBC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC28FBB1D7831C200796134 /* ViewController.m in Sources */,
-				ADC28FB81D7831C200796134 /* AppDelegate.m in Sources */,
-				ADC28FB51D7831C200796134 /* main.m in Sources */,
+				ADBFDA581D7840B1003DCBC9 /* ViewController.mm in Sources */,
+				ADBFDA551D7840B1003DCBC9 /* AppDelegate.m in Sources */,
+				ADBFDA521D7840B1003DCBC9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ADC28FBC1D7831C200796134 /* Main.storyboard */ = {
+		ADBFDA591D7840B1003DCBC9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADC28FBD1D7831C200796134 /* Base */,
+				ADBFDA5A1D7840B1003DCBC9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		ADC28FC11D7831C200796134 /* LaunchScreen.storyboard */ = {
+		ADBFDA5E1D7840B1003DCBC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ADC28FC21D7831C200796134 /* Base */,
+				ADBFDA5F1D7840B1003DCBC9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -197,7 +191,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ADC28FC51D7831C200796134 /* Debug */ = {
+		ADBFDA621D7840B1003DCBC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,7 +236,7 @@
 			};
 			name = Debug;
 		};
-		ADC28FC61D7831C200796134 /* Release */ = {
+		ADBFDA631D7840B1003DCBC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,7 +275,7 @@
 			};
 			name = Release;
 		};
-		ADC28FC81D7831C200796134 /* Debug */ = {
+		ADBFDA651D7840B1003DCBC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -296,7 +290,7 @@
 			};
 			name = Debug;
 		};
-		ADC28FC91D7831C200796134 /* Release */ = {
+		ADBFDA661D7840B1003DCBC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -314,25 +308,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADC28FAB1D7831C200796134 /* Build configuration list for PBXProject "HelloMap.Objective-C" */ = {
+		ADBFDA481D7840B1003DCBC9 /* Build configuration list for PBXProject "HelloMap.Objective-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADC28FC51D7831C200796134 /* Debug */,
-				ADC28FC61D7831C200796134 /* Release */,
+				ADBFDA621D7840B1003DCBC9 /* Debug */,
+				ADBFDA631D7840B1003DCBC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADC28FC71D7831C200796134 /* Build configuration list for PBXNativeTarget "HelloMap.Objective-C" */ = {
+		ADBFDA641D7840B1003DCBC9 /* Build configuration list for PBXNativeTarget "HelloMap.Objective-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADC28FC81D7831C200796134 /* Debug */,
-				ADC28FC91D7831C200796134 /* Release */,
+				ADBFDA651D7840B1003DCBC9 /* Debug */,
+				ADBFDA661D7840B1003DCBC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ADC28FA81D7831C200796134 /* Project object */;
+	rootObject = ADBFDA451D7840B1003DCBC9 /* Project object */;
 }
