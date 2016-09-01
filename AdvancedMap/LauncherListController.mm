@@ -34,6 +34,7 @@
     
     // Create table view of samples
     UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
+    
     tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -53,7 +54,9 @@
     // Launch selected sample, use basic reflection to convert class name to class instance
     NSDictionary* sample = [[self samples] objectAtIndex:indexPath.row];
     UIViewController* subViewController = [[NSClassFromString([sample objectForKey:@"controller"]) alloc] init];
+    
     [subViewController setTitle: [sample objectForKey:@"name"]];
+    
     [self.navigationController pushViewController: subViewController animated:YES];
 }
 
@@ -76,11 +79,14 @@
 {
     static NSString* cellIdentifier = @"sampleId";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:cellIdentifier];
     }
+    
     NSDictionary* sample = [[self samples] objectAtIndex:indexPath.row];
     cell.textLabel.text = [sample objectForKey:@"name"];
+    
     return cell;
 }
 
