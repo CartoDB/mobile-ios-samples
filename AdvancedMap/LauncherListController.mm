@@ -86,13 +86,8 @@
     
     NSDictionary* sample = [[self samples] objectAtIndex:indexPath.row];
     cell.textLabel.text = [sample objectForKey:@"name"];
-    
-    return cell;
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
+    return cell;
 }
 
 @end

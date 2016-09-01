@@ -128,7 +128,8 @@
     self.fontsAssetPackage = [[NTZippedAssetPackage alloc] initWithZipData:fontsData];
 
     // Set default vis
-    self.visJSONURL = @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json";
+    
+    self.visJSONURL = [self.visJSONURLs objectForKey: @"dots"];
     [self updateVis];
     
     // Create menu
