@@ -59,6 +59,8 @@
 		ADC2B33D1D79735300841945 /* cartodark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B33A1D79735300841945 /* cartodark.zip */; };
 		ADC2B33E1D79735300841945 /* nutibright-v3.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B33B1D79735300841945 /* nutibright-v3.zip */; };
 		ADC2B33F1D79735300841945 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B33C1D79735300841945 /* positron.zip */; };
+		ADC2B3571D79ABDB00841945 /* CartoSQLController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */; };
+		ADC2B35A1D79BD1000841945 /* MyMapEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,9 @@
 		ADC2B33A1D79735300841945 /* cartodark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = cartodark.zip; sourceTree = SOURCE_ROOT; };
 		ADC2B33B1D79735300841945 /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "nutibright-v3.zip"; sourceTree = SOURCE_ROOT; };
 		ADC2B33C1D79735300841945 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = positron.zip; sourceTree = SOURCE_ROOT; };
+		ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoSQLController.mm; sourceTree = "<group>"; };
+		ADC2B3581D79BD0100841945 /* MyMapEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMapEventListener.h; sourceTree = "<group>"; };
+		ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyMapEventListener.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +184,7 @@
 			children = (
 				ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */,
 				ADC2B3351D79673200841945 /* CartoRasterTileController.mm */,
+				ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 			children = (
 				ADC2B2F71D79605D00841945 /* MyUTFGridEventListener.h */,
 				ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */,
+				ADC2B3581D79BD0100841945 /* MyMapEventListener.h */,
+				ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */,
 			);
 			name = Listener;
 			sourceTree = "<group>";
@@ -492,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC2B3571D79ABDB00841945 /* CartoSQLController.mm in Sources */,
 				ADBFDAA71D788082003DCBC9 /* VPPDropDownElement.m in Sources */,
 				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
 				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
@@ -503,6 +512,7 @@
 				ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */,
 				ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
+				ADC2B35A1D79BD1000841945 /* MyMapEventListener.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
