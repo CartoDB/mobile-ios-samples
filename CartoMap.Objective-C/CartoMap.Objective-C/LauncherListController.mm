@@ -13,9 +13,9 @@
                 @"description": @"Using high-level Carto VisJson API",
                 @"controller": @"CartoVisJsonController"
                 },
-             @{ @"name": @"TestController",
-                @"description": @"For testing purposes",
-                @"controller": @"TestController"
+             @{ @"name": @"",
+                @"description": @"",
+                @"controller": @""
                 },
              ];
 }
@@ -93,3 +93,6 @@
 }
 
 @end
+
+
+

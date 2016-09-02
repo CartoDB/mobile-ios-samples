@@ -12,7 +12,6 @@
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
 		ADBFDA7B1D787494003DCBC9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7A1D787494003DCBC9 /* GLKit.framework */; };
 		ADBFDA7D1D7874B8003DCBC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */; };
-		ADBFDA801D787744003DCBC9 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA7F1D787744003DCBC9 /* Assets */; };
 		ADBFDAA21D788082003DCBC9 /* UITableContract.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA981D788082003DCBC9 /* UITableContract.png */; };
 		ADBFDAA31D788082003DCBC9 /* UITableContract@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */; };
 		ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA9A1D788082003DCBC9 /* UITableExpand.png */; };
@@ -25,6 +24,36 @@
 		ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F7D1D782FB300796134 /* Main.storyboard */; };
 		ADC28F811D782FB300796134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F801D782FB300796134 /* Assets.xcassets */; };
 		ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F821D782FB300796134 /* LaunchScreen.storyboard */; };
+		ADC2B2F41D795FFE00841945 /* MyCartoVisBuilder.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B2F31D795FFE00841945 /* MyCartoVisBuilder.mm */; };
+		ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */; };
+		ADC2B3191D79653500841945 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B2FC1D79653500841945 /* 852-map-toolbar.png */; };
+		ADC2B31A1D79653500841945 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B2FD1D79653500841945 /* 852-map-toolbar@2x.png */; };
+		ADC2B31B1D79653500841945 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B2FE1D79653500841945 /* 852-map-toolbar@3x.png */; };
+		ADC2B31C1D79653500841945 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B2FF1D79653500841945 /* arrow.png */; };
+		ADC2B31D1D79653500841945 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3001D79653500841945 /* arrow@2x.png */; };
+		ADC2B31E1D79653500841945 /* basic.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3011D79653500841945 /* basic.zip */; };
+		ADC2B31F1D79653500841945 /* capitals_3857.geojson in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3021D79653500841945 /* capitals_3857.geojson */; };
+		ADC2B3201D79653500841945 /* carto-fonts.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3031D79653500841945 /* carto-fonts.zip */; };
+		ADC2B3211D79653500841945 /* direction_down.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3041D79653500841945 /* direction_down.png */; };
+		ADC2B3221D79653500841945 /* direction_up.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3051D79653500841945 /* direction_up.png */; };
+		ADC2B3231D79653500841945 /* direction_upthenleft.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3061D79653500841945 /* direction_upthenleft.png */; };
+		ADC2B3241D79653500841945 /* direction_upthenright.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3071D79653500841945 /* direction_upthenright.png */; };
+		ADC2B3251D79653500841945 /* fcd_auto.nml in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3081D79653500841945 /* fcd_auto.nml */; };
+		ADC2B3261D79653500841945 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3091D79653500841945 /* info.png */; };
+		ADC2B3271D79653500841945 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B30A1D79653500841945 /* info@2x.png */; };
+		ADC2B3281D79653500841945 /* jefferson-building-ground-floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B30B1D79653500841945 /* jefferson-building-ground-floor.jpg */; };
+		ADC2B3291D79653500841945 /* looseleaf.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B30C1D79653500841945 /* looseleaf.zip */; };
+		ADC2B32A1D79653500841945 /* mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B30D1D79653500841945 /* mapzen.zip */; };
+		ADC2B32B1D79653500841945 /* marker_black.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B30E1D79653500841945 /* marker_black.png */; };
+		ADC2B32C1D79653500841945 /* marker_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B30F1D79653500841945 /* marker_red.png */; };
+		ADC2B32D1D79653500841945 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3101D79653500841945 /* marker.png */; };
+		ADC2B32E1D79653500841945 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3111D79653500841945 /* menu.png */; };
+		ADC2B32F1D79653500841945 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3121D79653500841945 /* menu@2x.png */; };
+		ADC2B3301D79653500841945 /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3131D79653500841945 /* milktruck.nml */; };
+		ADC2B3311D79653500841945 /* nutibright-contourstyle.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3141D79653500841945 /* nutibright-contourstyle.zip */; };
+		ADC2B3321D79653500841945 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3151D79653500841945 /* nutiteq-dark.zip */; };
+		ADC2B3331D79653500841945 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3161D79653500841945 /* rome_ntvt.mbtiles */; };
+		ADC2B3341D79653500841945 /* saku_ios_4bpp.nmldb in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3171D79653500841945 /* saku_ios_4bpp.nmldb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +81,6 @@
 		ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapBaseController.mm; sourceTree = "<group>"; };
 		ADBFDA7A1D787494003DCBC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		ADBFDA7F1D787744003DCBC9 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapBaseController.h; sourceTree = "<group>"; };
 		ADBFDA981D788082003DCBC9 /* UITableContract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UITableContract.png; path = VPPDropDown/UITableContract.png; sourceTree = SOURCE_ROOT; };
 		ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UITableContract@2x.png"; path = "VPPDropDown/UITableContract@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -73,6 +101,38 @@
 		ADC28F851D782FB300796134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC28F8A1D782FB400796134 /* CartoMap.Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CartoMap.Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC28F951D782FB400796134 /* CartoMap.Objective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CartoMap.Objective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADC2B2F31D795FFE00841945 /* MyCartoVisBuilder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCartoVisBuilder.mm; sourceTree = "<group>"; };
+		ADC2B2F51D79601100841945 /* MyCartoVisBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCartoVisBuilder.h; sourceTree = "<group>"; };
+		ADC2B2F71D79605D00841945 /* MyUTFGridEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUTFGridEventListener.h; sourceTree = "<group>"; };
+		ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyUTFGridEventListener.mm; sourceTree = "<group>"; };
+		ADC2B2FC1D79653500841945 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
+		ADC2B2FD1D79653500841945 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
+		ADC2B2FE1D79653500841945 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
+		ADC2B2FF1D79653500841945 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Assets/arrow.png; sourceTree = "<group>"; };
+		ADC2B3001D79653500841945 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow@2x.png"; path = "Assets/arrow@2x.png"; sourceTree = "<group>"; };
+		ADC2B3011D79653500841945 /* basic.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = basic.zip; path = Assets/basic.zip; sourceTree = "<group>"; };
+		ADC2B3021D79653500841945 /* capitals_3857.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = capitals_3857.geojson; path = Assets/capitals_3857.geojson; sourceTree = "<group>"; };
+		ADC2B3031D79653500841945 /* carto-fonts.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "carto-fonts.zip"; path = "Assets/carto-fonts.zip"; sourceTree = "<group>"; };
+		ADC2B3041D79653500841945 /* direction_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = direction_down.png; path = Assets/direction_down.png; sourceTree = "<group>"; };
+		ADC2B3051D79653500841945 /* direction_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = direction_up.png; path = Assets/direction_up.png; sourceTree = "<group>"; };
+		ADC2B3061D79653500841945 /* direction_upthenleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = direction_upthenleft.png; path = Assets/direction_upthenleft.png; sourceTree = "<group>"; };
+		ADC2B3071D79653500841945 /* direction_upthenright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = direction_upthenright.png; path = Assets/direction_upthenright.png; sourceTree = "<group>"; };
+		ADC2B3081D79653500841945 /* fcd_auto.nml */ = {isa = PBXFileReference; lastKnownFileType = file; name = fcd_auto.nml; path = Assets/fcd_auto.nml; sourceTree = "<group>"; };
+		ADC2B3091D79653500841945 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = Assets/info.png; sourceTree = "<group>"; };
+		ADC2B30A1D79653500841945 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "Assets/info@2x.png"; sourceTree = "<group>"; };
+		ADC2B30B1D79653500841945 /* jefferson-building-ground-floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "jefferson-building-ground-floor.jpg"; path = "Assets/jefferson-building-ground-floor.jpg"; sourceTree = "<group>"; };
+		ADC2B30C1D79653500841945 /* looseleaf.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = looseleaf.zip; path = Assets/looseleaf.zip; sourceTree = "<group>"; };
+		ADC2B30D1D79653500841945 /* mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = mapzen.zip; path = Assets/mapzen.zip; sourceTree = "<group>"; };
+		ADC2B30E1D79653500841945 /* marker_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_black.png; path = Assets/marker_black.png; sourceTree = "<group>"; };
+		ADC2B30F1D79653500841945 /* marker_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_red.png; path = Assets/marker_red.png; sourceTree = "<group>"; };
+		ADC2B3101D79653500841945 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = Assets/marker.png; sourceTree = "<group>"; };
+		ADC2B3111D79653500841945 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = Assets/menu.png; sourceTree = "<group>"; };
+		ADC2B3121D79653500841945 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu@2x.png"; path = "Assets/menu@2x.png"; sourceTree = "<group>"; };
+		ADC2B3131D79653500841945 /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; name = milktruck.nml; path = Assets/milktruck.nml; sourceTree = "<group>"; };
+		ADC2B3141D79653500841945 /* nutibright-contourstyle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutibright-contourstyle.zip"; path = "Assets/nutibright-contourstyle.zip"; sourceTree = "<group>"; };
+		ADC2B3151D79653500841945 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
+		ADC2B3161D79653500841945 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
+		ADC2B3171D79653500841945 /* saku_ios_4bpp.nmldb */ = {isa = PBXFileReference; lastKnownFileType = file; name = saku_ios_4bpp.nmldb; path = Assets/saku_ios_4bpp.nmldb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,9 +230,11 @@
 		ADC28F731D782FB300796134 /* CartoMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				ADC2B2FA1D79651C00841945 /* Assets */,
+				ADC2B2F61D79603800841945 /* Builder */,
+				ADC2B2F21D795FD800841945 /* Listener */,
 				ADBFDA871D787F9C003DCBC9 /* Dropdown */,
 				ADBFDA861D787E78003DCBC9 /* List */,
-				ADBFDA7F1D787744003DCBC9 /* Assets */,
 				ADBFDA771D7873D0003DCBC9 /* Base */,
 				ADBFDA751D787027003DCBC9 /* Map */,
 				ADC28F771D782FB300796134 /* AppDelegate.h */,
@@ -192,6 +254,59 @@
 				ADC28F751D782FB300796134 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADC2B2F21D795FD800841945 /* Listener */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2B2F71D79605D00841945 /* MyUTFGridEventListener.h */,
+				ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */,
+			);
+			name = Listener;
+			sourceTree = "<group>";
+		};
+		ADC2B2F61D79603800841945 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2B2F51D79601100841945 /* MyCartoVisBuilder.h */,
+				ADC2B2F31D795FFE00841945 /* MyCartoVisBuilder.mm */,
+			);
+			name = Builder;
+			sourceTree = "<group>";
+		};
+		ADC2B2FA1D79651C00841945 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2B2FC1D79653500841945 /* 852-map-toolbar.png */,
+				ADC2B2FD1D79653500841945 /* 852-map-toolbar@2x.png */,
+				ADC2B2FE1D79653500841945 /* 852-map-toolbar@3x.png */,
+				ADC2B2FF1D79653500841945 /* arrow.png */,
+				ADC2B3001D79653500841945 /* arrow@2x.png */,
+				ADC2B3011D79653500841945 /* basic.zip */,
+				ADC2B3021D79653500841945 /* capitals_3857.geojson */,
+				ADC2B3031D79653500841945 /* carto-fonts.zip */,
+				ADC2B3041D79653500841945 /* direction_down.png */,
+				ADC2B3051D79653500841945 /* direction_up.png */,
+				ADC2B3061D79653500841945 /* direction_upthenleft.png */,
+				ADC2B3071D79653500841945 /* direction_upthenright.png */,
+				ADC2B3081D79653500841945 /* fcd_auto.nml */,
+				ADC2B3091D79653500841945 /* info.png */,
+				ADC2B30A1D79653500841945 /* info@2x.png */,
+				ADC2B30B1D79653500841945 /* jefferson-building-ground-floor.jpg */,
+				ADC2B30C1D79653500841945 /* looseleaf.zip */,
+				ADC2B30D1D79653500841945 /* mapzen.zip */,
+				ADC2B30E1D79653500841945 /* marker_black.png */,
+				ADC2B30F1D79653500841945 /* marker_red.png */,
+				ADC2B3101D79653500841945 /* marker.png */,
+				ADC2B3111D79653500841945 /* menu.png */,
+				ADC2B3121D79653500841945 /* menu@2x.png */,
+				ADC2B3131D79653500841945 /* milktruck.nml */,
+				ADC2B3141D79653500841945 /* nutibright-contourstyle.zip */,
+				ADC2B3151D79653500841945 /* nutiteq-dark.zip */,
+				ADC2B3161D79653500841945 /* rome_ntvt.mbtiles */,
+				ADC2B3171D79653500841945 /* saku_ios_4bpp.nmldb */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,14 +413,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC2B3331D79653500841945 /* rome_ntvt.mbtiles in Resources */,
+				ADC2B32A1D79653500841945 /* mapzen.zip in Resources */,
+				ADC2B32F1D79653500841945 /* menu@2x.png in Resources */,
+				ADC2B3201D79653500841945 /* carto-fonts.zip in Resources */,
+				ADC2B32D1D79653500841945 /* marker.png in Resources */,
+				ADC2B3231D79653500841945 /* direction_upthenleft.png in Resources */,
+				ADC2B3281D79653500841945 /* jefferson-building-ground-floor.jpg in Resources */,
+				ADC2B3211D79653500841945 /* direction_down.png in Resources */,
+				ADC2B32C1D79653500841945 /* marker_red.png in Resources */,
+				ADC2B32B1D79653500841945 /* marker_black.png in Resources */,
+				ADC2B3261D79653500841945 /* info.png in Resources */,
+				ADC2B3251D79653500841945 /* fcd_auto.nml in Resources */,
 				ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */,
+				ADC2B3341D79653500841945 /* saku_ios_4bpp.nmldb in Resources */,
 				ADBFDAA51D788082003DCBC9 /* UITableExpand@2x.png in Resources */,
+				ADC2B3221D79653500841945 /* direction_up.png in Resources */,
+				ADC2B3241D79653500841945 /* direction_upthenright.png in Resources */,
+				ADC2B3311D79653500841945 /* nutibright-contourstyle.zip in Resources */,
+				ADC2B3191D79653500841945 /* 852-map-toolbar.png in Resources */,
+				ADC2B3321D79653500841945 /* nutiteq-dark.zip in Resources */,
+				ADC2B3291D79653500841945 /* looseleaf.zip in Resources */,
 				ADBFDAA31D788082003DCBC9 /* UITableContract@2x.png in Resources */,
+				ADC2B31F1D79653500841945 /* capitals_3857.geojson in Resources */,
 				ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */,
-				ADBFDA801D787744003DCBC9 /* Assets in Resources */,
 				ADC28F811D782FB300796134 /* Assets.xcassets in Resources */,
+				ADC2B31C1D79653500841945 /* arrow.png in Resources */,
+				ADC2B31E1D79653500841945 /* basic.zip in Resources */,
+				ADC2B3301D79653500841945 /* milktruck.nml in Resources */,
+				ADC2B31A1D79653500841945 /* 852-map-toolbar@2x.png in Resources */,
 				ADBFDAA21D788082003DCBC9 /* UITableContract.png in Resources */,
 				ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */,
+				ADC2B32E1D79653500841945 /* menu.png in Resources */,
+				ADC2B31B1D79653500841945 /* 852-map-toolbar@3x.png in Resources */,
+				ADC2B31D1D79653500841945 /* arrow@2x.png in Resources */,
+				ADC2B3271D79653500841945 /* info@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +476,8 @@
 				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
 				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
+				ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */,
+				ADC2B2F41D795FFE00841945 /* MyCartoVisBuilder.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
 				ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,

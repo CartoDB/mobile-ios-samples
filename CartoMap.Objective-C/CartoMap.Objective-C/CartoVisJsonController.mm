@@ -3,6 +3,9 @@
 #import "VPPDropDown.h"
 #import "VPPDropDownDelegate.h"
 
+#import "MyCartoVisBuilder.h"
+#import "MyUTFGridEventListener.h"
+
 /*
  * A sample demonstrating how to use high-level Carto VisJSON API.
  * A list of different visjson URLs can be selected from the menu.
@@ -17,21 +20,9 @@
 
 @end
 
-@interface MyCartoVisBuilder : NTCartoVisBuilder
-
-@property NTMapView* mapView;
-@property NTVectorLayer* vectorLayer;
-@property NTTorqueTileLayer* torqueLayer;
-
-@end
-
-@interface MyUTFGridEventListener : NTUTFGridEventListener
-
-@property NTVectorLayer* vectorLayer;
-@property NTVariant* infoWindowTemplate;
-
-@end
-
+/*
+ * Dropdown controller library
+ */
 @interface VisDropDownMenuController : UITableViewController <VPPDropDownDelegate, UIActionSheetDelegate>
 
 - (id)initWithStyle:(UITableViewStyle)style controller:(CartoVisJsonController*)sampleController;
@@ -41,6 +32,9 @@
 
 @end
 
+/*
+ * Implementation
+ */
 @implementation CartoVisJsonController
 
 -(NSDictionary*)visJSONURLs
@@ -132,80 +126,15 @@
     self.fontsAssetPackage = [[NTZippedAssetPackage alloc] initWithZipData:fontsData];
     
     // Set default vis
-    
     self.visJSONURL = [self.visJSONURLs objectForKey: @"dots"];
     [self updateVis];
     
     // Create menu
-//    [self createMenu];
+    [self createMenu];
 }
 
 @end
 
-@implementation MyUTFGridEventListener
-
-- (BOOL)onUTFGridClicked:(NTUTFGridClickInfo *)utfGridClickInfo
-{
-    NTLocalVectorDataSource* dataSource = (NTLocalVectorDataSource*)[self.vectorLayer getDataSource];
-    [dataSource clear];
-    
-    NTBalloonPopup* clickPopup = [[NTBalloonPopup alloc] init];
-    NTBalloonPopupStyleBuilder* styleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
-    // Make sure this label is shown on top all other labels
-    [styleBuilder setPlacementPriority:10];
-    
-    // Check the type of the click
-    NTVariant* elementInfo = [utfGridClickInfo getElementInfo];
-    NSString* clickMsg = [elementInfo description];
-    clickPopup = [[NTBalloonPopup alloc] initWithPos:[utfGridClickInfo getClickPos]
-                                               style:[styleBuilder buildStyle]
-                                               title:@"Clicked"
-                                                desc:clickMsg];
-    [dataSource add:clickPopup];
-    return YES;
-}
-
-@end
-
-@implementation MyCartoVisBuilder
-
--(void)setDescription:(NTVariant *)descriptionInfo
-{
-    NSLog(@"%@",[descriptionInfo description]);
-}
-
-- (void)setCenter:(NTMapPos *)mapPos
-{
-    [self.mapView setFocusPos:[[[self.mapView getOptions] getBaseProjection] fromWgs84:mapPos] durationSeconds:1.0f];
-}
-
-- (void)setZoom:(float)zoom
-{
-    [self.mapView setZoom:zoom durationSeconds:1.0f];
-}
-
-- (void)addLayer:(NTLayer *)layer attributes:(NTVariant *)attributes
-{
-    // Add the layer to the map view
-    [[self.mapView getLayers] add:layer];
-    
-    // Check if the layer has info window. In that case will add a custom UTF grid event listener to the layer.
-    NTVariant* infoWindow = [attributes getObjectElement:@"infowindow"];
-    if ([infoWindow getType] == NT_VARIANT_TYPE_OBJECT) {
-        MyUTFGridEventListener* myEventListener = [[MyUTFGridEventListener alloc] init];
-        myEventListener.vectorLayer = self.vectorLayer;
-        myEventListener.infoWindowTemplate = infoWindow;
-        NTTileLayer* tileLayer = (NTTileLayer*)layer;
-        [tileLayer setUTFGridEventListener:myEventListener];
-    }
-    
-    // Check if torque layer, if yes, then store it
-    if ([layer isKindOfClass:[NTTorqueTileLayer class]]) {
-        self.torqueLayer = (NTTorqueTileLayer*)layer;
-    }
-}
-
-@end
 
 @implementation VisDropDownMenuController
 
