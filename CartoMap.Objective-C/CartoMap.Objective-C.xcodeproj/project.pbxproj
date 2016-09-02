@@ -54,6 +54,11 @@
 		ADC2B3321D79653500841945 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3151D79653500841945 /* nutiteq-dark.zip */; };
 		ADC2B3331D79653500841945 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3161D79653500841945 /* rome_ntvt.mbtiles */; };
 		ADC2B3341D79653500841945 /* saku_ios_4bpp.nmldb in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3171D79653500841945 /* saku_ios_4bpp.nmldb */; };
+		ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3351D79673200841945 /* CartoRasterTileController.mm */; };
+		ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3371D79678900841945 /* VectorMapBaseController.mm */; };
+		ADC2B33D1D79735300841945 /* cartodark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B33A1D79735300841945 /* cartodark.zip */; };
+		ADC2B33E1D79735300841945 /* nutibright-v3.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B33B1D79735300841945 /* nutibright-v3.zip */; };
+		ADC2B33F1D79735300841945 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B33C1D79735300841945 /* positron.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +138,12 @@
 		ADC2B3151D79653500841945 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADC2B3161D79653500841945 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
 		ADC2B3171D79653500841945 /* saku_ios_4bpp.nmldb */ = {isa = PBXFileReference; lastKnownFileType = file; name = saku_ios_4bpp.nmldb; path = Assets/saku_ios_4bpp.nmldb; sourceTree = "<group>"; };
+		ADC2B3351D79673200841945 /* CartoRasterTileController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoRasterTileController.mm; sourceTree = "<group>"; };
+		ADC2B3371D79678900841945 /* VectorMapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorMapBaseController.mm; sourceTree = "<group>"; };
+		ADC2B3391D7967A100841945 /* VectorMapBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorMapBaseController.h; sourceTree = "<group>"; };
+		ADC2B33A1D79735300841945 /* cartodark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = cartodark.zip; sourceTree = SOURCE_ROOT; };
+		ADC2B33B1D79735300841945 /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "nutibright-v3.zip"; sourceTree = SOURCE_ROOT; };
+		ADC2B33C1D79735300841945 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = positron.zip; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */,
+				ADC2B3351D79673200841945 /* CartoRasterTileController.mm */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -176,6 +188,8 @@
 			children = (
 				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
 				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
+				ADC2B3391D7967A100841945 /* VectorMapBaseController.h */,
+				ADC2B3371D79678900841945 /* VectorMapBaseController.mm */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -277,6 +291,9 @@
 		ADC2B2FA1D79651C00841945 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				ADC2B33A1D79735300841945 /* cartodark.zip */,
+				ADC2B33B1D79735300841945 /* nutibright-v3.zip */,
+				ADC2B33C1D79735300841945 /* positron.zip */,
 				ADC2B2FC1D79653500841945 /* 852-map-toolbar.png */,
 				ADC2B2FD1D79653500841945 /* 852-map-toolbar@2x.png */,
 				ADC2B2FE1D79653500841945 /* 852-map-toolbar@3x.png */,
@@ -414,6 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC2B3331D79653500841945 /* rome_ntvt.mbtiles in Resources */,
+				ADC2B33D1D79735300841945 /* cartodark.zip in Resources */,
+				ADC2B33E1D79735300841945 /* nutibright-v3.zip in Resources */,
 				ADC2B32A1D79653500841945 /* mapzen.zip in Resources */,
 				ADC2B32F1D79653500841945 /* menu@2x.png in Resources */,
 				ADC2B3201D79653500841945 /* carto-fonts.zip in Resources */,
@@ -424,6 +443,7 @@
 				ADC2B32C1D79653500841945 /* marker_red.png in Resources */,
 				ADC2B32B1D79653500841945 /* marker_black.png in Resources */,
 				ADC2B3261D79653500841945 /* info.png in Resources */,
+				ADC2B33F1D79735300841945 /* positron.zip in Resources */,
 				ADC2B3251D79653500841945 /* fcd_auto.nml in Resources */,
 				ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */,
 				ADC2B3341D79653500841945 /* saku_ios_4bpp.nmldb in Resources */,
@@ -476,10 +496,12 @@
 				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
 				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
+				ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */,
 				ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */,
 				ADC2B2F41D795FFE00841945 /* MyCartoVisBuilder.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
 				ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */,
+				ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

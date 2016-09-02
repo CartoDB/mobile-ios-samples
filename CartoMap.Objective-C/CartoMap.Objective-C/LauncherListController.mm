@@ -9,13 +9,13 @@
 -(NSArray*) samples
 {
     return @[
-             @{ @"name": @"Carto VisJson Sample",
+             @{ @"name": @"Carto VisJson",
                 @"description": @"Using high-level Carto VisJson API",
                 @"controller": @"CartoVisJsonController"
                 },
-             @{ @"name": @"",
-                @"description": @"",
-                @"controller": @""
+             @{ @"name": @"Carto Raster Tile",
+                @"description": @"How to use Carto PostGIS Raster data, as tiled raster layer",
+                @"controller": @"CartoRasterTileController"
                 },
              ];
 }
