@@ -17,14 +17,14 @@
 -(NSDictionary*)languages
 {
     return @{
-             @"local": @"",
-             @"English": @"en",
-             @"German":  @"de",
-             @"Spanish": @"es",
-             @"Italian": @"it",
-             @"French":  @"fr",
-             @"Russian": @"ru",
-             @"Chinese": @"zh",
+             @"local":    @"",
+             @"English":  @"en",
+             @"German":   @"de",
+             @"Spanish":  @"es",
+             @"Italian":  @"it",
+             @"French":   @"fr",
+             @"Russian":  @"ru",
+             @"Chinese":  @"zh",
              @"Estonian": @"et",
              };
 }
@@ -32,14 +32,14 @@
 -(NSDictionary*)styles
 {
     return @{
-             @"Basic":		   @"basic",
-             @"NutiBright 2D": @"nutibright-v3:default",
-             @"Nutiteq dark": @"nutibright-v3:nutiteq_dark",
-             @"Nutiteq grey": @"nutibright-v3:nutiteq_grey",
-             @"NutiBright 3D": @"nutibright3d",
-             @"Loose Leaf":	   @"looseleaf",
-             @"MapZen":        @"mapzen",
-             @"Positron@Mapzen": @"positron",
+             @"Basic":		       @"basic",
+             @"NutiBright 2D":     @"nutibright-v3:default",
+             @"Nutiteq dark":      @"nutibright-v3:nutiteq_dark",
+             @"Nutiteq grey":      @"nutibright-v3:nutiteq_grey",
+             @"NutiBright 3D":     @"nutibright3d",
+             @"Loose Leaf":	       @"looseleaf",
+             @"MapZen":            @"mapzen",
+             @"Positron@Mapzen":   @"positron",
              @"Positron@Basemaps": @"cartodark"
              };
 }
@@ -59,8 +59,6 @@
 
 - (void)updateBaseLayer
 {
-
-
     NTCompiledStyleSet *vectorTileStyleSet;
     
     BOOL styleBuildings3D = NO;
@@ -81,7 +79,7 @@
         NSString *styleName = elements[1];
         
         NSString* styleAssetName = [fileName stringByAppendingString: @".zip"];
-        NSString* folder = @"assets/";
+        NSString* folder = @"";//@"assets/";
         
         styleAssetName = [folder stringByAppendingString:styleAssetName];
         
@@ -143,8 +141,6 @@
    //     vectorTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:15 baseURL:@"http://up1.nutiteq.com/nutiteq879af751/tiles/data_test/{z}/{x}/{y}.vt"];
         
         vectorTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:18 baseURL:@"http://ashbu.cartocdn.com/basemaps2/api/v1/map/basemaps2@6ecdc03d51510e65f9454f42951cb2d3:0/{z}/{x}/{y}.mvt?api_key=75e5b3a28f3ca63115fbb29110c68ed31cdf8a65"];
-
-        
     }
     
     // We don't use vectorTileDataSource directly (this would be also option),
@@ -190,6 +186,7 @@
         
         // Custom initialization
         NSInteger selectedLanguage = [[[sampleController languages] allValues] indexOfObject:sampleController.vectorStyleLanguage];
+        
         _dropDownLanguage = [[VPPDropDown alloc] initSelectionWithTitle:@"Language"
                                                               tableView:self.tableView
                                                               indexPath:[NSIndexPath indexPathForRow:0 inSection:0]
@@ -198,6 +195,7 @@
                                                           elementTitles:[[sampleController languages] allKeys]];
         
         NSInteger selectedStyle = [[[sampleController styles] allValues] indexOfObject:sampleController.vectorStyleName];
+        
         _dropDownStyle = [[VPPDropDown alloc] initSelectionWithTitle:@"Style"
                                                            tableView:self.tableView
                                                            indexPath:[NSIndexPath indexPathForRow:1 inSection:0]
@@ -219,6 +217,7 @@
     // Return the number of rows in the section.
     NSInteger rows = [VPPDropDown tableView:tableView numberOfExpandedRowsInSection:section];
     rows += 2; // 2 sections: language, style
+
     return rows;
 }
 
@@ -239,7 +238,9 @@
 }
 
 - (void) dropDown:(VPPDropDown *)dropDown elementSelected:(VPPDropDownElement *)element atGlobalIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell* cell = [[self tableView] cellForRowAtIndexPath:indexPath];
+    
     if (dropDown == _dropDownLanguage) {
         self.sampleController.vectorStyleLanguage = [[self.sampleController languages] objectForKey:cell.textLabel.text];
         [self.sampleController updateBaseLayer];

@@ -5,7 +5,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [NTMapView registerLicense:@"XTUMwQ0ZIcXhuZ3RSdWdYNllQM25tRng2Q0tacGJGY2dBaFVBZ2N3K2dFTEFXRWx3OVdzbVF4aC90OVQxMEJJPQoKcHJvZHVjdHM9c2RrLWlvcy0zLioKYnVuZGxlSWRlbnRpZmllcj1jb20uY2FydG8uKgp3YXRlcm1hcms9Y3VzdG9tCnZhbGlkVW50aWw9MjAxNi0xMi0wMQp1c2VyS2V5PTM2M2YxNzdjZjM2NTAzMGYxZWU4YjkzY2JmNTY3OGRhCg"];
+    [NTMapView registerLicense:@"XTUN3Q0ZDZG5yUkZyTTRldVIvYWJwUWVVNjVQajk0cHFBaFFLUlkvMjlWazZETWIwSjlhRjBvR1JoMmNVc2c9PQoKcHJvZHVjdHM9c2RrLWlvcy00LioKYnVuZGxlSWRlbnRpZmllcj1jYXJ0by5DYXJ0b01hcC1PYmplY3RpdmUtQwp3YXRlcm1hcms9Y2FydG9kYgp2YWxpZFVudGlsPTIwMTYtMTAtMDIKb25saW5lTGljZW5zZT0xCg=="];
     
     [NTLog setShowDebug:YES];
     [NTLog setShowInfo:YES];

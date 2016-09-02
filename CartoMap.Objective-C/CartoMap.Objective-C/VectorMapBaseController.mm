@@ -80,7 +80,7 @@
         NSString *styleName = elements[1];
         
         NSString* styleAssetName = [fileName stringByAppendingString: @".zip"];
-        NSString* folder = @"assets/";
+        NSString* folder = @"";//@"assets/";
         
         styleAssetName = [folder stringByAppendingString:styleAssetName];
         
@@ -164,7 +164,7 @@
     [self.mapView setRotation:0 durationSeconds:0];
     
     // Set default style parameters and create base layer
-    self.vectorStyleName = @"nutibright-v3";
+    self.vectorStyleName = @"nutibright-v3:default";
     self.vectorStyleLanguage = @"";
     [self updateBaseLayer];
     
@@ -211,26 +211,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"numberOfRowsInSection");
     // Return the number of rows in the section.
     NSInteger rows = [VPPDropDown tableView:tableView numberOfExpandedRowsInSection:section];
     rows += 2; // 2 sections: language, style
-    rows += 1; // 2 sections: language, style
     
     return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cellForRowAtIndexPath");
-    NSLog([@"IndexPath: " stringByAppendingString:[NSString stringWithFormat:@"%i", indexPath]]);
-    
     if ([VPPDropDown tableView:tableView dropdownsContainIndexPath:indexPath]) {
         
-        NSLog([@"IndexPath 2: " stringByAppendingString:[NSString stringWithFormat:@"%i", indexPath]]);
-        
         UITableViewCell* cell = [VPPDropDown tableView:tableView cellForRowAtIndexPath:indexPath];
-        NSLog([@"IndexPath 3: " stringByAppendingString:[NSString stringWithFormat:@"%i", indexPath]]);
         return cell;
     }
     
