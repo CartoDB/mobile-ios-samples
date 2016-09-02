@@ -464,8 +464,8 @@ static NSMutableDictionary *dropDowns = nil;
 }
 
 
-- (int) numberOfRows {
-    int tmp = 0; // root cell is not counted
+- (NSInteger) numberOfRows {
+    NSInteger tmp = 0; // root cell is not counted
     if (_expanded) {
         tmp += [_elements count];
     }
@@ -674,7 +674,7 @@ static NSMutableDictionary *dropDowns = nil;
 
 - (NSIndexPath *) convertRelativeIndexPath:(NSIndexPath *)indexPath {
         //casting to id to supress deprecated warnings
-    if (![(id)self containsRelativeIndexPath:indexPath]) {
+    if (![(id)self isRootCellAtIndexPath:indexPath]) {
         return nil;
     }
     
@@ -860,8 +860,10 @@ static NSMutableDictionary *dropDowns = nil;
 
 - (void) didSelectRowAtRelativeIndexPath:(NSIndexPath *)relativeIndexPath
                          globalIndexPath:(NSIndexPath *)globalIndexPath {
-        //casting to id to supress deprecated warnings
-    if ([(id)self containsRelativeIndexPath:relativeIndexPath]) {
+    
+    //casting to id to supress deprecated warnings
+    if ([(id)self isRootCellAtIndexPath:relativeIndexPath]) {
+        
         if ([self convertRelativeIndexPath:relativeIndexPath].row == 0) {
             // we are on root cell
             [self toggleDropDown];
