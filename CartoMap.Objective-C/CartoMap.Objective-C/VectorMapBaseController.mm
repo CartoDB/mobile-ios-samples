@@ -137,7 +137,7 @@
     if ([self.vectorStyleName isEqualToString:@"mapzen"] || [self.vectorStyleName isEqualToString:@"positron"]) {
         vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"mapzen.osm"];
     } else {
-        vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq"];
+        vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.osm"];
     }
     
     // We don't use vectorTileDataSource directly (this would be also option),
