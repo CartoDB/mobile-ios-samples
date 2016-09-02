@@ -98,7 +98,6 @@
         NTZippedAssetPackage* assetPackage = [[NTZippedAssetPackage alloc] initWithZipData:vectorTileStyleSetData];
         
         vectorTileStyleSet = [[NTCompiledStyleSet alloc] initWithAssetPackage:assetPackage];
-        
     }
     
     // Create vector tile decoder using the styleset and update style parameters
@@ -138,8 +137,6 @@
     if ([self.vectorStyleName isEqualToString:@"mapzen"] || [self.vectorStyleName isEqualToString:@"positron"]) {
         vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"mapzen.osm"];
     } else {
-        //vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.test"];
-        //     vectorTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:15 baseURL:@"http://up1.nutiteq.com/nutiteq879af751/tiles/data_test/{z}/{x}/{y}.vt"];
         
         vectorTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:18 baseURL:@"http://ashbu.cartocdn.com/basemaps2/api/v1/map/basemaps2@6ecdc03d51510e65f9454f42951cb2d3:0/{z}/{x}/{y}.mvt?api_key=75e5b3a28f3ca63115fbb29110c68ed31cdf8a65"];
     }
@@ -182,6 +179,7 @@
 - (id)initWithStyle:(UITableViewStyle)style controller:(VectorMapBaseController*)sampleController
 {
     self = [super initWithStyle:style];
+    
     if (self) {
         self.sampleController = sampleController;
         
@@ -193,7 +191,7 @@
                                                                delegate:self
                                                           selectedIndex:(int)selectedLanguage
                                                           elementTitles:[[sampleController languages] allKeys]];
-        
+
         NSInteger selectedStyle = [[[sampleController styles] allValues] indexOfObject:sampleController.vectorStyleName];
         _dropDownStyle = [[VPPDropDown alloc] initSelectionWithTitle:@"Style"
                                                            tableView:self.tableView
@@ -213,17 +211,33 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"numberOfRowsInSection");
     // Return the number of rows in the section.
     NSInteger rows = [VPPDropDown tableView:tableView numberOfExpandedRowsInSection:section];
     rows += 2; // 2 sections: language, style
+    rows += 1; // 2 sections: language, style
+    
     return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cellForRowAtIndexPath");
+    NSLog([@"IndexPath: " stringByAppendingString:[NSString stringWithFormat:@"%i", indexPath]]);
+    
+    if ([VPPDropDown tableView:tableView dropdownsContainIndexPath:indexPath]) {
+        
+        NSLog([@"IndexPath 2: " stringByAppendingString:[NSString stringWithFormat:@"%i", indexPath]]);
+        
+        UITableViewCell* cell = [VPPDropDown tableView:tableView cellForRowAtIndexPath:indexPath];
+        NSLog([@"IndexPath 3: " stringByAppendingString:[NSString stringWithFormat:@"%i", indexPath]]);
+        return cell;
+    }
+    
     if ([VPPDropDown tableView:tableView dropdownsContainIndexPath:indexPath]) {
         return [VPPDropDown tableView:tableView cellForRowAtIndexPath:indexPath];
     }
+    
     return nil;
 }
 
@@ -236,12 +250,15 @@
 }
 
 - (void) dropDown:(VPPDropDown *)dropDown elementSelected:(VPPDropDownElement *)element atGlobalIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell* cell = [[self tableView] cellForRowAtIndexPath:indexPath];
+    
     if (dropDown == _dropDownLanguage) {
         self.sampleController.vectorStyleLanguage = [[self.sampleController languages] objectForKey:cell.textLabel.text];
         [self.sampleController updateBaseLayer];
         [self.navigationController popViewControllerAnimated:YES];
     }
+    
     if (dropDown == _dropDownStyle) {
         self.sampleController.vectorStyleName = [[self.sampleController styles] objectForKey:cell.textLabel.text];
         [self.sampleController updateBaseLayer];

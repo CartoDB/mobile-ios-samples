@@ -188,7 +188,9 @@
 }
 
 - (void)dropDown:(VPPDropDown *)dropDown elementSelected:(VPPDropDownElement *)element atGlobalIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell* cell = [[self tableView] cellForRowAtIndexPath:indexPath];
+    
     if (dropDown == _dropDownVis) {
         self.sampleController.visJSONURL = [[self.sampleController visJSONURLs] objectForKey:cell.textLabel.text];
         [self.sampleController updateVis];

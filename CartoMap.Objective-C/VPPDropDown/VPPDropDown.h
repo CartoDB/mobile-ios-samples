@@ -85,21 +85,22 @@ typedef enum {
 
 @interface VPPDropDown : NSObject {
 @private
+    
     VPPDropDownType _type;
+    
     NSArray *_elements;
     NSString *_title;
+    
     id<VPPDropDownDelegate> _delegate;
+    
     UITableView *_tableView;
     NSIndexPath *_rootIndexPath;
     NSIndexPath *_globalRootIndexPath;
+    
     BOOL _expanded;
-    int _selectedIndex;
+    
+    NSInteger _selectedIndex;
 }
-
-
-
-
-
 
 /** ---
  @name Reading dropdown setup
@@ -157,7 +158,7 @@ typedef enum {
  
  This property only applies to selection dropdowns. If you change this value
  manually, no dropdown delegate's method will be called. */
-@property (nonatomic, assign) int selectedIndex;
+@property (nonatomic, assign) NSInteger selectedIndex;
 
 
 /** ---
@@ -241,7 +242,7 @@ typedef enum {
                                tableView:(UITableView *)tableView
                                indexPath:(NSIndexPath *)indexPath
                                 delegate:(id<VPPDropDownDelegate>)delegate 
-                           selectedIndex:(int)selectedIndex
+                           selectedIndex:(NSInteger)selectedIndex
                            elementTitles:(NSArray *)objects;
 
 
@@ -280,7 +281,7 @@ returns NO. */
  
  If the dropdown is contracted, numberOfRows will be 0. Otherwise, 
  numberOfRows will be the count of elements. */
-@property (nonatomic, readonly) int numberOfRows;
+@property (nonatomic, readonly) NSInteger numberOfRows;
 
     
 /** **Deprecated** Indicates if the given relativeIndexPath is contained and managed by the
@@ -329,3 +330,8 @@ returns NO. */
                          globalIndexPath:(NSIndexPath *)globalIndexPath;
 
 @end
+
+
+
+
+

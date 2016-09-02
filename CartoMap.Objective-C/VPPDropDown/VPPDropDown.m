@@ -36,17 +36,17 @@
 
 
 @implementation VPPDropDown
-@synthesize delegate=_delegate;
-@synthesize type=_type;
-@synthesize elements=_elements;
-@synthesize title=_title;
-@synthesize indexPath=_rootIndexPath;
+
+@synthesize delegate = _delegate;
+@synthesize type = _type;
+@synthesize elements = _elements;
+@synthesize title = _title;
+@synthesize indexPath = _rootIndexPath;
 @synthesize expanded=_expanded;
-@synthesize tableView=_tableView;
+@synthesize tableView = _tableView;
 @synthesize usesEntireSection;
 @synthesize object;
-@synthesize selectedIndex=_selectedIndex;
-
+@synthesize selectedIndex = _selectedIndex;
 
 /* a dictionary of tableviews (keys) and a dictionary of sections nsnumbered (values)
  each dictionary of sections will hold the section nsnumbered (key) and its current
@@ -65,8 +65,8 @@ static NSMutableDictionary *dropDowns = nil;
 #pragma mark - Managing dropDowns collection
 
 + (VPPDropDown *) tableView:(UITableView *)tableView dropdownForIndexPath:(NSIndexPath *)indexPath {
-    NSArray *dropDownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInt:[tableView hash]]] 
-                                   objectForKey:[NSNumber numberWithInt:indexPath.section]];   
+    NSArray *dropDownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInteger:[tableView hash]]]
+                                   objectForKey:[NSNumber numberWithInteger:indexPath.section]];
     
    return [[dropDownsInSection filteredArrayUsingPredicate:
             [NSPredicate predicateWithFormat:@"_globalRootIndexPath.row <= %d",indexPath.row]] 
@@ -74,10 +74,10 @@ static NSMutableDictionary *dropDowns = nil;
 }
 
 - (void) updateGlobalIndexPaths {
-    NSArray *dropDownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInt:[self.tableView hash]]] 
-                                   objectForKey:[NSNumber numberWithInt:self.indexPath.section]];
+    NSArray *dropDownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInteger:[self.tableView hash]]]
+                                   objectForKey:[NSNumber numberWithInteger:self.indexPath.section]];
     
-    int selfPosition = [dropDownsInSection indexOfObject:self];
+    NSInteger selfPosition = [dropDownsInSection indexOfObject:self];
     
     if (selfPosition == [dropDownsInSection count]-1) {
         // this dropdown is the last one, so any dropdown will be modified
@@ -85,11 +85,12 @@ static NSMutableDictionary *dropDowns = nil;
         return;
     }
     
-    int numberOfCells = [self.elements count];
+    NSInteger numberOfCells = [self.elements count];
     if (!self.expanded) {
         numberOfCells = numberOfCells * (-1);
     }
-    for (int i = selfPosition+1; i < [dropDownsInSection count]; i++) {
+    for (NSInteger i = selfPosition + 1; i < [dropDownsInSection count]; i++) {
+        
         VPPDropDown *selectedDD = (VPPDropDown *)[dropDownsInSection objectAtIndex:i];
         NSIndexPath *currentRelIP = selectedDD->_globalRootIndexPath;
         NSIndexPath *newRelIP = [NSIndexPath indexPathForRow:currentRelIP.row+numberOfCells inSection:currentRelIP.section];
@@ -97,24 +98,24 @@ static NSMutableDictionary *dropDowns = nil;
     }
 }
 
-+ (void) addNumberOfRows:(int)nnumberOfRows forSection:(int)section inTableView:(UITableView *)tableView {
++ (void) addNumberOfRows:(NSInteger)nnumberOfRows forSection:(NSInteger)section inTableView:(UITableView *)tableView {
     if (!numberOfRows) {
         numberOfRows = [[NSMutableDictionary alloc] init];
     }
     
-    NSMutableDictionary *sections = [numberOfRows objectForKey:[NSNumber numberWithInt:[tableView hash]]];
+    NSMutableDictionary *sections = [numberOfRows objectForKey:[NSNumber numberWithInteger:[tableView hash]]];
     if (!sections) {
         sections = [NSMutableDictionary dictionary];
     }    
     
     
-    NSNumber *n = [sections objectForKey:[NSNumber numberWithInt:section]];
+    NSNumber *n = [sections objectForKey:[NSNumber numberWithInteger:section]];
     if (!n) {
         n = [NSNumber numberWithInt:0];
     }
-    n = [NSNumber numberWithInt:[n intValue]+nnumberOfRows];
-    [sections setObject:n forKey:[NSNumber numberWithInt:section]];
-    [numberOfRows setObject:sections forKey:[NSNumber numberWithInt:[tableView hash]]];
+    n = [NSNumber numberWithInteger:[n intValue]+nnumberOfRows];
+    [sections setObject:n forKey:[NSNumber numberWithInteger:section]];
+    [numberOfRows setObject:sections forKey:[NSNumber numberWithInteger:[tableView hash]]];
 }
 
 - (void) removeFromDropDownsList {
@@ -122,12 +123,12 @@ static NSMutableDictionary *dropDowns = nil;
         return;
     }
     
-    NSMutableDictionary *sections = [dropDowns objectForKey:[NSNumber numberWithInt:[self.tableView hash]]];
+    NSMutableDictionary *sections = [dropDowns objectForKey:[NSNumber numberWithInteger:[self.tableView hash]]];
     if (!sections) {
         return;
     }
     NSMutableArray *dropdowns = [NSMutableArray arrayWithArray:
-                                 [sections objectForKey:[NSNumber numberWithInt:self.indexPath.section]]];
+                                 [sections objectForKey:[NSNumber numberWithInteger:self.indexPath.section]]];
     if (!dropdowns) {
         return;
     }
@@ -137,15 +138,15 @@ static NSMutableDictionary *dropDowns = nil;
         [sections setObject:[dropdowns sortedArrayUsingDescriptors:
                              [NSArray arrayWithObject:
                               [NSSortDescriptor sortDescriptorWithKey:@"indexPath.row" ascending:YES]]] 
-                     forKey:[NSNumber numberWithInt:self.indexPath.section]];
-        [dropDowns setObject:sections forKey:[NSNumber numberWithInt:[self.tableView hash]]];
+                     forKey:[NSNumber numberWithInteger:self.indexPath.section]];
+        [dropDowns setObject:sections forKey:[NSNumber numberWithInteger:[self.tableView hash]]];
     }
 }
 
 
 - (void) dispose {
     if (_expanded) {
-        int numberOfRows = self.numberOfRows * -1;
+        NSInteger numberOfRows = self.numberOfRows * -1;
         [VPPDropDown addNumberOfRows:numberOfRows forSection:self.indexPath.section inTableView:self.tableView];
         _expanded = NO;
         [self updateGlobalIndexPaths];
@@ -159,12 +160,12 @@ static NSMutableDictionary *dropDowns = nil;
         dropDowns = [[NSMutableDictionary alloc] init]; 
     }
     
-    NSMutableDictionary *sections = [dropDowns objectForKey:[NSNumber numberWithInt:[self.tableView hash]]];
+    NSMutableDictionary *sections = [dropDowns objectForKey:[NSNumber numberWithInteger:[self.tableView hash]]];
     if (!sections) {
         sections = [NSMutableDictionary dictionary];
     }
     NSMutableArray *dropdowns = [NSMutableArray arrayWithArray:
-                                 [sections objectForKey:[NSNumber numberWithInt:self.indexPath.section]]];
+                                 [sections objectForKey:[NSNumber numberWithInteger:self.indexPath.section]]];
     if (!dropdowns) {
         dropdowns = [NSMutableArray array];
     }
@@ -180,7 +181,7 @@ static NSMutableDictionary *dropDowns = nil;
             
             // after removing the dd, let's update the list
             dropdowns = [NSMutableArray arrayWithArray:
-                         [sections objectForKey:[NSNumber numberWithInt:self.indexPath.section]]];
+                         [sections objectForKey:[NSNumber numberWithInteger:self.indexPath.section]]];
         }
     }
     
@@ -189,8 +190,8 @@ static NSMutableDictionary *dropDowns = nil;
     [sections setObject:[dropdowns sortedArrayUsingDescriptors:
                          [NSArray arrayWithObject:
                           [NSSortDescriptor sortDescriptorWithKey:@"indexPath.row" ascending:YES]]] 
-                 forKey:[NSNumber numberWithInt:self.indexPath.section]];
-    [dropDowns setObject:sections forKey:[NSNumber numberWithInt:[self.tableView hash]]];
+                 forKey:[NSNumber numberWithInteger:self.indexPath.section]];
+    [dropDowns setObject:sections forKey:[NSNumber numberWithInteger:[self.tableView hash]]];
 }
 
 
@@ -207,8 +208,8 @@ static NSMutableDictionary *dropDowns = nil;
 }
 
 - (NSUInteger) hash {
-    int prime = 31;
-    int result = 1;
+    NSInteger prime = 31;
+    NSInteger result = 1;
     
     result = prime * result + [self.indexPath hash];
     result = prime * result + [self.tableView hash];
@@ -275,7 +276,7 @@ static NSMutableDictionary *dropDowns = nil;
                                tableView:(UITableView *)tableView
                                indexPath:(NSIndexPath *)indexPath
                                 delegate:(id<VPPDropDownDelegate>)delegate 
-                           selectedIndex:(int)selectedIndex
+                           selectedIndex:(NSInteger)selectedIndex
                            elementTitles:(NSArray *)objects {
     NSMutableArray *arr = [NSMutableArray array];
     
@@ -299,14 +300,16 @@ static NSMutableDictionary *dropDowns = nil;
 #pragma mark Table View Data Source
 
 + (BOOL) tableView:(UITableView *)tableView dropdownsContainIndexPath:(NSIndexPath *)indexPath {
-    NSArray *dropDownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInt:[tableView hash]]] 
-                                   objectForKey:[NSNumber numberWithInt:indexPath.section]];
+    NSArray *dropDownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInteger:[tableView hash]]]
+                                   objectForKey:[NSNumber numberWithInteger:indexPath.section]];
     if (!dropDownsInSection) {
         return NO;
     }
     
-    int numberOfRowsInSection = [VPPDropDown tableView:tableView numberOfExpandedRowsInSection:indexPath.section];
+    NSInteger numberOfRowsInSection = [VPPDropDown tableView:tableView numberOfExpandedRowsInSection:indexPath.section];
+    
     numberOfRowsInSection += [dropDownsInSection count];
+    
     NSIndexPath *firstIndexPath = [[dropDownsInSection objectAtIndex:0] indexPath];
     return (indexPath.row >= firstIndexPath.row 
             && indexPath.row < firstIndexPath.row + numberOfRowsInSection);
@@ -325,8 +328,8 @@ static NSMutableDictionary *dropDowns = nil;
 }
 
 + (BOOL) tableView:(UITableView *)tableView isRootCellAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *dropdownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInt:[tableView hash]]] 
-                                   objectForKey:[NSNumber numberWithInt:indexPath.section]];
+    NSArray *dropdownsInSection = [[dropDowns objectForKey:[NSNumber numberWithInteger:[tableView hash]]]
+                                   objectForKey:[NSNumber numberWithInteger:indexPath.section]];
     
     dropdownsInSection = [dropdownsInSection filteredArrayUsingPredicate:
                           [NSPredicate predicateWithFormat:@"_globalRootIndexPath.row == %d",indexPath.row]];
@@ -454,8 +457,8 @@ static NSMutableDictionary *dropDowns = nil;
 
 // PAY ATTENTION: numberOfRows doesn't include the root cell in the count.
 + (NSInteger) tableView:(UITableView *)tableView numberOfExpandedRowsInSection:(NSInteger)section {
-    NSMutableDictionary *d = [numberOfRows objectForKey:[NSNumber numberWithInt:[tableView hash]]];
-    NSNumber *n = [d objectForKey:[NSNumber numberWithInt:section]];
+    NSMutableDictionary *d = [numberOfRows objectForKey:[NSNumber numberWithInteger:[tableView hash]]];
+    NSNumber *n = [d objectForKey:[NSNumber numberWithInteger:section]];
     
     return [n intValue];
 }
@@ -500,7 +503,7 @@ static NSMutableDictionary *dropDowns = nil;
 - (void) toggleDropDown {
     _expanded = !_expanded;
 
-    int rowsToAdd = [self.elements count];
+    NSInteger rowsToAdd = [self.elements count];
     if (!_expanded) {
         rowsToAdd = -1 * rowsToAdd;
     }
@@ -564,7 +567,7 @@ static NSMutableDictionary *dropDowns = nil;
 		NSIndexPath *iPath = [self convertIndexPath:globalIndexPath];
 		NSIndexPath *previousSelectedItem = [NSIndexPath indexPathForRow:_selectedIndex+1 inSection:globalIndexPath.section];
     
-		_selectedIndex = iPath.row-1;
+		_selectedIndex = iPath.row - 1;
     
 		[_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:previousSelectedItem, _rootIndexPath, nil] withRowAnimation:UITableViewRowAnimationNone];
 		[_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:globalIndexPath, nil] withRowAnimation:UITableViewRowAnimationFade];
@@ -646,7 +649,7 @@ static NSMutableDictionary *dropDowns = nil;
     }
 }
 
-- (void) setSelectedIndex:(int)selectedIndex {
+- (void) setSelectedIndex:(NSInteger)selectedIndex {
     _selectedIndex = selectedIndex;
     
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:self.indexPath.section] withRowAnimation:UITableViewRowAnimationNone];
@@ -665,7 +668,7 @@ static NSMutableDictionary *dropDowns = nil;
         return NO;
     }
     
-    int tmp = indexPath.row - _rootIndexPath.row;
+    NSInteger tmp = indexPath.row - _rootIndexPath.row;
     return (tmp >= 0) && (tmp <= [self numberOfRows]);
 }
 

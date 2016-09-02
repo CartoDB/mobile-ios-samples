@@ -53,23 +53,23 @@
                               };
     
     NSMutableArray* layersArray = [[NSMutableArray alloc]init];
-    NSDictionary* layers = @{
-                            @"options": options,
-                            @"type": @"cartodb"
-                            };
-    
-//    [layersArray addObject:@{ @"options": options }];
-//    [layersArray addObject:@{ @"type": @"cartodb" }];
-    
+    NSDictionary* layers = @{ @"options": options, @"type": @"cartodb" };
+
     [layersArray addObject:layers];
     
-    NSDictionary* json = @{
-                           @"layers": layersArray,
-                           @"version": @"1.2.0"
-                           };
+    NSDictionary* json = @{ @"layers": layersArray, @"version": @"1.2.0" };
+    
     NSError *error;
     NSData* data = [NSJSONSerialization dataWithJSONObject:json options:0 error:&error];
+    
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 @end
+
+
+
+
+
+
+
