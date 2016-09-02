@@ -11,8 +11,6 @@
 		0C1CF0651B134D27001A64AD /* HillshadeSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */; };
 		0C60B8251A601A820058C740 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFB6B71947460E00A64571 /* CartoMobileSDK.framework */; };
 		0C6E94011D22B5B2007C0F17 /* nutibright-v3.zip in Resources */ = {isa = PBXBuildFile; fileRef = 0C6E94001D22B5B2007C0F17 /* nutibright-v3.zip */; };
-		0C6E94071D26A77D007C0F17 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = 0C6E94061D26A77D007C0F17 /* positron.zip */; };
-		0C8E6A581D3818DA00CFE0FB /* cartodark.zip in Resources */ = {isa = PBXBuildFile; fileRef = 0C8E6A571D3818DA00CFE0FB /* cartodark.zip */; };
 		0C97CC471C09B26000336DF7 /* OfflineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */; };
 		2A319B43187C4F8F0004A3CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B42187C4F8F0004A3CB /* Foundation.framework */; };
 		2A319B45187C4F8F0004A3CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */; };
@@ -76,6 +74,9 @@
 		4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */; };
 		ADC28FCA1D7835DA00796134 /* mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E38371D22B9C000C62BEB /* mapzen.zip */; };
+		ADC2B3531D799BB800841945 /* cartodark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3501D799BB800841945 /* cartodark.zip */; };
+		ADC2B3541D799BB800841945 /* nutibright-v3.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3511D799BB800841945 /* nutibright-v3.zip */; };
+		ADC2B3551D799BB800841945 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B3521D799BB800841945 /* positron.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,8 +84,6 @@
 		0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackageMapController.h; path = AdvancedMap/PackageMapController.h; sourceTree = SOURCE_ROOT; };
 		0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HillshadeSampleController.mm; path = AdvancedMap/HillshadeSampleController.mm; sourceTree = SOURCE_ROOT; };
 		0C6E94001D22B5B2007C0F17 /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "nutibright-v3.zip"; sourceTree = SOURCE_ROOT; };
-		0C6E94061D26A77D007C0F17 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = positron.zip; sourceTree = SOURCE_ROOT; };
-		0C8E6A571D3818DA00CFE0FB /* cartodark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = cartodark.zip; sourceTree = SOURCE_ROOT; };
 		0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OfflineRoutingController.mm; path = AdvancedMap/OfflineRoutingController.mm; sourceTree = SOURCE_ROOT; };
 		2A319B3F187C4F8F0004A3CB /* AdvancedMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A319B42187C4F8F0004A3CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,6 +163,9 @@
 		4DEB06DF1A10DF0F003D111C /* LauncherListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LauncherListController.h; path = AdvancedMap/LauncherListController.h; sourceTree = SOURCE_ROOT; };
 		4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredGeoJsonController.mm; path = AdvancedMap/ClusteredGeoJsonController.mm; sourceTree = SOURCE_ROOT; };
 		4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredRandomPointsController.mm; path = AdvancedMap/ClusteredRandomPointsController.mm; sourceTree = SOURCE_ROOT; };
+		ADC2B3501D799BB800841945 /* cartodark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = cartodark.zip; sourceTree = SOURCE_ROOT; };
+		ADC2B3511D799BB800841945 /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "nutibright-v3.zip"; sourceTree = SOURCE_ROOT; };
+		ADC2B3521D799BB800841945 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = positron.zip; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,15 +256,16 @@
 		4D4B1F281D018BB6001C2F30 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				ADC2B3501D799BB800841945 /* cartodark.zip */,
+				ADC2B3511D799BB800841945 /* nutibright-v3.zip */,
+				ADC2B3521D799BB800841945 /* positron.zip */,
 				4D0E38371D22B9C000C62BEB /* mapzen.zip */,
 				4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */,
-				0C8E6A571D3818DA00CFE0FB /* cartodark.zip */,
 				4D4B1F291D018BC7001C2F30 /* 852-map-toolbar.png */,
 				4D4B1F2A1D018BC7001C2F30 /* 852-map-toolbar@2x.png */,
 				4D4B1F2B1D018BC7001C2F30 /* 852-map-toolbar@3x.png */,
 				4D4B1F2C1D018BC7001C2F30 /* arrow.png */,
 				4D4B1F2D1D018BC7001C2F30 /* arrow@2x.png */,
-				0C6E94061D26A77D007C0F17 /* positron.zip */,
 				4D4B1F2E1D018BC7001C2F30 /* basic.zip */,
 				4D4B1F2F1D018BC7001C2F30 /* capitals_3857.geojson */,
 				4D4B1F301D018BC7001C2F30 /* direction_down.png */,
@@ -425,13 +428,15 @@
 				4D4B1F541D018BC7001C2F30 /* marker_black.png in Resources */,
 				4D4B1F511D018BC7001C2F30 /* info@2x.png in Resources */,
 				4D4B1F4B1D018BC7001C2F30 /* direction_down.png in Resources */,
+				ADC2B3531D799BB800841945 /* cartodark.zip in Resources */,
 				4D4B1F4F1D018BC7001C2F30 /* fcd_auto.nml in Resources */,
 				4D4B1F471D018BC7001C2F30 /* arrow.png in Resources */,
 				4D9AB3A21D13E3680093A4CF /* carto-fonts.zip in Resources */,
 				4D4B1F451D018BC7001C2F30 /* 852-map-toolbar@2x.png in Resources */,
 				4D4B1F481D018BC7001C2F30 /* arrow@2x.png in Resources */,
-				0C6E94071D26A77D007C0F17 /* positron.zip in Resources */,
+				ADC2B3551D799BB800841945 /* positron.zip in Resources */,
 				4D4B1F581D018BC7001C2F30 /* menu@2x.png in Resources */,
+				ADC2B3541D799BB800841945 /* nutibright-v3.zip in Resources */,
 				4D4B1F501D018BC7001C2F30 /* info.png in Resources */,
 				4D4B1F231D018B8D001C2F30 /* UITableContract@2x.png in Resources */,
 				4D4B1F461D018BC7001C2F30 /* 852-map-toolbar@3x.png in Resources */,
@@ -446,7 +451,6 @@
 				4D4B1F4A1D018BC7001C2F30 /* capitals_3857.geojson in Resources */,
 				4D4B1F5C1D018BC7001C2F30 /* nutiteq-dark.zip in Resources */,
 				ADC28FCA1D7835DA00796134 /* mapzen.zip in Resources */,
-				0C8E6A581D3818DA00CFE0FB /* cartodark.zip in Resources */,
 				4D4B1F561D018BC7001C2F30 /* marker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
