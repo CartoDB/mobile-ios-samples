@@ -31,10 +31,7 @@
     if ([infoWindow getType] == NT_VARIANT_TYPE_OBJECT) {
         
         MyUTFGridEventListener* myEventListener = [[MyUTFGridEventListener alloc] init];
-        
-        myEventListener.mapView = self.mapView;
         myEventListener.vectorLayer = self.vectorLayer;
-        myEventListener.infoWindowTemplate = infoWindow;
         
         NTTileLayer* tileLayer = (NTTileLayer*)layer;
         [tileLayer setUTFGridEventListener:myEventListener];

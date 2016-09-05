@@ -17,9 +17,13 @@
                 @"description": @"How to use Carto PostGIS Raster data, as tiled raster layer",
                 @"controller": @"CartoRasterTileController"
                 },
-             @{ @"name": @"SQL",
+             @{ @"name": @"SQL Map",
                 @"description": @"Custom vector data source making queries to http://docs.cartodb.com/cartodb-platform/sql-api/",
                 @"controller": @"CartoSQLController"
+                },
+             @{ @"name": @"UTF Grid",
+                @"description": @"A sample demonstrating how to use Carto Maps API with Raster tiles and UTFGrid",
+                @"controller": @"CartoUTFGridController"
                 },
              ];
 }

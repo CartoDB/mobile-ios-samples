@@ -4,7 +4,6 @@
 @interface MyUTFGridEventListener : NTUTFGridEventListener
 
 @property NTVectorLayer* vectorLayer;
-@property NTVariant* infoWindowTemplate;
-@property NTMapView* mapView;
+@property NTLocalVectorDataSource* source;
 
 @end

@@ -152,7 +152,7 @@
     
     NTGeoJSONGeometryReader* reader = [[NTGeoJSONGeometryReader alloc]init];
     NTFeatureCollection* collection = [reader readFeatureCollection:json];
-    
+
     for (int i = 0; i < collection.getFeatureCount; i++)
     {
         NTFeature* feature = [collection getFeature:i];

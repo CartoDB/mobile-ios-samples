@@ -311,15 +311,11 @@
 		4DC42AAD1B622C630022CA0C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AD860A6B1D7DA103005994B2 /* Base */,
+				AD860A6C1D7DA117005994B2 /* List */,
 				4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */,
 				4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */,
-				4DEB06DF1A10DF0F003D111C /* LauncherListController.h */,
-				4DC850071A0E718100C5124F /* LauncherListController.mm */,
-				4D2BE70A1A52F89C0013ABB3 /* MapSampleBaseController.h */,
-				4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */,
-				4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */,
 				0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */,
-				4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */,
 				4DC8500F1A0E7A5100C5124F /* PinSampleController.mm */,
 				4DEB06CF1A10BDB7003D111C /* Overlays2DSampleController.mm */,
 				0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */,
@@ -329,7 +325,6 @@
 				4DEB06D71A10CDC0003D111C /* OfflineVectorMapSampleController.mm */,
 				4DEB06D91A10D3D1003D111C /* AerialMapSampleController.mm */,
 				4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */,
-				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
 				0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */,
 				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
 				4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */,
@@ -356,6 +351,27 @@
 				2AC270571941EFF9000CA859 /* MyMergedRasterTileDataSource.mm */,
 			);
 			name = "Data Sources";
+			sourceTree = "<group>";
+		};
+		AD860A6B1D7DA103005994B2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4D2BE70A1A52F89C0013ABB3 /* MapSampleBaseController.h */,
+				4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */,
+				4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */,
+				4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		AD860A6C1D7DA117005994B2 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				4DEB06DF1A10DF0F003D111C /* LauncherListController.h */,
+				4DC850071A0E718100C5124F /* LauncherListController.mm */,
+				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
+			);
+			name = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

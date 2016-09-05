@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD860A6E1D7DB068005994B2 /* CartoUTFGridController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
 		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
@@ -81,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoUTFGridController.mm; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
 		ADBFDA741D786F39003DCBC9 /* LauncherListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherListController.h; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */,
 				ADC2B3351D79673200841945 /* CartoRasterTileController.mm */,
 				ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */,
+				AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */,
 				ADC2B2F41D795FFE00841945 /* MyCartoVisBuilder.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
+				AD860A6E1D7DB068005994B2 /* CartoUTFGridController.mm in Sources */,
 				ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */,
 				ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
