@@ -163,15 +163,13 @@
         NTVectorElement* element;
         
         if ([self.style isKindOfClass:[NTPointStyle class]]) {
-            element = [[NTPoint alloc]initWithGeometry:geometry style:self.style];
+            element = [[NTPoint alloc]initWithGeometry:(NTPointGeometry*)geometry style:(NTPointStyle*)self.style];
         } else if ([self.style isKindOfClass:[NTMarkerStyle class]]) {
-            element = [[NTMarker alloc]initWithGeometry:geometry style:self.style];
-        } else if ([self.style isKindOfClass:[NTMarkerStyle class]]) {
-            element = [[NTLine alloc]initWithGeometry:geometry style:self.style];
-        } else if ([self.style isKindOfClass:[NTLineGeometry class]]) {
-            element = [[NTPoint alloc]initWithGeometry:geometry style:self.style];
+            element = [[NTMarker alloc]initWithGeometry:geometry style:(NTMarkerStyle*)self.style];
+        } else if ([self.style isKindOfClass:[NTLineStyle class]]) {
+            element = [[NTLine alloc]initWithGeometry:(NTLineGeometry*)geometry style:(NTLineStyle*)self.style];
         } else if ([self.style isKindOfClass:[NTPolygonStyle class]]) {
-            element = [[NTPolygon alloc]initWithGeometry:geometry style:self.style];
+            element = [[NTPolygon alloc]initWithGeometry:(NTPolygonGeometry*)geometry style:(NTPolygonStyle*)self.style];
         } else {
             NSLog(@"ERROR: Incompatible format");
         }
