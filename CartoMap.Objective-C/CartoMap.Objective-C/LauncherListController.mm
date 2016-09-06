@@ -25,6 +25,10 @@
                 @"description": @"A sample demonstrating how to use Carto Maps API with Raster tiles and UTFGrid",
                 @"controller": @"CartoUTFGridController"
                 },
+             @{ @"name": @"Torque Map",
+                @"description": @"How to use Carto Torque tiles with CartoCSS styling",
+                @"controller": @"CartoTorqueController"
+                },
              ];
 }
 

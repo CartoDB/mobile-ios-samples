@@ -62,6 +62,7 @@
 		ADC2B33F1D79735300841945 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADC2B33C1D79735300841945 /* positron.zip */; };
 		ADC2B3571D79ABDB00841945 /* CartoSQLController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */; };
 		ADC2B35A1D79BD1000841945 /* MyMapEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */; };
+		ADD8BEBF1D7EAB7400E4B1A8 /* CartoTorqueController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoSQLController.mm; sourceTree = "<group>"; };
 		ADC2B3581D79BD0100841945 /* MyMapEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMapEventListener.h; sourceTree = "<group>"; };
 		ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyMapEventListener.mm; sourceTree = "<group>"; };
+		ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoTorqueController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				ADC2B3351D79673200841945 /* CartoRasterTileController.mm */,
 				ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */,
 				AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */,
+				ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				ADC2B3571D79ABDB00841945 /* CartoSQLController.mm in Sources */,
 				ADBFDAA71D788082003DCBC9 /* VPPDropDownElement.m in Sources */,
 				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
+				ADD8BEBF1D7EAB7400E4B1A8 /* CartoTorqueController.m in Sources */,
 				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
 				ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */,
