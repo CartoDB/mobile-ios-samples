@@ -6,7 +6,8 @@
  * A sample demonstrating how to use high-level Carto VisJSON API.
  * A list of different visjson URLs can be selected from the menu.
  * CartoVisLoader class is used to load and configure all corresponding layers.
- * Items on overlay layers are clickable, this is implemented using custom UTFGridEventListener.
+ * Items on overlay layers are clickable, this is implemented using custom UTFGridEventListener (for raster tile layers)
+ * or custom VectorTileEventListener (for vector tile layers).
  */
 @interface CartoVisJSONSampleController : MapSampleBaseController
 
@@ -25,6 +26,13 @@
 @end
 
 @interface MyUTFGridEventListener : NTUTFGridEventListener
+
+@property NTVectorLayer* vectorLayer;
+@property NTVariant* infoWindowTemplate;
+
+@end
+
+@interface MyVectorTileEventListener : NTVectorTileEventListener
 
 @property NTVectorLayer* vectorLayer;
 @property NTVariant* infoWindowTemplate;
@@ -72,7 +80,11 @@
         visBuilder.vectorLayer = vectorLayer;
         visBuilder.mapView = self.mapView;
         visBuilder.torqueLayer = nil;
-        [loader loadVis:visBuilder visURL:self.visJSONURL];
+        @try {
+            [loader loadVis:visBuilder visURL:self.visJSONURL];
+        } @catch (NSException *exception) {
+            NSLog(@"%@", [exception description]);
+        }
         
         // Kill old timer, create new timer if Torque layer is used
         if (self.timer) {
@@ -122,7 +134,7 @@
 
     [NTLog setShowDebug:true];
     [NTLog setShowInfo:true];
-    
+
     // Load fonts package
     NTBinaryData* fontsData = [NTAssetUtils loadAsset:@"carto-fonts.zip"];
     self.fontsAssetPackage = [[NTZippedAssetPackage alloc] initWithZipData:fontsData];
@@ -162,6 +174,48 @@
 
 @end
 
+@implementation MyVectorTileEventListener
+
+- (BOOL)onVectorTileClicked:(NTVectorTileClickInfo *)clickInfo
+{
+    NTLocalVectorDataSource* dataSource = (NTLocalVectorDataSource*)[self.vectorLayer getDataSource];
+    [dataSource clear];
+    
+    // Build overlay vector element
+    NTFeature* feature = [clickInfo getFeature];
+    NTGeometry* geom = [feature getGeometry];
+    NTColor* color = [[NTColor alloc] initWithR:0 g:100 b:200 a:150];
+    if ([geom isKindOfClass:[NTPointGeometry class]]) {
+        NTPointStyleBuilder* builder = [[NTPointStyleBuilder alloc] init];
+        [builder setColor: color];
+        [dataSource add: [[NTPoint alloc] initWithGeometry:(NTPointGeometry*)geom style:[builder buildStyle]]];
+    }
+    if ([geom isKindOfClass:[NTLineGeometry class]]) {
+        NTLineStyleBuilder* builder = [[NTLineStyleBuilder alloc] init];
+        [builder setColor: color];
+        [dataSource add: [[NTLine alloc] initWithGeometry:(NTLineGeometry*)geom style:[builder buildStyle]]];
+    }
+    if ([geom isKindOfClass:[NTPolygonGeometry class]]) {
+        NTPolygonStyleBuilder* builder = [[NTPolygonStyleBuilder alloc] init];
+        [builder setColor: color];
+        [dataSource add: [[NTPolygon alloc] initWithGeometry:(NTPolygonGeometry*)geom style:[builder buildStyle]]];
+    }
+    
+    // Add balloon popup to the click position
+    NTBalloonPopup* clickPopup = [[NTBalloonPopup alloc] init];
+    NTBalloonPopupStyleBuilder* styleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
+    [styleBuilder setPlacementPriority:10];
+    NSString* clickMsg = [[feature getProperties] description];
+    clickPopup = [[NTBalloonPopup alloc] initWithPos:[clickInfo getClickPos]
+                                                style:[styleBuilder buildStyle]
+                                                title:@"Clicked"
+                                                desc:clickMsg];
+    [dataSource add:clickPopup];
+    return YES;
+}
+
+@end
+
 @implementation MyCartoVisBuilder
 
 -(void)setDescription:(NTVariant *)descriptionInfo
@@ -187,14 +241,27 @@
     // Check if the layer has info window. In that case will add a custom UTF grid event listener to the layer.
     NTVariant* infoWindow = [attributes getObjectElement:@"infowindow"];
     if ([infoWindow getType] == NT_VARIANT_TYPE_OBJECT) {
-        MyUTFGridEventListener* myEventListener = [[MyUTFGridEventListener alloc] init];
-        myEventListener.vectorLayer = self.vectorLayer;
-        myEventListener.infoWindowTemplate = infoWindow;
-        NTTileLayer* tileLayer = (NTTileLayer*)layer;
-        [tileLayer setUTFGridEventListener:myEventListener];
+        if ([layer isKindOfClass:[NTVectorTileLayer class]]) {
+            // For vector tiles we can use special vector tile listener that uses vector tile data or UTF grids
+            MyVectorTileEventListener* myEventListener = [[MyVectorTileEventListener alloc] init];
+            myEventListener.vectorLayer = self.vectorLayer;
+            myEventListener.infoWindowTemplate = infoWindow;
+            NTVectorTileLayer* vectorTileLayer = (NTVectorTileLayer*)layer;
+            [vectorTileLayer setVectorTileEventListener:myEventListener];
+            
+            // Remove the UTF grid data source
+            [vectorTileLayer setUTFGridDataSource:nil];
+        } else if ([layer isKindOfClass:[NTTileLayer class]]) {
+            // For other tile layer we have to use UTF grid
+            MyUTFGridEventListener* myEventListener = [[MyUTFGridEventListener alloc] init];
+            myEventListener.vectorLayer = self.vectorLayer;
+            myEventListener.infoWindowTemplate = infoWindow;
+            NTTileLayer* tileLayer = (NTTileLayer*)layer;
+            [tileLayer setUTFGridEventListener:myEventListener];
+        }
     }
     
-    // Check if torque layer, if yes, then store it
+    // Check if torque layer, if yes, then store its reference
     if ([layer isKindOfClass:[NTTorqueTileLayer class]]) {
         self.torqueLayer = (NTTorqueTileLayer*)layer;
     }
