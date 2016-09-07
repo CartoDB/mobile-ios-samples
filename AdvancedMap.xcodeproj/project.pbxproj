@@ -23,6 +23,7 @@
 		2AD24F7918FEDAA6000969F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F6E18FEDAA6000969F4 /* main.m */; };
 		2AD24F7A18FEDAA6000969F4 /* MyMapEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F7018FEDAA6000969F4 /* MyMapEventListener.mm */; };
 		2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD24F8418FEDB89000969F4 /* Images.xcassets */; };
+		4D0D53F41D801818009A7704 /* BaseMapInteractivitySampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D0D53F31D801818009A7704 /* BaseMapInteractivitySampleController.mm */; };
 		4D0E38381D22B9C000C62BEB /* mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4D0E38371D22B9C000C62BEB /* mapzen.zip */; };
 		4D13E2801A6EB72600FA74DC /* CustomPopupSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */; };
 		4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */; };
@@ -64,6 +65,7 @@
 		4D4B1F651D082583001C2F30 /* CartoVisJSONSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */; };
 		4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */; };
 		4D9AB3A21D13E3680093A4CF /* carto-fonts.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */; };
+		4DA084E01D7575EE0020452F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA084DF1D7575EE0020452F /* CFNetwork.framework */; };
 		4DAF41AF1AD3C307004E7092 /* GroundOverlaySampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */; };
 		4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
 		4DC8500C1A0E77CA00C5124F /* VectorMapSampleBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */; };
@@ -102,6 +104,7 @@
 		2AD24F7318FEDAA6000969F4 /* AdvancedMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AdvancedMap-Info.plist"; path = "AdvancedMap/AdvancedMap-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2AD24F7F18FEDB5C000969F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = AdvancedMap/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		2AD24F8418FEDB89000969F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AdvancedMap/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		4D0D53F31D801818009A7704 /* BaseMapInteractivitySampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BaseMapInteractivitySampleController.mm; path = AdvancedMap/BaseMapInteractivitySampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D0E38371D22B9C000C62BEB /* mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = mapzen.zip; path = AdvancedMap/Assets/mapzen.zip; sourceTree = SOURCE_ROOT; };
 		4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomPopupSampleController.mm; path = AdvancedMap/CustomPopupSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCustomPopupHandler.mm; path = AdvancedMap/MyCustomPopupHandler.mm; sourceTree = SOURCE_ROOT; };
@@ -149,6 +152,7 @@
 		4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CartoVisJSONSampleController.mm; path = AdvancedMap/CartoVisJSONSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageManagerController.mm; path = AdvancedMap/PackageManagerController.mm; sourceTree = SOURCE_ROOT; };
 		4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "carto-fonts.zip"; path = "AdvancedMap/Assets/carto-fonts.zip"; sourceTree = SOURCE_ROOT; };
+		4DA084DF1D7575EE0020452F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GroundOverlaySampleController.mm; path = AdvancedMap/GroundOverlaySampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850071A0E718100C5124F /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LauncherListController.mm; path = AdvancedMap/LauncherListController.mm; sourceTree = SOURCE_ROOT; };
 		4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VectorMapSampleBaseController.h; path = AdvancedMap/VectorMapSampleBaseController.h; sourceTree = SOURCE_ROOT; };
@@ -171,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA084E01D7575EE0020452F /* CFNetwork.framework in Frameworks */,
 				4D4B1F601D018C2A001C2F30 /* libz.tbd in Frameworks */,
 				2A319BAE187CBEBD0004A3CB /* GLKit.framework in Frameworks */,
 				0C60B8251A601A820058C740 /* CartoMobileSDK.framework in Frameworks */,
@@ -205,6 +210,7 @@
 		2A319B41187C4F8F0004A3CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DA084DF1D7575EE0020452F /* CFNetwork.framework */,
 				4D4B1F5F1D018C2A001C2F30 /* libz.tbd */,
 				2ABFB6B71947460E00A64571 /* CartoMobileSDK.framework */,
 				2A319BAC187CBEBD0004A3CB /* GLKit.framework */,
@@ -331,6 +337,7 @@
 				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
 				4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */,
 				4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */,
+				4D0D53F31D801818009A7704 /* BaseMapInteractivitySampleController.mm */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -461,6 +468,7 @@
 			files = (
 				4DEB06D01A10BDB7003D111C /* Overlays2DSampleController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
+				4D0D53F41D801818009A7704 /* BaseMapInteractivitySampleController.mm in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */,
 				4D4B1F261D018B8D001C2F30 /* VPPDropDown.m in Sources */,
 				4D4B1F621D01C37B001C2F30 /* MyVectorElementEventListener.mm in Sources */,

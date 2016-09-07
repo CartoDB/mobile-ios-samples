@@ -23,6 +23,7 @@
              @{ @"name": @"Clustered Random points", @"controller": @"ClusteredRandomPointsController" },
              @{ @"name": @"Clustered GeoJSON points", @"controller": @"ClusteredGeoJsonController" },
              @{ @"name": @"Carto VisJSON Sample", @"controller": @"CartoVisJSONSampleController" },
+             @{ @"name": @"Basemap Interactivity Sample", @"controller": @"BaseMapInteractivitySampleController" },
             ];
 }
 
