@@ -135,12 +135,7 @@
     if ([self.vectorStyleName isEqualToString:@"mapzen"] || [self.vectorStyleName isEqualToString:@"positron"]) {
         vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"mapzen.osm"];
     } else {
-        //vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.test"];
-   //     vectorTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:15 baseURL:@"http://up1.nutiteq.com/nutiteq879af751/tiles/data_test/{z}/{x}/{y}.vt"];
-        
-        vectorTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:18 baseURL:@"http://ashbu.cartocdn.com/basemaps2/api/v1/map/basemaps2@6ecdc03d51510e65f9454f42951cb2d3:0/{z}/{x}/{y}.mvt?api_key=75e5b3a28f3ca63115fbb29110c68ed31cdf8a65"];
-
-        
+        vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.osm"];
     }
     
     // We don't use vectorTileDataSource directly (this would be also option),
