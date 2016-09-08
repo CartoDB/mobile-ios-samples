@@ -10,6 +10,7 @@ This is sample for CARTO Mobile SDK 4.x (http://www.carto.com), demonstrating se
   1. Open project in xCode, and run on emulator or USB-connected iPhone/iPad
 
 ## SDK API documentation
+  * Reference: http://cartodb.github.io/mobile-ios-samples/
   * The distro zip has generated HTML reference docs in *docObjC* folder
 
 ## Use in your own app
