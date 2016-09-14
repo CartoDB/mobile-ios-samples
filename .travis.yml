@@ -1,4 +1,8 @@
 
+branches:
+  only:
+    - restructure
+
 language: objective-c
 
 env:
