@@ -1,0 +1,12 @@
+
+language: objective-c
+
+env:
+   - TEST_DIR=HelloMap.Objective-C
+   - TEST_DIR=AdvancedMap.Objective-C
+   - TEST_DIR=CartoMap.Objective-C
+
+script: xcodebuild 
+	-workspace TEST_DIR.xcworkspace 
+	-scheme TEST_DIR 
+	-sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
