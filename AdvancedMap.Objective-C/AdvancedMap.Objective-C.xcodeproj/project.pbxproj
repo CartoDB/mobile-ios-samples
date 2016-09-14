@@ -85,7 +85,7 @@
 		0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HillshadeSampleController.mm; path = AdvancedMap/HillshadeSampleController.mm; sourceTree = SOURCE_ROOT; };
 		0C6E94001D22B5B2007C0F17 /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "nutibright-v3.zip"; sourceTree = SOURCE_ROOT; };
 		0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OfflineRoutingController.mm; path = AdvancedMap/OfflineRoutingController.mm; sourceTree = SOURCE_ROOT; };
-		2A319B3F187C4F8F0004A3CB /* AdvancedMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A319B3F187C4F8F0004A3CB /* AdvancedMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdvancedMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A319B42187C4F8F0004A3CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2A319B46187C4F8F0004A3CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -98,7 +98,7 @@
 		2AD24F6E18FEDAA6000969F4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AdvancedMap/main.m; sourceTree = SOURCE_ROOT; };
 		2AD24F6F18FEDAA6000969F4 /* MyMapEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMapEventListener.h; path = AdvancedMap/MyMapEventListener.h; sourceTree = SOURCE_ROOT; };
 		2AD24F7018FEDAA6000969F4 /* MyMapEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyMapEventListener.mm; path = AdvancedMap/MyMapEventListener.mm; sourceTree = SOURCE_ROOT; };
-		2AD24F7318FEDAA6000969F4 /* AdvancedMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AdvancedMap-Info.plist"; path = "AdvancedMap/AdvancedMap-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2AD24F7318FEDAA6000969F4 /* AdvancedMap.Objective-C-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AdvancedMap.Objective-C-Info.plist"; path = "AdvancedMap/AdvancedMap.Objective-C-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2AD24F7F18FEDB5C000969F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = AdvancedMap/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		2AD24F8418FEDB89000969F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AdvancedMap/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		4D0E38371D22B9C000C62BEB /* mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = mapzen.zip; path = AdvancedMap/Assets/mapzen.zip; sourceTree = SOURCE_ROOT; };
@@ -188,7 +188,7 @@
 		2A319B36187C4F8F0004A3CB = {
 			isa = PBXGroup;
 			children = (
-				2A319B48187C4F8F0004A3CB /* AdvancedMap */,
+				2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */,
 				2A319B41187C4F8F0004A3CB /* Frameworks */,
 				2A319B40187C4F8F0004A3CB /* Products */,
 				4DEB06DE1A10D8B3003D111C /* README.md */,
@@ -199,7 +199,7 @@
 		2A319B40187C4F8F0004A3CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A319B3F187C4F8F0004A3CB /* AdvancedMap.app */,
+				2A319B3F187C4F8F0004A3CB /* AdvancedMap.Objective-C.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2A319B48187C4F8F0004A3CB /* AdvancedMap */ = {
+		2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
 				4D4B1F281D018BB6001C2F30 /* Assets */,
@@ -230,7 +230,7 @@
 				2AD24F6918FEDAA6000969F4 /* AppDelegate.h */,
 				2AD24F6A18FEDAA6000969F4 /* AppDelegate.m */,
 			);
-			name = AdvancedMap;
+			name = "AdvancedMap.Objective-C";
 			path = sdk_3d_ios_app;
 			sourceTree = "<group>";
 		};
@@ -239,7 +239,7 @@
 			children = (
 				2AD24F7E18FEDB5C000969F4 /* InfoPlist.strings */,
 				2AD24F6E18FEDAA6000969F4 /* main.m */,
-				2AD24F7318FEDAA6000969F4 /* AdvancedMap-Info.plist */,
+				2AD24F7318FEDAA6000969F4 /* AdvancedMap.Objective-C-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -377,9 +377,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A319B3E187C4F8F0004A3CB /* AdvancedMap */ = {
+		2A319B3E187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A319B74187C4F8F0004A3CB /* Build configuration list for PBXNativeTarget "AdvancedMap" */;
+			buildConfigurationList = 2A319B74187C4F8F0004A3CB /* Build configuration list for PBXNativeTarget "AdvancedMap.Objective-C" */;
 			buildPhases = (
 				2A319B3B187C4F8F0004A3CB /* Sources */,
 				2A319B3C187C4F8F0004A3CB /* Frameworks */,
@@ -389,9 +389,9 @@
 			);
 			dependencies = (
 			);
-			name = AdvancedMap;
+			name = "AdvancedMap.Objective-C";
 			productName = sdk_3d_ios_app;
-			productReference = 2A319B3F187C4F8F0004A3CB /* AdvancedMap.app */;
+			productReference = 2A319B3F187C4F8F0004A3CB /* AdvancedMap.Objective-C.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -408,7 +408,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2A319B3A187C4F8F0004A3CB /* Build configuration list for PBXProject "AdvancedMap" */;
+			buildConfigurationList = 2A319B3A187C4F8F0004A3CB /* Build configuration list for PBXProject "AdvancedMap.Objective-C" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -421,7 +421,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A319B3E187C4F8F0004A3CB /* AdvancedMap */,
+				2A319B3E187C4F8F0004A3CB /* AdvancedMap.Objective-C */,
 			);
 		};
 /* End PBXProject section */
@@ -617,12 +617,12 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "AdvancedMap/AdvancedMap-Info.plist";
+				INFOPLIST_FILE = "AdvancedMap/AdvancedMap.Objective-C-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carto.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = AdvancedMap;
+				PRODUCT_NAME = "AdvancedMap.Objective-C";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -650,12 +650,12 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "AdvancedMap/AdvancedMap-Info.plist";
+				INFOPLIST_FILE = "AdvancedMap/AdvancedMap.Objective-C-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.carto.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = AdvancedMap;
+				PRODUCT_NAME = "AdvancedMap.Objective-C";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -666,7 +666,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A319B3A187C4F8F0004A3CB /* Build configuration list for PBXProject "AdvancedMap" */ = {
+		2A319B3A187C4F8F0004A3CB /* Build configuration list for PBXProject "AdvancedMap.Objective-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A319B72187C4F8F0004A3CB /* Debug */,
@@ -675,7 +675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A319B74187C4F8F0004A3CB /* Build configuration list for PBXNativeTarget "AdvancedMap" */ = {
+		2A319B74187C4F8F0004A3CB /* Build configuration list for PBXNativeTarget "AdvancedMap.Objective-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A319B75187C4F8F0004A3CB /* Debug */,
