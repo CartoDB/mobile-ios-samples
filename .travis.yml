@@ -10,4 +10,4 @@ env:
    - TEST_DIR=AdvancedMap.Objective-C
    - TEST_DIR=CartoMap.Objective-C
 
-script: xcodebuild -workspace $TEST_DIR.xcworkspace -scheme $TEST_DIR -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: cd $TEST_DIR && xcodebuild -workspace $TEST_DIR.xcodeproj -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
