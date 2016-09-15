@@ -29,21 +29,6 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        // Make sure no other layers are on map
-        [[mapView getLayers] clear];
-        
-        // Create VIS loader
-        NTCartoVisLoader* loader = [[NTCartoVisLoader alloc] init];
-        
-        // Load fonts package, this has all fonts you may need.
-        [loader setVectorTileAssetPackage:[[NTZippedAssetPackage alloc] initWithZipData:[NTAssetUtils loadAsset:@"carto-fonts.zip"]]];
-        [loader setDefaultVectorLayerMode:YES];
-        MyCartoVisBuilder* visBuilder = [[MyCartoVisBuilder alloc] init];
-        visBuilder.mapView = mapView;
-        
-        // Use your Map URL in next line, you get it from Share Map page. Here is a basic working sample:
-        [loader loadVis:visBuilder visURL:@"http://documentation.carto.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json"];
-        
         // Initialize a local vector data source
         NTProjection* proj = [[mapView getOptions] getBaseProjection];
         NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
@@ -56,15 +41,21 @@
         
         // Create a marker style
         NTMarkerStyleBuilder* markerStyleBuilder = [[NTMarkerStyleBuilder alloc] init];
-        [markerStyleBuilder setSize:30];
-        [markerStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFF00FF00]];
+        [markerStyleBuilder setSize:15];
+        NTColor* color = [[NTColor alloc] initWithR:242 g:68 b:64 a:255];
+        [markerStyleBuilder setColor:color];
+        
         NTMarkerStyle* sharedMarkerStyle = [markerStyleBuilder buildStyle];
         
         // Define position and add the marker to the Datasource (which is already in a Layer and MapView)
-        NTMapPos* pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.426939]];
-        NTMarker* marker = [[NTMarker alloc] initWithPos:pos style:sharedMarkerStyle];
+        NTMapPos* tallinn = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.426939]];
+        NTMarker* marker = [[NTMarker alloc] initWithPos:tallinn style:sharedMarkerStyle];
         
         [vectorDataSource add:marker];
+        
+        // Animate zoom
+        [mapView setZoom:3 durationSeconds:2];
+        [mapView setFocusPos:tallinn durationSeconds:0];
     });
 }
 
