@@ -20,19 +20,24 @@
         NTCartoMapsService* service = [[NTCartoMapsService alloc]init];
         [service setUsername:@"nutiteq"];
         [service setDefaultVectorLayerMode:YES];
+        [service setInteractive:YES];
         
         NTVariant* variant = [NTVariant fromString:self.getJsonString];
         NTLayerVector* layers = [service buildMap:variant];
         
         NTProjection* projection = [[self.mapView getOptions]getBaseProjection];
-        NTLocalVectorDataSource* source = [[NTLocalVectorDataSource alloc]initWithProjection:projection];
+        NTLocalVectorDataSource* overlaySource = [[NTLocalVectorDataSource alloc]initWithProjection:projection];
+        NTVectorLayer* overlayLayer = [[NTVectorLayer alloc] initWithDataSource:overlaySource];
+        [[self.mapView getLayers] add:overlayLayer];
         
         for (int i = 0; i < layers.size; i++) {
             
             NTTileLayer* layer = (NTTileLayer*)[layers get:i];
             
             MyUTFGridEventListener* listener = [[MyUTFGridEventListener alloc]init];
-            listener.source = source;
+            listener.source = overlaySource;
+            
+            [layer setUTFGridEventListener:listener];
             
             [[self.mapView getLayers]add:layer];
         }
