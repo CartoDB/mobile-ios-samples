@@ -1,0 +1,13 @@
+
+branches:
+  only:
+    - restructure
+
+language: objective-c
+
+env:
+   - TEST_DIR=HelloMap.Objective-C
+   - TEST_DIR=AdvancedMap.Objective-C
+   - TEST_DIR=CartoMap.Objective-C
+
+script: cd $TEST_DIR && xcodebuild -project $TEST_DIR.xcodeproj -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
