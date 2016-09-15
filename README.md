@@ -9,7 +9,9 @@ This is sample for CARTO Mobile SDK 4.x (http://www.carto.com), demonstrating se
   1. Unzip it and copy *CartoMobileSDK.framework*  to the xCode project root folder
   1. Open project in xCode, and run on emulator or USB-connected iPhone/iPad
 
+
 ## SDK API documentation
+  * More detailed guide in wiki: https://github.com/CartoDB/mobile-ios-samples/wiki
   * Reference: http://cartodb.github.io/mobile-ios-samples/
   * The distro zip has generated HTML reference docs in *docObjC* folder
 
