@@ -9,7 +9,7 @@
     
     // The initial step: register your license. This must be done before using MapView!
     // The license string used here is intended only for Carto demos and WILL NOT WORK with other apps!
-    [NTMapView registerLicense:@"XTUMwQ0ZIcXhuZ3RSdWdYNllQM25tRng2Q0tacGJGY2dBaFVBZ2N3K2dFTEFXRWx3OVdzbVF4aC90OVQxMEJJPQoKcHJvZHVjdHM9c2RrLWlvcy0zLioKYnVuZGxlSWRlbnRpZmllcj1jb20uY2FydG8uKgp3YXRlcm1hcms9Y3VzdG9tCnZhbGlkVW50aWw9MjAxNi0xMi0wMQp1c2VyS2V5PTM2M2YxNzdjZjM2NTAzMGYxZWU4YjkzY2JmNTY3OGRhCg"];
+    [NTMapView registerLicense:@"XTUN3Q0ZFRlU4YTN0R3BTUWk4d3dJUmJVRFoyckZtMnBBaFJseUdFaFVzcjZvTmdqSG4xbnZ5V0FEbzlYOEE9PQoKYXBwVG9rZW49MTZkMTc4MzQtODQ4ZC00OWZiLWEyZjgtNGFiYWFiNGJhNjM0CnZhbGlkVW50aWw9MjAxNi0xMC0yMQp3YXRlcm1hcms9Y2FydG9kYgpidW5kbGVJZGVudGlmaWVyPWNvbS5jYXJ0by5BZHZhbmNlZE1hcC1PYmplY3RpdmUtQwpvbmxpbmVMaWNlbnNlPTEKcHJvZHVjdHM9c2RrLWlvcy00LioK"];
 
     self.mapView = [[NTMapView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     self.view = self.mapView;
