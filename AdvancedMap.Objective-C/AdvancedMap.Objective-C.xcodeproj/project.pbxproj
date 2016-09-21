@@ -58,7 +58,6 @@
 		4D4B1F5E1D018BC7001C2F30 /* saku_ios_4bpp.nmldb in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B1F431D018BC7001C2F30 /* saku_ios_4bpp.nmldb */; };
 		4D4B1F601D018C2A001C2F30 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4B1F5F1D018C2A001C2F30 /* libz.tbd */; };
 		4D4B1F621D01C37B001C2F30 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F611D01C37B001C2F30 /* MyVectorElementEventListener.mm */; };
-		4D4B1F651D082583001C2F30 /* CartoVisJSONSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */; };
 		4D5749A51D8A856300387B2B /* BaseMapInteractivitySampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5749A41D8A856300387B2B /* BaseMapInteractivitySampleController.mm */; };
 		4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */; };
 		4D9AB3A21D13E3680093A4CF /* carto-fonts.zip in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */; };
@@ -146,7 +145,6 @@
 		4D4B1F5F1D018C2A001C2F30 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4D4B1F611D01C37B001C2F30 /* MyVectorElementEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyVectorElementEventListener.mm; path = AdvancedMap/MyVectorElementEventListener.mm; sourceTree = SOURCE_ROOT; };
 		4D4B1F631D01C3BB001C2F30 /* MyVectorElementEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyVectorElementEventListener.h; path = AdvancedMap/MyVectorElementEventListener.h; sourceTree = SOURCE_ROOT; };
-		4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CartoVisJSONSampleController.mm; path = AdvancedMap/CartoVisJSONSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D5749A41D8A856300387B2B /* BaseMapInteractivitySampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BaseMapInteractivitySampleController.mm; path = AdvancedMap/BaseMapInteractivitySampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageManagerController.mm; path = AdvancedMap/PackageManagerController.mm; sourceTree = SOURCE_ROOT; };
 		4D9AB3A11D13E3680093A4CF /* carto-fonts.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "carto-fonts.zip"; path = "AdvancedMap/Assets/carto-fonts.zip"; sourceTree = SOURCE_ROOT; };
@@ -331,7 +329,6 @@
 				0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */,
 				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
 				4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */,
-				4D4B1F641D082583001C2F30 /* CartoVisJSONSampleController.mm */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -498,7 +495,6 @@
 				4DEB06D81A10CDC0003D111C /* OfflineVectorMapSampleController.mm in Sources */,
 				0C1CF0651B134D27001A64AD /* HillshadeSampleController.mm in Sources */,
 				4DEB06DA1A10D3D1003D111C /* AerialMapSampleController.mm in Sources */,
-				4D4B1F651D082583001C2F30 /* CartoVisJSONSampleController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
 				0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupSampleController.mm in Sources */,

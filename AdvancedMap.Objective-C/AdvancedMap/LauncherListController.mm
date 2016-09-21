@@ -67,11 +67,7 @@
              @{ @"name": @"Clustered GeoJSON points",
                 @"description": @"Reading data from GeoJSON and adding clustered Markers to map",
                 @"controller": @"ClusteredGeoJsonController"
-             },
-             @{ @"name": @"Carto VisJSON Sample",
-                @"description": @"Using high-level Carto VisJSON API",
-                @"controller": @"CartoVisJSONSampleController"
-             },
+             }
             ];
 }
 
