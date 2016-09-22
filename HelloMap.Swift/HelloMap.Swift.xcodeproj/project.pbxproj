@@ -1,0 +1,320 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD74B8061D941D710007701F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8051D941D710007701F /* AppDelegate.swift */; };
+		AD74B8081D941D710007701F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8071D941D710007701F /* ViewController.swift */; };
+		AD74B80B1D941D710007701F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B8091D941D710007701F /* Main.storyboard */; };
+		AD74B80D1D941D710007701F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80C1D941D710007701F /* Assets.xcassets */; };
+		AD74B8101D941D710007701F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80E1D941D710007701F /* LaunchScreen.storyboard */; };
+		AD74B8181D941EF40007701F /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B8171D941EF40007701F /* CartoMobileSDK.framework */; };
+		AD74B81D1D941FDD0007701F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B81C1D941FDD0007701F /* GLKit.framework */; };
+		AD74B81F1D941FE30007701F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B81E1D941FE30007701F /* libz.tbd */; };
+		AD74B8211D942CBB0007701F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B8201D942CBB0007701F /* libc++.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AD74B8021D941D700007701F /* HelloMap.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMap.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD74B8051D941D710007701F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD74B8071D941D710007701F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD74B80A1D941D710007701F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD74B80C1D941D710007701F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD74B80F1D941D710007701F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD74B8111D941D710007701F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD74B8171D941EF40007701F /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CartoMobileSDK.framework; path = ../CartoMobileSDK.framework; sourceTree = "<group>"; };
+		AD74B8191D941F2F0007701F /* HelloMap.Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloMap.Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		AD74B81C1D941FDD0007701F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		AD74B81E1D941FE30007701F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		AD74B8201D942CBB0007701F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD74B7FF1D941D700007701F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD74B8211D942CBB0007701F /* libc++.tbd in Frameworks */,
+				AD74B81F1D941FE30007701F /* libz.tbd in Frameworks */,
+				AD74B81D1D941FDD0007701F /* GLKit.framework in Frameworks */,
+				AD74B8181D941EF40007701F /* CartoMobileSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD74B7F91D941D700007701F = {
+			isa = PBXGroup;
+			children = (
+				AD74B8201D942CBB0007701F /* libc++.tbd */,
+				AD74B81E1D941FE30007701F /* libz.tbd */,
+				AD74B81C1D941FDD0007701F /* GLKit.framework */,
+				AD74B8171D941EF40007701F /* CartoMobileSDK.framework */,
+				AD74B8041D941D710007701F /* HelloMap.Swift */,
+				AD74B8031D941D700007701F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD74B8031D941D700007701F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD74B8021D941D700007701F /* HelloMap.Swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD74B8041D941D710007701F /* HelloMap.Swift */ = {
+			isa = PBXGroup;
+			children = (
+				AD74B8051D941D710007701F /* AppDelegate.swift */,
+				AD74B8071D941D710007701F /* ViewController.swift */,
+				AD74B8091D941D710007701F /* Main.storyboard */,
+				AD74B80C1D941D710007701F /* Assets.xcassets */,
+				AD74B80E1D941D710007701F /* LaunchScreen.storyboard */,
+				AD74B8111D941D710007701F /* Info.plist */,
+				AD74B8191D941F2F0007701F /* HelloMap.Swift-Bridging-Header.h */,
+			);
+			path = HelloMap.Swift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD74B8011D941D700007701F /* HelloMap.Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD74B8141D941D710007701F /* Build configuration list for PBXNativeTarget "HelloMap.Swift" */;
+			buildPhases = (
+				AD74B7FE1D941D700007701F /* Sources */,
+				AD74B7FF1D941D700007701F /* Frameworks */,
+				AD74B8001D941D700007701F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloMap.Swift;
+			productName = HelloMap.Swift;
+			productReference = AD74B8021D941D700007701F /* HelloMap.Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD74B7FA1D941D700007701F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Aare Undo";
+				TargetAttributes = {
+					AD74B8011D941D700007701F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = AD74B7FD1D941D700007701F /* Build configuration list for PBXProject "HelloMap.Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD74B7F91D941D700007701F;
+			productRefGroup = AD74B8031D941D700007701F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD74B8011D941D700007701F /* HelloMap.Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD74B8001D941D700007701F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD74B8101D941D710007701F /* LaunchScreen.storyboard in Resources */,
+				AD74B80D1D941D710007701F /* Assets.xcassets in Resources */,
+				AD74B80B1D941D710007701F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD74B7FE1D941D700007701F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD74B8081D941D710007701F /* ViewController.swift in Sources */,
+				AD74B8061D941D710007701F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AD74B8091D941D710007701F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD74B80A1D941D710007701F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD74B80E1D941D710007701F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD74B80F1D941D710007701F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD74B8121D941D710007701F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD74B8131D941D710007701F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD74B8151D941D710007701F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = ..;
+				INFOPLIST_FILE = HelloMap.Swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "carto.HelloMap-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloMap.Swift/HelloMap.Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD74B8161D941D710007701F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = ..;
+				INFOPLIST_FILE = HelloMap.Swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "carto.HelloMap-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloMap.Swift/HelloMap.Swift-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD74B7FD1D941D700007701F /* Build configuration list for PBXProject "HelloMap.Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD74B8121D941D710007701F /* Debug */,
+				AD74B8131D941D710007701F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD74B8141D941D710007701F /* Build configuration list for PBXNativeTarget "HelloMap.Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD74B8151D941D710007701F /* Debug */,
+				AD74B8161D941D710007701F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD74B7FA1D941D700007701F /* Project object */;
+}
