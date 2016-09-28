@@ -15,4 +15,4 @@ env:
    - TEST_DIR=HelloMap.Swift
    - TEST_DIR=CartoMap.Swift
 
-script: cd $TEST_DIR pod install && xcodebuild -workspace $TEST_DIR.xcworkspace -scheme $TEST_DIR -sdk iphonesimulator -arch "i386" ONLY_ACTIVE_ARCH=NO VALID_ARCHS="i386 x86_64"
+script: cd $TEST_DIR && pod install && xcodebuild -workspace $TEST_DIR.xcworkspace -scheme $TEST_DIR -sdk iphonesimulator -arch "i386" ONLY_ACTIVE_ARCH=NO VALID_ARCHS="i386 x86_64"
