@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310CB4AB22D56A2CFE9D4055 /* libPods-HelloMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 381315C658D809D0314B39B8 /* libPods-HelloMap.Objective-C.a */; };
 		AD97A5FB1D8958DA00B942AC /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97A5FA1D8958DA00B942AC /* CartoMobileSDK.framework */; };
 		ADBFDA521D7840B1003DCBC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA511D7840B1003DCBC9 /* main.m */; };
 		ADBFDA551D7840B1003DCBC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA541D7840B1003DCBC9 /* AppDelegate.m */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		381315C658D809D0314B39B8 /* libPods-HelloMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD97A5FA1D8958DA00B942AC /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CartoMobileSDK.framework; path = ../CartoMobileSDK.framework; sourceTree = "<group>"; };
 		ADBFDA4D1D7840B1003DCBC9 /* HelloMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBFDA511D7840B1003DCBC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		ADBFDA6B1D784DF1003DCBC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		ADBFDA6D1D784E1A003DCBC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		ADBFDA6F1D784F1E003DCBC9 /* MyCartoVisBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCartoVisBuilder.h; sourceTree = "<group>"; };
+		D0413114E8B9AD2969A5719B /* Pods-HelloMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMap.Objective-C/Pods-HelloMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		ECCEA6A7E9F089340782DCDB /* Pods-HelloMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMap.Objective-C/Pods-HelloMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +47,30 @@
 				AD97A5FB1D8958DA00B942AC /* CartoMobileSDK.framework in Frameworks */,
 				ADBFDA6E1D784E1A003DCBC9 /* libz.tbd in Frameworks */,
 				ADBFDA6C1D784DF1003DCBC9 /* GLKit.framework in Frameworks */,
+				310CB4AB22D56A2CFE9D4055 /* libPods-HelloMap.Objective-C.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DDB77806D20B2B5991C4838 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECCEA6A7E9F089340782DCDB /* Pods-HelloMap.Objective-C.debug.xcconfig */,
+				D0413114E8B9AD2969A5719B /* Pods-HelloMap.Objective-C.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		74115CF14FCE5F271ABBCF73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				381315C658D809D0314B39B8 /* libPods-HelloMap.Objective-C.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADBFDA441D7840B1003DCBC9 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +79,8 @@
 				ADBFDA6B1D784DF1003DCBC9 /* GLKit.framework */,
 				ADBFDA4F1D7840B1003DCBC9 /* HelloMap.Objective-C */,
 				ADBFDA4E1D7840B1003DCBC9 /* Products */,
+				4DDB77806D20B2B5991C4838 /* Pods */,
+				74115CF14FCE5F271ABBCF73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADBFDA641D7840B1003DCBC9 /* Build configuration list for PBXNativeTarget "HelloMap.Objective-C" */;
 			buildPhases = (
+				4823F7FB67E7374BA989E011 /* [CP] Check Pods Manifest.lock */,
 				ADBFDA491D7840B1003DCBC9 /* Sources */,
 				ADBFDA4A1D7840B1003DCBC9 /* Frameworks */,
 				ADBFDA4B1D7840B1003DCBC9 /* Resources */,
+				FD6C046CA424CCF81C2291FC /* [CP] Embed Pods Frameworks */,
+				2F48ADB5D911A228CFB5B1D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F48ADB5D911A228CFB5B1D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloMap.Objective-C/Pods-HelloMap.Objective-C-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4823F7FB67E7374BA989E011 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD6C046CA424CCF81C2291FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloMap.Objective-C/Pods-HelloMap.Objective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADBFDA491D7840B1003DCBC9 /* Sources */ = {
@@ -278,6 +353,7 @@
 		};
 		ADBFDA651D7840B1003DCBC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCEA6A7E9F089340782DCDB /* Pods-HelloMap.Objective-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4SEU7F9DVX;
@@ -291,6 +367,7 @@
 		};
 		ADBFDA661D7840B1003DCBC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0413114E8B9AD2969A5719B /* Pods-HelloMap.Objective-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4SEU7F9DVX;

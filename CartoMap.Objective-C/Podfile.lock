@@ -1,0 +1,12 @@
+PODS:
+  - CartoMobileSDK (4.0.0-beta.092)
+
+DEPENDENCIES:
+  - CartoMobileSDK (~> 4.0.0-beta.086)
+
+SPEC CHECKSUMS:
+  CartoMobileSDK: 76dc0cb3af84501fd975d76d73e4b2ca85fa8507
+
+PODFILE CHECKSUM: f0e58043c48d348ea109a541179e5c6e90ac7b84
+
+COCOAPODS: 1.0.1

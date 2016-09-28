@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */; };
 		AD860A6E1D7DB068005994B2 /* CartoUTFGridController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
 		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
@@ -83,6 +84,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CartoMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5956079C5E02A95EC51535A0 /* Pods-CartoMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
+		A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoUTFGridController.mm; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				ADBFDA7D1D7874B8003DCBC9 /* libz.tbd in Frameworks */,
 				ADBFDA7B1D787494003DCBC9 /* GLKit.framework in Frameworks */,
 				ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */,
+				7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +188,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26CB193843EE84FF4742063C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5956079C5E02A95EC51535A0 /* Pods-CartoMap.Objective-C.debug.xcconfig */,
+				A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		998AB630D354DF2C9B303A36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADBFDA751D787027003DCBC9 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +262,8 @@
 				ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */,
 				ADC28F731D782FB300796134 /* CartoMap.Objective-C */,
 				ADC28F721D782FB300796134 /* Products */,
+				26CB193843EE84FF4742063C /* Pods */,
+				998AB630D354DF2C9B303A36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,9 +371,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADC28F9E1D782FB400796134 /* Build configuration list for PBXNativeTarget "CartoMap.Objective-C" */;
 			buildPhases = (
+				AC893398305C4C4C810C55E7 /* [CP] Check Pods Manifest.lock */,
 				ADC28F6D1D782FB300796134 /* Sources */,
 				ADC28F6E1D782FB300796134 /* Frameworks */,
 				ADC28F6F1D782FB300796134 /* Resources */,
+				FC8690569F4480B56AFBB95A /* [CP] Embed Pods Frameworks */,
+				98C7077214573B02FACC85A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -500,6 +527,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98C7077214573B02FACC85A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC893398305C4C4C810C55E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC8690569F4480B56AFBB95A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADC28F6D1D782FB300796134 /* Sources */ = {
@@ -659,6 +734,7 @@
 		};
 		ADC28F9F1D782FB400796134 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5956079C5E02A95EC51535A0 /* Pods-CartoMap.Objective-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -672,6 +748,7 @@
 		};
 		ADC28FA01D782FB400796134 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
