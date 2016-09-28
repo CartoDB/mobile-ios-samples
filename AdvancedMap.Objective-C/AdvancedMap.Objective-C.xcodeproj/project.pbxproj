@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */; };
 		0C1CF0651B134D27001A64AD /* HillshadeSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */; };
-		0C60B8251A601A820058C740 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFB6B71947460E00A64571 /* CartoMobileSDK.framework */; };
 		0C97CC471C09B26000336DF7 /* OfflineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */; };
 		2A319B43187C4F8F0004A3CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B42187C4F8F0004A3CB /* Foundation.framework */; };
 		2A319B45187C4F8F0004A3CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */; };
 		2A319B47187C4F8F0004A3CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B46187C4F8F0004A3CB /* UIKit.framework */; };
-		2A319BAE187CBEBD0004A3CB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319BAC187CBEBD0004A3CB /* GLKit.framework */; };
 		2AC270581941EFF9000CA859 /* MyMergedRasterTileDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AC270571941EFF9000CA859 /* MyMergedRasterTileDataSource.mm */; };
 		2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F6A18FEDAA6000969F4 /* AppDelegate.m */; };
 		2AD24F7918FEDAA6000969F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F6E18FEDAA6000969F4 /* main.m */; };
@@ -45,6 +43,8 @@
 		4DEB06DA1A10D3D1003D111C /* AerialMapSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D91A10D3D1003D111C /* AerialMapSampleController.mm */; };
 		4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */; };
+		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
+		AD7A5D1F1D9ABE0700F5EE4E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
 		ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */; };
 		ADED5F161D92A31800AB2D13 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */; };
@@ -87,8 +87,6 @@
 		2A319B42187C4F8F0004A3CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2A319B46187C4F8F0004A3CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2A319BAC187CBEBD0004A3CB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		2ABFB6B71947460E00A64571 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 		2AC270561941EFF9000CA859 /* MyMergedRasterTileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMergedRasterTileDataSource.h; path = AdvancedMap/MyMergedRasterTileDataSource.h; sourceTree = SOURCE_ROOT; };
 		2AC270571941EFF9000CA859 /* MyMergedRasterTileDataSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyMergedRasterTileDataSource.mm; path = AdvancedMap/MyMergedRasterTileDataSource.mm; sourceTree = SOURCE_ROOT; };
 		2AD24F6918FEDAA6000969F4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AdvancedMap/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -99,6 +97,7 @@
 		2AD24F7318FEDAA6000969F4 /* AdvancedMap.Objective-C-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AdvancedMap.Objective-C-Info.plist"; path = "AdvancedMap/AdvancedMap.Objective-C-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2AD24F7F18FEDB5C000969F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = AdvancedMap/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		2AD24F8418FEDB89000969F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AdvancedMap/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		434F72035F7288C218D7B435 /* Pods-AdvancedMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomPopupSampleController.mm; path = AdvancedMap/CustomPopupSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCustomPopupHandler.mm; path = AdvancedMap/MyCustomPopupHandler.mm; sourceTree = SOURCE_ROOT; };
 		4D13E2841A6EB82600FA74DC /* MyCustomPopupHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomPopupHandler.h; path = AdvancedMap/MyCustomPopupHandler.h; sourceTree = SOURCE_ROOT; };
@@ -133,6 +132,8 @@
 		4DEB06DF1A10DF0F003D111C /* LauncherListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LauncherListController.h; path = AdvancedMap/LauncherListController.h; sourceTree = SOURCE_ROOT; };
 		4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredGeoJsonController.mm; path = AdvancedMap/ClusteredGeoJsonController.mm; sourceTree = SOURCE_ROOT; };
 		4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredRandomPointsController.mm; path = AdvancedMap/ClusteredRandomPointsController.mm; sourceTree = SOURCE_ROOT; };
+		65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = "<absolute>"; };
 		ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
 		ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "../../Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
 		ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "../../Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 		ADED5F111D92A31800AB2D13 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
 		ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
 		ADED5F131D92A31800AB2D13 /* saku_ios_4bpp.nmldb */ = {isa = PBXFileReference; lastKnownFileType = file; name = saku_ios_4bpp.nmldb; path = ../../Assets/saku_ios_4bpp.nmldb; sourceTree = "<group>"; };
+		B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,17 +174,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4B1F601D018C2A001C2F30 /* libz.tbd in Frameworks */,
-				2A319BAE187CBEBD0004A3CB /* GLKit.framework in Frameworks */,
-				0C60B8251A601A820058C740 /* CartoMobileSDK.framework in Frameworks */,
 				2A319B45187C4F8F0004A3CB /* CoreGraphics.framework in Frameworks */,
 				2A319B47187C4F8F0004A3CB /* UIKit.framework in Frameworks */,
 				2A319B43187C4F8F0004A3CB /* Foundation.framework in Frameworks */,
+				AD7A5D1F1D9ABE0700F5EE4E /* GLKit.framework in Frameworks */,
+				9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		228777A0AAD6EEE6DCD37725 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				434F72035F7288C218D7B435 /* Pods-AdvancedMap.Objective-C.debug.xcconfig */,
+				65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2A319B36187C4F8F0004A3CB = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +202,7 @@
 				2A319B40187C4F8F0004A3CB /* Products */,
 				4DEB06DE1A10D8B3003D111C /* README.md */,
 				4DB60ECD1A16614A00A6AF18 /* VPPDropDown */,
+				228777A0AAD6EEE6DCD37725 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,11 +218,11 @@
 			isa = PBXGroup;
 			children = (
 				4D4B1F5F1D018C2A001C2F30 /* libz.tbd */,
-				2ABFB6B71947460E00A64571 /* CartoMobileSDK.framework */,
-				2A319BAC187CBEBD0004A3CB /* GLKit.framework */,
+				AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */,
 				2A319B42187C4F8F0004A3CB /* Foundation.framework */,
 				2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */,
 				2A319B46187C4F8F0004A3CB /* UIKit.framework */,
+				B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -379,9 +391,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A319B74187C4F8F0004A3CB /* Build configuration list for PBXNativeTarget "AdvancedMap.Objective-C" */;
 			buildPhases = (
+				41279C8D40EDB3B5E58DA99F /* [CP] Check Pods Manifest.lock */,
 				2A319B3B187C4F8F0004A3CB /* Sources */,
 				2A319B3C187C4F8F0004A3CB /* Frameworks */,
 				2A319B3D187C4F8F0004A3CB /* Resources */,
+				E12017B7FB19227B0301AAC9 /* [CP] Embed Pods Frameworks */,
+				DAB242C9203C6AEECA59E6DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -469,6 +484,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41279C8D40EDB3B5E58DA99F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAB242C9203C6AEECA59E6DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E12017B7FB19227B0301AAC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A319B3B187C4F8F0004A3CB /* Sources */ = {
@@ -596,13 +659,14 @@
 		};
 		2A319B75187C4F8F0004A3CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 434F72035F7288C218D7B435 /* Pods-AdvancedMap.Objective-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = ..;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
@@ -625,13 +689,14 @@
 		};
 		2A319B76187C4F8F0004A3CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = ..;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
