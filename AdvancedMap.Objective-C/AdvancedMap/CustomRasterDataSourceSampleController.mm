@@ -22,12 +22,13 @@
 	[[self.mapView getOptions] setBaseProjection:proj];
 
 	// Set initial location and other parameters, don't animate
-	[self.mapView setFocusPos:[proj fromWgs84:[[NTMapPos alloc] initWithX:24.650415 y:59.428773]]  durationSeconds:0];
-	[self.mapView setZoom:5 durationSeconds:0];
+    // This is San Francisco for nicer view
+    [self.mapView setFocusPos:[proj fromWgs84:[[NTMapPos alloc] initWithX:-122.427521 y:37.768544]]  durationSeconds:0];
+	[self.mapView setZoom:11 durationSeconds:0];
 	[self.mapView setRotation:0 durationSeconds:0];
 	
 	// Initialize a OSM raster data source
-	NTHTTPTileDataSource* baseRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:24 baseURL:@"http://api.tiles.mapbox.com/v3/nutiteq.map-j6a1wkx0/{zoom}/{x}/{y}.png"];
+	NTHTTPTileDataSource* baseRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:24 baseURL:@"http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"];
 	// Initialize PSM hillshading raster data source
 	NTHTTPTileDataSource* hillsRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:24 baseURL:@"http://tiles.wmflabs.org/hillshading/{zoom}/{x}/{y}.png"];
 	// Initialize a custom datasource that will combine those two datasources into one

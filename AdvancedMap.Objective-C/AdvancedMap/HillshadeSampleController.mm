@@ -37,7 +37,7 @@
 - (NTTileDataSource*)createTileDataSource
 {
     // Create global online vector tile data source, with contour data
-    NTTileDataSource *vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.osm+contour"];
+    NTTileDataSource *vectorTileDataSource = [[NTCartoOnlineTileDataSource alloc] initWithSource:@"nutiteq.osm"];
     return vectorTileDataSource;
 }
 
