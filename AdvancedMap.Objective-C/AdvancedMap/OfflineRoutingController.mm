@@ -194,12 +194,18 @@
     // this calculation should be in background thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NTRoutingResult* route;
-        if(_offlinePackageReady){
-            NSLog(@"using offline routing");
-            route = [_offlineRoutingService calculateRoute:request];
-        }else{
-            NSLog(@"using online routing");
-            route = [_onlineRoutingService calculateRoute:request];
+        @try {
+            if (_offlinePackageReady){
+                NSLog(@"using offline routing");
+                route = [_offlineRoutingService calculateRoute:request];
+            } else {
+                NSLog(@"using online routing");
+                route = [_onlineRoutingService calculateRoute:request];
+            }
+        }
+        @catch (NSException* ex) {
+            NSLog(@"routing failed: %@", [ex reason]);
+            return;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
