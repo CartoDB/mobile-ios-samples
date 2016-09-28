@@ -4,12 +4,16 @@ iOS sample app with CARTO Mobile SDK 4
 This is sample for CARTO Mobile SDK 4.x (http://www.carto.com), demonstrating several key features.
 
 ## Get started
-  1. After downloading/cloning project you need to get SDK itself
+  
+After downloading/cloning project you need to get SDK itself
   1. Get SDK package latest dev build: [sdk4-ios-snapshot-latest.zip](https://nutifront.s3.amazonaws.com/sdk_snapshots/sdk4-ios-snapshot-latest.zip)
   1. Unzip it and copy *CartoMobileSDK.framework*  to the xCode project root folder
-  1. Open project in xCode, and run on emulator or USB-connected iPhone/iPad
 
-
+Or, alternatively, if you prefer CocoaPods:
+  1. Navigate to a project's folder in your terminal
+  2. Type "pod install" to download the SDK 
+  3. Run the project via the **.xcworkspace file**
+  
 ## SDK API documentation
   * More detailed guide in wiki: https://github.com/CartoDB/mobile-ios-samples/wiki
   * Reference: http://cartodb.github.io/mobile-ios-samples/
