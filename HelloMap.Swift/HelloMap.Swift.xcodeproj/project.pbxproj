@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AD451A76A6B2699121C574E /* libPods-HelloMap.Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 097C491D20D4A8A6B5FA020F /* libPods-HelloMap.Swift.a */; };
 		AD74B8061D941D710007701F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8051D941D710007701F /* AppDelegate.swift */; };
 		AD74B8081D941D710007701F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8071D941D710007701F /* ViewController.swift */; };
 		AD74B80B1D941D710007701F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B8091D941D710007701F /* Main.storyboard */; };
 		AD74B80D1D941D710007701F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80C1D941D710007701F /* Assets.xcassets */; };
 		AD74B8101D941D710007701F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80E1D941D710007701F /* LaunchScreen.storyboard */; };
-		AD74B8181D941EF40007701F /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B8171D941EF40007701F /* CartoMobileSDK.framework */; };
 		AD74B81D1D941FDD0007701F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B81C1D941FDD0007701F /* GLKit.framework */; };
 		AD74B81F1D941FE30007701F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B81E1D941FE30007701F /* libz.tbd */; };
 		AD74B8211D942CBB0007701F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B8201D942CBB0007701F /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		097C491D20D4A8A6B5FA020F /* libPods-HelloMap.Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloMap.Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25D7B74588FC45098184D7F7 /* Pods-HelloMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMap.Swift/Pods-HelloMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		380876B4BD2F3B7884B58213 /* Pods-HelloMap.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloMap.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloMap.Swift/Pods-HelloMap.Swift.release.xcconfig"; sourceTree = "<group>"; };
 		AD74B8021D941D700007701F /* HelloMap.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMap.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD74B8051D941D710007701F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD74B8071D941D710007701F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +29,6 @@
 		AD74B80C1D941D710007701F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD74B80F1D941D710007701F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD74B8111D941D710007701F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD74B8171D941EF40007701F /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CartoMobileSDK.framework; path = ../CartoMobileSDK.framework; sourceTree = "<group>"; };
 		AD74B8191D941F2F0007701F /* HelloMap.Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloMap.Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD74B81C1D941FDD0007701F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		AD74B81E1D941FE30007701F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -41,22 +43,40 @@
 				AD74B8211D942CBB0007701F /* libc++.tbd in Frameworks */,
 				AD74B81F1D941FE30007701F /* libz.tbd in Frameworks */,
 				AD74B81D1D941FDD0007701F /* GLKit.framework in Frameworks */,
-				AD74B8181D941EF40007701F /* CartoMobileSDK.framework in Frameworks */,
+				8AD451A76A6B2699121C574E /* libPods-HelloMap.Swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		670741387A5F88BAA0981E3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25D7B74588FC45098184D7F7 /* Pods-HelloMap.Swift.debug.xcconfig */,
+				380876B4BD2F3B7884B58213 /* Pods-HelloMap.Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		858B29BD7345A6701483971E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				097C491D20D4A8A6B5FA020F /* libPods-HelloMap.Swift.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD74B7F91D941D700007701F = {
 			isa = PBXGroup;
 			children = (
 				AD74B8201D942CBB0007701F /* libc++.tbd */,
 				AD74B81E1D941FE30007701F /* libz.tbd */,
 				AD74B81C1D941FDD0007701F /* GLKit.framework */,
-				AD74B8171D941EF40007701F /* CartoMobileSDK.framework */,
 				AD74B8041D941D710007701F /* HelloMap.Swift */,
 				AD74B8031D941D700007701F /* Products */,
+				670741387A5F88BAA0981E3D /* Pods */,
+				858B29BD7345A6701483971E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD74B8141D941D710007701F /* Build configuration list for PBXNativeTarget "HelloMap.Swift" */;
 			buildPhases = (
+				614D30F69F3A013D73A98DEB /* [CP] Check Pods Manifest.lock */,
 				AD74B7FE1D941D700007701F /* Sources */,
 				AD74B7FF1D941D700007701F /* Frameworks */,
 				AD74B8001D941D700007701F /* Resources */,
+				81FE1293FAFF91FD616B7496 /* [CP] Embed Pods Frameworks */,
+				B695C5E85EEA8E46DF59DD41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		614D30F69F3A013D73A98DEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		81FE1293FAFF91FD616B7496 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloMap.Swift/Pods-HelloMap.Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B695C5E85EEA8E46DF59DD41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloMap.Swift/Pods-HelloMap.Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD74B7FE1D941D700007701F /* Sources */ = {
@@ -267,6 +338,7 @@
 		};
 		AD74B8151D941D710007701F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D7B74588FC45098184D7F7 /* Pods-HelloMap.Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -282,6 +354,7 @@
 		};
 		AD74B8161D941D710007701F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380876B4BD2F3B7884B58213 /* Pods-HelloMap.Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -313,6 +386,7 @@
 				AD74B8161D941D710007701F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
