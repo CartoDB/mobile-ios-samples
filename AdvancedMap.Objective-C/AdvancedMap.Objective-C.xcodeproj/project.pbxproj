@@ -75,7 +75,6 @@
 		ADED5F2F1D92A31800AB2D13 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */; };
 		ADED5F301D92A31800AB2D13 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F111D92A31800AB2D13 /* positron.zip */; };
 		ADED5F311D92A31800AB2D13 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */; };
-		ADED5F321D92A31800AB2D13 /* saku_ios_4bpp.nmldb in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F131D92A31800AB2D13 /* saku_ios_4bpp.nmldb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,7 +163,6 @@
 		ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADED5F111D92A31800AB2D13 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
 		ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
-		ADED5F131D92A31800AB2D13 /* saku_ios_4bpp.nmldb */ = {isa = PBXFileReference; lastKnownFileType = file; name = saku_ios_4bpp.nmldb; path = ../../Assets/saku_ios_4bpp.nmldb; sourceTree = "<group>"; };
 		B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -379,7 +377,6 @@
 				ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */,
 				ADED5F111D92A31800AB2D13 /* positron.zip */,
 				ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */,
-				ADED5F131D92A31800AB2D13 /* saku_ios_4bpp.nmldb */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -457,7 +454,6 @@
 				4D4B1F251D018B8D001C2F30 /* UITableExpand@2x.png in Resources */,
 				ADED5F261D92A31800AB2D13 /* mapzen.zip in Resources */,
 				ADED5F291D92A31800AB2D13 /* marker.png in Resources */,
-				ADED5F321D92A31800AB2D13 /* saku_ios_4bpp.nmldb in Resources */,
 				ADED5F171D92A31800AB2D13 /* arrow.png in Resources */,
 				ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */,
 				ADED5F181D92A31800AB2D13 /* arrow@2x.png in Resources */,
