@@ -2,8 +2,8 @@
 #import "MyMapEventListener.h"
 #import "MyVectorElementEventListener.h"
 
-#import <CartoMobileSDK/NTSqliteNMLModelLODTreeDataSource.h>
-#import <CartoMobileSDK/NTNMLModelLODTreeLayer.h>
+//#import <CartoMobileSDK/NTOfflineNMLModelLODTreeDataSource.h>
+//#import <CartoMobileSDK/NTNMLModelLODTreeLayer.h>
 
 /**
  * A sample demonstrating how to use 3D vector elements:
@@ -61,7 +61,7 @@
 	// Add a 3D model database layer - this is only supported in special SDK build
     /*
 	NSString* fullpath = [[NSBundle mainBundle] pathForResource:@"saku_ios_4bpp" ofType:@"nmldb"];
-	NTSqliteNMLModelLODTreeDataSource* nmlDataSource = [[NTSqliteNMLModelLODTreeDataSource alloc] initWithProjection:proj fileName:fullpath];
+	NTOfflineNMLModelLODTreeDataSource* nmlDataSource = [[NTOfflineNMLModelLODTreeDataSource alloc] initWithProjection:proj fileName:fullpath];
 	NTNMLModelLODTreeLayer* nmlLayer = [[NTNMLModelLODTreeLayer alloc] initWithDataSource:nmlDataSource];
 	[nmlLayer setVisibleZoomRange:[[NTMapRange alloc] initWithMin:12 max:25]];
 	[[self.mapView getLayers] add:nmlLayer];
