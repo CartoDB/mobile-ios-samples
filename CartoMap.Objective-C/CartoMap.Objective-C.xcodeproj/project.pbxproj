@@ -62,7 +62,6 @@
 		ADCA45601D9293C600814350 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45411D9293C600814350 /* nutiteq-dark.zip */; };
 		ADCA45611D9293C600814350 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45421D9293C600814350 /* positron.zip */; };
 		ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */; };
-		ADCA45631D9293C600814350 /* saku_ios_4bpp.nmldb in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45441D9293C600814350 /* saku_ios_4bpp.nmldb */; };
 		ADD8BEBF1D7EAB7400E4B1A8 /* CartoTorqueController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */; };
 /* End PBXBuildFile section */
 
@@ -155,7 +154,6 @@
 		ADCA45411D9293C600814350 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADCA45421D9293C600814350 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
 		ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
-		ADCA45441D9293C600814350 /* saku_ios_4bpp.nmldb */ = {isa = PBXFileReference; lastKnownFileType = file; name = saku_ios_4bpp.nmldb; path = ../../Assets/saku_ios_4bpp.nmldb; sourceTree = "<group>"; };
 		ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoTorqueController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -359,7 +357,6 @@
 				ADCA45411D9293C600814350 /* nutiteq-dark.zip */,
 				ADCA45421D9293C600814350 /* positron.zip */,
 				ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */,
-				ADCA45441D9293C600814350 /* saku_ios_4bpp.nmldb */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -490,7 +487,6 @@
 				ADCA455E1D9293C600814350 /* nutibright-contourstyle.zip in Resources */,
 				ADBFDAA51D788082003DCBC9 /* UITableExpand@2x.png in Resources */,
 				ADBFDAA31D788082003DCBC9 /* UITableContract@2x.png in Resources */,
-				ADCA45631D9293C600814350 /* saku_ios_4bpp.nmldb in Resources */,
 				ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */,
 				ADCA45561D9293C600814350 /* looseleaf.zip in Resources */,
 				ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */,
