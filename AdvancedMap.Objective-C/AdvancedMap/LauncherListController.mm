@@ -94,6 +94,11 @@
     self.navigationItem.title = @"Advanced Map Samples";
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
     // Launch selected sample, use basic reflection to convert class name to class instance
@@ -129,7 +134,8 @@
 {
     static NSString* cellIdentifier = @"sampleId";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
+    [cell setAccessibilityIdentifier:@"MapListCell"];
+
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:cellIdentifier];
     }

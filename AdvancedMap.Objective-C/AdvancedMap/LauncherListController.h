@@ -5,4 +5,6 @@
  */
 @interface LauncherListController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
 
+-(NSArray*)samples;
+
 @end
