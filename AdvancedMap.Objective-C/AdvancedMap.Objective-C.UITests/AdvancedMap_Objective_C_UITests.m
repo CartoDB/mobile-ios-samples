@@ -46,19 +46,7 @@
     XCUIElementQuery* cells = self.app.tables.element.cells;
 
     for (int i = 0; i < [cells count]; i++) {
-        
-        if (i > 4) { // Arbitrary number, let's just say at least 4 cells must fit on the screen
-            
-            XCUIElement* previousCell = [cells elementBoundByIndex:i - 1];
-            
-            CGFloat cellBottom = previousCell.frame.origin.y + previousCell.frame.size.height;
-            CGFloat screenBottom = self.controller.tableView.contentOffset.y + [[UIScreen mainScreen] bounds].size.height;
-            
-            if (cellBottom > screenBottom) {
-                [self.app swipeUp];
-            }
-        }
-        
+
         XCUIElement* element = [cells elementBoundByIndex:i];
         [element tap];
         
