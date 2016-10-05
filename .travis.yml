@@ -7,10 +7,6 @@ language: objective-c
 
 osx_image: xcode8
 
-before_install:
-   - brew update
-   - brew upgrade xctool
-
 env:
    - TEST_DIR=HelloMap.Objective-C
    - TEST_DIR=AdvancedMap.Objective-C
