@@ -8,8 +8,8 @@ language: objective-c
 osx_image: xcode8
 
 before_install:
-  - brew update
-  - brew upgrade xctool
+   - brew update
+   - brew upgrade xctool
 
 env:
    - TEST_DIR=HelloMap.Objective-C
@@ -21,5 +21,4 @@ env:
 
 script: cd $TEST_DIR && pod repo update && pod install && xcodebuild -workspace $TEST_DIR.xcworkspace -scheme $TEST_DIR -sdk iphonesimulator -arch "i386" ONLY_ACTIVE_ARCH=NO VALID_ARCHS="i386 x86_64" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean install
 
-script:
-	xctool -workspace $TEST_DIR.xcworkspace -scheme $TEST_DIR test -sdk    iphonesimulator9.2 -destination platform='iOS Simulator,OS=9.2,name=iPhone 6s'
+script: xctool -workspace $TEST_DIR.xcworkspace -scheme $TEST_DIR test -sdk    iphonesimulator9.2 -destination platform='iOS Simulator,OS=9.2,name=iPhone 6s'
