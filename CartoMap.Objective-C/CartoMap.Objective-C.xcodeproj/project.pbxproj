@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */; };
+		0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */ = {isa = PBXBuildFile; fileRef = 0CC811B01DAD0607005A5C4F /* cartocss.css */; };
 		7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */; };
 		AD860A6E1D7DB068005994B2 /* CartoUTFGridController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
@@ -83,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NamedMapController.m; sourceTree = "<group>"; };
+		0CC811B01DAD0607005A5C4F /* cartocss.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = cartocss.css; sourceTree = "<group>"; };
 		3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CartoMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956079C5E02A95EC51535A0 /* Pods-CartoMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 			children = (
 				ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */,
 				ADC2B3351D79673200841945 /* CartoRasterTileController.mm */,
+				0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */,
 				ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */,
 				AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */,
 				ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */,
@@ -357,6 +362,7 @@
 				ADCA45411D9293C600814350 /* nutiteq-dark.zip */,
 				ADCA45421D9293C600814350 /* positron.zip */,
 				ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */,
+				0CC811B01DAD0607005A5C4F /* cartocss.css */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				ADC28F6F1D782FB300796134 /* Resources */,
 				FC8690569F4480B56AFBB95A /* [CP] Embed Pods Frameworks */,
 				98C7077214573B02FACC85A8 /* [CP] Copy Pods Resources */,
+				64944D0F68C30D80CFA5691E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -491,6 +498,7 @@
 				ADCA45561D9293C600814350 /* looseleaf.zip in Resources */,
 				ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */,
 				ADC28F811D782FB300796134 /* Assets.xcassets in Resources */,
+				0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */,
 				ADCA454C1D9293C600814350 /* carto-fonts.zip in Resources */,
 				ADCA45611D9293C600814350 /* positron.zip in Resources */,
 				ADCA454A1D9293C600814350 /* basic.zip in Resources */,
@@ -525,6 +533,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		64944D0F68C30D80CFA5691E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		98C7077214573B02FACC85A8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,6 +606,7 @@
 				ADD8BEBF1D7EAB7400E4B1A8 /* CartoTorqueController.m in Sources */,
 				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
+				0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */,
 				ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */,
 				ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */,
 				ADC2B2F41D795FFE00841945 /* MyCartoVisBuilder.mm in Sources */,
@@ -737,7 +761,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "CartoMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "carto.CartoMap-Objective-C";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.CartoMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -751,7 +775,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "CartoMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "carto.CartoMap-Objective-C";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.CartoMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
