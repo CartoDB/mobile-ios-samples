@@ -15,7 +15,7 @@ Or, alternatively, if you prefer CocoaPods:
   3. Run the project via the **.xcworkspace** file
   
 ## SDK API documentation
-  * More detailed guide in wiki: https://github.com/CartoDB/mobile-ios-samples/wiki
+  * Official docs: https://carto.com/docs/carto-engine/mobile-sdk/
   * Reference: http://cartodb.github.io/mobile-ios-samples/
   * The distro zip has generated HTML reference docs in *docObjC* folder
 
