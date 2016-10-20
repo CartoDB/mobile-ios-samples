@@ -1,5 +1,6 @@
 
 #import "VectorMapBaseController.h"
+#import "MyVectorTileListener.h"
 
 @interface NamedMapController : VectorMapBaseController
 
@@ -7,11 +8,6 @@
 
 @end
 
-@interface VectorTileEventListener : NTVectorTileEventListener
-
-@property NTVectorLayer* vectorLayer;
-
-@end
 
 @implementation NamedMapController
 
@@ -19,26 +15,26 @@
 {
     [super viewDidLoad];
     
-
+/*
     NTCartoMapsService* mapsService = [[NTCartoMapsService alloc] init];
     
     [mapsService setUsername:@"demo-admin"];
     
     // on-premises server connect
-    [mapsService setAPITemplate:@"http://192.168.1.31/user/{user}"];
+    [mapsService setAPITemplate:@"http://192.168.56.101/user/{user}"];
     
     // Use raster layers, not vector layers
     [mapsService setDefaultVectorLayerMode:YES];
     
-    NTLayerVector *layers = [mapsService buildNamedMap:@"tpl_708edf80_8bf0_11e6_806c_0e2b00211e61" templateParams: [[NTStringVariantMap alloc] init]];
+    NTLayerVector *layers = [mapsService buildNamedMap:@"tpl_92996e76_905d_11e6_95e0_b6c543fbf78e" templateParams: [[NTStringVariantMap alloc] init]];
     
     for (int i = 0; i < [layers size]; i++) {
         
         NTLayer* layer = [layers get:i];
-       // [[self.mapView getLayers]add:layer];
+        [[self.mapView getLayers]add:layer];
     }
-    
-    NTHTTPTileDataSource* datasourceOver = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:13 baseURL:@"http://192.168.1.31/user/demo-admin/api/v1/map/demo-admin@05be0b35@d299d92a84985240af8767694f134620:1476098385738/1/{z}/{x}/{y}.mvt"];
+ */
+    NTHTTPTileDataSource* datasourceOver = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:12 baseURL:@"http://192.168.56.101/user/demo-admin/api/v1/map/demo-admin@2e204cd6@24655f7ea3de1e937ecf03750a4779a8:1476263452293/1/{z}/{x}/{y}.mvt"];
     
     
     // Load fonts package
@@ -75,70 +71,13 @@
         [[self.mapView getLayers] add:self.vectorLayer];
     }
     
-    VectorTileEventListener* myEventListener = [[VectorTileEventListener alloc] init];
+    MyVectorTileListener* myEventListener = [[MyVectorTileListener alloc] init];
     myEventListener.vectorLayer = self.vectorLayer;
     [layerOver setVectorTileEventListener:myEventListener];
     
 }
 @end
 
-@implementation VectorTileEventListener
-
-- (BOOL)onVectorTileClicked:(NTVectorTileClickInfo *)clickInfo
-{
-    NTLocalVectorDataSource* dataSource = (NTLocalVectorDataSource*)[self.vectorLayer getDataSource];
-    [dataSource clear];
-    
-    // Build overlay vector element
-    NTFeature* feature = [clickInfo getFeature];
-    NTGeometry* geom = [feature getGeometry];
-    
-    NTColor* color = [[NTColor alloc] initWithR:0 g:100 b:200 a:150];
-    
-    NTPointStyleBuilder* pointStyleBuilder = [[NTPointStyleBuilder alloc] init];
-    [pointStyleBuilder setColor: color];
-    
-    NTLineStyleBuilder* lineStyleBuilder = [[NTLineStyleBuilder alloc] init];
-    [lineStyleBuilder setColor: color];
-    
-    NTPolygonStyleBuilder* polygonStyleBuilder = [[NTPolygonStyleBuilder alloc] init];
-    [polygonStyleBuilder setColor: color];
-    
-    if ([geom isKindOfClass:[NTPointGeometry class]]) {
-        [dataSource add: [[NTPoint alloc] initWithGeometry:(NTPointGeometry*)geom style:[pointStyleBuilder buildStyle]]];
-    }
-    if ([geom isKindOfClass:[NTLineGeometry class]]) {
-        [dataSource add: [[NTLine alloc] initWithGeometry:(NTLineGeometry*)geom style:[lineStyleBuilder buildStyle]]];
-    }
-    if ([geom isKindOfClass:[NTPolygonGeometry class]]) {
-        [dataSource add: [[NTPolygon alloc] initWithGeometry:(NTPolygonGeometry*)geom style:[polygonStyleBuilder buildStyle]]];
-    }
-    if ([geom isKindOfClass:[NTMultiGeometry class]]) {
-        NTGeometryCollectionStyleBuilder* geomCollectionStyleBuilder = [[NTGeometryCollectionStyleBuilder alloc] init];
-        [geomCollectionStyleBuilder setPointStyle:[pointStyleBuilder buildStyle]];
-        [geomCollectionStyleBuilder setLineStyle:[lineStyleBuilder buildStyle]];
-        [geomCollectionStyleBuilder setPolygonStyle:[polygonStyleBuilder buildStyle]];
-        [dataSource add: [[NTGeometryCollection alloc] initWithGeometry:(NTMultiGeometry*)geom style:[geomCollectionStyleBuilder buildStyle]]];
-    }
-    
-    // Add balloon popup to the click position
-    NTBalloonPopup* clickPopup = [[NTBalloonPopup alloc] init];
-    NTBalloonPopupStyleBuilder* styleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
-    [styleBuilder setPlacementPriority:10];
-    NSString* clickMsg = [[feature getProperties] description];
-    clickPopup = [[NTBalloonPopup alloc] initWithPos:[clickInfo getClickPos]
-                                               style:[styleBuilder buildStyle]
-                                               title:@"Clicked"
-                                                desc:clickMsg];
-    [dataSource add:clickPopup];
-    
-    // if returns YES then no extra events. If NO then can be called again for next elements.
-    // use mapListener.onMapClicked() event to know that all other events are finished
-    
-    return YES;
-}
-
-@end
 
 
 
