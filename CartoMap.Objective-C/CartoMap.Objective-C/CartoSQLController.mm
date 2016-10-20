@@ -1,6 +1,6 @@
 
 #import "VectorMapBaseController.h"
-#import "MyMapEventListener.h"
+
 
 @interface CartoSQLController : VectorMapBaseController
 
@@ -56,12 +56,6 @@
     // Add the previous vector layer to the map
     [[self.mapView getLayers]add:layer2];
     
-    // Set listener to get point click popups
-    MyMapEventListener* listener = [[MyMapEventListener alloc] init];
-    listener.mapView = self.mapView;
-    listener.source = vectorSource;
-    
-    [self.mapView setMapEventListener:listener];
     
     // Animate map to the marker
     NTMapPos* newYork = [projection fromWgs84:[[NTMapPos alloc] initWithX:-74.0059 y:40.7127]];

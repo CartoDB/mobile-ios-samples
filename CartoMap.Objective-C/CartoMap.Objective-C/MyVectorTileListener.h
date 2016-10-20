@@ -1,9 +1,7 @@
-
 #import <CartoMobileSDK/CartoMobileSDK.h>
 
-@interface MyMapEventListener : NTMapEventListener
+@interface MyVectorTileListener : NTVectorTileEventListener
 
-@property NTMapView* mapView;
-@property NTLocalVectorDataSource* source;
+@property NTVectorLayer* vectorLayer;
 
 @end
