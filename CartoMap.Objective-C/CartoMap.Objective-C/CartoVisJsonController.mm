@@ -4,7 +4,7 @@
 #import "VPPDropDownDelegate.h"
 
 #import "MyCartoVisBuilder.h"
-#import "MyUTFGridEventListener.h"
+#import "MyVectorTileListener.h"
 
 /*
  * A sample demonstrating how to use high-level Carto VisJSON API.
@@ -17,6 +17,7 @@
 @property NSString* visJSONURL;
 @property NTAssetPackage* fontsAssetPackage;
 @property NSTimer* timer;
+@property NTVectorLayer* vectorLayer;
 
 @end
 
@@ -42,9 +43,9 @@
     return @{
              @"circle": @"http://documentation.cartodb.com/api/v2/viz/836e37ca-085a-11e4-8834-0edbca4b5057/viz.json",
              @"countries": @"http://documentation.cartodb.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json",
-             @"dots": @"https://documentation.cartodb.com/api/v2/viz/236085de-ea08-11e2-958c-5404a6a683d5/viz.json",
-             @"israel":@"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/8336e3ee-267e-11e6-8410-0e787de82d45/viz.json",
-             @"micello": @"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/69f3eebe-33b6-11e6-8634-0e5db1731f59/viz.json"
+             @"cities": @"https://cartomobile-team.carto.com/u/nutiteq/api/v2/viz/f1407ed4-84b8-11e6-96bc-0ee66e2c9693/viz.json",
+             @"geonames clusters":@"https://cartomobile-team.carto.com/u/nutiteq/api/v2/viz/d1bda058-5562-401a-beba-7df8891d5f06/viz.json",
+             @"micell indoors": @"https://cartomobile-team.cartodb.com/u/nutiteq/api/v2/viz/69f3eebe-33b6-11e6-8634-0e5db1731f59/viz.json"
              };
 }
 
@@ -85,6 +86,7 @@
         
         // Add the created popup overlay layer on top of all visJSON layers
         [[self.mapView getLayers] add:vectorLayer];
+        
     });
 }
 
@@ -126,11 +128,12 @@
     self.fontsAssetPackage = [[NTZippedAssetPackage alloc] initWithZipData:fontsData];
     
     // Set default vis
-    self.visJSONURL = [self.visJSONURLs objectForKey: @"dots"];
+    self.visJSONURL = [self.visJSONURLs objectForKey: @"cities"];
     [self updateVis];
     
     // Create menu
     [self createMenu];
+    
 }
 
 @end
