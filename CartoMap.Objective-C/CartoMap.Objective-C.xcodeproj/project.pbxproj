@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */; };
 		0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */ = {isa = PBXBuildFile; fileRef = 0CC811B01DAD0607005A5C4F /* cartocss.css */; };
+		0CC811B41DB636D9005A5C4F /* MyVectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CC811B31DB636D8005A5C4F /* MyVectorTileListener.mm */; };
 		7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */; };
 		AD860A6E1D7DB068005994B2 /* CartoUTFGridController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
@@ -33,7 +34,6 @@
 		ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3351D79673200841945 /* CartoRasterTileController.mm */; };
 		ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3371D79678900841945 /* VectorMapBaseController.mm */; };
 		ADC2B3571D79ABDB00841945 /* CartoSQLController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */; };
-		ADC2B35A1D79BD1000841945 /* MyMapEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */; };
 		ADCA45451D9293C600814350 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45261D9293C600814350 /* 852-map-toolbar.png */; };
 		ADCA45461D9293C600814350 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45271D9293C600814350 /* 852-map-toolbar@2x.png */; };
 		ADCA45471D9293C600814350 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45281D9293C600814350 /* 852-map-toolbar@3x.png */; };
@@ -87,6 +87,8 @@
 /* Begin PBXFileReference section */
 		0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NamedMapController.m; sourceTree = "<group>"; };
 		0CC811B01DAD0607005A5C4F /* cartocss.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = cartocss.css; sourceTree = "<group>"; };
+		0CC811B21DB636D8005A5C4F /* MyVectorTileListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVectorTileListener.h; sourceTree = "<group>"; };
+		0CC811B31DB636D8005A5C4F /* MyVectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyVectorTileListener.mm; sourceTree = "<group>"; };
 		3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CartoMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956079C5E02A95EC51535A0 /* Pods-CartoMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,8 +128,6 @@
 		ADC2B3371D79678900841945 /* VectorMapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorMapBaseController.mm; sourceTree = "<group>"; };
 		ADC2B3391D7967A100841945 /* VectorMapBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorMapBaseController.h; sourceTree = "<group>"; };
 		ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoSQLController.mm; sourceTree = "<group>"; };
-		ADC2B3581D79BD0100841945 /* MyMapEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyMapEventListener.h; sourceTree = "<group>"; };
-		ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyMapEventListener.mm; sourceTree = "<group>"; };
 		ADCA45261D9293C600814350 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
 		ADCA45271D9293C600814350 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "../../Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
 		ADCA45281D9293C600814350 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "../../Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
@@ -312,10 +312,10 @@
 		ADC2B2F21D795FD800841945 /* Listener */ = {
 			isa = PBXGroup;
 			children = (
+				0CC811B21DB636D8005A5C4F /* MyVectorTileListener.h */,
+				0CC811B31DB636D8005A5C4F /* MyVectorTileListener.mm */,
 				ADC2B2F71D79605D00841945 /* MyUTFGridEventListener.h */,
 				ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */,
-				ADC2B3581D79BD0100841945 /* MyMapEventListener.h */,
-				ADC2B3591D79BD1000841945 /* MyMapEventListener.mm */,
 			);
 			name = Listener;
 			sourceTree = "<group>";
@@ -606,6 +606,7 @@
 				ADD8BEBF1D7EAB7400E4B1A8 /* CartoTorqueController.m in Sources */,
 				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
+				0CC811B41DB636D9005A5C4F /* MyVectorTileListener.mm in Sources */,
 				0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */,
 				ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */,
 				ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */,
@@ -615,7 +616,6 @@
 				ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */,
 				ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
-				ADC2B35A1D79BD1000841945 /* MyMapEventListener.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
