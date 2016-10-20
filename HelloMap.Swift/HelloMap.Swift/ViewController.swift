@@ -26,9 +26,9 @@ class ViewController: GLKViewController {
         let projection = mapView?.getOptions().getBaseProjection();
         let tallinn = projection?.fromWgs84(NTMapPos(x: 24.646469, y: 59.426939));
         
-        mapView?.addMarkerToPostion(projection!, position: tallinn!);
+        mapView?.addMarkerToPostion(projection: projection!, position: tallinn!);
         
-        mapView?.setFocusPos(tallinn, durationSeconds: 0);
+        mapView?.setFocus(tallinn, durationSeconds: 0);
         mapView?.setZoom(15, durationSeconds: 2);
     }
 }
@@ -43,12 +43,12 @@ extension NTMapView {
         self.getLayers().add(layer);
         
         let builder = NTMarkerStyleBuilder();
-        builder.setSize(15);
-        builder.setColor(NTColor(r: 0, g: 255, b: 0, a: 255));
+        builder?.setSize(15);
+        builder?.setColor(NTColor(r: 0, g: 255, b: 0, a: 255));
         
-        let marker = NTMarker(pos: position, style: builder.buildStyle());
+        let marker = NTMarker(pos: position, style: builder?.buildStyle());
         
-        source.add(marker);
+        source?.add(marker);
     }
 }
 
