@@ -7,9 +7,14 @@
 //
 
 #import "ViewController.h"
-#import "MyCartoVisBuilder.h"
 
 @interface ViewController ()
+
+@end
+
+@interface HelloMapListener : NTMapEventListener
+
+@property NTMarker* marker;
 
 @end
 
@@ -23,65 +28,74 @@
     // The storyboard has NTMapView connected as a view
     NTMapView* mapView = (NTMapView*) self.view;
     
-    // Add vector tile layer
+    // Add base layer
     NTVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
     [[mapView getLayers] add:layer];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        // Initialize a local vector data source
-        NTProjection* proj = [[mapView getOptions] getBaseProjection];
-        NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
-        
-        // Initialize a vector layer with the previous data source
-        NTVectorLayer* vectorLayer = [[NTVectorLayer alloc] initWithDataSource:vectorDataSource];
-        
-        // Add the previous vector layer to the map
-        [[mapView getLayers] add:vectorLayer];
-        
-        // Create a marker style
-        NTMarkerStyleBuilder* markerStyleBuilder = [[NTMarkerStyleBuilder alloc] init];
-        [markerStyleBuilder setSize:15];
-        NTColor* color = [[NTColor alloc] initWithR:242 g:68 b:64 a:255];
-        [markerStyleBuilder setColor:color];
-        
-        NTMarkerStyle* sharedMarkerStyle = [markerStyleBuilder buildStyle];
-        
-        // Define position and add the marker to the Datasource (which is already in a Layer and MapView)
-        NTMapPos* tallinn = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.426939]];
-        NTMarker* marker = [[NTMarker alloc] initWithPos:tallinn style:sharedMarkerStyle];
-        
-        [vectorDataSource add:marker];
-        
-        // Animate zoom
-        [mapView setZoom:3 durationSeconds:2];
-        [mapView setFocusPos:tallinn durationSeconds:0];
-    });
+    NTProjection* proj = [[mapView getOptions] getBaseProjection];
+    
+    // Aniamte zoom to Tallinn, Estonia
+    NTMapPos* tallinn = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.426939]];
+    [mapView setZoom:3 durationSeconds:2];
+    [mapView setFocusPos:tallinn durationSeconds:0];
+    
+    // Initialize a local vector data source
+    NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
+    
+    // Initialize a vector layer with the previous data source
+    NTVectorLayer* vectorLayer = [[NTVectorLayer alloc] initWithDataSource:vectorDataSource];
+    
+    // Add the previous vector layer to the map
+    [[mapView getLayers] add:vectorLayer];
+    
+    // Create a marker style
+    NTMarkerStyleBuilder* markerStyleBuilder = [[NTMarkerStyleBuilder alloc] init];
+    [markerStyleBuilder setSize:15];
+    NTColor* color = [[NTColor alloc] initWithR:242 g:68 b:64 a:255];
+    [markerStyleBuilder setColor:color];
+    
+    NTMarkerStyle* sharedMarkerStyle = [markerStyleBuilder buildStyle];
+    
+    // Define position and add the marker to the Datasource (which is already in a Layer and MapView)
+    NTMarker* marker = [[NTMarker alloc] initWithPos:tallinn style:sharedMarkerStyle];
+    [vectorDataSource add:marker];
+    
+    // Add simple event listener that changes size and/or color on map click
+    HelloMapListener* listener = [[HelloMapListener alloc]init];
+    listener.marker = marker;
+    [mapView setMapEventListener: listener];
+    
 }
 
 @end
 
-/*
- * CARTO Vis Builder
- */
 
-@implementation MyCartoVisBuilder
+@implementation HelloMapListener
 
-// methods to set map center and zoom based on defined map
--(void)setCenter:(NTMapPos *)mapPos
+-(void) onMapClicked:(NTMapClickInfo *)mapClickInfo
 {
-    [self.mapView setFocusPos:[[[self.mapView getOptions] getBaseProjection] fromWgs84:mapPos] durationSeconds:1.0f];
+    NTMarkerStyleBuilder* builder = [[NTMarkerStyleBuilder alloc] init];
+    
+    int size = arc4random_uniform(50);
+    [builder setSize:size];
+    
+    NSArray* colors = [self getColors];
+    
+    NTColor* color = [colors objectAtIndex:arc4random_uniform((int)[colors count])];
+    [builder setColor:color];
+    
+    [self.marker setStyle:builder.buildStyle];
 }
 
--(void)setZoom:(float)zoom
+-(NSArray*) getColors
 {
-    [self.mapView setZoom:zoom durationSeconds:1.0f];
-}
-
-// Add a layer to the map view
--(void)addLayer:(NTLayer *)layer attributes:(NTVariant *)attributes
-{
-    [[self.mapView getLayers] add:layer];
+    return @[
+             [[NTColor alloc]initWithR:255 g:255 b:255 a:255],
+             [[NTColor alloc]initWithR:0 g:0 b:255 a:255],
+             [[NTColor alloc]initWithR:255 g:0 b:0 a:255],
+             [[NTColor alloc]initWithR:0 g:255 b:0 a:255],
+             [[NTColor alloc]initWithR:0 g:0 b:0 a:255]
+             ];
 }
 
 @end
