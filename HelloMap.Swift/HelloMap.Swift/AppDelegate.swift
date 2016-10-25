@@ -13,10 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var License = "XTUN3Q0ZCL1ZER2R2Ukw3WmV0MkROSnYxYy9PRVZkaTJBaFE3OVZsUktoV3E5L1hPbTlvSlYrUGx0am1ETGc9PQoKYXBwVG9rZW49ODU4OWM5NTQtMjc5Zi00NmVkLTljOTQtNjNkOTg4MzMyZWFiCnZhbGlkVW50aWw9MjAxNi0xMC0yMgp3YXRlcm1hcms9Y2FydG9kYgpidW5kbGVJZGVudGlmaWVyPWNhcnRvLkhlbGxvTWFwLVN3aWZ0Cm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgo=";
+    var License = "XTUN3Q0ZGZm5HTUtROUUyQ3AwNXRVOTR6b2U5VUVsYXhBaFJOaHhLS2NldEM4MGVRcUhPK0I0cXB6b2Y2OGc9PQoKYXBwVG9rZW49MzNkNzY2NTAtNjZjNy00YjJlLTkyMWYtMDczMzBmZWNmMDNkCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmhlbGxvbWFwCm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg==";
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+    
+    
+    func application(_: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
         NTLog.setShowInfo(true);
         NTMapView.registerLicense(License);
         

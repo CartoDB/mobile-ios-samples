@@ -1,7 +1,7 @@
 
 
 #import "MyCartoVisBuilder.h"
-#import "MyUTFGridEventListener.h"
+#import "MyVectorTileListener.h"
 
 @implementation MyCartoVisBuilder
 
@@ -25,17 +25,18 @@
     // Add the layer to the map view
     [[self.mapView getLayers] add:layer];
     
-    // Check if the layer has info window. In that case will add a custom UTF grid event listener to the layer.
-    NTVariant* infoWindow = [attributes getObjectElement:@"infowindow"];
     
-    if ([infoWindow getType] == NT_VARIANT_TYPE_OBJECT) {
+    if ([layer isKindOfClass:[NTVectorTileLayer class]]) {
         
-        MyUTFGridEventListener* myEventListener = [[MyUTFGridEventListener alloc] init];
+        // add listener for vector tile clicks
+        NTVectorTileLayer* tileLayer = (NTVectorTileLayer*)layer;
+        [tileLayer setUTFGridDataSource: nil]; // usually do not use this.
+        
+        MyVectorTileListener* myEventListener = [[MyVectorTileListener alloc] init];
         myEventListener.vectorLayer = self.vectorLayer;
-        
-        NTTileLayer* tileLayer = (NTTileLayer*)layer;
-        [tileLayer setUTFGridEventListener:myEventListener];
+        [tileLayer setVectorTileEventListener:myEventListener];
     }
+    
     
     // Check if torque layer, if yes, then store it
     if ([layer isKindOfClass:[NTTorqueTileLayer class]]) {

@@ -10,12 +10,12 @@ After downloading/cloning project you need to get SDK itself
   1. Unzip it and copy *CartoMobileSDK.framework*  to the xCode project root folder
 
 Or, alternatively, if you prefer CocoaPods:
-  1. Navigate to a project's folder in your **terminal**
+  1. Navigate to a project's folder in your **terminal** . *Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in xCode point of view.*
   2. Type "pod install" to download the SDK 
   3. Run the project via the **.xcworkspace** file
   
 ## SDK API documentation
-  * More detailed guide in wiki: https://github.com/CartoDB/mobile-ios-samples/wiki
+  * Official docs: https://carto.com/docs/carto-engine/mobile-sdk/
   * Reference: http://cartodb.github.io/mobile-ios-samples/
   * The distro zip has generated HTML reference docs in *docObjC* folder
 
