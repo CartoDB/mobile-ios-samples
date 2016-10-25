@@ -29,16 +29,19 @@
 	
 	// Initialize a OSM raster data source
 	NTHTTPTileDataSource* baseRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:24 baseURL:@"http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"];
-	// Initialize PSM hillshading raster data source
+	
+    // Initialize PSM hillshading raster data source
 	NTHTTPTileDataSource* hillsRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:24 baseURL:@"http://tiles.wmflabs.org/hillshading/{zoom}/{x}/{y}.png"];
-	// Initialize a custom datasource that will combine those two datasources into one
+	
+    // Initialize a custom datasource that will combine those two datasources into one
 	MyMergedRasterTileDataSource* mergedRasterTileDataSource = [[MyMergedRasterTileDataSource alloc] initWithDataSource1:baseRasterTileDataSource dataSource2:hillsRasterTileDataSource];
-	// Initialize offline raster tile cache with the previous datasource and a sqlite database
+	
+    // Initialize offline raster tile cache with the previous datasource and a sqlite database
 	NTPersistentCacheTileDataSource* cachedRasterTileDataSource = [[NTPersistentCacheTileDataSource alloc] initWithDataSource:mergedRasterTileDataSource databasePath:[NTAssetUtils calculateWritablePath:@"cache4.db"]];
 		
 	// Initialize a raster layer with the previous data source
 	NTRasterTileLayer* rasterLayer = [[NTRasterTileLayer alloc] initWithDataSource:cachedRasterTileDataSource];
-	//[rasterLayer setPreloading:NO];
+	
 	// Add the previous raster layer to the map
 	[[self.mapView getLayers] add:rasterLayer];
 }

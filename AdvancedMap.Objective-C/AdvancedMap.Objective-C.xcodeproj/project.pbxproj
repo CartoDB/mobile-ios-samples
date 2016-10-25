@@ -30,18 +30,14 @@
 		4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F211D018B8D001C2F30 /* VPPDropDownElement.m */; };
 		4D4B1F601D018C2A001C2F30 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4B1F5F1D018C2A001C2F30 /* libz.tbd */; };
 		4D4B1F621D01C37B001C2F30 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F611D01C37B001C2F30 /* MyVectorElementEventListener.mm */; };
-		4D5749A51D8A856300387B2B /* BaseMapInteractivitySampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5749A41D8A856300387B2B /* BaseMapInteractivitySampleController.mm */; };
 		4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */; };
 		4DAF41AF1AD3C307004E7092 /* GroundOverlaySampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */; };
 		4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
 		4DC8500C1A0E77CA00C5124F /* VectorMapSampleBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */; };
-		4DC850101A0E7A5100C5124F /* PinSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8500F1A0E7A5100C5124F /* PinSampleController.mm */; };
 		4DC850121A0E7DC500C5124F /* CustomRasterDataSourceSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850111A0E7DC500C5124F /* CustomRasterDataSourceSampleController.mm */; };
 		4DEB06D01A10BDB7003D111C /* Overlays2DSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06CF1A10BDB7003D111C /* Overlays2DSampleController.mm */; };
 		4DEB06D21A10C103003D111C /* Overlays3DSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D11A10C103003D111C /* Overlays3DSampleController.mm */; };
-		4DEB06D41A10C904003D111C /* MapListenerSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D31A10C904003D111C /* MapListenerSampleController.mm */; };
 		4DEB06D81A10CDC0003D111C /* OfflineVectorMapSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D71A10CDC0003D111C /* OfflineVectorMapSampleController.mm */; };
-		4DEB06DA1A10D3D1003D111C /* AerialMapSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D91A10D3D1003D111C /* AerialMapSampleController.mm */; };
 		4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */; };
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
@@ -53,6 +49,7 @@
 		ADA114261DA3A2CE00481261 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */; };
 		ADA114271DA3A2D200481261 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B46187C4F8F0004A3CB /* UIKit.framework */; };
 		ADA114281DA3A37600481261 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
+		ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
 		ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */; };
 		ADED5F161D92A31800AB2D13 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */; };
@@ -133,19 +130,15 @@
 		4D4B1F5F1D018C2A001C2F30 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4D4B1F611D01C37B001C2F30 /* MyVectorElementEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyVectorElementEventListener.mm; path = AdvancedMap/MyVectorElementEventListener.mm; sourceTree = SOURCE_ROOT; };
 		4D4B1F631D01C3BB001C2F30 /* MyVectorElementEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyVectorElementEventListener.h; path = AdvancedMap/MyVectorElementEventListener.h; sourceTree = SOURCE_ROOT; };
-		4D5749A41D8A856300387B2B /* BaseMapInteractivitySampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BaseMapInteractivitySampleController.mm; path = AdvancedMap/BaseMapInteractivitySampleController.mm; sourceTree = SOURCE_ROOT; };
 		4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageManagerController.mm; path = AdvancedMap/PackageManagerController.mm; sourceTree = SOURCE_ROOT; };
 		4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GroundOverlaySampleController.mm; path = AdvancedMap/GroundOverlaySampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850071A0E718100C5124F /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LauncherListController.mm; path = AdvancedMap/LauncherListController.mm; sourceTree = SOURCE_ROOT; };
 		4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VectorMapSampleBaseController.h; path = AdvancedMap/VectorMapSampleBaseController.h; sourceTree = SOURCE_ROOT; };
 		4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VectorMapSampleBaseController.mm; path = AdvancedMap/VectorMapSampleBaseController.mm; sourceTree = SOURCE_ROOT; };
-		4DC8500F1A0E7A5100C5124F /* PinSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PinSampleController.mm; path = AdvancedMap/PinSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850111A0E7DC500C5124F /* CustomRasterDataSourceSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomRasterDataSourceSampleController.mm; path = AdvancedMap/CustomRasterDataSourceSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06CF1A10BDB7003D111C /* Overlays2DSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Overlays2DSampleController.mm; path = AdvancedMap/Overlays2DSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06D11A10C103003D111C /* Overlays3DSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Overlays3DSampleController.mm; path = AdvancedMap/Overlays3DSampleController.mm; sourceTree = SOURCE_ROOT; };
-		4DEB06D31A10C904003D111C /* MapListenerSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MapListenerSampleController.mm; path = AdvancedMap/MapListenerSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06D71A10CDC0003D111C /* OfflineVectorMapSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OfflineVectorMapSampleController.mm; path = AdvancedMap/OfflineVectorMapSampleController.mm; sourceTree = SOURCE_ROOT; };
-		4DEB06D91A10D3D1003D111C /* AerialMapSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AerialMapSampleController.mm; path = AdvancedMap/AerialMapSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06DE1A10D8B3003D111C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4DEB06DF1A10DF0F003D111C /* LauncherListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LauncherListController.h; path = AdvancedMap/LauncherListController.h; sourceTree = SOURCE_ROOT; };
 		4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredGeoJsonController.mm; path = AdvancedMap/ClusteredGeoJsonController.mm; sourceTree = SOURCE_ROOT; };
@@ -157,6 +150,8 @@
 		ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedMap_Objective_C_UITests.m; sourceTree = "<group>"; };
 		ADA1141B1DA399FF00481261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA114211DA3A04F00481261 /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AdvancedMap.Objective-C.a"; path = "../../../../Library/Developer/Xcode/DerivedData/AdvancedMap.Objective-C-eqqmxktzfefcpvcrcnopxenfhpsc/Build/Products/Debug-iphonesimulator/libPods-AdvancedMap.Objective-C.a"; sourceTree = "<group>"; };
+		ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
+		ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
 		ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
 		ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "../../Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
 		ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "../../Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
@@ -273,10 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				ADED5EF41D92A30200AB2D13 /* Assets */,
+				ADC7313A1DBFA2A400E1CDCA /* Sections */,
 				4DC42AAD1B622C630022CA0C /* Controllers */,
 				4DEB06D61A10CD88003D111C /* Data Sources */,
 				4DEB06D51A10C94E003D111C /* Listeners */,
-				4D13E2811A6EB7E300FA74DC /* Vector Elements */,
 				2AD24F7D18FEDAE0000969F4 /* Supporting Files */,
 				2AD24F8418FEDB89000969F4 /* Images.xcassets */,
 				2AD24F6918FEDAA6000969F4 /* AppDelegate.h */,
@@ -294,15 +289,6 @@
 				2AD24F7318FEDAA6000969F4 /* AdvancedMap.Objective-C-Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4D13E2811A6EB7E300FA74DC /* Vector Elements */ = {
-			isa = PBXGroup;
-			children = (
-				4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */,
-				4D13E2841A6EB82600FA74DC /* MyCustomPopupHandler.h */,
-			);
-			name = "Vector Elements";
 			sourceTree = "<group>";
 		};
 		4DB60ECD1A16614A00A6AF18 /* VPPDropDown */ = {
@@ -327,22 +313,6 @@
 			children = (
 				AD860A6B1D7DA103005994B2 /* Base */,
 				AD860A6C1D7DA117005994B2 /* List */,
-				4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */,
-				4D5749A41D8A856300387B2B /* BaseMapInteractivitySampleController.mm */,
-				4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */,
-				0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */,
-				4DC8500F1A0E7A5100C5124F /* PinSampleController.mm */,
-				4DEB06CF1A10BDB7003D111C /* Overlays2DSampleController.mm */,
-				0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */,
-				4DEB06D11A10C103003D111C /* Overlays3DSampleController.mm */,
-				4DEB06D31A10C904003D111C /* MapListenerSampleController.mm */,
-				4DC850111A0E7DC500C5124F /* CustomRasterDataSourceSampleController.mm */,
-				4DEB06D71A10CDC0003D111C /* OfflineVectorMapSampleController.mm */,
-				4DEB06D91A10D3D1003D111C /* AerialMapSampleController.mm */,
-				4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */,
-				0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */,
-				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
-				4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -374,6 +344,8 @@
 				4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */,
 				4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */,
 				4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */,
+				ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */,
+				ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -383,7 +355,6 @@
 			children = (
 				4DEB06DF1A10DF0F003D111C /* LauncherListController.h */,
 				4DC850071A0E718100C5124F /* LauncherListController.mm */,
-				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -395,6 +366,92 @@
 				ADA1141B1DA399FF00481261 /* Info.plist */,
 			);
 			path = "AdvancedMap.Objective-C.UITests";
+			sourceTree = "<group>";
+		};
+		ADC7313A1DBFA2A400E1CDCA /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				ADC731421DBFA36D00E1CDCA /* BaseMap */,
+				ADC731411DBFA35000E1CDCA /* OverlayDataSource */,
+				ADC731401DBFA34900E1CDCA /* GIS */,
+				ADC7313F1DBFA34000E1CDCA /* VectorObjects */,
+				ADC7313E1DBFA33800E1CDCA /* OfflineMap */,
+				ADC7313D1DBFA33100E1CDCA /* Other */,
+			);
+			name = Sections;
+			sourceTree = "<group>";
+		};
+		ADC7313D1DBFA33100E1CDCA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				ADC731471DBFA78D00E1CDCA /* CustomPopup */,
+				4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */,
+				0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */,
+				4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		ADC7313E1DBFA33800E1CDCA /* OfflineMap */ = {
+			isa = PBXGroup;
+			children = (
+				ADC731431DBFA3C200E1CDCA /* Packagemanager */,
+				4DEB06D71A10CDC0003D111C /* OfflineVectorMapSampleController.mm */,
+			);
+			name = OfflineMap;
+			sourceTree = "<group>";
+		};
+		ADC7313F1DBFA34000E1CDCA /* VectorObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4DEB06CF1A10BDB7003D111C /* Overlays2DSampleController.mm */,
+				4DEB06D11A10C103003D111C /* Overlays3DSampleController.mm */,
+			);
+			name = VectorObjects;
+			sourceTree = "<group>";
+		};
+		ADC731401DBFA34900E1CDCA /* GIS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GIS;
+			sourceTree = "<group>";
+		};
+		ADC731411DBFA35000E1CDCA /* OverlayDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */,
+				4DC850111A0E7DC500C5124F /* CustomRasterDataSourceSampleController.mm */,
+				4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */,
+			);
+			name = OverlayDataSource;
+			sourceTree = "<group>";
+		};
+		ADC731421DBFA36D00E1CDCA /* BaseMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BaseMap;
+			sourceTree = "<group>";
+		};
+		ADC731431DBFA3C200E1CDCA /* Packagemanager */ = {
+			isa = PBXGroup;
+			children = (
+				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
+				0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */,
+				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
+			);
+			name = Packagemanager;
+			sourceTree = "<group>";
+		};
+		ADC731471DBFA78D00E1CDCA /* CustomPopup */ = {
+			isa = PBXGroup;
+			children = (
+				4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */,
+				4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */,
+				4D13E2841A6EB82600FA74DC /* MyCustomPopupHandler.h */,
+			);
+			name = CustomPopup;
 			sourceTree = "<group>";
 		};
 		ADED5EF41D92A30200AB2D13 /* Assets */ = {
@@ -665,16 +722,13 @@
 				4DC8500C1A0E77CA00C5124F /* VectorMapSampleBaseController.mm in Sources */,
 				4DEB06D81A10CDC0003D111C /* OfflineVectorMapSampleController.mm in Sources */,
 				0C1CF0651B134D27001A64AD /* HillshadeSampleController.mm in Sources */,
-				4DEB06DA1A10D3D1003D111C /* AerialMapSampleController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
 				0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupSampleController.mm in Sources */,
-				4DEB06D41A10C904003D111C /* MapListenerSampleController.mm in Sources */,
 				4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */,
 				2AD24F7A18FEDAA6000969F4 /* MyMapEventListener.mm in Sources */,
 				4DEB06D21A10C103003D111C /* Overlays3DSampleController.mm in Sources */,
-				4D5749A51D8A856300387B2B /* BaseMapInteractivitySampleController.mm in Sources */,
-				4DC850101A0E7A5100C5124F /* PinSampleController.mm in Sources */,
+				ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */,
 				2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

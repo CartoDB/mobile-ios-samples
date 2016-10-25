@@ -1,6 +1,7 @@
 #import "VectorMapSampleBaseController.h"
 #import "VPPDropDown.h"
 #import "VPPDropDownDelegate.h"
+#import "VectorTileListener.h"
 
 @interface DropDownMenuController : UITableViewController <VPPDropDownDelegate, UIActionSheetDelegate>
 
@@ -169,6 +170,24 @@
     
     // Create menu
     [self createMenu];
+    
+    // Add overlay layer, if not yet added
+    if (!self.vectorLayer) {
+        NTProjection* proj = [[self.mapView getOptions] getBaseProjection];
+        NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
+        self.vectorLayer = [[NTVectorLayer alloc] initWithDataSource:vectorDataSource];
+        [[self.mapView getLayers] add:self.vectorLayer];
+    }
+    
+    // Attach custom listener to vector tile layer
+    NTLayer* layer = [[self.mapView getLayers] get:0];
+    
+    if ([layer isKindOfClass:[NTVectorTileLayer class]]) {
+        NTVectorTileLayer* vectorTileLayer = (NTVectorTileLayer*)layer;
+        VectorTileListener* myEventListener = [[VectorTileListener alloc] init];
+        myEventListener.vectorLayer = self.vectorLayer;
+        [vectorTileLayer setVectorTileEventListener:myEventListener];
+    }
 }
 
 @end
@@ -251,3 +270,17 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

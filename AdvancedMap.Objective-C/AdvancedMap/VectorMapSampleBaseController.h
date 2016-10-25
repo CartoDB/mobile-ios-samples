@@ -17,4 +17,7 @@
 @property NTTileDataSource* vectorTileDataSource;
 @property NTMBVectorTileDecoder* vectorTileDecoder;
 
+// Layer for Vector event listener
+@property NTVectorLayer* vectorLayer;
+
 @end

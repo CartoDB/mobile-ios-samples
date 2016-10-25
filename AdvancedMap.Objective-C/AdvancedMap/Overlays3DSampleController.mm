@@ -1,10 +1,6 @@
 #import "VectorMapSampleBaseController.h"
 #import "MyMapEventListener.h"
 #import "MyVectorElementEventListener.h"
-
-//#import <CartoMobileSDK/NTOfflineNMLModelLODTreeDataSource.h>
-//#import <CartoMobileSDK/NTNMLModelLODTreeLayer.h>
-
 /**
  * A sample demonstrating how to use 3D vector elements:
  * 3D polygon, 3D model (NML) and 3D city (NMLDB)
@@ -24,11 +20,14 @@
 	
 	// Initialize a local vector data source
 	NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
-	// Initialize a vector layer with the previous data source
+	
+    // Initialize a vector layer with the previous data source
 	NTVectorLayer* vectorLayer = [[NTVectorLayer alloc] initWithDataSource:vectorDataSource];
-	// Add the previous vector layer to the map
+	
+    // Add the previous vector layer to the map
 	[[self.mapView getLayers] add:vectorLayer];
-	// Set visible zoom range for the vector layer
+	
+    // Set visible zoom range for the vector layer
 	[vectorLayer setVisibleZoomRange:[[NTMapRange alloc] initWithMin:10 max:24]];
 	
 	// Create 3D polygon style and poses
@@ -56,19 +55,7 @@
 	NTPolygon3D* polygon3D = [[NTPolygon3D alloc] initWithGeometry:[[NTPolygonGeometry alloc] initWithPoses:polygon3DPoses holes:polygon3DHoles] style:[polygon3DStyleBuilder buildStyle] height: 150];
 	[polygon3D setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Polygon3D"]];
 	[vectorDataSource add:polygon3D];
-	
-    
-	// Add a 3D model database layer - this is only supported in special SDK build
-    /*
-	NSString* fullpath = [[NSBundle mainBundle] pathForResource:@"saku_ios_4bpp" ofType:@"nmldb"];
-	NTOfflineNMLModelLODTreeDataSource* nmlDataSource = [[NTOfflineNMLModelLODTreeDataSource alloc] initWithProjection:proj fileName:fullpath];
-	NTNMLModelLODTreeLayer* nmlLayer = [[NTNMLModelLODTreeLayer alloc] initWithDataSource:nmlDataSource];
-	[nmlLayer setVisibleZoomRange:[[NTMapRange alloc] initWithMin:12 max:25]];
-	[[self.mapView getLayers] add:nmlLayer];
-    */
-    
-    //[[self.mapView getOptions] setMainLightColor:[[NTColor alloc] initWithColor:0xff202020]];
-	
+
 	// Add a single 3D model to map
     NSArray* assets = @[@"fcd_auto.nml"];
     int counter = 0;
@@ -90,7 +77,9 @@
     
     // Create vector element event listener
     MyVectorElementEventListener* vectorElementListener = [[MyVectorElementEventListener alloc] init];
+    
     [vectorElementListener setMapView:self.mapView vectorDataSource:vectorDataSource];
+    
     for (int i = 0; i < [[self.mapView getLayers] count]; i++) {
         NTLayer* layer = [[self.mapView getLayers] get:i];
         if ([layer isKindOfClass:[NTVectorLayer class]]) {

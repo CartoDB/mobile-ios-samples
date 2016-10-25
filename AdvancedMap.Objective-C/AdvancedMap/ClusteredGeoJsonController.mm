@@ -29,10 +29,9 @@
     // Initialize a local vector data source
     NTProjection* proj = [[self.mapView getOptions] getBaseProjection];
     NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
+    
     // Initialize a vector layer with the previous data source
-    NTClusteredVectorLayer* vectorLayer = [[NTClusteredVectorLayer
-                                            alloc] initWithDataSource:vectorDataSource
-                                           clusterElementBuilder: [[MyClusterElementBuilder alloc] init]];
+    NTClusteredVectorLayer* vectorLayer = [[NTClusteredVectorLayer alloc] initWithDataSource:vectorDataSource clusterElementBuilder: [[MyClusterElementBuilder alloc] init]];
     
     [vectorLayer setMinimumClusterDistance: 75]; // default is 100
     
@@ -43,9 +42,6 @@
     
     // load geoJSON data to the vectorDataSource
     [self readGeoJsonData: @"capitals_3857" forMapView:self.mapView intoDataSource:vectorDataSource];
-    
-    
-    
     
     // Create a map event listener
     MyMapEventListener* mapListener = [[MyMapEventListener alloc] init];
