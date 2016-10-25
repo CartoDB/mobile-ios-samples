@@ -1,6 +1,4 @@
 #import "VectorMapSampleBaseController.h"
-#import "MyMapEventListener.h"
-
 
 /*
  * A sample demonstrating how to read data from GeoJSON and add clustered Markers to map.
@@ -42,14 +40,6 @@
     
     // load geoJSON data to the vectorDataSource
     [self readGeoJsonData: @"capitals_3857" forMapView:self.mapView intoDataSource:vectorDataSource];
-    
-    // Create a map event listener
-    MyMapEventListener* mapListener = [[MyMapEventListener alloc] init];
-    [self.mapView setMapEventListener:mapListener];
-    // MapEventListener needs the data source and the layer to display balloons
-    // over the clicked vector elements
-    [mapListener setMapView:self.mapView vectorDataSource:vectorDataSource];
-    
 }
 
 -(void)viewWillDisappear:(BOOL)animated

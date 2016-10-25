@@ -8,10 +8,6 @@
 -(NSArray*) samples
 {
     return @[
-             @{ @"name": @"Pin Sample",
-                @"description": @"Base map with Marker pins",
-                @"controller": @"PinSampleController"
-             },
              @{ @"name": @"2D OverlaysSample",
                 @"description": @"2D objects: lines, points, polygon with hole, texts and pop-ups",
                 @"controller": @"Overlays2DSampleController"
@@ -19,14 +15,6 @@
              @{ @"name": @"3D Overlays Sample",
                 @"description": @"3D vector elements: 3D polygon, 3D model (NML) and 3D city (NMLDB)",
                 @"controller": @"Overlays3DSampleController"
-             },
-             @{ @"name": @"Map Listener Sample",
-                @"description": @"Events for clicks on map and Vector elements",
-                @"controller": @"MapListenerSampleController"
-             },
-             @{ @"name": @"Base Map Interactivity Sample",
-                @"description": @"Events for clicks on base map features",
-                @"controller": @"BaseMapInteractivitySampleController"
              },
              @{ @"name": @"Offline Vector Map Sample",
                 @"description": @"Bundle MBTiles file for offline base map",
@@ -40,21 +28,13 @@
                 @"description": @"Download offline map packages with OSM",
                 @"controller": @"PackageManagerController"
              },
-             @{ @"name": @"Aerial Map Sample",
-                @"description": @"External raster tile data source",
-                @"controller": @"AerialMapSampleController"
-             },
-             @{ @"name": @"Hillshade Topo Map Sample",
-                @"description": @"Raster hillshading and topographic datasource with elevation contours",
-                @"controller": @"HillshadeSampleController"
-             },
              @{ @"name": @"Ground Overlay Sample",
                 @"description": @"Adding ground-level raster overlay",
                 @"controller": @"GroundOverlaySampleController"
              },
              @{ @"name": @"Custom Raster Data Source Sample",
                 @"description": @"creating and using custom raster tile data source",
-                @"controller": @"CustomRasterDataSourceSampleController"
+                @"controller": @"CustomRasterDataSourceController"
              },
              @{ @"name": @"Custom Popup Sample",
                 @"description": @"creating and using custom popups",

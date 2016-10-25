@@ -8,15 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */; };
-		0C1CF0651B134D27001A64AD /* HillshadeSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */; };
 		0C97CC471C09B26000336DF7 /* OfflineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */; };
 		2A319B43187C4F8F0004A3CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B42187C4F8F0004A3CB /* Foundation.framework */; };
 		2A319B45187C4F8F0004A3CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */; };
 		2A319B47187C4F8F0004A3CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B46187C4F8F0004A3CB /* UIKit.framework */; };
-		2AC270581941EFF9000CA859 /* MyMergedRasterTileDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AC270571941EFF9000CA859 /* MyMergedRasterTileDataSource.mm */; };
 		2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F6A18FEDAA6000969F4 /* AppDelegate.m */; };
 		2AD24F7918FEDAA6000969F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F6E18FEDAA6000969F4 /* main.m */; };
-		2AD24F7A18FEDAA6000969F4 /* MyMapEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AD24F7018FEDAA6000969F4 /* MyMapEventListener.mm */; };
 		2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD24F8418FEDB89000969F4 /* Images.xcassets */; };
 		34B4A0362985542DCAC73775 /* libPods-AdvancedMap.Objective-C.UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E918DC6CE207EA525F4C3D2C /* libPods-AdvancedMap.Objective-C.UITests.a */; };
 		4D13E2801A6EB72600FA74DC /* CustomPopupSampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E27F1A6EB72600FA74DC /* CustomPopupSampleController.mm */; };
@@ -29,7 +26,6 @@
 		4D4B1F261D018B8D001C2F30 /* VPPDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F1E1D018B8D001C2F30 /* VPPDropDown.m */; };
 		4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F211D018B8D001C2F30 /* VPPDropDownElement.m */; };
 		4D4B1F601D018C2A001C2F30 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4B1F5F1D018C2A001C2F30 /* libz.tbd */; };
-		4D4B1F621D01C37B001C2F30 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B1F611D01C37B001C2F30 /* MyVectorElementEventListener.mm */; };
 		4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */; };
 		4DAF41AF1AD3C307004E7092 /* GroundOverlaySampleController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */; };
 		4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
@@ -95,19 +91,14 @@
 /* Begin PBXFileReference section */
 		0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageMapController.mm; path = AdvancedMap/PackageMapController.mm; sourceTree = SOURCE_ROOT; };
 		0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackageMapController.h; path = AdvancedMap/PackageMapController.h; sourceTree = SOURCE_ROOT; };
-		0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = HillshadeSampleController.mm; path = AdvancedMap/HillshadeSampleController.mm; sourceTree = SOURCE_ROOT; };
 		0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OfflineRoutingController.mm; path = AdvancedMap/OfflineRoutingController.mm; sourceTree = SOURCE_ROOT; };
 		2A319B3F187C4F8F0004A3CB /* AdvancedMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdvancedMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A319B42187C4F8F0004A3CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2A319B46187C4F8F0004A3CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2AC270561941EFF9000CA859 /* MyMergedRasterTileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMergedRasterTileDataSource.h; path = AdvancedMap/MyMergedRasterTileDataSource.h; sourceTree = SOURCE_ROOT; };
-		2AC270571941EFF9000CA859 /* MyMergedRasterTileDataSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyMergedRasterTileDataSource.mm; path = AdvancedMap/MyMergedRasterTileDataSource.mm; sourceTree = SOURCE_ROOT; };
 		2AD24F6918FEDAA6000969F4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AdvancedMap/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		2AD24F6A18FEDAA6000969F4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AdvancedMap/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		2AD24F6E18FEDAA6000969F4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AdvancedMap/main.m; sourceTree = SOURCE_ROOT; };
-		2AD24F6F18FEDAA6000969F4 /* MyMapEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMapEventListener.h; path = AdvancedMap/MyMapEventListener.h; sourceTree = SOURCE_ROOT; };
-		2AD24F7018FEDAA6000969F4 /* MyMapEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyMapEventListener.mm; path = AdvancedMap/MyMapEventListener.mm; sourceTree = SOURCE_ROOT; };
 		2AD24F7318FEDAA6000969F4 /* AdvancedMap.Objective-C-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AdvancedMap.Objective-C-Info.plist"; path = "AdvancedMap/AdvancedMap.Objective-C-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2AD24F7F18FEDB5C000969F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = AdvancedMap/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		2AD24F8418FEDB89000969F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AdvancedMap/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -128,8 +119,6 @@
 		4D4B1F201D018B8D001C2F30 /* VPPDropDownElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPPDropDownElement.h; path = VPPDropDown/VPPDropDownElement.h; sourceTree = SOURCE_ROOT; };
 		4D4B1F211D018B8D001C2F30 /* VPPDropDownElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPPDropDownElement.m; path = VPPDropDown/VPPDropDownElement.m; sourceTree = SOURCE_ROOT; };
 		4D4B1F5F1D018C2A001C2F30 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		4D4B1F611D01C37B001C2F30 /* MyVectorElementEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyVectorElementEventListener.mm; path = AdvancedMap/MyVectorElementEventListener.mm; sourceTree = SOURCE_ROOT; };
-		4D4B1F631D01C3BB001C2F30 /* MyVectorElementEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyVectorElementEventListener.h; path = AdvancedMap/MyVectorElementEventListener.h; sourceTree = SOURCE_ROOT; };
 		4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageManagerController.mm; path = AdvancedMap/PackageManagerController.mm; sourceTree = SOURCE_ROOT; };
 		4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GroundOverlaySampleController.mm; path = AdvancedMap/GroundOverlaySampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850071A0E718100C5124F /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LauncherListController.mm; path = AdvancedMap/LauncherListController.mm; sourceTree = SOURCE_ROOT; };
@@ -139,7 +128,6 @@
 		4DEB06CF1A10BDB7003D111C /* Overlays2DSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Overlays2DSampleController.mm; path = AdvancedMap/Overlays2DSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06D11A10C103003D111C /* Overlays3DSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Overlays3DSampleController.mm; path = AdvancedMap/Overlays3DSampleController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06D71A10CDC0003D111C /* OfflineVectorMapSampleController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OfflineVectorMapSampleController.mm; path = AdvancedMap/OfflineVectorMapSampleController.mm; sourceTree = SOURCE_ROOT; };
-		4DEB06DE1A10D8B3003D111C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4DEB06DF1A10DF0F003D111C /* LauncherListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LauncherListController.h; path = AdvancedMap/LauncherListController.h; sourceTree = SOURCE_ROOT; };
 		4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredGeoJsonController.mm; path = AdvancedMap/ClusteredGeoJsonController.mm; sourceTree = SOURCE_ROOT; };
 		4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredRandomPointsController.mm; path = AdvancedMap/ClusteredRandomPointsController.mm; sourceTree = SOURCE_ROOT; };
@@ -234,7 +222,6 @@
 				ADA114181DA399FF00481261 /* AdvancedMap.Objective-C.UITests */,
 				2A319B41187C4F8F0004A3CB /* Frameworks */,
 				2A319B40187C4F8F0004A3CB /* Products */,
-				4DEB06DE1A10D8B3003D111C /* README.md */,
 				4DB60ECD1A16614A00A6AF18 /* VPPDropDown */,
 				228777A0AAD6EEE6DCD37725 /* Pods */,
 			);
@@ -267,28 +254,20 @@
 		2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				ADED5EF41D92A30200AB2D13 /* Assets */,
+				AD860A6B1D7DA103005994B2 /* BaseClasses */,
 				ADC7313A1DBFA2A400E1CDCA /* Sections */,
-				4DC42AAD1B622C630022CA0C /* Controllers */,
-				4DEB06D61A10CD88003D111C /* Data Sources */,
-				4DEB06D51A10C94E003D111C /* Listeners */,
-				2AD24F7D18FEDAE0000969F4 /* Supporting Files */,
+				4DEB06DF1A10DF0F003D111C /* LauncherListController.h */,
+				4DC850071A0E718100C5124F /* LauncherListController.mm */,
+				ADED5EF41D92A30200AB2D13 /* Assets */,
+				2AD24F7E18FEDB5C000969F4 /* InfoPlist.strings */,
+				2AD24F6E18FEDAA6000969F4 /* main.m */,
+				2AD24F7318FEDAA6000969F4 /* AdvancedMap.Objective-C-Info.plist */,
 				2AD24F8418FEDB89000969F4 /* Images.xcassets */,
 				2AD24F6918FEDAA6000969F4 /* AppDelegate.h */,
 				2AD24F6A18FEDAA6000969F4 /* AppDelegate.m */,
 			);
 			name = "AdvancedMap.Objective-C";
 			path = AdvancedMap;
-			sourceTree = "<group>";
-		};
-		2AD24F7D18FEDAE0000969F4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2AD24F7E18FEDB5C000969F4 /* InfoPlist.strings */,
-				2AD24F6E18FEDAA6000969F4 /* main.m */,
-				2AD24F7318FEDAA6000969F4 /* AdvancedMap.Objective-C-Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		4DB60ECD1A16614A00A6AF18 /* VPPDropDown */ = {
@@ -308,55 +287,13 @@
 			path = sdk_3d_ios_app;
 			sourceTree = "<group>";
 		};
-		4DC42AAD1B622C630022CA0C /* Controllers */ = {
+		AD860A6B1D7DA103005994B2 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				AD860A6B1D7DA103005994B2 /* Base */,
-				AD860A6C1D7DA117005994B2 /* List */,
+				ADC731491DBFAC6500E1CDCA /* Listeners */,
+				ADC731481DBFAC6000E1CDCA /* Controllers */,
 			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		4DEB06D51A10C94E003D111C /* Listeners */ = {
-			isa = PBXGroup;
-			children = (
-				2AD24F6F18FEDAA6000969F4 /* MyMapEventListener.h */,
-				2AD24F7018FEDAA6000969F4 /* MyMapEventListener.mm */,
-				4D4B1F611D01C37B001C2F30 /* MyVectorElementEventListener.mm */,
-				4D4B1F631D01C3BB001C2F30 /* MyVectorElementEventListener.h */,
-			);
-			name = Listeners;
-			sourceTree = "<group>";
-		};
-		4DEB06D61A10CD88003D111C /* Data Sources */ = {
-			isa = PBXGroup;
-			children = (
-				2AC270561941EFF9000CA859 /* MyMergedRasterTileDataSource.h */,
-				2AC270571941EFF9000CA859 /* MyMergedRasterTileDataSource.mm */,
-			);
-			name = "Data Sources";
-			sourceTree = "<group>";
-		};
-		AD860A6B1D7DA103005994B2 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				4D2BE70A1A52F89C0013ABB3 /* MapSampleBaseController.h */,
-				4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */,
-				4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */,
-				4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */,
-				ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */,
-				ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		AD860A6C1D7DA117005994B2 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				4DEB06DF1A10DF0F003D111C /* LauncherListController.h */,
-				4DC850071A0E718100C5124F /* LauncherListController.mm */,
-			);
-			name = List;
+			name = BaseClasses;
 			sourceTree = "<group>";
 		};
 		ADA114181DA399FF00481261 /* AdvancedMap.Objective-C.UITests */ = {
@@ -420,7 +357,6 @@
 		ADC731411DBFA35000E1CDCA /* OverlayDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				0C1CF0641B134D27001A64AD /* HillshadeSampleController.mm */,
 				4DC850111A0E7DC500C5124F /* CustomRasterDataSourceSampleController.mm */,
 				4DAF41AE1AD3C307004E7092 /* GroundOverlaySampleController.mm */,
 			);
@@ -452,6 +388,26 @@
 				4D13E2841A6EB82600FA74DC /* MyCustomPopupHandler.h */,
 			);
 			name = CustomPopup;
+			sourceTree = "<group>";
+		};
+		ADC731481DBFAC6000E1CDCA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D2BE70A1A52F89C0013ABB3 /* MapSampleBaseController.h */,
+				4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */,
+				4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */,
+				4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		ADC731491DBFAC6500E1CDCA /* Listeners */ = {
+			isa = PBXGroup;
+			children = (
+				ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */,
+				ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */,
+			);
+			name = Listeners;
 			sourceTree = "<group>";
 		};
 		ADED5EF41D92A30200AB2D13 /* Assets */ = {
@@ -710,23 +666,19 @@
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */,
 				4D4B1F261D018B8D001C2F30 /* VPPDropDown.m in Sources */,
-				4D4B1F621D01C37B001C2F30 /* MyVectorElementEventListener.mm in Sources */,
 				4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlaySampleController.mm in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapSampleBaseController.mm in Sources */,
-				2AC270581941EFF9000CA859 /* MyMergedRasterTileDataSource.mm in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceSampleController.mm in Sources */,
 				0C97CC471C09B26000336DF7 /* OfflineRoutingController.mm in Sources */,
 				4DC8500C1A0E77CA00C5124F /* VectorMapSampleBaseController.mm in Sources */,
 				4DEB06D81A10CDC0003D111C /* OfflineVectorMapSampleController.mm in Sources */,
-				0C1CF0651B134D27001A64AD /* HillshadeSampleController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
 				0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupSampleController.mm in Sources */,
 				4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */,
-				2AD24F7A18FEDAA6000969F4 /* MyMapEventListener.mm in Sources */,
 				4DEB06D21A10C103003D111C /* Overlays3DSampleController.mm in Sources */,
 				ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */,
 				2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */,

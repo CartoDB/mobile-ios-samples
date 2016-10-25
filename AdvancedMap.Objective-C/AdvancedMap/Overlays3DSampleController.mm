@@ -1,6 +1,5 @@
 #import "VectorMapSampleBaseController.h"
-#import "MyMapEventListener.h"
-#import "MyVectorElementEventListener.h"
+
 /**
  * A sample demonstrating how to use 3D vector elements:
  * 3D polygon, 3D model (NML) and 3D city (NMLDB)
@@ -69,24 +68,14 @@
         [model setScale:10];
         [vectorDataSource add:model];
     }
-
-    // Create a map event listener
-    MyMapEventListener* mapListener = [[MyMapEventListener alloc] init];
-    [mapListener setMapView:self.mapView vectorDataSource:vectorDataSource];
-    [self.mapView setMapEventListener:mapListener];
-    
-    // Create vector element event listener
-    MyVectorElementEventListener* vectorElementListener = [[MyVectorElementEventListener alloc] init];
-    
-    [vectorElementListener setMapView:self.mapView vectorDataSource:vectorDataSource];
-    
-    for (int i = 0; i < [[self.mapView getLayers] count]; i++) {
-        NTLayer* layer = [[self.mapView getLayers] get:i];
-        if ([layer isKindOfClass:[NTVectorLayer class]]) {
-            NTVectorLayer* vectorLayer = (NTVectorLayer*) layer;
-            [vectorLayer setVectorElementEventListener:vectorElementListener];
-        }
-    }
 }
 
 @end
+
+
+
+
+
+
+
+

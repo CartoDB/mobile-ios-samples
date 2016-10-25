@@ -1,5 +1,4 @@
 #import "VectorMapSampleBaseController.h"
-#import "MyMapEventListener.h"
 
 /*
  * Click on two locations on map and calculate offline route between them

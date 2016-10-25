@@ -11,14 +11,6 @@
 
 @implementation OfflineVectorMapSampleController
 
-- (NTTileDataSource*)createTileDataSource
-{
-	// file-based local offline datasource
-	NSString* fullpathVT = [[NSBundle mainBundle] pathForResource:@"rome_ntvt" ofType:@"mbtiles"];
-	NTTileDataSource* vectorTileDataSource = [[NTMBTilesTileDataSource alloc] initWithMinZoom:0 maxZoom:14 path:fullpathVT];
-	return vectorTileDataSource;
-}
-
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
@@ -29,6 +21,14 @@
 	// Zoom to Rome
 	[self.mapView setFocusPos:[proj fromWgs84:[[NTMapPos alloc] initWithX:12.4807 y: 41.8962]]  durationSeconds:0];
 	[self.mapView setZoom:13 durationSeconds:0];
+}
+
+- (NTTileDataSource*)createTileDataSource
+{
+    // file-based local offline datasource
+    NSString* fullpathVT = [[NSBundle mainBundle] pathForResource:@"rome_ntvt" ofType:@"mbtiles"];
+    NTTileDataSource* vectorTileDataSource = [[NTMBTilesTileDataSource alloc] initWithMinZoom:0 maxZoom:14 path:fullpathVT];
+    return vectorTileDataSource;
 }
 
 @end
