@@ -37,6 +37,7 @@ static NSString* HILLSHADE_RASTER_URL = @"http://tiles.wmflabs.org/hillshading/{
 {
 	[super viewDidLoad];
 	
+    [[self.mapView getLayers]clear];
 	// Set the base projection, that will be used for most MapView, MapEventListener and Options methods
 	NTEPSG3857* proj = [[NTEPSG3857 alloc] init];
 	[[self.mapView getOptions] setBaseProjection:proj];

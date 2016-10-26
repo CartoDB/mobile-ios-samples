@@ -28,6 +28,10 @@
                 @"description": @"Adding ground-level raster overlay",
                 @"controller": @"GroundOverlayController"
                 },
+             @{ @"name": @"WMS Map",
+                @"description": @"WMS service raster on top of the vector base map",
+                @"controller": @"WMSMapController"
+                },
              
              /* Vector Objects */
              @{ @"name": @"Vector objects", @"controller": @"Header" },
@@ -46,7 +50,7 @@
                 @"description": @"Bundle MBTiles file for offline base map",
                 @"controller": @"BundledMBTilesController"
                 },
-             @{ @"name": @"Package Manager Sample",
+             @{ @"name": @"Package Manager",
                 @"description": @"Download offline map packages with OSM",
                 @"controller": @"PackageManagerController"
                 },

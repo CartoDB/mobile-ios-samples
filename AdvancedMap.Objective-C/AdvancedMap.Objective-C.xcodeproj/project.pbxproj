@@ -37,7 +37,8 @@
 		4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C641B62235100AF8E06 /* ClusteredGeoJsonController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */; };
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
-		AD589CE41DC0BDD3004E68B2 /* CaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.m */; };
+		AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */; };
+		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
 		AD7A5D1F1D9ABE0700F5EE4E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */; };
 		ADA1141A1DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */; };
 		ADA114231DA3A24E00481261 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4B1F5F1D018C2A001C2F30 /* libz.tbd */; };
@@ -139,7 +140,8 @@
 		4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredRandomPointsController.mm; path = AdvancedMap/ClusteredRandomPointsController.mm; sourceTree = SOURCE_ROOT; };
 		65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		AD02FEE866BAAE942D33FB01 /* Pods-AdvancedMap.Objective-C.UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; sourceTree = "<group>"; };
-		AD589CE31DC0BDD3004E68B2 /* CaptureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureController.m; sourceTree = "<group>"; };
+		AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureController.mm; sourceTree = "<group>"; };
+		AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSMapController.m; sourceTree = "<group>"; };
 		AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = "<absolute>"; };
 		ADA114171DA399FF00481261 /* AdvancedMap.Objective-C.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AdvancedMap.Objective-C.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedMap_Objective_C_UITests.m; sourceTree = "<group>"; };
@@ -358,7 +360,7 @@
 		ADC7313D1DBFA33100E1CDCA /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				AD589CE31DC0BDD3004E68B2 /* CaptureController.m */,
+				AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */,
 				ADC731471DBFA78D00E1CDCA /* CustomPopup */,
 				4DFC6C6C1B6224D300AF8E06 /* ClusteredRandomPointsController.mm */,
 				0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */,
@@ -398,6 +400,7 @@
 			children = (
 				4DC850111A0E7DC500C5124F /* CustomRasterDataSourceController.mm */,
 				4DAF41AE1AD3C307004E7092 /* GroundOverlayController.mm */,
+				AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */,
 			);
 			name = OverlayDataSource;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */,
 				4DEB06D01A10BDB7003D111C /* Overlays2DController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
+				AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */,
 				4D4B1F261D018B8D001C2F30 /* VPPDropDown.m in Sources */,
 				4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */,
@@ -726,7 +730,7 @@
 				4DEB06D21A10C103003D111C /* Overlays3DController.mm in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,
 				ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */,
-				AD589CE41DC0BDD3004E68B2 /* CaptureController.m in Sources */,
+				AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */,
 				2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
