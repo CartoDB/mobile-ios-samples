@@ -60,6 +60,10 @@
              
             /* Other */
              @{ @"name": @"Other", @"controller": @"Header" },
+             @{ @"name": @"Screencapture",
+                @"description": @"Captures rendered MapView as a Bitmap",
+                @"controller": @"CaptureController"
+                },
              @{ @"name": @"Clustered Random points",
                 @"description": @"Creates 1000 randomly positioned markers on the map",
                 @"controller": @"ClusteredRandomPointsController"
