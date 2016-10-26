@@ -8,7 +8,7 @@
 @interface RendererListener : NTRendererCaptureListener
 
 @property NTMapPos* position;
-@property int* number;
+@property int number;
 
 @property NTMapView* mapView;
 
@@ -68,17 +68,21 @@
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *path = [paths objectAtIndex:0];
-        path = [path stringByAppendingFormat:@"%d", self.number];
+        path = [path stringByAppendingFormat:@"/%d.png", self.number];
         
         NSData* data = UIImagePNGRepresentation(image);
         
-        BOOL *success = [data writeToFile:path atomically:YES];
+        BOOL success = [data writeToFile:path atomically:YES];
+        
+        NSString *result;
         
         if (success) {
-            NSLog([@"Great success! Image saved to " stringByAppendingString:path]);
+            result = [@"Great success! Image saved to " stringByAppendingString:path];
         } else {
-            NSLog([@"Unable to save image to " stringByAppendingString:path]);
+            result = [@"Unable to save image to " stringByAppendingString:path];
         }
+        
+        NSLog(@"%@", result);
     }
 }
 
