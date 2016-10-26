@@ -53,6 +53,10 @@
              
              /* GIS */
              @{ @"name": @"GIS", @"controller": @"Header" },
+             @{ @"name": @"Basic editable overlay",
+                @"description": @"CShows usage of an editable vector layer",
+                @"controller": @"BasicEditableOverlayController"
+                },
              
             /* Other */
              @{ @"name": @"Other", @"controller": @"Header" },
@@ -177,3 +181,15 @@ static NSString* identifier = @"sampleId";
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+

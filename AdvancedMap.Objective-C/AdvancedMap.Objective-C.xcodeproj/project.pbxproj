@@ -46,6 +46,10 @@
 		ADA114271DA3A2D200481261 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B46187C4F8F0004A3CB /* UIKit.framework */; };
 		ADA114281DA3A37600481261 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
 		ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB1488D1DC09C59009A899B /* BaseMapsController.mm */; };
+		ADB148901DC0A5AD009A899B /* BasicEditableOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB1488F1DC0A5AD009A899B /* BasicEditableOverlayController.m */; };
+		ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */; };
+		ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */; };
+		ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148971DC0A708009A899B /* BasicEditEventListener.mm */; };
 		ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
 		ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */; };
@@ -140,6 +144,13 @@
 		ADA1141B1DA399FF00481261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA114211DA3A04F00481261 /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AdvancedMap.Objective-C.a"; path = "../../../../Library/Developer/Xcode/DerivedData/AdvancedMap.Objective-C-eqqmxktzfefcpvcrcnopxenfhpsc/Build/Products/Debug-iphonesimulator/libPods-AdvancedMap.Objective-C.a"; sourceTree = "<group>"; };
 		ADB1488D1DC09C59009A899B /* BaseMapsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseMapsController.mm; sourceTree = "<group>"; };
+		ADB1488F1DC0A5AD009A899B /* BasicEditableOverlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEditableOverlayController.m; sourceTree = "<group>"; };
+		ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorElementSelectEventListener.mm; sourceTree = "<group>"; };
+		ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorElementDeselectEventListener.mm; sourceTree = "<group>"; };
+		ADB148971DC0A708009A899B /* BasicEditEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicEditEventListener.mm; sourceTree = "<group>"; };
+		ADB148991DC0AC33009A899B /* BasicEditEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicEditEventListener.h; sourceTree = "<group>"; };
+		ADB1489A1DC0B073009A899B /* VectorElementDeselectEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorElementDeselectEventListener.h; sourceTree = "<group>"; };
+		ADB1489B1DC0B0BD009A899B /* VectorElementSelectEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorElementSelectEventListener.h; sourceTree = "<group>"; };
 		ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
 		ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
 		ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
@@ -307,6 +318,28 @@
 			path = "AdvancedMap.Objective-C.UITests";
 			sourceTree = "<group>";
 		};
+		ADB148911DC0A6CC009A899B /* BasicEditableOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				ADB1488F1DC0A5AD009A899B /* BasicEditableOverlayController.m */,
+				ADB148921DC0A6D7009A899B /* Listeners */,
+			);
+			name = BasicEditableOverlay;
+			sourceTree = "<group>";
+		};
+		ADB148921DC0A6D7009A899B /* Listeners */ = {
+			isa = PBXGroup;
+			children = (
+				ADB1489B1DC0B0BD009A899B /* VectorElementSelectEventListener.h */,
+				ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */,
+				ADB1489A1DC0B073009A899B /* VectorElementDeselectEventListener.h */,
+				ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */,
+				ADB148991DC0AC33009A899B /* BasicEditEventListener.h */,
+				ADB148971DC0A708009A899B /* BasicEditEventListener.mm */,
+			);
+			name = Listeners;
+			sourceTree = "<group>";
+		};
 		ADC7313A1DBFA2A400E1CDCA /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +385,7 @@
 		ADC731401DBFA34900E1CDCA /* GIS */ = {
 			isa = PBXGroup;
 			children = (
+				ADB148911DC0A6CC009A899B /* BasicEditableOverlay */,
 			);
 			name = GIS;
 			sourceTree = "<group>";
@@ -665,12 +699,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */,
+				ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */,
 				4DEB06D01A10BDB7003D111C /* Overlays2DController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredRandomPointsController.mm in Sources */,
 				4D4B1F261D018B8D001C2F30 /* VPPDropDown.m in Sources */,
 				4DFC6C651B62235100AF8E06 /* ClusteredGeoJsonController.mm in Sources */,
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
+				ADB148901DC0A5AD009A899B /* BasicEditableOverlayController.m in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapSampleBaseController.mm in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
@@ -684,6 +721,7 @@
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */,
 				4DEB06D21A10C103003D111C /* Overlays3DController.mm in Sources */,
+				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,
 				ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */,
 				2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */,
 			);
@@ -816,7 +854,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carto.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.AdvancedMap;
 				PRODUCT_NAME = "AdvancedMap.Objective-C";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -846,7 +884,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.carto.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.AdvancedMap;
 				PRODUCT_NAME = "AdvancedMap.Objective-C";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";

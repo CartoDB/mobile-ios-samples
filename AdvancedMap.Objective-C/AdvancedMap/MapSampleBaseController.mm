@@ -1,3 +1,4 @@
+
 #import "MapSampleBaseController.h"
 
 @implementation MapSampleBaseController
@@ -9,14 +10,14 @@
     
     // The initial step: register your license. This must be done before using MapView!
     // The license string used here is intended only for Carto demos and WILL NOT WORK with other apps!
-    [NTMapView registerLicense:@"XTUN3Q0ZHTWM3K2JKeWdDaGVBUnBTUm9aTlNuY3EwQ2dBaFJxWFZ6anhGOE9RdEpqTTRibVFJZXB3QncwK1E9PQoKcHJvZHVjdHM9c2RrLWlvcy00LioKYnVuZGxlSWRlbnRpZmllcj1jb20uY2FydG8uQWR2YW5jZWRNYXAKd2F0ZXJtYXJrPWRldmVsb3BtZW50CnZhbGlkVW50aWw9MjAxNi0wOC0yMApvbmxpbmVMaWNlbnNlPTEK"];
+    [NTMapView registerLicense:@"XTUMwQ0ZDdVp4Qm1RV2QvTWxCQU1KU3hFL09iV2RwU2NBaFVBbzJhRUFORUxBVlY3cy9HSVY5aENqaWFxZDU4PQoKYXBwVG9rZW49ZmM2YzdhYzktMGUxYi00MTU4LWE2MjktYzBhYThiZGY5ZDgzCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLkFkdmFuY2VkTWFwCm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg=="];
 
-    self.mapView = [[NTMapView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    self.mapView = [[NTMapView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.view = self.mapView;
-  
-    [self.mapView.getOptions setPanningMode:NTPanningMode::NT_PANNING_MODE_STICKY_FINAL];
     
-    [self.mapView.getOptions setWatermarkBitmap:nil];
+    NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    
+    [[self.mapView getLayers] add:layer];
 }
 
 - (void)viewDidLoad
