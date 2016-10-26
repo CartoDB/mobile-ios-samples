@@ -4,11 +4,11 @@
  * A sample demonstrating how to use 3D vector elements:
  * 3D polygon, 3D model (NML) and 3D city (NMLDB)
  */
-@interface Overlays3DSampleController : VectorMapSampleBaseController
+@interface Overlays3DController : VectorMapSampleBaseController
 
 @end
 
-@implementation Overlays3DSampleController
+@implementation Overlays3DController
 
 - (void)viewDidLoad
 {

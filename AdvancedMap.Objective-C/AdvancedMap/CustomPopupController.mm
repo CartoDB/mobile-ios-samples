@@ -7,11 +7,11 @@
  * uniform functionality and look across different platforms. But In some cases
  * more customization is needed and Popup subclassing can be used in that case.
  */
-@interface CustomPopupSampleController : VectorMapSampleBaseController
+@interface CustomPopupController : VectorMapSampleBaseController
 
 @end
 
-@implementation CustomPopupSampleController
+@implementation CustomPopupController
 
 - (void)viewDidLoad
 {

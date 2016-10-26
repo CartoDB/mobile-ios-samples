@@ -7,11 +7,11 @@
  * GDAL-based raster tile data source. This data source is not part of the standard SDK, it
  * is an extra feature provided using GIS-extensions package.
  */
-@interface GroundOverlaySampleController : VectorMapSampleBaseController
+@interface GroundOverlayController : VectorMapSampleBaseController
 
 @end
 
-@implementation GroundOverlaySampleController
+@implementation GroundOverlayController
 
 - (void)viewDidLoad
 {

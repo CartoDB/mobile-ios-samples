@@ -4,11 +4,11 @@
  * A sample demonstrating how to add basic 2D objects to the map:
  * lines, points, polygon with hole, texts and pop-ups.
  */
-@interface Overlays2DSampleController : VectorMapSampleBaseController
+@interface Overlays2DController : VectorMapSampleBaseController
 
 @end
 
-@implementation Overlays2DSampleController
+@implementation Overlays2DController
 
 - (void)viewDidLoad
 {

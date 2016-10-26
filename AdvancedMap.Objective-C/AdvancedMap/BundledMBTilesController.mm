@@ -5,11 +5,11 @@
  * As MBTilesDataSource can be used only with files residing in file system,
  * the assets needs to be copied first to the SDCard.
  */
-@interface OfflineVectorMapSampleController : VectorMapSampleBaseController
+@interface BundledMBTilesController : VectorMapSampleBaseController
 
 @end
 
-@implementation OfflineVectorMapSampleController
+@implementation BundledMBTilesController
 
 - (void)viewDidLoad
 {
