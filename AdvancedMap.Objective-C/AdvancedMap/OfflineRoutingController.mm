@@ -50,6 +50,7 @@
 
 @property OfflineRoutingController* routingController;
 @property NTPackageManager* packageManager;
+
 @end
 
 
@@ -196,15 +197,15 @@
         NTRoutingResult* route;
         @try {
             if (_offlinePackageReady){
-                NSLog(@"using offline routing");
+                [self alert:@"Using offline routing"];
                 route = [_offlineRoutingService calculateRoute:request];
             } else {
-                NSLog(@"using online routing");
+                [self alert:@"Using online routing"];
                 route = [_onlineRoutingService calculateRoute:request];
             }
         }
         @catch (NSException* ex) {
-            NSLog(@"routing failed: %@", [ex reason]);
+            [self alert:[NSString stringWithFormat:@"routing failed: %@", [ex reason]]];
             return;
         }
         
@@ -213,7 +214,7 @@
             NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
             
             if (route == nil){
-                NSLog(@"route error");
+                [self alert:@"route error"];
                 return;
             }
             
@@ -225,7 +226,7 @@
                                    [dateFormatter stringFromDate: [NSDate dateWithTimeIntervalSince1970:[route getTotalTime]]],
                                    duration];
             
-            NSLog(@"%@",routeDesc);
+            [self alert:[NSString stringWithFormat:@"%@",routeDesc]];
             
             // show line
             NTLine* routeLine = [self calculateRouteLine: route];
@@ -314,7 +315,8 @@
     [marker setMetaDataElement:@"desc" element:[[NTVariant alloc] initWithString:desc]];
     [marker setMetaDataElement:@"title" element:[[NTVariant alloc] initWithString:str]];
     
-    NSLog(@"Instruction: %@ (%@)", str, desc);
+    // Do not toast every instruction, uncomment if you wish to see all of them.
+    //[self alert:[NSString stringWithFormat:@"Instruction: %@ (%@)", str, desc]];
     
     return marker;
 }
@@ -440,7 +442,7 @@
         [_packageManager startPackageDownload: package];
     } else if ([status getCurrentAction] == NT_PACKAGE_ACTION_READY) {
         [_routingController setOfflinePackageReady: true];
-        NSLog(@"Routing package %@ downloaded", package);
+        [self.routingController alert:[NSString stringWithFormat:@"Routing package %@ downloaded", package ]];
     }
 }
 

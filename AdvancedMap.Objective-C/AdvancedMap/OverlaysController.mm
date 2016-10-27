@@ -159,7 +159,6 @@
             [vectorLayer setVectorElementEventListener:vectorElementListener];
         }
     }
-    
 }
 
 -(void) addPoint1
