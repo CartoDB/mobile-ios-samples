@@ -7,6 +7,8 @@
 
 @interface RendererListener : NTRendererCaptureListener
 
+@property CaptureController *controller;
+
 @property NTMapPos* position;
 @property int number;
 
@@ -47,6 +49,7 @@
     
     // Initialize renderer
     RendererListener* listener = [[RendererListener alloc] init];
+    listener.controller = self;
     listener.mapView = self.mapView;
     listener.number = 0;
     listener.position = [[NTMapPos alloc]init];
@@ -78,12 +81,20 @@
         
         if (success) {
             result = [@"Great success! Image saved to " stringByAppendingString:path];
+            [self share:data];
         } else {
             result = [@"Unable to save image to " stringByAppendingString:path];
         }
         
-        NSLog(@"%@", result);
+        [self.controller alert:result];
     }
+}
+
+-(void) share:(NSData *)data
+{
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:[NSArray arrayWithObjects:@"I would like to share it.", data, nil] applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[ UIActivityTypeMessage ,UIActivityTypeAssignToContact,UIActivityTypeSaveToCameraRoll];
+    [self.controller presentViewController:activityVC animated:YES completion:nil];
 }
 
 @end
