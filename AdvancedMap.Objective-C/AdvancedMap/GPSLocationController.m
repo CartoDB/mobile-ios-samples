@@ -1,9 +1,9 @@
 
-#import "MapSampleBaseController.h"
+#import "MapBaseController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <UIKit/UIKit.h>
 
-@interface GPSLocationController : MapSampleBaseController <CLLocationManagerDelegate>
+@interface GPSLocationController : MapBaseController <CLLocationManagerDelegate>
 
 @property CLLocationManager *manager;
 

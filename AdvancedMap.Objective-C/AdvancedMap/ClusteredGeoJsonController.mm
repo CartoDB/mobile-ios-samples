@@ -1,7 +1,7 @@
 
-#import "MapSampleBaseController.h"
+#import "MapBaseController.h"
 
-@interface ClusteredGeoJsonController : MapSampleBaseController
+@interface ClusteredGeoJsonController : MapBaseController
 
 @end
 

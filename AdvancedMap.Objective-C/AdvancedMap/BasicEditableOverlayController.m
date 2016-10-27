@@ -1,10 +1,10 @@
 
-#import "MapSampleBaseController.h"
+#import "MapBaseController.h"
 #import "VectorElementSelectEventListener.h"
 #import "VectorElementDeselectEventListener.h"
 #import "BasicEditEventListener.h"
 
-@interface BasicEditableOverlayController : MapSampleBaseController
+@interface BasicEditableOverlayController : MapBaseController
 
 @end
 

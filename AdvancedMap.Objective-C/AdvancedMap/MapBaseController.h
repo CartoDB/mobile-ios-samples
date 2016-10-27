@@ -4,7 +4,7 @@
 /*
  * Base controller for map samples. Includes simple lifecycle management.
  */
-@interface MapSampleBaseController : GLKViewController
+@interface MapBaseController : GLKViewController
 
 @property (nonatomic,strong) NTMapView* mapView;
 

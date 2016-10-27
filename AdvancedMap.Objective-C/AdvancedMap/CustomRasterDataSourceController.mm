@@ -1,4 +1,4 @@
-#import "MapSampleBaseController.h"
+#import "MapBaseController.h"
 
 /*
  * A sample demonstrating how to create and use custom raster tile data source.
@@ -6,7 +6,7 @@
  * create blended tile bitmaps. This can be faster than using two separate raster layers
  * and takes less memory.
  */
-@interface CustomRasterDataSourceController : MapSampleBaseController
+@interface CustomRasterDataSourceController : MapBaseController
 
 @end
 

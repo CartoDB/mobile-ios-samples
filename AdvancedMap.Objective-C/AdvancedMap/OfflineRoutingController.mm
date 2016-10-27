@@ -407,7 +407,7 @@
                                                    style:[styleBuilder buildStyle]
                                                    title:desc
                                                     desc:@""];
-    }else{
+    } else {
         [styleBuilder setLeftColor:[[NTColor alloc] initWithColor:0xFF00AA00]]; // green
 
         NTVectorElement* vectorElement = [clickInfo getVectorElement];

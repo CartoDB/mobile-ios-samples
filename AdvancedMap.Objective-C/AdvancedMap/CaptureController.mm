@@ -1,7 +1,7 @@
 
-#import "MapSampleBaseController.h"
+#import "MapBaseController.h"
 
-@interface CaptureController : MapSampleBaseController
+@interface CaptureController : MapBaseController
 
 @end
 

@@ -18,7 +18,7 @@
 		34B4A0362985542DCAC73775 /* libPods-AdvancedMap.Objective-C.UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E918DC6CE207EA525F4C3D2C /* libPods-AdvancedMap.Objective-C.UITests.a */; };
 		4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E27F1A6EB72600FA74DC /* CustomPopupController.mm */; };
 		4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */; };
-		4D2BE7091A52F86F0013ABB3 /* MapSampleBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */; };
+		4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BE7081A52F86F0013ABB3 /* MapBaseController.mm */; };
 		4D4B1F221D018B8D001C2F30 /* UITableContract.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B1F191D018B8D001C2F30 /* UITableContract.png */; };
 		4D4B1F231D018B8D001C2F30 /* UITableContract@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B1F1A1D018B8D001C2F30 /* UITableContract@2x.png */; };
 		4D4B1F241D018B8D001C2F30 /* UITableExpand.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B1F1B1D018B8D001C2F30 /* UITableExpand.png */; };
@@ -116,8 +116,8 @@
 		4D13E27F1A6EB72600FA74DC /* CustomPopupController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomPopupController.mm; path = AdvancedMap/CustomPopupController.mm; sourceTree = SOURCE_ROOT; };
 		4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MyCustomPopupHandler.mm; path = AdvancedMap/MyCustomPopupHandler.mm; sourceTree = SOURCE_ROOT; };
 		4D13E2841A6EB82600FA74DC /* MyCustomPopupHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomPopupHandler.h; path = AdvancedMap/MyCustomPopupHandler.h; sourceTree = SOURCE_ROOT; };
-		4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MapSampleBaseController.mm; path = AdvancedMap/MapSampleBaseController.mm; sourceTree = SOURCE_ROOT; };
-		4D2BE70A1A52F89C0013ABB3 /* MapSampleBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapSampleBaseController.h; path = AdvancedMap/MapSampleBaseController.h; sourceTree = SOURCE_ROOT; };
+		4D2BE7081A52F86F0013ABB3 /* MapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MapBaseController.mm; path = AdvancedMap/MapBaseController.mm; sourceTree = SOURCE_ROOT; };
+		4D2BE70A1A52F89C0013ABB3 /* MapBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapBaseController.h; path = AdvancedMap/MapBaseController.h; sourceTree = SOURCE_ROOT; };
 		4D4B1F191D018B8D001C2F30 /* UITableContract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UITableContract.png; path = VPPDropDown/UITableContract.png; sourceTree = SOURCE_ROOT; };
 		4D4B1F1A1D018B8D001C2F30 /* UITableContract@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UITableContract@2x.png"; path = "VPPDropDown/UITableContract@2x.png"; sourceTree = SOURCE_ROOT; };
 		4D4B1F1B1D018B8D001C2F30 /* UITableExpand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UITableExpand.png; path = VPPDropDown/UITableExpand.png; sourceTree = SOURCE_ROOT; };
@@ -442,8 +442,8 @@
 		ADC731481DBFAC6000E1CDCA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4D2BE70A1A52F89C0013ABB3 /* MapSampleBaseController.h */,
-				4D2BE7081A52F86F0013ABB3 /* MapSampleBaseController.mm */,
+				4D2BE70A1A52F89C0013ABB3 /* MapBaseController.h */,
+				4D2BE7081A52F86F0013ABB3 /* MapBaseController.mm */,
 				4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */,
 				4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */,
 			);
@@ -723,7 +723,7 @@
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
 				ADB148901DC0A5AD009A899B /* BasicEditableOverlayController.m in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
-				4D2BE7091A52F86F0013ABB3 /* MapSampleBaseController.mm in Sources */,
+				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,

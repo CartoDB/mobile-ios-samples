@@ -20,11 +20,11 @@
              
              /* Overlay Data sources */
              @{ @"name": @"Overlay data sources", @"controller": @"Header" },
-             @{ @"name": @"Custom Raster Data Source Sample",
+             @{ @"name": @"Custom Raster Data Source",
                 @"description": @"Creating and using custom raster tile data source",
                 @"controller": @"CustomRasterDataSourceController"
                 },
-             @{ @"name": @"Ground Overlay Sample",
+             @{ @"name": @"Ground Overlay",
                 @"description": @"Adding ground-level raster overlay",
                 @"controller": @"GroundOverlayController"
                 },
@@ -35,18 +35,18 @@
              
              /* Vector Objects */
              @{ @"name": @"Vector objects", @"controller": @"Header" },
-             @{ @"name": @"2D OverlaysSample",
+             @{ @"name": @"2D Overlays",
                 @"description": @"2D objects: lines, points, polygon with hole, texts and pop-ups",
                 @"controller": @"Overlays2DController"
                 },
-             @{ @"name": @"3D Overlays Sample",
+             @{ @"name": @"3D Overlays",
                 @"description": @"3D vector elements: 3D polygon, 3D model (NML) and 3D city (NMLDB)",
                 @"controller": @"Overlays3DController"
                 },
              
              /* Offline maps */
              @{ @"name": @"Offline maps", @"controller": @"Header" },
-             @{ @"name": @"Bundled MBTiles Sample",
+             @{ @"name": @"Bundled MBTiles",
                 @"description": @"Bundle MBTiles file for offline base map",
                 @"controller": @"BundledMBTilesController"
                 },
@@ -72,7 +72,7 @@
                 @"description": @"Read data from .geojson and show as clusters",
                 @"controller": @"ClusteredGeoJsonController"
                 },
-             @{ @"name": @"Custom Popup Sample",
+             @{ @"name": @"Custom Popup",
                 @"description": @"Creating and using custom popups",
                 @"controller": @"CustomPopupController"
                 },

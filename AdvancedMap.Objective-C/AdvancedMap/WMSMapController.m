@@ -1,8 +1,8 @@
 
-#import "MapSampleBaseController.h"
+#import "MapBaseController.h"
 #import <math.h>
 
-@interface WMSMapController : MapSampleBaseController
+@interface WMSMapController : MapBaseController
 
 @end
 
@@ -97,10 +97,7 @@
     
     NSString *srs = @"EPSG:3857";
     NSString *bbox = [self getBBox:tile];
-    
-    NSLog(@"BASEURL:");
-    NSLog(self.baseUrl);
-    
+
     NSString *url = self.baseUrl;
     
     url = [self append:url key:@"LAYERS" value:self.layer];
@@ -117,10 +114,7 @@
     url = [self append:url key:@"HEIGHT" value:size];
     
     url = [self append:url key:@"BBOX" value:bbox];
-    
-    NSLog(@"URL: ");
-    NSLog(url);
-    
+
     return url;
 }
 

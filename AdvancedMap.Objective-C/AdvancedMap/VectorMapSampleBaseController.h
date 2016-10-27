@@ -1,9 +1,10 @@
-#import "MapSampleBaseController.h"
+
+#import "MapBaseController.h"
 
 /*
  * Base controller for vector map samples. Adds menu with multiple style choices.
  */
-@interface VectorMapSampleBaseController : MapSampleBaseController
+@interface VectorMapSampleBaseController : MapBaseController
 
 - (NSDictionary*)languages;
 - (NSDictionary*)styles;

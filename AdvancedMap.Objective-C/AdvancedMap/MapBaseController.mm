@@ -1,7 +1,7 @@
 
-#import "MapSampleBaseController.h"
+#import "MapBaseController.h"
 
-@implementation MapSampleBaseController
+@implementation MapBaseController
 
 - (void)loadView
 {
