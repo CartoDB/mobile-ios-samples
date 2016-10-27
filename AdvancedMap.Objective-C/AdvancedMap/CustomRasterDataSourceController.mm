@@ -1,4 +1,5 @@
-#import "MapBaseController.h"
+
+#import <CartoMobileSDK/CartoMobileSDK.h>
 
 /*
  * A sample demonstrating how to create and use custom raster tile data source.
@@ -6,7 +7,7 @@
  * create blended tile bitmaps. This can be faster than using two separate raster layers
  * and takes less memory.
  */
-@interface CustomRasterDataSourceController : MapBaseController
+@interface CustomRasterDataSourceController : UIViewController
 
 @end
 
@@ -37,16 +38,16 @@ static NSString* HILLSHADE_RASTER_URL = @"http://tiles.wmflabs.org/hillshading/{
 {
 	[super viewDidLoad];
 	
-    [[self.mapView getLayers]clear];
-	// Set the base projection, that will be used for most MapView, MapEventListener and Options methods
-	NTEPSG3857* proj = [[NTEPSG3857 alloc] init];
-	[[self.mapView getOptions] setBaseProjection:proj];
-
+    NTMapView *mapView = [[NTMapView alloc]init];
+    self.view = mapView;
+    
+    NTProjection *projection = [[mapView getOptions] getBaseProjection];
+    
 	// Set initial location and other parameters, don't animate
     // This is San Francisco for nicer view
-    [self.mapView setFocusPos:[proj fromWgs84:[[NTMapPos alloc] initWithX:-122.427521 y:37.768544]]  durationSeconds:0];
-	[self.mapView setZoom:11 durationSeconds:0];
-	[self.mapView setRotation:0 durationSeconds:0];
+    [mapView setFocusPos:[projection fromWgs84:[[NTMapPos alloc] initWithX:-122.427521 y:37.768544]]  durationSeconds:0];
+	[mapView setZoom:11 durationSeconds:0];
+	[mapView setRotation:0 durationSeconds:0];
 	
 	// Initialize a OSM raster data source
 	NTHTTPTileDataSource* baseRasterTileDataSource = [[NTHTTPTileDataSource alloc] initWithMinZoom:0 maxZoom:24 baseURL:TILED_RASTER_URL];
@@ -64,7 +65,7 @@ static NSString* HILLSHADE_RASTER_URL = @"http://tiles.wmflabs.org/hillshading/{
 	NTRasterTileLayer* rasterLayer = [[NTRasterTileLayer alloc] initWithDataSource:cachedRasterTileDataSource];
 	
 	// Add the previous raster layer to the map
-	[[self.mapView getLayers] add:rasterLayer];
+	[[mapView getLayers] add:rasterLayer];
 }
 
 @end
