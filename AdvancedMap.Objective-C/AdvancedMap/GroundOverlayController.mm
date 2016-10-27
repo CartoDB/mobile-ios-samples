@@ -1,4 +1,4 @@
-#import "VectorMapSampleBaseController.h"
+#import "MapBaseController.h"
 
 /*
  * A sample demonstrating how to add ground level raster overlay. This samples
@@ -7,7 +7,7 @@
  * GDAL-based raster tile data source. This data source is not part of the standard SDK, it
  * is an extra feature provided using GIS-extensions package.
  */
-@interface GroundOverlayController : VectorMapSampleBaseController
+@interface GroundOverlayController : MapBaseController
 
 @end
 

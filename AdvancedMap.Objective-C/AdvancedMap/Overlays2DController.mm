@@ -1,10 +1,10 @@
-#import "VectorMapSampleBaseController.h"
+#import "MapBaseController.h"
 
 /*
  * A sample demonstrating how to add basic 2D objects to the map:
  * lines, points, polygon with hole, texts and pop-ups.
  */
-@interface Overlays2DController : VectorMapSampleBaseController
+@interface Overlays2DController : MapBaseController
 
 @end
 

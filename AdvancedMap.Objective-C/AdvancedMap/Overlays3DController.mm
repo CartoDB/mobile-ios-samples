@@ -1,10 +1,11 @@
-#import "VectorMapSampleBaseController.h"
+
+#import "MapBaseController.h"
 
 /**
  * A sample demonstrating how to use 3D vector elements:
  * 3D polygon, 3D model (NML) and 3D city (NMLDB)
  */
-@interface Overlays3DController : VectorMapSampleBaseController
+@interface Overlays3DController : MapBaseController
 
 @end
 

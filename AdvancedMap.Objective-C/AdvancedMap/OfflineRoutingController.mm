@@ -1,9 +1,10 @@
-#import "VectorMapSampleBaseController.h"
+#import "MapBaseController.h"
 
 /*
  * Click on two locations on map and calculate offline route between them
  */
-@interface OfflineRoutingController : VectorMapSampleBaseController
+@interface OfflineRoutingController : MapBaseController
+
  - (void)setStart:(NTMapPos*)mapPos;
  - (void)setStop:(NTMapPos*)mapPos;
 
