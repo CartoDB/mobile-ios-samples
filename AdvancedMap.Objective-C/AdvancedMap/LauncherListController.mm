@@ -80,6 +80,10 @@
                 @"description": @"Creating and using custom popups",
                 @"controller": @"CustomPopupController"
                 },
+             @{ @"name": @"GPS Location",
+                @"description": @"Shows user GPS location on map",
+                @"controller": @"GPSLocationController"
+                },
              @{ @"name": @"Offline Routing",
                 @"description": @"Offline routing with OpenStreetMap data packages",
                 @"controller": @"OfflineRoutingController"
