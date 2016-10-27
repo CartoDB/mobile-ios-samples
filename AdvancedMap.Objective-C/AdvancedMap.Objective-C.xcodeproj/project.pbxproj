@@ -54,6 +54,7 @@
 		ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */; };
 		ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148971DC0A708009A899B /* BasicEditEventListener.mm */; };
 		ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
+		ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
 		ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */; };
 		ADED5F161D92A31800AB2D13 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */; };
@@ -159,6 +160,8 @@
 		ADB1489B1DC0B0BD009A899B /* VectorElementSelectEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorElementSelectEventListener.h; sourceTree = "<group>"; };
 		ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
 		ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
+		ADCF53BF1DC1FFA8004AD5C3 /* MyVectorElementEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVectorElementEventListener.h; sourceTree = "<group>"; };
+		ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyVectorElementEventListener.mm; sourceTree = "<group>"; };
 		ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
 		ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "../../Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
 		ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "../../Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 			isa = PBXGroup;
 			children = (
 				4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */,
+				ADCF53BF1DC1FFA8004AD5C3 /* MyVectorElementEventListener.h */,
+				ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */,
 			);
 			name = VectorObjects;
 			sourceTree = "<group>";
@@ -730,6 +735,7 @@
 				4DEB06D81A10CDC0003D111C /* BundledMBTilesController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
 				0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */,
+				ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,

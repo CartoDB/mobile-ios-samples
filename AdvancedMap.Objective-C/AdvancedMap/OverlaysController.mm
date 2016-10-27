@@ -1,8 +1,9 @@
+
 #import "MapBaseController.h"
+#import "MyVectorElementEventListener.h"
 
 /*
- * A sample demonstrating how to add basic 2D objects to the map:
- * lines, points, polygon with hole, texts and pop-ups.
+ * A sample demonstrating how to add 2D & 3d objects to the map
  */
 @interface OverlaysController : MapBaseController
 
@@ -144,6 +145,21 @@
     // Set initial location and other parameters, don't animate
     [self.mapView setFocusPos:[self.projection fromWgs84:[[NTMapPos alloc] initWithX:24.650415 y:59.428773]]  durationSeconds:0];
     [self.mapView setZoom:13 durationSeconds:0];
+    
+    // Create vector element event listener
+    MyVectorElementEventListener* vectorElementListener = [[MyVectorElementEventListener alloc] init];
+    [vectorElementListener setMapView:self.mapView vectorDataSource:self.source];
+    
+    for (int i = 0; i < [[self.mapView getLayers] count]; i++) {
+        
+        NTLayer* layer = [[self.mapView getLayers] get:i];
+        
+        if ([layer isKindOfClass:[NTVectorLayer class]]) {
+            NTVectorLayer* vectorLayer = (NTVectorLayer*) layer;
+            [vectorLayer setVectorElementEventListener:vectorElementListener];
+        }
+    }
+    
 }
 
 -(void) addPoint1
