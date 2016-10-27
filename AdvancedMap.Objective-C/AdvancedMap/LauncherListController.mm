@@ -68,12 +68,8 @@
                 @"description": @"Captures rendered MapView as a Bitmap",
                 @"controller": @"CaptureController"
                 },
-             @{ @"name": @"Clustered Random points",
-                @"description": @"Creates 1000 randomly positioned markers on the map",
-                @"controller": @"ClusteredRandomPointsController"
-                },
-             @{ @"name": @"Clustered GeoJSON points",
-                @"description": @"Reading data from GeoJSON and adding clustered Markers to map",
+             @{ @"name": @"Clustered GeoJson",
+                @"description": @"Read data from .geojson and show as clusters",
                 @"controller": @"ClusteredGeoJsonController"
                 },
              @{ @"name": @"Custom Popup Sample",

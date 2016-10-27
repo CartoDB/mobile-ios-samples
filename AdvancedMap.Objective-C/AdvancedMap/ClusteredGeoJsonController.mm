@@ -1,149 +1,120 @@
-#import "VectorMapSampleBaseController.h"
 
-/*
- * A sample demonstrating how to read data from GeoJSON and add clustered Markers to map.
- * Both points from GeoJSON, and cluster markers are shown as Ballons which have dynamic texts
- *
- * NB! Suggestions if you have a lot of points (tens or hundreds of thousands) and clusters:
- * 1. Use Point geometry instead of Balloon or Marker
- * 2. Instead of Balloon with text generate dynamically Point bitmap with cluster numbers
- * 3. Make sure you reuse cluster style bitmaps. Creating new bitmap in rendering has technical cost
- */
-@interface ClusteredGeoJsonController : VectorMapSampleBaseController
+#import "MapSampleBaseController.h"
+
+@interface ClusteredGeoJsonController : MapSampleBaseController
 
 @end
 
-@interface MyClusterElementBuilder : NTClusterElementBuilder
+@interface MyMarkerClusterElementBuilder : NTClusterElementBuilder
 
 @end
-
 
 @implementation ClusteredGeoJsonController
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     // Initialize a local vector data source
-    NTProjection* proj = [[self.mapView getOptions] getBaseProjection];
-    NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
+    NTProjection* projection = [[self.mapView getOptions] getBaseProjection];
+    NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:projection];
+
+    // Create element builder
+    MyMarkerClusterElementBuilder* clusterElementBuilder = [[MyMarkerClusterElementBuilder alloc] init];
     
     // Initialize a vector layer with the previous data source
-    NTClusteredVectorLayer* vectorLayer = [[NTClusteredVectorLayer alloc] initWithDataSource:vectorDataSource clusterElementBuilder: [[MyClusterElementBuilder alloc] init]];
-    
-    [vectorLayer setMinimumClusterDistance: 75]; // default is 100
+    NTClusteredVectorLayer* vectorLayer = [[NTClusteredVectorLayer alloc] initWithDataSource:vectorDataSource clusterElementBuilder:clusterElementBuilder];
     
     // Add the previous vector layer to the map
     [[self.mapView getLayers] add:vectorLayer];
     
-    [self.mapView setZoom:3 durationSeconds:0];
+    // Read .geojson
+    NSString* fullpath = [[NSBundle mainBundle] pathForResource:@"cities15000" ofType:@"geojson"];
+    NSString* json = [NSString stringWithContentsOfFile:fullpath encoding:NSUTF8StringEncoding error:nil];
     
-    // load geoJSON data to the vectorDataSource
-    [self readGeoJsonData: @"capitals_3857" forMapView:self.mapView intoDataSource:vectorDataSource];
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    // Check if the view is closing
-    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [self.mapView setMapEventListener:nil];
-    }
+    // .geojson parsing
+    NTGeoJSONGeometryReader* geoJsonReader = [[NTGeoJSONGeometryReader alloc] init];
+    [geoJsonReader setTargetProjection:projection];
     
-    [super viewWillDisappear:animated];
-}
-
--(void)readGeoJsonData: (NSString*) fileName forMapView:(NTMapView*)mapView intoDataSource: (NTLocalVectorDataSource*) geometryDataSource
-{
-    NTBalloonPopupStyleBuilder* balloonPopupStyleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
+    NTFeatureCollection* features = [geoJsonReader readFeatureCollection:json];
     
-    // load and parse JSON
-    NSString* fullpath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"geojson"];
-    if (fullpath != nil) {
+    // Initialize basic style, as it will later be overridden anyway
+    NTMarkerStyle *style = [[[NTMarkerStyleBuilder alloc] init] buildStyle];
+    
+    for (int i = 0; i < [features getFeatureCount]; i++) {
+        NTPointGeometry *geometry = [[features getFeature:i] getGeometry];
         
-        // read geojson string
-        NSString* json = [NSString stringWithContentsOfFile:fullpath encoding:NSUTF8StringEncoding error:nil];
-
-        // parse geojson
-        NTGeoJSONGeometryReader* geoJsonReader = [[NTGeoJSONGeometryReader alloc] init];
-        NTFeatureCollection* featureCollection = [geoJsonReader readFeatureCollection:json];
-        for (int i = 0; i < [featureCollection getFeatureCount]; i++) {
-            NTGeometry *geom = [[featureCollection getFeature:i] getGeometry];
-            NTVariant *properties = [[featureCollection getFeature:i] getProperties];
-            
-            NSString *name = [[properties getObjectElement:@"Capital"] getString];
-            NSString *country = [[properties getObjectElement:@"Country"] getString];
-            
-            // Create Popup
-            NTBalloonPopup* popup1 = [[NTBalloonPopup alloc] initWithGeometry:geom
-                                                             style:[balloonPopupStyleBuilder buildStyle]
-                                                             title:name
-                                                            desc:country];
-            
-            // add all properties as MetaData, so you can use it with click handling
-            NTStringVector* keys = [properties getObjectKeys];
-            for (int j = 0; j < [keys size]; j++) {
-                NSString* key = [keys get:j];
-                NTVariant* value = [properties getObjectElement:key];
-                [popup1 setMetaDataElement:key element:value];
-            }
-            
-            [geometryDataSource add:popup1];
-            
-        }
-        [NTLog debug:[NSString stringWithFormat:@"Added %d features", [featureCollection getFeatureCount]]];
-    } else {
-        [NTLog error: [NSString stringWithFormat:@"File %@ not found", fileName]];
+        NTMarker *marker = [[NTMarker alloc] initWithGeometry:geometry style:style];
+        [vectorDataSource add:marker];
     }
 }
 
 @end
 
-
-@interface MyClusterElementBuilder ()
+@interface MyMarkerClusterElementBuilder ()
 
 @property NSMutableDictionary* markerStyles;
 
 @end
 
-@implementation MyClusterElementBuilder
+@implementation MyMarkerClusterElementBuilder
 
 -(NTVectorElement*)buildClusterElement:(NTMapPos *)mapPos elements:(NTVectorElementVector *)elements
 {
-    NTBalloonPopupStyleBuilder* balloonPopupStyleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
-    
-    // Create Popup
-    int numElements = (int)[elements size];
-    NSString* title;
-    NSString* desc;
-    NTBalloonPopupStyle* style;
-    
-    // show cluster size as number in Balloon
-    // special case when elements = 1, happens when zooming in
-    if (numElements == 1){
-        
-        // Option A - show cluster during zoom in (temporarily) - a bit more smooth
-        title = @"…";
-        desc = @"";
-        style = [balloonPopupStyleBuilder buildStyle];
-        
-        // Option B - show the only element during zoom in. Deep copy object. A bit less smooth
-        title = [(NTBalloonPopup *)[elements get:0] getTitle];
-        desc = [(NTBalloonPopup *)[elements get:0] getDescription];
-        style =  [(NTBalloonPopup *)[elements get:0] getStyle];
-        
-    } else {
-        title = [NSString stringWithFormat:@"%d",(int)[elements size]];
-        desc = @"";
-        style = [balloonPopupStyleBuilder buildStyle];
+    if (!self.markerStyles) {
+        self.markerStyles = [NSMutableDictionary new];
     }
     
-    NTBalloonPopup* clusterPopup = [[NTBalloonPopup alloc] initWithPos:mapPos
-                                                                 style:style
-                                                                 title:title
-                                                                  desc:desc];
-    // set ClickText to enable zoom in for marker
-    [clusterPopup setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"cluster"]];
-    return clusterPopup;
+    NSString* styleKey = [NSString stringWithFormat:@"%d",(int)[elements size]];
+    
+    NTMarkerStyle* markerStyle = [self.markerStyles valueForKey:styleKey];
+    
+    if ([elements size] == 1) {
+        markerStyle = [(NTMarker*)[elements get:0] getStyle];
+    }
+    
+    if (!markerStyle) {
+        
+        UIImage* image = [UIImage imageNamed:@"marker_black.png"];
+        
+        UIGraphicsBeginImageContext(image.size);
+        [image drawAtPoint:CGPointMake(0, 0)];
+        
+        CGRect rect = CGRectMake(0, 15, image.size.width, image.size.height);
+        [[UIColor blackColor] set];
+        
+        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        [style setAlignment:NSTextAlignmentCenter];
+        
+        NSDictionary *attr = [NSDictionary dictionaryWithObject:style forKey:NSParagraphStyleAttributeName];
+        [styleKey drawInRect:CGRectIntegral(rect) withAttributes:attr];
+        
+        UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        NTBitmap* markerBitmap = [NTBitmapUtils createBitmapFromUIImage:newImage];
+        NTMarkerStyleBuilder* markerStyleBuilder = [[NTMarkerStyleBuilder alloc] init];
+        
+        [markerStyleBuilder setBitmap:markerBitmap];
+        [markerStyleBuilder setSize:30];
+        [markerStyleBuilder setHideIfOverlapped:NO];
+        [markerStyleBuilder setPlacementPriority:-(int)[elements size]];
+        
+        markerStyle = [markerStyleBuilder buildStyle];
+        [self.markerStyles setValue:markerStyle forKey:styleKey];
+    }
+    
+    NTMarker* marker = [[NTMarker alloc] initWithPos:mapPos style:markerStyle];
+    [marker setMetaDataElement:@"elements" element:[[NTVariant alloc] initWithLongVal:[elements size]]];
+    
+    return marker;
 }
 
 @end
+
+
+
+
+
+
+
