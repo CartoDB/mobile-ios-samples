@@ -45,8 +45,8 @@ static NSString* HILLSHADE_RASTER_URL = @"http://tiles.wmflabs.org/hillshading/{
     
 	// Set initial location and other parameters, don't animate
     // This is San Francisco for nicer view
-    [mapView setFocusPos:[projection fromWgs84:[[NTMapPos alloc] initWithX:-122.427521 y:37.768544]]  durationSeconds:0];
-	[mapView setZoom:11 durationSeconds:0];
+    [mapView setFocusPos:[projection fromWgs84:[[NTMapPos alloc] initWithX:-122.4323 y:37.7582]]  durationSeconds:0];
+	[mapView setZoom:13 durationSeconds:0];
 	[mapView setRotation:0 durationSeconds:0];
 	
 	// Initialize a OSM raster data source
