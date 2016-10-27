@@ -8,25 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		56D3805B6D574A38EDE1F477 /* libPods-CartoMap.Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16A7EAAA3730756F1C9433 /* libPods-CartoMap.Swift.a */; };
+		AD1A15061DC22A10009DBC0B /* LauncherListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15051DC22A10009DBC0B /* LauncherListController.swift */; };
+		AD1A15081DC232AB009DBC0B /* FontsVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15071DC232AB009DBC0B /* FontsVisController.swift */; };
+		AD1A150A1DC232B8009DBC0B /* CountriesVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15091DC232B8009DBC0B /* CountriesVisController.swift */; };
+		AD1A150C1DC232C3009DBC0B /* DotsVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A150B1DC232C3009DBC0B /* DotsVisController.swift */; };
+		AD1A150F1DC23597009DBC0B /* carto-fonts.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD1A150E1DC23597009DBC0B /* carto-fonts.zip */; };
 		AD74B8061D941D710007701F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8051D941D710007701F /* AppDelegate.swift */; };
-		AD74B8081D941D710007701F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8071D941D710007701F /* ViewController.swift */; };
+		AD74B8081D941D710007701F /* VisBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8071D941D710007701F /* VisBaseController.swift */; };
 		AD74B80B1D941D710007701F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B8091D941D710007701F /* Main.storyboard */; };
 		AD74B80D1D941D710007701F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80C1D941D710007701F /* Assets.xcassets */; };
 		AD74B8101D941D710007701F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80E1D941D710007701F /* LaunchScreen.storyboard */; };
 		AD74B81D1D941FDD0007701F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B81C1D941FDD0007701F /* GLKit.framework */; };
 		AD74B81F1D941FE30007701F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B81E1D941FE30007701F /* libz.tbd */; };
 		AD74B8211D942CBB0007701F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B8201D942CBB0007701F /* libc++.tbd */; };
-		ADA706A11D95133E008EDDDB /* MapBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA706A01D95133E008EDDDB /* MapBaseController.swift */; };
-		ADA706A31D9515F3008EDDDB /* MyCartoVisBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA706A21D9515F3008EDDDB /* MyCartoVisBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D16A7EAAA3730756F1C9433 /* libPods-CartoMap.Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CartoMap.Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFBB2DAAF19C0E9AD547B7F /* Pods-CartoMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Swift/Pods-CartoMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		95FED7F87425178EDA52091E /* Pods-CartoMap.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Swift/Pods-CartoMap.Swift.release.xcconfig"; sourceTree = "<group>"; };
+		AD1A15051DC22A10009DBC0B /* LauncherListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LauncherListController.swift; sourceTree = "<group>"; };
+		AD1A15071DC232AB009DBC0B /* FontsVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsVisController.swift; sourceTree = "<group>"; };
+		AD1A15091DC232B8009DBC0B /* CountriesVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesVisController.swift; sourceTree = "<group>"; };
+		AD1A150B1DC232C3009DBC0B /* DotsVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotsVisController.swift; sourceTree = "<group>"; };
+		AD1A150E1DC23597009DBC0B /* carto-fonts.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "carto-fonts.zip"; path = "../../Assets/carto-fonts.zip"; sourceTree = "<group>"; };
 		AD74B8021D941D700007701F /* CartoMap.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoMap.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD74B8051D941D710007701F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD74B8071D941D710007701F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD74B8071D941D710007701F /* VisBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisBaseController.swift; sourceTree = "<group>"; };
 		AD74B80A1D941D710007701F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD74B80C1D941D710007701F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD74B80F1D941D710007701F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,8 +43,6 @@
 		AD74B81E1D941FE30007701F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AD74B8201D942CBB0007701F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		ADA7069F1D9512E3008EDDDB /* CartoMap.Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CartoMap.Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		ADA706A01D95133E008EDDDB /* MapBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBaseController.swift; sourceTree = "<group>"; };
-		ADA706A21D9515F3008EDDDB /* MyCartoVisBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartoVisBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,14 @@
 				5D16A7EAAA3730756F1C9433 /* libPods-CartoMap.Swift.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD1A150D1DC2358D009DBC0B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A150E1DC23597009DBC0B /* carto-fonts.zip */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 		AD74B7F91D941D700007701F = {
@@ -86,15 +100,18 @@
 		AD74B8041D941D710007701F /* CartoMap.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				AD1A150D1DC2358D009DBC0B /* Assets */,
 				AD74B8051D941D710007701F /* AppDelegate.swift */,
-				AD74B8071D941D710007701F /* ViewController.swift */,
-				ADA706A01D95133E008EDDDB /* MapBaseController.swift */,
+				AD74B8071D941D710007701F /* VisBaseController.swift */,
 				AD74B8091D941D710007701F /* Main.storyboard */,
 				AD74B80C1D941D710007701F /* Assets.xcassets */,
 				AD74B80E1D941D710007701F /* LaunchScreen.storyboard */,
 				AD74B8111D941D710007701F /* Info.plist */,
 				ADA7069F1D9512E3008EDDDB /* CartoMap.Swift-Bridging-Header.h */,
-				ADA706A21D9515F3008EDDDB /* MyCartoVisBuilder.swift */,
+				AD1A15051DC22A10009DBC0B /* LauncherListController.swift */,
+				AD1A15071DC232AB009DBC0B /* FontsVisController.swift */,
+				AD1A15091DC232B8009DBC0B /* CountriesVisController.swift */,
+				AD1A150B1DC232C3009DBC0B /* DotsVisController.swift */,
 			);
 			path = CartoMap.Swift;
 			sourceTree = "<group>";
@@ -169,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1A150F1DC23597009DBC0B /* carto-fonts.zip in Resources */,
 				AD74B8101D941D710007701F /* LaunchScreen.storyboard in Resources */,
 				AD74B80D1D941D710007701F /* Assets.xcassets in Resources */,
 				AD74B80B1D941D710007701F /* Main.storyboard in Resources */,
@@ -230,10 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD74B8081D941D710007701F /* ViewController.swift in Sources */,
-				ADA706A11D95133E008EDDDB /* MapBaseController.swift in Sources */,
-				ADA706A31D9515F3008EDDDB /* MyCartoVisBuilder.swift in Sources */,
+				AD1A150C1DC232C3009DBC0B /* DotsVisController.swift in Sources */,
+				AD74B8081D941D710007701F /* VisBaseController.swift in Sources */,
+				AD1A15061DC22A10009DBC0B /* LauncherListController.swift in Sources */,
+				AD1A150A1DC232B8009DBC0B /* CountriesVisController.swift in Sources */,
 				AD74B8061D941D710007701F /* AppDelegate.swift in Sources */,
+				AD1A15081DC232AB009DBC0B /* FontsVisController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

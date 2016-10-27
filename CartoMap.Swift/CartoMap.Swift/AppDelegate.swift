@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        //NTMapView.registerLicense(License);
+        NTMapView.registerLicense(License);
         
-        window?.rootViewController = UINavigationController(rootViewController: ViewController());
+        window?.rootViewController = UINavigationController(rootViewController: LauncherListController());
         
         window?.makeKeyAndVisible();
         
