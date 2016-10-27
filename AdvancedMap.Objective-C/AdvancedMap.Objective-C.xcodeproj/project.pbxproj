@@ -31,8 +31,7 @@
 		4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
 		4DC8500C1A0E77CA00C5124F /* VectorMapSampleBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */; };
 		4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850111A0E7DC500C5124F /* CustomRasterDataSourceController.mm */; };
-		4DEB06D01A10BDB7003D111C /* Overlays2DController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06CF1A10BDB7003D111C /* Overlays2DController.mm */; };
-		4DEB06D21A10C103003D111C /* Overlays3DController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D11A10C103003D111C /* Overlays3DController.mm */; };
+		4DEB06D01A10BDB7003D111C /* OverlaysController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */; };
 		4DEB06D81A10CDC0003D111C /* BundledMBTilesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D71A10CDC0003D111C /* BundledMBTilesController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredGeoJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredGeoJsonController.mm */; };
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
@@ -134,8 +133,7 @@
 		4DC8500A1A0E778900C5124F /* VectorMapSampleBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VectorMapSampleBaseController.h; path = AdvancedMap/VectorMapSampleBaseController.h; sourceTree = SOURCE_ROOT; };
 		4DC8500B1A0E77CA00C5124F /* VectorMapSampleBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = VectorMapSampleBaseController.mm; path = AdvancedMap/VectorMapSampleBaseController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850111A0E7DC500C5124F /* CustomRasterDataSourceController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomRasterDataSourceController.mm; path = AdvancedMap/CustomRasterDataSourceController.mm; sourceTree = SOURCE_ROOT; };
-		4DEB06CF1A10BDB7003D111C /* Overlays2DController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Overlays2DController.mm; path = AdvancedMap/Overlays2DController.mm; sourceTree = SOURCE_ROOT; };
-		4DEB06D11A10C103003D111C /* Overlays3DController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Overlays3DController.mm; path = AdvancedMap/Overlays3DController.mm; sourceTree = SOURCE_ROOT; };
+		4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OverlaysController.mm; path = AdvancedMap/OverlaysController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06D71A10CDC0003D111C /* BundledMBTilesController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BundledMBTilesController.mm; path = AdvancedMap/BundledMBTilesController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06DF1A10DF0F003D111C /* LauncherListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LauncherListController.h; path = AdvancedMap/LauncherListController.h; sourceTree = SOURCE_ROOT; };
 		4DFC6C6C1B6224D300AF8E06 /* ClusteredGeoJsonController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredGeoJsonController.mm; path = AdvancedMap/ClusteredGeoJsonController.mm; sourceTree = SOURCE_ROOT; };
@@ -387,8 +385,7 @@
 		ADC7313F1DBFA34000E1CDCA /* VectorObjects */ = {
 			isa = PBXGroup;
 			children = (
-				4DEB06CF1A10BDB7003D111C /* Overlays2DController.mm */,
-				4DEB06D11A10C103003D111C /* Overlays3DController.mm */,
+				4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */,
 			);
 			name = VectorObjects;
 			sourceTree = "<group>";
@@ -715,7 +712,7 @@
 			files = (
 				ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */,
 				ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */,
-				4DEB06D01A10BDB7003D111C /* Overlays2DController.mm in Sources */,
+				4DEB06D01A10BDB7003D111C /* OverlaysController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
 				AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredGeoJsonController.mm in Sources */,
@@ -735,7 +732,6 @@
 				0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */,
-				4DEB06D21A10C103003D111C /* Overlays3DController.mm in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,
 				ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */,
 				AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */,

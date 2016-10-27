@@ -35,13 +35,9 @@
              
              /* Vector Objects */
              @{ @"name": @"Vector objects", @"controller": @"Header" },
-             @{ @"name": @"2D Overlays",
-                @"description": @"2D objects: lines, points, polygon with hole, texts and pop-ups",
-                @"controller": @"Overlays2DController"
-                },
-             @{ @"name": @"3D Overlays",
-                @"description": @"3D vector elements: 3D polygon, 3D model (NML) and 3D city (NMLDB)",
-                @"controller": @"Overlays3DController"
+             @{ @"name": @"Overlays",
+                @"description": @"2D & 3D objects: lines, points, polygons, texts, pop-ups, 3D models",
+                @"controller": @"OverlaysController"
                 },
              
              /* Offline maps */
