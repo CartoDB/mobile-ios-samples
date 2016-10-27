@@ -1,8 +1,7 @@
 
-#import "VectorMapBaseController.h"
-#import "MyVectorTileListener.h"
+#import "MapBaseController.h"
 
-@interface NamedMapController : VectorMapBaseController
+@interface NamedMapController : MapBaseController
 
 @property NTVectorLayer* vectorLayer;
 
@@ -70,12 +69,8 @@
         self.vectorLayer = [[NTVectorLayer alloc] initWithDataSource:vectorDataSource];
         [[self.mapView getLayers] add:self.vectorLayer];
     }
-    
-    MyVectorTileListener* myEventListener = [[MyVectorTileListener alloc] init];
-    myEventListener.vectorLayer = self.vectorLayer;
-    [layerOver setVectorTileEventListener:myEventListener];
-    
 }
+
 @end
 
 

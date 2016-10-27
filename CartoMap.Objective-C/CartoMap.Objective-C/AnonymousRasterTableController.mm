@@ -1,7 +1,7 @@
 
-#import "VectorMapBaseController.h"
+#import "MapBaseController.h"
 
-@interface CartoRasterTileController : VectorMapBaseController
+@interface AnonymousRasterTableController : MapBaseController
 
 - (NSString*)getConfig;
 
@@ -10,7 +10,7 @@
 
 @end
 
-@implementation CartoRasterTileController
+@implementation AnonymousRasterTableController
 
 - (void)viewDidLoad
 {

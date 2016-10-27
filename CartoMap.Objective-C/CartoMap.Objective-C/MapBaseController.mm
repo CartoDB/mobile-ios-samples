@@ -7,10 +7,6 @@
 {
     self.mapView = [[NTMapView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.view = self.mapView;
-    
-    [self.mapView.getOptions setPanningMode:NTPanningMode::NT_PANNING_MODE_STICKY_FINAL];
-    
-    [self.mapView.getOptions setWatermarkBitmap:nil];
 }
 
 - (void)viewDidLoad

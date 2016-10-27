@@ -1,6 +1,9 @@
 
 #import "LauncherListController.h"
 
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define IsHeader(sample) [[sample objectForKey:@"controller"] rangeOfString:@"Header"].location != NSNotFound
+
 @interface LauncherListController ()
 @end
 
@@ -9,26 +12,65 @@
 -(NSArray*) samples
 {
     return @[
-             @{ @"name": @"VisJson",
-                @"description": @"Using high-level Carto VisJson API",
-                @"controller": @"CartoVisJsonController"
-                },
-             @{ @"name": @"Raster Tile",
-                @"description": @"How to use Carto PostGIS Raster data, as tiled raster layer",
-                @"controller": @"CartoRasterTileController"
-                },
-             @{ @"name": @"SQL Map",
-                @"description": @"Custom vector data source making queries to http://docs.cartodb.com/cartodb-platform/sql-api/",
-                @"controller": @"CartoSQLController"
-                },
-             @{ @"name": @"UTF Grid",
-                @"description": @"A sample demonstrating how to use Carto Maps API with Raster tiles and UTFGrid",
-                @"controller": @"CartoUTFGridController"
-                },
-             @{ @"name": @"Torque Map",
-                @"description": @"How to use Carto Torque tiles with CartoCSS styling",
-                @"controller": @"CartoTorqueController"
-                },
+             /* CARTO.js API */
+             @{ @"name": @"CARTO.js API", @"controller": @"Header" },
+             @{
+                 @"name": @"Countries Vis",
+                 @"description": @"Vis displaying countries in different colors",
+                 @"controller": @"CountriesVisController"
+                 },
+             @{
+                 @"name": @"Dots vis",
+                 @"description": @"Vis showing dots on the map",
+                 @"controller": @"DotsVisController"
+                 },
+             @{
+                 @"name": @"Fonts Vis",
+                 @"description": @"Vis displaying text on the map",
+                 @"controller": @"FontsVisController"
+                 },
+             
+             /* Import API */
+             @{ @"name": @"Import APII", @"controller": @"Header" },
+             @{
+                 @"name": @"Tile Packager",
+                 @"description": @"Packaging tiles (?) //TODO",
+                 @"controller": @"TilePackagerController"
+                 },
+             
+             /* Maps API */
+             @{ @"name": @"Maps API", @"controller": @"Header" },
+             @{
+                 @"name": @"Anonymous Raster Tile",
+                 @"description": @"Using Carto PostGIS Raster data",
+                 @"controller": @"AnonymousRasterTableController"
+                 },
+             @{
+                 @"name": @"Anonymous Vector Tile",
+                 @"description": @"Usage of Carto Maps API with vector tiles",
+                 @"controller": @"AnonymousVectorTableController"
+                 },
+             @{
+                 @"name": @"Named Map",
+                 @"description": @"CARTO data as vector tiles from a named map",
+                 @"controller": @"NamedMapController"
+                 },
+             
+             /* SQL API */
+             @{ @"name": @"SQL API", @"controller": @"Header" },
+             @{
+                 @"name": @"SQL Service",
+                 @"description": @"Displays cities on the map via SQL query",
+                 @"controller": @"SQLServiceController"
+                 },
+             
+             /* Torque API */
+             @{ @"name": @"Torque API", @"controller": @"Header" },
+             @{
+                 @"name": @"Carto Torque Map",
+                 @"description": @"Torque tiles of WWII ship movement",
+                 @"controller": @"TorqueShipController"
+                 },
              ];
 }
 
@@ -58,13 +100,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    // Launch selected sample, use basic reflection to convert class name to class instance
     NSDictionary* sample = [[self samples] objectAtIndex:indexPath.row];
-    UIViewController* subViewController = [[NSClassFromString([sample objectForKey:@"controller"]) alloc] init];
     
-    [subViewController setTitle: [sample objectForKey:@"name"]];
+    if (IsHeader(sample)) {
+        // Return if clicked on header, they're not supposed to be interactive
+        return;
+    }
     
-    [self.navigationController pushViewController: subViewController animated:YES];
+    NSString* controllerString = [sample objectForKey:@"controller"];
+    
+    // Launch selected sample, use basic reflection to convert class name to class instance
+    UIViewController* controller = [[NSClassFromString(controllerString) alloc] init];
+    [controller setTitle: [sample objectForKey:@"name"]];
+    [self.navigationController pushViewController: controller animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath*)indexPath
@@ -84,27 +132,45 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary* sample = [[self samples] objectAtIndex:indexPath.row];
+    
+    if (IsHeader(sample)) {
+        return 40;
+    }
+    
     return 70;
 }
 
+static NSString* identifier = @"sampleId";
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    static NSString* cellIdentifier = @"sampleId";
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:cellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:identifier];
+        cell.detailTextLabel.numberOfLines = 0;
+        [cell.detailTextLabel setTextColor:[UIColor darkGrayColor]];
     }
     
     NSDictionary* sample = [[self samples] objectAtIndex:indexPath.row];
+    
     cell.textLabel.text = [sample objectForKey:@"name"];
     cell.detailTextLabel.text = [sample objectForKey:@"description"];
-    cell.detailTextLabel.numberOfLines = 0;
+    
+    if (IsHeader(sample)) {
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [cell setBackgroundColor:RGB(240, 240, 240)];
+        [cell setAccessibilityIdentifier:@"MapListHeader"];
+    } else {
+        [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+        [cell setBackgroundColor:RGB(255, 255, 255)];
+        [cell setAccessibilityIdentifier:@"MapListCell"];
+    }
     
     return cell;
 }
 
 @end
-
 
 

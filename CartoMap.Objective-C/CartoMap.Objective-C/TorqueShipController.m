@@ -1,7 +1,7 @@
 
-#import "VectorMapBaseController.h"
+#import "MapBaseController.h"
 
-@interface CartoTorqueController : VectorMapBaseController
+@interface TorqueShipController : MapBaseController
 
 @property NTTorqueTileDecoder* decoder;
 @property NTTorqueTileLayer* tileLayer;
@@ -10,7 +10,7 @@
 
 @end
 
-@implementation CartoTorqueController
+@implementation TorqueShipController
 
 -(void) viewDidLoad
 {

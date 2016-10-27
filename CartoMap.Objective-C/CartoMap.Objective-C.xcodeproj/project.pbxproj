@@ -9,31 +9,25 @@
 /* Begin PBXBuildFile section */
 		0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */; };
 		0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */ = {isa = PBXBuildFile; fileRef = 0CC811B01DAD0607005A5C4F /* cartocss.css */; };
-		0CC811B41DB636D9005A5C4F /* MyVectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CC811B31DB636D8005A5C4F /* MyVectorTileListener.mm */; };
 		7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */; };
-		AD860A6E1D7DB068005994B2 /* CartoUTFGridController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */; };
+		AD1A15171DC24599009DBC0B /* CountriesVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15161DC24599009DBC0B /* CountriesVisController.m */; };
+		AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15181DC245A5009DBC0B /* DotsVisController.m */; };
+		AD1A151B1DC245B1009DBC0B /* FontsVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151A1DC245B1009DBC0B /* FontsVisController.m */; };
+		AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */; };
+		AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151F1DC24933009DBC0B /* SQLServiceController.m */; };
+		AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
 		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
 		ADBFDA7B1D787494003DCBC9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7A1D787494003DCBC9 /* GLKit.framework */; };
 		ADBFDA7D1D7874B8003DCBC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */; };
-		ADBFDAA21D788082003DCBC9 /* UITableContract.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA981D788082003DCBC9 /* UITableContract.png */; };
-		ADBFDAA31D788082003DCBC9 /* UITableContract@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */; };
-		ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA9A1D788082003DCBC9 /* UITableExpand.png */; };
-		ADBFDAA51D788082003DCBC9 /* UITableExpand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADBFDA9B1D788082003DCBC9 /* UITableExpand@2x.png */; };
-		ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA9D1D788082003DCBC9 /* VPPDropDown.m */; };
-		ADBFDAA71D788082003DCBC9 /* VPPDropDownElement.m in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDAA01D788082003DCBC9 /* VPPDropDownElement.m */; };
-		ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */; };
+		ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */; };
 		ADC28F761D782FB300796134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F751D782FB300796134 /* main.m */; };
 		ADC28F791D782FB300796134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F781D782FB300796134 /* AppDelegate.m */; };
 		ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F7D1D782FB300796134 /* Main.storyboard */; };
 		ADC28F811D782FB300796134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F801D782FB300796134 /* Assets.xcassets */; };
 		ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F821D782FB300796134 /* LaunchScreen.storyboard */; };
-		ADC2B2F41D795FFE00841945 /* MyCartoVisBuilder.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B2F31D795FFE00841945 /* MyCartoVisBuilder.mm */; };
-		ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */; };
-		ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3351D79673200841945 /* CartoRasterTileController.mm */; };
-		ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3371D79678900841945 /* VectorMapBaseController.mm */; };
-		ADC2B3571D79ABDB00841945 /* CartoSQLController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */; };
+		ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3351D79673200841945 /* AnonymousRasterTableController.mm */; };
 		ADCA45451D9293C600814350 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45261D9293C600814350 /* 852-map-toolbar.png */; };
 		ADCA45461D9293C600814350 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45271D9293C600814350 /* 852-map-toolbar@2x.png */; };
 		ADCA45471D9293C600814350 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45281D9293C600814350 /* 852-map-toolbar@3x.png */; };
@@ -64,7 +58,7 @@
 		ADCA45601D9293C600814350 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45411D9293C600814350 /* nutiteq-dark.zip */; };
 		ADCA45611D9293C600814350 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45421D9293C600814350 /* positron.zip */; };
 		ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */; };
-		ADD8BEBF1D7EAB7400E4B1A8 /* CartoTorqueController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */; };
+		ADD8BEBF1D7EAB7400E4B1A8 /* TorqueShipController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8BEBE1D7EAB7400E4B1A8 /* TorqueShipController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,29 +81,24 @@
 /* Begin PBXFileReference section */
 		0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NamedMapController.m; sourceTree = "<group>"; };
 		0CC811B01DAD0607005A5C4F /* cartocss.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = cartocss.css; sourceTree = "<group>"; };
-		0CC811B21DB636D8005A5C4F /* MyVectorTileListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVectorTileListener.h; sourceTree = "<group>"; };
-		0CC811B31DB636D8005A5C4F /* MyVectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyVectorTileListener.mm; sourceTree = "<group>"; };
 		3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CartoMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956079C5E02A95EC51535A0 /* Pods-CartoMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
-		AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoUTFGridController.mm; sourceTree = "<group>"; };
+		AD1A15161DC24599009DBC0B /* CountriesVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesVisController.m; sourceTree = "<group>"; };
+		AD1A15181DC245A5009DBC0B /* DotsVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotsVisController.m; sourceTree = "<group>"; };
+		AD1A151A1DC245B1009DBC0B /* FontsVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontsVisController.m; sourceTree = "<group>"; };
+		AD1A151C1DC245FE009DBC0B /* BaseVisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVisController.h; sourceTree = "<group>"; };
+		AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilePackagerController.m; sourceTree = "<group>"; };
+		AD1A151F1DC24933009DBC0B /* SQLServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLServiceController.m; sourceTree = "<group>"; };
+		AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnonymousVectorTableController.m; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
 		ADBFDA741D786F39003DCBC9 /* LauncherListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherListController.h; sourceTree = "<group>"; };
-		ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoVisJsonController.mm; sourceTree = "<group>"; };
+		ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseVisController.mm; sourceTree = "<group>"; };
 		ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapBaseController.mm; sourceTree = "<group>"; };
 		ADBFDA7A1D787494003DCBC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapBaseController.h; sourceTree = "<group>"; };
-		ADBFDA981D788082003DCBC9 /* UITableContract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UITableContract.png; path = VPPDropDown/UITableContract.png; sourceTree = SOURCE_ROOT; };
-		ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UITableContract@2x.png"; path = "VPPDropDown/UITableContract@2x.png"; sourceTree = SOURCE_ROOT; };
-		ADBFDA9A1D788082003DCBC9 /* UITableExpand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UITableExpand.png; path = VPPDropDown/UITableExpand.png; sourceTree = SOURCE_ROOT; };
-		ADBFDA9B1D788082003DCBC9 /* UITableExpand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UITableExpand@2x.png"; path = "VPPDropDown/UITableExpand@2x.png"; sourceTree = SOURCE_ROOT; };
-		ADBFDA9C1D788082003DCBC9 /* VPPDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPPDropDown.h; path = VPPDropDown/VPPDropDown.h; sourceTree = SOURCE_ROOT; };
-		ADBFDA9D1D788082003DCBC9 /* VPPDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPPDropDown.m; path = VPPDropDown/VPPDropDown.m; sourceTree = SOURCE_ROOT; };
-		ADBFDA9E1D788082003DCBC9 /* VPPDropDownDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPPDropDownDelegate.h; path = VPPDropDown/VPPDropDownDelegate.h; sourceTree = SOURCE_ROOT; };
-		ADBFDA9F1D788082003DCBC9 /* VPPDropDownElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPPDropDownElement.h; path = VPPDropDown/VPPDropDownElement.h; sourceTree = SOURCE_ROOT; };
-		ADBFDAA01D788082003DCBC9 /* VPPDropDownElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPPDropDownElement.m; path = VPPDropDown/VPPDropDownElement.m; sourceTree = SOURCE_ROOT; };
 		ADC28F711D782FB300796134 /* CartoMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CartoMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC28F751D782FB300796134 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADC28F771D782FB300796134 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,14 +109,7 @@
 		ADC28F851D782FB300796134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADC28F8A1D782FB400796134 /* CartoMap.Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CartoMap.Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC28F951D782FB400796134 /* CartoMap.Objective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CartoMap.Objective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADC2B2F31D795FFE00841945 /* MyCartoVisBuilder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCartoVisBuilder.mm; sourceTree = "<group>"; };
-		ADC2B2F51D79601100841945 /* MyCartoVisBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCartoVisBuilder.h; sourceTree = "<group>"; };
-		ADC2B2F71D79605D00841945 /* MyUTFGridEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUTFGridEventListener.h; sourceTree = "<group>"; };
-		ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyUTFGridEventListener.mm; sourceTree = "<group>"; };
-		ADC2B3351D79673200841945 /* CartoRasterTileController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoRasterTileController.mm; sourceTree = "<group>"; };
-		ADC2B3371D79678900841945 /* VectorMapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorMapBaseController.mm; sourceTree = "<group>"; };
-		ADC2B3391D7967A100841945 /* VectorMapBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorMapBaseController.h; sourceTree = "<group>"; };
-		ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CartoSQLController.mm; sourceTree = "<group>"; };
+		ADC2B3351D79673200841945 /* AnonymousRasterTableController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AnonymousRasterTableController.mm; sourceTree = "<group>"; };
 		ADCA45261D9293C600814350 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
 		ADCA45271D9293C600814350 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "../../Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
 		ADCA45281D9293C600814350 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "../../Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
@@ -158,7 +140,7 @@
 		ADCA45411D9293C600814350 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADCA45421D9293C600814350 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
 		ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
-		ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartoTorqueController.m; sourceTree = "<group>"; };
+		ADD8BEBE1D7EAB7400E4B1A8 /* TorqueShipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueShipController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,54 +189,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ADBFDA751D787027003DCBC9 /* Map */ = {
+		AD1A15101DC242D1009DBC0B /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				ADBFDA761D78705E003DCBC9 /* CartoVisJsonController.mm */,
-				ADC2B3351D79673200841945 /* CartoRasterTileController.mm */,
+				AD1A15111DC242E6009DBC0B /* CARTO.js API */,
+				AD1A15121DC242F1009DBC0B /* Import API */,
+				AD1A15151DC24307009DBC0B /* Maps API */,
+				AD1A15141DC24301009DBC0B /* SQL API */,
+				AD1A15131DC242FB009DBC0B /* Torque API */,
+			);
+			name = Sections;
+			sourceTree = "<group>";
+		};
+		AD1A15111DC242E6009DBC0B /* CARTO.js API */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A151C1DC245FE009DBC0B /* BaseVisController.h */,
+				ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */,
+				AD1A15161DC24599009DBC0B /* CountriesVisController.m */,
+				AD1A15181DC245A5009DBC0B /* DotsVisController.m */,
+				AD1A151A1DC245B1009DBC0B /* FontsVisController.m */,
+			);
+			name = "CARTO.js API";
+			sourceTree = "<group>";
+		};
+		AD1A15121DC242F1009DBC0B /* Import API */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */,
+			);
+			name = "Import API";
+			sourceTree = "<group>";
+		};
+		AD1A15131DC242FB009DBC0B /* Torque API */ = {
+			isa = PBXGroup;
+			children = (
+				ADD8BEBE1D7EAB7400E4B1A8 /* TorqueShipController.m */,
+			);
+			name = "Torque API";
+			sourceTree = "<group>";
+		};
+		AD1A15141DC24301009DBC0B /* SQL API */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A151F1DC24933009DBC0B /* SQLServiceController.m */,
+			);
+			name = "SQL API";
+			sourceTree = "<group>";
+		};
+		AD1A15151DC24307009DBC0B /* Maps API */ = {
+			isa = PBXGroup;
+			children = (
+				ADC2B3351D79673200841945 /* AnonymousRasterTableController.mm */,
+				AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */,
 				0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */,
-				ADC2B3561D79ABDB00841945 /* CartoSQLController.mm */,
-				AD860A6D1D7DB068005994B2 /* CartoUTFGridController.mm */,
-				ADD8BEBE1D7EAB7400E4B1A8 /* CartoTorqueController.m */,
 			);
-			name = Map;
-			sourceTree = "<group>";
-		};
-		ADBFDA771D7873D0003DCBC9 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
-				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
-				ADC2B3391D7967A100841945 /* VectorMapBaseController.h */,
-				ADC2B3371D79678900841945 /* VectorMapBaseController.mm */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		ADBFDA861D787E78003DCBC9 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				ADBFDA741D786F39003DCBC9 /* LauncherListController.h */,
-				ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */,
-			);
-			name = List;
-			sourceTree = "<group>";
-		};
-		ADBFDA871D787F9C003DCBC9 /* Dropdown */ = {
-			isa = PBXGroup;
-			children = (
-				ADBFDA981D788082003DCBC9 /* UITableContract.png */,
-				ADBFDA991D788082003DCBC9 /* UITableContract@2x.png */,
-				ADBFDA9A1D788082003DCBC9 /* UITableExpand.png */,
-				ADBFDA9B1D788082003DCBC9 /* UITableExpand@2x.png */,
-				ADBFDA9C1D788082003DCBC9 /* VPPDropDown.h */,
-				ADBFDA9D1D788082003DCBC9 /* VPPDropDown.m */,
-				ADBFDA9E1D788082003DCBC9 /* VPPDropDownDelegate.h */,
-				ADBFDA9F1D788082003DCBC9 /* VPPDropDownElement.h */,
-				ADBFDAA01D788082003DCBC9 /* VPPDropDownElement.m */,
-			);
-			name = Dropdown;
-			path = ..;
+			name = "Maps API";
 			sourceTree = "<group>";
 		};
 		ADC28F681D782FB300796134 = {
@@ -283,13 +273,12 @@
 		ADC28F731D782FB300796134 /* CartoMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				ADBFDA741D786F39003DCBC9 /* LauncherListController.h */,
+				ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */,
+				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
+				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
+				AD1A15101DC242D1009DBC0B /* Sections */,
 				ADC2B2FA1D79651C00841945 /* Assets */,
-				ADC2B2F61D79603800841945 /* Builder */,
-				ADC2B2F21D795FD800841945 /* Listener */,
-				ADBFDA871D787F9C003DCBC9 /* Dropdown */,
-				ADBFDA861D787E78003DCBC9 /* List */,
-				ADBFDA771D7873D0003DCBC9 /* Base */,
-				ADBFDA751D787027003DCBC9 /* Map */,
 				ADC28F771D782FB300796134 /* AppDelegate.h */,
 				ADC28F781D782FB300796134 /* AppDelegate.m */,
 				ADC28F7D1D782FB300796134 /* Main.storyboard */,
@@ -307,26 +296,6 @@
 				ADC28F751D782FB300796134 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		ADC2B2F21D795FD800841945 /* Listener */ = {
-			isa = PBXGroup;
-			children = (
-				0CC811B21DB636D8005A5C4F /* MyVectorTileListener.h */,
-				0CC811B31DB636D8005A5C4F /* MyVectorTileListener.mm */,
-				ADC2B2F71D79605D00841945 /* MyUTFGridEventListener.h */,
-				ADC2B2F81D79606700841945 /* MyUTFGridEventListener.mm */,
-			);
-			name = Listener;
-			sourceTree = "<group>";
-		};
-		ADC2B2F61D79603800841945 /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-				ADC2B2F51D79601100841945 /* MyCartoVisBuilder.h */,
-				ADC2B2F31D795FFE00841945 /* MyCartoVisBuilder.mm */,
-			);
-			name = Builder;
 			sourceTree = "<group>";
 		};
 		ADC2B2FA1D79651C00841945 /* Assets */ = {
@@ -492,11 +461,8 @@
 				ADCA454F1D9293C600814350 /* direction_up.png in Resources */,
 				ADCA45511D9293C600814350 /* direction_upthenright.png in Resources */,
 				ADCA455E1D9293C600814350 /* nutibright-contourstyle.zip in Resources */,
-				ADBFDAA51D788082003DCBC9 /* UITableExpand@2x.png in Resources */,
-				ADBFDAA31D788082003DCBC9 /* UITableContract@2x.png in Resources */,
 				ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */,
 				ADCA45561D9293C600814350 /* looseleaf.zip in Resources */,
-				ADBFDAA41D788082003DCBC9 /* UITableExpand.png in Resources */,
 				ADC28F811D782FB300796134 /* Assets.xcassets in Resources */,
 				0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */,
 				ADCA454C1D9293C600814350 /* carto-fonts.zip in Resources */,
@@ -508,7 +474,6 @@
 				ADCA455F1D9293C600814350 /* nutibright-v3.zip in Resources */,
 				ADCA45491D9293C600814350 /* arrow@2x.png in Resources */,
 				ADCA45461D9293C600814350 /* 852-map-toolbar@2x.png in Resources */,
-				ADBFDAA21D788082003DCBC9 /* UITableContract.png in Resources */,
 				ADCA455B1D9293C600814350 /* menu.png in Resources */,
 				ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */,
 				ADCA454B1D9293C600814350 /* capitals_3857.geojson in Resources */,
@@ -600,21 +565,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC2B3571D79ABDB00841945 /* CartoSQLController.mm in Sources */,
-				ADBFDAA71D788082003DCBC9 /* VPPDropDownElement.m in Sources */,
+				AD1A151B1DC245B1009DBC0B /* FontsVisController.m in Sources */,
 				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
-				ADD8BEBF1D7EAB7400E4B1A8 /* CartoTorqueController.m in Sources */,
-				ADBFDAA81D788127003DCBC9 /* CartoVisJsonController.mm in Sources */,
+				ADD8BEBF1D7EAB7400E4B1A8 /* TorqueShipController.m in Sources */,
+				AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */,
+				ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
-				0CC811B41DB636D9005A5C4F /* MyVectorTileListener.mm in Sources */,
+				AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */,
+				AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */,
+				AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */,
 				0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */,
-				ADC2B3361D79673200841945 /* CartoRasterTileController.mm in Sources */,
-				ADC2B2F91D79606700841945 /* MyUTFGridEventListener.mm in Sources */,
-				ADC2B2F41D795FFE00841945 /* MyCartoVisBuilder.mm in Sources */,
+				ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
-				AD860A6E1D7DB068005994B2 /* CartoUTFGridController.mm in Sources */,
-				ADBFDAA61D788082003DCBC9 /* VPPDropDown.m in Sources */,
-				ADC2B3381D79678900841945 /* VectorMapBaseController.mm in Sources */,
+				AD1A15171DC24599009DBC0B /* CountriesVisController.m in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
