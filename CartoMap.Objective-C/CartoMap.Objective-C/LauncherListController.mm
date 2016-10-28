@@ -31,7 +31,7 @@
                  },
              
              /* Import API */
-             @{ @"name": @"Import APII", @"controller": @"Header" },
+             @{ @"name": @"Import API", @"controller": @"Header" },
              @{
                  @"name": @"Tile Packager",
                  @"description": @"Packaging tiles (?) //TODO",
