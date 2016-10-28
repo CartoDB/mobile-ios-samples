@@ -7,6 +7,18 @@
 @interface LauncherListController ()
 @end
 
+@interface MapListCell : UITableViewCell
+
+@property UIView *topBorder;
+@property UILabel *title;
+@property UILabel *details;
+
+@property BOOL isHeader;
+
+-(void) update:(NSDictionary *)sample;
+
+@end
+
 @implementation LauncherListController
 
 -(NSArray*) samples
@@ -145,30 +157,92 @@ static NSString* identifier = @"sampleId";
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    MapListCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:identifier];
-        cell.detailTextLabel.numberOfLines = 0;
-        [cell.detailTextLabel setTextColor:[UIColor darkGrayColor]];
+        cell = [[MapListCell alloc] initWithStyle:UITableViewCellStyleSubtitle  reuseIdentifier:identifier];
     }
     
     NSDictionary* sample = [[self samples] objectAtIndex:indexPath.row];
+    [cell update:sample];
     
-    cell.textLabel.text = [sample objectForKey:@"name"];
-    cell.detailTextLabel.text = [sample objectForKey:@"description"];
+    cell.frame = CGRectMake(0, 0, 320, 70);
+    return cell;
+}
+
+@end
+
+/*
+ * List Cell
+ */
+
+@implementation MapListCell
+
+-(id) initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    if (IsHeader(sample)) {
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        [cell setBackgroundColor:RGB(240, 240, 240)];
-        [cell setAccessibilityIdentifier:@"MapListHeader"];
+    [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    
+    self.topBorder = [[UIView alloc] init];
+    [self.topBorder setBackgroundColor: RGB(50, 50, 50)];
+    [self addSubview:self.topBorder];
+    
+    self.title = [[UILabel alloc] init];
+    [self.title setFont:[UIFont systemFontOfSize:16]];
+    self.title.textAlignment = NSTextAlignmentJustified;
+    [self addSubview:self.title];
+    
+    self.details = [[UILabel alloc] init];
+    self.details.numberOfLines = 0;
+    [self.details setLineBreakMode:NSLineBreakByWordWrapping];
+    [self.details setTextColor:[UIColor darkGrayColor]];
+    [self.details setFont:[UIFont systemFontOfSize:12]];
+    
+    [self addSubview:self.details];
+    
+    return self;
+}
+
+-(void) layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self.topBorder setFrame:CGRectMake(0, 0, self.frame.size.width, 3)];
+    
+    float padding = 10;
+    
+    float width = self.frame.size.width - 2 * padding;
+    float height = self.frame.size.height / 3;
+    
+    if (self.isHeader) {
+        [self.title setFrame:CGRectMake(padding, 0, width, self.frame.size.height)];
     } else {
-        [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
-        [cell setBackgroundColor:RGB(255, 255, 255)];
-        [cell setAccessibilityIdentifier:@"MapListCell"];
+        [self.title setFrame:CGRectMake(padding, padding, width, height)];
     }
     
-    return cell;
+    [self.details setFrame:CGRectMake(padding, height + padding, width, self.frame.size.height / 2)];
+}
+
+-(void) update:(NSDictionary *)sample
+{
+    self.isHeader = IsHeader(sample);
+    
+    self.title.text = [sample objectForKey:@"name"];
+    self.details.text = [sample objectForKey:@"description"];
+    
+    if (self.isHeader) {
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+        [self setBackgroundColor:RGB(240, 240, 240)];
+        [self setAccessibilityIdentifier:@"MapListHeader"];
+        [self.topBorder setHidden:false];
+    } else {
+        [self setSelectionStyle:UITableViewCellSelectionStyleDefault];
+        [self setBackgroundColor:RGB(255, 255, 255)];
+        [self setAccessibilityIdentifier:@"MapListCell"];
+        [self.topBorder setHidden:true];
+    }
+    
 }
 
 @end
