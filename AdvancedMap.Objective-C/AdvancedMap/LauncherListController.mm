@@ -64,7 +64,7 @@
              @{ @"name": @"Offline maps", @"controller": @"Header" },
              @{ @"name": @"Bundled Map",
                 @"description": @"Bundle MBTiles file for offline base map",
-                @"controller": @"BundledMBTilesController"
+                @"controller": @"BundledMapController"
                 },
              @{ @"name": @"Package Manager",
                 @"description": @"Download offline map packages with OSM",
