@@ -88,9 +88,6 @@ static NSString* _language = @"en"; // the language for the package names
 
 - (id)init
 {
-    // License registration. Must be done before package manager can be used.
-    [NTMapView registerLicense:@"XTUMwQ0ZIcXhuZ3RSdWdYNllQM25tRng2Q0tacGJGY2dBaFVBZ2N3K2dFTEFXRWx3OVdzbVF4aC90OVQxMEJJPQoKcHJvZHVjdHM9c2RrLWlvcy0zLioKYnVuZGxlSWRlbnRpZmllcj1jb20uY2FydG8uKgp3YXRlcm1hcms9Y3VzdG9tCnZhbGlkVW50aWw9MjAxNi0xMi0wMQp1c2VyS2V5PTM2M2YxNzdjZjM2NTAzMGYxZWU4YjkzY2JmNTY3OGRhCg"];
-    
     // Create folder for package manager. Package manager needs persistent writable folder.
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask,YES);
     NSString* appSupportDir = [paths objectAtIndex: 0];
@@ -99,7 +96,7 @@ static NSString* _language = @"en"; // the language for the package names
     [[NSFileManager defaultManager] createDirectoryAtPath:packagesDir withIntermediateDirectories:YES attributes:nil error:&error];
     
     // Create package manager and package manager listener
-    _packageManager = [[NTCartoPackageManager alloc] initWithSource:@"nutiteq.test" dataFolder:packagesDir];
+    _packageManager = [[NTCartoPackageManager alloc] initWithSource:@"nutiteq.osm" dataFolder:packagesDir];
     _packageManagerListener = [[PackageManagerListener alloc] init];
     
     // Register this controller with listener to receive notifications about events

@@ -4,11 +4,11 @@
 #import "VectorElementDeselectEventListener.h"
 #import "BasicEditEventListener.h"
 
-@interface BasicEditableOverlayController : MapBaseController
+@interface VectorObjectEditingController : MapBaseController
 
 @end
 
-@implementation BasicEditableOverlayController
+@implementation VectorObjectEditingController
 
 - (void)viewDidLoad
 {

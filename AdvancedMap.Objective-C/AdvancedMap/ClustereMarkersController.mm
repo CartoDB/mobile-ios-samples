@@ -1,7 +1,7 @@
 
 #import "MapBaseController.h"
 
-@interface ClusteredGeoJsonController : MapBaseController
+@interface ClusteredMarkersController : MapBaseController
 
 @end
 
@@ -9,7 +9,7 @@
 
 @end
 
-@implementation ClusteredGeoJsonController
+@implementation ClusteredMarkersController
 
 -(void)viewDidLoad
 {

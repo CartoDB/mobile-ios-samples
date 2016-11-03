@@ -33,7 +33,7 @@
 		4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850111A0E7DC500C5124F /* CustomRasterDataSourceController.mm */; };
 		4DEB06D01A10BDB7003D111C /* OverlaysController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */; };
 		4DEB06D81A10CDC0003D111C /* BundledMBTilesController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D71A10CDC0003D111C /* BundledMBTilesController.mm */; };
-		4DFC6C6D1B6224D300AF8E06 /* ClusteredGeoJsonController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredGeoJsonController.mm */; };
+		4DFC6C6D1B6224D300AF8E06 /* ClustereMarkersController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClustereMarkersController.mm */; };
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
 		AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */; };
 		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
@@ -49,7 +49,7 @@
 		ADA114271DA3A2D200481261 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B46187C4F8F0004A3CB /* UIKit.framework */; };
 		ADA114281DA3A37600481261 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
 		ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB1488D1DC09C59009A899B /* BaseMapsController.mm */; };
-		ADB148901DC0A5AD009A899B /* BasicEditableOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB1488F1DC0A5AD009A899B /* BasicEditableOverlayController.m */; };
+		ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB1488F1DC0A5AD009A899B /* VectorObjectEditingController.m */; };
 		ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */; };
 		ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */; };
 		ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148971DC0A708009A899B /* BasicEditEventListener.mm */; };
@@ -137,7 +137,7 @@
 		4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OverlaysController.mm; path = AdvancedMap/OverlaysController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06D71A10CDC0003D111C /* BundledMBTilesController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BundledMBTilesController.mm; path = AdvancedMap/BundledMBTilesController.mm; sourceTree = SOURCE_ROOT; };
 		4DEB06DF1A10DF0F003D111C /* LauncherListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LauncherListController.h; path = AdvancedMap/LauncherListController.h; sourceTree = SOURCE_ROOT; };
-		4DFC6C6C1B6224D300AF8E06 /* ClusteredGeoJsonController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredGeoJsonController.mm; path = AdvancedMap/ClusteredGeoJsonController.mm; sourceTree = SOURCE_ROOT; };
+		4DFC6C6C1B6224D300AF8E06 /* ClustereMarkersController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClustereMarkersController.mm; path = AdvancedMap/ClustereMarkersController.mm; sourceTree = SOURCE_ROOT; };
 		65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		AD02FEE866BAAE942D33FB01 /* Pods-AdvancedMap.Objective-C.UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureController.mm; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		ADA1141B1DA399FF00481261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA114211DA3A04F00481261 /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AdvancedMap.Objective-C.a"; path = "../../../../Library/Developer/Xcode/DerivedData/AdvancedMap.Objective-C-eqqmxktzfefcpvcrcnopxenfhpsc/Build/Products/Debug-iphonesimulator/libPods-AdvancedMap.Objective-C.a"; sourceTree = "<group>"; };
 		ADB1488D1DC09C59009A899B /* BaseMapsController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseMapsController.mm; sourceTree = "<group>"; };
-		ADB1488F1DC0A5AD009A899B /* BasicEditableOverlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicEditableOverlayController.m; sourceTree = "<group>"; };
+		ADB1488F1DC0A5AD009A899B /* VectorObjectEditingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VectorObjectEditingController.m; sourceTree = "<group>"; };
 		ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorElementSelectEventListener.mm; sourceTree = "<group>"; };
 		ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorElementDeselectEventListener.mm; sourceTree = "<group>"; };
 		ADB148971DC0A708009A899B /* BasicEditEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicEditEventListener.mm; sourceTree = "<group>"; };
@@ -311,6 +311,16 @@
 			path = sdk_3d_ios_app;
 			sourceTree = "<group>";
 		};
+		AD54BF351DCB601C00B0C190 /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */,
+				ADCF53BF1DC1FFA8004AD5C3 /* MyVectorElementEventListener.h */,
+				ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */,
+			);
+			name = Overlays;
+			sourceTree = "<group>";
+		};
 		AD860A6B1D7DA103005994B2 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,7 +342,7 @@
 		ADB148911DC0A6CC009A899B /* BasicEditableOverlay */ = {
 			isa = PBXGroup;
 			children = (
-				ADB1488F1DC0A5AD009A899B /* BasicEditableOverlayController.m */,
+				ADB1488F1DC0A5AD009A899B /* VectorObjectEditingController.m */,
 				ADB148921DC0A6D7009A899B /* Listeners */,
 			);
 			name = BasicEditableOverlay;
@@ -356,7 +366,6 @@
 			children = (
 				ADC731421DBFA36D00E1CDCA /* BaseMap */,
 				ADC731411DBFA35000E1CDCA /* OverlayDataSource */,
-				ADC731401DBFA34900E1CDCA /* GIS */,
 				ADC7313F1DBFA34000E1CDCA /* VectorObjects */,
 				ADC7313E1DBFA33800E1CDCA /* OfflineMap */,
 				ADC7313D1DBFA33100E1CDCA /* Other */,
@@ -369,7 +378,6 @@
 			children = (
 				AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */,
 				ADC731471DBFA78D00E1CDCA /* CustomPopup */,
-				4DFC6C6C1B6224D300AF8E06 /* ClusteredGeoJsonController.mm */,
 				AD589CE71DC105A1004E68B2 /* GPSLocationController.m */,
 				0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */,
 			);
@@ -388,19 +396,11 @@
 		ADC7313F1DBFA34000E1CDCA /* VectorObjects */ = {
 			isa = PBXGroup;
 			children = (
-				4DEB06CF1A10BDB7003D111C /* OverlaysController.mm */,
-				ADCF53BF1DC1FFA8004AD5C3 /* MyVectorElementEventListener.h */,
-				ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */,
-			);
-			name = VectorObjects;
-			sourceTree = "<group>";
-		};
-		ADC731401DBFA34900E1CDCA /* GIS */ = {
-			isa = PBXGroup;
-			children = (
+				4DFC6C6C1B6224D300AF8E06 /* ClustereMarkersController.mm */,
+				AD54BF351DCB601C00B0C190 /* Overlays */,
 				ADB148911DC0A6CC009A899B /* BasicEditableOverlay */,
 			);
-			name = GIS;
+			name = VectorObjects;
 			sourceTree = "<group>";
 		};
 		ADC731411DBFA35000E1CDCA /* OverlayDataSource */ = {
@@ -720,10 +720,10 @@
 				4DEB06D01A10BDB7003D111C /* OverlaysController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
 				AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */,
-				4DFC6C6D1B6224D300AF8E06 /* ClusteredGeoJsonController.mm in Sources */,
+				4DFC6C6D1B6224D300AF8E06 /* ClustereMarkersController.mm in Sources */,
 				4D4B1F261D018B8D001C2F30 /* VPPDropDown.m in Sources */,
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
-				ADB148901DC0A5AD009A899B /* BasicEditableOverlayController.m in Sources */,
+				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,

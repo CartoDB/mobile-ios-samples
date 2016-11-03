@@ -44,6 +44,10 @@
                 @"description": @"WMS service raster on top of the vector base map",
                 @"controller": @"WMSMapController"
                 },
+             @{ @"name": @"Clustered Markers",
+                @"description": @"Read data from .geojson and show as clusters",
+                @"controller": @"ClusteredMarkersController"
+                },
              
              /* Vector Objects */
              @{ @"name": @"Vector objects", @"controller": @"Header" },
@@ -51,10 +55,14 @@
                 @"description": @"2D & 3D objects: lines, points, polygons, texts, pop-ups, 3D models",
                 @"controller": @"OverlaysController"
                 },
+             @{ @"name": @"Vector object editing",
+                @"description": @"Shows usage of an editable vector layer",
+                @"controller": @"VectorObjectEditingController"
+                },
              
              /* Offline maps */
              @{ @"name": @"Offline maps", @"controller": @"Header" },
-             @{ @"name": @"Bundled MBTiles",
+             @{ @"name": @"Bundled Map",
                 @"description": @"Bundle MBTiles file for offline base map",
                 @"controller": @"BundledMBTilesController"
                 },
@@ -63,22 +71,11 @@
                 @"controller": @"PackageManagerController"
                 },
              
-             /* GIS */
-             @{ @"name": @"GIS", @"controller": @"Header" },
-             @{ @"name": @"Basic editable overlay",
-                @"description": @"CShows usage of an editable vector layer",
-                @"controller": @"BasicEditableOverlayController"
-                },
-             
             /* Other */
              @{ @"name": @"Other", @"controller": @"Header" },
              @{ @"name": @"Screencapture",
                 @"description": @"Captures rendered MapView as a Bitmap",
                 @"controller": @"CaptureController"
-                },
-             @{ @"name": @"Clustered GeoJson",
-                @"description": @"Read data from .geojson and show as clusters",
-                @"controller": @"ClusteredGeoJsonController"
                 },
              @{ @"name": @"Custom Popup",
                 @"description": @"Creating and using custom popups",
