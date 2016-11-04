@@ -23,11 +23,13 @@
 @property MapBaseController *controller;
 
 @property OptionLabel *currentHighlight;
+@property OptionLabel *currentLanguageHighlight;
 
 - (bool)isVisible;
 - (void)hide;
 - (void)show;
 - (void)addItems:(NSArray *)items;
+- (void) setInitialValues;
 
 @end
 
@@ -95,6 +97,15 @@ NTTileLayer *currentLayer;
     
     [self.mapView setFocusPos:position durationSeconds:0];
     [self.mapView setZoom:5 durationSeconds:0];
+    
+    // Set initial values visually on the manu
+    [self.menu setInitialValues];
+    
+    // Default values for osm, tiletype and style, respectively
+    [self updateBaseLayer:@"nutiteq.osm" :@"Vector" :@"default"];
+    
+    // Default language
+    [self updateLanguage:@"en"];
 }
 
 - (void)onTap:(UITapGestureRecognizer *)recognizer
@@ -243,6 +254,23 @@ NTTileLayer *currentLayer;
     return self;
 }
 
+-(void) setInitialValues
+{
+    // nutiteq. osm is our default baselayer. set it visually in the menu
+    OptionsMenuItem *item = [self.views objectAtIndex:0];
+    OptionLabel *label = [item.optionLabels objectAtIndex:0];
+    [label highlight];
+    
+    self.currentHighlight = label;
+    
+    // Set English as default language
+    OptionsMenuItem *item2 = [self.views objectAtIndex:3];
+    OptionLabel *label2 = [item2.optionLabels objectAtIndex:0];
+    [label2 highlight];
+    
+    self.currentLanguageHighlight = label2;
+}
+
 -(void)layoutSubviews
 {
     float smallPading = 5;
@@ -294,12 +322,26 @@ NTTileLayer *currentLayer;
                 
                 if (CGRectContainsPoint([label frame], transformed)) {
                     
-                    if (self.currentHighlight != nil) {
-                        [self.currentHighlight normalize];
+                    if ([view.typeValue isEqualToString:@"Language"]) {
+                    
+                        if (self.currentLanguageHighlight != nil) {
+                            [self.currentLanguageHighlight normalize];
+                        }
+                    } else {
+                        
+                        if (self.currentHighlight != nil) {
+                            [self.currentHighlight normalize];
+                        }
                     }
                     
                     [label highlight];
-                    self.currentHighlight = label;
+                    
+                    if ([view.typeValue isEqualToString:@"Language"]) {
+                        self.currentLanguageHighlight = label;
+                    } else {
+                        self.currentHighlight = label;
+                    }
+                    
                     [((BaseMapsController *)self.controller) updateBaseLayer:view.OSMValue:view.typeValue:label.value];
                 }
             }
