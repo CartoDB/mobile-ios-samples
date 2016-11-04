@@ -1,10 +1,28 @@
+
 #import "MapBaseController.h"
+
+/** OptionLabel **/
+@interface OptionLabel : UILabel
+
+@property NSString *name;
+@property NSString *value;
+
+- (void)setOption:(NSDictionary *)option;
+
+- (void)highlight;
+- (void)normalize;
+
+@end
 
 /** OptionsMenu **/
 @interface OptionsMenu : UIView
 
 @property NTMapView *map;
 @property NSMutableArray *views;
+
+@property MapBaseController *controller;
+
+@property OptionLabel *currentHighlight;
 
 - (bool)isVisible;
 - (void)hide;
@@ -24,15 +42,11 @@
 
 @property NSMutableArray *optionLabels;
 
+@property NSString *OSMValue;
+@property NSString *typeValue;
+
 - (bool) isMultiLine;
 - (void)setValues:(NSDictionary *)values;
-
-@end
-
-/** OptionLabel **/
-@interface OptionLabel : UIView
-
-- (void) setOption:(NSDictionary *)option;
 
 @end
 
@@ -42,9 +56,15 @@
 @property OptionsMenu *menu;
 @property UIBarButtonItem *menuButton;
 
+- (void)updateBaseLayer:(NSString *)osm :(NSString *)type :(NSString *)style;
+
 @end
 
 @implementation BaseMapsController
+
+NSString *currentOSM;
+NSString *currentSelection;
+NTTileLayer *currentLayer;
 
 - (void)viewDidLoad
 {
@@ -53,6 +73,8 @@
     CGSize size = [[UIScreen mainScreen] bounds].size;
     self.menu = [[OptionsMenu alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     self.menu.map = self.mapView;
+    self.menu.controller = self;
+    
     [self.menu addItems: self.options];
     
     UIImageView *view = [[UIImageView alloc]init];
@@ -66,6 +88,13 @@
     [self.menuButton setCustomView:view];
     
     [[self navigationItem] setRightBarButtonItem:self.menuButton];
+    
+    // Zoom to Central Europe so some texts would be visible
+    NTMapPos *position = [[NTMapPos alloc] initWithX:15.2551 y:54.5260];
+    position = [[[self.mapView getOptions] getBaseProjection] fromWgs84:position];
+    
+    [self.mapView setFocusPos:position durationSeconds:0];
+    [self.mapView setZoom:5 durationSeconds:0];
 }
 
 - (void)onTap:(UITapGestureRecognizer *)recognizer
@@ -77,11 +106,75 @@
     }
 }
 
-- (void)updateBaseLayer
+- (void)updateBaseLayer:(NSString *)osm :(NSString *)type :(NSString *)style
 {
-
+    if (![type isEqual: @"Language"]) {
+        currentOSM = osm;
+        currentSelection = style;
+    }
+    
+    if ([type isEqualToString:@"Vector"]) {
+        
+        if ([currentOSM isEqualToString:@"nutiteq.osm"]) {
+            
+            if ([currentSelection isEqualToString:@"default"]) {
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+            } else if ([currentSelection isEqualToString:@"gray"]) {
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_GRAY];
+            } else if ([currentSelection isEqualToString:@"dark"]) {
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARK];
+            }
+        } else if ([currentOSM isEqualToString:@"mapzen.osm"]) {
+            
+            NSString *fileName = [[currentSelection componentsSeparatedByString:@":"] objectAtIndex:0];
+            NSString *styleName = [[currentSelection componentsSeparatedByString:@":"] objectAtIndex:1];
+            
+            NTBinaryData *styleAsset = [NTAssetUtils loadAsset:[fileName stringByAppendingString: @".zip"]];
+            NTZippedAssetPackage *package = [[NTZippedAssetPackage alloc] initWithZipData:styleAsset];
+            NTCompiledStyleSet *set = [[NTCompiledStyleSet alloc] initWithAssetPackage:package styleName:styleName];
+            
+            NTCartoOnlineTileDataSource *source = [[NTCartoOnlineTileDataSource alloc] initWithSource:currentOSM];
+            NTMBVectorTileDecoder *decoder = [[NTMBVectorTileDecoder alloc] initWithCompiledStyleSet:set];
+            
+            currentLayer = [[NTVectorTileLayer alloc] initWithDataSource:source decoder:decoder];
+        }
+    } else if ([type isEqualToString:@"Raster"]) {
+        
+        NSString *url = @"";
+        
+        if ([currentSelection isEqualToString:@"positron"]) {
+            url = @"http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
+        } else {
+            url = @"http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png";
+        }
+        
+        NTTileDataSource *source = [[NTHTTPTileDataSource alloc] initWithMinZoom:1 maxZoom:19 baseURL:url];
+        currentLayer = [[NTRasterTileLayer alloc] initWithDataSource:source];
+        
+    } else if ([type isEqualToString:@"Language"]) {
+        [self updateLanguage:style];
+    }
+    
+    [[self.mapView getLayers] clear];
+    [[self.mapView getLayers] add:currentLayer];
 }
 
+- (void)updateLanguage:(NSString *)code
+{
+    if (currentLayer == nil) {
+        return;
+    }
+    
+    if ([currentLayer isKindOfClass:NTRasterTileLayer.class]) {
+        // Raster tile language chance is not supported
+        return;
+    }
+    
+    NTVectorTileLayer *layer = (NTVectorTileLayer *)currentLayer;
+    NTMBVectorTileDecoder *decoder = (NTMBVectorTileDecoder *)[layer getTileDecoder];
+    
+    [decoder setStyleParameter:@"lang" value:code];
+}
 -(NSArray*)options
 {
     return @[
@@ -185,8 +278,34 @@
 }
 
 - (void)onTap:(UITapGestureRecognizer *)recognizer {
-    CGPoint location = [recognizer locationInView:[recognizer.view superview]];
     
+    CGPoint location = [recognizer locationInView:recognizer.view];
+
+    for (int i = 0; i < self.views.count; i++) {
+        OptionsMenuItem *view = [self.views objectAtIndex:i];
+
+        if (CGRectContainsPoint([view frame], location)) {
+            
+            CGPoint transformed = [self convertPoint:location toView:view.contentContainer];
+
+            for (int j = 0; j < view.optionLabels.count; j++) {
+                
+                OptionLabel *label = [view.optionLabels objectAtIndex:j];
+                
+                if (CGRectContainsPoint([label frame], transformed)) {
+                    
+                    if (self.currentHighlight != nil) {
+                        [self.currentHighlight normalize];
+                    }
+                    
+                    [label highlight];
+                    self.currentHighlight = label;
+                    [((BaseMapsController *)self.controller) updateBaseLayer:view.OSMValue:view.typeValue:label.value];
+                }
+            }
+        }
+    }
+
     [self hide];
 }
 
@@ -276,6 +395,43 @@
     x += w + padding;
 
     [self.tileTypeLabel setFrame:CGRectMake(x, y, w, h)];
+    
+    x = padding;
+    y = itemTopPadding;
+    h = itemHeight;
+    
+    if ([self isMultiLine]) {
+        
+        w = ([self.contentContainer frame].size.width - 4 * padding) / 3;
+        
+        int counter = 0;
+        
+        for (int i = 0; i < self.optionLabels.count; i++) {
+            
+            OptionLabel *label = [self.optionLabels objectAtIndex:i];
+            
+            if (counter > 0 && counter % 3 == 0) {
+                y += h + padding;
+                x = padding;
+            }
+            
+            [label setFrame:CGRectMake(x, y, w, h)];
+            x += w + padding;
+            
+            counter++;
+        }
+    } else {
+        
+        w = ([self.contentContainer frame].size.width - (padding + self.optionLabels.count * padding)) / self.optionLabels.count;
+        
+        for (int i = 0; i < self.optionLabels.count; i++) {
+            
+            OptionLabel *label = [self.optionLabels objectAtIndex:i];
+            
+            [label setFrame:CGRectMake(x, y, w, h)];
+            x += w + padding;
+        }
+    }
 }
 
 - (bool)isMultiLine
@@ -288,8 +444,12 @@
     NSDictionary *osm = [values objectForKey:@"OSM"];
     NSString *type = [values objectForKey:@"Type"];
     NSArray *options = [values objectForKey:@"Styles"];
-
+    
+    self.OSMValue = [osm valueForKey:@"value"];
+    self.typeValue = type;
+    
     self.osmLabel.text = [osm valueForKey:@"name"];
+    
     self.tileTypeLabel.text = type;
     
     for (int i = 0; i < options.count; i++) {
@@ -299,7 +459,7 @@
         [label setOption:option];
 
         [self.optionLabels addObject:label];
-        [self addSubview:label];
+        [self.contentContainer addSubview:label];
     }
 }
 
@@ -307,9 +467,47 @@
 
 @implementation OptionLabel
 
+- (id)init
+{
+    self = [super init];
+    
+    [self setTextAlignment:NSTextAlignmentCenter];
+    
+    [self setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:11]];
+    
+    [self.layer setBorderWidth:0.5f];
+    
+    return self;
+}
+
+- (void) highlight
+{
+    UIColor *appleblue = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:255/255.0 alpha:1];
+    
+    [self setBackgroundColor:appleblue];
+    [[self layer] setBorderColor:[appleblue CGColor]];
+    [self setTextColor:[UIColor whiteColor]];
+    
+    NSLog(@"Highlighting %@ - %@", self.name, self.value);
+}
+
+- (void)normalize
+{
+    UIColor *darkgray = [UIColor colorWithRed:50/255.0 green:50/255.0 blue:50/255.0 alpha:1];
+    
+    [self setBackgroundColor:[UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1.0]];
+    [[self layer] setBorderColor:[darkgray CGColor]];
+    [self setTextColor:darkgray];
+    
+    NSLog(@"Normalizing %@ - %@", self.name, self.value);
+}
+
 - (void) setOption:(NSDictionary *)option
 {
-
+    self.name = [option objectForKey:@"name"];
+    self.value = [option objectForKey:@"value"];
+    
+    self.text = self.name;
 }
 
 @end

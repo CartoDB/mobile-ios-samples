@@ -35,6 +35,7 @@
 		4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D71A10CDC0003D111C /* BundledMapController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredMarkersController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredMarkersController.mm */; };
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
+		AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD031F231DCCE81400072781 /* styles_mapzen.zip */; };
 		AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */; };
 		AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */; };
 		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
@@ -141,6 +142,7 @@
 		4DFC6C6C1B6224D300AF8E06 /* ClusteredMarkersController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredMarkersController.mm; path = AdvancedMap/ClusteredMarkersController.mm; sourceTree = SOURCE_ROOT; };
 		65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		AD02FEE866BAAE942D33FB01 /* Pods-AdvancedMap.Objective-C.UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; sourceTree = "<group>"; };
+		AD031F231DCCE81400072781 /* styles_mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = styles_mapzen.zip; path = ../../Assets/styles_mapzen.zip; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
 		AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureController.mm; sourceTree = "<group>"; };
 		AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSMapController.m; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 				ADED5F041D92A31800AB2D13 /* info@2x.png */,
 				ADED5F051D92A31800AB2D13 /* jefferson-building-ground-floor.jpg */,
 				ADED5F061D92A31800AB2D13 /* looseleaf.zip */,
+				AD031F231DCCE81400072781 /* styles_mapzen.zip */,
 				ADED5F071D92A31800AB2D13 /* mapzen.zip */,
 				ADED5F081D92A31800AB2D13 /* marker_black.png */,
 				AD9B19B81DC1E5850025B767 /* cities15000.geojson */,
@@ -599,6 +602,7 @@
 				ADED5F2B1D92A31800AB2D13 /* menu@2x.png in Resources */,
 				2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */,
 				ADED5F2E1D92A31800AB2D13 /* nutibright-v3.zip in Resources */,
+				AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */,
 				4D4B1F251D018B8D001C2F30 /* UITableExpand@2x.png in Resources */,
 				ADED5F261D92A31800AB2D13 /* mapzen.zip in Resources */,
 				ADED5F291D92A31800AB2D13 /* marker.png in Resources */,
