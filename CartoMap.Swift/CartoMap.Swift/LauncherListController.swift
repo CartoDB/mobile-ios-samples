@@ -28,6 +28,8 @@ class LauncherListController : UIViewController, UITableViewDelegate, UITableVie
         table.registerClass(TableCell.self, forCellReuseIdentifier: IDENTIFIER);
         
         table.reloadData();
+        
+        title = "CARTO Map";
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

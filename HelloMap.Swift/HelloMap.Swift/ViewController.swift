@@ -15,8 +15,6 @@ class ViewController: GLKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "HelloMap.Swift";
-        
         mapView = NTMapView();
         view = mapView;
         
@@ -34,6 +32,8 @@ class ViewController: GLKViewController {
         let listener = HelloMapListener(marker: marker!);
         
         mapView?.setMapEventListener(listener);
+        
+        title = "Hello Map";
     }
 }
 

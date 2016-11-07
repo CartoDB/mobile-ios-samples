@@ -64,7 +64,6 @@
     HelloMapListener* listener = [[HelloMapListener alloc]init];
     listener.marker = marker;
     [mapView setMapEventListener: listener];
-    
 }
 
 @end

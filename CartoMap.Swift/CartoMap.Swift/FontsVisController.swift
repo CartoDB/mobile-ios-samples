@@ -10,7 +10,8 @@ class FontsVisController : VisBaseController
     override func viewDidLoad() {
         
         super.viewDidLoad();
-
+        
+        
         mapView?.updateVis(url);
     }
 }
