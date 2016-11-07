@@ -1,4 +1,4 @@
-#import "VectorMapSampleBaseController.h"
+#import "MapBaseController.h"
 #import "MyCustomPopupHandler.h"
 
 /*
@@ -7,7 +7,7 @@
  * uniform functionality and look across different platforms. But In some cases
  * more customization is needed and Popup subclassing can be used in that case.
  */
-@interface CustomPopupController : VectorMapSampleBaseController
+@interface CustomPopupController : MapBaseController
 
 @end
 
