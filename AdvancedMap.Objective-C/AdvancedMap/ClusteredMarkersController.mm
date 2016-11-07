@@ -42,7 +42,7 @@
     NTMarkerStyle *style = [[[NTMarkerStyleBuilder alloc] init] buildStyle];
     
     for (int i = 0; i < [features getFeatureCount]; i++) {
-        NTPointGeometry *geometry = [[features getFeature:i] getGeometry];
+        NTPointGeometry *geometry = (NTPointGeometry *)[[features getFeature:i] getGeometry];
         
         NTMarker *marker = [[NTMarker alloc] initWithGeometry:geometry style:style];
         [vectorDataSource add:marker];

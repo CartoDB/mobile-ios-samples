@@ -38,6 +38,7 @@
 		AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD031F231DCCE81400072781 /* styles_mapzen.zip */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
 		AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */; };
+		AD3D62A51DD083DA00C97356 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD3D62A41DD083DA00C97356 /* VectorTileListener.mm */; };
 		AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */; };
 		AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */; };
 		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
@@ -57,7 +58,6 @@
 		ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */; };
 		ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */; };
 		ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148971DC0A708009A899B /* BasicEditEventListener.mm */; };
-		ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
 		ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */; };
@@ -147,6 +147,8 @@
 		AD031F231DCCE81400072781 /* styles_mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = styles_mapzen.zip; path = ../../Assets/styles_mapzen.zip; sourceTree = "<group>"; };
 		AD3D629F1DD07F0F00C97356 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_more.png; path = ../../Assets/icon_more.png; sourceTree = "<group>"; };
 		AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@3x.png"; path = "../../Assets/icon_more@3x.png"; sourceTree = "<group>"; };
+		AD3D62A31DD083DA00C97356 /* VectorTileListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
+		AD3D62A41DD083DA00C97356 /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
 		AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureController.mm; sourceTree = "<group>"; };
 		AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSMapController.m; sourceTree = "<group>"; };
@@ -424,6 +426,8 @@
 		ADC731421DBFA36D00E1CDCA /* BaseMap */ = {
 			isa = PBXGroup;
 			children = (
+				AD3D62A31DD083DA00C97356 /* VectorTileListener.h */,
+				AD3D62A41DD083DA00C97356 /* VectorTileListener.mm */,
 				ADB1488D1DC09C59009A899B /* BaseMapsController.mm */,
 			);
 			name = BaseMap;
@@ -743,6 +747,7 @@
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
+				AD3D62A51DD083DA00C97356 /* VectorTileListener.mm in Sources */,
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */,
@@ -755,7 +760,6 @@
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				4D4B1F271D018B8D001C2F30 /* VPPDropDownElement.m in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,
-				ADC731461DBFA5B000E1CDCA /* VectorTileListener.mm in Sources */,
 				AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */,
 				2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */,
 			);
@@ -825,7 +829,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -859,7 +863,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -885,7 +889,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "AdvancedMap/AdvancedMap.Objective-C-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.carto.AdvancedMap;
@@ -915,7 +919,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "AdvancedMap/AdvancedMap.Objective-C-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.carto.AdvancedMap;

@@ -1,5 +1,6 @@
 
 #import "MapBaseController.h"
+#import "VectorTileListener.h"
 
 /** OptionLabel **/
 @interface OptionLabel : UILabel
@@ -57,6 +58,8 @@
 
 @property OptionsMenu *menu;
 @property UIBarButtonItem *menuButton;
+
+@property NTVectorLayer *vectorLayer;
 
 - (void)updateBaseLayer:(NSString *)osm :(NSString *)type :(NSString *)style;
 
@@ -168,6 +171,27 @@ NTTileLayer *currentLayer;
     
     [[self.mapView getLayers] clear];
     [[self.mapView getLayers] add:currentLayer];
+    
+    [self initializeVectorTileListener];
+}
+
+
+- (void)initializeVectorTileListener
+{
+//    if (self.vectorLayer == nil) {
+        NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc]initWithProjection:[[self.mapView getOptions]getBaseProjection]];
+        self.vectorLayer = [[NTVectorLayer alloc]initWithDataSource:source];
+//    }
+    
+    [[self.mapView getLayers] add:self.vectorLayer];
+    
+    NTLayer *layer = [[self.mapView getLayers] get:0];
+    
+    if ([layer isKindOfClass:NTVectorTileLayer.class]) {
+        VectorTileListener *listener = [[VectorTileListener alloc]init];
+        listener.vectorLayer = self.vectorLayer;
+        [((NTVectorTileLayer *)layer) setVectorTileEventListener:listener];
+    }
 }
 
 - (void)updateLanguage:(NSString *)code
