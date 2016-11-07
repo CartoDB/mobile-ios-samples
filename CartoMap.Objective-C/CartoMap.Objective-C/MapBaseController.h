@@ -9,4 +9,7 @@
 
 @property (nonatomic,strong) NTMapView* mapView;
 
+- (void)addGrayBaseLayer;
+- (void)addDarkBaseLayer;
+
 @end

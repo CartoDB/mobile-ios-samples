@@ -27,4 +27,16 @@
     [self setPaused:YES];
 }
 
+- (void)addGrayBaseLayer
+{
+    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_GRAY];
+    [[self.mapView getLayers] add:layer];
+}
+
+- (void)addDarkBaseLayer
+{
+    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARK];
+    [[self.mapView getLayers] add:layer];
+}
+
 @end

@@ -12,6 +12,7 @@
 
 -(void) viewDidLoad
 {
+    [self addDarkBaseLayer];
     
     self.projection = [[self.mapView getOptions] getBaseProjection];
     
@@ -34,17 +35,22 @@
     NTColor *color = [[NTColor alloc] initWithR:255 g:0 b:0 a:255];
     [builder setColor:color];
     [builder setSize:1];
-    
+
     NTPointStyle *style = [builder buildStyle];
     
-    NTFeatureCollection *features = [service queryFeatures:sql proj:self.projection];
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
     
-    for (int i = 0; i < [features getFeatureCount]; i++) {
-        NTPointGeometry *geometry = [[features getFeature:i] getGeometry];
+    // Set on background thread for "animated" point appear
+    dispatch_async(queue, ^{
+        NTFeatureCollection *features = [service queryFeatures:sql proj:self.projection];
+    
+        for (int i = 0; i < [features getFeatureCount]; i++) {
+            NTPointGeometry *geometry = (NTPointGeometry *)[[features getFeature:i] getGeometry];
         
-        NTPoint *point = [[NTPoint alloc] initWithGeometry:geometry style:style];
-        [self.source add:point];
-    }
+            NTPoint *point = [[NTPoint alloc] initWithGeometry:geometry style:style];
+            [self.source add:point];
+        }
+    });
 }
 
 @end

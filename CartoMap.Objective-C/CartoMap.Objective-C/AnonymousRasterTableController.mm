@@ -16,6 +16,8 @@
 {
     [super viewDidLoad];
     
+    [self addGrayBaseLayer];
+    
     self.sql = @"select * from table_46g";
     self.cartoCSS = @"#table_46g {raster-opacity: 0.5;}";
     
