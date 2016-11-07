@@ -201,7 +201,7 @@ static NSString* identifier = @"sampleId";
     [self addSubview:self.topBorder];
     
     self.title = [[UILabel alloc] init];
-    [self.title setFont:[UIFont systemFontOfSize:16]];
+    [self.title setFont:[UIFont boldSystemFontOfSize:16]];
     self.title.textAlignment = NSTextAlignmentJustified;
     [self addSubview:self.title];
     
