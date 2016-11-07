@@ -342,6 +342,13 @@ NTTileLayer *currentLayer;
                         self.currentHighlight = label;
                     }
                     
+                    // Language choice not supported on raster maps
+                    if ([view.OSMValue  isEqual: @"carto.osm"]) {
+                        [[self getLanguageBox] setHidden:true];
+                    } else {
+                        [[self getLanguageBox] setHidden:false];
+                    }
+                    
                     [((BaseMapsController *)self.controller) updateBaseLayer:view.OSMValue:view.typeValue:label.value];
                 }
             }
@@ -349,6 +356,19 @@ NTTileLayer *currentLayer;
     }
 
     [self hide];
+}
+
+- (OptionsMenuItem *)getLanguageBox
+{
+    for (int i = 0; i < self.views.count; i++) {
+        OptionsMenuItem *view = [self.views objectAtIndex:i];
+        
+         if ([view.typeValue isEqualToString:@"Language"]) {
+             return view;
+         }
+    }
+    
+    return nil;
 }
 
 - (bool)isVisible
