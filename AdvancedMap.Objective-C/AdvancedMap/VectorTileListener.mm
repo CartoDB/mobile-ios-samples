@@ -59,7 +59,7 @@
     [dataSource add:clickPopup];
     
     // if returns YES then no extra events. If NO then can be called again for next elements.
-    // use mapListener.onMapClicked() event to know that all other events are finished
+    // use mapListener onMapClicked event to know that all other events are finished
     
     return YES;
 }
