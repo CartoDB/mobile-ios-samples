@@ -44,13 +44,13 @@
                 @"description": @"WMS service raster on top of the vector base map",
                 @"controller": @"WMSMapController"
                 },
+             
+             /* Vector Objects */
+             @{ @"name": @"Vector objects", @"controller": @"Header" },
              @{ @"name": @"Clustered Markers",
                 @"description": @"Read data from .geojson and show as clusters",
                 @"controller": @"ClusteredMarkersController"
                 },
-             
-             /* Vector Objects */
-             @{ @"name": @"Vector objects", @"controller": @"Header" },
              @{ @"name": @"Overlays",
                 @"description": @"2D & 3D objects: lines, points, polygons, texts, pop-ups, 3D models",
                 @"controller": @"OverlaysController"
