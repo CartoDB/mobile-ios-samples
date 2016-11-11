@@ -66,7 +66,11 @@
                 @"description": @"Bundle MBTiles file for offline base map",
                 @"controller": @"BundledMapController"
                 },
-             @{ @"name": @"Package Manager",
+//             @{ @"name": @"Basic Package Manager",
+//                @"description": @"Download a bounding box of London",
+//                @"controller": @"BasicPackageManagerController"
+//                },
+             @{ @"name": @"Advanced Package Manager",
                 @"description": @"Download offline map packages with OSM",
                 @"controller": @"PackageManagerController"
                 },
