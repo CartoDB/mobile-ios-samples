@@ -241,6 +241,7 @@ static NSString* _language = @"en"; // the language for the package names
         }
         
         NSString* action = @"DL";
+        
         if (pkg.packageStatus) {
             if ([pkg.packageStatus getCurrentAction] == NT_PACKAGE_ACTION_READY) {
                 status = @"ready";
@@ -289,6 +290,7 @@ static NSString* _language = @"en"; // the language for the package names
         cell.accessoryView = label;
     } else {
         cell.detailTextLabel.text = @"";
+        cell.accessoryView = nil;
     }
     
     return cell;
