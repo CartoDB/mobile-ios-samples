@@ -303,43 +303,81 @@ static NSString* _language = @"en"; // the language for the package names
 - (NSArray*)getPackages
 {
     @synchronized(self) {
+        
         if (_currentPackages != nil) {
             return _currentPackages;
         }
         
         NTPackageInfoVector* packageInfoVector = [_packageManager getServerPackages];
-        NSMutableDictionary* packages = [[NSMutableDictionary alloc] init];
+        NSMutableArray* packages = [[NSMutableArray alloc] init];
+        
+        NSLog(@"----------------------------------------------");
         for (int i = 0; i < [packageInfoVector size]; i++) {
+            
             NTPackageInfo* packageInfo = [packageInfoVector get:i];
             NTStringVector* packageNames = [packageInfo getNames:_language];
+            
             for (int j = 0; j < [packageNames size]; j++) {
                 NSString* packageName = [packageNames get:j];
+                
                 if ([packageName length] < [_currentFolder length]) {
                     continue;
                 }
                 if ([[packageName substringToIndex:[_currentFolder length]] compare:_currentFolder] != NSOrderedSame) {
                     continue;
                 }
+
                 packageName = [packageName substringFromIndex:[_currentFolder length]];
                 NSRange range = [packageName rangeOfString:@"/"];
                 Package* pkg = nil;
+                
                 if (range.location == NSNotFound) {
-                    // This is actual package
+                    
+                    // This is an actual package
                     NTPackageStatus* packageStatus = [_packageManager getLocalPackageStatus:[packageInfo getPackageId] version:-1];
                     pkg = [[Package alloc] initWithPackageName:packageName packageInfo:packageInfo packageStatus:packageStatus];
+                    
                 } else {
-                    // Package group
+                    
+                    // This is a package group
                     packageName = [packageName substringToIndex:range.location];
-                    if ([packages valueForKey:packageName]) {
+
+                    NSMutableArray *existingPackages = [[NSMutableArray alloc]init];
+                    
+                    for (int k = 0; k < packages.count; k++) {
+                        Package *package = [packages objectAtIndex:k];
+                        if ([package.packageName isEqualToString: packageName]) {
+                            [existingPackages addObject:package];
+                        }
+                    }
+
+                    if (existingPackages.count == 0) {
+
+                        // If there are none, add a package group if we don't have an existing list item
+                        pkg = [[Package alloc] initWithPackageName:packageName packageInfo:nil packageStatus:nil];
+                        
+                    } else if (existingPackages.count == 1 && ((Package *)[existingPackages objectAtIndex:0]).packageInfo != nil) {
+
+                        // Sometimes we need to add two labels with the same name.
+                        // One a downloadable package and the other pointing to a list of said country's counties,
+                        // such as with Spain, Germany, France, Great Britain
+                        
+                        // If there is one existing package and its info isn't null,
+                        // we will add a "parent" package containing subpackages (or package group)
+                        
+                        pkg = [[Package alloc] initWithPackageName:packageName packageInfo:nil packageStatus:nil];
+                        
+                    } else {
+                        // Shouldn't be added, as both cases are accounted for
                         continue;
                     }
-                    pkg = [[Package alloc] initWithPackageName:packageName packageInfo:nil packageStatus:nil];
                 }
-                [packages setValue:pkg forKey:packageName];
+
+                [packages addObject:pkg];
             }
         }
         
-        _currentPackages = [packages allValues];
+        _currentPackages = packages;
         return _currentPackages;
     }
 }
