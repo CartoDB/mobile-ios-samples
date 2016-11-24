@@ -1,18 +1,20 @@
 
 #import "MapBaseController.h"
 
-@interface CaptureController : MapBaseController
-
-@end
-
 @interface RendererListener : NTRendererCaptureListener
 
-@property CaptureController *controller;
+@property UIViewController *controller;
 
 @property NTMapPos* position;
 @property int number;
 
 @property NTMapView* mapView;
+
+@end
+
+@interface CaptureController : MapBaseController
+
+@property RendererListener* listener;
 
 @end
 
@@ -48,12 +50,21 @@
     [self.mapView setZoom:12 durationSeconds:1];
     
     // Initialize renderer
-    RendererListener* listener = [[RendererListener alloc] init];
-    listener.controller = self;
-    listener.mapView = self.mapView;
-    listener.number = 0;
-    listener.position = [[NTMapPos alloc]init];
-    [[self.mapView getMapRenderer] captureRendering:listener waitWhileUpdating:true];
+    self.listener = [[RendererListener alloc] init];
+    self.listener.controller = self;
+    self.listener.mapView = self.mapView;
+    self.listener.number = 0;
+    self.listener.position = [[NTMapPos alloc]init];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [[self.mapView getMapRenderer] captureRendering:self.listener waitWhileUpdating:true];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [[self.mapView getMapRenderer] captureRendering:nil waitWhileUpdating:true];
 }
 
 @end
@@ -86,7 +97,7 @@
             result = [@"Unable to save image to " stringByAppendingString:path];
         }
         
-        [self.controller alert:result];
+        [(CaptureController*)self.controller alert:result];
     }
 }
 

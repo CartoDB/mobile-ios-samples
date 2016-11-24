@@ -40,7 +40,7 @@
     // Clear default base layer
     [[self.mapView getLayers] clear];
     
-    NSString *folder = [self createFolder:@"mappackages"];
+    NSString *folder = [self createFolder:@"citypackages"];
     
     [self setStatusLabel];
     
