@@ -41,12 +41,17 @@
     // Initialize basic style, as it will later be overridden anyway
     NTMarkerStyle *style = [[[NTMarkerStyleBuilder alloc] init] buildStyle];
     
+    NTVectorElementVector *elements = [[NTVectorElementVector alloc]init];
+    
     for (int i = 0; i < [features getFeatureCount]; i++) {
         NTPointGeometry *geometry = (NTPointGeometry *)[[features getFeature:i] getGeometry];
         
         NTMarker *marker = [[NTMarker alloc] initWithGeometry:geometry style:style];
-        [vectorDataSource add:marker];
+        [elements add:marker];
     }
+    
+    // Add them all at once to avoid flickering
+    [vectorDataSource addAll:elements];
 }
 
 @end

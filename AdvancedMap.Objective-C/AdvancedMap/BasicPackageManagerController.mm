@@ -57,10 +57,7 @@
     
     NSString *package = [self.bbox toString];
     
-    NSLog(@"Package: ");
-    NSLog(package);
-    
-    if ([self.manager getLocalPackage:package] == nil) {
+    if ([self.manager getLocalPackageStatus:package version:-1] == nil) {
         [self.manager startPackageRemove:package];
     } else {
         [self zoomTo:[self.bbox getCenter]];
