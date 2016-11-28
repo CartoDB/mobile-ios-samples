@@ -30,7 +30,9 @@
 - (void)hide;
 - (void)show;
 - (void)addItems:(NSArray *)items;
-- (void) setInitialValues;
+- (void)setInitialValues;
+
+- (void)resetLanguage;
 
 @end
 
@@ -49,6 +51,8 @@
 @property NSString *typeValue;
 
 - (bool) isMultiLine;
+- (int) lineCount;
+
 - (void)setValues:(NSDictionary *)values;
 
 @end
@@ -108,7 +112,7 @@ NTTileLayer *currentLayer;
     [self updateBaseLayer:@"nutiteq.osm" :@"Vector" :@"default"];
     
     // Default language
-    [self updateLanguage:@"en"];
+    [self updateLanguage:@""];
 }
 
 - (void)onTap:(UITapGestureRecognizer *)recognizer
@@ -152,6 +156,9 @@ NTTileLayer *currentLayer;
             
             currentLayer = [[NTVectorTileLayer alloc] initWithDataSource:source decoder:decoder];
         }
+        
+        [self resetLanguage];
+        
     } else if ([type isEqualToString:@"Raster"]) {
         
         NSString *url = @"";
@@ -194,6 +201,12 @@ NTTileLayer *currentLayer;
     }
 }
 
+- (void)resetLanguage
+{
+    [self.menu resetLanguage];
+    [self updateLanguage:@""];
+}
+
 - (void)updateLanguage:(NSString *)code
 {
     if (currentLayer == nil) {
@@ -210,6 +223,7 @@ NTTileLayer *currentLayer;
     
     [decoder setStyleParameter:@"lang" value:code];
 }
+
 -(NSArray*)options
 {
     return @[
@@ -243,6 +257,8 @@ NTTileLayer *currentLayer;
                      @"OSM": @{ @"name": @"Language", @"value": @"lang" },
                      @"Type": @"Language",
                      @"Styles": @[
+                             @{ @"name": @"Default", @"value": @"" },
+                             
                              @{ @"name": @"English", @"value": @"en" },
                              @{ @"name": @"German", @"value": @"de" },
                              @{ @"name": @"Spanish", @"value": @"es" },
@@ -278,7 +294,7 @@ NTTileLayer *currentLayer;
     return self;
 }
 
--(void) setInitialValues
+-(void)setInitialValues
 {
     // nutiteq. osm is our default baselayer. set it visually in the menu
     OptionsMenuItem *item = [self.views objectAtIndex:0];
@@ -287,12 +303,22 @@ NTTileLayer *currentLayer;
     
     self.currentHighlight = label;
     
-    // Set English as default language
-    OptionsMenuItem *item2 = [self.views objectAtIndex:3];
-    OptionLabel *label2 = [item2.optionLabels objectAtIndex:0];
-    [label2 highlight];
+    [self resetLanguage];
+}
+
+- (void)resetLanguage
+{
+    // Set Default as default language
+    OptionsMenuItem *item = [self.views objectAtIndex:3];
     
-    self.currentLanguageHighlight = label2;
+    for (int i = 0; i < item.optionLabels.count; i++) {
+        [[item.optionLabels objectAtIndex:i] normalize];
+    }
+    
+    OptionLabel *label = [item.optionLabels objectAtIndex:0];
+    [label highlight];
+    
+    self.currentLanguageHighlight = label;
 }
 
 -(void)layoutSubviews
@@ -311,11 +337,7 @@ NTTileLayer *currentLayer;
         
         OptionsMenuItem *view = [self.views objectAtIndex:i];
         
-        if ([view isMultiLine]) {
-            h = 120;
-        } else {
-            h = 80;
-        }
+        h = [view lineCount] * 40 + 40;
         
         [view setFrame:CGRectMake(x, y, w, h)];
         
@@ -457,6 +479,8 @@ NTTileLayer *currentLayer;
     
     self.optionLabels = [[NSMutableArray alloc] init];
     
+    self.layer.cornerRadius = 5;
+    
     return self;
 }
 
@@ -523,6 +547,19 @@ NTTileLayer *currentLayer;
 - (bool)isMultiLine
 {
     return self.optionLabels.count > 3;
+}
+
+- (int)lineCount
+{
+    if (self.optionLabels.count < 4) {
+        return 1;
+    }
+    
+    if (self.optionLabels.count < 7) {
+        return 2;
+    }
+    
+    return 3;
 }
 
 - (void)setValues:(NSDictionary *)values

@@ -37,6 +37,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Clear default base layer
     [[self.mapView getLayers] clear];
     
@@ -137,14 +138,7 @@
 
 - (void)setbaseLayer
 {
-    NTPackageManagerTileDataSource *source = [[NTPackageManagerTileDataSource alloc]initWithPackageManager:self.manager];
-    NTBinaryData *styleBytes = [NTAssetUtils loadAsset:@"nutiteq-dark.zip"];
-    NTZippedAssetPackage *package = [[NTZippedAssetPackage alloc]initWithZipData:styleBytes];
-    NTCompiledStyleSet *style = [[NTCompiledStyleSet alloc]initWithAssetPackage:package];
-    
-    NTMBVectorTileDecoder *decoder = [[NTMBVectorTileDecoder alloc]initWithCompiledStyleSet:style];
-    NTVectorTileLayer *layer = [[NTVectorTileLayer alloc]initWithDataSource:source decoder:decoder];
-    
+    NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc]initWithPackageManager:self.manager style:NT_CARTO_BASEMAP_STYLE_DEFAULT];
     [[self.mapView getLayers] add:layer];
 }
 

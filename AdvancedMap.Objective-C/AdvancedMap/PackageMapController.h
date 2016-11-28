@@ -6,6 +6,6 @@
  */
 @interface PackageMapController : MapBaseController
 
-@property (nonatomic,strong) NTPackageManager* packageManager;
+@property (nonatomic,strong) NTCartoPackageManager* packageManager;
 
 @end

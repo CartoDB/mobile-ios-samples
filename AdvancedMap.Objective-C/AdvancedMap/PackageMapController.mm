@@ -12,8 +12,14 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[self.mapView setZoom:2.0f durationSeconds:0.2f];
-	[self.mapView setTilt:90.0f durationSeconds:0.2f];
+	
+    [self setTitle:@"Packaged map"];
+    
+    // Clear default base layer, as we're using a different layer here
+    [[self.mapView getLayers] clear];
+    
+    NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc]initWithPackageManager:_packageManager style:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    [[self.mapView getLayers] add:layer];
 }
 
 @end
