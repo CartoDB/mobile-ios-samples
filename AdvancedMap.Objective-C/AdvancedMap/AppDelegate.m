@@ -18,7 +18,7 @@
     
     // The initial step: register your license. This must be done before using MapView!
     // The license string used here is intended only for Carto demos and WILL NOT WORK with other apps!
-    [NTMapView registerLicense:@"XTUMwQ0ZDdVp4Qm1RV2QvTWxCQU1KU3hFL09iV2RwU2NBaFVBbzJhRUFORUxBVlY3cy9HSVY5aENqaWFxZDU4PQoKYXBwVG9rZW49ZmM2YzdhYzktMGUxYi00MTU4LWE2MjktYzBhYThiZGY5ZDgzCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLkFkdmFuY2VkTWFwCm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg=="];
+    [NTMapView registerLicense:@"XTUN3Q0ZEenZKWnNJSmZTQ1pHeEZreTFpVnNsNmJkQ0pBaFE3QldULzNPZUt4czBMNHpRUk5VaTFQenVsMmc9PQoKYXBwVG9rZW49N2I4ZjkzODItNGYzMC00ZDBiLWIxY2YtMWUwZTVkZDUwZjgwCmJ1bmRsZUlkZW50aWZpZXI9Y2FydG8uQWR2YW5jZWRNYXAtT2JqZWN0aXZlLUMKb25saW5lTGljZW5zZT0xCnByb2R1Y3RzPXNkay1pb3MtNC4qCndhdGVybWFyaz1jdXN0b20K"];
 
     return YES;
 }

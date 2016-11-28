@@ -149,7 +149,7 @@
 				TargetAttributes = {
 					ADBFDA4C1D7840B1003DCBC9 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4SEU7F9DVX;
+						DevelopmentTeam = 79LP8BB5PK;
 					};
 				};
 			};
@@ -354,6 +354,7 @@
 			baseConfigurationReference = ECCEA6A7E9F089340782DCDB /* Pods-HelloMap.Objective-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4SEU7F9DVX;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "HelloMap.Objective-C/Info.plist";
@@ -368,6 +369,7 @@
 			baseConfigurationReference = D0413114E8B9AD2969A5719B /* Pods-HelloMap.Objective-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4SEU7F9DVX;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "HelloMap.Objective-C/Info.plist";

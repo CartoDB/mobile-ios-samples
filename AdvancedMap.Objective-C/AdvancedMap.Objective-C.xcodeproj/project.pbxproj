@@ -529,7 +529,7 @@
 				ORGANIZATIONNAME = Nutiteq;
 				TargetAttributes = {
 					2A319B3E187C4F8F0004A3CB = {
-						DevelopmentTeam = 4SEU7F9DVX;
+						DevelopmentTeam = 79LP8BB5PK;
 					};
 					ADA114161DA399FF00481261 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -850,7 +850,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.carto.AdvancedMap;
+				PRODUCT_BUNDLE_IDENTIFIER = "carto.AdvancedMap-Objective-C";
 				PRODUCT_NAME = "AdvancedMap.Objective-C";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -880,7 +880,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.carto.AdvancedMap;
+				PRODUCT_BUNDLE_IDENTIFIER = "carto.AdvancedMap-Objective-C";
 				PRODUCT_NAME = "AdvancedMap.Objective-C";
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "";
