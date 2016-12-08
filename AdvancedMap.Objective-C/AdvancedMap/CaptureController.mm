@@ -48,23 +48,23 @@
     // Animate zoom to position
     [self.mapView setFocusPos:berlin durationSeconds:1];
     [self.mapView setZoom:12 durationSeconds:1];
-    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
     // Initialize renderer
     self.listener = [[RendererListener alloc] init];
     self.listener.controller = self;
     self.listener.mapView = self.mapView;
     self.listener.number = 0;
     self.listener.position = [[NTMapPos alloc]init];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
+    
     [[self.mapView getMapRenderer] captureRendering:self.listener waitWhileUpdating:true];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-    [[self.mapView getMapRenderer] captureRendering:nil waitWhileUpdating:true];
+    self.listener = nil;
 }
 
 @end
@@ -96,7 +96,7 @@
         } else {
             result = [@"Unable to save image to " stringByAppendingString:path];
         }
-        
+
         [(CaptureController*)self.controller alert:result];
     }
 }

@@ -62,8 +62,11 @@
 
 @property OptionsMenu *menu;
 @property UIBarButtonItem *menuButton;
+@property UITapGestureRecognizer *recognizer;
 
 @property NTVectorLayer *vectorLayer;
+
+@property VectorTileListener *listener;
 
 - (void)updateBaseLayer:(NSString *)osm :(NSString *)type :(NSString *)style;
 
@@ -90,8 +93,8 @@ NTTileLayer *currentLayer;
     [view setImage:[UIImage imageNamed:@"icon_more"]];
     [view setFrame:CGRectMake(0, 10, 20, 30)];
     
-    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
-    [view addGestureRecognizer:recognizer];
+    self.recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
+    [view addGestureRecognizer:self.recognizer];
     
     self.menuButton = [[UIBarButtonItem alloc]init];
     [self.menuButton setCustomView:view];
@@ -113,6 +116,15 @@ NTTileLayer *currentLayer;
     
     // Default language
     [self updateLanguage:@""];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    self.listener = nil;
+    self.vectorLayer = nil;
+    [self updateListener];
 }
 
 - (void)onTap:(UITapGestureRecognizer *)recognizer
@@ -185,19 +197,29 @@ NTTileLayer *currentLayer;
 
 - (void)initializeVectorTileListener
 {
-//    if (self.vectorLayer == nil) {
+    if (self.vectorLayer == nil) {
         NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc]initWithProjection:[[self.mapView getOptions]getBaseProjection]];
         self.vectorLayer = [[NTVectorLayer alloc]initWithDataSource:source];
-//    }
-    
+    } else {
+        [[self.mapView getLayers] remove:self.vectorLayer];
+    }
+
     [[self.mapView getLayers] add:self.vectorLayer];
     
+    [self updateListener];
+}
+
+- (void)updateListener
+{
     NTLayer *layer = [[self.mapView getLayers] get:0];
     
     if ([layer isKindOfClass:NTVectorTileLayer.class]) {
-        VectorTileListener *listener = [[VectorTileListener alloc]init];
-        listener.vectorLayer = self.vectorLayer;
-        [((NTVectorTileLayer *)layer) setVectorTileEventListener:listener];
+        if (self.listener == nil) {
+            self.listener = [[VectorTileListener alloc]init];
+        }
+        
+        self.listener.vectorLayer = self.vectorLayer;
+        [((NTVectorTileLayer *)layer) setVectorTileEventListener:self.listener];
     }
 }
 
