@@ -161,6 +161,20 @@
     }
 }
 
+-(void) viewWillDisappear:(BOOL)animated {
+    
+    // Reset all listeners. Without this the sample would leak due to cyclical references between MapView and listeners
+    for (int i = 0; i < [[self.mapView getLayers] count]; i++) {
+        
+        NTLayer* layer = [[self.mapView getLayers] get:i];
+        
+        if ([layer isKindOfClass:[NTVectorLayer class]]) {
+            NTVectorLayer* vectorLayer = (NTVectorLayer*) layer;
+            [vectorLayer setVectorElementEventListener:nil];
+        }
+    }
+}
+
 -(void) addPoint1
 {
     NTPointStyleBuilder* builder = [[NTPointStyleBuilder alloc] init];
