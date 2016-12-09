@@ -82,13 +82,6 @@ NTTileLayer *currentLayer;
 {
     [super viewDidLoad];
 
-    CGSize size = [[UIScreen mainScreen] bounds].size;
-    self.menu = [[OptionsMenu alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-    self.menu.map = self.mapView;
-    self.menu.controller = self;
-    
-    [self.menu addItems: self.options];
-    
     UIImageView *view = [[UIImageView alloc]init];
     [view setImage:[UIImage imageNamed:@"icon_more"]];
     [view setFrame:CGRectMake(0, 10, 20, 30)];
@@ -107,8 +100,20 @@ NTTileLayer *currentLayer;
     
     [self.mapView setFocusPos:position durationSeconds:0];
     [self.mapView setZoom:5 durationSeconds:0];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    // Set initial values visually on the manu
+    CGSize size = [[UIScreen mainScreen] bounds].size;
+    self.menu = [[OptionsMenu alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    self.menu.map = self.mapView;
+    self.menu.controller = self;
+    
+    [self.menu addItems: self.options];
+    
+    // Set initial values visually on the menu
     [self.menu setInitialValues];
     
     // Default values for osm, tiletype and style, respectively
@@ -121,6 +126,10 @@ NTTileLayer *currentLayer;
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    // Manually release menu, as it is not added to the controller's view hierarchy,
+    // but directly to the keyWindow
+    self.menu = nil;
     
     self.listener = nil;
     self.vectorLayer = nil;
