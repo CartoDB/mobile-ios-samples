@@ -10,8 +10,8 @@
   1. Unzip it and copy *CartoMobileSDK.framework*  to the xCode project root folder
 
 * Via CocoaPods:
-  1. Navigate to a project's folder in your **terminal**. *Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in xCode point of view.*
-  2. Type "pod install" to download the SDK 
+  1. Navigate to a project's folder in the **Terminal**. *Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in Xcode point of view.*
+  2. Type `pod install` to download the SDK 
   3. Run the project via the **.xcworkspace** file
 
 ## Sample structure
