@@ -23,10 +23,7 @@
     
     NTLayerVector *layers = [mapsService buildNamedMap:@"tpl_69f3eebe_33b6_11e6_8634_0e5db1731f59" templateParams: [[NTStringVariantMap alloc] init]];
     
-    for (int i = 0; i < [layers size]; i++) {
-        NTLayer* layer = [layers get:i];
-        [[self.mapView getLayers]add:layer];
-    }
+    [[self.mapView getLayers] addAll:layers];
     
     // Coordinates are available in the viz.json we download
     NTProjection* projection = [[self.mapView getOptions] getBaseProjection];
