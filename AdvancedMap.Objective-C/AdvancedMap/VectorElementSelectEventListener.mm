@@ -3,12 +3,12 @@
 
 @implementation VectorElementSelectEventListener
 
--(bool) onVectorElementClicked:(NTVectorElementClickInfo *)clickInfo
+-(BOOL) onVectorElementClicked:(NTVectorElementClickInfo *)clickInfo
 {
     NTVectorElement* element = [clickInfo getVectorElement];
     [self.vectorLayer setSelectedVectorElement:element];
     
-    return true;
+    return YES;
 }
 
 @end
