@@ -31,9 +31,9 @@
     NTVariant* variant = [NTVariant fromString:[self getConfig]];
     NTLayerVector *layers = nil;
     
-    try {
+    @try {
         layers = [mapsService buildMap:variant];
-    } catch (NSException *exception) {
+    } @catch (NSException *exception) {
         NSString *message = exception.reason;
         [self alert:message];
         return;
