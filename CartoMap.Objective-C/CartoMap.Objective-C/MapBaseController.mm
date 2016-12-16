@@ -39,4 +39,11 @@
     [[self.mapView getLayers] add:layer];
 }
 
+-(void) alert:(NSString *)message
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.view makeToast:message];
+    });
+}
+
 @end

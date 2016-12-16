@@ -29,7 +29,15 @@
     [mapsService setDefaultVectorLayerMode:NO];
     
     NTVariant* variant = [NTVariant fromString:[self getConfig]];
-    NTLayerVector *layers = [mapsService buildMap:variant];
+    NTLayerVector *layers = nil;
+    
+    try {
+        layers = [mapsService buildMap:variant];
+    } catch (NSException *exception) {
+        NSString *message = exception.reason;
+        [self alert:message];
+        return;
+    }
     
     for (int i = 0; i < [layers size]; i++) {
         
