@@ -14,6 +14,13 @@
 {
     [self addDarkBaseLayer];
     
+    // Base layer is Carto online vector tile layer in our case.
+    NTCartoOnlineVectorTileLayer *baseLayer = (NTCartoOnlineVectorTileLayer *)[[self.mapView getLayers]get:0];
+    
+    // We can modify style parameters of our base layer's tile decoder
+    // In this example, texts are removed so dots would be more prominent
+    [((NTMBVectorTileDecoder *)[baseLayer getTileDecoder]) setStyleParameter:@"lang" value:@"nolang"];
+    
     self.projection = [[self.mapView getOptions] getBaseProjection];
     
     // Create a datasource and layer for the map

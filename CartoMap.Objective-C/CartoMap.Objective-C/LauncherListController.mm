@@ -28,17 +28,17 @@
              @{ @"name": @"CARTO.js API", @"controller": @"Header" },
              @{
                  @"name": @"Countries Vis",
-                 @"description": @"Vis displaying countries in different colors",
+                 @"description": @"Vis displaying countries in different colors using UTFGrid",
                  @"controller": @"CountriesVisController"
                  },
              @{
                  @"name": @"Dots vis",
-                 @"description": @"Vis showing dots on the map",
+                 @"description": @"Vis showing dots on the map using UTFGrid",
                  @"controller": @"DotsVisController"
                  },
              @{
                  @"name": @"Fonts Vis",
-                 @"description": @"Vis displaying text on the map",
+                 @"description": @"Vis displaying text on the map using UTFGrid",
                  @"controller": @"FontsVisController"
                  },
              
@@ -64,7 +64,7 @@
                  },
              @{
                  @"name": @"Named Map",
-                 @"description": @"CARTO data as vector tiles from a named map",
+                 @"description": @"CARTO data as vector tiles from a named map using Vector listener",
                  @"controller": @"NamedMapController"
                  },
              

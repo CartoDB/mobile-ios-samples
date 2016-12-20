@@ -45,6 +45,9 @@
 
     self.tileLayer = [[NTTorqueTileLayer alloc]initWithDataSource:cacheSource decoder:self.decoder];
     
+    // Lower priority so it would load the base layer first
+    [self.tileLayer setUpdatePriority:-1];
+    
     [[self.mapView getLayers] add:_tileLayer];
     [self.mapView setZoom:1 durationSeconds:0];
 }
