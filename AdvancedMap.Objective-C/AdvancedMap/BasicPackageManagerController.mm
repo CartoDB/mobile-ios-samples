@@ -19,6 +19,8 @@
 
 @property NTCartoPackageManager *manager;
 
+@property NSObject *listener;
+
 @property BoundingBox *bbox;
 
 - (void)zoomTo:(NTMapPos *)position;
@@ -52,17 +54,8 @@
     self.bbox.maxLat = 51.7401;
     
     self.manager = [[NTCartoPackageManager alloc] initWithSource:@"nutiteq.osm" dataFolder:folder];
-    [self.manager setPackageManagerListener:[[PackageListener alloc]init]];
-    
+
     [self setbaseLayer];
-    
-    NSString *package = [self.bbox toString];
-    
-    if ([self.manager getLocalPackageStatus:package version:-1] == nil) {
-        [self.manager startPackageRemove:package];
-    } else {
-        [self zoomTo:[self.bbox getCenter]];
-    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -70,6 +63,18 @@
     [super viewWillAppear:animated];
     
     [self.manager start];
+    
+    NSString *package = [self.bbox toString];
+    
+    self.listener = [[PackageListener alloc]init];
+    ((PackageListener *)self.listener).controller = self;
+    [self.manager setPackageManagerListener:(PackageListener *)self.listener];
+    
+    if ([self.manager getLocalPackageStatus:package version:-1] == nil) {
+        [self.manager startPackageDownload:package];
+    } else {
+        [self zoomTo:[self.bbox getCenter]];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -77,6 +82,9 @@
     [super viewWillDisappear:animated];
     
     [self.manager stop:true];
+    
+    self.listener = nil;
+    [self.manager setPackageManagerListener:nil];
 }
 
 - (void)updatePackage:(NSString *)message
@@ -179,7 +187,6 @@
 
 - (void)onPackageStatusChanged:(NSString*)packageId version:(int)version status:(NTPackageStatus*)status
 {
-    
     NSString *percent = [[NSNumber numberWithFloat:[status getProgress]] stringValue];
     NSString *message = [[@"Progress: " stringByAppendingString:percent] stringByAppendingString:@"%"];
     
