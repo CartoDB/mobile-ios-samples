@@ -45,6 +45,17 @@
                 @"controller": @"WMSMapController"
                 },
              
+             /* Routing */
+             @{ @"name": @"Routing", @"controller": @"Header" },
+             @{ @"name": @"Online Routing",
+                @"description": @"Online routing with OpenStreetMap data packages",
+                @"controller": @"OnlineRoutingController"
+                },
+             @{ @"name": @"Offline Routing",
+                @"description": @"Offline routing with OpenStreetMap data packages",
+                @"controller": @"OfflineRoutingController"
+                },
+             
              /* Vector Objects */
              @{ @"name": @"Vector objects", @"controller": @"Header" },
              @{ @"name": @"Clustered Markers",
@@ -89,10 +100,6 @@
                 @"description": @"Shows user GPS location on map",
                 @"controller": @"GPSLocationController"
                 },
-             @{ @"name": @"Offline Routing",
-                @"description": @"Offline routing with OpenStreetMap data packages",
-                @"controller": @"OfflineRoutingController"
-                }
             ];
 }
 

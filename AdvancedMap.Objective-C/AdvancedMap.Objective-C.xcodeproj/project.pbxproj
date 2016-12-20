@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */; };
-		0C97CC471C09B26000336DF7 /* OfflineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */; };
 		2A319B43187C4F8F0004A3CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B42187C4F8F0004A3CB /* Foundation.framework */; };
 		2A319B45187C4F8F0004A3CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */; };
 		2A319B47187C4F8F0004A3CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B46187C4F8F0004A3CB /* UIKit.framework */; };
@@ -38,6 +37,9 @@
 		AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE71DC105A1004E68B2 /* GPSLocationController.m */; };
 		AD589CEA1DC108E9004E68B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD589CE91DC108E9004E68B2 /* CoreLocation.framework */; };
 		AD7A5D1F1D9ABE0700F5EE4E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */; };
+		AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */; };
+		AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */; };
+		AD90F94D1E0970AD00E6EF51 /* OfflineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F94C1E0970AD00E6EF51 /* OfflineRoutingController.mm */; };
 		AD9B19B91DC1E5850025B767 /* cities15000.geojson in Resources */ = {isa = PBXBuildFile; fileRef = AD9B19B81DC1E5850025B767 /* cities15000.geojson */; };
 		ADA1141A1DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */; };
 		ADA114231DA3A24E00481261 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4B1F5F1D018C2A001C2F30 /* libz.tbd */; };
@@ -98,7 +100,6 @@
 /* Begin PBXFileReference section */
 		0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageMapController.mm; path = AdvancedMap/PackageMapController.mm; sourceTree = SOURCE_ROOT; };
 		0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackageMapController.h; path = AdvancedMap/PackageMapController.h; sourceTree = SOURCE_ROOT; };
-		0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OfflineRoutingController.mm; path = AdvancedMap/OfflineRoutingController.mm; sourceTree = SOURCE_ROOT; };
 		2A319B3F187C4F8F0004A3CB /* AdvancedMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdvancedMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A319B42187C4F8F0004A3CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +137,10 @@
 		AD589CE71DC105A1004E68B2 /* GPSLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSLocationController.m; sourceTree = "<group>"; };
 		AD589CE91DC108E9004E68B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = "<absolute>"; };
+		AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRoutingController.h; sourceTree = "<group>"; };
+		AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseRoutingController.mm; sourceTree = "<group>"; };
+		AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OnlineRoutingController.mm; sourceTree = "<group>"; };
+		AD90F94C1E0970AD00E6EF51 /* OfflineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingController.mm; sourceTree = "<group>"; };
 		AD9B19B81DC1E5850025B767 /* cities15000.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cities15000.geojson; path = ../../Assets/cities15000.geojson; sourceTree = "<group>"; };
 		ADA114171DA399FF00481261 /* AdvancedMap.Objective-C.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AdvancedMap.Objective-C.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedMap_Objective_C_UITests.m; sourceTree = "<group>"; };
@@ -304,6 +309,17 @@
 			name = BaseClasses;
 			sourceTree = "<group>";
 		};
+		AD90F9441E096BF700E6EF51 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */,
+				AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */,
+				AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */,
+				AD90F94C1E0970AD00E6EF51 /* OfflineRoutingController.mm */,
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
 		ADA114181DA399FF00481261 /* AdvancedMap.Objective-C.UITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +354,7 @@
 		ADC7313A1DBFA2A400E1CDCA /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				AD90F9441E096BF700E6EF51 /* Routing */,
 				ADC731421DBFA36D00E1CDCA /* BaseMap */,
 				ADC731411DBFA35000E1CDCA /* OverlayDataSource */,
 				ADC7313F1DBFA34000E1CDCA /* VectorObjects */,
@@ -353,7 +370,6 @@
 				AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */,
 				ADC731471DBFA78D00E1CDCA /* CustomPopup */,
 				AD589CE71DC105A1004E68B2 /* GPSLocationController.m */,
-				0C97CC461C09B26000336DF7 /* OfflineRoutingController.mm */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -700,14 +716,16 @@
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredMarkersController.mm in Sources */,
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
 				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
+				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingController.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
+				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
 				ADE5B9361DD5FC3D002ADD34 /* BasicPackageManagerController.mm in Sources */,
+				AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */,
-				0C97CC471C09B26000336DF7 /* OfflineRoutingController.mm in Sources */,
 				AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */,
 				4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
