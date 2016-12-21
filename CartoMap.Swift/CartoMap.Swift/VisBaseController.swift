@@ -30,12 +30,12 @@ class VisBaseController: GLKViewController {
         title = getName();
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
         
         // GLKViewController-specific, do on-demand rendering instead of constant redrawing
         // This is VERY IMPORTANT as it stops battery drain when nothing changes on the screen!
-        paused = true;
+        isPaused = true;
     }
     
     
@@ -54,7 +54,7 @@ class MyCartoVisBuilder : NTCartoVisBuilder {
         self.mapView = mapView;
     }
     
-    override func addLayer(layer: NTLayer!, attributes: NTVariant!) {
+    override func add(_ layer: NTLayer!, attributes: NTVariant!) {
         self.mapView!.getLayers().add(layer);
     }
 }
@@ -64,22 +64,22 @@ class MyCartoVisBuilder : NTCartoVisBuilder {
  *************/
 
 extension NTMapView {
-    func updateVis(url: String) {
+    func updateVis(_ url: String) {
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
             
             self.getLayers().clear();
             
             let loader = NTCartoVisLoader();
 
-            loader.setDefaultVectorLayerMode(true);
+            loader?.setDefaultVectorLayerMode(true);
             
             let fontData = NTAssetUtils.loadAsset("carto-fonts.zip");
-            loader.setVectorTileAssetPackage(NTZippedAssetPackage(zipData: fontData));
+            loader?.setVectorTileAssetPackage(NTZippedAssetPackage(zip: fontData));
             
             let builder = MyCartoVisBuilder(mapView: self);
             
-            loader.loadVis(builder, visURL: url);
+            loader?.loadVis(builder, visURL: url);
         }
     }
 }

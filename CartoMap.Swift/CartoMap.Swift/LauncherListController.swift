@@ -18,40 +18,40 @@ class LauncherListController : UIViewController, UITableViewDelegate, UITableVie
         
         super.viewDidLoad();
         
-        let table = UITableView(frame: UIScreen.mainScreen().bounds);
+        let table = UITableView(frame: UIScreen.main.bounds);
         
         table.delegate = self;
         table.dataSource = self;
         
         self.view = table;
         
-        table.registerClass(TableCell.self, forCellReuseIdentifier: IDENTIFIER);
+        table.register(TableCell.self, forCellReuseIdentifier: IDENTIFIER);
         
         table.reloadData();
         
         title = "CARTO Map";
     }
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.samples.count;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70;
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = samples[indexPath.row];
         navigationController?.pushViewController(controller, animated: true);
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(IDENTIFIER) as! TableCell;
+        let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER) as! TableCell;
         
         let sample = samples[indexPath.row];
 
@@ -68,14 +68,14 @@ class TableCell : UITableViewCell
     var descriptionLabel: UILabel!;
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-        super.init(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
+        super.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: reuseIdentifier)
         
         self.nameLabel = UILabel();
         self.nameLabel.font = UIFont(name: "Helvetica Neue", size: 18);
         addSubview(self.nameLabel);
         
         self.descriptionLabel = UILabel();
-        self.descriptionLabel.textColor = UIColor.darkGrayColor();
+        self.descriptionLabel.textColor = UIColor.darkGray;
         self.descriptionLabel.numberOfLines = 0;
         self.descriptionLabel.font = UIFont(name: "Helvetica Neue", size: 14);
         addSubview(self.descriptionLabel);
