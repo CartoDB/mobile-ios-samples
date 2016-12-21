@@ -56,6 +56,8 @@
     self.manager = [[NTCartoPackageManager alloc] initWithSource:@"nutiteq.osm" dataFolder:folder];
 
     [self setbaseLayer];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -188,7 +190,7 @@
 - (void)onPackageStatusChanged:(NSString*)packageId version:(int)version status:(NTPackageStatus*)status
 {
     NSString *percent = [[NSNumber numberWithFloat:[status getProgress]] stringValue];
-    NSString *message = [[@"Progress: " stringByAppendingString:percent] stringByAppendingString:@"%"];
+    NSString *message = [[@"Downloading: " stringByAppendingString:percent] stringByAppendingString:@"%"];
     
     [self.controller updatePackage:message];
 }

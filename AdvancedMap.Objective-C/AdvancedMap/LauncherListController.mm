@@ -37,18 +37,18 @@
                 @"controller": @"CustomRasterDataSourceController"
                 },
              @{ @"name": @"Ground Overlay",
-                @"description": @"Adding ground-level raster overlay",
+                @"description": @"Adding ground-level raster overlay with indoor plan",
                 @"controller": @"GroundOverlayController"
                 },
              @{ @"name": @"WMS Map",
-                @"description": @"WMS service raster on top of the vector base map",
+                @"description": @"WMS raster map on top of vector base map",
                 @"controller": @"WMSMapController"
                 },
              
              /* Vector Objects */
              @{ @"name": @"Vector objects", @"controller": @"Header" },
              @{ @"name": @"Clustered Markers",
-                @"description": @"Read data from .geojson and show as clusters",
+                @"description": @"Read points from .geojson and show as dynamic clusters",
                 @"controller": @"ClusteredMarkersController"
                 },
              @{ @"name": @"Overlays",
@@ -56,41 +56,41 @@
                 @"controller": @"OverlaysController"
                 },
              @{ @"name": @"Vector object editing",
-                @"description": @"Shows usage of an editable vector layer",
+                @"description": @"Editable vector layer to modify lines, points and polygons",
                 @"controller": @"VectorObjectEditingController"
                 },
              
              /* Offline maps */
              @{ @"name": @"Offline maps", @"controller": @"Header" },
              @{ @"name": @"Bundled Map",
-                @"description": @"Bundle MBTiles file for offline base map",
+                @"description": @"Use bundled MBTiles vector file for offline",
                 @"controller": @"BundledMapController"
                 },
              @{ @"name": @"Basic Package Manager",
-                @"description": @"Download a bounding box of London",
+                @"description": @"Download a map of London for offline",
                 @"controller": @"BasicPackageManagerController"
                 },
              @{ @"name": @"Advanced Package Manager",
-                @"description": @"Download offline map packages with OSM",
+                @"description": @"Download country map packages for offline",
                 @"controller": @"PackageManagerController"
                 },
              
             /* Other */
              @{ @"name": @"Other", @"controller": @"Header" },
              @{ @"name": @"Screencapture",
-                @"description": @"Captures rendered MapView as a Bitmap",
+                @"description": @"Saves completed MapView as a bitmap and shares it",
                 @"controller": @"CaptureController"
                 },
              @{ @"name": @"Custom Popup",
-                @"description": @"Creating and using custom popups",
+                @"description": @"Add customized Popups to map",
                 @"controller": @"CustomPopupController"
                 },
              @{ @"name": @"GPS Location",
-                @"description": @"Shows user GPS location on map",
+                @"description": @"Shows device GNSS location on map",
                 @"controller": @"GPSLocationController"
                 },
              @{ @"name": @"Offline Routing",
-                @"description": @"Offline routing with OpenStreetMap data packages",
+                @"description": @"Offline routing with OpenStreetMap, online backup",
                 @"controller": @"OfflineRoutingController"
                 }
             ];
