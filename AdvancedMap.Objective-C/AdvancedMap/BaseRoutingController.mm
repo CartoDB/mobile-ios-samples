@@ -138,12 +138,13 @@
             [_routeDataSource add: routeLine];
             
             // Show instructions as popups
-            for(int i=0;i<[[route getInstructions] size];i++) {
+            NTRoutingInstructionVector* instructions = [route getInstructions];
+            NTMapPosVector* points = [route getPoints];
+            for (int i = 0; i < [instructions size]; i++) {
+                NTRoutingInstruction *instruction = [instructions get:i];
+                NTMarker* popup = [self createRoutePoint: instruction point: [points get:[instruction getPointIndex]]];
                 
-                NTRoutingInstruction *instruction =[[route getInstructions] get:i];
-                NTMarker* popup = [self createRoutePoint: instruction point: [[route getPoints] get:[instruction getPointIndex]]];
-                
-                if( popup != nil) {
+                if (popup != nil) {
                     [_routeDataSource add:popup];
                 }
             }
@@ -200,7 +201,7 @@
             break;
     }
     
-    NSString* desc =[NSString stringWithFormat:@"%@ \nazimuth:  %.1f deg\ndistance: %.0f m\ntime: %.0f sec\nTurnAngle: %.0f deg", [instruction getStreetName], [instruction getAzimuth], [instruction getDistance], [instruction getTime], [instruction getTurnAngle]];
+    NSString* desc = [NSString stringWithFormat:@"%@ \nazimuth:  %.1f deg\ndistance: %.0f m\ntime: %.0f sec\nTurnAngle: %.0f deg", [instruction getStreetName], [instruction getAzimuth], [instruction getDistance], [instruction getTime], [instruction getTurnAngle]];
     
     // Filter out some instructions which would be too noisy for the map
     if([str isEqualToString:@"continue"] or [str isEqualToString:@"enter roundabout"]) {
