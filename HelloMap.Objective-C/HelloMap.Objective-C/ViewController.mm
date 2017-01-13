@@ -34,7 +34,7 @@
     
     NTProjection* proj = [[mapView getOptions] getBaseProjection];
     
-    // Aniamte zoom to Tallinn, Estonia
+    // Animate zoom to Tallinn, Estonia
     NTMapPos* tallinn = [proj fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.426939]];
     [mapView setZoom:3 durationSeconds:2];
     [mapView setFocusPos:tallinn durationSeconds:0];
