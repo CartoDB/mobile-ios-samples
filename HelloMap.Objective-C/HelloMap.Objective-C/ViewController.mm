@@ -64,6 +64,15 @@
     HelloMapListener* listener = [[HelloMapListener alloc]init];
     listener.marker = marker;
     [mapView setMapEventListener: listener];
+    
+    double x = 0;
+    double y = 0;
+    
+    NTProjection *projection = [[mapView getOptions]getBaseProjection];
+    NTMapPos *latLon = [projection toLatLong:x y:y];
+    
+    [latLon getX];
+    [latLon gety];
 }
 
 @end
@@ -84,6 +93,17 @@
     [builder setColor:color];
     
     [self.marker setStyle:builder.buildStyle];
+    
+    
+    if ([mapClickInfo getClickType] == NT_CLICK_TYPE_SINGLE) {
+        clickType = @"SINGLE";
+    } else if ([mapClickInfo getClickType] == NT_CLICK_TYPE_DOUBLE) {
+        clickType = @"DOUBLE";
+    } else if ([mapClickInfo getClickType] == NT_CLICK_TYPE_LONG) {
+        clickType = @"LONG";
+    } else if ([mapClickInfo getClickType] == NT_CLICK_TYPE_DUAL) {
+        clickType = @"DUAL";
+    }
 }
 
 -(NSArray*) getColors

@@ -11,6 +11,8 @@
     NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
     
     [[self.mapView getLayers] add:layer];
+    
+    self.alert = [[AlertMenu alloc]init];
 }
 
 - (void)viewDidLoad
@@ -25,7 +27,6 @@
 - (void)didReceiveMemoryWarning
 {
 	[super didReceiveMemoryWarning];
-	
     // Dispose of any resources that can be recreated.
 }
 
@@ -41,7 +42,7 @@
 -(void) alert:(NSString *)message
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.view makeToast:message];
+        [self.alert show:message];
     });
 }
 
