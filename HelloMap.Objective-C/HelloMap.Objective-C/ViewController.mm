@@ -64,12 +64,6 @@
     HelloMapListener* listener = [[HelloMapListener alloc]init];
     listener.marker = marker;
     [mapView setMapEventListener: listener];
-    
-    double x = 0;
-    double y = 0;
-    
-    NTProjection *projection = [[mapView getOptions]getBaseProjection];
-    NTMapPos *latLon = [projection toLatLong:x y:y];
 }
 
 @end
