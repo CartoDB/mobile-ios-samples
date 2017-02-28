@@ -41,15 +41,7 @@
                  @"description": @"Vis displaying text on the map using UTFGrid",
                  @"controller": @"FontsVisController"
                  },
-             
-             /* Import API */
-//             @{ @"name": @"Import API", @"controller": @"Header" },
-//             @{
-//                 @"name": @"Tile Packager",
-//                 @"description": @"Packaging tiles (?) //TODO",
-//                 @"controller": @"TilePackagerController"
-//                 },
-             
+            
              /* Maps API */
              @{ @"name": @"Maps API", @"controller": @"Header" },
              @{
@@ -79,9 +71,9 @@
              /* Torque API */
              @{ @"name": @"Torque API", @"controller": @"Header" },
              @{
-                 @"name": @"Carto Torque Map",
-                 @"description": @"Torque tiles of WWII ship movement",
-                 @"controller": @"TorqueShipController"
+                 @"name": @"Torque Map",
+                 @"description": @"Shopper movemenet in a mall throughout the day",
+                 @"controller": @"TorqueController"
                  },
              ];
 }
