@@ -79,30 +79,6 @@
     MyUTFGridEventListener *listener = [[MyUTFGridEventListener alloc] init];
     listener.source = (NTLocalVectorDataSource *)[self.vectorLayer getDataSource];
     [tileLayer setUTFGridEventListener:listener];
-    
-    NTProjection *projection;
-    
-    NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc]initWithProjection:projection];
-    NTVectorLayer *layer_ = [[NTVectorLayer alloc]initWithDataSource:source];
-    
-    [[self.mapView getLayers]add:layer_];
-    
-    NTVectorElement *popup = [[source getAll]get:0];
-    [source remove:popup];
-    
-    NTBalloonPopupStyleBuilder *builder = [[NTBalloonPopupStyleBuilder alloc]init];
-    [builder setDescriptionWrap:NO];
-    [builder setPlacementPriority:1];
-    
-    NSString *title = @"";
-    NSString *description = @"";
-    CGFloat latitude = 0;
-    CGFloat longitude = 0;
-    [NTMapPos alloc]ini
-    NTMapPos *position = [[NTMapPos alloc]initWithX:latitude y:longitude];
-    position = [projection fromWgs84:position];
-    
-    NTBalloonPopup *popup = [NTBalloonPopup alloc]initWithPos:position style:[builder buildStyle] title:title desc:description];
 }
 
 @end
