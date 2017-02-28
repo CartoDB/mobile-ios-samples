@@ -47,6 +47,7 @@
     
     [self setStatusLabel];
     
+    // bounding box of London. Use e.g. bboxfinder.com to get yours
     self.bbox = [[BoundingBox alloc]init];
     self.bbox.minLon = -0.8164;
     self.bbox.minLat = 51.2382;
