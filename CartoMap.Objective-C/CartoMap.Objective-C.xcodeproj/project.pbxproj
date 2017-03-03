@@ -16,6 +16,8 @@
 		AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */; };
 		AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151F1DC24933009DBC0B /* SQLServiceController.m */; };
 		AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */; };
+		AD4111501E698A7F00C96535 /* TorqueView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41114F1E698A7F00C96535 /* TorqueView.m */; };
+		AD4111521E698C7B00C96535 /* TorqueHistogram.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4111511E698C7B00C96535 /* TorqueHistogram.m */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
 		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
@@ -58,7 +60,7 @@
 		ADCA45601D9293C600814350 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45411D9293C600814350 /* nutiteq-dark.zip */; };
 		ADCA45611D9293C600814350 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45421D9293C600814350 /* positron.zip */; };
 		ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */; };
-		ADD8BEBF1D7EAB7400E4B1A8 /* TorqueShipController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8BEBE1D7EAB7400E4B1A8 /* TorqueShipController.m */; };
+		ADD8BEBF1D7EAB7400E4B1A8 /* TorqueController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8BEBE1D7EAB7400E4B1A8 /* TorqueController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,10 @@
 		AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilePackagerController.m; sourceTree = "<group>"; };
 		AD1A151F1DC24933009DBC0B /* SQLServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLServiceController.m; sourceTree = "<group>"; };
 		AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnonymousVectorTableController.m; sourceTree = "<group>"; };
+		AD41114E1E698A6B00C96535 /* TorqueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueView.h; sourceTree = "<group>"; };
+		AD41114F1E698A7F00C96535 /* TorqueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueView.m; sourceTree = "<group>"; };
+		AD4111511E698C7B00C96535 /* TorqueHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueHistogram.m; sourceTree = "<group>"; };
+		AD4111531E698C8800C96535 /* TorqueHistogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueHistogram.h; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
 		ADBFDA741D786F39003DCBC9 /* LauncherListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherListController.h; sourceTree = "<group>"; };
@@ -140,7 +146,7 @@
 		ADCA45411D9293C600814350 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADCA45421D9293C600814350 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
 		ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
-		ADD8BEBE1D7EAB7400E4B1A8 /* TorqueShipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueShipController.m; sourceTree = "<group>"; };
+		ADD8BEBE1D7EAB7400E4B1A8 /* TorqueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +230,10 @@
 		AD1A15131DC242FB009DBC0B /* Torque API */ = {
 			isa = PBXGroup;
 			children = (
-				ADD8BEBE1D7EAB7400E4B1A8 /* TorqueShipController.m */,
+				AD41114C1E69807600C96535 /* Histogram */,
+				ADD8BEBE1D7EAB7400E4B1A8 /* TorqueController.m */,
+				AD41114E1E698A6B00C96535 /* TorqueView.h */,
+				AD41114F1E698A7F00C96535 /* TorqueView.m */,
 			);
 			name = "Torque API";
 			sourceTree = "<group>";
@@ -245,6 +254,23 @@
 				0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */,
 			);
 			name = "Maps API";
+			sourceTree = "<group>";
+		};
+		AD41114C1E69807600C96535 /* Histogram */ = {
+			isa = PBXGroup;
+			children = (
+				AD41114D1E69808000C96535 /* Subviews */,
+				AD4111531E698C8800C96535 /* TorqueHistogram.h */,
+				AD4111511E698C7B00C96535 /* TorqueHistogram.m */,
+			);
+			name = Histogram;
+			sourceTree = "<group>";
+		};
+		AD41114D1E69808000C96535 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subviews;
 			sourceTree = "<group>";
 		};
 		ADC28F681D782FB300796134 = {
@@ -567,7 +593,7 @@
 			files = (
 				AD1A151B1DC245B1009DBC0B /* FontsVisController.m in Sources */,
 				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
-				ADD8BEBF1D7EAB7400E4B1A8 /* TorqueShipController.m in Sources */,
+				ADD8BEBF1D7EAB7400E4B1A8 /* TorqueController.m in Sources */,
 				AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */,
 				ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
@@ -575,6 +601,8 @@
 				AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */,
 				AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */,
 				0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */,
+				AD4111521E698C7B00C96535 /* TorqueHistogram.m in Sources */,
+				AD4111501E698A7F00C96535 /* TorqueView.m in Sources */,
 				ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
 				AD1A15171DC24599009DBC0B /* CountriesVisController.m in Sources */,

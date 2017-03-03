@@ -1,10 +1,13 @@
 
 #import "MapBaseController.h"
+#import "TorqueView.h"
 
-@interface TorqueController : MapBaseController
+@interface TorqueController : UIViewController
 
 @property NTTorqueTileDecoder* decoder;
 @property NTTorqueTileLayer* torqueLayer;
+
+@property TorqueView *contentView;
 
 @property NSTimer* timer;
 
@@ -21,9 +24,9 @@
         return self.torqueLayer;
     }
     
-    for (int i = 0; i < [[self.mapView getLayers] count]; i++)
+    for (int i = 0; i < [[self.contentView.MapView getLayers] count]; i++)
     {
-        NTLayer *layer = [[self.mapView getLayers] get:i];
+        NTLayer *layer = [[self.contentView.MapView getLayers] get:i];
         
         if ([layer class] == [NTTorqueTileLayer class])
         {
@@ -44,6 +47,9 @@
     NSString *mapname = @"tpl_a108ee2b_6699_43bc_aa71_3b0bc962acf9";
     BOOL isVector = NO;
     
+    self.contentView = [[TorqueView alloc]init];
+    self.view = self.contentView;
+    
     NTCartoMapsService *service = [[NTCartoMapsService alloc]init];
     [service setUsername:username];
     [service setDefaultVectorLayerMode:isVector];
@@ -60,15 +66,15 @@
         
         for (int i = 0; i < [layers size]; i++) {
             NTLayer *layer = [layers get:i];
-            [[self.mapView getLayers] add:layer];
+            [[self.contentView.MapView getLayers] add:layer];
         }
 
     });
 
     NTMapPos *position = [[NTMapPos alloc] initWithX:0.0013 y:0.0013];
-    NTMapPos *center = [[[self.mapView getOptions] getBaseProjection ] fromWgs84:position];
-    [self.mapView setFocusPos:center durationSeconds:0];
-    [self.mapView setZoom:18.0f durationSeconds:0];
+    NTMapPos *center = [[[self.contentView.MapView getOptions] getBaseProjection ] fromWgs84:position];
+    [self.contentView.MapView setFocusPos:center durationSeconds:0];
+    [self.contentView.MapView setZoom:18.0f durationSeconds:0];
 }
 
 -(void) viewWillAppear:(BOOL)animated
