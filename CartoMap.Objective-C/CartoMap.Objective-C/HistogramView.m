@@ -43,8 +43,6 @@
     CGFloat margin = parentHeight - height;
     
     [self UpdateLayout:height margin:margin];
-    
-    NSLog(@"Update 1: %d, %d, %f", percent, margin, height);
 }
 
 - (void)Update:(CGFloat)parentHeight max:(int)maxElements
@@ -54,8 +52,6 @@
     CGFloat margin = parentHeight - height;
     
     [self UpdateLayout:height margin:margin];
-    
-    NSLog(@"Update 2: %d, %f", percent, height);
 }
 
 - (void)UpdateLayout:(CGFloat)height margin:(CGFloat)margin
@@ -77,7 +73,6 @@
     if (self) {
         
         self.intervals = [[NSMutableArray alloc]init];
-//        self.intervals = [NSMutableArray array];
         [[self layer] setCornerRadius:3];
     }
     return self;
@@ -113,12 +108,12 @@
     }
 }
 
-- (void)UpdateAll: (int)maxElements {
-    
+- (void)UpdateAll: (int)maxElements
+{
     for (int i = 0; i < [self.intervals count]; i++)
     {
         TorqueInterval *interval = [self.intervals objectAtIndex:i];
-        [interval UpdateLayout:[self frame].size.height margin:maxElements];
+        [interval Update:[self frame].size.height max:maxElements];
     }
 }
 
