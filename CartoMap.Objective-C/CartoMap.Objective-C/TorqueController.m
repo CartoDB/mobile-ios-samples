@@ -8,8 +8,11 @@
 @property NTTorqueTileLayer* torqueLayer;
 
 @property TorqueView *contentView;
+@property UITapGestureRecognizer *recognizer;
 
 @property NSTimer* timer;
+
+@property int max;
 
 -(NTTorqueTileLayer*)getTorqueLayer;
 
@@ -68,20 +71,29 @@
             NTLayer *layer = [layers get:i];
             [[self.contentView.MapView getLayers] add:layer];
         }
-
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self getTorqueLayer] != nil) {
+                [self.contentView.Histogram Initialize:[self.decoder getFrameCount]];
+            }
+        });
     });
 
     NTMapPos *position = [[NTMapPos alloc] initWithX:0.0013 y:0.0013];
     NTMapPos *center = [[[self.contentView.MapView getOptions] getBaseProjection ] fromWgs84:position];
     [self.contentView.MapView setFocusPos:center durationSeconds:0];
     [self.contentView.MapView setZoom:18.0f durationSeconds:0];
+    
+    self.recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onHistogramClick:)];
 }
 
 -(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTorque:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(updateTorque:) userInfo:nil repeats:YES];
+    
+    [self.contentView.Histogram.HistogramView addGestureRecognizer:self.recognizer];
 }
 
 -(void) viewWillDisappear:(BOOL)animated
@@ -90,19 +102,57 @@
     
     [self.timer invalidate];
     self.timer = nil;
+    
+    [self.contentView.Histogram.HistogramView removeGestureRecognizer:self.recognizer];
 }
 
--(void) updateTorque:(NSTimer*)timer
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
-    if (self.torqueLayer == nil) {
+    [self.contentView.Histogram OnOrientationChange];
+}
+
+- (void)onHistogramClick:(UITapGestureRecognizer *)recognizer
+{
+    [self.contentView.Histogram.Button pause];
+    
+    CGPoint point = [recognizer locationInView:self.contentView.Histogram.HistogramView];
+    int frameNumber = point.x / self.contentView.Histogram.HistogramView.IntervalWidth;
+    
+    [self.contentView.Histogram.Counter update:frameNumber count:[self.decoder getFrameCount]];
+    [self.contentView.Histogram.Indicator Update:frameNumber];
+    
+    [[self getTorqueLayer] setFrameNr:frameNumber];
+}
+
+- (void)updateTorque:(NSTimer*)timer
+{
+    if ([self getTorqueLayer] == nil) {
+        return;
+    }
+    
+    if ([self.contentView.Histogram.Button isPaused]) {
         return;
     }
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        int frame = ([self.torqueLayer getFrameNr] + 1) % [self.decoder getFrameCount];
-        [self.torqueLayer setFrameNr:frame];
+        int frameNumber = ([self.torqueLayer getFrameNr] + 1) % [self.decoder getFrameCount];
+        [self.torqueLayer setFrameNr:frameNumber];
         
+        int count = [self.torqueLayer countVisibleFeatures:frameNumber];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (count > self.max) {
+                self.max = count;
+                [self.contentView.Histogram UpdateAll:count];
+            } else {
+                [self.contentView.Histogram UpdateElement:frameNumber count:count max:self.max];
+            }
+            
+            [self.contentView.Histogram.Counter update:frameNumber count:[self.decoder getFrameCount]];
+            
+        });
     });
 }
 

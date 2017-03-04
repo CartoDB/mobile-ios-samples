@@ -18,6 +18,12 @@
 		AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */; };
 		AD4111501E698A7F00C96535 /* TorqueView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41114F1E698A7F00C96535 /* TorqueView.m */; };
 		AD4111521E698C7B00C96535 /* TorqueHistogram.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4111511E698C7B00C96535 /* TorqueHistogram.m */; };
+		AD4111561E6997E500C96535 /* HistogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4111551E6997E500C96535 /* HistogramView.m */; };
+		AD4111591E69B1D200C96535 /* TorqueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4111581E69B1D200C96535 /* TorqueButton.m */; };
+		AD41115C1E69B6C000C96535 /* TorqueCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41115B1E69B6C000C96535 /* TorqueCounter.m */; };
+		AD41115F1E69BF4600C96535 /* TorqueIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41115E1E69BF4600C96535 /* TorqueIndicator.m */; };
+		AD4111621E69CFA500C96535 /* button_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111601E69CFA500C96535 /* button_pause.png */; };
+		AD4111631E69CFA500C96535 /* button_play.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111611E69CFA500C96535 /* button_play.png */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
 		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
@@ -97,6 +103,16 @@
 		AD41114F1E698A7F00C96535 /* TorqueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueView.m; sourceTree = "<group>"; };
 		AD4111511E698C7B00C96535 /* TorqueHistogram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueHistogram.m; sourceTree = "<group>"; };
 		AD4111531E698C8800C96535 /* TorqueHistogram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueHistogram.h; sourceTree = "<group>"; };
+		AD4111541E6997D100C96535 /* HistogramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistogramView.h; sourceTree = "<group>"; };
+		AD4111551E6997E500C96535 /* HistogramView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistogramView.m; sourceTree = "<group>"; };
+		AD4111571E69B1C400C96535 /* TorqueButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueButton.h; sourceTree = "<group>"; };
+		AD4111581E69B1D200C96535 /* TorqueButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueButton.m; sourceTree = "<group>"; };
+		AD41115A1E69B6B500C96535 /* TorqueCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueCounter.h; sourceTree = "<group>"; };
+		AD41115B1E69B6C000C96535 /* TorqueCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueCounter.m; sourceTree = "<group>"; };
+		AD41115D1E69BF0D00C96535 /* TorqueIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueIndicator.h; sourceTree = "<group>"; };
+		AD41115E1E69BF4600C96535 /* TorqueIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueIndicator.m; sourceTree = "<group>"; };
+		AD4111601E69CFA500C96535 /* button_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_pause.png; path = ../../Assets/button_pause.png; sourceTree = "<group>"; };
+		AD4111611E69CFA500C96535 /* button_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_play.png; path = ../../Assets/button_play.png; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
 		ADBFDA741D786F39003DCBC9 /* LauncherListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherListController.h; sourceTree = "<group>"; };
@@ -269,6 +285,14 @@
 		AD41114D1E69808000C96535 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				AD4111541E6997D100C96535 /* HistogramView.h */,
+				AD4111551E6997E500C96535 /* HistogramView.m */,
+				AD4111571E69B1C400C96535 /* TorqueButton.h */,
+				AD4111581E69B1D200C96535 /* TorqueButton.m */,
+				AD41115A1E69B6B500C96535 /* TorqueCounter.h */,
+				AD41115B1E69B6C000C96535 /* TorqueCounter.m */,
+				AD41115D1E69BF0D00C96535 /* TorqueIndicator.h */,
+				AD41115E1E69BF4600C96535 /* TorqueIndicator.m */,
 			);
 			name = Subviews;
 			sourceTree = "<group>";
@@ -309,6 +333,8 @@
 				ADC28F781D782FB300796134 /* AppDelegate.m */,
 				ADC28F7D1D782FB300796134 /* Main.storyboard */,
 				ADC28F801D782FB300796134 /* Assets.xcassets */,
+				AD4111601E69CFA500C96535 /* button_pause.png */,
+				AD4111611E69CFA500C96535 /* button_play.png */,
 				ADC28F821D782FB300796134 /* LaunchScreen.storyboard */,
 				ADC28F851D782FB300796134 /* Info.plist */,
 				ADC28F741D782FB300796134 /* Supporting Files */,
@@ -485,6 +511,7 @@
 				ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */,
 				ADCA45481D9293C600814350 /* arrow.png in Resources */,
 				ADCA454F1D9293C600814350 /* direction_up.png in Resources */,
+				AD4111621E69CFA500C96535 /* button_pause.png in Resources */,
 				ADCA45511D9293C600814350 /* direction_upthenright.png in Resources */,
 				ADCA455E1D9293C600814350 /* nutibright-contourstyle.zip in Resources */,
 				ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */,
@@ -496,6 +523,7 @@
 				ADCA454A1D9293C600814350 /* basic.zip in Resources */,
 				ADCA454D1D9293C600814350 /* cartodark.zip in Resources */,
 				ADCA45471D9293C600814350 /* 852-map-toolbar@3x.png in Resources */,
+				AD4111631E69CFA500C96535 /* button_play.png in Resources */,
 				ADCA455D1D9293C600814350 /* milktruck.nml in Resources */,
 				ADCA455F1D9293C600814350 /* nutibright-v3.zip in Resources */,
 				ADCA45491D9293C600814350 /* arrow@2x.png in Resources */,
@@ -598,15 +626,19 @@
 				ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
 				AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */,
+				AD4111561E6997E500C96535 /* HistogramView.m in Sources */,
 				AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */,
 				AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */,
+				AD41115C1E69B6C000C96535 /* TorqueCounter.m in Sources */,
 				0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */,
 				AD4111521E698C7B00C96535 /* TorqueHistogram.m in Sources */,
 				AD4111501E698A7F00C96535 /* TorqueView.m in Sources */,
 				ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
 				AD1A15171DC24599009DBC0B /* CountriesVisController.m in Sources */,
+				AD41115F1E69BF4600C96535 /* TorqueIndicator.m in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
+				AD4111591E69B1D200C96535 /* TorqueButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

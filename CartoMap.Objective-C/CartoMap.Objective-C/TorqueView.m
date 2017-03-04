@@ -33,11 +33,12 @@
     
     CGFloat padding = 5;
     
-    CGFloat h = 80;
+    CGFloat h = 70;
     CGFloat w = bounds.size.width - 2 * padding;
     CGFloat x = padding;
     CGFloat y = bounds.size.height - (padding + h);
     
+    self.Histogram.Margin = 5;
     [self.Histogram setFrame:CGRectMake(x, y, w, h)];
 }
 

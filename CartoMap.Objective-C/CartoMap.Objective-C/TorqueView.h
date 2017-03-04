@@ -7,6 +7,7 @@
 @interface TorqueView : UIView
 
 @property (nonatomic,strong) NTMapView *MapView;
+
 @property TorqueHistogram *Histogram;
 
 @end
