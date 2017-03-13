@@ -259,11 +259,11 @@
         
         NTMapPos* clickPos = [mapClickInfo getClickPos];
         
-        if(_startPos == nil){
+        if(_startPos == nil) {
             _startPos = clickPos;
             [(BaseRoutingController*)_routingController setStart: clickPos];
             
-        }else if (_stopPos == nil){
+        } else if (_stopPos == nil) {
             
             _stopPos = clickPos;
             
@@ -301,10 +301,12 @@
     [styleBuilder setPlacementPriority: 1]; // make sure it is on top of Markers
     
     if([title isEqualToString:@""]){
+        
         // route description if clicked to line
         [styleBuilder setLeftColor:[[NTColor alloc] initWithColor:0xFF0000AA]]; // blue
         
         clickPopup = [[NTBalloonPopup alloc] initWithPos:[clickInfo getElementClickPos] style:[styleBuilder buildStyle] title:desc desc:@""];
+        
     } else {
         [styleBuilder setLeftColor:[[NTColor alloc] initWithColor:0xFF00AA00]]; // green
         

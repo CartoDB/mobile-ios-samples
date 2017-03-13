@@ -51,9 +51,9 @@
                 @"description": @"Online routing with OpenStreetMap data packages",
                 @"controller": @"OnlineRoutingController"
                 },
-             @{ @"name": @"Offline Routing",
-                @"description": @"Offline routing with OpenStreetMap data packages",
-                @"controller": @"OfflineRoutingController"
+             @{ @"name": @"Offline Routing with package download",
+                @"description": @"Offline Routing where Androrra, Europe is downloaded",
+                @"controller": @"OfflineRoutingPackageController"
                 },
              
              /* Vector Objects */

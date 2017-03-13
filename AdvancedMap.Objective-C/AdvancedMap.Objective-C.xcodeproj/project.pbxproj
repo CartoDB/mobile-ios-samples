@@ -39,7 +39,7 @@
 		AD7A5D1F1D9ABE0700F5EE4E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */; };
 		AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */; };
 		AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */; };
-		AD90F94D1E0970AD00E6EF51 /* OfflineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F94C1E0970AD00E6EF51 /* OfflineRoutingController.mm */; };
+		AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */; };
 		AD9B19B91DC1E5850025B767 /* cities15000.geojson in Resources */ = {isa = PBXBuildFile; fileRef = AD9B19B81DC1E5850025B767 /* cities15000.geojson */; };
 		AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F81501E4B67490091DB26 /* AlertMenu.m */; };
 		ADA1141A1DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */; };
@@ -86,6 +86,9 @@
 		ADED5F2F1D92A31800AB2D13 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */; };
 		ADED5F301D92A31800AB2D13 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F111D92A31800AB2D13 /* positron.zip */; };
 		ADED5F311D92A31800AB2D13 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */; };
+		ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10251E76EB10009DC903 /* BoundingBox.m */; };
+		ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */; };
+		ADFC102C1E76F190009DC903 /* OfflineRoutingPackageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +144,7 @@
 		AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRoutingController.h; sourceTree = "<group>"; };
 		AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseRoutingController.mm; sourceTree = "<group>"; };
 		AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OnlineRoutingController.mm; sourceTree = "<group>"; };
-		AD90F94C1E0970AD00E6EF51 /* OfflineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingController.mm; sourceTree = "<group>"; };
+		AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingBaseController.mm; sourceTree = "<group>"; };
 		AD9B19B81DC1E5850025B767 /* cities15000.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cities15000.geojson; path = ../../Assets/cities15000.geojson; sourceTree = "<group>"; };
 		AD9F814F1E4B67340091DB26 /* AlertMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertMenu.h; sourceTree = "<group>"; };
 		AD9F81501E4B67490091DB26 /* AlertMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertMenu.m; sourceTree = "<group>"; };
@@ -192,6 +195,12 @@
 		ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADED5F111D92A31800AB2D13 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
 		ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
+		ADFC10241E76EAFB009DC903 /* BoundingBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoundingBox.h; sourceTree = "<group>"; };
+		ADFC10251E76EB10009DC903 /* BoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundingBox.m; sourceTree = "<group>"; };
+		ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfflineRoutingBaseController.h; sourceTree = "<group>"; };
+		ADFC10281E76F031009DC903 /* RoutePackageManagerListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoutePackageManagerListener.h; sourceTree = "<group>"; };
+		ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RoutePackageManagerListener.mm; sourceTree = "<group>"; };
+		ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingPackageController.mm; sourceTree = "<group>"; };
 		B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E918DC6CE207EA525F4C3D2C /* libPods-AdvancedMap.Objective-C.UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -277,6 +286,7 @@
 		2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				ADFC10231E76EAEF009DC903 /* Utils */,
 				AD860A6B1D7DA103005994B2 /* BaseClasses */,
 				ADC7313A1DBFA2A400E1CDCA /* Sections */,
 				4DEB06DF1A10DF0F003D111C /* LauncherListController.h */,
@@ -317,10 +327,14 @@
 		AD90F9441E096BF700E6EF51 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				ADFC10281E76F031009DC903 /* RoutePackageManagerListener.h */,
+				ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */,
 				AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */,
 				AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */,
+				ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */,
+				AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */,
 				AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */,
-				AD90F94C1E0970AD00E6EF51 /* OfflineRoutingController.mm */,
+				ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */,
 			);
 			name = Routing;
 			sourceTree = "<group>";
@@ -495,6 +509,15 @@
 				ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		ADFC10231E76EAEF009DC903 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ADFC10241E76EAFB009DC903 /* BoundingBox.h */,
+				ADFC10251E76EB10009DC903 /* BoundingBox.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -717,13 +740,16 @@
 				ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */,
 				4DEB06D01A10BDB7003D111C /* OverlaysController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
+				ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */,
 				AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredMarkersController.mm in Sources */,
+				ADFC102C1E76F190009DC903 /* OfflineRoutingPackageController.mm in Sources */,
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
 				AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */,
 				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
-				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingController.mm in Sources */,
+				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
+				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
