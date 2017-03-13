@@ -51,9 +51,13 @@
                 @"description": @"Online routing with OpenStreetMap data packages",
                 @"controller": @"OnlineRoutingController"
                 },
-             @{ @"name": @"Offline Routing with package download",
-                @"description": @"Offline Routing where Androrra, Europe is downloaded",
+             @{ @"name": @"Offline Routing (country)",
+                @"description": @"Offline Routing where a country package (Androrra) is downloaded",
                 @"controller": @"OfflineRoutingPackageController"
+                },
+             @{ @"name": @"Offline Routing (bbox)",
+                @"description": @"Offline Routing where a bounding box of New York",
+                @"controller": @"OfflineRoutingBBoxController"
                 },
              
              /* Vector Objects */

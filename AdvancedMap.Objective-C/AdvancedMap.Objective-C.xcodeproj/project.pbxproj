@@ -89,6 +89,7 @@
 		ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10251E76EB10009DC903 /* BoundingBox.m */; };
 		ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */; };
 		ADFC102C1E76F190009DC903 /* OfflineRoutingPackageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */; };
+		ADFC102F1E76F406009DC903 /* OfflineRoutingBBoxController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102E1E76F406009DC903 /* OfflineRoutingBBoxController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		ADFC10281E76F031009DC903 /* RoutePackageManagerListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoutePackageManagerListener.h; sourceTree = "<group>"; };
 		ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RoutePackageManagerListener.mm; sourceTree = "<group>"; };
 		ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingPackageController.mm; sourceTree = "<group>"; };
+		ADFC102E1E76F406009DC903 /* OfflineRoutingBBoxController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingBBoxController.mm; sourceTree = "<group>"; };
 		B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E918DC6CE207EA525F4C3D2C /* libPods-AdvancedMap.Objective-C.UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -327,14 +329,10 @@
 		AD90F9441E096BF700E6EF51 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				ADFC10281E76F031009DC903 /* RoutePackageManagerListener.h */,
-				ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */,
-				AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */,
-				AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */,
-				ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */,
-				AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */,
+				ADFC102D1E76F3E4009DC903 /* Utils */,
 				AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */,
 				ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */,
+				ADFC102E1E76F406009DC903 /* OfflineRoutingBBoxController.mm */,
 			);
 			name = Routing;
 			sourceTree = "<group>";
@@ -516,6 +514,19 @@
 			children = (
 				ADFC10241E76EAFB009DC903 /* BoundingBox.h */,
 				ADFC10251E76EB10009DC903 /* BoundingBox.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		ADFC102D1E76F3E4009DC903 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ADFC10281E76F031009DC903 /* RoutePackageManagerListener.h */,
+				ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */,
+				AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */,
+				AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */,
+				ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */,
+				AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -755,6 +766,7 @@
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
 				ADE5B9361DD5FC3D002ADD34 /* BasicPackageManagerController.mm in Sources */,
+				ADFC102F1E76F406009DC903 /* OfflineRoutingBBoxController.mm in Sources */,
 				AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */,
