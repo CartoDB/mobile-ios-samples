@@ -56,7 +56,7 @@
                 @"controller": @"OfflineRoutingPackageController"
                 },
              @{ @"name": @"Offline Routing (bbox)",
-                @"description": @"Offline Routing where a bounding box of New York",
+                @"description": @"Offline Routing where a bounding box of New York is downloaded",
                 @"controller": @"OfflineRoutingBBoxController"
                 },
              
