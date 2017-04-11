@@ -51,6 +51,11 @@
     CGFloat w = self.CounterHeight * 4;
     CGFloat h = self.CounterHeight;
     
+    CGFloat min = 150.0f;
+    if (w < min) {
+        w = min;
+    }
+    
     [self.Counter setFrame:CGRectMake(x, y, w, h)];
     
     y = self.CounterHeight + self.Margin;
@@ -78,10 +83,6 @@
 - (void)Initialize: (int)frameCount
 {
     self.HistogramView.IntervalWidth = [self.HistogramView frame].size.width / frameCount;
-    
-    NSLog(@"histogram: %d", [self.HistogramView frame].size.width);
-    NSLog(@"framecount: %d", frameCount);
-    NSLog(@"width: %d", self.HistogramView.IntervalWidth);
     
     [self.HistogramView Initialize:frameCount];
     [self.HistogramView SetIntervalColor:self.IntervalColor];

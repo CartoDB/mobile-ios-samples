@@ -10,6 +10,8 @@
 
 @interface TorqueCounter : UILabel
 
+@property NSMutableArray *timestamps;
+
 - (void)update: (int)frameNumber count: (int)frameCount;
 
 @end

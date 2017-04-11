@@ -22,7 +22,6 @@
     // The initial step: register your license.
     // This must be done before using MapView
     [NTMapView registerLicense:License];
-    
 
     return YES;
 }
