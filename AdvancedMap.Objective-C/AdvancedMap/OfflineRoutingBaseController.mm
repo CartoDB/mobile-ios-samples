@@ -5,18 +5,16 @@
 
 - (void)viewDidLoad
 {
-    // Create folder for package manager. Package manager needs persistent writable folder.
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask,YES);
-    NSString* appSupportDir = [paths objectAtIndex: 0];
-    NSString* packagesDir = [appSupportDir stringByAppendingString:@"/packages"];
+    NSString *directory = [self getPackageDirectory];
+ 
     NSError *error;
     
-    [[NSFileManager defaultManager] createDirectoryAtPath:packagesDir withIntermediateDirectories:YES attributes:nil error:&error];
+    [[NSFileManager defaultManager] createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:&error];
     
-    self.packageManager = [[NTCartoPackageManager alloc] initWithSource:@"routing:nutiteq.osm.car" dataFolder:packagesDir];
-
+    self.packageManager = [[NTCartoPackageManager alloc] initWithSource:[self getSource] dataFolder:directory];
+    
     // Create offline routing service connected to package manager
-    self.service = [[NTPackageManagerRoutingService alloc] initWithPackageManager:self.packageManager];
+    self.service = [self getService];
     
     // Call base class where most other setup is done
     [super viewDidLoad];
@@ -46,6 +44,28 @@
     
     self._packageManagerListener = nil;
     [self.packageManager setPackageManagerListener:self._packageManagerListener];
+}
+
+- (NSString *) getSource
+{
+    return @"routing:nutiteq.osm.car";
+}
+
+- (NSString *) getPackageDirectory
+{
+    return [[self getAppSupportDirectory ] stringByAppendingString:@"/packages"];
+}
+
+- (NSString *) getAppSupportDirectory
+{
+    // Create folder for package manager. Package manager needs persistent writable folder.
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask,YES);
+    return [paths objectAtIndex: 0];
+}
+
+- (NTRoutingService *)getService
+{
+    return [[NTPackageManagerRoutingService alloc] initWithPackageManager:self.packageManager];
 }
 
 @end
