@@ -24,13 +24,7 @@
     NSString *minLon = [NSString stringWithFormat:@"%.04f", self.minLon];
     NSString *maxLat = [NSString stringWithFormat:@"%.04f", self.maxLat];
     NSString *maxLon = [NSString stringWithFormat:@"%.04f", self.maxLon];
-    
-//    return [[[[[[[[@"bbox("
-//                   stringByAppendingString:minLat] stringByAppendingString:@","]
-//                 stringByAppendingString:minLon] stringByAppendingString:@","]
-//               stringByAppendingString:maxLat]stringByAppendingString:@","]
-//             stringByAppendingString:maxLon] stringByAppendingString:@")"];
-    
+
     return [[[[[[[[@"bbox("
                    stringByAppendingString:minLon] stringByAppendingString:@","]
                  stringByAppendingString:minLat] stringByAppendingString:@","]
