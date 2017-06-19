@@ -1,0 +1,5 @@
+platform :ios, '9.0'
+
+target 'Feature Demo' do
+  pod 'CartoMobileSDK', '~> 4.0.2'
+end
