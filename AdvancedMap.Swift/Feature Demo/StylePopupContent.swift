@@ -168,6 +168,7 @@ class StylePopupContentSectionItem : UIView {
         
         imageView = UIImageView()
         imageView.image = UIImage(named: imageUrl)
+        imageView.contentMode = .scaleToFill
         
         addSubview(imageView)
         

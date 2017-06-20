@@ -13,6 +13,14 @@
 		AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */; };
 		AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */; };
 		AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */; };
+		AD437ECA1EF933C5008CEA76 /* style_image_carto_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC21EF933C5008CEA76 /* style_image_carto_darkmatter.png */; };
+		AD437ECB1EF933C5008CEA76 /* style_image_carto_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC31EF933C5008CEA76 /* style_image_carto_positron.png */; };
+		AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC41EF933C5008CEA76 /* style_image_mapzen_darkmatter.png */; };
+		AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC51EF933C5008CEA76 /* style_image_mapzen_positron.png */; };
+		AD437ECE1EF933C5008CEA76 /* style_image_mapzen_bright.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC61EF933C5008CEA76 /* style_image_mapzen_bright.png */; };
+		AD437ECF1EF933C5008CEA76 /* style_image_nutiteq_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC71EF933C5008CEA76 /* style_image_nutiteq_dark.png */; };
+		AD437ED01EF933C5008CEA76 /* style_image_nutiteq_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC81EF933C5008CEA76 /* style_image_nutiteq_gray.png */; };
+		AD437ED11EF933C5008CEA76 /* style_image_nutiteq_bright.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC91EF933C5008CEA76 /* style_image_nutiteq_bright.png */; };
 		AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */; };
 		AD9786881EF7DACF002912DF /* StyleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786871EF7DACF002912DF /* StyleChoiceView.swift */; };
 		AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786891EF7EB34002912DF /* GalleryDelegate.swift */; };
@@ -56,6 +64,14 @@
 		AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupContent.swift; sourceTree = "<group>"; };
 		AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
 		AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = styles_mapzen.zip; sourceTree = "<group>"; };
+		AD437EC21EF933C5008CEA76 /* style_image_carto_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_darkmatter.png; sourceTree = "<group>"; };
+		AD437EC31EF933C5008CEA76 /* style_image_carto_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_positron.png; sourceTree = "<group>"; };
+		AD437EC41EF933C5008CEA76 /* style_image_mapzen_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_darkmatter.png; sourceTree = "<group>"; };
+		AD437EC51EF933C5008CEA76 /* style_image_mapzen_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_positron.png; sourceTree = "<group>"; };
+		AD437EC61EF933C5008CEA76 /* style_image_mapzen_bright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_bright.png; sourceTree = "<group>"; };
+		AD437EC71EF933C5008CEA76 /* style_image_nutiteq_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_dark.png; sourceTree = "<group>"; };
+		AD437EC81EF933C5008CEA76 /* style_image_nutiteq_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_gray.png; sourceTree = "<group>"; };
+		AD437EC91EF933C5008CEA76 /* style_image_nutiteq_bright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_bright.png; sourceTree = "<group>"; };
 		AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceController.swift; sourceTree = "<group>"; };
 		AD9786871EF7DACF002912DF /* StyleChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceView.swift; sourceTree = "<group>"; };
 		AD9786891EF7EB34002912DF /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +130,21 @@
 				AD0CD3111EF420FB007E4378 /* Colors.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		AD437EC11EF93269008CEA76 /* BaseMapIcons */ = {
+			isa = PBXGroup;
+			children = (
+				AD437EC21EF933C5008CEA76 /* style_image_carto_darkmatter.png */,
+				AD437EC31EF933C5008CEA76 /* style_image_carto_positron.png */,
+				AD437EC41EF933C5008CEA76 /* style_image_mapzen_darkmatter.png */,
+				AD437EC51EF933C5008CEA76 /* style_image_mapzen_positron.png */,
+				AD437EC61EF933C5008CEA76 /* style_image_mapzen_bright.png */,
+				AD437EC71EF933C5008CEA76 /* style_image_nutiteq_dark.png */,
+				AD437EC81EF933C5008CEA76 /* style_image_nutiteq_gray.png */,
+				AD437EC91EF933C5008CEA76 /* style_image_nutiteq_bright.png */,
+			);
+			name = BaseMapIcons;
 			sourceTree = "<group>";
 		};
 		AD9786831EF7DA7C002912DF /* Sections */ = {
@@ -217,6 +248,7 @@
 		ADB168E31EF7BBDC0022F2F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD437EC11EF93269008CEA76 /* BaseMapIcons */,
 				AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */,
 				AD9786BA1EF8229A002912DF /* Markers */,
 				AD9786B11EF8220F002912DF /* ButtonIcons */,
@@ -373,22 +405,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */,
 				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
 				AD9786AB1EF80C9F002912DF /* icon_pin_navy.png in Resources */,
+				AD437ED01EF933C5008CEA76 /* style_image_nutiteq_gray.png in Resources */,
 				AD9786A71EF80C99002912DF /* icon_pin_green.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				AD9786B61EF82284002912DF /* icon_basemap.png in Resources */,
 				AD9786B71EF82284002912DF /* icon_global.png in Resources */,
 				AD9786AA1EF80C9F002912DF /* icon_pin_pink.png in Resources */,
+				AD437ECB1EF933C5008CEA76 /* style_image_carto_positron.png in Resources */,
 				AD9786C21EF822B7002912DF /* icon_marker_red.png in Resources */,
+				AD437ECF1EF933C5008CEA76 /* style_image_nutiteq_dark.png in Resources */,
+				AD437ED11EF933C5008CEA76 /* style_image_nutiteq_bright.png in Resources */,
 				AD9786B81EF82284002912DF /* icon_info.png in Resources */,
 				AD9786C81EF82B00002912DF /* icon_close.png in Resources */,
 				ADB27EB81EF416C6004198D3 /* LaunchScreen.storyboard in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
+				AD437ECA1EF933C5008CEA76 /* style_image_carto_darkmatter.png in Resources */,
 				ADB168E51EF7BC020022F2F7 /* icon_sample_styles.png in Resources */,
+				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD9786C01EF822B7002912DF /* icon_marker_gray.png in Resources */,
+				AD437ECE1EF933C5008CEA76 /* style_image_mapzen_bright.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,9 +21,9 @@ class GalleryRow : UIView {
         
         self.init(frame: CGRect.zero)
         
-//        backgroundColor = Colors.fromRgba(red: 245, green: 245, blue: 245, alpha: 255)
         layer.borderWidth = 1;
-        layer.borderColor = Colors.fromRgba(red: 245, green: 245, blue: 245, alpha: 255).cgColor
+        layer.borderColor = Colors.nearWhite.cgColor
+        
         imageView = UIImageView()
         
         addSubview(imageView)
