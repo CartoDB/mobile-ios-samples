@@ -183,12 +183,14 @@ class StylePopupContentSectionItem : UIView {
         label = UILabel()
         label.text = text
         label.textColor = Colors.appleBlue
-        label.font = UIFont(name: "HelveticaNeue", size: 12)
+        label.font = UIFont(name: "HelveticaNeue", size: 11)
         
         addSubview(label)
     }
     
     override func layoutSubviews() {
+        
+        let padding: CGFloat = 5
         
         let x: CGFloat = 0
         var y: CGFloat = 0
@@ -197,8 +199,10 @@ class StylePopupContentSectionItem : UIView {
         
         imageView.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        y += h
-        h = frame.height - h
+        label.sizeToFit()
+        
+        y += h + padding
+        h = label.frame.height
         
         label.frame = CGRect(x: x, y: y, width: w, height: h)
     }
