@@ -101,7 +101,7 @@
 		AD9786C71EF82B00002912DF /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPopupContent.swift; sourceTree = "<group>"; };
 		ADB168E41EF7BC020022F2F7 /* icon_sample_styles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_styles.png; sourceTree = "<group>"; };
-		ADB27EAA1EF416C6004198D3 /* Feature Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feature Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADB27EAA1EF416C6004198D3 /* AdvancedMap.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedMap.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB27EAD1EF416C6004198D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB27EAF1EF416C6004198D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ADB27EB41EF416C6004198D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 		ADB27EA11EF416C6004198D3 = {
 			isa = PBXGroup;
 			children = (
-				ADB27EAC1EF416C6004198D3 /* Feature Demo */,
+				ADB27EAC1EF416C6004198D3 /* AdvancedMap.Swift */,
 				ADB27EAB1EF416C6004198D3 /* Products */,
 				BD758012CC9538CCBBD3A049 /* Pods */,
 				C10203A331AB4FB36776ECC5 /* Frameworks */,
@@ -273,12 +273,12 @@
 		ADB27EAB1EF416C6004198D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADB27EAA1EF416C6004198D3 /* Feature Demo.app */,
+				ADB27EAA1EF416C6004198D3 /* AdvancedMap.Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADB27EAC1EF416C6004198D3 /* Feature Demo */ = {
+		ADB27EAC1EF416C6004198D3 /* AdvancedMap.Swift */ = {
 			isa = PBXGroup;
 			children = (
 				AD97869A1EF806D5002912DF /* Components */,
@@ -294,6 +294,7 @@
 				ADB27EB61EF416C6004198D3 /* LaunchScreen.storyboard */,
 				ADB27EB91EF416C6004198D3 /* Info.plist */,
 			);
+			name = AdvancedMap.Swift;
 			path = "Feature Demo";
 			sourceTree = "<group>";
 		};
@@ -348,9 +349,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADB27EA91EF416C6004198D3 /* Feature Demo */ = {
+		ADB27EA91EF416C6004198D3 /* AdvancedMap.Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADB27EBC1EF416C6004198D3 /* Build configuration list for PBXNativeTarget "Feature Demo" */;
+			buildConfigurationList = ADB27EBC1EF416C6004198D3 /* Build configuration list for PBXNativeTarget "AdvancedMap.Swift" */;
 			buildPhases = (
 				0ABD7465ED42D48C709D3FED /* [CP] Check Pods Manifest.lock */,
 				ADB27EA61EF416C6004198D3 /* Sources */,
@@ -363,9 +364,9 @@
 			);
 			dependencies = (
 			);
-			name = "Feature Demo";
+			name = AdvancedMap.Swift;
 			productName = "Feature Demo";
-			productReference = ADB27EAA1EF416C6004198D3 /* Feature Demo.app */;
+			productReference = ADB27EAA1EF416C6004198D3 /* AdvancedMap.Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -385,7 +386,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ADB27EA51EF416C6004198D3 /* Build configuration list for PBXProject "Feature Demo" */;
+			buildConfigurationList = ADB27EA51EF416C6004198D3 /* Build configuration list for PBXProject "AdvancedMap.Swift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -398,7 +399,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADB27EA91EF416C6004198D3 /* Feature Demo */,
+				ADB27EA91EF416C6004198D3 /* AdvancedMap.Swift */,
 			);
 		};
 /* End PBXProject section */
@@ -653,7 +654,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADB27EA51EF416C6004198D3 /* Build configuration list for PBXProject "Feature Demo" */ = {
+		ADB27EA51EF416C6004198D3 /* Build configuration list for PBXProject "AdvancedMap.Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADB27EBA1EF416C6004198D3 /* Debug */,
@@ -662,7 +663,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADB27EBC1EF416C6004198D3 /* Build configuration list for PBXNativeTarget "Feature Demo" */ = {
+		ADB27EBC1EF416C6004198D3 /* Build configuration list for PBXNativeTarget "AdvancedMap.Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADB27EBD1EF416C6004198D3 /* Debug */,

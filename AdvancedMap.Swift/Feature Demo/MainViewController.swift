@@ -19,8 +19,7 @@ class MainViewController: UIViewController, GalleryDelegate {
         contentView?.galleryDelegate = self
         
         view = contentView
-//        view = NTMapView()
-        
+
         contentView?.addRows(rows: Samples.list)
     }
     
