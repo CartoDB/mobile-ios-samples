@@ -19,4 +19,8 @@ class BaseController : UIViewController {
         
         title = sample.title
     }
+    
+    func onCellSelected(item: NSObject) {
+        
+    }
 }

@@ -41,3 +41,14 @@ class Samples {
         list.append(sample)
     }
 }
+
+class Sample {
+    
+    var imageResource: String!
+    
+    var title: String!
+    
+    var description: String!
+    
+    var controller: BaseController!
+}

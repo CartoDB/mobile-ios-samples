@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NTMapView.registerLicense(license)
         
         Samples.initialize()
+        Languages.initialize()
         
         return true
     }

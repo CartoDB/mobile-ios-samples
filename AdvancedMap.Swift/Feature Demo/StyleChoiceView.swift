@@ -18,14 +18,14 @@ class StyleChoiceView : MapBaseView {
     var baseMapButton: PopupButton!
     
     var infoContent: InformationPopupContent!
-    var languageContent: InformationPopupContent!
+    var languageContent: LanguagePopupContent!
     var baseMapContent: InformationPopupContent!
     
     convenience init() {
         
         self.init(frame: CGRect.zero)
         
-        addBaseLayer()
+        currentLayer = addBaseLayer()
         
         popup = SlideInPopup()
         
@@ -41,7 +41,7 @@ class StyleChoiceView : MapBaseView {
         sendSubview(toBack: popup)
         
         infoContent = InformationPopupContent()
-        languageContent = InformationPopupContent()
+        languageContent = LanguagePopupContent()
         baseMapContent = InformationPopupContent()
     }
     
@@ -86,7 +86,40 @@ class StyleChoiceView : MapBaseView {
         popup.popup.header.setText(text: "SELECT A BASEMAP")
         popup.show()
     }
+    
+    func updateMapLanguage(language: Language) {
+        
+        if (currentLayer == nil) {
+            return
+        }
+        
+        let decoder = (currentLayer as? NTVectorTileLayer)?.getTileDecoder() as? NTMBVectorTileDecoder
+        decoder?.setStyleParameter("lang", value: language.value)
+    }
+    
+    var currentLanguage: String = ""
+    var currentSource: String = "nutiteq.osm"
+    var currentLayer: NTTileLayer!
+    
+    func updateBaseLayer() {
+        
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
