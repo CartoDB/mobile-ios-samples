@@ -41,6 +41,8 @@ class StyleChoiceView : MapBaseView {
         sendSubview(toBack: popup)
         
         infoContent = InformationPopupContent()
+        infoContent.setText(headerText: Texts.basemapInfoHeader, contentText: Texts.basemapInfoContainer)
+        
         languageContent = LanguagePopupContent()
         baseMapContent = StylePopupContent()
     }
