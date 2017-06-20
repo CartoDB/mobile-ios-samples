@@ -33,11 +33,12 @@ class StyleChoiceView : MapBaseView {
         languageButton = PopupButton(imageUrl: "icon_language.png")
         baseMapButton = PopupButton(imageUrl: "icon_basemap.png")
         
-        popup.addButton(button: infoButton)
-        popup.addButton(button: languageButton)
-        popup.addButton(button: baseMapButton)
+        addButton(button: infoButton)
+        addButton(button: languageButton)
+        addButton(button: baseMapButton)
         
         addSubview(popup)
+        sendSubview(toBack: popup)
         
         infoContent = InformationPopupContent()
         languageContent = InformationPopupContent()
