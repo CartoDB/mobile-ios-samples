@@ -19,7 +19,7 @@ class StyleChoiceView : MapBaseView {
     
     var infoContent: InformationPopupContent!
     var languageContent: LanguagePopupContent!
-    var baseMapContent: InformationPopupContent!
+    var baseMapContent: StylePopupContent!
     
     convenience init() {
         
@@ -42,7 +42,7 @@ class StyleChoiceView : MapBaseView {
         
         infoContent = InformationPopupContent()
         languageContent = LanguagePopupContent()
-        baseMapContent = InformationPopupContent()
+        baseMapContent = StylePopupContent()
     }
     
     override func layoutSubviews() {
@@ -87,22 +87,76 @@ class StyleChoiceView : MapBaseView {
         popup.show()
     }
     
-    func updateMapLanguage(language: Language) {
+    func updateMapLanguage(language: String) {
         
         if (currentLayer == nil) {
             return
         }
         
+        currentLanguage = language
+        
         let decoder = (currentLayer as? NTVectorTileLayer)?.getTileDecoder() as? NTMBVectorTileDecoder
-        decoder?.setStyleParameter("lang", value: language.value)
+        decoder?.setStyleParameter("lang", value: currentLanguage)
     }
     
     var currentLanguage: String = ""
     var currentSource: String = "nutiteq.osm"
     var currentLayer: NTTileLayer!
     
-    func updateBaseLayer() {
+    func updateBaseLayer(selection: String, source: String) {
         
+        if (source == StylePopupContent.NutiteqSource) {
+            
+            if (selection == StylePopupContent.Bright) {
+                currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_DEFAULT)
+            } else if (selection == StylePopupContent.Gray) {
+                currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_GRAY)
+            } else if (selection == StylePopupContent.Dark) {
+                currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_DARK)
+            }
+            
+        } else if (source == StylePopupContent.MapzenSource) {
+            
+            let asset = NTAssetUtils.loadAsset("styles_mapzen.zip")
+            let package = NTZippedAssetPackage(zip: asset)
+            
+            var name = ""
+            
+            if (selection == StylePopupContent.Bright) {
+                name = "style"
+            } else if (selection == StylePopupContent.Positron) {
+                name = "positron"
+            } else if (selection == StylePopupContent.DarkMatter) {
+                name = "positron_dark"
+            }
+            
+            let styleSet = NTCompiledStyleSet(assetPackage: package, styleName: name)
+            
+            let datasource = NTCartoOnlineTileDataSource(source: source)
+            let decoder = NTMBVectorTileDecoder(compiledStyleSet: styleSet)
+            
+            currentLayer = NTVectorTileLayer(dataSource: datasource, decoder: decoder)
+            
+        } else if (source == StylePopupContent.CartoSource) {
+            
+            // We know that the value of raster will be Positron or Darkmatter,
+            // as Nutiteq and Mapzen use vector tiles
+            var url = ""
+            
+            if (selection == StylePopupContent.Positron) {
+                url = StylePopupContent.PositronUrl
+            } else {
+                url = StylePopupContent.DarkMatterUrl
+            }
+            
+            let datasource = NTHTTPTileDataSource(minZoom: 1, maxZoom: 19, baseURL: url)
+            currentLayer = NTRasterTileLayer(dataSource: datasource)
+        }
+        
+        map.getLayers().clear()
+        map.getLayers().add(currentLayer)
+        
+        updateMapLanguage(language: currentLanguage)
     }
 }
 

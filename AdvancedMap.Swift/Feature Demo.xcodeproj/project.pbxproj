@@ -11,6 +11,8 @@
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EB91EF907D1008CEA76 /* Languages.swift */; };
 		AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */; };
+		AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */; };
+		AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */; };
 		AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */; };
 		AD9786881EF7DACF002912DF /* StyleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786871EF7DACF002912DF /* StyleChoiceView.swift */; };
 		AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786891EF7EB34002912DF /* GalleryDelegate.swift */; };
@@ -52,6 +54,8 @@
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD437EB91EF907D1008CEA76 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupContent.swift; sourceTree = "<group>"; };
+		AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
+		AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = styles_mapzen.zip; sourceTree = "<group>"; };
 		AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceController.swift; sourceTree = "<group>"; };
 		AD9786871EF7DACF002912DF /* StyleChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceView.swift; sourceTree = "<group>"; };
 		AD9786891EF7EB34002912DF /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 			children = (
 				AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */,
 				AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */,
+				AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */,
 			);
 			name = SlideInPopupContent;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 		ADB168E31EF7BBDC0022F2F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */,
 				AD9786BA1EF8229A002912DF /* Markers */,
 				AD9786B11EF8220F002912DF /* ButtonIcons */,
 				AD97869F1EF809D3002912DF /* Pins */,
@@ -367,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
 				AD9786AB1EF80C9F002912DF /* icon_pin_navy.png in Resources */,
 				AD9786A71EF80C99002912DF /* icon_pin_green.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
@@ -448,6 +455,7 @@
 				AD9786B01EF80E7C002912DF /* PopupView.swift in Sources */,
 				ADB27EC11EF41754004198D3 /* MainView.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
+				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
 				AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */,

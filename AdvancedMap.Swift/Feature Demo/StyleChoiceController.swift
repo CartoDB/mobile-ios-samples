@@ -9,7 +9,7 @@
 import Foundation
 import  UIKit
 
-class StyleChoiceController : BaseController, UITableViewDelegate {
+class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDelegate {
     
     var contentView: StyleChoiceView!
     
@@ -28,20 +28,35 @@ class StyleChoiceController : BaseController, UITableViewDelegate {
         super.viewWillAppear(animated)
         
         contentView.addRecognizers()
+        
         contentView.languageContent.table.delegate = self
+        
+        contentView.baseMapContent.nutiteq.delegate = self
+        contentView.baseMapContent.mapzen.delegate = self
+        contentView.baseMapContent.carto.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         contentView.removeRecognizers()
+        
         contentView.languageContent.table.delegate = nil
+        
+        contentView.baseMapContent.nutiteq.delegate = nil
+        contentView.baseMapContent.mapzen.delegate = nil
+        contentView.baseMapContent.carto.delegate = nil
+    }
+    
+    func styleClicked(selection: String, source: String) {
+        contentView.popup.hide()
+        contentView.updateBaseLayer(selection: selection, source: source)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let language = contentView.languageContent.languages[indexPath.row]
         contentView.popup.hide()
-        contentView.updateMapLanguage(language: language)
+        contentView.updateMapLanguage(language: language.value)
     }
     
 }

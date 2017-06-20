@@ -49,6 +49,7 @@ class SlideInPopup : UIView {
         transparentArea.frame = CGRect(x: x, y: y, width: w, height: h)
         
         y += h
+        h = h - visibleY
         
         popup.frame = CGRect(x: x, y: y, width: w, height: h)
 
@@ -72,8 +73,15 @@ class SlideInPopup : UIView {
     }
 
     func setContent(content: UIView) {
+        
+        if (self.content != nil) {
+            self.content.removeFromSuperview()
+            self.content = nil
+        }
+        
         self.content = content
         popup.addSubview(self.content)
+        
         layoutSubviews()
     }
     
