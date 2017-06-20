@@ -88,6 +88,7 @@ class StylePopupContent : UIView {
 class StylePopupContentSection : UIView {
     
     var header: UILabel!
+    var separator: UIView!
     
     var list = [StylePopupContentSectionItem]()
     
@@ -101,8 +102,13 @@ class StylePopupContentSection : UIView {
         header = UILabel()
         header.font = UIFont(name: "HelveticaNeue-Bold", size: 13)
         header.textColor = Colors.navy
-        
         addSubview(header)
+        
+        separator = UIView()
+        separator.backgroundColor = Colors.nearWhite
+        separator.clipsToBounds = false
+        
+        addSubview(separator)
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.itemTapped(_:)))
         addGestureRecognizer(recognizer)
@@ -112,6 +118,8 @@ class StylePopupContentSection : UIView {
         
         let headerHeight: CGFloat = 20
         let padding: CGFloat = 5
+        
+        separator.frame = CGRect(x: padding, y: -padding, width: frame.width - 2 * padding, height: 1)
         
         var x: CGFloat = padding
         var y: CGFloat = 0
