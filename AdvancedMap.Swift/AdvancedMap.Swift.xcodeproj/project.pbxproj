@@ -46,6 +46,8 @@
 		AD9786C61EF8281B002912DF /* SlideInPopupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786C51EF8281B002912DF /* SlideInPopupHeader.swift */; };
 		AD9786C81EF82B00002912DF /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9786C71EF82B00002912DF /* icon_close.png */; };
 		AD9786CB1EF82D54002912DF /* InformationPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */; };
+		ADAFCD201EFBEECA005F53CB /* BboxRoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */; };
+		ADAFCD221EFBEED8005F53CB /* BboxRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */; };
 		ADB168E51EF7BC020022F2F7 /* icon_sample_styles.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB168E41EF7BC020022F2F7 /* icon_sample_styles.png */; };
 		ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB27EAD1EF416C6004198D3 /* AppDelegate.swift */; };
 		ADB27EB01EF416C6004198D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB27EAF1EF416C6004198D3 /* MainViewController.swift */; };
@@ -101,6 +103,8 @@
 		AD9786C51EF8281B002912DF /* SlideInPopupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPopupHeader.swift; sourceTree = "<group>"; };
 		AD9786C71EF82B00002912DF /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPopupContent.swift; sourceTree = "<group>"; };
+		ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BboxRoutingController.swift; sourceTree = "<group>"; };
+		ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BboxRoutingView.swift; sourceTree = "<group>"; };
 		ADB168E41EF7BC020022F2F7 /* icon_sample_styles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_styles.png; sourceTree = "<group>"; };
 		ADB27EAA1EF416C6004198D3 /* AdvancedMap.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedMap.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB27EAD1EF416C6004198D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				AD97868B1EF7F145002912DF /* Base */,
+				ADAFCD1E1EFBEEAC005F53CB /* Bbox Routing */,
 				AD9786841EF7DA8C002912DF /* Styles */,
 			);
 			name = Sections;
@@ -248,6 +253,15 @@
 				AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */,
 			);
 			name = SlideInPopupContent;
+			sourceTree = "<group>";
+		};
+		ADAFCD1E1EFBEEAC005F53CB /* Bbox Routing */ = {
+			isa = PBXGroup;
+			children = (
+				ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */,
+				ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */,
+			);
+			name = "Bbox Routing";
 			sourceTree = "<group>";
 		};
 		ADB168E31EF7BBDC0022F2F7 /* Resources */ = {
@@ -495,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD97869D1EF80740002912DF /* PopupButton.swift in Sources */,
+				ADAFCD221EFBEED8005F53CB /* BboxRoutingView.swift in Sources */,
 				AD9786AE1EF80CD5002912DF /* SlideInPopup.swift in Sources */,
 				AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */,
 				ADB27EB01EF416C6004198D3 /* MainViewController.swift in Sources */,
@@ -503,6 +518,7 @@
 				ADB27EC11EF41754004198D3 /* MainView.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
+				ADAFCD201EFBEECA005F53CB /* BboxRoutingController.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
 				AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */,

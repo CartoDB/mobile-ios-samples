@@ -28,7 +28,7 @@ class Samples {
         sample.title = "BBOX ROUTING"
         sample.description = "Bounding box download with offline routing"
         sample.imageResource = folder + "icon_sample_styles.png"
-        sample.controller = StyleChoiceController()
+        sample.controller = BboxRoutingController()
         
         list.append(sample)
         

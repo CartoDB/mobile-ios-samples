@@ -10,16 +10,17 @@ import Foundation
 import UIKit
 
 class StyleChoiceView : MapBaseView {
-    
-    var popup: SlideInPopup!
-    
-    var infoButton: PopupButton!
+
     var languageButton: PopupButton!
     var baseMapButton: PopupButton!
     
-    var infoContent: InformationPopupContent!
     var languageContent: LanguagePopupContent!
     var baseMapContent: StylePopupContent!
+    
+    var currentLanguage: String = ""
+    var currentSource: String = "nutiteq.osm"
+    var currentLayer: NTTileLayer!
+
     
     convenience init() {
         
@@ -27,60 +28,46 @@ class StyleChoiceView : MapBaseView {
         
         currentLayer = addBaseLayer()
         
-        popup = SlideInPopup()
-        
-        infoButton = PopupButton(imageUrl: "icon_info.png")
+        initialize()
+
         languageButton = PopupButton(imageUrl: "icon_language.png")
         baseMapButton = PopupButton(imageUrl: "icon_basemap.png")
         
-        addButton(button: infoButton)
         addButton(button: languageButton)
         addButton(button: baseMapButton)
         
-        addSubview(popup)
-        sendSubview(toBack: popup)
-        
-        infoContent = InformationPopupContent()
         infoContent.setText(headerText: Texts.basemapInfoHeader, contentText: Texts.basemapInfoContainer)
         
         languageContent = LanguagePopupContent()
         baseMapContent = StylePopupContent()
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
+
+    override func addRecognizers() {
         
-        popup.frame = bounds
-    }
-    
-    func addRecognizers() {
+        super.addRecognizers()
         
-        var recognizer = UITapGestureRecognizer(target: self, action: #selector(self.infoButtonTapped(_:)))
-        infoButton.addGestureRecognizer(recognizer)
-        
-        recognizer = UITapGestureRecognizer(target: self, action: #selector(self.languageButtonTapped(_:)))
+        var recognizer = UITapGestureRecognizer(target: self, action: #selector(self.languageButtonTapped(_:)))
         languageButton.addGestureRecognizer(recognizer)
         
         recognizer = UITapGestureRecognizer(target: self, action: #selector(self.mapButtonTapped(_:)))
         baseMapButton.addGestureRecognizer(recognizer)
     }
     
-    func removeRecognizers() {
-        infoButton.gestureRecognizers?.forEach(infoButton.removeGestureRecognizer)
+    override func removeRecognizers() {
+        
+        super.removeRecognizers()
+        
         languageButton.gestureRecognizers?.forEach(languageButton.removeGestureRecognizer)
         baseMapButton.gestureRecognizers?.forEach(baseMapButton.removeGestureRecognizer)
     }
     
-    func infoButtonTapped(_ sender: UITapGestureRecognizer) {
-        popup.setContent(content: infoContent)
-        popup.popup.header.setText(text: "INFORMATION")
-        popup.show()
-    }
-    
     func languageButtonTapped(_ sender: UITapGestureRecognizer) {
-        popup.setContent(content: languageContent)
-        popup.popup.header.setText(text: "SELECT A LANGUAGE")
-        popup.show()
+        
+        if (languageButton.isEnabled) {
+            popup.setContent(content: languageContent)
+            popup.popup.header.setText(text: "SELECT A LANGUAGE")
+            popup.show()
+        }
     }
     
     func mapButtonTapped(_ sender: UITapGestureRecognizer) {
@@ -100,11 +87,7 @@ class StyleChoiceView : MapBaseView {
         let decoder = (currentLayer as? NTVectorTileLayer)?.getTileDecoder() as? NTMBVectorTileDecoder
         decoder?.setStyleParameter("lang", value: currentLanguage)
     }
-    
-    var currentLanguage: String = ""
-    var currentSource: String = "nutiteq.osm"
-    var currentLayer: NTTileLayer!
-    
+
     func updateBaseLayer(selection: String, source: String) {
         
         if (source == StylePopupContent.NutiteqSource) {
@@ -153,6 +136,12 @@ class StyleChoiceView : MapBaseView {
             
             let datasource = NTHTTPTileDataSource(minZoom: 1, maxZoom: 19, baseURL: url)
             currentLayer = NTRasterTileLayer(dataSource: datasource)
+        }
+        
+        if (source == StylePopupContent.CartoSource) {
+            languageButton.disable()
+        } else {
+            languageButton.enable()
         }
         
         map.getLayers().clear()

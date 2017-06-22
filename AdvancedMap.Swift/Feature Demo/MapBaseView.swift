@@ -13,13 +13,34 @@ class MapBaseView : UIView {
     
     var map: NTMapView!
     
+    var popup: SlideInPopup!
+    
     var buttons: [PopupButton]!
+    
+    var infoButton: PopupButton!
+    var infoContent: InformationPopupContent!
     
     convenience init() {
         self.init(frame: CGRect.zero)
+        
+        initialize()
+    }
+    
+    func initialize() {
+        popup = SlideInPopup()
+        
+        addSubview(popup)
+        sendSubview(toBack: popup)
+        
+        infoButton = PopupButton(imageUrl: "icon_info.png")
+        addButton(button: infoButton)
+        
+        infoContent = InformationPopupContent()
     }
     
     override func layoutSubviews() {
+        
+        popup.frame = bounds
         
         if (map != nil) {
             map?.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
@@ -47,6 +68,21 @@ class MapBaseView : UIView {
             
             x += w + innerPadding
         }
+    }
+    
+    func addRecognizers() {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.infoButtonTapped(_:)))
+        infoButton.addGestureRecognizer(recognizer)
+    }
+    
+    func removeRecognizers() {
+        infoButton.gestureRecognizers?.forEach(infoButton.removeGestureRecognizer)
+    }
+    
+    func infoButtonTapped(_ sender: UITapGestureRecognizer) {
+        popup.setContent(content: infoContent)
+        popup.popup.header.setText(text: "INFORMATION")
+        popup.show()
     }
     
     func addBaseLayer() -> NTCartoOnlineVectorTileLayer {

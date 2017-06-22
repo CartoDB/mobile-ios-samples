@@ -28,6 +28,18 @@ class PopupButton : UIView {
         addSubview(imageView)
     }
     
+    var isEnabled = true
+    
+    func enable() {
+        isEnabled = true
+        alpha = 1.0
+    }
+    
+    func disable() {
+        isEnabled = false
+        alpha = 0.5
+    }
+    
     override func layoutSubviews() {
 
         super.layoutSubviews()
@@ -44,10 +56,20 @@ class PopupButton : UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if (!isEnabled) {
+            return
+        }
+        
         alpha = 1.0
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if (!isEnabled) {
+            return
+        }
+        
         alpha = 1.0
     }
     
