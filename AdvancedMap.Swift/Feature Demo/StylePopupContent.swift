@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StylePopupContent : UIView {
+class StylePopupContent : UIScrollView {
     
     static let NutiteqSource = "nutiteq.osm"
     static let MapzenSource = "mapzen.osm"
@@ -81,6 +81,8 @@ class StylePopupContent : UIView {
         y += h + headerPadding
         
         carto.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        contentSize = CGSize(width: frame.width, height: y + h + padding)
     }
     
 }

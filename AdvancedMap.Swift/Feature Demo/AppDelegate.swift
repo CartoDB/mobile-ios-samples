@@ -39,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Samples.initialize()
         Languages.initialize()
         
-        Device.navigationbarHeight = controller?.navigationBar.frame.size.height
-        
         return true
     }
 

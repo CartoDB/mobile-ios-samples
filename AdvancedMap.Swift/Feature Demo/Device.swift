@@ -11,17 +11,17 @@ import UIKit
 
 class Device {
     
-    static func isLandscape() -> Bool
-    {
+    static func isLandscape() -> Bool {
         return UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight
     }
     
-    static func isTablet() -> Bool
-    {
+    static func isTablet() -> Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
     
-    static var navigationbarHeight: CGFloat!
+    static func navigationbarHeight() -> CGFloat {
+        return ((UIApplication.shared.delegate as! AppDelegate).controller?.navigationBar.frame.height)!
+    }
     
     static func statusBarHeight() -> CGFloat {
         return UIApplication.shared.statusBarFrame.height
