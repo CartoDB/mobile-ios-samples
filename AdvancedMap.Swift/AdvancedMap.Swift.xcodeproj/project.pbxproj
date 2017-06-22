@@ -30,9 +30,6 @@
 		AD9786951EF7F843002912DF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9786941EF7F843002912DF /* libz.tbd */; };
 		AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786981EF7FE81002912DF /* MapBaseView.swift */; };
 		AD97869D1EF80740002912DF /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD97869C1EF80740002912DF /* PopupButton.swift */; };
-		AD9786A71EF80C99002912DF /* icon_pin_green.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9786A61EF80C99002912DF /* icon_pin_green.png */; };
-		AD9786AA1EF80C9F002912DF /* icon_pin_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9786A81EF80C9F002912DF /* icon_pin_pink.png */; };
-		AD9786AB1EF80C9F002912DF /* icon_pin_navy.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9786A91EF80C9F002912DF /* icon_pin_navy.png */; };
 		AD9786AE1EF80CD5002912DF /* SlideInPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786AD1EF80CD5002912DF /* SlideInPopup.swift */; };
 		AD9786B01EF80E7C002912DF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786AF1EF80E7C002912DF /* PopupView.swift */; };
 		AD9786B61EF82284002912DF /* icon_basemap.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9786B21EF82284002912DF /* icon_basemap.png */; };
@@ -48,6 +45,9 @@
 		AD9786CB1EF82D54002912DF /* InformationPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */; };
 		ADAFCD201EFBEECA005F53CB /* BboxRoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */; };
 		ADAFCD221EFBEED8005F53CB /* BboxRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */; };
+		ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD241EFBF945005F53CB /* Routing.swift */; };
+		ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD261EFBFBFC005F53CB /* Route.swift */; };
+		ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ADAFCD281EFC05B5005F53CB /* icon_pin_red.png */; };
 		ADB168E51EF7BC020022F2F7 /* icon_sample_styles.png in Resources */ = {isa = PBXBuildFile; fileRef = ADB168E41EF7BC020022F2F7 /* icon_sample_styles.png */; };
 		ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB27EAD1EF416C6004198D3 /* AppDelegate.swift */; };
 		ADB27EB01EF416C6004198D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB27EAF1EF416C6004198D3 /* MainViewController.swift */; };
@@ -87,9 +87,6 @@
 		AD9786961EF7F84F002912DF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AD9786981EF7FE81002912DF /* MapBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBaseView.swift; sourceTree = "<group>"; };
 		AD97869C1EF80740002912DF /* PopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
-		AD9786A61EF80C99002912DF /* icon_pin_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pin_green.png; sourceTree = "<group>"; };
-		AD9786A81EF80C9F002912DF /* icon_pin_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pin_pink.png; sourceTree = "<group>"; };
-		AD9786A91EF80C9F002912DF /* icon_pin_navy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pin_navy.png; sourceTree = "<group>"; };
 		AD9786AD1EF80CD5002912DF /* SlideInPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPopup.swift; sourceTree = "<group>"; };
 		AD9786AF1EF80E7C002912DF /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		AD9786B21EF82284002912DF /* icon_basemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_basemap.png; sourceTree = "<group>"; };
@@ -105,6 +102,9 @@
 		AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPopupContent.swift; sourceTree = "<group>"; };
 		ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BboxRoutingController.swift; sourceTree = "<group>"; };
 		ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BboxRoutingView.swift; sourceTree = "<group>"; };
+		ADAFCD241EFBF945005F53CB /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		ADAFCD261EFBFBFC005F53CB /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		ADAFCD281EFC05B5005F53CB /* icon_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pin_red.png; sourceTree = "<group>"; };
 		ADB168E41EF7BC020022F2F7 /* icon_sample_styles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_styles.png; sourceTree = "<group>"; };
 		ADB27EAA1EF416C6004198D3 /* AdvancedMap.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvancedMap.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB27EAD1EF416C6004198D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,9 +204,7 @@
 		AD97869F1EF809D3002912DF /* Pins */ = {
 			isa = PBXGroup;
 			children = (
-				AD9786A81EF80C9F002912DF /* icon_pin_pink.png */,
-				AD9786A91EF80C9F002912DF /* icon_pin_navy.png */,
-				AD9786A61EF80C99002912DF /* icon_pin_green.png */,
+				ADAFCD281EFC05B5005F53CB /* icon_pin_red.png */,
 			);
 			name = Pins;
 			sourceTree = "<group>";
@@ -264,6 +262,15 @@
 			name = "Bbox Routing";
 			sourceTree = "<group>";
 		};
+		ADAFCD231EFBF920005F53CB /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				ADAFCD241EFBF945005F53CB /* Routing.swift */,
+				ADAFCD261EFBFBFC005F53CB /* Route.swift */,
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
 		ADB168E31EF7BBDC0022F2F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +305,7 @@
 		ADB27EAC1EF416C6004198D3 /* AdvancedMap.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				ADAFCD231EFBF920005F53CB /* Routing */,
 				AD97869A1EF806D5002912DF /* Components */,
 				AD9786911EF7F744002912DF /* Feature-Demo-Bridging-Header.h */,
 				AD9786831EF7DA7C002912DF /* Sections */,
@@ -428,19 +436,17 @@
 			files = (
 				AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */,
 				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
-				AD9786AB1EF80C9F002912DF /* icon_pin_navy.png in Resources */,
 				AD437ED01EF933C5008CEA76 /* style_image_nutiteq_gray.png in Resources */,
-				AD9786A71EF80C99002912DF /* icon_pin_green.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				AD9786B61EF82284002912DF /* icon_basemap.png in Resources */,
 				AD9786B71EF82284002912DF /* icon_global.png in Resources */,
-				AD9786AA1EF80C9F002912DF /* icon_pin_pink.png in Resources */,
 				AD437ECB1EF933C5008CEA76 /* style_image_carto_positron.png in Resources */,
 				AD9786C21EF822B7002912DF /* icon_marker_red.png in Resources */,
 				AD437ECF1EF933C5008CEA76 /* style_image_nutiteq_dark.png in Resources */,
 				AD437ED11EF933C5008CEA76 /* style_image_nutiteq_bright.png in Resources */,
 				AD9786B81EF82284002912DF /* icon_info.png in Resources */,
 				AD9786C81EF82B00002912DF /* icon_close.png in Resources */,
+				ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */,
 				ADB27EB81EF416C6004198D3 /* LaunchScreen.storyboard in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				AD437ECA1EF933C5008CEA76 /* style_image_carto_darkmatter.png in Resources */,
@@ -516,6 +522,7 @@
 				AD9786CB1EF82D54002912DF /* InformationPopupContent.swift in Sources */,
 				AD9786B01EF80E7C002912DF /* PopupView.swift in Sources */,
 				ADB27EC11EF41754004198D3 /* MainView.swift in Sources */,
+				ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
 				ADAFCD201EFBEECA005F53CB /* BboxRoutingController.swift in Sources */,
@@ -530,6 +537,7 @@
 				AD97868D1EF7F152002912DF /* BaseController.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
 				AD437ED31EF93880008CEA76 /* Texts.swift in Sources */,
+				ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */,
 				AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
