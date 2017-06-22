@@ -32,8 +32,8 @@ class MapBaseView : UIView {
         let count = CGFloat(self.buttons.count)
         
         let bottomPadding: CGFloat = 30
-        let buttonWidth: CGFloat = 50
-        let innerPadding: CGFloat = 20
+        let buttonWidth: CGFloat = 60
+        let innerPadding: CGFloat = 25
         
         let totalArea = buttonWidth * count + (innerPadding * (count - 1))
         

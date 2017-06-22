@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let license = "XTUN3Q0ZCeTh5RVI5SlhZVXNrZTVZODNjOE52NnB3UXRBaFJkS09zWkhNOHI0M2lmTUJmb3RHcVZnMlNsQkE9PQoKYXBwVG9rZW49MTc3MmU1MzctZjBkMS00MDk3LThlODMtZWY1ZWNmNmQ3MWNlCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmZlYXR1cmUuZGVtbwpvbmxpbmVMaWNlbnNlPTEKcHJvZHVjdHM9c2RrLWlvcy00LioKd2F0ZXJtYXJrPWN1c3RvbQo="
+    let license = "XTUN3Q0ZHdnljVlVQSGV0SUFKSHpMQ2E2d2lqSHBkOWVBaFFzWHQ3aHBKWno1RGJHZ0NlaFFUem5pc3hLanc9PQoKYXBwVG9rZW49ZTJjMTBmMGItYzFkNy00MDkwLWEwNTQtNTcxMDQ5NDk2NjViCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmFkdmFuY2VkLnN3aWZ0Cm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg=="
     
     var window: UIWindow?
 
@@ -38,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Samples.initialize()
         Languages.initialize()
+        
+        Device.navigationbarHeight = controller?.navigationBar.frame.size.height
         
         return true
     }

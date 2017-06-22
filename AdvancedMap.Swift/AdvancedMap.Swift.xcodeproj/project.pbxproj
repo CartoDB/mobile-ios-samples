@@ -54,6 +54,7 @@
 		ADB27EC11EF41754004198D3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB27EC01EF41754004198D3 /* MainView.swift */; };
 		ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB7B8851EF7B3EC00BB2550 /* GalleryRow.swift */; };
 		ADB7B8891EF7B48500BB2550 /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB7B8881EF7B48500BB2550 /* Samples.swift */; };
+		ADE6DCC21EF97D71002B2189 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6DCC11EF97D71002B2189 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		ADB27EC01EF41754004198D3 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		ADB7B8851EF7B3EC00BB2550 /* GalleryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRow.swift; sourceTree = "<group>"; };
 		ADB7B8881EF7B48500BB2550 /* Samples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		ADE6DCC11EF97D71002B2189 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0CD3111EF420FB007E4378 /* Colors.swift */,
+				ADE6DCC11EF97D71002B2189 /* Device.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
 				AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */,
+				ADE6DCC21EF97D71002B2189 /* Device.swift in Sources */,
 				AD9786881EF7DACF002912DF /* StyleChoiceView.swift in Sources */,
 				AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */,
 				ADB7B8891EF7B48500BB2550 /* Samples.swift in Sources */,
@@ -631,7 +635,7 @@
 				DEVELOPMENT_TEAM = 79LP8BB5PK;
 				INFOPLIST_FILE = "Feature Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carto.feature.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.advanced.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -645,7 +649,7 @@
 				DEVELOPMENT_TEAM = 79LP8BB5PK;
 				INFOPLIST_FILE = "Feature Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carto.feature.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.advanced.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -45,11 +45,20 @@ class SlideInPopup : UIView {
         
         self.hiddenY = h
         self.visibleY = h - (h / 5 * 3)
-        
+
         transparentArea.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        y += h
-        h = h - visibleY
+        if (Device.isLandscape() || Device.isTablet()) {
+            // Make the popup appear on the left side and full height.
+            // Width of portrait iPhone 6. This number can be tweaked, but should be quite optimal
+            w = 375
+            self.visibleY = Device.navigationbarHeight
+            y += h
+        } else {
+        
+            y += h
+            h = h - visibleY
+        }
         
         popup.frame = CGRect(x: x, y: y, width: w, height: h)
 
