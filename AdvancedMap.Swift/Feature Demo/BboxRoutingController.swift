@@ -161,6 +161,17 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
     
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
         
+        var text = ""
+        
+        if (type(of: sender) == MapPackageListener.self) {
+            text = "Map download failed"
+        } else {
+            text = "Route download failed"
+        }
+        
+        DispatchQueue.main.async(execute: {
+            self.contentView.progressLabel.update(text: text)
+        })
     }
     
     func statusChanged(sender: PackageListener, status: NTPackageStatus) {
