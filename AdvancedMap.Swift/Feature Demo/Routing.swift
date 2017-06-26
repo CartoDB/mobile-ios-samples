@@ -92,10 +92,13 @@ class Routing {
         
         let vector = NTMapPosVector()
         
-        for var i in 0..<Int((instructions?.size())!) {
-            
+        let count = Int((instructions?.size())!)
+        for i in stride(from: 0, to: count, by: 1) {
+
             let instruction = instructions?.get(Int32(i))
-            let position = result.getPoints().get(Int32(i))
+            
+            let index = Int32((instruction?.getPointIndex())!)
+            let position = result.getPoints().get(index)
             
             createRoutePoint(position: position!, instruction: instruction!, source: routeDataSource!)
             vector?.add(position)
@@ -115,14 +118,19 @@ class Routing {
         return distance
     }
     
-    func getResult(startPos: NTMapPos, stopPos: NTMapPos) -> NTRoutingResult {
+    func getResult(startPos: NTMapPos, stopPos: NTMapPos) -> NTRoutingResult? {
         let positions = NTMapPosVector()
         positions?.add(startPos)
         positions?.add(stopPos)
         
         let request = NTRoutingRequest(projection: projection, points: positions)
         
-        return (service?.calculateRoute(request))!
+        do {
+            return try service?.calculateRoute(request)
+        } catch {
+            return nil
+        }
+        
     }
     
     func createRoutePoint(position: NTMapPos, instruction: NTRoutingInstruction, source: NTLocalVectorDataSource) {

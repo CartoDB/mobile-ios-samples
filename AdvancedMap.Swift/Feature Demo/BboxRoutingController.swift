@@ -28,8 +28,6 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
     var routingManager: NTCartoPackageManager!
     var mapManager: NTCartoPackageManager!
     
-//    var service: NTPackageManagerValhallaRoutingService!
-    
     var mapListener: RouteMapEventListener!
     
     override func viewDidLoad() {
@@ -54,9 +52,7 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         folder = createDirectory(name: "routingpackages")
         routingManager = NTCartoPackageManager(source: ROUTING_TAG + ROUTING_SOURCE, dataFolder: folder)
         
-//        service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)
-        
-        
+        setOnlineMode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +73,20 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         mapListener = nil
     }
     
+    func setOnlineMode() {
+        routing.service = NTCartoOnlineRoutingService(source: MAP_SOURCE + TRANSPORT_MODE)
+    }
+    
+    func setOfflineMode() {
+        
+        /*
+         * NB! AdvancedMap.Swift requires CartoMobileSDK 4.1.0 Valhalla build,
+         * which is not yet on cocoapods, because cocoapods do not support semantic versioning (26 June 2017)
+         * Contact CARTO to get the new version of the framework!
+         */
+        routing.service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)
+    }
+    
     func startClicked(event: RouteMapEvent) {
         routing.setStartMarker(position: event.clickPosition)
     }
@@ -89,14 +99,8 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
     func showRoute(start: NTMapPos, stop: NTMapPos) {
         DispatchQueue.global().async {
             
-            var result: NTRoutingResult? = nil
-            
-            do {
-                result = self.routing.getResult(startPos: start, stopPos: stop)
-            } catch {
-                print("Failed")
-            }
-            
+            let result: NTRoutingResult? = self.routing.getResult(startPos: start, stopPos: stop)
+
             DispatchQueue.main.async(execute: {
                 
                 if (result == nil) {
@@ -104,6 +108,11 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
                 } else {
                     self.contentView.progressLabel.complete(message: self.routing.getMessage(result: result!))
                 }
+                
+                let color = NTColor(r: 14, g: 122, b: 254, a: 150)
+                self.routing.show(result: result!, lineColor: color!, complete: {
+                    (route: Route) in
+                })
             })
         }
     }
