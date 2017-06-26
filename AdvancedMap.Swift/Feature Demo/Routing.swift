@@ -28,9 +28,9 @@ class Routing {
         let start = NTBitmapFromString(path: "icon_pin_red.png")
         let stop = NTBitmapFromString(path: "icon_pin_red.png")
         
-        let up = NTBitmapFromString(path: "icon_pin_red.png")
-        let upleft = NTBitmapFromString(path: "icon_pin_red.png")
-        let upright = NTBitmapFromString(path: "icon_pin_red.png")
+        let up = NTBitmapFromString(path: "direction_up.png")
+        let upleft = NTBitmapFromString(path: "direction_upthenleft.png")
+        let upright = NTBitmapFromString(path: "direction_upthenright")
         
         // Define layer and datasource for route line and instructions
         routeDataSource = NTLocalVectorDataSource(projection: projection)
