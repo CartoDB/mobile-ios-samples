@@ -125,12 +125,15 @@ class Routing {
         
         let request = NTRoutingRequest(projection: projection, points: positions)
         
-        do {
-            return try service?.calculateRoute(request)
-        } catch {
-            return nil
-        }
+        var result: NTRoutingResult?
         
+        // TODO Why doesn't this properly throw exception?
+        // ... so that it can never be caught
+        do {
+            result = try service?.calculateRoute(request)
+        } catch { }
+        
+        return result
     }
     
     func createRoutePoint(position: NTMapPos, instruction: NTRoutingInstruction, source: NTLocalVectorDataSource) {
