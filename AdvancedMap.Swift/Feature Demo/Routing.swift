@@ -47,16 +47,20 @@ class Routing {
         
         let markerBuilder = NTMarkerStyleBuilder()
         markerBuilder?.setBitmap(start)
-        markerBuilder?.setHideIfOverlapped(true)
+        markerBuilder?.setHideIfOverlapped(false)
         // Note: When setting the size on Android, you need to account for Resources.DisplayMetrics.Density
         markerBuilder?.setSize(15)
         
         let defaultPosition = NTMapPos(x: 0, y: 0)
         startMarker = NTMarker(pos: defaultPosition, style: markerBuilder?.buildStyle())
+        startMarker?.setVisible(false)
+        
         routeStartStopDataSource?.add(startMarker)
         
         markerBuilder?.setBitmap(stop)
         stopMarker = NTMarker(pos: defaultPosition, style: markerBuilder?.buildStyle())
+        stopMarker?.setVisible(false)
+        
         routeStartStopDataSource?.add(stopMarker)
         
         markerBuilder?.setBitmap(up)

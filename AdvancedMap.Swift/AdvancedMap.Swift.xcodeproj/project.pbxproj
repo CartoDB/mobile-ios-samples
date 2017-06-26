@@ -64,6 +64,8 @@
 		ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE092F91F00F26300C569F9 /* MapPackageListener.swift */; };
 		ADE092FC1F00F26C00C569F9 /* RoutingPackageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE092FB1F00F26C00C569F9 /* RoutingPackageListener.swift */; };
 		ADE092FE1F00F36300C569F9 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE092FD1F00F36300C569F9 /* BoundingBox.swift */; };
+		ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE093001F01074B00C569F9 /* StateSwitch.swift */; };
+		ADE093031F01080700C569F9 /* ProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE093021F01080700C569F9 /* ProgressLabel.swift */; };
 		ADE6DCC21EF97D71002B2189 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6DCC11EF97D71002B2189 /* Device.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +133,8 @@
 		ADE092F91F00F26300C569F9 /* MapPackageListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPackageListener.swift; sourceTree = "<group>"; };
 		ADE092FB1F00F26C00C569F9 /* RoutingPackageListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingPackageListener.swift; sourceTree = "<group>"; };
 		ADE092FD1F00F36300C569F9 /* BoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		ADE093001F01074B00C569F9 /* StateSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateSwitch.swift; sourceTree = "<group>"; };
+		ADE093021F01080700C569F9 /* ProgressLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
 		ADE6DCC11EF97D71002B2189 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +208,8 @@
 		AD97869A1EF806D5002912DF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ADE093021F01080700C569F9 /* ProgressLabel.swift */,
+				ADE093001F01074B00C569F9 /* StateSwitch.swift */,
 				AD9786C91EF82D3C002912DF /* SlideInPopupContent */,
 				AD9786AC1EF80CBB002912DF /* SlideInPopup */,
 			);
@@ -570,9 +576,11 @@
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
 				ADAFCD201EFBEECA005F53CB /* BboxRoutingController.swift in Sources */,
+				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
 				ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
+				ADE093031F01080700C569F9 /* ProgressLabel.swift in Sources */,
 				AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */,
 				ADE6DCC21EF97D71002B2189 /* Device.swift in Sources */,
 				ADE092FC1F00F26C00C569F9 /* RoutingPackageListener.swift in Sources */,

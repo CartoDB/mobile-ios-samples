@@ -21,6 +21,10 @@ class Colors {
     
     public static var nearWhite: UIColor = fromRgba(red: 245, green: 245, blue: 245, alpha: 255)
     
+    public static var transparentNavy: UIColor = fromRgba(red: 22, green: 41, blue: 69, alpha: 150)
+    
+    public static var transparentGray: UIColor = fromRgba(red: 50, green: 50, blue: 50, alpha: 150)
+    
     static func fromRgba(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor.init(red: red / 255, green: green / 255, blue: blue / 255, alpha: alpha / 255)
     }

@@ -81,7 +81,15 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate {
     
     func createDirectory(name: String) -> String {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        return path + "/" + name
+        let folder = path + "/" + name
+        
+        do {
+            try FileManager.default.createDirectory(atPath: folder, withIntermediateDirectories: false, attributes: nil)
+        } catch {
+            // Folder already exists, nothing to catch
+        }
+        
+        return folder
     }
 }
 
