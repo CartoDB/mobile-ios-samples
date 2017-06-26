@@ -25,9 +25,9 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
-        sample.title = "BBOX ROUTING"
-        sample.description = "Bounding box download with offline routing"
-        sample.imageResource = folder + "icon_sample_styles.png"
+        sample.title = "ROUTE DOWNLOAD"
+        sample.description = "Route download via bounding box"
+        sample.imageResource = folder + "icon_sample_route_download.png"
         sample.controller = BboxRoutingController()
         
         list.append(sample)
