@@ -14,6 +14,12 @@ class ProgressLabel : UIView {
     var label: UILabel!
     var progressBar: UIView!
     
+    var height: CGFloat!
+    
+    func isVisible() -> Bool {
+        return self.alpha == 1
+    }
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         
@@ -28,6 +34,8 @@ class ProgressLabel : UIView {
         progressBar = UIView()
         progressBar.backgroundColor = Colors.appleBlue
         addSubview(progressBar)
+        
+        alpha = 0
     }
     
     override func layoutSubviews() {
@@ -55,4 +63,28 @@ class ProgressLabel : UIView {
         let lon = round(position.getY() * 100) / 100
         return  " [lat: " + String(lat) + ", lon: " + String(lon) + "] "
     }
+    
+    func hide() {
+        if (isVisible()) {
+            animateAlpha(alpha: 0)
+        }
+    }
+    
+    func show() {
+        if (!isVisible()) {
+            animateAlpha(alpha: 1)
+        }
+    }
+    
+    func animateAlpha(alpha: CGFloat) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.alpha = alpha
+        })
+    }
 }
+
+
+
+
+
+

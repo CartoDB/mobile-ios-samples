@@ -26,4 +26,8 @@ class Device {
     static func statusBarHeight() -> CGFloat {
         return UIApplication.shared.statusBarFrame.height
     }
+    
+    static func trueY0() -> CGFloat {
+        return navigationbarHeight() + statusBarHeight()
+    }
 }
