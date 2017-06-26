@@ -9,7 +9,7 @@
 import Foundation
 import  UIKit
 
-class BboxRoutingController : BaseController {
+class BboxRoutingController : BaseController, PackageDownloadDelegate {
     
     let ROUTING_TAG = "routing:"
     let ROUTING_SOURCE = "valhalla.osm"
@@ -41,7 +41,10 @@ class BboxRoutingController : BaseController {
         routing = Routing(mapView: contentView.map)
         
         mapPackageListener = MapPackageListener()
+        mapPackageListener.delegate = self
+        
         routingPackageListener = RoutingPackageListener()
+        routingPackageListener.delegate = self
         
         var folder = createDirectory(name: "mappackages")
         mapManager = NTCartoPackageManager(source: MAP_SOURCE, dataFolder: folder)
@@ -49,7 +52,7 @@ class BboxRoutingController : BaseController {
         folder = createDirectory(name: "routingpackages")
         routingManager = NTCartoPackageManager(source: ROUTING_TAG + ROUTING_SOURCE, dataFolder: folder)
         
-//        service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)   
+//        service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,9 +66,27 @@ class BboxRoutingController : BaseController {
         
         contentView.removeRecognizers()
     }
+
+    func downloadComplete(id: String) {
+        
+    }
+    
+    func downloadFailed(errorType: NTPackageErrorType) {
+        
+    }
+    
+    func statusChanged(status: NTPackageStatus) {
+        
+    }
     
     func createDirectory(name: String) -> String {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
         return path + "/" + name
     }
 }
+
+
+
+
+
+

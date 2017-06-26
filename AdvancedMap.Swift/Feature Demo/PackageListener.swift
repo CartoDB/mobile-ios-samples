@@ -10,7 +10,7 @@ import Foundation
 
 class PackageListener : NTPackageManagerListener {
     
-    var delegate: PackageDelegate?
+    var delegate: PackageDownloadDelegate?
     
     override func onPackageUpdated(_ arg1: String!, version: Int32) {
         delegate?.downloadComplete(id: arg1)
@@ -21,15 +21,15 @@ class PackageListener : NTPackageManagerListener {
     }
     
     override func onPackageFailed(_ arg1: String!, version: Int32, errorType: NTPackageErrorType) {
-        delegate?.failed(errorType: errorType)
+        delegate?.downloadFailed(errorType: errorType)
     }
 }
 
-protocol PackageDelegate {
+protocol PackageDownloadDelegate {
     
-    func downloadComplete(id: String)
+    func downloadComplete(id: String);
     
-    func failed(errorType: NTPackageErrorType)
+    func downloadFailed(errorType: NTPackageErrorType);
     
-    func statusChanged(status: NTPackageStatus)
+    func statusChanged(status: NTPackageStatus);
 }
