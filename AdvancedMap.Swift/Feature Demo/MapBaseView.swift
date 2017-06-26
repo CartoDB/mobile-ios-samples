@@ -20,6 +20,9 @@ class MapBaseView : UIView {
     var infoButton: PopupButton!
     var infoContent: InformationPopupContent!
     
+    let bottomLabelHeight: CGFloat = 40
+    let smallPadding: CGFloat = 5
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         
@@ -52,7 +55,6 @@ class MapBaseView : UIView {
         
         let count = CGFloat(self.buttons.count)
         
-        let bottomPadding: CGFloat = 30
         let buttonWidth: CGFloat = 60
         let innerPadding: CGFloat = 25
         
@@ -60,7 +62,7 @@ class MapBaseView : UIView {
         
         let w: CGFloat = buttonWidth
         let h: CGFloat = w
-        let y: CGFloat = frame.height - (bottomPadding + h)
+        let y: CGFloat = frame.height - (bottomLabelHeight + h + smallPadding)
         var x: CGFloat = frame.width / 2 - totalArea / 2
         
         for button in buttons {

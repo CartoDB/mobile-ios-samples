@@ -46,11 +46,16 @@ class ProgressLabel : UIView {
         
         label.text = "DOWNLOADING" + positionToString(position: position) + " (" + String(describing: round(progress * 10) / 10) + "%)"
         
-        let width: CGFloat = (frame.width * progress) / 100
-        let height: CGFloat = 3
-        let y: CGFloat = frame.height - height
-        
-        progressBar.frame = CGRect(x: 0, y: y, width: width, height: height)
+        updateProgressBar(progress: progress)
+    }
+    
+    func update(text: String, progress: CGFloat) {
+        label.text = text
+        updateProgressBar(progress: progress)
+    }
+    
+    func update(text: String) {
+        label.text = text
     }
     
     func complete(message: String) {
@@ -59,6 +64,15 @@ class ProgressLabel : UIView {
     
     func complete(position: NTMapPos) {
         label.text = "DOWNLOAD OF" + positionToString(position: position) + "COMPLETED"
+    }
+    
+    func updateProgressBar(progress: CGFloat) {
+        
+        let width: CGFloat = (frame.width * progress) / 100
+        let height: CGFloat = 3
+        let y: CGFloat = frame.height - height
+        
+        progressBar.frame = CGRect(x: 0, y: y, width: width, height: height)
     }
     
     func positionToString(position: NTMapPos) -> String {

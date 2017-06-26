@@ -40,12 +40,6 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         
         routing = Routing(mapView: contentView.map)
         
-        mapPackageListener = MapPackageListener()
-        mapPackageListener.delegate = self
-        
-        routingPackageListener = RoutingPackageListener()
-        routingPackageListener.delegate = self
-        
         var folder = createDirectory(name: "mappackages")
         mapManager = NTCartoPackageManager(source: MAP_SOURCE, dataFolder: folder)
         
@@ -53,6 +47,9 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         routingManager = NTCartoPackageManager(source: ROUTING_TAG + ROUTING_SOURCE, dataFolder: folder)
         
         setOnlineMode()
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.downloadButtonTapped(_:)))
+        contentView.downloadButton.addGestureRecognizer(recognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +60,16 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         mapListener = RouteMapEventListener()
         mapListener.delegate = self
         contentView.map.setMapEventListener(mapListener)
+        
+        mapPackageListener = MapPackageListener()
+        mapPackageListener.delegate = self
+        mapManager.setPackageManagerListener(mapPackageListener)
+        mapManager.start()
+        
+        routingPackageListener = RoutingPackageListener()
+        routingPackageListener.delegate = self
+        routingManager.setPackageManagerListener(routingPackageListener)
+        routingManager.start()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -71,6 +78,18 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         contentView.removeRecognizers()
         
         mapListener = nil
+        
+        mapManager.stop(true)
+        mapPackageListener = nil
+        
+        routingManager.stop(true)
+        routingPackageListener = nil
+    }
+    
+    func downloadButtonTapped(_ sender: UITapGestureRecognizer) {
+        
+        let id = boundingBox.toString()
+        mapManager.startPackageDownload(id)
     }
     
     func setOnlineMode() {
@@ -81,7 +100,7 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         
         /*
          * NB! AdvancedMap.Swift requires CartoMobileSDK 4.1.0 Valhalla build,
-         * which is not yet on cocoapods, because cocoapods do not support semantic versioning (26 June 2017)
+         * which is not yet (as of 26 June 2017) on cocoapods, because cocoapods do not support semantic versioning
          * Contact CARTO to get the new version of the framework!
          */
         routing.service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)
@@ -89,6 +108,7 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
     
     func startClicked(event: RouteMapEvent) {
         routing.setStartMarker(position: event.clickPosition)
+        contentView.downloadButton.disable()
     }
     
     func stopClicked(event: RouteMapEvent) {
@@ -112,21 +132,49 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
                 let color = NTColor(r: 14, g: 122, b: 254, a: 150)
                 self.routing.show(result: result!, lineColor: color!, complete: {
                     (route: Route) in
+                    
+                    let projection = self.contentView.map.getOptions().getBaseProjection()
+                    self.boundingBox = BoundingBox.fromMapBounds(projection: projection!, bounds: route.bounds!, extraMeters: 0)
+                    
+                    self.contentView.downloadButton.enable()
+                    
+                    if (!self.contentView.progressLabel.isVisible()) {
+                        self.contentView.progressLabel.show()
+                    }
                 })
             })
         }
     }
     
-    func downloadComplete(id: String) {
+    func downloadComplete(sender: PackageListener, id: String) {
+        
+        if (type(of: sender) == MapPackageListener.self) {
+            routingManager.startPackageDownload(id)
+        } else {
+            let bounds = boundingBox.bounds
+            
+            DispatchQueue.main.async(execute: {
+                self.contentView.addPolygonTo(bounds: bounds!)
+            })
+        }
+    }
+    
+    func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
         
     }
     
-    func downloadFailed(errorType: NTPackageErrorType) {
+    func statusChanged(sender: PackageListener, status: NTPackageStatus) {
         
-    }
-    
-    func statusChanged(status: NTPackageStatus) {
+        let progress = CGFloat(status.getProgress())
+        var text = "Downloading map: " + String(describing: progress) + "%"
+ 
+        if (type(of: sender) == RoutingPackageListener.self) {
+            text = "Downloading route: " + String(describing: progress) + "%"
+        }
         
+        DispatchQueue.main.async(execute: {
+            self.contentView.progressLabel.update(text: text, progress: progress)
+        })
     }
     
     func createDirectory(name: String) -> String {

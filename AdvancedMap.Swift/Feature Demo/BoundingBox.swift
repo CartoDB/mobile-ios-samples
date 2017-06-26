@@ -27,7 +27,10 @@ class BoundingBox : NSObject {
     var bounds: NTMapBounds!
     
     func toString() -> String {
-        return String(format: "bbox(%ld, %ld, %ld, %ld)", minLon, minLat, maxLon, maxLat)
+        
+        // TODO Format correctly; also... why the hell does the top line produce outrageous numbers!?
+//        return String(format: "bbox(%ld, %ld, %ld, %ld)", minLon, minLat, maxLon, maxLat)
+        return "bbox(" + String(minLon) + "," + String(minLat) + "," + String(maxLon) + "," + String(maxLat) + ")"
     }
     
     static func fromMapBounds(projection: NTProjection, bounds: NTMapBounds, extraMeters: Double) -> BoundingBox {
@@ -45,6 +48,8 @@ class BoundingBox : NSObject {
         box.minLon = minWgs?.getX()
         box.maxLat = maxWgs?.getY()
         box.maxLon = maxWgs?.getX()
+        
+        box.bounds = NTMapBounds(min: min, max: max)
         
         return box
     }

@@ -19,6 +19,8 @@ class BboxRoutingView : MapBaseView {
     
     var progressLabel: ProgressLabel!
     
+    var overlaySource: NTLocalVectorDataSource!
+    
     convenience init() {
         
         self.init(frame: CGRect.zero)
@@ -33,10 +35,17 @@ class BboxRoutingView : MapBaseView {
         addSubview(onlineSwitch)
         
         downloadButton = PopupButton(imageUrl: "icon_download.png")
+        downloadButton.disable()
         addButton(button: downloadButton)
         
         progressLabel = ProgressLabel()
         addSubview(progressLabel)
+        
+        let projection = map.getOptions().getBaseProjection()
+        
+        overlaySource = NTLocalVectorDataSource(projection: projection)
+        let layer = NTVectorLayer(dataSource: overlaySource);
+        map.getLayers().add(layer)
     }
     
     override func layoutSubviews() {
@@ -46,42 +55,47 @@ class BboxRoutingView : MapBaseView {
         let padding: CGFloat = 5
         
         var w: CGFloat = onlineSwitch.getWidth()
-        let h: CGFloat = 40
+        var h: CGFloat = 40
         var x: CGFloat = frame.width - (w + padding)
         var y: CGFloat = Device.trueY0() + padding
         
         onlineSwitch.frame = CGRect(x: x, y: y, width: w, height: h)
         
         w = frame.width
+        h = bottomLabelHeight
         x = 0
         y = frame.height - h
         
         progressLabel.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
-    func downloadButtonTapped(_ sender: UITapGestureRecognizer) {
-        if (progressLabel.isVisible()) {
-            progressLabel.hide()
-        } else {
-            progressLabel.show()
-        }
-    }
-    
-    override func addRecognizers() {
+    func addPolygonTo(bounds: NTMapBounds) {
         
-        super.addRecognizers()
+        let builder = NTPolygonStyleBuilder()
+        builder?.setColor(NTColor(r: 100, g: 100, b: 230, a: 60))
         
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.downloadButtonTapped(_:)))
-        downloadButton.addGestureRecognizer(recognizer)
-    }
-    
-    override func removeRecognizers() {
+        let positions = NTMapPosVector();
         
-        super.removeRecognizers()
+        // Positions added in clockwise order from south-west
+        positions?.add(NTMapPos(x: bounds.getMin().getX(), y: bounds.getMin().getY()));
+        positions?.add(NTMapPos(x: bounds.getMax().getX(), y: bounds.getMin().getY()));
+        positions?.add(NTMapPos(x: bounds.getMax().getX(), y: bounds.getMax().getY()));
+        positions?.add(NTMapPos(x: bounds.getMin().getX(), y: bounds.getMax().getY()));
         
-        downloadButton.gestureRecognizers?.forEach(downloadButton.removeGestureRecognizer)
+        let polygon = NTPolygon(poses: positions, style: builder?.buildStyle())
+        
+        overlaySource.add(polygon);
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 

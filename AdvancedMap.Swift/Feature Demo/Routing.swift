@@ -100,6 +100,7 @@ class Routing {
             let index = Int32((instruction?.getPointIndex())!)
             let position = result.getPoints().get(index)
             
+            
             createRoutePoint(position: position!, instruction: instruction!, source: routeDataSource!)
             vector?.add(position)
         }
@@ -107,6 +108,7 @@ class Routing {
         let polygon = NTPolygon(poses: vector, style: NTPolygonStyleBuilder().buildStyle())
         
         let route = Route()
+        
         route.bounds = polygon?.getBounds()
         route.length = result.getTotalDistance()
         
@@ -114,7 +116,7 @@ class Routing {
     }
     
     func getMessage(result: NTRoutingResult) -> String {
-        let distance = "Calculated route is " + String(Int(result.getTotalDistance() / 10) * 10) + "km"
+        let distance = "Calculated route is " + String(Int(result.getTotalDistance() / 10000) * 10) + "km"
         return distance
     }
     
