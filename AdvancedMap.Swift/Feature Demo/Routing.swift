@@ -110,7 +110,7 @@ class Routing {
         complete(route)
     }
     
-    func getMessage(result: NTRoutingResult, start: Double, current: Double) -> String {
+    func getMessage(result: NTRoutingResult) -> String {
         let distance = "Calculated route is " + String(Int(result.getTotalDistance() / 10) * 10) + "km"
         return distance
     }

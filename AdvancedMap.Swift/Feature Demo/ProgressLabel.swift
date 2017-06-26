@@ -53,6 +53,10 @@ class ProgressLabel : UIView {
         progressBar.frame = CGRect(x: 0, y: y, width: width, height: height)
     }
     
+    func complete(message: String) {
+        label.text = message
+    }
+    
     func complete(position: NTMapPos) {
         label.text = "DOWNLOAD OF" + positionToString(position: position) + "COMPLETED"
     }

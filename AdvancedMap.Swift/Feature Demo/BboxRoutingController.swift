@@ -9,7 +9,7 @@
 import Foundation
 import  UIKit
 
-class BboxRoutingController : BaseController, PackageDownloadDelegate {
+class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapEventDelegate {
     
     let ROUTING_TAG = "routing:"
     let ROUTING_SOURCE = "valhalla.osm"
@@ -29,6 +29,8 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate {
     var mapManager: NTCartoPackageManager!
     
 //    var service: NTPackageManagerValhallaRoutingService!
+    
+    var mapListener: RouteMapEventListener!
     
     override func viewDidLoad() {
         
@@ -53,20 +55,59 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate {
         routingManager = NTCartoPackageManager(source: ROUTING_TAG + ROUTING_SOURCE, dataFolder: folder)
         
 //        service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         contentView.addRecognizers()
+        
+        mapListener = RouteMapEventListener()
+        mapListener.delegate = self
+        contentView.map.setMapEventListener(mapListener)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         contentView.removeRecognizers()
+        
+        mapListener = nil
     }
-
+    
+    func startClicked(event: RouteMapEvent) {
+        routing.setStartMarker(position: event.clickPosition)
+    }
+    
+    func stopClicked(event: RouteMapEvent) {
+        routing.setStopMarker(position: event.clickPosition)
+        showRoute(start: event.startPosition, stop: event.stopPosition)
+    }
+    
+    func showRoute(start: NTMapPos, stop: NTMapPos) {
+        DispatchQueue.global().async {
+            
+            var result: NTRoutingResult? = nil
+            
+            do {
+                result = self.routing.getResult(startPos: start, stopPos: stop)
+            } catch {
+                print("Failed")
+            }
+            
+            DispatchQueue.main.async(execute: {
+                
+                if (result == nil) {
+                    self.contentView.progressLabel.complete(message: "Routing failed. Please try again")
+                } else {
+                    self.contentView.progressLabel.complete(message: self.routing.getMessage(result: result!))
+                }
+            })
+        }
+    }
+    
     func downloadComplete(id: String) {
         
     }
