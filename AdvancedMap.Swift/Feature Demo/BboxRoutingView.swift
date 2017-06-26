@@ -21,6 +21,8 @@ class BboxRoutingView : MapBaseView {
     
     var overlaySource: NTLocalVectorDataSource!
     
+    var projection: NTProjection!
+    
     convenience init() {
         
         self.init(frame: CGRect.zero)
@@ -41,7 +43,7 @@ class BboxRoutingView : MapBaseView {
         progressLabel = ProgressLabel()
         addSubview(progressLabel)
         
-        let projection = map.getOptions().getBaseProjection()
+        projection = map.getOptions().getBaseProjection()
         
         overlaySource = NTLocalVectorDataSource(projection: projection)
         let layer = NTVectorLayer(dataSource: overlaySource);
@@ -85,6 +87,19 @@ class BboxRoutingView : MapBaseView {
         let polygon = NTPolygon(poses: positions, style: builder?.buildStyle())
         
         overlaySource.add(polygon);
+    }
+    
+    func addPolygonsTo(packageList: [NTPackageInfo]) {
+        
+        for item in packageList {
+            
+            let id = item.getPackageId()
+            
+            if (id?.contains(BoundingBox.identifier))! {
+                let bounds = BoundingBox.fromString(projection: self.projection, route: id!).bounds
+                addPolygonTo(bounds: bounds!)
+            }
+        }
     }
 }
 

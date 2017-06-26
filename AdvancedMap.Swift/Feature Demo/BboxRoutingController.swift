@@ -9,7 +9,7 @@
 import Foundation
 import  UIKit
 
-class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapEventDelegate {
+class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapEventDelegate, SwitchDelegate {
     
     let ROUTING_TAG = "routing:"
     let ROUTING_SOURCE = "valhalla.osm"
@@ -50,6 +50,31 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.downloadButtonTapped(_:)))
         contentView.downloadButton.addGestureRecognizer(recognizer)
+        
+        let mapPackages = mapManager.getLocalPackages()
+        let routingPackages = routingManager.getLocalPackages()
+        
+        var existing = [NTPackageInfo]()
+        
+        let mapPackageCount = Int((mapPackages?.size())!)
+        let routingPackageCount = Int((routingPackages?.size())!)
+        
+        // Ensure both map package and routing package exist before adding them
+        for i in stride(from: 0, to: mapPackageCount, by: 1) {
+            
+            let mapPackage = mapPackages?.get(Int32(i))
+            
+            for j in stride(from: 0, to: routingPackageCount, by: 1) {
+                
+                let routingPackage = routingPackages?.get(Int32(j))
+                
+                if (mapPackage?.getPackageId().contains((routingPackage?.getPackageId())!))! {
+                    existing.append(mapPackage!)
+                }
+            }
+        }
+        
+        contentView.addPolygonsTo(packageList: existing)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +115,15 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         
         let id = boundingBox.toString()
         mapManager.startPackageDownload(id)
+    }
+    
+    func switchChanged() {
+        
+        if (contentView.onlineSwitch.isOn()) {
+            setOnlineMode()
+        } else {
+            setOfflineMode()
+        }
     }
     
     func setOnlineMode() {

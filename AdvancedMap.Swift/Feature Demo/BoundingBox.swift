@@ -10,6 +10,8 @@ import Foundation
 
 class BoundingBox : NSObject {
     
+    static let identifier = "bbox("
+    
     var name: String!
     
     var minLat: Double!
