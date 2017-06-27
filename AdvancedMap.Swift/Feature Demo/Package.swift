@@ -14,7 +14,7 @@ class Package : NSObject {
     
     var name: String!
     
-    var containsSubsections: Bool!
+    var status: NTPackageStatus!
     
-    var subsections: [Package] = []
+    var info: NTPackageInfo!
 }

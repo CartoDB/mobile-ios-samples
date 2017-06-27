@@ -69,10 +69,6 @@ class StateSwitch : UIView {
         h = _switch.frame.height
         y = frame.height / 2 - h / 2
         
-        
-        print("Switch Width: " + String(describing: _switch.frame.width))
-        print("Switch Height: " + String(describing: _switch.frame.height))
-        
         _switch.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     

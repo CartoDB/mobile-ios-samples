@@ -107,22 +107,61 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         
     }
     
-    var currentFolder: String = ""
+    var folder: String = ""
     
     func getPackages() -> [Package] {
 
         var packages = [Package]()
         
         let vector = mapManager.getServerPackages()
-        let count = Int((vector?.size())!)
+        let total = Int((vector?.size())!)
         
-        for i in stride(from: 0, to: count, by: 1) {
+        for i in stride(from: 0, to: total, by: 1) {
             
             let info = vector?.get(Int32(i))
             let name = info?.getName()
             
             let package = Package()
-            package.name = name
+
+            if folder.characters.count > 0 && (name?.hasPrefix(folder))! {
+                // Belongs to a different folder,
+                // should not be added if name is e.g. Asia/, while folder is /Europe
+                continue;
+            }
+            
+            var modified = name?.substring(from: folder.characters.count)
+            let index = modified?.index(of: "/")
+            
+            if (index == -1) {
+                // This is an actual package
+                package.name = modified
+                package.status = mapManager.getLocalPackageStatus(info?.getPackageId(), version: -1)
+                package.info = info
+            } else {
+                // This is a package group
+                modified = modified?.substring(from: 0, to: index!)
+                
+                // Try n' find an existing package from the list
+                let found = packages.filter({ $0.name == modified })
+                
+                if found.count == 0 {
+                    // If there are none, add a package group if we don't have an existing list item
+                    package.name = modified
+                } else if found.count == 1 && found[0].info != nil {
+                    
+                    // Sometimes we need to add two labels with the same name.
+                    // One a downloadable package and the other pointing to a list of said country's counties,
+                    // such as with Spain, Germany, France, Great Britain
+                    
+                    // If there is one existing package and its info isn't null,
+                    // we will add a "parent" package containing subpackages (or package group)
+                    package.name = modified
+                } else {
+                    // Shouldn't be added, as both cases are accounted for
+                    continue
+                }
+            }
+
             packages.append(package)
         }
         
