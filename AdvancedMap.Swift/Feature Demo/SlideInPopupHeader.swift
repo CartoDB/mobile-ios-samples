@@ -13,6 +13,7 @@ class SlideInPopupHeader : UIView {
     
     var height: CGFloat = 40
     
+    var backButton: PopupBackButton!
     var label: UILabel!
     var closeButton: PopupCloseButton!
     
@@ -25,6 +26,14 @@ class SlideInPopupHeader : UIView {
         label.textColor = Colors.navy
         
         addSubview(label)
+        
+        backButton = PopupBackButton()
+        backButton.text.font = label.font
+        backButton.text.textColor = label.textColor
+        backButton.backgroundColor = UIColor.white
+        
+        addSubview(backButton)
+        backButton.isHidden = true
         
         closeButton = PopupCloseButton()
         addSubview(closeButton)
@@ -43,6 +52,8 @@ class SlideInPopupHeader : UIView {
         let h: CGFloat = frame.height
         
         label.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        backButton.frame = CGRect(x: x, y: y, width: w, height: h)
         
         w = h
         x = frame.width - w
@@ -81,6 +92,52 @@ class PopupCloseButton : UIView {
         imageView.frame = CGRect(x: padding, y: padding, width: frame.width - 2 * padding, height: frame.height - 2 * padding)
     }
 }
+
+class PopupBackButton : UIView {
+    
+    var button: UIImageView!
+    var text: UILabel!
+    
+    convenience init() {
+        self.init(frame: CGRect.zero)
+        
+        button = UIImageView()
+        button.image = UIImage(named: "icon_back_blue.png")
+        addSubview(button)
+        
+        text = UILabel()
+        text.text = "BACK"
+        addSubview(text)
+    }
+    
+    override func layoutSubviews() {
+        
+        let padding: CGFloat = 3
+        let imagePadding: CGFloat = frame.height / 4
+        
+        var x: CGFloat = 0
+        var y: CGFloat = imagePadding
+        var h: CGFloat = frame.height - 2 * imagePadding
+        var w: CGFloat = h / 2
+        
+        button.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        x = button.frame.width + imagePadding
+        y = 0
+        w = frame.width - (x + padding)
+        h = frame.height
+        
+        text.frame = CGRect(x: x, y: y, width: w, height: h)
+    }
+}
+
+
+
+
+
+
+
+
 
 
 

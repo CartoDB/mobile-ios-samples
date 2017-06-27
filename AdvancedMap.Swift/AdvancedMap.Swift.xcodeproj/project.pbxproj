@@ -22,6 +22,7 @@
 		AD437ED01EF933C5008CEA76 /* style_image_nutiteq_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC81EF933C5008CEA76 /* style_image_nutiteq_gray.png */; };
 		AD437ED11EF933C5008CEA76 /* style_image_nutiteq_bright.png in Resources */ = {isa = PBXBuildFile; fileRef = AD437EC91EF933C5008CEA76 /* style_image_nutiteq_bright.png */; };
 		AD437ED31EF93880008CEA76 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437ED21EF93880008CEA76 /* Texts.swift */; };
+		AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */; };
 		AD73565C1F02557E00D4D6EF /* CityDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565B1F02557E00D4D6EF /* CityDownloadController.swift */; };
 		AD73565E1F02558700D4D6EF /* CityDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565D1F02558700D4D6EF /* CityDownloadView.swift */; };
 		AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */; };
@@ -101,6 +102,7 @@
 		AD437EC81EF933C5008CEA76 /* style_image_nutiteq_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_gray.png; sourceTree = "<group>"; };
 		AD437EC91EF933C5008CEA76 /* style_image_nutiteq_bright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_bright.png; sourceTree = "<group>"; };
 		AD437ED21EF93880008CEA76 /* Texts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
+		AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_blue.png; sourceTree = "<group>"; };
 		AD73565A1F024C0900D4D6EF /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
 		AD73565B1F02557E00D4D6EF /* CityDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDownloadController.swift; sourceTree = "<group>"; };
 		AD73565D1F02558700D4D6EF /* CityDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDownloadView.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		AD9786B11EF8220F002912DF /* ButtonIcons */ = {
 			isa = PBXGroup;
 			children = (
+				AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */,
 				ADAFCD2A1EFC0745005F53CB /* icon_download.png */,
 				AD9786C71EF82B00002912DF /* icon_close.png */,
 				AD9786B21EF82284002912DF /* icon_basemap.png */,
@@ -563,6 +566,7 @@
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
+				AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */,
 				AD73C9C61F015D1E008F040A /* icon_sample_route_download.png in Resources */,
 				ADE092F31F00ECF500C569F9 /* direction_upthenright.png in Resources */,
 				AD9786C01EF822B7002912DF /* icon_marker_gray.png in Resources */,
