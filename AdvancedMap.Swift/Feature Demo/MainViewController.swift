@@ -37,6 +37,7 @@ class MainViewController: UIViewController, GalleryDelegate {
         
         let controller = item.sample.controller!
         controller.sample = item.sample
+        controller.title = item.sample.title
         
         navigationController?.pushViewController(controller, animated: true)
     }

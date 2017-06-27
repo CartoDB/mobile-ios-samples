@@ -35,7 +35,7 @@ class Samples {
         sample = Sample()
         sample.title = "CITY DOWNLOAD"
         sample.description = "City download via bounding box for offline use"
-        sample.imageResource = folder + "icon_sample_styles.png"
+        sample.imageResource = folder + "icon_sample_city_download.png"
         sample.controller = CityDownloadController()
         
         list.append(sample)

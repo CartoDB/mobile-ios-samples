@@ -11,11 +11,6 @@ import  UIKit
 
 class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMapEventDelegate, SwitchDelegate {
     
-    let ROUTING_TAG = "routing:"
-    let ROUTING_SOURCE = "valhalla.osm"
-    let MAP_SOURCE = "nutiteq.osm"
-    let TRANSPORT_MODE = ".car"
-    
     var routing: Routing!
     
     var contentView: RouteDownloadView!
@@ -40,11 +35,11 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         
         routing = Routing(mapView: contentView.map)
         
-        var folder = createDirectory(name: "mappackages")
-        mapManager = NTCartoPackageManager(source: MAP_SOURCE, dataFolder: folder)
+        var folder = Utils.createDirectory(name: "mappackages")
+        mapManager = NTCartoPackageManager(source: Routing.MAP_SOURCE, dataFolder: folder)
         
-        folder = createDirectory(name: "routingpackages")
-        routingManager = NTCartoPackageManager(source: ROUTING_TAG + ROUTING_SOURCE, dataFolder: folder)
+        folder = Utils.createDirectory(name: "routingpackages")
+        routingManager = NTCartoPackageManager(source: Routing.ROUTING_TAG + Routing.ROUTING_SOURCE, dataFolder: folder)
         
         setOnlineMode()
         
@@ -131,7 +126,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
     }
     
     func setOnlineMode() {
-        routing.service = NTCartoOnlineRoutingService(source: MAP_SOURCE + TRANSPORT_MODE)
+        routing.service = NTCartoOnlineRoutingService(source: Routing.MAP_SOURCE + Routing.TRANSPORT_MODE)
     }
     
     func setOfflineMode() {
@@ -212,7 +207,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         }
         
         DispatchQueue.main.async(execute: {
-            self.contentView.progressLabel.update(text: text)
+            self.contentView.progressLabel.complete(message: text)
         })
     }
     
@@ -229,19 +224,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
             self.contentView.progressLabel.update(text: text, progress: progress)
         })
     }
-    
-    func createDirectory(name: String) -> String {
-        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let folder = path + "/" + name
-        
-        do {
-            try FileManager.default.createDirectory(atPath: folder, withIntermediateDirectories: false, attributes: nil)
-        } catch {
-            // Folder already exists, nothing to catch
-        }
-        
-        return folder
-    }
+
 }
 
 

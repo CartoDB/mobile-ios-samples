@@ -32,8 +32,10 @@ class Cities {
         
         city.name = "New York"
         
-        box.minLon = -73.4768
-        box.maxLon = -74.1205
+//        box.minLon = -73.4768
+//        box.maxLon = -74.1205
+        box.minLon = -74.1205
+        box.maxLon = -73.4768
         box.minLat = 40.4621
         box.maxLat = 41.0043
         

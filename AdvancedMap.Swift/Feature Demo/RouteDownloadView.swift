@@ -9,20 +9,14 @@
 import Foundation
 import UIKit
 
-class RouteDownloadView : MapBaseView {
+class RouteDownloadView : DownloadBaseView {
     
     var mapLayer: NTVectorTileLayer!
-    
-    var onlineSwitch: StateSwitch!
-    
+
     var downloadButton: PopupButton!
     
-    var progressLabel: ProgressLabel!
-    
     var overlaySource: NTLocalVectorDataSource!
-    
-    var projection: NTProjection!
-    
+
     convenience init() {
         
         self.init(frame: CGRect.zero)
@@ -30,20 +24,13 @@ class RouteDownloadView : MapBaseView {
         mapLayer = addBaseLayer()
         
         initialize()
-
+        initializeDownloadContent()
+        
         infoContent.setText(headerText: Texts.routeDownloadInfoHeader, contentText: Texts.basemapInfoContainer)
-        
-        onlineSwitch = StateSwitch()
-        addSubview(onlineSwitch)
-        
+
         downloadButton = PopupButton(imageUrl: "icon_download.png")
         downloadButton.disable()
         addButton(button: downloadButton)
-        
-        progressLabel = ProgressLabel()
-        addSubview(progressLabel)
-        
-        projection = map.getOptions().getBaseProjection()
         
         overlaySource = NTLocalVectorDataSource(projection: projection)
         let layer = NTVectorLayer(dataSource: overlaySource);
@@ -55,22 +42,6 @@ class RouteDownloadView : MapBaseView {
     override func layoutSubviews() {
         
         super.layoutSubviews()
-        
-        let padding: CGFloat = 5
-        
-        var w: CGFloat = onlineSwitch.getWidth()
-        var h: CGFloat = 40
-        var x: CGFloat = frame.width - (w + padding)
-        var y: CGFloat = Device.trueY0() + padding
-        
-        onlineSwitch.frame = CGRect(x: x, y: y, width: w, height: h)
-        
-        w = frame.width
-        h = bottomLabelHeight
-        x = 0
-        y = frame.height - h
-        
-        progressLabel.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
     func addPolygonTo(bounds: NTMapBounds) {
