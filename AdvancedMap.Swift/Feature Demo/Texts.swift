@@ -17,4 +17,6 @@ class Texts {
     static let routeDownloadInfoHeader = "ROUTE DOWNLOAD"
     
     static let cityDownloadInfoHeader = "CITY DOWNLOAD"
+    
+    static let countryDownloadInfoHeader = "COUNTRY DOWNLOAD"
 }

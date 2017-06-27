@@ -183,6 +183,14 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         }
     }
     
+    func listDownloadComplete() {
+        // No implementation
+    }
+    
+    func listDownloadFailed() {
+        // No implemenetation
+    }
+    
     func downloadComplete(sender: PackageListener, id: String) {
         
         if (type(of: sender) == MapPackageListener.self) {

@@ -29,6 +29,10 @@
 		AD7356641F02621C00D4D6EF /* DownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356631F02621C00D4D6EF /* DownloadBaseView.swift */; };
 		AD7356661F02679200D4D6EF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356651F02679200D4D6EF /* Utils.swift */; };
 		AD7356681F02732500D4D6EF /* icon_sample_city_download.png in Resources */ = {isa = PBXBuildFile; fileRef = AD7356671F02732500D4D6EF /* icon_sample_city_download.png */; };
+		AD73566B1F02776400D4D6EF /* CountryDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566A1F02776400D4D6EF /* CountryDownloadController.swift */; };
+		AD73566D1F02777500D4D6EF /* CountryDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566C1F02777500D4D6EF /* CountryDownloadView.swift */; };
+		AD7356701F0277A800D4D6EF /* CountryPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566F1F0277A800D4D6EF /* CountryPopupContent.swift */; };
+		AD7356721F0277F700D4D6EF /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356711F0277F700D4D6EF /* Country.swift */; };
 		AD73C9C61F015D1E008F040A /* icon_sample_route_download.png in Resources */ = {isa = PBXBuildFile; fileRef = AD73C9C51F015D1E008F040A /* icon_sample_route_download.png */; };
 		AD73C9C81F015D75008F040A /* icon_sample_styles.png in Resources */ = {isa = PBXBuildFile; fileRef = AD73C9C71F015D75008F040A /* icon_sample_styles.png */; };
 		AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */; };
@@ -104,6 +108,10 @@
 		AD7356631F02621C00D4D6EF /* DownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadBaseView.swift; sourceTree = "<group>"; };
 		AD7356651F02679200D4D6EF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AD7356671F02732500D4D6EF /* icon_sample_city_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_city_download.png; sourceTree = "<group>"; };
+		AD73566A1F02776400D4D6EF /* CountryDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDownloadController.swift; sourceTree = "<group>"; };
+		AD73566C1F02777500D4D6EF /* CountryDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryDownloadView.swift; sourceTree = "<group>"; };
+		AD73566F1F0277A800D4D6EF /* CountryPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPopupContent.swift; sourceTree = "<group>"; };
+		AD7356711F0277F700D4D6EF /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		AD73C9C51F015D1E008F040A /* icon_sample_route_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_route_download.png; sourceTree = "<group>"; };
 		AD73C9C71F015D75008F040A /* icon_sample_styles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_styles.png; sourceTree = "<group>"; };
 		AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceController.swift; sourceTree = "<group>"; };
@@ -206,9 +214,19 @@
 			name = "City Download";
 			sourceTree = "<group>";
 		};
+		AD7356691F02760800D4D6EF /* Country Download */ = {
+			isa = PBXGroup;
+			children = (
+				AD73566A1F02776400D4D6EF /* CountryDownloadController.swift */,
+				AD73566C1F02777500D4D6EF /* CountryDownloadView.swift */,
+			);
+			name = "Country Download";
+			sourceTree = "<group>";
+		};
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				AD7356691F02760800D4D6EF /* Country Download */,
 				AD7356591F02472500D4D6EF /* City Download */,
 				ADAFCD1E1EFBEEAC005F53CB /* Route Download */,
 				AD9786841EF7DA8C002912DF /* Styles */,
@@ -307,6 +325,7 @@
 				AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */,
 				AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */,
 				AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */,
+				AD73566F1F0277A800D4D6EF /* CountryPopupContent.swift */,
 			);
 			name = SlideInPopupContent;
 			sourceTree = "<group>";
@@ -409,6 +428,7 @@
 				AD437EB91EF907D1008CEA76 /* Languages.swift */,
 				AD437ED21EF93880008CEA76 /* Texts.swift */,
 				AD7356611F02581F00D4D6EF /* Cities.swift */,
+				AD7356711F0277F700D4D6EF /* Country.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -613,6 +633,7 @@
 				AD9786B01EF80E7C002912DF /* PopupView.swift in Sources */,
 				ADB27EC11EF41754004198D3 /* MainView.swift in Sources */,
 				ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */,
+				AD73566B1F02776400D4D6EF /* CountryDownloadController.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD73565C1F02557E00D4D6EF /* CityDownloadController.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
@@ -629,6 +650,8 @@
 				ADE092FC1F00F26C00C569F9 /* RoutingPackageListener.swift in Sources */,
 				AD9786881EF7DACF002912DF /* StyleChoiceView.swift in Sources */,
 				AD7356621F02581F00D4D6EF /* Cities.swift in Sources */,
+				AD73566D1F02777500D4D6EF /* CountryDownloadView.swift in Sources */,
+				AD7356721F0277F700D4D6EF /* Country.swift in Sources */,
 				ADE092FE1F00F36300C569F9 /* BoundingBox.swift in Sources */,
 				AD7356641F02621C00D4D6EF /* DownloadBaseView.swift in Sources */,
 				AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */,
@@ -636,6 +659,7 @@
 				AD9786C61EF8281B002912DF /* SlideInPopupHeader.swift in Sources */,
 				AD97868D1EF7F152002912DF /* BaseController.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
+				AD7356701F0277A800D4D6EF /* CountryPopupContent.swift in Sources */,
 				AD437ED31EF93880008CEA76 /* Texts.swift in Sources */,
 				ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */,
 				AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */,

@@ -1,19 +1,16 @@
 //
-//  CityDownloadView.swift
+//  CountryDownloadView.swift
 //  AdvancedMap.Swift
 //
 //  Created by Aare Undo on 27/06/2017.
 //  Copyright © 2017 CARTO. All rights reserved.
 //
 
-import Foundation
-import UIKit
-
-class CityDownloadView : DownloadBaseView {
+class CountryDownloadView : DownloadBaseView {
     
-    var cityButton: PopupButton!
+    var countryButton: PopupButton!
     
-    var cityContent: CityPopupContent!
+    var countryContent: CountryPopupContent!
     
     var onlineLayer: NTCartoOnlineVectorTileLayer!
     var offlineLayer: NTCartoOfflineVectorTileLayer!
@@ -26,12 +23,12 @@ class CityDownloadView : DownloadBaseView {
         initialize()
         initializeDownloadContent()
         
-        infoContent.setText(headerText: Texts.cityDownloadInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.countryDownloadInfoHeader, contentText: Texts.basemapInfoContainer)
         
-        cityButton = PopupButton(imageUrl: "icon_global.png")
-        addButton(button: cityButton)
+        countryButton = PopupButton(imageUrl: "icon_global.png")
+        addButton(button: countryButton)
         
-        cityContent = CityPopupContent()
+        countryContent = CountryPopupContent()
     }
     
     override func layoutSubviews() {
@@ -42,22 +39,22 @@ class CityDownloadView : DownloadBaseView {
         
         super.addRecognizers()
         
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.cityButtonTapped(_:)))
-        cityButton.addGestureRecognizer(recognizer)
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.countryButtonTapped(_:)))
+        countryButton.addGestureRecognizer(recognizer)
     }
     
     override func removeRecognizers() {
         
         super.removeRecognizers()
         
-        cityButton.gestureRecognizers?.forEach(cityButton.removeGestureRecognizer)
+        countryButton.gestureRecognizers?.forEach(countryButton.removeGestureRecognizer)
     }
     
-    func cityButtonTapped(_ sender: UITapGestureRecognizer) {
+    func countryButtonTapped(_ sender: UITapGestureRecognizer) {
         
-        if (cityButton.isEnabled) {
-            popup.setContent(content: cityContent)
-            popup.popup.header.setText(text: "SELECT A CITY")
+        if (countryButton.isEnabled) {
+            popup.setContent(content: countryContent)
+            popup.popup.header.setText(text: "SELECT A COUNTRY")
             popup.show()
         }
     }

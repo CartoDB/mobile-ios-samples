@@ -1,5 +1,5 @@
 //
-//  CityDownloadController.swift
+//  CountryDownloadController.swift
 //  AdvancedMap.Swift
 //
 //  Created by Aare Undo on 27/06/2017.
@@ -9,21 +9,19 @@
 import Foundation
 import UIKit
 
-class CityDownloadController : BaseController, UITableViewDelegate, PackageDownloadDelegate, SwitchDelegate {
+class CountryDownloadController : BaseController, UITableViewDelegate, PackageDownloadDelegate, SwitchDelegate {
     
-    var contentView: CityDownloadView!
+    var contentView: CountryDownloadView!
     
     var mapPackageListener: MapPackageListener!
     var mapManager: NTCartoPackageManager!
     
     override func viewDidLoad() {
         
-        contentView = CityDownloadView()
+        contentView = CountryDownloadView()
         view = contentView
         
-        contentView.cityContent.addCities(cities: Cities.list)
-        
-        let folder = Utils.createDirectory(name: "citypackages")
+        let folder = Utils.createDirectory(name: "countrypackages")
         mapManager = NTCartoPackageManager(source: Routing.MAP_SOURCE, dataFolder: folder)
         
         // Online mode by default
@@ -33,7 +31,7 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         super.viewWillAppear(animated)
         
         contentView.addRecognizers()
-        contentView.cityContent.table.delegate = self
+        contentView.countryContent.table.delegate = self
         
         mapPackageListener = MapPackageListener()
         mapPackageListener.delegate = self
@@ -41,6 +39,8 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         mapManager.start()
         
         contentView.onlineSwitch.delegate = self
+        
+        mapManager.startPackageListDownload()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,7 +48,7 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         
         contentView.removeRecognizers()
         
-        contentView.cityContent.table.delegate = nil
+        contentView.countryContent.table.delegate = nil
         
         mapManager.stop(true)
         mapPackageListener = nil
@@ -64,26 +64,27 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         }
     }
     
-    var currentDownload: City!
+    var currentDownload: Country!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         contentView.popup.hide()
         
-        let city = contentView.cityContent.cities[indexPath.row]
-        currentDownload = city
+        let country = contentView.countryContent.countries[indexPath.row]
+        currentDownload = country
         
-        let id = city.boundingBox.toString()
+        let id = country.id
         mapManager.startPackageDownload(id)
         
         contentView.progressLabel.show()
     }
     
     func listDownloadComplete() {
-        // No implementation
+        let countries = getCountries()
+        contentView.countryContent.addCountries(countries: countries)
     }
     
     func listDownloadFailed() {
-        // No implemenetation
+        // TODO
     }
     
     func statusChanged(sender: PackageListener, status: NTPackageStatus) {
@@ -105,7 +106,34 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
         
     }
+    
+    var currentFolder: String = ""
+    
+    func getCountries() -> [Country] {
+        
+        var countries = [Country]()
+        
+        let packages = mapManager.getServerPackages()
+        let packageCount = Int((packages?.size())!)
+        
+        for i in stride(from: 0, to: packageCount, by: 1) {
+            
+            let info = packages?.get(Int32(i))
+            let names = info?.getNames("")
+            let nameCount = Int((names?.size())!)
+            
+            for j in stride(from: 0, to: nameCount, by: 1) {
+                let country = Country()
+                country.name = names?.get(Int32(j))
+                countries.append(country)
+            }
+            
+        }
+        
+        return countries
+    }
 }
+
 
 
 

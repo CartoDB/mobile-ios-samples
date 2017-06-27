@@ -12,6 +12,14 @@ class PackageListener : NTPackageManagerListener {
     
     var delegate: PackageDownloadDelegate?
     
+    override func onPackageListUpdated() {
+        delegate?.listDownloadComplete()
+    }
+    
+    override func onPackageListFailed() {
+        delegate?.listDownloadFailed()
+    }
+    
     override func onPackageUpdated(_ arg1: String!, version: Int32) {
         delegate?.downloadComplete(sender: self, id: arg1)
     }
@@ -26,6 +34,10 @@ class PackageListener : NTPackageManagerListener {
 }
 
 protocol PackageDownloadDelegate {
+    
+    func listDownloadComplete();
+    
+    func listDownloadFailed();
     
     func downloadComplete(sender: PackageListener, id: String);
     

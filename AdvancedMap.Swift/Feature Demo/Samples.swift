@@ -39,6 +39,14 @@ class Samples {
         sample.controller = CityDownloadController()
         
         list.append(sample)
+        
+        sample = Sample()
+        sample.title = "COUNTRY DOWNLOAD"
+        sample.description = "Country download via package for offline use"
+        sample.imageResource = folder + "icon_sample_city_download.png"
+        sample.controller = CountryDownloadController()
+        
+        list.append(sample)
     }
 }
 
