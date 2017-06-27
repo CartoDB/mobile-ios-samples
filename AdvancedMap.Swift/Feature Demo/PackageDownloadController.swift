@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-class CountryDownloadController : BaseController, UITableViewDelegate, PackageDownloadDelegate, SwitchDelegate {
+class PackageDownloadController : BaseController, UITableViewDelegate, PackageDownloadDelegate, SwitchDelegate {
     
-    var contentView: CountryDownloadView!
+    var contentView: PackageDownloadView!
     
     var mapPackageListener: MapPackageListener!
     var mapManager: NTCartoPackageManager!
     
     override func viewDidLoad() {
         
-        contentView = CountryDownloadView()
+        contentView = PackageDownloadView()
         view = contentView
         
         let folder = Utils.createDirectory(name: "countrypackages")
@@ -31,7 +31,7 @@ class CountryDownloadController : BaseController, UITableViewDelegate, PackageDo
         super.viewWillAppear(animated)
         
         contentView.addRecognizers()
-        contentView.countryContent.table.delegate = self
+        contentView.packageContent.table.delegate = self
         
         mapPackageListener = MapPackageListener()
         mapPackageListener.delegate = self
@@ -48,7 +48,7 @@ class CountryDownloadController : BaseController, UITableViewDelegate, PackageDo
         
         contentView.removeRecognizers()
         
-        contentView.countryContent.table.delegate = nil
+        contentView.packageContent.table.delegate = nil
         
         mapManager.stop(true)
         mapPackageListener = nil
@@ -64,12 +64,12 @@ class CountryDownloadController : BaseController, UITableViewDelegate, PackageDo
         }
     }
     
-    var currentDownload: Country!
+    var currentDownload: Package!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         contentView.popup.hide()
         
-        let country = contentView.countryContent.countries[indexPath.row]
+        let country = contentView.packageContent.packages[indexPath.row]
         currentDownload = country
         
         let id = country.id
@@ -79,8 +79,8 @@ class CountryDownloadController : BaseController, UITableViewDelegate, PackageDo
     }
     
     func listDownloadComplete() {
-        let countries = getCountries()
-        contentView.countryContent.addCountries(countries: countries)
+        let packages = getPackages()
+        contentView.packageContent.addPackages(packages: packages)
     }
     
     func listDownloadFailed() {
@@ -109,28 +109,24 @@ class CountryDownloadController : BaseController, UITableViewDelegate, PackageDo
     
     var currentFolder: String = ""
     
-    func getCountries() -> [Country] {
+    func getPackages() -> [Package] {
+
+        var packages = [Package]()
         
-        var countries = [Country]()
+        let vector = mapManager.getServerPackages()
+        let count = Int((vector?.size())!)
         
-        let packages = mapManager.getServerPackages()
-        let packageCount = Int((packages?.size())!)
-        
-        for i in stride(from: 0, to: packageCount, by: 1) {
+        for i in stride(from: 0, to: count, by: 1) {
             
-            let info = packages?.get(Int32(i))
-            let names = info?.getNames("")
-            let nameCount = Int((names?.size())!)
+            let info = vector?.get(Int32(i))
+            let name = info?.getName()
             
-            for j in stride(from: 0, to: nameCount, by: 1) {
-                let country = Country()
-                country.name = names?.get(Int32(j))
-                countries.append(country)
-            }
-            
+            let package = Package()
+            package.name = name
+            packages.append(package)
         }
         
-        return countries
+        return packages
     }
 }
 

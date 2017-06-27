@@ -6,13 +6,13 @@
 //  Copyright © 2017 CARTO. All rights reserved.
 //
 
-class CountryPopupContent : UIView, UITableViewDataSource {
+class PackagePopupContent : UIView, UITableViewDataSource {
     
     let IDENTIFIER = "CountryCell"
     
     var table: UITableView!
     
-    var countries: [Country] = [Country]()
+    var packages: [Package] = [Package]()
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -27,19 +27,19 @@ class CountryPopupContent : UIView, UITableViewDataSource {
         table.frame = bounds
     }
     
-    func addCountries(countries: [Country]) {
-        self.countries = countries
+    func addPackages(packages: [Package]) {
+        self.packages = packages
         table.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return countries.count
+        return packages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER, for: indexPath as IndexPath)
-        cell.textLabel!.text = countries[indexPath.row].name
+        cell.textLabel!.text = packages[indexPath.row].name
         
         return cell
     }

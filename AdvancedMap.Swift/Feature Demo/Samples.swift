@@ -18,7 +18,7 @@ class Samples {
         
         var sample = Sample()
         sample.title = "STYLES"
-        sample.description = "Various samples of different carto base maps"
+        sample.description = "Various samples of different CARTO Base Maps"
         sample.imageResource = folder + "icon_sample_styles.png"
         sample.controller = StyleChoiceController()
         
@@ -41,10 +41,10 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
-        sample.title = "COUNTRY DOWNLOAD"
-        sample.description = "Country download via package for offline use"
+        sample.title = "PACKAGE DOWNLOAD"
+        sample.description = "Download existing packages for offline use"
         sample.imageResource = folder + "icon_sample_city_download.png"
-        sample.controller = CountryDownloadController()
+        sample.controller = PackageDownloadController()
         
         list.append(sample)
     }

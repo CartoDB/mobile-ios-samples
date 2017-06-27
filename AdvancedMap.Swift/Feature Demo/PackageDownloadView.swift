@@ -6,11 +6,11 @@
 //  Copyright © 2017 CARTO. All rights reserved.
 //
 
-class CountryDownloadView : DownloadBaseView {
+class PackageDownloadView : DownloadBaseView {
     
     var countryButton: PopupButton!
     
-    var countryContent: CountryPopupContent!
+    var packageContent: PackagePopupContent!
     
     var onlineLayer: NTCartoOnlineVectorTileLayer!
     var offlineLayer: NTCartoOfflineVectorTileLayer!
@@ -28,7 +28,7 @@ class CountryDownloadView : DownloadBaseView {
         countryButton = PopupButton(imageUrl: "icon_global.png")
         addButton(button: countryButton)
         
-        countryContent = CountryPopupContent()
+        packageContent = PackagePopupContent()
     }
     
     override func layoutSubviews() {
@@ -53,8 +53,8 @@ class CountryDownloadView : DownloadBaseView {
     func countryButtonTapped(_ sender: UITapGestureRecognizer) {
         
         if (countryButton.isEnabled) {
-            popup.setContent(content: countryContent)
-            popup.popup.header.setText(text: "SELECT A COUNTRY")
+            popup.setContent(content: packageContent)
+            popup.popup.header.setText(text: "SELECT A PACKAGE")
             popup.show()
         }
     }

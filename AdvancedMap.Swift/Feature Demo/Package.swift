@@ -8,11 +8,13 @@
 
 import Foundation
 
-class Country : NSObject {
+class Package : NSObject {
     
     var id: String!
     
     var name: String!
     
-    var isSubsection: Bool!
+    var containsSubsections: Bool!
+    
+    var subsections: [Package] = []
 }

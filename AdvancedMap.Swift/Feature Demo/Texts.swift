@@ -18,5 +18,5 @@ class Texts {
     
     static let cityDownloadInfoHeader = "CITY DOWNLOAD"
     
-    static let countryDownloadInfoHeader = "COUNTRY DOWNLOAD"
+    static let countryDownloadInfoHeader = "PACKAGE DOWNLOAD"
 }
