@@ -67,15 +67,20 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
     var currentDownload: Package!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        contentView.popup.hide()
         
-        let country = contentView.packageContent.packages[indexPath.row]
-        currentDownload = country
+        let package = contentView.packageContent.packages[indexPath.row]
         
-        let id = country.id
-        mapManager.startPackageDownload(id)
-        
-        contentView.progressLabel.show()
+        if (package.isGroup()) {
+            folder = folder + package.name + "/"
+            print(package.name)
+            contentView.packageContent.addPackages(packages: getPackages())
+        } else {
+            currentDownload = package
+            mapManager.startPackageDownload(package.id)
+            
+            contentView.progressLabel.show()
+            contentView.popup.hide()
+        }
     }
     
     func listDownloadComplete() {
@@ -89,6 +94,12 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
     
     func statusChanged(sender: PackageListener, status: NTPackageStatus) {
         DispatchQueue.main.async {
+            
+            if (self.currentDownload == nil) {
+                // TODO in case a download has been started and the activity is reloaded
+                return
+            }
+            
             let text = "Downloading " + self.currentDownload.name + ": " + String(describing: status.getProgress()) + ""
             self.contentView.progressLabel.update(text: text)
             self.contentView.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
@@ -123,24 +134,25 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
             
             let package = Package()
 
-            if folder.characters.count > 0 && (name?.hasPrefix(folder))! {
+            if !(name?.hasPrefix(folder))! {
                 // Belongs to a different folder,
                 // should not be added if name is e.g. Asia/, while folder is /Europe
                 continue;
             }
-            
+
             var modified = name?.substring(from: folder.characters.count)
             let index = modified?.index(of: "/")
             
             if (index == -1) {
                 // This is an actual package
+                package.id = info?.getPackageId()
                 package.name = modified
-                package.status = mapManager.getLocalPackageStatus(info?.getPackageId(), version: -1)
+                package.status = mapManager.getLocalPackageStatus(package.id, version: -1)
                 package.info = info
             } else {
                 // This is a package group
                 modified = modified?.substring(from: 0, to: index!)
-                
+
                 // Try n' find an existing package from the list
                 let found = packages.filter({ $0.name == modified })
                 

@@ -17,4 +17,8 @@ class Package : NSObject {
     var status: NTPackageStatus!
     
     var info: NTPackageInfo!
+    
+    func isGroup() -> Bool {
+        return status == nil && info == nil
+    }
 }

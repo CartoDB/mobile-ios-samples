@@ -184,6 +184,7 @@
 		AD0CD3101EF420DE007E4378 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD7356711F0277F700D4D6EF /* Package.swift */,
 				AD0CD3111EF420FB007E4378 /* Colors.swift */,
 				ADE6DCC11EF97D71002B2189 /* Device.swift */,
 				ADE092FD1F00F36300C569F9 /* BoundingBox.swift */,
@@ -431,7 +432,6 @@
 				AD437EB91EF907D1008CEA76 /* Languages.swift */,
 				AD437ED21EF93880008CEA76 /* Texts.swift */,
 				AD7356611F02581F00D4D6EF /* Cities.swift */,
-				AD7356711F0277F700D4D6EF /* Package.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
