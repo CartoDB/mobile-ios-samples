@@ -14,7 +14,7 @@ class Samples {
     
     static func initialize() {
         
-        let folder = ""//"Gallery/"
+        let folder = ""
         
         var sample = Sample()
         sample.title = "STYLES"
@@ -26,17 +26,17 @@ class Samples {
         
         sample = Sample()
         sample.title = "ROUTE DOWNLOAD"
-        sample.description = "Route download via bounding box"
+        sample.description = "Route download via bounding box for offline use"
         sample.imageResource = folder + "icon_sample_route_download.png"
         sample.controller = RouteDownloadController()
         
         list.append(sample)
         
         sample = Sample()
-        sample.title = "REGIONAL ROUTING"
-        sample.description = "Region download with offline routing"
+        sample.title = "CITY DOWNLOAD"
+        sample.description = "City download via bounding box for offline use"
         sample.imageResource = folder + "icon_sample_styles.png"
-        sample.controller = StyleChoiceController()
+        sample.controller = CityDownloadController()
         
         list.append(sample)
     }

@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Samples.initialize()
         Languages.initialize()
+        Cities.initialize()
         
         return true
     }

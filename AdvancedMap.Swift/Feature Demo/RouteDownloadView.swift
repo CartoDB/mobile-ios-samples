@@ -31,7 +31,7 @@ class RouteDownloadView : MapBaseView {
         
         initialize()
 
-        infoContent.setText(headerText: Texts.bboxRoutingInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.routeDownloadInfoHeader, contentText: Texts.basemapInfoContainer)
         
         onlineSwitch = StateSwitch()
         addSubview(onlineSwitch)
