@@ -129,11 +129,20 @@ class Routing {
         
         var result: NTRoutingResult?
         
-        // TODO Why doesn't this properly throw exception?
-        // ... so that it can never be caught
-        do {
-            result = try service?.calculateRoute(request)
-        } catch { }
+        /*
+         * Swift handles exceptions differently from Objective-C.
+         * Native exceptions cannot be caught with Swift's do-catch method.
+         *
+         * Created custom ExceptionHandler.h and imported it in the bridging header in order to catch them natively
+         * cf https://stackoverflow.com/questions/34956002/how-to-properly-handle-nsfilehandle-exceptions-in-swift-2-0/35003095#35003095
+         */
+        let exception = tryBlock {
+            result = self.service?.calculateRoute(request)
+        }
+
+        if (exception != nil) {
+            return nil
+        }
         
         return result
     }

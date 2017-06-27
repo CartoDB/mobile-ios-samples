@@ -59,6 +59,11 @@ class ProgressLabel : UIView {
     }
     
     func complete(message: String) {
+        
+        if (!isVisible()) {
+            show()
+        }
+        
         label.text = message
     }
     

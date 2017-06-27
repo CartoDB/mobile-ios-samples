@@ -145,8 +145,11 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
     }
     
     func startClicked(event: RouteMapEvent) {
-        routing.setStartMarker(position: event.clickPosition)
-        contentView.downloadButton.disable()
+        DispatchQueue.main.async(execute: {
+            self.routing.setStartMarker(position: event.clickPosition)
+            self.contentView.downloadButton.disable()
+            self.contentView.progressLabel.hide()
+        })
     }
     
     func stopClicked(event: RouteMapEvent) {
@@ -158,11 +161,12 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         DispatchQueue.global().async {
             
             let result: NTRoutingResult? = self.routing.getResult(startPos: start, stopPos: stop)
-
+            
             DispatchQueue.main.async(execute: {
                 
                 if (result == nil) {
                     self.contentView.progressLabel.complete(message: "Routing failed. Please try again")
+                    return
                 } else {
                     self.contentView.progressLabel.complete(message: self.routing.getMessage(result: result!))
                 }
