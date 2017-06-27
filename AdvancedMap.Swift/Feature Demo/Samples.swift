@@ -28,7 +28,7 @@ class Samples {
         sample.title = "ROUTE DOWNLOAD"
         sample.description = "Route download via bounding box"
         sample.imageResource = folder + "icon_sample_route_download.png"
-        sample.controller = BboxRoutingController()
+        sample.controller = RouteDownloadController()
         
         list.append(sample)
         

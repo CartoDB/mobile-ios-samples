@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BboxRoutingView : MapBaseView {
+class RouteDownloadView : MapBaseView {
     
     var mapLayer: NTVectorTileLayer!
     

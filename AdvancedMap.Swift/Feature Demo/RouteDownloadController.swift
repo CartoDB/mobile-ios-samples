@@ -9,7 +9,7 @@
 import Foundation
 import  UIKit
 
-class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapEventDelegate, SwitchDelegate {
+class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMapEventDelegate, SwitchDelegate {
     
     let ROUTING_TAG = "routing:"
     let ROUTING_SOURCE = "valhalla.osm"
@@ -18,7 +18,7 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
     
     var routing: Routing!
     
-    var contentView: BboxRoutingView!
+    var contentView: RouteDownloadView!
     
     var boundingBox: BoundingBox!
     
@@ -34,7 +34,7 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         
         super.viewDidLoad()
         
-        contentView = BboxRoutingView()
+        contentView = RouteDownloadView()
         
         view = contentView
         

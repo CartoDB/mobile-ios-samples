@@ -45,8 +45,8 @@
 		AD9786C61EF8281B002912DF /* SlideInPopupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786C51EF8281B002912DF /* SlideInPopupHeader.swift */; };
 		AD9786C81EF82B00002912DF /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9786C71EF82B00002912DF /* icon_close.png */; };
 		AD9786CB1EF82D54002912DF /* InformationPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */; };
-		ADAFCD201EFBEECA005F53CB /* BboxRoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */; };
-		ADAFCD221EFBEED8005F53CB /* BboxRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */; };
+		ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */; };
+		ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */; };
 		ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD241EFBF945005F53CB /* Routing.swift */; };
 		ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD261EFBFBFC005F53CB /* Route.swift */; };
 		ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ADAFCD281EFC05B5005F53CB /* icon_pin_red.png */; };
@@ -115,8 +115,8 @@
 		AD9786C51EF8281B002912DF /* SlideInPopupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPopupHeader.swift; sourceTree = "<group>"; };
 		AD9786C71EF82B00002912DF /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPopupContent.swift; sourceTree = "<group>"; };
-		ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BboxRoutingController.swift; sourceTree = "<group>"; };
-		ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BboxRoutingView.swift; sourceTree = "<group>"; };
+		ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadController.swift; sourceTree = "<group>"; };
+		ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadView.swift; sourceTree = "<group>"; };
 		ADAFCD241EFBF945005F53CB /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		ADAFCD261EFBFBFC005F53CB /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		ADAFCD281EFC05B5005F53CB /* icon_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pin_red.png; sourceTree = "<group>"; };
@@ -294,8 +294,8 @@
 		ADAFCD1E1EFBEEAC005F53CB /* Route Download */ = {
 			isa = PBXGroup;
 			children = (
-				ADAFCD1F1EFBEECA005F53CB /* BboxRoutingController.swift */,
-				ADAFCD211EFBEED8005F53CB /* BboxRoutingView.swift */,
+				ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */,
+				ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */,
 			);
 			name = "Route Download";
 			sourceTree = "<group>";
@@ -582,7 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD97869D1EF80740002912DF /* PopupButton.swift in Sources */,
-				ADAFCD221EFBEED8005F53CB /* BboxRoutingView.swift in Sources */,
+				ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */,
 				AD9786AE1EF80CD5002912DF /* SlideInPopup.swift in Sources */,
 				AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */,
 				ADB27EB01EF416C6004198D3 /* MainViewController.swift in Sources */,
@@ -593,7 +593,7 @@
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
 				ADE093051F01143000C569F9 /* RouteMapEventListener.swift in Sources */,
-				ADAFCD201EFBEECA005F53CB /* BboxRoutingController.swift in Sources */,
+				ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */,
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
 				ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
