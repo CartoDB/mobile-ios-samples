@@ -48,6 +48,8 @@ class BboxRoutingView : MapBaseView {
         overlaySource = NTLocalVectorDataSource(projection: projection)
         let layer = NTVectorLayer(dataSource: overlaySource);
         map.getLayers().add(layer)
+        
+        layer?.setVectorElementEventListener(VectorElementIgnoreListener())
     }
     
     override func layoutSubviews() {
@@ -100,6 +102,13 @@ class BboxRoutingView : MapBaseView {
                 addPolygonTo(bounds: bounds!)
             }
         }
+    }
+}
+
+class VectorElementIgnoreListener : NTVectorElementEventListener {
+    
+    override func onVectorElementClicked(_ clickInfo: NTVectorElementClickInfo!) -> Bool {
+        return false
     }
 }
 

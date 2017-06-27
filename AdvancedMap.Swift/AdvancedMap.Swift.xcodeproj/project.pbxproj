@@ -343,9 +343,8 @@
 				ADB168E31EF7BBDC0022F2F7 /* Resources */,
 				ADB7B8871EF7B47200BB2550 /* Model */,
 				AD0CD3101EF420DE007E4378 /* Utils */,
-				ADB27EBF1EF4173B004198D3 /* Views */,
+				ADB27EBF1EF4173B004198D3 /* Main */,
 				ADB27EAD1EF416C6004198D3 /* AppDelegate.swift */,
-				ADB27EAF1EF416C6004198D3 /* MainViewController.swift */,
 				ADB27EB41EF416C6004198D3 /* Assets.xcassets */,
 				ADB27EB61EF416C6004198D3 /* LaunchScreen.storyboard */,
 				ADB27EB91EF416C6004198D3 /* Info.plist */,
@@ -354,13 +353,14 @@
 			path = "Feature Demo";
 			sourceTree = "<group>";
 		};
-		ADB27EBF1EF4173B004198D3 /* Views */ = {
+		ADB27EBF1EF4173B004198D3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				ADB7B8841EF7B38C00BB2550 /* Gallery */,
+				ADB27EAF1EF416C6004198D3 /* MainViewController.swift */,
 				ADB27EC01EF41754004198D3 /* MainView.swift */,
+				ADB7B8841EF7B38C00BB2550 /* Gallery */,
 			);
-			name = Views;
+			name = Main;
 			sourceTree = "<group>";
 		};
 		ADB7B8841EF7B38C00BB2550 /* Gallery */ = {

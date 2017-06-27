@@ -95,6 +95,8 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         routingPackageListener.delegate = self
         routingManager.setPackageManagerListener(routingPackageListener)
         routingManager.start()
+        
+        contentView.onlineSwitch.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -109,6 +111,8 @@ class BboxRoutingController : BaseController, PackageDownloadDelegate, RouteMapE
         
         routingManager.stop(true)
         routingPackageListener = nil
+        
+        contentView.onlineSwitch.delegate = nil
     }
     
     func downloadButtonTapped(_ sender: UITapGestureRecognizer) {
