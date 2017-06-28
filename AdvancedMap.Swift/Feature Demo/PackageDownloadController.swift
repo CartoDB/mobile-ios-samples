@@ -96,10 +96,23 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
             contentView.packageContent.addPackages(packages: getPackages())
             contentView.popup.popup.header.backButton.isHidden = false
         } else {
-            currentDownload = package
-            mapManager.startPackageDownload(package.id)
             
-            contentView.progressLabel.show()
+            let action = package.getActionText()
+            currentDownload = package
+            
+            if (action == Package.ACTION_DOWNLOAD) {
+                
+                mapManager.startPackageDownload(package.id)
+                contentView.progressLabel.show()
+            } else if (action == Package.ACTION_PAUSE) {
+                mapManager.setPackagePriority(package.id, priority: -1)
+            } else if (action == Package.ACTION_RESUME) {
+                mapManager.setPackagePriority(package.id, priority: 0)
+            } else if (action == Package.ACTION_CANCEL) {
+                mapManager.cancelPackageTasks(package.id)
+            } else if (action == Package.ACTION_REMOVE) {
+                mapManager.startPackageRemove(package.id)
+            }
         }
     }
     
@@ -116,22 +129,31 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         DispatchQueue.main.async {
             
             if (self.currentDownload == nil) {
-                // TODO in case a download has been started and the activity is reloaded
+                // TODO in case a download has been started and the controller is reloaded
                 return
             }
             
             let text = "Downloading " + self.currentDownload.name + ": " + String(describing: status.getProgress()) + ""
             self.contentView.progressLabel.update(text: text)
             self.contentView.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
+            
+            self.currentDownload.status = self.mapManager.getLocalPackageStatus(self.currentDownload.id, version: -1)
+            self.contentView.packageContent.findAndUpdate(package: self.currentDownload, progress: CGFloat(status.getProgress()))
         }
     }
     
     func downloadComplete(sender: PackageListener, id: String) {
-        // TODO
+        DispatchQueue.main.async {
+            
+            if (self.currentDownload != nil) {
+                self.currentDownload.status = self.mapManager.getLocalPackageStatus(id, version: -1)
+                self.contentView.packageContent.findAndUpdate(package: self.currentDownload)
+            }
+        }
     }
     
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
-        
+        // TODO
     }
     
     var folder: String = ""

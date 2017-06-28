@@ -24,6 +24,7 @@
 		AD437ED31EF93880008CEA76 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437ED21EF93880008CEA76 /* Texts.swift */; };
 		AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */; };
 		AD5B2AEC1F03A60300EF738C /* icon_forward_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */; };
+		AD5B2AEE1F03B27200EF738C /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AED1F03B27200EF738C /* PackageCell.swift */; };
 		AD73565C1F02557E00D4D6EF /* CityDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565B1F02557E00D4D6EF /* CityDownloadController.swift */; };
 		AD73565E1F02558700D4D6EF /* CityDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565D1F02558700D4D6EF /* CityDownloadView.swift */; };
 		AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */; };
@@ -105,6 +106,7 @@
 		AD437ED21EF93880008CEA76 /* Texts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_blue.png; sourceTree = "<group>"; };
 		AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_forward_blue.png; sourceTree = "<group>"; };
+		AD5B2AED1F03B27200EF738C /* PackageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		AD73565A1F024C0900D4D6EF /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
 		AD73565B1F02557E00D4D6EF /* CityDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDownloadController.swift; sourceTree = "<group>"; };
 		AD73565D1F02558700D4D6EF /* CityDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDownloadView.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */,
 				AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */,
 				AD73566F1F0277A800D4D6EF /* PackagePopupContent.swift */,
+				AD5B2AED1F03B27200EF738C /* PackageCell.swift */,
 			);
 			name = SlideInPopupContent;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				AD7356701F0277A800D4D6EF /* PackagePopupContent.swift in Sources */,
 				AD437ED31EF93880008CEA76 /* Texts.swift in Sources */,
 				ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */,
+				AD5B2AEE1F03B27200EF738C /* PackageCell.swift in Sources */,
 				AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */,
 				ADE092F71F00EF3E00C569F9 /* PackageListener.swift in Sources */,
 				AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */,
