@@ -19,4 +19,8 @@ class Texts {
     static let cityDownloadInfoHeader = "CITY DOWNLOAD"
     
     static let countryDownloadInfoHeader = "PACKAGE DOWNLOAD"
+    
+    static let vectorObjectsInfoHeader = "VECTOR OBJECTS"
+    
+    static let clusteringInfoHeader = "VECTOR ELEMENT CLUSTERING"
 }

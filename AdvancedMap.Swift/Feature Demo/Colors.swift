@@ -31,3 +31,17 @@ class Colors {
         return UIColor.init(red: red / 255, green: green / 255, blue: blue / 255, alpha: alpha / 255)
     }
 }
+
+extension UIColor {
+    
+    func toNTColor() -> NTColor {
+        var fRed : CGFloat = 0
+        var fGreen : CGFloat = 0
+        var fBlue : CGFloat = 0
+        var fAlpha: CGFloat = 0
+        
+        getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha)
+        return NTColor(r: UInt8(fRed * 255.0), g: UInt8(fGreen * 255.0), b: UInt8(fBlue * 255.0), a: UInt8(fAlpha * 255.0))
+    }
+}
+

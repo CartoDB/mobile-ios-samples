@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		3E559840F13B61F77C31E053 /* libPods-Feature Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
+		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
+		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
+		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
+		AD41231A1F03E1CE009874BD /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123191F03E1CE009874BD /* info.png */; };
+		AD41231D1F03E1E1009874BD /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AD41231B1F03E1E1009874BD /* arrow.png */; };
+		AD41231E1F03E1E1009874BD /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD41231C1F03E1E1009874BD /* arrow@2x.png */; };
+		AD4123201F03E80A009874BD /* VectorObjectMapListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41231F1F03E80A009874BD /* VectorObjectMapListener.swift */; };
 		AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EB91EF907D1008CEA76 /* Languages.swift */; };
 		AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */; };
 		AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */; };
@@ -25,6 +32,11 @@
 		AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */; };
 		AD5B2AEC1F03A60300EF738C /* icon_forward_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */; };
 		AD5B2AEE1F03B27200EF738C /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AED1F03B27200EF738C /* PackageCell.swift */; };
+		AD5B2AF01F03BEC400EF738C /* icon_sample_package_download.png in Resources */ = {isa = PBXBuildFile; fileRef = AD5B2AEF1F03BEC400EF738C /* icon_sample_package_download.png */; };
+		AD5B2AF41F03CBA800EF738C /* VectorObjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AF31F03CBA800EF738C /* VectorObjectController.swift */; };
+		AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AF51F03CBB300EF738C /* VectorObjectView.swift */; };
+		AD5B2AF81F03CC1600EF738C /* ClusteringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AF71F03CC1600EF738C /* ClusteringController.swift */; };
+		AD5B2AFB1F03CC2F00EF738C /* ClusteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AFA1F03CC2F00EF738C /* ClusteringView.swift */; };
 		AD73565C1F02557E00D4D6EF /* CityDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565B1F02557E00D4D6EF /* CityDownloadController.swift */; };
 		AD73565E1F02558700D4D6EF /* CityDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565D1F02558700D4D6EF /* CityDownloadView.swift */; };
 		AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */; };
@@ -91,6 +103,13 @@
 		64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Feature Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
+		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
+		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
+		AD4123191F03E1CE009874BD /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		AD41231B1F03E1E1009874BD /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		AD41231C1F03E1E1009874BD /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		AD41231F1F03E80A009874BD /* VectorObjectMapListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectMapListener.swift; sourceTree = "<group>"; };
 		AD437EB91EF907D1008CEA76 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupContent.swift; sourceTree = "<group>"; };
 		AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
@@ -107,6 +126,11 @@
 		AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_blue.png; sourceTree = "<group>"; };
 		AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_forward_blue.png; sourceTree = "<group>"; };
 		AD5B2AED1F03B27200EF738C /* PackageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
+		AD5B2AEF1F03BEC400EF738C /* icon_sample_package_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_package_download.png; sourceTree = "<group>"; };
+		AD5B2AF31F03CBA800EF738C /* VectorObjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectController.swift; sourceTree = "<group>"; };
+		AD5B2AF51F03CBB300EF738C /* VectorObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectView.swift; sourceTree = "<group>"; };
+		AD5B2AF71F03CC1600EF738C /* ClusteringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusteringController.swift; sourceTree = "<group>"; };
+		AD5B2AFA1F03CC2F00EF738C /* ClusteringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusteringView.swift; sourceTree = "<group>"; };
 		AD73565A1F024C0900D4D6EF /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
 		AD73565B1F02557E00D4D6EF /* CityDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDownloadController.swift; sourceTree = "<group>"; };
 		AD73565D1F02558700D4D6EF /* CityDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDownloadView.swift; sourceTree = "<group>"; };
@@ -200,6 +224,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		AD4123121F03D431009874BD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AD4123131F03D5AC009874BD /* milktruck.nml */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		AD437EC11EF93269008CEA76 /* BaseMapIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +245,26 @@
 				AD437EC91EF933C5008CEA76 /* style_image_nutiteq_bright.png */,
 			);
 			name = BaseMapIcons;
+			sourceTree = "<group>";
+		};
+		AD5B2AF11F03CB9300EF738C /* Vector Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B2AF31F03CBA800EF738C /* VectorObjectController.swift */,
+				AD5B2AF51F03CBB300EF738C /* VectorObjectView.swift */,
+				AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */,
+				AD41231F1F03E80A009874BD /* VectorObjectMapListener.swift */,
+			);
+			name = "Vector Objects";
+			sourceTree = "<group>";
+		};
+		AD5B2AF21F03CB9D00EF738C /* Clustering */ = {
+			isa = PBXGroup;
+			children = (
+				AD5B2AF71F03CC1600EF738C /* ClusteringController.swift */,
+				AD5B2AFA1F03CC2F00EF738C /* ClusteringView.swift */,
+			);
+			name = Clustering;
 			sourceTree = "<group>";
 		};
 		AD7356591F02472500D4D6EF /* City Download */ = {
@@ -236,6 +288,8 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				AD5B2AF21F03CB9D00EF738C /* Clustering */,
+				AD5B2AF11F03CB9300EF738C /* Vector Objects */,
 				AD7356691F02760800D4D6EF /* Package Download */,
 				AD7356591F02472500D4D6EF /* City Download */,
 				ADAFCD1E1EFBEEAC005F53CB /* Route Download */,
@@ -278,6 +332,7 @@
 		AD97869E1EF809CE002912DF /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				AD5B2AEF1F03BEC400EF738C /* icon_sample_package_download.png */,
 				AD7356671F02732500D4D6EF /* icon_sample_city_download.png */,
 				AD73C9C71F015D75008F040A /* icon_sample_styles.png */,
 				AD73C9C51F015D1E008F040A /* icon_sample_route_download.png */,
@@ -365,6 +420,10 @@
 		ADB168E31EF7BBDC0022F2F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD41231B1F03E1E1009874BD /* arrow.png */,
+				AD41231C1F03E1E1009874BD /* arrow@2x.png */,
+				AD4123191F03E1CE009874BD /* info.png */,
+				AD4123171F03E1C8009874BD /* info@2x.png */,
 				ADE092ED1F00ECE200C569F9 /* Directions */,
 				AD437EC11EF93269008CEA76 /* BaseMapIcons */,
 				AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */,
@@ -397,6 +456,7 @@
 		ADB27EAC1EF416C6004198D3 /* AdvancedMap.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				AD4123121F03D431009874BD /* Assets */,
 				ADAFCD231EFBF920005F53CB /* Routing */,
 				AD97869A1EF806D5002912DF /* Components */,
 				AD9786911EF7F744002912DF /* Feature-Demo-Bridging-Header.h */,
@@ -557,6 +617,7 @@
 				AD9786B61EF82284002912DF /* icon_basemap.png in Resources */,
 				AD5B2AEC1F03A60300EF738C /* icon_forward_blue.png in Resources */,
 				AD9786B71EF82284002912DF /* icon_global.png in Resources */,
+				AD41231E1F03E1E1009874BD /* arrow@2x.png in Resources */,
 				AD437ECB1EF933C5008CEA76 /* style_image_carto_positron.png in Resources */,
 				AD9786C21EF822B7002912DF /* icon_marker_red.png in Resources */,
 				AD437ECF1EF933C5008CEA76 /* style_image_nutiteq_dark.png in Resources */,
@@ -565,19 +626,24 @@
 				AD9786C81EF82B00002912DF /* icon_close.png in Resources */,
 				ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */,
 				ADB27EB81EF416C6004198D3 /* LaunchScreen.storyboard in Resources */,
+				AD5B2AF01F03BEC400EF738C /* icon_sample_package_download.png in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				AD437ECA1EF933C5008CEA76 /* style_image_carto_darkmatter.png in Resources */,
 				AD7356681F02732500D4D6EF /* icon_sample_city_download.png in Resources */,
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
 				AD73C9C81F015D75008F040A /* icon_sample_styles.png in Resources */,
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
+				AD41231A1F03E1CE009874BD /* info.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
+				AD4123181F03E1C8009874BD /* info@2x.png in Resources */,
+				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */,
 				AD73C9C61F015D1E008F040A /* icon_sample_route_download.png in Resources */,
 				ADE092F31F00ECF500C569F9 /* direction_upthenright.png in Resources */,
 				AD9786C01EF822B7002912DF /* icon_marker_gray.png in Resources */,
 				AD437ECE1EF933C5008CEA76 /* style_image_mapzen_bright.png in Resources */,
+				AD41231D1F03E1E1009874BD /* arrow.png in Resources */,
 				ADAFCD2B1EFC0745005F53CB /* icon_download.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,6 +717,7 @@
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD73565C1F02557E00D4D6EF /* CityDownloadController.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
+				AD5B2AF41F03CBA800EF738C /* VectorObjectController.swift in Sources */,
 				ADE093051F01143000C569F9 /* RouteMapEventListener.swift in Sources */,
 				ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */,
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
@@ -671,11 +738,16 @@
 				AD7356641F02621C00D4D6EF /* DownloadBaseView.swift in Sources */,
 				AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */,
 				ADB7B8891EF7B48500BB2550 /* Samples.swift in Sources */,
+				AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */,
+				AD4123201F03E80A009874BD /* VectorObjectMapListener.swift in Sources */,
 				AD9786C61EF8281B002912DF /* SlideInPopupHeader.swift in Sources */,
 				AD97868D1EF7F152002912DF /* BaseController.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
+				AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */,
 				AD7356701F0277A800D4D6EF /* PackagePopupContent.swift in Sources */,
+				AD5B2AF81F03CC1600EF738C /* ClusteringController.swift in Sources */,
 				AD437ED31EF93880008CEA76 /* Texts.swift in Sources */,
+				AD5B2AFB1F03CC2F00EF738C /* ClusteringView.swift in Sources */,
 				ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */,
 				AD5B2AEE1F03B27200EF738C /* PackageCell.swift in Sources */,
 				AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */,

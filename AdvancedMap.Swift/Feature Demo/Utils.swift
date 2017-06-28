@@ -22,4 +22,8 @@ class Utils {
         
         return folder
     }
+    
+    static func pathToBitmap(path: String) -> NTBitmap {
+        return NTBitmapUtils.createBitmap(from: UIImage(named: path))
+    }
 }
