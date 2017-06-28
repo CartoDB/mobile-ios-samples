@@ -73,6 +73,7 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         } else {
             folder = folder.substring(to: lastslash + 1)
         }
+        
         contentView.packageContent.addPackages(packages: getPackages())
     }
     
@@ -99,7 +100,6 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
             mapManager.startPackageDownload(package.id)
             
             contentView.progressLabel.show()
-            contentView.popup.hide()
         }
     }
     
@@ -127,11 +127,7 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
     }
     
     func downloadComplete(sender: PackageListener, id: String) {
-        
-        let boundingBox = BoundingBox.fromString(projection: contentView.projection, route: id)
-        
-        contentView.map.setFocus(boundingBox.bounds.getCenter(), durationSeconds: 1)
-        contentView.map.setZoom(8, durationSeconds: 1)
+        // TODO
     }
     
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
