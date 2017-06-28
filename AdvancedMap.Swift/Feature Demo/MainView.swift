@@ -71,12 +71,11 @@ class MainView: UIScrollView {
             
             view.frame = CGRect(x: x, y: y, width: w, height: h)
             
+            counter += 1;
+            
             if (Int(counter) == views.count) {
                 contentSize = CGSize(width: frame.width, height: y + h + padding)
             }
-            
-            counter += 1;
-            
         }
     }
     
