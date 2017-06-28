@@ -19,6 +19,12 @@
 		AD4123221F03F402009874BD /* ClusterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123211F03F402009874BD /* ClusterBuilder.swift */; };
 		AD4123241F03F444009874BD /* marker_black.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123231F03F444009874BD /* marker_black.png */; };
 		AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */ = {isa = PBXBuildFile; fileRef = AD4123251F03FC8D009874BD /* cities15000.geojson */; };
+		AD41232A1F040A2B009874BD /* VectorObjectEditingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123291F040A2B009874BD /* VectorObjectEditingController.swift */; };
+		AD41232C1F040A36009874BD /* VectorObjectEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41232B1F040A36009874BD /* VectorObjectEditingView.swift */; };
+		AD41232F1F040A73009874BD /* GPSLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41232E1F040A73009874BD /* GPSLocationController.swift */; };
+		AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123301F040A7C009874BD /* GPSLocationView.swift */; };
+		AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123321F040C0C009874BD /* icon_sample_clustering.png */; };
+		AD4123351F040C0C009874BD /* icon_sample_vector_objects.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123331F040C0C009874BD /* icon_sample_vector_objects.png */; };
 		AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EB91EF907D1008CEA76 /* Languages.swift */; };
 		AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */; };
 		AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */; };
@@ -116,6 +122,12 @@
 		AD4123211F03F402009874BD /* ClusterBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusterBuilder.swift; sourceTree = "<group>"; };
 		AD4123231F03F444009874BD /* marker_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_black.png; sourceTree = "<group>"; };
 		AD4123251F03FC8D009874BD /* cities15000.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities15000.geojson; sourceTree = "<group>"; };
+		AD4123291F040A2B009874BD /* VectorObjectEditingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectEditingController.swift; sourceTree = "<group>"; };
+		AD41232B1F040A36009874BD /* VectorObjectEditingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectEditingView.swift; sourceTree = "<group>"; };
+		AD41232E1F040A73009874BD /* GPSLocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSLocationController.swift; sourceTree = "<group>"; };
+		AD4123301F040A7C009874BD /* GPSLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSLocationView.swift; sourceTree = "<group>"; };
+		AD4123321F040C0C009874BD /* icon_sample_clustering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_clustering.png; sourceTree = "<group>"; };
+		AD4123331F040C0C009874BD /* icon_sample_vector_objects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_vector_objects.png; sourceTree = "<group>"; };
 		AD437EB91EF907D1008CEA76 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupContent.swift; sourceTree = "<group>"; };
 		AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
@@ -239,6 +251,24 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		AD4123271F040A10009874BD /* Vector Object Editing */ = {
+			isa = PBXGroup;
+			children = (
+				AD4123291F040A2B009874BD /* VectorObjectEditingController.swift */,
+				AD41232B1F040A36009874BD /* VectorObjectEditingView.swift */,
+			);
+			name = "Vector Object Editing";
+			sourceTree = "<group>";
+		};
+		AD4123281F040A1D009874BD /* GPS Location */ = {
+			isa = PBXGroup;
+			children = (
+				AD41232E1F040A73009874BD /* GPSLocationController.swift */,
+				AD4123301F040A7C009874BD /* GPSLocationView.swift */,
+			);
+			name = "GPS Location";
+			sourceTree = "<group>";
+		};
 		AD437EC11EF93269008CEA76 /* BaseMapIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +326,8 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				AD4123281F040A1D009874BD /* GPS Location */,
+				AD4123271F040A10009874BD /* Vector Object Editing */,
 				AD5B2AF21F03CB9D00EF738C /* Clustering */,
 				AD5B2AF11F03CB9300EF738C /* Vector Objects */,
 				AD7356691F02760800D4D6EF /* Package Download */,
@@ -340,6 +372,8 @@
 		AD97869E1EF809CE002912DF /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				AD4123321F040C0C009874BD /* icon_sample_clustering.png */,
+				AD4123331F040C0C009874BD /* icon_sample_vector_objects.png */,
 				AD5B2AEF1F03BEC400EF738C /* icon_sample_package_download.png */,
 				AD7356671F02732500D4D6EF /* icon_sample_city_download.png */,
 				AD73C9C71F015D75008F040A /* icon_sample_styles.png */,
@@ -624,6 +658,7 @@
 				AD437ED01EF933C5008CEA76 /* style_image_nutiteq_gray.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				AD9786B61EF82284002912DF /* icon_basemap.png in Resources */,
+				AD4123351F040C0C009874BD /* icon_sample_vector_objects.png in Resources */,
 				AD5B2AEC1F03A60300EF738C /* icon_forward_blue.png in Resources */,
 				AD9786B71EF82284002912DF /* icon_global.png in Resources */,
 				AD41231E1F03E1E1009874BD /* arrow@2x.png in Resources */,
@@ -647,6 +682,7 @@
 				AD4123181F03E1C8009874BD /* info@2x.png in Resources */,
 				AD4123241F03F444009874BD /* marker_black.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
+				AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */,
 				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */,
@@ -726,10 +762,12 @@
 				ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */,
 				AD73566B1F02776400D4D6EF /* PackageDownloadController.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
+				AD41232A1F040A2B009874BD /* VectorObjectEditingController.swift in Sources */,
 				AD73565C1F02557E00D4D6EF /* CityDownloadController.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
 				AD5B2AF41F03CBA800EF738C /* VectorObjectController.swift in Sources */,
 				ADE093051F01143000C569F9 /* RouteMapEventListener.swift in Sources */,
+				AD41232F1F040A73009874BD /* GPSLocationController.swift in Sources */,
 				ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */,
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
 				ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */,
@@ -754,7 +792,9 @@
 				AD4123201F03E80A009874BD /* VectorObjectMapListener.swift in Sources */,
 				AD9786C61EF8281B002912DF /* SlideInPopupHeader.swift in Sources */,
 				AD97868D1EF7F152002912DF /* BaseController.swift in Sources */,
+				AD41232C1F040A36009874BD /* VectorObjectEditingView.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
+				AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */,
 				AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */,
 				AD7356701F0277A800D4D6EF /* PackagePopupContent.swift in Sources */,
 				AD5B2AF81F03CC1600EF738C /* ClusteringController.swift in Sources */,
