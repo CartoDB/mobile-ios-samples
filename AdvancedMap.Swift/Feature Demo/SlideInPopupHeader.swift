@@ -95,6 +95,8 @@ class PopupCloseButton : UIView {
 
 class PopupBackButton : UIView {
     
+    var delegate: ClickDelegate?
+    
     var button: UIImageView!
     var text: UILabel!
     
@@ -108,6 +110,9 @@ class PopupBackButton : UIView {
         text = UILabel()
         text.text = "BACK"
         addSubview(text)
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.backTapped(_:)))
+        addGestureRecognizer(recognizer)
     }
     
     override func layoutSubviews() {
@@ -129,6 +134,14 @@ class PopupBackButton : UIView {
         
         text.frame = CGRect(x: x, y: y, width: w, height: h)
     }
+    
+    func backTapped(_ sender: UITapGestureRecognizer) {
+        delegate?.click(sender: self)
+    }
+}
+
+protocol ClickDelegate {
+    func click(sender: UIView);
 }
 
 

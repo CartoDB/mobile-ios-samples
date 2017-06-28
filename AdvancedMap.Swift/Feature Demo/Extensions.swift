@@ -37,4 +37,13 @@ extension String {
         }
         return distance(from: startIndex, to: index)
     }
+    
+    func lastIndexOf(s: String) -> Int {
+        
+        if let r: Range<Index> = range(of: s) {
+            return distance(from: self.startIndex, to: r.lowerBound)
+        }
+        
+        return -1
+    }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PackageDownloadController : BaseController, UITableViewDelegate, PackageDownloadDelegate, SwitchDelegate {
+class PackageDownloadController : BaseController, UITableViewDelegate, PackageDownloadDelegate, SwitchDelegate, ClickDelegate {
     
     var contentView: PackageDownloadView!
     
@@ -41,6 +41,8 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         contentView.onlineSwitch.delegate = self
         
         mapManager.startPackageListDownload()
+        
+        contentView.popup.popup.header.backButton.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -54,6 +56,24 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         mapPackageListener = nil
         
         contentView.onlineSwitch.delegate = nil
+        
+        contentView.popup.popup.header.backButton.delegate = nil
+    }
+    
+    func click(sender: UIView) {
+        // Currently the only generic button on this page is the popup back button,
+        // no need to type check.
+
+        folder = folder.substring(to: folder.characters.count - 1)
+        let lastslash = folder.lastIndexOf(s: "/")
+
+        if (lastslash == -1) {
+            folder = ""
+            contentView.popup.popup.header.backButton.isHidden = true
+        } else {
+            folder = folder.substring(to: lastslash + 1)
+        }
+        contentView.packageContent.addPackages(packages: getPackages())
     }
     
     func switchChanged() {
@@ -72,8 +92,8 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         
         if (package.isGroup()) {
             folder = folder + package.name + "/"
-            print(package.name)
             contentView.packageContent.addPackages(packages: getPackages())
+            contentView.popup.popup.header.backButton.isHidden = false
         } else {
             currentDownload = package
             mapManager.startPackageDownload(package.id)
