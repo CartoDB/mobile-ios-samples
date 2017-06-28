@@ -16,6 +16,9 @@
 		AD41231D1F03E1E1009874BD /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = AD41231B1F03E1E1009874BD /* arrow.png */; };
 		AD41231E1F03E1E1009874BD /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD41231C1F03E1E1009874BD /* arrow@2x.png */; };
 		AD4123201F03E80A009874BD /* VectorObjectMapListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD41231F1F03E80A009874BD /* VectorObjectMapListener.swift */; };
+		AD4123221F03F402009874BD /* ClusterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123211F03F402009874BD /* ClusterBuilder.swift */; };
+		AD4123241F03F444009874BD /* marker_black.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123231F03F444009874BD /* marker_black.png */; };
+		AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */ = {isa = PBXBuildFile; fileRef = AD4123251F03FC8D009874BD /* cities15000.geojson */; };
 		AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EB91EF907D1008CEA76 /* Languages.swift */; };
 		AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */; };
 		AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */; };
@@ -110,6 +113,9 @@
 		AD41231B1F03E1E1009874BD /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		AD41231C1F03E1E1009874BD /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		AD41231F1F03E80A009874BD /* VectorObjectMapListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectMapListener.swift; sourceTree = "<group>"; };
+		AD4123211F03F402009874BD /* ClusterBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusterBuilder.swift; sourceTree = "<group>"; };
+		AD4123231F03F444009874BD /* marker_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_black.png; sourceTree = "<group>"; };
+		AD4123251F03FC8D009874BD /* cities15000.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities15000.geojson; sourceTree = "<group>"; };
 		AD437EB91EF907D1008CEA76 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupContent.swift; sourceTree = "<group>"; };
 		AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
@@ -227,6 +233,7 @@
 		AD4123121F03D431009874BD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AD4123251F03FC8D009874BD /* cities15000.geojson */,
 				AD4123131F03D5AC009874BD /* milktruck.nml */,
 			);
 			name = Assets;
@@ -263,6 +270,7 @@
 			children = (
 				AD5B2AF71F03CC1600EF738C /* ClusteringController.swift */,
 				AD5B2AFA1F03CC2F00EF738C /* ClusteringView.swift */,
+				AD4123211F03F402009874BD /* ClusterBuilder.swift */,
 			);
 			name = Clustering;
 			sourceTree = "<group>";
@@ -420,6 +428,7 @@
 		ADB168E31EF7BBDC0022F2F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD4123231F03F444009874BD /* marker_black.png */,
 				AD41231B1F03E1E1009874BD /* arrow.png */,
 				AD41231C1F03E1E1009874BD /* arrow@2x.png */,
 				AD4123191F03E1CE009874BD /* info.png */,
@@ -636,7 +645,9 @@
 				AD41231A1F03E1CE009874BD /* info.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
 				AD4123181F03E1C8009874BD /* info@2x.png in Resources */,
+				AD4123241F03F444009874BD /* marker_black.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
+				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */,
 				AD73C9C61F015D1E008F040A /* icon_sample_route_download.png in Resources */,
@@ -724,6 +735,7 @@
 				ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */,
 				AD7356661F02679200D4D6EF /* Utils.swift in Sources */,
 				AD7356741F0291E000D4D6EF /* Extensions.swift in Sources */,
+				AD4123221F03F402009874BD /* ClusterBuilder.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
 				ADE093031F01080700C569F9 /* ProgressLabel.swift in Sources */,

@@ -100,6 +100,19 @@ class MapBaseView : UIView {
         return layer!
     }
     
+    func addGrayBaseLayer() -> NTCartoOnlineVectorTileLayer {
+        
+        if (map == nil) {
+            map = NTMapView()
+            addSubview(map)
+        }
+        
+        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_GRAY)
+        map.getLayers().add(layer)
+        
+        return layer!
+    }
+    
     func addButton(button: PopupButton) {
         
         if (buttons == nil) {

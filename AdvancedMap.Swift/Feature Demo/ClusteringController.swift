@@ -18,6 +18,45 @@ class ClusteringController : BaseController {
         
         contentView = ClusteringView()
         view = contentView
+      
+        let builder = ClusterBuilder()
+        builder?.image = UIImage(named: "marker_black.png")
+        builder?.elements = [Int: NTMarkerStyle]()
+
+        contentView.initializeClusterLayer(builder: builder!)
+        
+        DispatchQueue.global().async {
+
+            let path = Bundle.main.path(forResource: "cities15000", ofType: "geojson")
+            
+            guard let json = try? NSString(contentsOfFile: path!, encoding: String.Encoding.utf8.rawValue) else {
+                return
+            }
+            
+            // Create a basic style, as the ClusterElementBuilder will set the real style
+            let style = NTMarkerStyleBuilder().buildStyle()
+            
+            // Read GeoJSON, parse it using SDK GeoJSON parser
+            let reader = NTGeoJSONGeometryReader()
+            reader?.setTargetProjection(self.contentView.map.getOptions().getBaseProjection())
+            
+            let features = reader?.readFeatureCollection(json as String!)
+            
+            let elements = NTVectorElementVector()
+            let total = Int((features?.getFeatureCount())!)
+            
+            
+            for i in stride(from: 0, to: total, by: 1) {
+                // This data set features point geometry, however, it can also be LineGeometry or PolygonGeometry
+                let geometry = features?.getFeature(Int32(i)).getGeometry() as? NTPointGeometry
+                elements?.add(NTMarker(geometry: geometry, style: style))
+            }
+            
+            DispatchQueue.main.async(execute: {
+                self.contentView.addClusters(elements: elements!)
+            })
+        }
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
