@@ -21,10 +21,14 @@ class GalleryRow : UIView {
         
         self.init(frame: CGRect.zero)
         
+        backgroundColor = UIColor.white
+        
         layer.borderWidth = 1;
         layer.borderColor = Colors.nearWhite.cgColor
         
         imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         
         addSubview(imageView)
         
@@ -71,6 +75,12 @@ class GalleryRow : UIView {
         h = descriptionHeight
         
         descriptionView.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        layer.shadowOpacity = 0.5
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

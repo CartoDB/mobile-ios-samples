@@ -65,7 +65,7 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
-        sample.title = "VECTOR OBJECT EDITING"
+        sample.title = "OBJECT EDITING"
         sample.description = "Places editable objects on the world map"
         sample.imageResource = folder + "icon_sample_package_download.png"
         sample.controller = VectorObjectEditingController()

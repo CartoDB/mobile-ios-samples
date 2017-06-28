@@ -84,7 +84,6 @@ class VectorObjectView : MapBaseView {
         /*
          * Balloon Popup
          */
-        
         let balloonBuilder = NTBalloonPopupStyleBuilder()
         
         balloonBuilder?.setLeftMargins(NTBalloonPopupMargins(left: 6, top: 6, right: 6, bottom: 6))
