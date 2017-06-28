@@ -67,14 +67,14 @@ class Samples {
         sample = Sample()
         sample.title = "OBJECT EDITING"
         sample.description = "Places editable objects on the world map"
-        sample.imageResource = folder + "icon_sample_package_download.png"
+        sample.imageResource = folder + "icon_sample_object_editing.png"
         sample.controller = VectorObjectEditingController()
         
         list.append(sample)
         sample = Sample()
         sample.title = "GPS LOCATION"
         sample.description = "Locates you and places a marker on the location"
-        sample.imageResource = folder + "icon_sample_package_download.png"
+        sample.imageResource = folder + "icon_sample_gps_location.png"
         sample.controller = GPSLocationController()
         
         list.append(sample)
