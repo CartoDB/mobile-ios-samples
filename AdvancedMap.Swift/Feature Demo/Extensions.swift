@@ -47,3 +47,23 @@ extension String {
         return -1
     }
 }
+
+extension UIView {
+    
+    func addSquareShadow() {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        layer.shadowOpacity = 0.5
+        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+    }
+    
+    func addRoundShadow() {
+        layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        layer.shadowOffset =  CGSize(width: 0.0, height: 2.0)
+        layer.shadowOpacity = 0.5
+        layer.shadowRadius = 0.0
+        layer.masksToBounds = false
+        layer.cornerRadius = frame.width / 2
+    }
+}

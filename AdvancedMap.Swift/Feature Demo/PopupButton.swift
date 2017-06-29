@@ -49,6 +49,8 @@ class PopupButton : UIView {
         let padding: CGFloat = frame.height / 3.5
         
         imageView.frame = CGRect(x: padding, y: padding, width: frame.width - 2 * padding, height: frame.height - 2 * padding)
+        
+        addRoundShadow()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

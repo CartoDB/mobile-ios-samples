@@ -76,11 +76,7 @@ class GalleryRow : UIView {
         
         descriptionView.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.lightGray.cgColor
-        layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        layer.shadowOpacity = 0.5
-        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+        addSquareShadow()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
