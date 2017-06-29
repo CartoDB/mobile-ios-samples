@@ -19,11 +19,11 @@ class ClusteringController : BaseController {
         contentView = ClusteringView()
         view = contentView
       
-        let builder = ClusterBuilder()
-        builder?.image = UIImage(named: "marker_black.png")
-        builder?.elements = [Int: NTMarkerStyle]()
+        let cBuilder = ClusterBuilder()
+        cBuilder?.image = UIImage(named: "marker_black.png")
+        cBuilder?.elements = [Int: NTMarkerStyle]()
 
-        contentView.initializeClusterLayer(builder: builder!)
+        contentView.initializeClusterLayer(builder: cBuilder!)
         
         DispatchQueue.global().async {
 
@@ -33,8 +33,13 @@ class ClusteringController : BaseController {
                 return
             }
             
-            // Create a basic style, as the ClusterElementBuilder will set the real style
-            let style = NTMarkerStyleBuilder().buildStyle()
+            // This is the style of a non-cluster element
+            // This element will be displayed when clustering animation completes and it's no longer a cluster
+            let mBuilder = NTMarkerStyleBuilder()
+            mBuilder?.setBitmap(NTBitmapUtils.createBitmap(from: cBuilder?.image))
+            mBuilder?.setSize(30)
+            
+            let style = mBuilder?.buildStyle()
             
             // Read GeoJSON, parse it using SDK GeoJSON parser
             let reader = NTGeoJSONGeometryReader()

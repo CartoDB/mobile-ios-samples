@@ -26,7 +26,7 @@ class CityDownloadView : DownloadBaseView {
         initialize()
         initializeDownloadContent()
         
-        infoContent.setText(headerText: Texts.cityDownloadInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.cityDownloadInfoHeader, contentText: Texts.cityDownloadInfoContainer)
         
         cityButton = PopupButton(imageUrl: "icon_global.png")
         addButton(button: cityButton)

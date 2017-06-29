@@ -32,7 +32,6 @@ class ClusterBuilder : NTClusterElementBuilder {
             
             let native = NSString(string: String(elements.size()))
             
-            
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
             paragraphStyle.lineBreakMode = .byWordWrapping

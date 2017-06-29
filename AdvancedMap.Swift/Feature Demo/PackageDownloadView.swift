@@ -23,7 +23,7 @@ class PackageDownloadView : DownloadBaseView {
         initialize()
         initializeDownloadContent()
         
-        infoContent.setText(headerText: Texts.countryDownloadInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.packageDownloadInfoHeader, contentText: Texts.packageDownloadInfoContainer)
         
         countryButton = PopupButton(imageUrl: "icon_global.png")
         addButton(button: countryButton)

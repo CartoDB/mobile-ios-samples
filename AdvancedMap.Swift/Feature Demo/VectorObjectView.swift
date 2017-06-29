@@ -20,7 +20,7 @@ class VectorObjectView : MapBaseView {
         baseLayer = addBaseLayer()
         
         initialize()
-        infoContent.setText(headerText: Texts.vectorObjectsInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.vectorElementsInfoHeader, contentText: Texts.vectorElementsInfoContainer)
         
         let projection = map.getOptions().getBaseProjection()
         // Initialize an local vector data source

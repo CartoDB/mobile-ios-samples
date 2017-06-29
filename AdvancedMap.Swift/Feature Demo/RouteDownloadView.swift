@@ -26,7 +26,7 @@ class RouteDownloadView : DownloadBaseView {
         initialize()
         initializeDownloadContent()
         
-        infoContent.setText(headerText: Texts.routeDownloadInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.routeDownloadInfoHeader, contentText: Texts.routeDownloadInfoContainer)
 
         downloadButton = PopupButton(imageUrl: "icon_download.png")
         downloadButton.disable()
