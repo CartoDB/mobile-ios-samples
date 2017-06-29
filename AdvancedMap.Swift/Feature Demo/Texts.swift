@@ -54,10 +54,37 @@ class Texts {
     static let clusteringInfoHeader = "VECTOR ELEMENT CLUSTERING"
     
     static let clusteringInfoContainer =
-        "" +
-        ""
+        "CARTO offers a convenient way to build clusters." +
+        "Here's an example of the clustering of cities with over 15000 residents, which is approximately 20,000 cities around the world." +
+        "CARTO's Mobile SDK creates these clusters in a matter of milliseconds and animates them to place when zooming in, animates them back when zooming out." +
+        "With our sdk, You can style your clusters however you want (they are regular markers on the map), we decided to stick to the classic: white background, black number"
+    
+    static let objectEditingInfoHeader = "VECTOR OBJECT EDITING"
+    
+    static let objectEditingInfoContainer =
+        "Now this is one of the more complex features of CARTOMobileSDK. The option to create custom elements, and then also to edit them!" +
+        "Simply click on the element you wish to edit, and then drag from the navy-colored dots to change its size or from the center to move it." +
+        "We even installed a small trash can in the top right corner so you can delete and element if you get sick of it."
     
     static let gpsLocationInfoHeader = "GPS LOCATION"
     
-    static let objectEditingInfoHeader = "VECTOR OBJECT EDITING"
+    static let gpsLocationInfoContainer =
+        "CartoMobileSDK is also compatible with native APIs. You get latitude and longitude from CLLoationManager and you can easily place a highly customized marker on those coordinates." +
+        "This example also has a 'track location' switch, as it by default zooms to your location when it receives a location update. Turn it off if you wish to browse the map"
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

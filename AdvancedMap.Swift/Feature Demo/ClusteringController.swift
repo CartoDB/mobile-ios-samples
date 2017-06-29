@@ -61,7 +61,6 @@ class ClusteringController : BaseController {
                 self.contentView.addClusters(elements: elements!)
             })
         }
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {

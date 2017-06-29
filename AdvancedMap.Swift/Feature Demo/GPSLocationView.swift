@@ -27,7 +27,7 @@ class GPSLocationView : MapBaseView {
         baseLayer = addBaseLayer()
         
         initialize()
-        infoContent.setText(headerText: Texts.gpsLocationInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.gpsLocationInfoHeader, contentText: Texts.gpsLocationInfoContainer)
         
         projection = map.getOptions().getBaseProjection()
         source = NTLocalVectorDataSource(projection: projection)

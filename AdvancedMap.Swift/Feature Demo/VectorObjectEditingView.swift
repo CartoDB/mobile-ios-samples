@@ -28,7 +28,7 @@ class VectorObjectEditingView : MapBaseView {
         baseLayer = addDarkBaseLayer()
         
         initialize()
-        infoContent.setText(headerText: Texts.objectEditingInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.objectEditingInfoHeader, contentText: Texts.objectEditingInfoContainer)
         
         addTopBar()
         

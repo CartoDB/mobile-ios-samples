@@ -21,7 +21,7 @@ class ClusteringView : MapBaseView {
         
         initialize()
         
-        infoContent.setText(headerText: Texts.clusteringInfoHeader, contentText: Texts.basemapInfoContainer)
+        infoContent.setText(headerText: Texts.clusteringInfoHeader, contentText: Texts.clusteringInfoContainer)
     }
     
     func initializeClusterLayer(builder: ClusterBuilder) {
