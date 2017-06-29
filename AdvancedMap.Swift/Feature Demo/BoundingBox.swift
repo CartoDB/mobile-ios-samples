@@ -28,6 +28,17 @@ class BoundingBox : NSObject {
     
     var bounds: NTMapBounds!
     
+    override init() {
+        
+    }
+    
+    init(minLon: Double, maxLon: Double, minLat: Double, maxLat: Double) {
+        self.minLon = minLon
+        self.maxLon = maxLon
+        self.minLat = minLat
+        self.maxLat = maxLat
+    }
+    
     func toString() -> String {
         
         // TODO Format correctly; also... why the hell does the top line produce outrageous numbers!?
