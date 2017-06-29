@@ -64,7 +64,9 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         
-        contentView.showUserAt(location: location)
+        if (contentView.stateSwitch.isOn()) {
+            contentView.showUserAt(location: location)
+        }
     }
 }
 

@@ -20,6 +20,11 @@ class StateSwitch : UIView {
         return _switch.isOn
     }
     
+    func setText(text: String) {
+        _label.text = text
+        _label.sizeToFit()
+    }
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         
