@@ -51,26 +51,25 @@ class MapBaseView : UIView {
             map?.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         }
         
-        if (self.buttons == nil) {
-            return
-        }
-        
-        let count = CGFloat(self.buttons.count)
-        
-        let buttonWidth: CGFloat = 60
-        let innerPadding: CGFloat = 25
-        
-        let totalArea = buttonWidth * count + (innerPadding * (count - 1))
-        
-        let w: CGFloat = buttonWidth
-        let h: CGFloat = w
-        let y: CGFloat = frame.height - (bottomLabelHeight + h + smallPadding)
-        var x: CGFloat = frame.width / 2 - totalArea / 2
-        
-        for button in buttons {
-            button.frame = CGRect(x: x, y: y, width: w, height: h)
+        if (buttons != nil) {
             
-            x += w + innerPadding
+            let count = CGFloat(self.buttons.count)
+            
+            let buttonWidth: CGFloat = 60
+            let innerPadding: CGFloat = 25
+            
+            let totalArea = buttonWidth * count + (innerPadding * (count - 1))
+            
+            let w: CGFloat = buttonWidth
+            let h: CGFloat = w
+            let y: CGFloat = frame.height - (bottomLabelHeight + h + smallPadding)
+            var x: CGFloat = frame.width / 2 - totalArea / 2
+            
+            for button in buttons {
+                button.frame = CGRect(x: x, y: y, width: w, height: h)
+                
+                x += w + innerPadding
+            }
         }
         
         if (topBar != nil) {

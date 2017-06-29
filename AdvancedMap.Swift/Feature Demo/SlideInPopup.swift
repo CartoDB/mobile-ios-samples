@@ -36,6 +36,10 @@ class SlideInPopup : UIView {
         
     }
     
+    func isVisible() -> Bool {
+        return transparentArea.alpha == 0.5
+    }
+    
     override func layoutSubviews() {
         
         var x: CGFloat = 0
@@ -48,6 +52,8 @@ class SlideInPopup : UIView {
 
         transparentArea.frame = CGRect(x: x, y: y, width: w, height: h)
         
+        let wasVisible = isVisible()
+        
         if (Device.isLandscape() || Device.isTablet()) {
             // Make the popup appear on the left side and full height.
             // Width of portrait iPhone 6. This number can be tweaked, but should be quite optimal
@@ -59,7 +65,11 @@ class SlideInPopup : UIView {
         h = h - visibleY
         
         popup.frame = CGRect(x: x, y: y, width: w, height: h)
-
+        
+        if (wasVisible) {
+            show()
+        }
+        
         if (content != nil) {
             x = 0
             y = 0
