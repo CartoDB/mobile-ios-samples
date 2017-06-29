@@ -98,6 +98,8 @@
 		ADC8B8DB1F04F35300B62852 /* VectorElementDeselectListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC8B8DA1F04F35300B62852 /* VectorElementDeselectListener.swift */; };
 		ADC8B8DD1F04F3B500B62852 /* EditEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC8B8DC1F04F3B500B62852 /* EditEventListener.swift */; };
 		ADC8B8E01F05043C00B62852 /* icon_trashcan.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8DF1F05043C00B62852 /* icon_trashcan.png */; };
+		ADC8B8E21F050C5600B62852 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8E11F050C5600B62852 /* icon_sample_object_editing.png */; };
+		ADC8B8E41F05209B00B62852 /* icon_sample_gps_location.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8E31F05209B00B62852 /* icon_sample_gps_location.png */; };
 		ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE092EE1F00ECF500C569F9 /* direction_up.png */; };
 		ADE092F21F00ECF500C569F9 /* direction_upthenleft.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE092EF1F00ECF500C569F9 /* direction_upthenleft.png */; };
 		ADE092F31F00ECF500C569F9 /* direction_upthenright.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE092F01F00ECF500C569F9 /* direction_upthenright.png */; };
@@ -210,6 +212,8 @@
 		ADC8B8DA1F04F35300B62852 /* VectorElementDeselectListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorElementDeselectListener.swift; sourceTree = "<group>"; };
 		ADC8B8DC1F04F3B500B62852 /* EditEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventListener.swift; sourceTree = "<group>"; };
 		ADC8B8DF1F05043C00B62852 /* icon_trashcan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_trashcan.png; sourceTree = "<group>"; };
+		ADC8B8E11F050C5600B62852 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
+		ADC8B8E31F05209B00B62852 /* icon_sample_gps_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_gps_location.png; sourceTree = "<group>"; };
 		ADE092EE1F00ECF500C569F9 /* direction_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = direction_up.png; path = ../../Assets/direction_up.png; sourceTree = "<group>"; };
 		ADE092EF1F00ECF500C569F9 /* direction_upthenleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = direction_upthenleft.png; path = ../../Assets/direction_upthenleft.png; sourceTree = "<group>"; };
 		ADE092F01F00ECF500C569F9 /* direction_upthenright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = direction_upthenright.png; path = ../../Assets/direction_upthenright.png; sourceTree = "<group>"; };
@@ -381,6 +385,8 @@
 		AD97869E1EF809CE002912DF /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				ADC8B8E31F05209B00B62852 /* icon_sample_gps_location.png */,
+				ADC8B8E11F050C5600B62852 /* icon_sample_object_editing.png */,
 				AD4123321F040C0C009874BD /* icon_sample_clustering.png */,
 				AD4123331F040C0C009874BD /* icon_sample_vector_objects.png */,
 				AD5B2AEF1F03BEC400EF738C /* icon_sample_package_download.png */,
@@ -702,12 +708,14 @@
 				AD5B2AF01F03BEC400EF738C /* icon_sample_package_download.png in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				AD437ECA1EF933C5008CEA76 /* style_image_carto_darkmatter.png in Resources */,
+				ADC8B8E21F050C5600B62852 /* icon_sample_object_editing.png in Resources */,
 				AD7356681F02732500D4D6EF /* icon_sample_city_download.png in Resources */,
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
 				AD73C9C81F015D75008F040A /* icon_sample_styles.png in Resources */,
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
 				AD41231A1F03E1CE009874BD /* info.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
+				ADC8B8E41F05209B00B62852 /* icon_sample_gps_location.png in Resources */,
 				AD4123181F03E1C8009874BD /* info@2x.png in Resources */,
 				AD4123241F03F444009874BD /* marker_black.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
@@ -954,6 +962,7 @@
 			baseConfigurationReference = 854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 79LP8BB5PK;
 				INFOPLIST_FILE = "Feature Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -968,6 +977,7 @@
 			baseConfigurationReference = 09F7D6002F3BF75664417F0B /* Pods-Feature Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 79LP8BB5PK;
 				INFOPLIST_FILE = "Feature Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

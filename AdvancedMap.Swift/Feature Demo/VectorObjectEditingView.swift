@@ -57,7 +57,7 @@ class VectorObjectEditingView : MapBaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let padding: CGFloat = 7
+        let padding: CGFloat = 10
         
         topBarLabel.frame = CGRect(x: padding, y: 0, width: topBar.frame.width  - padding, height: topBar.frame.height)
         
@@ -71,15 +71,32 @@ class VectorObjectEditingView : MapBaseView {
         
         editSource.clear()
         
+        let position = projection.fromWgs84(NTMapPos(x: -50, y: 50))
+        let pointBuilder = NTPointStyleBuilder()
+        pointBuilder?.setColor(Colors.predictionBlue.toNTColor())
+        
+        let point = NTPoint(pos: position, style: pointBuilder?.buildStyle())
+        editSource.add(point)
+        
         let positions = NTMapPosVector()
+        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: 50)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: -50)))
+        let lineBuilder = NTLineStyleBuilder()
+        lineBuilder?.setColor(Colors.green.toNTColor())
+        
+        let line = NTLine(poses: positions, style: lineBuilder?.buildStyle())
+        editSource.add(line)
+        
+        positions?.clear()
+        
         // min-x, min-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: 0)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 50, y: 0)))
         // max-x, min-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 100, y: 0)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 150, y: 0)))
         // max-x, max-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 100, y: 100)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 150, y: 100)))
         // min-x, max-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: 100)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 50, y: 100)))
 
         let polygonBuilder = NTPolygonStyleBuilder()
         polygonBuilder?.setColor(Colors.locationRed.toNTColor())

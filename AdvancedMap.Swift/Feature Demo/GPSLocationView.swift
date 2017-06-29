@@ -17,6 +17,10 @@ class GPSLocationView : MapBaseView {
     var topContainer: UIView!
     var stateSwitch: StateSwitch!
     
+    var source: NTLocalVectorDataSource!
+    
+    var projection: NTProjection!
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         
@@ -24,6 +28,11 @@ class GPSLocationView : MapBaseView {
         
         initialize()
         infoContent.setText(headerText: Texts.gpsLocationInfoHeader, contentText: Texts.basemapInfoContainer)
+        
+        projection = map.getOptions().getBaseProjection()
+        source = NTLocalVectorDataSource(projection: projection)
+        let layer = NTVectorLayer(dataSource: source)
+        map.getLayers().add(layer)
         
         topContainer = UIView()
         addSubview(topContainer)
@@ -53,15 +62,29 @@ class GPSLocationView : MapBaseView {
         stateSwitch.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
+    var userMarker: NTMarker!
+    
     func showUserAt(location: CLLocation) {
         
         let latitude = Double(location.coordinate.latitude)
         let longitude = Double(location.coordinate.longitude)
         
-        let projection = map.getOptions().getBaseProjection()
         let position = projection?.fromWgs84(NTMapPos(x: longitude, y: latitude))
         
         map.setFocus(position, durationSeconds: 1)
-        map.setZoom(15, durationSeconds: 1)
+        map.setZoom(16, durationSeconds: 1)
+        
+        if (userMarker == nil) {
+            let builder = NTMarkerStyleBuilder()
+            
+            let bitmap = NTBitmapUtils.createBitmap(from: UIImage(named: "icon_marker_blue.png"))
+            builder?.setBitmap(bitmap)
+            builder?.setSize(25)
+            
+            userMarker = NTMarker(pos: position, style: builder?.buildStyle())
+            source.add(userMarker)
+        }
+        
+        userMarker.setPos(position)
     }
 }
