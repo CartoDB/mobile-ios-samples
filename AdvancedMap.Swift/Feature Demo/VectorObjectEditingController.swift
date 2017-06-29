@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class VectorObjectEditingController : BaseController, VectorElementSelectDelegate, VectorElementDeselectDelegate {
+class VectorObjectEditingController : BaseController, VectorElementSelectDelegate, VectorElementDeselectDelegate, EditEventDelegate {
     
     var contentView: VectorObjectEditingView!
     
@@ -24,6 +24,8 @@ class VectorObjectEditingController : BaseController, VectorElementSelectDelegat
         view = contentView
         
         editListener = EditEventListener()
+        editListener?.initialize()
+        
         selectListener = VectorElementSelectListener()
         deselectListener = VectorElementDeselectListener()
     }
@@ -33,9 +35,7 @@ class VectorObjectEditingController : BaseController, VectorElementSelectDelegat
         
         contentView.addRecognizers()
         
-        editListener?.initialize(source: contentView.editSource)
         contentView.editLayer.setVectorEditEventListener(editListener)
-        
         
         selectListener?.delegate = self
         contentView.editLayer.setVectorElementEventListener(selectListener)
@@ -43,6 +43,9 @@ class VectorObjectEditingController : BaseController, VectorElementSelectDelegat
         
         deselectListener?.delegate = self
         contentView.map.setMapEventListener(deselectListener)
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.deleteClick(_:)))
+        contentView.trashCan.addGestureRecognizer(recognizer)
         
         contentView.addElements()
     }
@@ -59,13 +62,36 @@ class VectorObjectEditingController : BaseController, VectorElementSelectDelegat
         
         deselectListener.delegate = nil
         contentView.map.setMapEventListener(nil)
+        
+        contentView.trashCan.gestureRecognizers?.forEach(contentView.trashCan.removeGestureRecognizer)
+    }
+    
+    func deleteClick(_ sender: UITapGestureRecognizer) {
+        contentView.editSource.remove(contentView.editLayer.getSelectedVectorElement())
     }
     
     func selected(element: NTVectorElement) {
         contentView.editLayer.setSelectedVectorElement(element)
+        DispatchQueue.main.async {
+            self.contentView.trashCan.isHidden = false
+        }
+        
     }
     
     func deselect() {
         contentView.editLayer.setSelectedVectorElement(nil)
+        DispatchQueue.main.async {
+            self.contentView.trashCan.isHidden = true
+        }
+    }
+    
+    func onDelete(element: NTVectorElement) {
+        contentView.editSource.remove(element)
+        deselect()
     }
 }
+
+
+
+
+

@@ -20,6 +20,7 @@ class VectorObjectEditingView : MapBaseView {
     var projection: NTProjection!
     
     var topBarLabel: UILabel!
+    var trashCan: UIImageView!
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -39,10 +40,16 @@ class VectorObjectEditingView : MapBaseView {
         
         topBarLabel = UILabel()
         topBarLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
-        topBarLabel.textAlignment = .center
+
         topBarLabel.textColor = UIColor.white
         topBarLabel.text = "CLICK ON AN ELEMENT TO EDIT IT"
         topBar.addSubview(topBarLabel)
+        
+        trashCan = UIImageView()
+        trashCan.image = UIImage(named: "icon_trashcan.png")
+        trashCan.isUserInteractionEnabled = true
+        trashCan.isHidden = true
+        topBar.addSubview(trashCan)
         
         map.setZoom(0, durationSeconds: 0)
     }
@@ -50,7 +57,14 @@ class VectorObjectEditingView : MapBaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        topBarLabel.frame = topBar.bounds
+        let padding: CGFloat = 7
+        
+        topBarLabel.frame = CGRect(x: padding, y: 0, width: topBar.frame.width  - padding, height: topBar.frame.height)
+        
+        let height: CGFloat = topBar.frame.height - 2 * padding
+        let width: CGFloat = height
+        
+        trashCan.frame = CGRect(x: topBar.frame.width - (width + padding), y: padding, width: width, height: height)
     }
     
     func addElements() {
@@ -66,16 +80,17 @@ class VectorObjectEditingView : MapBaseView {
         positions?.add(projection.fromWgs84(NTMapPos(x: 100, y: 100)))
         // min-x, max-y
         positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: 100)))
+
+        let polygonBuilder = NTPolygonStyleBuilder()
+        polygonBuilder?.setColor(Colors.locationRed.toNTColor())
         
-//        positions?.add(NTMapPos(x: -4000000, y: -4000000))
-//        positions?.add(NTMapPos(x: 4000000, y: -4000000))
-//        positions?.add(NTMapPos(x: 0, y: 7000000))
-        
-        let builder = NTPolygonStyleBuilder()
-        builder?.setColor(Colors.locationRed.toNTColor())
-        
-        let polygon = NTPolygon(poses: positions, style: builder?.buildStyle())
+        let polygon = NTPolygon(poses: positions, style: polygonBuilder?.buildStyle())
         
         editSource.add(polygon)
     }
 }
+
+
+
+
+

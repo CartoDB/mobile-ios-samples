@@ -10,22 +10,19 @@ import Foundation
 
 class EditEventListener: NTVectorEditEventListener {
     
-    var source: NTLocalVectorDataSource!
+    var delegate: EditEventDelegate?
     
     var styleNormal, styleVirtual: NTPointStyle!
     
-    func initialize(source: NTLocalVectorDataSource) {
-        
-        self.source = source
+    func initialize() {
         
         let builder = NTPointStyleBuilder()
         builder?.setColor(Colors.navy.toNTColor())
-        builder?.setSize(20)
+        builder?.setSize(15)
         
         styleNormal = builder?.buildStyle()
         
-        builder?.setColor(Colors.navy.toNTColor())
-        builder?.setSize(15)
+        builder?.setSize(10)
         
         styleVirtual = builder?.buildStyle()
     }
@@ -44,7 +41,7 @@ class EditEventListener: NTVectorEditEventListener {
     }
     
     override func onElementDelete(_ element: NTVectorElement!) {
-        source.remove(element)
+        delegate?.onDelete(element: element)
     }
     
     override func onDragStart(_ dragInfo: NTVectorElementDragInfo!) -> NTVectorElementDragResult {
@@ -70,3 +67,13 @@ class EditEventListener: NTVectorEditEventListener {
         return styleNormal
     }
 }
+
+protocol EditEventDelegate {
+    
+    func onDelete(element: NTVectorElement)
+}
+
+
+
+
+
