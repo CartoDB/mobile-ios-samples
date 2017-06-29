@@ -27,6 +27,12 @@ class Colors {
     
     public static var transparentGray: UIColor = fromRgba(red: 50, green: 50, blue: 50, alpha: 150)
     
+    public static var green: UIColor = fromRgba(red: 115, green: 200, blue: 107, alpha: 255)
+    
+    public static var purple: UIColor = fromRgba(red: 105, green: 110, blue: 236, alpha: 255)
+    
+    public static var predictionBlue: UIColor = fromRgba(red: 23, green: 133, blue: 251, alpha: 255)
+    
     static func fromRgba(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
         return UIColor.init(red: red / 255, green: green / 255, blue: blue / 255, alpha: alpha / 255)
     }

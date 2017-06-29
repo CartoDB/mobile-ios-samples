@@ -20,6 +20,8 @@ class MapBaseView : UIView {
     var infoButton: PopupButton!
     var infoContent: InformationPopupContent!
     
+    var topBar: UIView!
+    
     let bottomLabelHeight: CGFloat = 40
     let smallPadding: CGFloat = 5
     
@@ -70,6 +72,10 @@ class MapBaseView : UIView {
             
             x += w + innerPadding
         }
+        
+        if (topBar != nil) {
+            topBar.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: 45)
+        }
     }
     
     func addRecognizers() {
@@ -113,6 +119,19 @@ class MapBaseView : UIView {
         return layer!
     }
     
+    func addDarkBaseLayer() -> NTCartoOnlineVectorTileLayer {
+        
+        if (map == nil) {
+            map = NTMapView()
+            addSubview(map)
+        }
+        
+        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DARK)
+        map.getLayers().add(layer)
+        
+        return layer!
+    }
+    
     func addButton(button: PopupButton) {
         
         if (buttons == nil) {
@@ -123,6 +142,11 @@ class MapBaseView : UIView {
         addSubview(button)
     }
     
+    func addTopBar() {
+        topBar = UIView()
+        topBar.backgroundColor = Colors.transparentGray
+        addSubview(topBar)
+    }
 }
 
 
