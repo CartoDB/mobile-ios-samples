@@ -19,6 +19,8 @@ class VectorObjectEditingView : MapBaseView {
         baseLayer = addBaseLayer()
         
         initialize()
+        infoContent.setText(headerText: Texts.objectEditingInfoHeader, contentText: Texts.basemapInfoContainer)
+        
     }
     
     override func layoutSubviews() {

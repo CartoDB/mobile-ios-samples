@@ -20,6 +20,8 @@ class GPSLocationView : MapBaseView {
         baseLayer = addBaseLayer()
         
         initialize()
+        infoContent.setText(headerText: Texts.gpsLocationInfoHeader, contentText: Texts.basemapInfoContainer)
+        
     }
     
     override func layoutSubviews() {

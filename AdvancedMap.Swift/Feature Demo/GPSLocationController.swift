@@ -27,25 +27,12 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         manager.desiredAccuracy = 1
         
         /*
-         * This app doesn't really require background mode, but might as well make it as authentic as possible.
-         *
          * In addition to requesting background location updates, you need to add the following lines to your Info.plist:
          *
          * 1. Privacy - Location When In Use Usage Description
          * 2. Privacy - Location Always Usage Description
          * 3. Required background modes:
          *    3.1 App registers for location updates
-         *
-         * Xml, if you prefer:
-         
-            <key>NSLocationWhenInUseUsageDescription</key>
-            <string></string>
-            <key>NSLocationAlwaysUsageDescription</key>
-            <string></string>
-            <key>UIBackgroundModes</key>
-            <array>
-                <string>location</string>
-            </array>
          */
         if #available(iOS 9.0, *) {
             manager.requestAlwaysAuthorization()
@@ -80,3 +67,13 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         contentView.showUserAt(location: location)
     }
 }
+
+
+
+
+
+
+
+
+
+

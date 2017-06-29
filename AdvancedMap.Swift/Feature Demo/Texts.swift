@@ -23,4 +23,8 @@ class Texts {
     static let vectorObjectsInfoHeader = "VECTOR OBJECTS"
     
     static let clusteringInfoHeader = "VECTOR ELEMENT CLUSTERING"
+    
+    static let gpsLocationInfoHeader = "GPS LOCATION"
+    
+    static let objectEditingInfoHeader = "VECTOR OBJECT EDITING"
 }
