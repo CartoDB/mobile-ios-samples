@@ -132,9 +132,13 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
     func setOfflineMode() {
         
         /*
-         * NB! AdvancedMap.Swift requires CartoMobileSDK 4.1.0 Valhalla build,
+         * If you ended up with a build error here, NTPackageManagerValhallaRoutingService not found,
+         * then you should know that AdvancedMap.Swift requires CartoMobileSDK 4.1.0 Valhalla build,
          * which is not yet (as of 26 June 2017) on cocoapods, because cocoapods do not support semantic versioning
-         * Contact CARTO to get the new version of the framework!
+         * 
+         * Download the latest development build from:
+         * https://nutifront.s3.amazonaws.com/sdk_snapshots/sdk4-ios-4.1.0-dev-latest.zip
+         * unzip it and simply replace CartMobileSDk.framework file in AdvancedMap.Swift\Pods\CartoMobileSDK
          */
         routing.service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)
     }
