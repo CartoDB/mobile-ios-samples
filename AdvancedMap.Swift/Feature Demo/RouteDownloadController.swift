@@ -138,7 +138,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
          * 
          * Download the latest development build from:
          * https://nutifront.s3.amazonaws.com/sdk_snapshots/sdk4-ios-4.1.0-dev-latest.zip
-         * unzip it and simply replace CartMobileSDk.framework file in AdvancedMap.Swift\Pods\CartoMobileSDK
+         * unzip it and simply replace CartMobileSDk.framework file in AdvancedMap.Swift/Pods/CartoMobileSDK
          */
         routing.service = NTPackageManagerValhallaRoutingService(packageManager: routingManager)
     }
