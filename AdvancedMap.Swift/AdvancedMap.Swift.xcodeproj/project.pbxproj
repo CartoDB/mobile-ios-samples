@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3E559840F13B61F77C31E053 /* libPods-Feature Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
+		AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
 		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
@@ -95,7 +96,6 @@
 		ADC8B8DB1F04F35300B62852 /* VectorElementDeselectListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC8B8DA1F04F35300B62852 /* VectorElementDeselectListener.swift */; };
 		ADC8B8DD1F04F3B500B62852 /* EditEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC8B8DC1F04F3B500B62852 /* EditEventListener.swift */; };
 		ADC8B8E01F05043C00B62852 /* icon_trashcan.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8DF1F05043C00B62852 /* icon_trashcan.png */; };
-		ADC8B8E21F050C5600B62852 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8E11F050C5600B62852 /* icon_sample_object_editing.png */; };
 		ADC8B8E41F05209B00B62852 /* icon_sample_gps_location.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8E31F05209B00B62852 /* icon_sample_gps_location.png */; };
 		ADC8B8E61F05295F00B62852 /* icon_sample_route_download.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8E51F05295F00B62852 /* icon_sample_route_download.png */; };
 		ADC8B8E81F05299800B62852 /* icon_sample_city_download.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC8B8E71F05299800B62852 /* icon_sample_city_download.png */; };
@@ -118,6 +118,7 @@
 		64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Feature Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
 		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
@@ -209,7 +210,6 @@
 		ADC8B8DA1F04F35300B62852 /* VectorElementDeselectListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorElementDeselectListener.swift; sourceTree = "<group>"; };
 		ADC8B8DC1F04F3B500B62852 /* EditEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventListener.swift; sourceTree = "<group>"; };
 		ADC8B8DF1F05043C00B62852 /* icon_trashcan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_trashcan.png; sourceTree = "<group>"; };
-		ADC8B8E11F050C5600B62852 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
 		ADC8B8E31F05209B00B62852 /* icon_sample_gps_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_gps_location.png; sourceTree = "<group>"; };
 		ADC8B8E51F05295F00B62852 /* icon_sample_route_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_route_download.png; sourceTree = "<group>"; };
 		ADC8B8E71F05299800B62852 /* icon_sample_city_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_city_download.png; sourceTree = "<group>"; };
@@ -385,11 +385,11 @@
 		AD97869E1EF809CE002912DF /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */,
 				ADC8B8E91F052A2800B62852 /* icon_sample_styles.png */,
 				ADC8B8E71F05299800B62852 /* icon_sample_city_download.png */,
 				ADC8B8E51F05295F00B62852 /* icon_sample_route_download.png */,
 				ADC8B8E31F05209B00B62852 /* icon_sample_gps_location.png */,
-				ADC8B8E11F050C5600B62852 /* icon_sample_object_editing.png */,
 				AD4123321F040C0C009874BD /* icon_sample_clustering.png */,
 				AD4123331F040C0C009874BD /* icon_sample_vector_objects.png */,
 				AD5B2AEF1F03BEC400EF738C /* icon_sample_package_download.png */,
@@ -703,13 +703,13 @@
 				AD437ECF1EF933C5008CEA76 /* style_image_nutiteq_dark.png in Resources */,
 				AD437ED11EF933C5008CEA76 /* style_image_nutiteq_bright.png in Resources */,
 				AD9786B81EF82284002912DF /* icon_info.png in Resources */,
+				AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */,
 				AD9786C81EF82B00002912DF /* icon_close.png in Resources */,
 				ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */,
 				ADB27EB81EF416C6004198D3 /* LaunchScreen.storyboard in Resources */,
 				AD5B2AF01F03BEC400EF738C /* icon_sample_package_download.png in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				AD437ECA1EF933C5008CEA76 /* style_image_carto_darkmatter.png in Resources */,
-				ADC8B8E21F050C5600B62852 /* icon_sample_object_editing.png in Resources */,
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
 				AD41231A1F03E1CE009874BD /* info.png in Resources */,

@@ -17,7 +17,7 @@ class EditEventListener: NTVectorEditEventListener {
     func initialize() {
         
         let builder = NTPointStyleBuilder()
-        builder?.setColor(Colors.navy.toNTColor())
+        builder?.setColor(Colors.transparentLocationRed.toNTColor())
         builder?.setSize(15)
         
         styleNormal = builder?.buildStyle()

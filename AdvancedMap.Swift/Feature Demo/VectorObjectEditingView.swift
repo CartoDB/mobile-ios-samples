@@ -71,39 +71,82 @@ class VectorObjectEditingView : MapBaseView {
         
         editSource.clear()
         
-        let position = projection.fromWgs84(NTMapPos(x: -50, y: 50))
-        let pointBuilder = NTPointStyleBuilder()
-        pointBuilder?.setColor(Colors.predictionBlue.toNTColor())
-        
-        let point = NTPoint(pos: position, style: pointBuilder?.buildStyle())
-        editSource.add(point)
-        
+        let color = Colors.green.toNTColor()
         let positions = NTMapPosVector()
-        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: 50)))
-        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: -50)))
+
+        /*
+         * Points that form a circle of lines, the contours of the face
+         */
         let lineBuilder = NTLineStyleBuilder()
-        lineBuilder?.setColor(Colors.green.toNTColor())
+        lineBuilder?.setColor(color)
+
+        let minY: Double = -80
+        let maxY: Double = abs(minY)
         
-        let line = NTLine(poses: positions, style: lineBuilder?.buildStyle())
+        let minX: Double = -170
+        let maxX: Double = abs(minX)
+        
+        // Counter-clockwise circle starting from south-west/bottom-left
+        positions?.add(projection.fromWgs84(NTMapPos(x: -30, y: minY)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: -110, y: -75)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: minX, y: -40)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: minX, y: 40)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: -110, y: 75)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: -30, y: maxY)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 30, y: maxY)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 110, y: 75)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: maxX, y: 40)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: maxX, y: -40)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 110, y: -75)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 30, y: minY)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: -30, y: minY)))
+        
+        var line = NTLine(poses: positions, style: lineBuilder?.buildStyle())
         editSource.add(line)
         
         positions?.clear()
         
-        // min-x, min-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 50, y: 0)))
-        // max-x, min-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 150, y: 0)))
-        // max-x, max-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 150, y: 100)))
-        // min-x, max-y
-        positions?.add(projection.fromWgs84(NTMapPos(x: 50, y: 100)))
-
+        /*
+         * Points, eyes
+         */
+        var position = projection.fromWgs84(NTMapPos(x: -50, y: 50))
+        let pointBuilder = NTPointStyleBuilder()
+        pointBuilder?.setColor(color)
+        
+        var point = NTPoint(pos: position, style: pointBuilder?.buildStyle())
+        editSource.add(point)
+        
+        position = projection.fromWgs84(NTMapPos(x: 50, y: 50))
+        point = NTPoint(pos: position, style: pointBuilder?.buildStyle())
+        editSource.add(point)
+        
+        /*
+         * Polygon, nose
+         */
+        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: 20)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: -35, y: -30)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: -30)))
+        
         let polygonBuilder = NTPolygonStyleBuilder()
-        polygonBuilder?.setColor(Colors.locationRed.toNTColor())
+        polygonBuilder?.setColor(color)
         
         let polygon = NTPolygon(poses: positions, style: polygonBuilder?.buildStyle())
         
         editSource.add(polygon)
+        
+        positions?.clear()
+        
+        /*
+         * Lines, mouth
+         */
+        positions?.add(projection.fromWgs84(NTMapPos(x: 0, y: -65)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 60, y: -65)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 90, y: -55)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 100, y: -45)))
+        positions?.add(projection.fromWgs84(NTMapPos(x: 110, y: -20)))
+        
+        line = NTLine(poses: positions, style: lineBuilder?.buildStyle())
+        editSource.add(line)
     }
 }
 

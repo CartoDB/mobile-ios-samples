@@ -17,6 +17,8 @@ class Colors {
     
     public static var locationRed: UIColor = fromRgba(red: 215, green: 82, blue: 75, alpha: 255)
     
+    public static var transparentLocationRed: UIColor = fromRgba(red: 215, green: 82, blue: 75, alpha: 150)
+    
     public static var transparent: UIColor = fromRgba(red: 0, green: 0, blue: 0, alpha: 0)
     
     public static var navy: UIColor = fromRgba(red: 22, green: 41, blue: 69, alpha: 255)
