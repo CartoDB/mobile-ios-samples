@@ -34,11 +34,11 @@ class StateSwitch : UIView {
         _label.textColor = UIColor.white
         _label.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
         _label.textAlignment = .center
-        _label.text = "ONLINE"
+        _label.text = "OFFLINE"
         addSubview(_label)
         
         _switch = UISwitch()
-        _switch.isOn = true
+        _switch.isOn = false
         
         addSubview(_switch)
         
