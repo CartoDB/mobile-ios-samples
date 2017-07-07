@@ -86,6 +86,8 @@
 		ADA977FE1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */; };
 		ADA978001F0F768C0040E090 /* estonia-latest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */; };
 		ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */; };
+		ADA978051F0FB1000040E090 /* icon_sample_reverse_geocoding.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */; };
+		ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */; };
 		ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */; };
 		ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */; };
 		ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD241EFBF945005F53CB /* Routing.swift */; };
@@ -206,6 +208,8 @@
 		ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingEventListener.swift; sourceTree = "<group>"; };
 		ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "estonia-latest.sqlite"; path = "../../Assets/estonia-latest.sqlite"; sourceTree = "<group>"; };
 		ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGeocodingView.swift; sourceTree = "<group>"; };
+		ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_reverse_geocoding.png; sourceTree = "<group>"; };
+		ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_geocoding.png; sourceTree = "<group>"; };
 		ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadController.swift; sourceTree = "<group>"; };
 		ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadView.swift; sourceTree = "<group>"; };
 		ADAFCD241EFBF945005F53CB /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
@@ -406,6 +410,8 @@
 		AD97869E1EF809CE002912DF /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */,
+				ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */,
 				AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */,
 				ADC8B8E91F052A2800B62852 /* icon_sample_styles.png */,
 				ADC8B8E71F05299800B62852 /* icon_sample_city_download.png */,
@@ -735,12 +741,14 @@
 				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
 				AD437ED01EF933C5008CEA76 /* style_image_nutiteq_gray.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
+				ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */,
 				AD9786B61EF82284002912DF /* icon_basemap.png in Resources */,
 				AD4123351F040C0C009874BD /* icon_sample_vector_objects.png in Resources */,
 				AD5B2AEC1F03A60300EF738C /* icon_forward_blue.png in Resources */,
 				AD9786B71EF82284002912DF /* icon_global.png in Resources */,
 				ADC8B8E01F05043C00B62852 /* icon_trashcan.png in Resources */,
 				AD41231E1F03E1E1009874BD /* arrow@2x.png in Resources */,
+				ADA978051F0FB1000040E090 /* icon_sample_reverse_geocoding.png in Resources */,
 				AD437ECB1EF933C5008CEA76 /* style_image_carto_positron.png in Resources */,
 				AD9786C21EF822B7002912DF /* icon_marker_red.png in Resources */,
 				AD437ECF1EF933C5008CEA76 /* style_image_nutiteq_dark.png in Resources */,

@@ -25,7 +25,7 @@ class MainViewController: UIViewController, GalleryDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "FEATURE DEMO"
+        title = "ADVANCED MAP"
     }
     
     override func viewWillDisappear(_ animated: Bool) {

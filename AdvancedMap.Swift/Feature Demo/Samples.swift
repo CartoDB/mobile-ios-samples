@@ -82,7 +82,7 @@ class Samples {
         
         sample = Sample()
         sample.title = "GEOCODING"
-        sample.description = "TODO"
+        sample.description = "Enter an address to locate it on the map"
         sample.imageResource = folder + "icon_sample_geocoding.png"
         sample.controller = GeocodingController()
         
@@ -90,7 +90,7 @@ class Samples {
         
         sample = Sample()
         sample.title = "REVERSE GEOCODING"
-        sample.description = "TODO"
+        sample.description = "Click an area on the map to get information about it"
         sample.imageResource = folder + "icon_sample_reverse_geocoding.png"
         sample.controller = ReverseGecodingController()
         

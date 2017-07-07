@@ -74,11 +74,16 @@ class Texts {
     
     static let geocodingInfoHeader = "GEOCODING"
     
-    static let geocodingInfoContainer = "TODO"
+    static let geocodingInfoContainer =
+        "CartoMobileSDK version 4.1.0 introduces geocoding. You can now type in an adress and locate it on the map. And everything's offline!\n\n" +
+        "All you have to do is download the correct package (current sample features Estonia) and you're good to go\n\n" + "I don't really know what to say here any more. Geocoding is rather self-explanatory. It's an awesome feature, though, that's worth a mention!"
     
     static let reverseGeocodingInfoHeader = "REVERSE GEOCODING"
     
-    static let reverseGeocodingInfoContainer = "TODO"
+    static let reverseGeocodingInfoContainer =
+        "CartoMobileSDK version 4.1.0 introduces (reverse) geocoding. You simply click an area on the map, any location, to find out detailed information about it. And everything's offline!\n\n" +
+        "All you have to do is download the correct package (current sample features Estonia) and you're good to go\n\n" +
+        "I don't really know what to say here any more. Geocoding is rather self-explanatory. It's an awesome feature, though, that's worth a mention!"
 }
 
 
