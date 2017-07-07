@@ -46,6 +46,12 @@ extension String {
         
         return -1
     }
+    
+    mutating func addCommaIfNecessary() {
+        if (characters.count > 0) {
+            self += ", "
+        }
+    }
 }
 
 extension UIView {

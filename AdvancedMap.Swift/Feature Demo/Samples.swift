@@ -81,20 +81,21 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
-        sample.title = "REVERSE GEOCODING"
-        sample.description = "TODO"
-        sample.imageResource = folder + "icon_sample_reverse_geocoding.png"
-        sample.controller = ReverseGecodingController()
-        
-        list.append(sample)
-        
-        sample = Sample()
         sample.title = "GEOCODING"
         sample.description = "TODO"
         sample.imageResource = folder + "icon_sample_geocoding.png"
         sample.controller = GeocodingController()
         
         list.append(sample)
+        
+        sample = Sample()
+        sample.title = "REVERSE GEOCODING"
+        sample.description = "TODO"
+        sample.imageResource = folder + "icon_sample_reverse_geocoding.png"
+        sample.controller = ReverseGecodingController()
+        
+        list.append(sample)
+
     }
 }
 

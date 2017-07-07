@@ -85,6 +85,7 @@
 		ADA977FC1F0E8AAC0040E090 /* GeocodingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */; };
 		ADA977FE1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */; };
 		ADA978001F0F768C0040E090 /* estonia-latest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */; };
+		ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */; };
 		ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */; };
 		ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */; };
 		ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD241EFBF945005F53CB /* Routing.swift */; };
@@ -203,6 +204,7 @@
 		ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingController.swift; sourceTree = "<group>"; };
 		ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingEventListener.swift; sourceTree = "<group>"; };
 		ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "estonia-latest.sqlite"; path = "../../Assets/estonia-latest.sqlite"; sourceTree = "<group>"; };
+		ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGeocodingView.swift; sourceTree = "<group>"; };
 		ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadController.swift; sourceTree = "<group>"; };
 		ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadView.swift; sourceTree = "<group>"; };
 		ADAFCD241EFBF945005F53CB /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
@@ -352,8 +354,8 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				ADA977F81F0E8A7A0040E090 /* Geocoding */,
 				ADA977F31F0E897D0040E090 /* Reverse Geocoding */,
+				ADA977F81F0E8A7A0040E090 /* Geocoding */,
 				AD4123281F040A1D009874BD /* GPS Location */,
 				AD4123271F040A10009874BD /* Vector Object Editing */,
 				AD5B2AF21F03CB9D00EF738C /* Clustering */,
@@ -382,6 +384,7 @@
 				AD97868C1EF7F152002912DF /* BaseController.swift */,
 				AD9786981EF7FE81002912DF /* MapBaseView.swift */,
 				AD7356631F02621C00D4D6EF /* DownloadBaseView.swift */,
+				ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -845,6 +848,7 @@
 				AD41232F1F040A73009874BD /* GPSLocationController.swift in Sources */,
 				ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */,
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
+				ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */,
 				ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */,
 				AD7356661F02679200D4D6EF /* Utils.swift in Sources */,
 				AD7356741F0291E000D4D6EF /* Extensions.swift in Sources */,
