@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E559840F13B61F77C31E053 /* libPods-Feature Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */; };
+		476FA343D96865DBDC87E102 /* libPods-AdvancedMap.Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
@@ -123,6 +123,7 @@
 		09F7D6002F3BF75664417F0B /* Pods-Feature Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.release.xcconfig"; sourceTree = "<group>"; };
 		64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Feature Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
@@ -237,6 +238,8 @@
 		ADE093021F01080700C569F9 /* ProgressLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
 		ADE093041F01143000C569F9 /* RouteMapEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapEventListener.swift; sourceTree = "<group>"; };
 		ADE6DCC11EF97D71002B2189 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		E57D46BD0081D1E13A2730D1 /* Pods-AdvancedMap.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.release.xcconfig"; sourceTree = "<group>"; };
+		FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,7 +249,7 @@
 			files = (
 				AD9786951EF7F843002912DF /* libz.tbd in Frameworks */,
 				AD9786931EF7F81B002912DF /* GLKit.framework in Frameworks */,
-				3E559840F13B61F77C31E053 /* libPods-Feature Demo.a in Frameworks */,
+				476FA343D96865DBDC87E102 /* libPods-AdvancedMap.Swift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +645,8 @@
 			children = (
 				854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */,
 				09F7D6002F3BF75664417F0B /* Pods-Feature Demo.release.xcconfig */,
+				A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */,
+				E57D46BD0081D1E13A2730D1 /* Pods-AdvancedMap.Swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -653,6 +658,7 @@
 				AD9786941EF7F843002912DF /* libz.tbd */,
 				AD9786921EF7F81B002912DF /* GLKit.framework */,
 				64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */,
+				FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -797,7 +803,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F347948FCD1AD0880FF4CA85 /* [CP] Embed Pods Frameworks */ = {
@@ -812,7 +818,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -999,7 +1005,7 @@
 		};
 		ADB27EBD1EF416C6004198D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */;
+			baseConfigurationReference = A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1014,7 +1020,7 @@
 		};
 		ADB27EBE1EF416C6004198D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09F7D6002F3BF75664417F0B /* Pods-Feature Demo.release.xcconfig */;
+			baseConfigurationReference = E57D46BD0081D1E13A2730D1 /* Pods-AdvancedMap.Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
