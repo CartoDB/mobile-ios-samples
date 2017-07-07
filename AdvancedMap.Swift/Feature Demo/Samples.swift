@@ -95,7 +95,6 @@ class Samples {
         sample.controller = ReverseGecodingController()
         
         list.append(sample)
-
     }
 }
 

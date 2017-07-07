@@ -51,9 +51,7 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        contentView.inputField.resignFirstResponder()
-        contentView.resultTable.isHidden = true
-        
+        contentView.closeTextField()
         geocode(text: contentView.inputField.text!, autocomplete: false)
         return true
     }
@@ -85,9 +83,13 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        contentView.closeTextField()
+        let result = addresses[indexPath.row]
+        showResult(result: result)
+    }
+    
     func geocode(text: String, autocomplete: Bool) {
-        
-        contentView.hideGeocodingResult()
         
         searchQueueSize += 1
         
@@ -129,17 +131,20 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
                 
                 if (count > 0) {
                     
-                    let result = results?.get(0)
-                    let title = ""
-                    let description = self.getPrintableAdress(result: result!)
-                    let goToPosition = true
-                    
-                    self.contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
+                    self.showResult(result: results?.get(0))
                 }
                 
                 print("Geocoding took: " + String(describing: duration))
             }
         }
+    }
+    
+    func showResult(result: NTGeocodingResult!) {
+        let title = ""
+        let description = self.getPrintableAdress(result: result)
+        let goToPosition = true
+        
+        self.contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
     }
     
     func getPrintableAdress(result: NTGeocodingResult) -> String {

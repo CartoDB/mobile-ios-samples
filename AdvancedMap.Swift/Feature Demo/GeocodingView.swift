@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GeocodingView : BaseGecodingView {
+class GeocodingView : BaseGecodingView, UIGestureRecognizerDelegate {
     
     var inputField: UITextField!
     var resultTable: UITableView!
@@ -42,8 +42,20 @@ class GeocodingView : BaseGecodingView {
         resultTable = UITableView()
         resultTable.isHidden = true
         resultTable.register(UITableViewCell.self, forCellReuseIdentifier: GeocodingController.identifier)
+        resultTable.backgroundColor = Colors.fromRgba(red: 0, green: 0, blue: 0, alpha: 0)
+        resultTable.allowsSelection = true
+        resultTable.isUserInteractionEnabled = true
         
         addSubview(resultTable)
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        
+        if (touch.view?.frame.contains(resultTable.frame))! {
+            return true
+        }
+        
+        return false
     }
     
     override func layoutSubviews() {
@@ -54,19 +66,20 @@ class GeocodingView : BaseGecodingView {
         let x: CGFloat = padding
         var y: CGFloat = Device.trueY0() + padding
         let w: CGFloat = frame.width - 2 * padding
-        var h: CGFloat = 60
+        var h: CGFloat = 50
         
         inputField.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        y += h
+        y += h + 1
         h = 240
-        
+
         resultTable.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
     override func addRecognizers() {
         super.addRecognizers()
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
+        recognizer.delegate = self
         self.addGestureRecognizer(recognizer)
     }
     
@@ -79,8 +92,18 @@ class GeocodingView : BaseGecodingView {
         resultTable.isHidden = true
     }
     
-    func hideGeocodingResult() {
-        
+    func closeTextField() {
+        inputField.resignFirstResponder()
+        resultTable.isHidden = true
     }
-    
 }
+
+
+
+
+
+
+
+
+
+
