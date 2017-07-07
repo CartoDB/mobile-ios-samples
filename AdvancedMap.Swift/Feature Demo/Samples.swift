@@ -71,11 +71,28 @@ class Samples {
         sample.controller = VectorObjectEditingController()
         
         list.append(sample)
+        
         sample = Sample()
         sample.title = "GPS LOCATION"
         sample.description = "Locates you and places a marker on the location"
         sample.imageResource = folder + "icon_sample_gps_location.png"
         sample.controller = GPSLocationController()
+        
+        list.append(sample)
+        
+        sample = Sample()
+        sample.title = "REVERSE GEOCODING"
+        sample.description = "TODO"
+        sample.imageResource = folder + "icon_sample_reverse_geocoding.png"
+        sample.controller = ReverseGecodingController()
+        
+        list.append(sample)
+        
+        sample = Sample()
+        sample.title = "GEOCODING"
+        sample.description = "TODO"
+        sample.imageResource = folder + "icon_sample_geocoding.png"
+        sample.controller = GeocodingController()
         
         list.append(sample)
     }

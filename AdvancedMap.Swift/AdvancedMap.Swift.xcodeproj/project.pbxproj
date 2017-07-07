@@ -79,6 +79,12 @@
 		AD9786C61EF8281B002912DF /* SlideInPopupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786C51EF8281B002912DF /* SlideInPopupHeader.swift */; };
 		AD9786C81EF82B00002912DF /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = AD9786C71EF82B00002912DF /* icon_close.png */; };
 		AD9786CB1EF82D54002912DF /* InformationPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */; };
+		ADA977F51F0E89B00040E090 /* ReverseGeocodingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977F41F0E89B00040E090 /* ReverseGeocodingController.swift */; };
+		ADA977F71F0E89BA0040E090 /* ReverseGeocodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977F61F0E89BA0040E090 /* ReverseGeocodingView.swift */; };
+		ADA977FA1F0E8A910040E090 /* GeocodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977F91F0E8A910040E090 /* GeocodingView.swift */; };
+		ADA977FC1F0E8AAC0040E090 /* GeocodingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */; };
+		ADA977FE1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */; };
+		ADA978001F0F768C0040E090 /* estonia-latest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */; };
 		ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */; };
 		ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */; };
 		ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD241EFBF945005F53CB /* Routing.swift */; };
@@ -191,6 +197,12 @@
 		AD9786C51EF8281B002912DF /* SlideInPopupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPopupHeader.swift; sourceTree = "<group>"; };
 		AD9786C71EF82B00002912DF /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationPopupContent.swift; sourceTree = "<group>"; };
+		ADA977F41F0E89B00040E090 /* ReverseGeocodingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingController.swift; sourceTree = "<group>"; };
+		ADA977F61F0E89BA0040E090 /* ReverseGeocodingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingView.swift; sourceTree = "<group>"; };
+		ADA977F91F0E8A910040E090 /* GeocodingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingView.swift; sourceTree = "<group>"; };
+		ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingController.swift; sourceTree = "<group>"; };
+		ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingEventListener.swift; sourceTree = "<group>"; };
+		ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "estonia-latest.sqlite"; path = "../../Assets/estonia-latest.sqlite"; sourceTree = "<group>"; };
 		ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadController.swift; sourceTree = "<group>"; };
 		ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadView.swift; sourceTree = "<group>"; };
 		ADAFCD241EFBF945005F53CB /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
@@ -257,6 +269,7 @@
 		AD4123121F03D431009874BD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */,
 				AD4123251F03FC8D009874BD /* cities15000.geojson */,
 				AD4123131F03D5AC009874BD /* milktruck.nml */,
 			);
@@ -339,6 +352,8 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				ADA977F81F0E8A7A0040E090 /* Geocoding */,
+				ADA977F31F0E897D0040E090 /* Reverse Geocoding */,
 				AD4123281F040A1D009874BD /* GPS Location */,
 				AD4123271F040A10009874BD /* Vector Object Editing */,
 				AD5B2AF21F03CB9D00EF738C /* Clustering */,
@@ -451,6 +466,25 @@
 				AD5B2AED1F03B27200EF738C /* PackageCell.swift */,
 			);
 			name = SlideInPopupContent;
+			sourceTree = "<group>";
+		};
+		ADA977F31F0E897D0040E090 /* Reverse Geocoding */ = {
+			isa = PBXGroup;
+			children = (
+				ADA977F41F0E89B00040E090 /* ReverseGeocodingController.swift */,
+				ADA977F61F0E89BA0040E090 /* ReverseGeocodingView.swift */,
+				ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */,
+			);
+			name = "Reverse Geocoding";
+			sourceTree = "<group>";
+		};
+		ADA977F81F0E8A7A0040E090 /* Geocoding */ = {
+			isa = PBXGroup;
+			children = (
+				ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */,
+				ADA977F91F0E8A910040E090 /* GeocodingView.swift */,
+			);
+			name = Geocoding;
 			sourceTree = "<group>";
 		};
 		ADAFCD1E1EFBEEAC005F53CB /* Route Download */ = {
@@ -720,6 +754,7 @@
 				ADC8B8E81F05299800B62852 /* icon_sample_city_download.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
 				AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */,
+				ADA978001F0F768C0040E090 /* estonia-latest.sqlite in Resources */,
 				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */,
@@ -806,6 +841,7 @@
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
 				AD5B2AF41F03CBA800EF738C /* VectorObjectController.swift in Sources */,
 				ADE093051F01143000C569F9 /* RouteMapEventListener.swift in Sources */,
+				ADA977F51F0E89B00040E090 /* ReverseGeocodingController.swift in Sources */,
 				AD41232F1F040A73009874BD /* GPSLocationController.swift in Sources */,
 				ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */,
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
@@ -813,6 +849,7 @@
 				AD7356661F02679200D4D6EF /* Utils.swift in Sources */,
 				AD7356741F0291E000D4D6EF /* Extensions.swift in Sources */,
 				AD4123221F03F402009874BD /* ClusterBuilder.swift in Sources */,
+				ADA977FE1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
 				ADE093031F01080700C569F9 /* ProgressLabel.swift in Sources */,
@@ -833,16 +870,19 @@
 				AD97868D1EF7F152002912DF /* BaseController.swift in Sources */,
 				AD41232C1F040A36009874BD /* VectorObjectEditingView.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
+				ADA977F71F0E89BA0040E090 /* ReverseGeocodingView.swift in Sources */,
 				AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */,
 				AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */,
 				AD7356701F0277A800D4D6EF /* PackagePopupContent.swift in Sources */,
 				AD5B2AF81F03CC1600EF738C /* ClusteringController.swift in Sources */,
 				AD437ED31EF93880008CEA76 /* Texts.swift in Sources */,
 				AD5B2AFB1F03CC2F00EF738C /* ClusteringView.swift in Sources */,
+				ADA977FA1F0E8A910040E090 /* GeocodingView.swift in Sources */,
 				ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */,
 				AD5B2AEE1F03B27200EF738C /* PackageCell.swift in Sources */,
 				AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */,
 				ADE092F71F00EF3E00C569F9 /* PackageListener.swift in Sources */,
+				ADA977FC1F0E8AAC0040E090 /* GeocodingController.swift in Sources */,
 				ADC8B8D91F04F2C600B62852 /* VectorElementSelectListener.swift in Sources */,
 				AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */,
 			);

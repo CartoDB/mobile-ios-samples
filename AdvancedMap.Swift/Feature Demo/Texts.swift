@@ -72,6 +72,13 @@ class Texts {
         "CartoMobileSDK is also compatible with native APIs. You get latitude and longitude from CLLoationManager and you can easily place a highly customized marker on those coordinates.\n\n" +
         "This example also has a 'track location' switch, as it by default zooms to your location when it receives a location update. Turn it off if you wish to browse the map"
     
+    static let reverseGeocodingInfoHeader = "REVERSE GEOCODING"
+    
+    static let reverseGeocodingInfoContainer = "TODO"
+    
+    static let geocodingInfoHeader = "REVERSE GEOCODING"
+    
+    static let geocodingInfoContainer = "TODO"
 }
 
 
