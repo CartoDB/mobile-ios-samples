@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GeocodingController : BaseController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class GeocodingController : BaseController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, PackageDownloadDelegate {
     
     var contentView: GeocodingView!
     
@@ -20,6 +20,9 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
     
     static let identifier = "AutocompleteRowId"
     
+    var listener: PackageListener?
+    var manager: NTCartoPackageManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +31,12 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         
         let path = Bundle.main.path(forResource: "estonia-latest", ofType: "sqlite")
         service = NTOSMOfflineGeocodingService(path: path)
+        
+        listener = PackageListener()
+        listener?.delegate = self
+        
+        let folder = Utils.createDirectory(name: "geocodingpackages")
+        manager = NTCartoPackageManager(source: BaseGeocodingView.SOURCE, dataFolder: folder)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +47,10 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         contentView.inputField.delegate = self
         contentView.resultTable.delegate = self
         contentView.resultTable.dataSource = self
+        
+        manager?.setPackageManagerListener(listener)
+        manager?.start()
+        manager?.startPackageListDownload()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,6 +61,9 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         contentView.inputField.delegate = nil
         contentView.resultTable.delegate = nil
         contentView.resultTable.dataSource = nil
+        
+        manager?.setPackageManagerListener(nil)
+        manager?.stop(false)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -188,6 +204,28 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         
         return string
     }
+    
+    func listDownloadComplete() {
+        let packages = manager?.getServerPackages()
+        print(packages)
+    }
+    
+    func listDownloadFailed() {
+        print("List Download Failed")
+    }
+    
+    func statusChanged(sender: PackageListener, status: NTPackageStatus) {
+        print("Status Shanged")
+    }
+    
+    func downloadComplete(sender: PackageListener, id: String) {
+        print("Download Complete")
+    }
+    
+    func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
+        print("Download Failed")
+    }
+    
 }
 
 

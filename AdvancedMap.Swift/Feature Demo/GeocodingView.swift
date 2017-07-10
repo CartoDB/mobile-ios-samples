@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GeocodingView : BaseGecodingView, UIGestureRecognizerDelegate {
+class GeocodingView : BaseGeocodingView, UIGestureRecognizerDelegate {
     
     var inputField: UITextField!
     var resultTable: UITableView!

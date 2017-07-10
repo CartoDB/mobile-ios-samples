@@ -8,7 +8,9 @@
 
 import Foundation
 
-class BaseGecodingView: MapBaseView {
+class BaseGeocodingView: MapBaseView {
+    
+    static let SOURCE = "geocoding:carto.geocode"
     
     var baseLayer: NTCartoOnlineVectorTileLayer!
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ReverseGeocodingView : BaseGecodingView {
+class ReverseGeocodingView : BaseGeocodingView {
  
     convenience init() {
         self.init(frame: CGRect.zero)
