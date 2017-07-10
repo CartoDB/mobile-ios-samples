@@ -519,10 +519,10 @@
 		ADB168E31EF7BBDC0022F2F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */,
 				ADC8B8DE1F05042D00B62852 /* Misc */,
 				ADE092ED1F00ECE200C569F9 /* Directions */,
 				AD437EC11EF93269008CEA76 /* BaseMapIcons */,
-				AD437EBF1EF91F0A008CEA76 /* styles_mapzen.zip */,
 				AD9786BA1EF8229A002912DF /* Markers */,
 				AD9786B11EF8220F002912DF /* ButtonIcons */,
 				AD97869F1EF809D3002912DF /* Pins */,

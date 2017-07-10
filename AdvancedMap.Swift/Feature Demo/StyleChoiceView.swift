@@ -103,6 +103,7 @@ class StyleChoiceView : MapBaseView {
         } else if (source == StylePopupContent.MapzenSource) {
             
             let asset = NTAssetUtils.loadAsset("styles_mapzen.zip")
+
             let package = NTZippedAssetPackage(zip: asset)
             
             var name = ""

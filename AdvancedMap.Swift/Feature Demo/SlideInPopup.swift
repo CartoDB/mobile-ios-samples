@@ -58,7 +58,11 @@ class SlideInPopup : UIView {
             // Make the popup appear on the left side and full height.
             // Width of portrait iPhone 6. This number can be tweaked, but should be quite optimal
             w = 375
-            self.visibleY = Device.navigationbarHeight()
+            if (Device.isTablet()) {
+                self.visibleY = frame.height / 3 * 2
+            } else {
+                self.visibleY = Device.navigationbarHeight() + Device.statusBarHeight()
+            }
         }
         
         y += h
