@@ -8,23 +8,28 @@
 
 import Foundation
 
-class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate {
+class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate, UITableViewDelegate, PackageDownloadDelegate, ClickDelegate {
     
     var contentView: ReverseGeocodingView!
     
-    var listener: ReverseGeocodingEventListener!
-
+    var geocodingListener: ReverseGeocodingEventListener!
+    var packageListener: PackageListener?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contentView = ReverseGeocodingView()
         view = contentView
         
-        listener = ReverseGeocodingEventListener()
-        listener.projection = contentView.projection
+        geocodingListener = ReverseGeocodingEventListener()
+        geocodingListener.projection = contentView.projection
         
-        let path = Bundle.main.path(forResource: "estonia-latest", ofType: "sqlite")
-        listener.service = NTOSMOfflineReverseGeocodingService(path: path)
+        packageListener = PackageListener()
+        
+        let folder = Utils.createDirectory(name: "geocodingpackages")
+        contentView.manager = NTCartoPackageManager(source: BaseGeocodingView.SOURCE, dataFolder: folder)
+
+        geocodingListener.service = NTPackageManagerReverseGeocodingService(packageManager: contentView.manager)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,9 +37,17 @@ class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate 
         
         contentView.addRecognizers()
         
-        listener.delegate = self
+        geocodingListener.delegate = self
+        packageListener?.delegate = self
         
-        contentView.map.setMapEventListener(listener)
+        contentView.map.setMapEventListener(geocodingListener)
+        
+        contentView.manager?.setPackageManagerListener(packageListener)
+        contentView.manager?.start()
+        contentView.manager?.startPackageListDownload()
+        
+        contentView.packageContent.table.delegate = self
+        contentView.popup.popup.header.backButton.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,9 +55,16 @@ class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate 
         
         contentView.removeRecognizers()
         
-        listener.delegate = nil
+        geocodingListener.delegate = nil
+        packageListener?.delegate = nil
         
         contentView.map.setMapEventListener(nil)
+        
+        contentView.manager?.setPackageManagerListener(nil)
+        contentView.manager?.stop(false)
+        
+        contentView.packageContent.table.delegate = nil
+        contentView.popup.popup.header.backButton.delegate = nil
     }
     
     func foundResult(result: NTGeocodingResult!) {
@@ -60,8 +80,40 @@ class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate 
         
         contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
     }
+    
+    func click(sender: UIView) {
+        // Currently the only generic button on this page is the popup back button,
+        // no need to type check.
+        contentView.onPopupBackButtonClick()
+    }
+    
+    func listDownloadComplete() {
+        contentView.updatePackages()
+    }
+    
+    func listDownloadFailed() {
+        // TODO
+    }
+    
+    func statusChanged(sender: PackageListener, status: NTPackageStatus) {
+        contentView.onStatusChanged(status: status)
+    }
+    
+    func downloadComplete(sender: PackageListener, id: String) {
+        contentView.downloadComplete(id: id)
+    }
+    
+    func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
+        // TODO
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let package = contentView.packageContent.packages[indexPath.row]
+        contentView.onPackageClick(package: package)
+    }
+    
 }
-        
+
 
 
 

@@ -14,7 +14,7 @@ class ReverseGeocodingEventListener: NTMapEventListener {
     
     var projection: NTProjection!
     
-    var service: NTOSMOfflineReverseGeocodingService!
+    var service: NTPackageManagerReverseGeocodingService!
     
     override func onMapClicked(_ mapClickInfo: NTMapClickInfo!) {
         

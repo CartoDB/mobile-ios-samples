@@ -8,13 +8,9 @@
 
 import Foundation
 
-class BaseGeocodingView: MapBaseView {
+class BaseGeocodingView: PackageDownloadBaseView {
     
     static let SOURCE = "geocoding:carto.geocode"
-    
-    var baseLayer: NTCartoOnlineVectorTileLayer!
-    
-    var projection: NTProjection?
     
     var source: NTLocalVectorDataSource!
     
@@ -24,12 +20,13 @@ class BaseGeocodingView: MapBaseView {
     
     func initializeGeocodingView(popupTitle: String, popupDescription: String) {
         
-        baseLayer = addBaseLayer()
+        onlineLayer = addBaseLayer()
         
         initialize()
-        infoContent.setText(headerText: popupTitle, contentText: popupDescription)
+        initializeDownloadContent()
+        initializePackageDownloadContent()
         
-        projection = map.getOptions().getBaseProjection()
+        infoContent.setText(headerText: popupTitle, contentText: popupDescription)
         
         source = NTLocalVectorDataSource(projection: projection)
         let layer = NTVectorLayer(dataSource: source)
@@ -39,6 +36,8 @@ class BaseGeocodingView: MapBaseView {
         let position = projection?.fromWgs84(NTMapPos(x: 26.7, y: 58.38))
         map.setFocus(position, durationSeconds: 0)
         map.setZoom(14.5, durationSeconds: 0)
+        
+        hideSwitch()
     }
     
     func showResult(result: NTGeocodingResult!, title: String, description: String, goToPosition: Bool) {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		476FA343D96865DBDC87E102 /* libPods-AdvancedMap.Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
+		AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */; };
 		AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
@@ -127,6 +128,7 @@
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageDownloadBaseView.swift; sourceTree = "<group>"; };
 		AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				AD9786981EF7FE81002912DF /* MapBaseView.swift */,
 				AD7356631F02621C00D4D6EF /* DownloadBaseView.swift */,
 				ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */,
+				AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 				AD97868D1EF7F152002912DF /* BaseController.swift in Sources */,
 				AD41232C1F040A36009874BD /* VectorObjectEditingView.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
+				AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */,
 				ADA977F71F0E89BA0040E090 /* ReverseGeocodingView.swift in Sources */,
 				AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */,
 				AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */,

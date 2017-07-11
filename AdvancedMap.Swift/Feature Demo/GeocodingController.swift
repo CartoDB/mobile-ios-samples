@@ -8,11 +8,11 @@
 
 import Foundation
 
-class GeocodingController : BaseController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, PackageDownloadDelegate {
+class GeocodingController : BaseController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, PackageDownloadDelegate, ClickDelegate {
     
     var contentView: GeocodingView!
     
-    var service: NTOSMOfflineGeocodingService!
+    var service: NTPackageManagerGeocodingService!
     
     var searchQueueSize: Int = 0
     
@@ -21,7 +21,6 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
     static let identifier = "AutocompleteRowId"
     
     var listener: PackageListener?
-    var manager: NTCartoPackageManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +28,12 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         contentView = GeocodingView()
         view = contentView
         
-        let path = Bundle.main.path(forResource: "estonia-latest", ofType: "sqlite")
-        service = NTOSMOfflineGeocodingService(path: path)
-        
         listener = PackageListener()
-        listener?.delegate = self
         
         let folder = Utils.createDirectory(name: "geocodingpackages")
-        manager = NTCartoPackageManager(source: BaseGeocodingView.SOURCE, dataFolder: folder)
+        contentView.manager = NTCartoPackageManager(source: BaseGeocodingView.SOURCE, dataFolder: folder)
+        
+        service = NTPackageManagerGeocodingService(packageManager: contentView.manager)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,13 +41,18 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         
         contentView.addRecognizers()
         
+        listener?.delegate = self
+        
         contentView.inputField.delegate = self
         contentView.resultTable.delegate = self
         contentView.resultTable.dataSource = self
         
-        manager?.setPackageManagerListener(listener)
-        manager?.start()
-        manager?.startPackageListDownload()
+        contentView.manager?.setPackageManagerListener(listener)
+        contentView.manager?.start()
+        contentView.manager?.startPackageListDownload()
+        
+        contentView.packageContent.table.delegate = self
+        contentView.popup.popup.header.backButton.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,14 +60,22 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         
         contentView.removeRecognizers()
         
+        listener?.delegate = nil
+        
         contentView.inputField.delegate = nil
         contentView.resultTable.delegate = nil
         contentView.resultTable.dataSource = nil
         
-        manager?.setPackageManagerListener(nil)
-        manager?.stop(false)
+        contentView.manager?.setPackageManagerListener(nil)
+        contentView.manager?.stop(false)
     }
-
+    
+    func click(sender: UIView) {
+        // Currently the only generic button on this page is the popup back button,
+        // no need to type check.
+        contentView.onPopupBackButtonClick()
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         contentView.closeTextField()
         geocode(text: contentView.inputField.text!, autocomplete: false)
@@ -100,9 +110,16 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        contentView.closeTextField()
-        let result = addresses[indexPath.row]
-        showResult(result: result)
+        
+        // We have two tableviews in this controller, one for search results and the other for packages
+        if (tableView == contentView.resultTable) {
+            contentView.closeTextField()
+            let result = addresses[indexPath.row]
+            showResult(result: result)
+        } else {
+            let package = contentView.packageContent.packages[indexPath.row]
+            contentView.onPackageClick(package: package)
+        }
     }
     
     func geocode(text: String, autocomplete: Bool) {
@@ -206,24 +223,23 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
     }
     
     func listDownloadComplete() {
-        let packages = manager?.getServerPackages()
-        print(packages)
+        contentView.updatePackages()
     }
     
     func listDownloadFailed() {
-        print("List Download Failed")
+        // TODO
     }
     
     func statusChanged(sender: PackageListener, status: NTPackageStatus) {
-        print("Status Shanged")
+        contentView.onStatusChanged(status: status)
     }
     
     func downloadComplete(sender: PackageListener, id: String) {
-        print("Download Complete")
+        contentView.downloadComplete(id: id)
     }
     
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
-        print("Download Failed")
+        // TODO
     }
     
 }

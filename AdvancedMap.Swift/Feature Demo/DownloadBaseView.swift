@@ -50,4 +50,8 @@ class DownloadBaseView : MapBaseView {
         
         projection = map.getOptions().getBaseProjection()
     }
+    
+    func hideSwitch() {
+        onlineSwitch.isHidden = true
+    }
 }
