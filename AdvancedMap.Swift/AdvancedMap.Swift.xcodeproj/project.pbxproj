@@ -10,6 +10,9 @@
 		476FA343D96865DBDC87E102 /* libPods-AdvancedMap.Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */; };
+		AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */; };
+		AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = AD251F2F1F14C9C000B863BD /* style_image_nutiteq_darkmatter.png */; };
+		AD251F331F14C9C000B863BD /* style_image_nutiteq_voyager.png in Resources */ = {isa = PBXBuildFile; fileRef = AD251F301F14C9C000B863BD /* style_image_nutiteq_voyager.png */; };
 		AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
@@ -129,6 +132,9 @@
 		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageDownloadBaseView.swift; sourceTree = "<group>"; };
+		AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_positron.png; sourceTree = "<group>"; };
+		AD251F2F1F14C9C000B863BD /* style_image_nutiteq_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_darkmatter.png; sourceTree = "<group>"; };
+		AD251F301F14C9C000B863BD /* style_image_nutiteq_voyager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_voyager.png; sourceTree = "<group>"; };
 		AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
@@ -307,6 +313,9 @@
 		AD437EC11EF93269008CEA76 /* BaseMapIcons */ = {
 			isa = PBXGroup;
 			children = (
+				AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */,
+				AD251F2F1F14C9C000B863BD /* style_image_nutiteq_darkmatter.png */,
+				AD251F301F14C9C000B863BD /* style_image_nutiteq_voyager.png */,
 				AD437EC21EF933C5008CEA76 /* style_image_carto_darkmatter.png */,
 				AD437EC31EF933C5008CEA76 /* style_image_carto_positron.png */,
 				AD437EC41EF933C5008CEA76 /* style_image_mapzen_darkmatter.png */,
@@ -740,6 +749,7 @@
 				AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */,
 				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
 				AD437ED01EF933C5008CEA76 /* style_image_nutiteq_gray.png in Resources */,
+				AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */,
 				AD9786B61EF82284002912DF /* icon_basemap.png in Resources */,
@@ -754,6 +764,7 @@
 				AD437ECF1EF933C5008CEA76 /* style_image_nutiteq_dark.png in Resources */,
 				AD437ED11EF933C5008CEA76 /* style_image_nutiteq_bright.png in Resources */,
 				AD9786B81EF82284002912DF /* icon_info.png in Resources */,
+				AD251F331F14C9C000B863BD /* style_image_nutiteq_voyager.png in Resources */,
 				AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */,
 				AD9786C81EF82B00002912DF /* icon_close.png in Resources */,
 				ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */,
@@ -773,6 +784,7 @@
 				ADA978001F0F768C0040E090 /* estonia-latest.sqlite in Resources */,
 				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
+				AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */,
 				AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */,
 				ADE092F31F00ECF500C569F9 /* direction_upthenright.png in Resources */,
 				AD9786C01EF822B7002912DF /* icon_marker_gray.png in Resources */,

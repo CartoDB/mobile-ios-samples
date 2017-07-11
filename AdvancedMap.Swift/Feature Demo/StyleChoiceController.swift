@@ -31,9 +31,9 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         
         contentView.languageContent.table.delegate = self
         
-        contentView.baseMapContent.nutiteq.delegate = self
+        contentView.baseMapContent.cartoVector.delegate = self
         contentView.baseMapContent.mapzen.delegate = self
-        contentView.baseMapContent.carto.delegate = self
+        contentView.baseMapContent.cartoRaster.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,9 +43,9 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         
         contentView.languageContent.table.delegate = nil
         
-        contentView.baseMapContent.nutiteq.delegate = nil
+        contentView.baseMapContent.cartoVector.delegate = nil
         contentView.baseMapContent.mapzen.delegate = nil
-        contentView.baseMapContent.carto.delegate = nil
+        contentView.baseMapContent.cartoRaster.delegate = nil
     }
     
     func styleClicked(selection: String, source: String) {
@@ -60,3 +60,8 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
     }
     
 }
+
+
+
+
+
