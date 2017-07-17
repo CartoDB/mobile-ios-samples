@@ -88,7 +88,6 @@
 		ADA977FA1F0E8A910040E090 /* GeocodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977F91F0E8A910040E090 /* GeocodingView.swift */; };
 		ADA977FC1F0E8AAC0040E090 /* GeocodingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */; };
 		ADA977FE1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */; };
-		ADA978001F0F768C0040E090 /* estonia-latest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */; };
 		ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */; };
 		ADA978051F0FB1000040E090 /* icon_sample_reverse_geocoding.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */; };
 		ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */; };
@@ -213,7 +212,6 @@
 		ADA977F91F0E8A910040E090 /* GeocodingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingView.swift; sourceTree = "<group>"; };
 		ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingController.swift; sourceTree = "<group>"; };
 		ADA977FD1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodingEventListener.swift; sourceTree = "<group>"; };
-		ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "estonia-latest.sqlite"; path = "../../Assets/estonia-latest.sqlite"; sourceTree = "<group>"; };
 		ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGeocodingView.swift; sourceTree = "<group>"; };
 		ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_reverse_geocoding.png; sourceTree = "<group>"; };
 		ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_geocoding.png; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 		AD4123121F03D431009874BD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				ADA977FF1F0E919F0040E090 /* estonia-latest.sqlite */,
 				AD4123251F03FC8D009874BD /* cities15000.geojson */,
 				AD4123131F03D5AC009874BD /* milktruck.nml */,
 			);
@@ -781,7 +778,6 @@
 				ADC8B8E81F05299800B62852 /* icon_sample_city_download.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
 				AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */,
-				ADA978001F0F768C0040E090 /* estonia-latest.sqlite in Resources */,
 				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */,
