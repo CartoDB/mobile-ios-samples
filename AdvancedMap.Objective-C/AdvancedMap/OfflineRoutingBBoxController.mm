@@ -55,7 +55,9 @@
 
 -(NTRoutingService *)getService
 {
-    return [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.packageManager];
+    // TODO Enable when 4.1.0 is released
+    return nil;
+//    return [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.packageManager];
 }
 
 -(NSString *)getPackageDirectory
