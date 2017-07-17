@@ -58,9 +58,9 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
     
     func switchChanged() {
         if (contentView.onlineSwitch.isOn()) {
-            contentView.setOnlineMode()
-        } else {
             contentView.setOfflineMode(manager: mapManager)
+        } else {
+            contentView.setOnlineMode()
         }
     }
     
