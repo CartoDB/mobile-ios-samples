@@ -91,6 +91,7 @@
 		AD74B8041D941D710007701F /* HelloMap.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				AD783AA31ED313990062DA93 /* Assets */,
 				AD74B8051D941D710007701F /* AppDelegate.swift */,
 				AD74B8071D941D710007701F /* ViewController.swift */,
 				AD74B8091D941D710007701F /* Main.storyboard */,
@@ -100,6 +101,13 @@
 				AD74B8191D941F2F0007701F /* HelloMap.Swift-Bridging-Header.h */,
 			);
 			path = HelloMap.Swift;
+			sourceTree = "<group>";
+		};
+		AD783AA31ED313990062DA93 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
