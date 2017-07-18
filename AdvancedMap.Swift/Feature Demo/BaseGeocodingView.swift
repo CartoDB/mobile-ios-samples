@@ -20,8 +20,6 @@ class BaseGeocodingView: PackageDownloadBaseView {
     
     func initializeGeocodingView(popupTitle: String, popupDescription: String) {
         
-        onlineLayer = addBaseLayer()
-        
         initialize()
         initializeDownloadContent(withSwitch: false)
         initializePackageDownloadContent()
