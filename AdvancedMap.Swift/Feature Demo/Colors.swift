@@ -24,6 +24,8 @@ class Colors {
     
     public static var navy: UIColor = fromRgba(red: 22, green: 41, blue: 69, alpha: 255)
     
+    public static var navyLight: UIColor = fromRgba(red: 32, green: 51, blue: 79, alpha: 200)
+    
     public static var nearWhite: UIColor = fromRgba(red: 245, green: 245, blue: 245, alpha: 255)
     
     public static var transparentNavy: UIColor = fromRgba(red: 22, green: 41, blue: 69, alpha: 150)

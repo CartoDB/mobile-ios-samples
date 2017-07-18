@@ -20,21 +20,23 @@ class InformationPopupContent : UIView {
         self.init(frame: CGRect.zero)
         
         header = UILabel()
-        header.font = UIFont(name: "HelveticaNeue-Bold", size: 14)
+        header.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
         header.textColor = Colors.navy
         header.numberOfLines = 0
         
         addSubview(header)
         
         container = UIScrollView()
+        container.showsVerticalScrollIndicator = false
         addSubview(container)
         
         content = UILabel()
-        content.font = UIFont(name: "HelveticaNeue", size: 12)
-        content.textColor = Colors.navy
+        content.font = UIFont(name: "HelveticaNeue", size: 13)
+        content.textColor = Colors.navyLight
         content.numberOfLines = 0
         content.textAlignment = .justified
         content.lineBreakMode = .byWordWrapping
+        
         container.addSubview(content)
     }
     
@@ -42,11 +44,12 @@ class InformationPopupContent : UIView {
         
         let headerHeight: CGFloat = 40
         let padding: CGFloat = 5
+        let sidePadding = 3 * padding
         
-        let x: CGFloat = 2 * padding
-        var y: CGFloat = padding
+        let x: CGFloat = sidePadding
+        var y: CGFloat = 0
         var h: CGFloat = headerHeight
-        let w: CGFloat = frame.width - 4 * padding
+        let w: CGFloat = frame.width - 2 * sidePadding
         
         header.frame = CGRect(x: x, y: y, width: w, height: h)
         

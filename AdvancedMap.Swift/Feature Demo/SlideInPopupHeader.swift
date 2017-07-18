@@ -44,7 +44,7 @@ class SlideInPopupHeader : UIView {
     
     override func layoutSubviews() {
         
-        let padding: CGFloat = 10
+        let padding: CGFloat = 15
         
         var x: CGFloat = padding
         let y: CGFloat = 0
