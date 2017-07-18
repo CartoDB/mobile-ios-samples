@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Toast_Swift
 
 class BaseController : UIViewController {
     
@@ -21,6 +22,13 @@ class BaseController : UIViewController {
     }
     
     func onCellSelected(item: NSObject) {
+        
+    }
+    
+    func alert(message: String) {
+        DispatchQueue.main.async {
+            self.view.makeToast(message)
+        }
         
     }
 }

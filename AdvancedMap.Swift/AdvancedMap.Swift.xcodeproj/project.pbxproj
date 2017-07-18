@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		476FA343D96865DBDC87E102 /* libPods-AdvancedMap.Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */; };
+		668C4E9E700C4C0DB448B390 /* Pods_AdvancedMap_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */; };
 		AD061BC81F1E2F2300F523B8 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */; };
@@ -126,6 +126,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvancedMap_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F7D6002F3BF75664417F0B /* Pods-Feature Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.release.xcconfig"; sourceTree = "<group>"; };
 		64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Feature Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -251,7 +252,6 @@
 		ADE093041F01143000C569F9 /* RouteMapEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapEventListener.swift; sourceTree = "<group>"; };
 		ADE6DCC11EF97D71002B2189 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		E57D46BD0081D1E13A2730D1 /* Pods-AdvancedMap.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.release.xcconfig"; sourceTree = "<group>"; };
-		FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,7 +261,7 @@
 			files = (
 				AD9786951EF7F843002912DF /* libz.tbd in Frameworks */,
 				AD9786931EF7F81B002912DF /* GLKit.framework in Frameworks */,
-				476FA343D96865DBDC87E102 /* libPods-AdvancedMap.Swift.a in Frameworks */,
+				668C4E9E700C4C0DB448B390 /* Pods_AdvancedMap_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,7 +676,7 @@
 				AD9786941EF7F843002912DF /* libz.tbd */,
 				AD9786921EF7F81B002912DF /* GLKit.framework */,
 				64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */,
-				FB0B1149583D7BDCF12F135C /* libPods-AdvancedMap.Swift.a */,
+				08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

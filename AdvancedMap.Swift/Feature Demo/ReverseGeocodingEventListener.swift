@@ -54,7 +54,7 @@ class ReverseGeocodingEventListener: NTMapEventListener {
             i += 1
         }
         
-        delegate?.foundResult(result: result!)
+        delegate?.foundResult(result: result)
     }
 }
 

@@ -69,13 +69,14 @@ class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate,
     
     func foundResult(result: NTGeocodingResult!) {
 
-        let title = ""
-        var description = "No address found"
-        
-        if (result != nil) {
-            description = result.description()
+        if (result == nil) {
+            alert(message: "Couldn't find any addresses. Are you sure you have downloaded the region you're trying to reverse geocode?")
+            return
         }
         
+        let title = ""
+        let description = result.description()!
+
         let goToPosition = false
         
         contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
