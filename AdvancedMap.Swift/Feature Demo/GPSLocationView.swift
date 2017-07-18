@@ -14,8 +14,7 @@ class GPSLocationView : MapBaseView {
     
     var baseLayer: NTCartoOnlineVectorTileLayer!
     
-    var topContainer: UIView!
-    var stateSwitch: StateSwitch!
+    var switchButton: SwitchButton!
     
     var source: NTLocalVectorDataSource!
     
@@ -34,32 +33,12 @@ class GPSLocationView : MapBaseView {
         let layer = NTVectorLayer(dataSource: source)
         map.getLayers().add(layer)
         
-        topContainer = UIView()
-        addSubview(topContainer)
-        
-        stateSwitch = StateSwitch()
-        topContainer.addSubview(stateSwitch)
-        
-        topContainer.backgroundColor = stateSwitch.backgroundColor
-        stateSwitch.backgroundColor = Colors.transparent
-        stateSwitch.setText(text: "TRACK LOCATION")
+        switchButton = SwitchButton(onImageUrl: "icon_track_location_on.png", offImageUrl: "icon_track_location_off.png")
+        addButton(button: switchButton)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        let height: CGFloat = 45
-        
-        let x: CGFloat = 0
-        var y: CGFloat = Device.trueY0()
-        var w: CGFloat = frame.width
-        let h: CGFloat = height
-        
-        topContainer.frame = CGRect(x: x, y: y, width: w, height: h)
-        
-        w = stateSwitch.getWidth()
-        y = 0
-        stateSwitch.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
     var userMarker: NTMarker!

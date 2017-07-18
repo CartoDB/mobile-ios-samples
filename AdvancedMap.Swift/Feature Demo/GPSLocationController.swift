@@ -64,7 +64,8 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         
-        if (contentView.stateSwitch.isOn()) {
+        // Not "online", but reusing the online switch to achieve location tracking functionality
+        if (contentView.switchButton.isOnline()) {
             contentView.showUserAt(location: location)
         }
     }
