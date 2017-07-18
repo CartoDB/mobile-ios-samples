@@ -14,6 +14,7 @@ class PopupButton : UIView {
     let duration: Double = 200
 
     var imageView: UIImageView!
+    var image: UIImage!
     
     convenience init(imageUrl: String) {
         self.init(frame: CGRect.zero)
@@ -27,7 +28,9 @@ class PopupButton : UIView {
         imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: imageUrl)
+        
+        image = UIImage(named: imageUrl)
+        imageView.image = image
         
         addSubview(imageView)
     }

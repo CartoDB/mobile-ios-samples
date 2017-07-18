@@ -14,18 +14,19 @@ class SwitchButton : PopupButton {
     var delegate: SwitchDelegate?
     
     func isOnline() -> Bool {
-        return backgroundColor == Colors.green
+        return imageView.image == image
     }
     
-    convenience init(imageUrl: String) {
+    var offImage: UIImage!
+    
+    convenience init(onImageUrl: String, offImageUrl: String) {
         self.init(frame: CGRect.zero)
         
-        initialize(imageUrl: imageUrl)
+        initialize(imageUrl: onImageUrl)
+        offImage = UIImage(named: offImageUrl)
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.switchChanged(_:)))
         addGestureRecognizer(recognizer)
-        
-        backgroundColor = Colors.green
     }
     
     func switchChanged(_ sender: UITapGestureRecognizer) {
@@ -34,10 +35,10 @@ class SwitchButton : PopupButton {
     }
     
     func toggle() {
-        if (backgroundColor == Colors.green) {
-            backgroundColor = Colors.transparentGray
+        if (imageView.image == image) {
+            imageView.image = offImage
         } else {
-            backgroundColor = Colors.green
+            imageView.image = image
         }
     }
     

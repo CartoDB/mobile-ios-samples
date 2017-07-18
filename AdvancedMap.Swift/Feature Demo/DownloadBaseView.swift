@@ -52,7 +52,7 @@ class DownloadBaseView : MapBaseView {
         projection = map.getOptions().getBaseProjection()
         
         if (withSwitch) {
-            switchButton = SwitchButton(imageUrl: "")
+            switchButton = SwitchButton(onImageUrl: "icon_wifi_on.png", offImageUrl: "icon_wifi_off.png")
             addButton(button: switchButton)
         }
         

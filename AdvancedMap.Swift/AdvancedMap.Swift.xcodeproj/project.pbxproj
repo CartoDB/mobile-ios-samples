@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		668C4E9E700C4C0DB448B390 /* Pods_AdvancedMap_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */; };
 		AD061BC81F1E2F2300F523B8 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */; };
+		AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */; };
+		AD061BCE1F1E4BED00F523B8 /* icon_track_location_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */; };
+		AD061BCF1F1E4BED00F523B8 /* icon_wifi_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCB1F1E4BED00F523B8 /* icon_wifi_off.png */; };
+		AD061BD01F1E4BED00F523B8 /* icon_wifi_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCC1F1E4BED00F523B8 /* icon_wifi_on.png */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */; };
 		AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */; };
@@ -132,6 +136,10 @@
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_off.png; sourceTree = "<group>"; };
+		AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_on.png; sourceTree = "<group>"; };
+		AD061BCB1F1E4BED00F523B8 /* icon_wifi_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_wifi_off.png; sourceTree = "<group>"; };
+		AD061BCC1F1E4BED00F523B8 /* icon_wifi_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_wifi_on.png; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageDownloadBaseView.swift; sourceTree = "<group>"; };
 		AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_positron.png; sourceTree = "<group>"; };
@@ -456,6 +464,10 @@
 		AD9786B11EF8220F002912DF /* ButtonIcons */ = {
 			isa = PBXGroup;
 			children = (
+				AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */,
+				AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */,
+				AD061BCB1F1E4BED00F523B8 /* icon_wifi_off.png */,
+				AD061BCC1F1E4BED00F523B8 /* icon_wifi_on.png */,
 				ADAFCD2A1EFC0745005F53CB /* icon_download.png */,
 				AD9786C71EF82B00002912DF /* icon_close.png */,
 				AD9786B21EF82284002912DF /* icon_basemap.png */,
@@ -769,10 +781,13 @@
 				AD9786C81EF82B00002912DF /* icon_close.png in Resources */,
 				ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */,
 				AD5B2AF01F03BEC400EF738C /* icon_sample_package_download.png in Resources */,
+				AD061BCE1F1E4BED00F523B8 /* icon_track_location_on.png in Resources */,
+				AD061BD01F1E4BED00F523B8 /* icon_wifi_on.png in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				AD437ECA1EF933C5008CEA76 /* style_image_carto_darkmatter.png in Resources */,
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
+				AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */,
 				AD41231A1F03E1CE009874BD /* info.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
 				ADC8B8E41F05209B00B62852 /* icon_sample_gps_location.png in Resources */,
@@ -781,6 +796,7 @@
 				ADC8B8E81F05299800B62852 /* icon_sample_city_download.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
 				AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */,
+				AD061BCF1F1E4BED00F523B8 /* icon_wifi_off.png in Resources */,
 				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */,
