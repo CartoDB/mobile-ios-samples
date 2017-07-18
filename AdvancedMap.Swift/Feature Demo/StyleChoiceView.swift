@@ -40,6 +40,7 @@ class StyleChoiceView : MapBaseView {
         
         languageContent = LanguagePopupContent()
         baseMapContent = StylePopupContent()
+        baseMapContent.highlightDefault()
     }
 
     override func addRecognizers() {

@@ -48,9 +48,18 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         contentView.baseMapContent.cartoRaster.delegate = nil
     }
     
-    func styleClicked(selection: String, source: String) {
+    var previous: StylePopupContentSectionItem!
+    
+    func styleClicked(selection: StylePopupContentSectionItem, source: String) {
         contentView.popup.hide()
-        contentView.updateBaseLayer(selection: selection, source: source)
+        contentView.updateBaseLayer(selection: selection.label.text!, source: source)
+        
+        if (previous != nil) {
+            previous.normalize()
+        }
+        
+        selection.highlight()
+        previous = selection
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

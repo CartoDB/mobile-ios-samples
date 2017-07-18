@@ -88,6 +88,10 @@ class StylePopupContent : UIScrollView {
         contentSize = CGSize(width: frame.width, height: y + h + padding)
     }
     
+    func highlightDefault() {
+        cartoVector.list[0].highlight()
+    }
+    
 }
 
 class StylePopupContentSection : UIView {
@@ -172,7 +176,8 @@ class StylePopupContentSection : UIView {
         
         for item in list {
             if (item.frame.contains(location)) {
-                delegate?.styleClicked(selection: item.label.text!, source: source)
+                
+                delegate?.styleClicked(selection: item, source: source)
             }
         }
     }
@@ -197,14 +202,13 @@ class StylePopupContentSectionItem : UIView {
         imageView.image = UIImage(named: imageUrl)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        
+        imageView.layer.borderColor = Colors.appleBlue.cgColor
         addSubview(imageView)
         
         label = UILabel()
         label.text = text
         label.textColor = Colors.appleBlue
         label.font = UIFont(name: "HelveticaNeue", size: 11)
-        
         addSubview(label)
     }
     
@@ -226,11 +230,19 @@ class StylePopupContentSectionItem : UIView {
         
         label.frame = CGRect(x: x, y: y, width: w, height: h)
     }
+    
+    func highlight() {
+        imageView.layer.borderWidth = 3
+    }
+    
+    func normalize() {
+        imageView.layer.borderWidth = 0
+    }
 }
 
 protocol StyleUpdateDelegate {
     
-    func styleClicked(selection: String, source: String)
+    func styleClicked(selection: StylePopupContentSectionItem, source: String)
 }
 
 
