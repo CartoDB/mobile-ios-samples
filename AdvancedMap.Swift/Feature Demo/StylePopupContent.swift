@@ -105,12 +105,12 @@ class StylePopupContentSection : UIView {
         self.init(frame: CGRect.zero)
         
         header = UILabel()
-        header.font = UIFont(name: "HelveticaNeue-Bold", size: 13)
+        header.font = UIFont(name: "Helvetica-Bold", size: 13)
         header.textColor = Colors.navy
         addSubview(header)
         
         separator = UIView()
-        separator.backgroundColor = Colors.nearWhite
+        separator.backgroundColor = Colors.fromRgba(red: 220, green: 220, blue: 220, alpha: 200)
         separator.clipsToBounds = false
         
         addSubview(separator)
@@ -119,11 +119,11 @@ class StylePopupContentSection : UIView {
         addGestureRecognizer(recognizer)
     }
     
+    let headerHeight: CGFloat = 40
+    let padding: CGFloat = 5
+    
     override func layoutSubviews() {
-        
-        let headerHeight: CGFloat = 20
-        let padding: CGFloat = 5
-        
+
         separator.frame = CGRect(x: padding, y: -padding, width: frame.width - 2 * padding, height: 1)
         
         var x: CGFloat = padding
@@ -142,7 +142,6 @@ class StylePopupContentSection : UIView {
             
             x += w + padding
             
-            print(String(describing: x) + " - " + String(describing: frame.width))
             if (x == frame.width) {
                 x = padding
                 y += rowHeight
@@ -150,19 +149,21 @@ class StylePopupContentSection : UIView {
         }
     }
     
-    let rowHeight: CGFloat = 90
+    let rowHeight: CGFloat = 110
     
     func getHeight() -> CGFloat {
         
+        let extra = headerHeight - CGFloat(Int(list.count / 3 * 2) * Int(padding))
+        
         if (list.count > 6) {
-            return 3 * rowHeight
+            return 3 * rowHeight + extra
         }
         
         if (list.count > 3) {
-            return 2 * rowHeight
+            return 2 * rowHeight + extra
         }
         
-        return rowHeight
+        return rowHeight + extra
     }
     
     func itemTapped(_ sender: UITapGestureRecognizer) {
