@@ -91,7 +91,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         routingManager.setPackageManagerListener(routingPackageListener)
         routingManager.start()
         
-        contentView.onlineSwitch.delegate = self
+        contentView.switchButton.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -107,7 +107,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         routingManager.stop(true)
         routingPackageListener = nil
         
-        contentView.onlineSwitch.delegate = nil
+        contentView.switchButton.delegate = nil
     }
     
     func downloadButtonTapped(_ sender: UITapGestureRecognizer) {
@@ -118,10 +118,10 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
     
     func switchChanged() {
         
-        if (contentView.onlineSwitch.isOn()) {
-            setOfflineMode()
-        } else {
+        if (contentView.switchButton.isOnline()) {
             setOnlineMode()
+        } else {
+            setOfflineMode()
         }
     }
     

@@ -18,6 +18,10 @@ class PopupButton : UIView {
     convenience init(imageUrl: String) {
         self.init(frame: CGRect.zero)
         
+        initialize(imageUrl: imageUrl)
+    }
+    
+    func initialize(imageUrl: String) {
         backgroundColor = UIColor.white
         
         imageView = UIImageView()

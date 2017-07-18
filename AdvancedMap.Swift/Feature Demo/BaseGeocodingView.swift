@@ -23,7 +23,7 @@ class BaseGeocodingView: PackageDownloadBaseView {
         onlineLayer = addBaseLayer()
         
         initialize()
-        initializeDownloadContent()
+        initializeDownloadContent(withSwitch: false)
         initializePackageDownloadContent()
         
         infoContent.setText(headerText: popupTitle, contentText: popupDescription)
@@ -36,8 +36,6 @@ class BaseGeocodingView: PackageDownloadBaseView {
         let position = projection?.fromWgs84(NTMapPos(x: 26.7, y: 58.38))
         map.setFocus(position, durationSeconds: 0)
         map.setZoom(14.5, durationSeconds: 0)
-        
-        hideSwitch()
     }
     
     func showResult(result: NTGeocodingResult!, title: String, description: String, goToPosition: Bool) {

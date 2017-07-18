@@ -40,7 +40,7 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         mapManager.setPackageManagerListener(mapPackageListener)
         mapManager.start()
         
-        contentView.onlineSwitch.delegate = self
+        contentView.switchButton.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,14 +53,14 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         mapManager.stop(true)
         mapPackageListener = nil
         
-        contentView.onlineSwitch.delegate = nil
+        contentView.switchButton.delegate = nil
     }
     
     func switchChanged() {
-        if (contentView.onlineSwitch.isOn()) {
-            contentView.setOfflineMode(manager: mapManager)
-        } else {
+        if (contentView.switchButton.isOnline()) {
             contentView.setOnlineMode()
+        } else {
+            contentView.setOfflineMode(manager: mapManager)
         }
     }
     

@@ -38,7 +38,7 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         contentView.manager.setPackageManagerListener(mapPackageListener)
         contentView.manager.start()
         
-        contentView.onlineSwitch.delegate = self
+        contentView.switchButton.delegate = self
         
         contentView.manager.startPackageListDownload()
         
@@ -55,7 +55,7 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         contentView.manager.stop(true)
         mapPackageListener = nil
         
-        contentView.onlineSwitch.delegate = nil
+        contentView.switchButton.delegate = nil
         
         contentView.popup.popup.header.backButton.delegate = nil
     }
@@ -67,7 +67,7 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
     }
     
     func switchChanged() {
-        if (contentView.onlineSwitch.isOn()) {
+        if (contentView.switchButton.isOnline()) {
             contentView.setOnlineMode()
         } else {
             contentView.setOfflineMode()
