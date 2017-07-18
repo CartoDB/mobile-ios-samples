@@ -11,8 +11,6 @@ class PackageDownloadView : PackageDownloadBaseView {
     convenience init() {
         self.init(frame: CGRect.zero)
         
-        onlineLayer = addBaseLayer()
-        
         initialize()
         initializeDownloadContent()
         initializePackageDownloadContent()

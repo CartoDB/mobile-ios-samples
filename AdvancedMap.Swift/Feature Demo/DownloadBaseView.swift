@@ -69,6 +69,7 @@ class DownloadBaseView : MapBaseView {
     
     func setOfflineMode(manager: NTCartoPackageManager) {
         map.getLayers().remove(onlineLayer)
+
         offlineLayer = NTCartoOfflineVectorTileLayer(packageManager: manager, style: .CARTO_BASEMAP_STYLE_DEFAULT)
         map.getLayers().insert(0, layer: offlineLayer)
     }
