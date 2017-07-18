@@ -11,8 +11,6 @@ import UIKit
 
 class RouteDownloadView : DownloadBaseView {
     
-    var mapLayer: NTVectorTileLayer!
-
     var downloadButton: PopupButton!
     
     var overlaySource: NTLocalVectorDataSource!
@@ -20,8 +18,6 @@ class RouteDownloadView : DownloadBaseView {
     convenience init() {
         
         self.init(frame: CGRect.zero)
-        
-        mapLayer = addBaseLayer()
         
         initialize()
         initializeDownloadContent()

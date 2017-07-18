@@ -14,9 +14,6 @@ class PackageDownloadBaseView  : DownloadBaseView {
     
     var packageContent: PackagePopupContent!
     
-    var onlineLayer: NTCartoOnlineVectorTileLayer!
-    var offlineLayer: NTCartoOfflineVectorTileLayer!
-    
     var manager: NTCartoPackageManager!
     
     func initializePackageDownloadContent() {
@@ -54,18 +51,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
             popup.show()
         }
     }
-    
-    func setOnlineMode() {
-        map.getLayers().remove(offlineLayer)
-        map.getLayers().insert(0, layer: onlineLayer)
-    }
-    
-    func setOfflineMode(manager: NTCartoPackageManager) {
-        map.getLayers().remove(onlineLayer)
-        offlineLayer = NTCartoOfflineVectorTileLayer(packageManager: manager, style: .CARTO_BASEMAP_STYLE_DEFAULT)
-        map.getLayers().insert(0, layer: offlineLayer)
-    }
-    
+
     func updatePackages() {
         let packages = getPackages()
         packageContent.addPackages(packages: packages)

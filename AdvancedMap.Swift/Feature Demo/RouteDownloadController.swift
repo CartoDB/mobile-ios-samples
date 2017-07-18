@@ -119,18 +119,20 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
     func switchChanged() {
         
         if (contentView.onlineSwitch.isOn()) {
-            setOnlineMode()
-        } else {
             setOfflineMode()
+        } else {
+            setOnlineMode()
         }
     }
     
     func setOnlineMode() {
+        contentView.setOnlineMode()
         routing.service = NTCartoOnlineRoutingService(source: Routing.MAP_SOURCE + Routing.TRANSPORT_MODE)
     }
     
     func setOfflineMode() {
         
+        contentView.setOfflineMode(manager: mapManager)
         /*
          * If you ended up with a build error here, NTPackageManagerValhallaRoutingService not found,
          * then you should know that AdvancedMap.Swift requires CartoMobileSDK 4.1.0 Valhalla build,
@@ -202,8 +204,20 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         } else {
             let bounds = boundingBox.bounds
             
+            let bytesInMB = 1048576.0
+            let id = self.boundingBox.toString()
+            let mapPackage = self.mapManager.getLocalPackage(id)!
+            let routingPackage = self.routingManager.getLocalPackage(id)!
+            
             DispatchQueue.main.async(execute: {
                 self.contentView.addPolygonTo(bounds: bounds!)
+                
+                let mapSize = round(Double(mapPackage.getSize()) / bytesInMB * 10.0) / 10.0
+                let routeSize = round(Double(routingPackage.getSize()) / bytesInMB * 10.0) / 10.0
+                
+                let text = "DOWNLOADED MAP (" + String(describing: mapSize) + "MB) & ROUTE (" + String(describing: routeSize) + "MB)"
+                
+                self.contentView.progressLabel.complete(message: text)
             })
         }
     }

@@ -16,6 +16,9 @@ class DownloadBaseView : MapBaseView {
     
     var projection: NTProjection!
     
+    var onlineLayer: NTCartoOnlineVectorTileLayer!
+    var offlineLayer: NTCartoOfflineVectorTileLayer!
+    
     convenience init() {
         self.init(frame: CGRect.zero)
     }
@@ -42,6 +45,8 @@ class DownloadBaseView : MapBaseView {
     
     func initializeDownloadContent() {
         
+        onlineLayer = addBaseLayer()
+        
         onlineSwitch = StateSwitch()
         addSubview(onlineSwitch)
         
@@ -49,9 +54,24 @@ class DownloadBaseView : MapBaseView {
         addSubview(progressLabel)
         
         projection = map.getOptions().getBaseProjection()
+        
+        bringSubview(toFront: infoButton)
     }
     
     func hideSwitch() {
         onlineSwitch.isHidden = true
+    }
+    
+    func setOnlineMode() {
+        if (offlineLayer != nil) {
+            map.getLayers().remove(offlineLayer)
+        }
+        map.getLayers().insert(0, layer: onlineLayer)
+    }
+    
+    func setOfflineMode(manager: NTCartoPackageManager) {
+        map.getLayers().remove(onlineLayer)
+        offlineLayer = NTCartoOfflineVectorTileLayer(packageManager: manager, style: .CARTO_BASEMAP_STYLE_DEFAULT)
+        map.getLayers().insert(0, layer: offlineLayer)
     }
 }

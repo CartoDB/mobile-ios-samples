@@ -14,14 +14,9 @@ class CityDownloadView : DownloadBaseView {
     var cityButton: PopupButton!
     
     var cityContent: CityPopupContent!
-    
-    var onlineLayer: NTCartoOnlineVectorTileLayer!
-    var offlineLayer: NTCartoOfflineVectorTileLayer!
-    
+
     convenience init() {
         self.init(frame: CGRect.zero)
-        
-        onlineLayer = addBaseLayer()
         
         initialize()
         initializeDownloadContent()
@@ -61,15 +56,5 @@ class CityDownloadView : DownloadBaseView {
             popup.show()
         }
     }
-    
-    func setOnlineMode() {
-        map.getLayers().remove(offlineLayer)
-        map.getLayers().insert(0, layer: onlineLayer)
-    }
-    
-    func setOfflineMode(manager: NTCartoPackageManager) {
-        map.getLayers().remove(onlineLayer)
-        offlineLayer = NTCartoOfflineVectorTileLayer(packageManager: manager, style: .CARTO_BASEMAP_STYLE_DEFAULT)
-        map.getLayers().insert(0, layer: offlineLayer)
-    }
+
 }
