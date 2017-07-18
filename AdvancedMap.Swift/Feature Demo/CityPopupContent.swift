@@ -42,7 +42,9 @@ class CityPopupContent : UIView, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER, for: indexPath as IndexPath)
-        cell.textLabel!.text = cities[indexPath.row].name
+        cell.textLabel!.text = cities[indexPath.row].name.uppercased()
+        cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 12)
+        cell.textLabel!.textColor = Colors.appleBlue
         
         return cell
     }

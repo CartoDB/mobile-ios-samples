@@ -15,8 +15,8 @@ class Colors {
     
     public static var transparentAppleBlue: UIColor = fromRgba(red: 14, green: 122, blue: 254, alpha: 150)
     
-    // TODO http://www.htmlcsscolor.com/hex/F24440
-    public static var locationRed: UIColor = fromRgba(red: 215, green: 82, blue: 75, alpha: 255)
+    // http://www.htmlcsscolor.com/hex/F24440
+    public static var locationRed: UIColor = fromRgba(red: 242, green: 68, blue: 64, alpha: 255)
     
     public static var transparentLocationRed: UIColor = fromRgba(red: 215, green: 82, blue: 75, alpha: 150)
     
