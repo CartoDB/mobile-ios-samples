@@ -72,6 +72,7 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         // Not "online", but reusing the online switch to achieve location tracking functionality
         if (contentView.switchButton.isOnline()) {
             contentView.showUserAt(location: latestLocation)
+            contentView.resetMapRotation()
         }
     }
     

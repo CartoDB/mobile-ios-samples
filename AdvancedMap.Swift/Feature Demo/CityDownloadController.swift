@@ -21,12 +21,22 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         contentView = CityDownloadView()
         view = contentView
         
-        contentView.cityContent.addCities(cities: Cities.list)
-        
         let folder = Utils.createDirectory(name: "citypackages")
         mapManager = NTCartoPackageManager(source: Routing.MAP_SOURCE, dataFolder: folder)
         
         // Online mode by default
+        
+        
+        for city in Cities.list {
+            let id = city.boundingBox.toString()
+            let package = mapManager.getLocalPackage(id)
+
+            if (package != nil) {
+                city.size = package!.getSizeInMB()
+            }
+        }
+        
+        contentView.cityContent.addCities(cities: Cities.list)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,10 +82,16 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         let city = contentView.cityContent.cities[indexPath.row]
         currentDownload = city
         
-        let id = city.boundingBox.toString()
-        mapManager.startPackageDownload(id)
+        if (city.isDownloaded()) {
+            let center = city.boundingBox.getCenter()
+            let position = contentView.projection.fromLat(center.getY(), lng: center.getX())
+            zoomTo(position: position!)
+        } else {
+            let id = city.boundingBox.toString()
+            mapManager.startPackageDownload(id)
         
-        contentView.progressLabel.show()
+            contentView.progressLabel.show()
+        }
     }
     
     func listDownloadComplete() {
@@ -98,7 +114,16 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         
         let boundingBox = BoundingBox.fromString(projection: contentView.projection, route: id)
         
-        contentView.map.setFocus(boundingBox.bounds.getCenter(), durationSeconds: 1)
+        let package = mapManager.getLocalPackage(boundingBox.toString())
+        if (package != nil) {
+            contentView.cityContent.update(id: boundingBox.toString(), size: package!.getSizeInMB())
+        }
+        
+        zoomTo(position: boundingBox.bounds.getCenter())
+    }
+    
+    func zoomTo(position: NTMapPos) {
+        contentView.map.setFocus(position, durationSeconds: 1)
         contentView.map.setZoom(8, durationSeconds: 1)
     }
     

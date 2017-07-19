@@ -73,6 +73,12 @@ class City : NSObject {
     
     var boundingBox: BoundingBox!
     
+    var size: Double! = 0.0
+    
+    func isDownloaded() -> Bool {
+        return size > 0.0
+    }
+    
     override init() {
         
     }

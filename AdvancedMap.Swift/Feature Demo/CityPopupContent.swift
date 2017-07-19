@@ -23,6 +23,7 @@ class CityPopupContent : UIView, UITableViewDataSource {
         table = UITableView()
         table.dataSource = self
         table.register(UITableViewCell.self, forCellReuseIdentifier: IDENTIFIER)
+        
         addSubview(table)
     }
     
@@ -41,11 +42,31 @@ class CityPopupContent : UIView, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let city = cities[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIER, for: indexPath as IndexPath)
-        cell.textLabel!.text = cities[indexPath.row].name.uppercased()
+        cell.selectionStyle = .none
+        
         cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 12)
-        cell.textLabel!.textColor = Colors.appleBlue
+        
+        var text = cities[indexPath.row].name.uppercased()
+
+        if (city.size > 0.0) {
+            cell.textLabel!.textColor = Colors.appleBlue
+            text += " (" + String(describing: city.size!) + " MB)"
+        } else {
+            cell.textLabel!.textColor = UIColor.lightGray
+        }
+        
+        cell.textLabel!.text = text
         
         return cell
+    }
+    
+    func update(id: String, size: Double) {
+        let found = cities.first(where: { $0.boundingBox.toString() == id })
+        if (found != nil) {
+            found?.size = size
+            self.table.reloadData()
+        }
     }
 }

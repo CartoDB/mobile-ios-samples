@@ -73,3 +73,15 @@ extension UIView {
         layer.cornerRadius = frame.width / 2
     }
 }
+
+extension NTPackageInfo {
+    
+    func getSizeInMB() -> Double {
+        let bytesInMB = 1048576.0
+        return round(Double(self.getSize()) / bytesInMB * 10.0) / 10.0
+    }
+}
+
+
+
+

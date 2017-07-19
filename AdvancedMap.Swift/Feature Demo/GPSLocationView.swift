@@ -79,4 +79,12 @@ class GPSLocationView : MapBaseView {
         
         userMarker.setPos(position)
     }
+    
+    func resetMapRotation() {
+        map.setRotation(0, durationSeconds: 0.5)
+    }
 }
+
+
+
+
