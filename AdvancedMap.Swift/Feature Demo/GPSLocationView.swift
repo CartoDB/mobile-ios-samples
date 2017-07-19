@@ -20,6 +20,8 @@ class GPSLocationView : MapBaseView {
     
     var projection: NTProjection!
     
+    let compass = Compass()
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         
@@ -35,10 +37,21 @@ class GPSLocationView : MapBaseView {
         
         switchButton = SwitchButton(onImageUrl: "icon_track_location_on.png", offImageUrl: "icon_track_location_off.png")
         addButton(button: switchButton)
+        
+        addSubview(compass)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        let padding: CGFloat = 5
+        
+        let width: CGFloat = 50
+        let height = width
+        let x = frame.width - (width + padding)
+        let y = Device.trueY0() + padding
+        
+        compass.frame = CGRect(x: x, y: y, width: width, height: height)
     }
     
     var userMarker: NTMarker!

@@ -13,6 +13,8 @@
 		AD061BCE1F1E4BED00F523B8 /* icon_track_location_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */; };
 		AD061BCF1F1E4BED00F523B8 /* icon_wifi_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCB1F1E4BED00F523B8 /* icon_wifi_off.png */; };
 		AD061BD01F1E4BED00F523B8 /* icon_wifi_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCC1F1E4BED00F523B8 /* icon_wifi_on.png */; };
+		AD061BD21F1E57DC00F523B8 /* Compass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BD11F1E57DC00F523B8 /* Compass.swift */; };
+		AD061BD41F1E653300F523B8 /* LocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BD31F1E653300F523B8 /* LocationExtensions.swift */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */; };
 		AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */; };
@@ -35,6 +37,7 @@
 		AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123301F040A7C009874BD /* GPSLocationView.swift */; };
 		AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123321F040C0C009874BD /* icon_sample_clustering.png */; };
 		AD4123351F040C0C009874BD /* icon_sample_vector_objects.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123331F040C0C009874BD /* icon_sample_vector_objects.png */; };
+		AD4252FF1F1F38140034BF2B /* icon_compass.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4252FE1F1F38140034BF2B /* icon_compass.png */; };
 		AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EB91EF907D1008CEA76 /* Languages.swift */; };
 		AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */; };
 		AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */; };
@@ -140,6 +143,8 @@
 		AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_on.png; sourceTree = "<group>"; };
 		AD061BCB1F1E4BED00F523B8 /* icon_wifi_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_wifi_off.png; sourceTree = "<group>"; };
 		AD061BCC1F1E4BED00F523B8 /* icon_wifi_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_wifi_on.png; sourceTree = "<group>"; };
+		AD061BD11F1E57DC00F523B8 /* Compass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compass.swift; sourceTree = "<group>"; };
+		AD061BD31F1E653300F523B8 /* LocationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationExtensions.swift; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageDownloadBaseView.swift; sourceTree = "<group>"; };
 		AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_positron.png; sourceTree = "<group>"; };
@@ -162,6 +167,7 @@
 		AD4123301F040A7C009874BD /* GPSLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSLocationView.swift; sourceTree = "<group>"; };
 		AD4123321F040C0C009874BD /* icon_sample_clustering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_clustering.png; sourceTree = "<group>"; };
 		AD4123331F040C0C009874BD /* icon_sample_vector_objects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_vector_objects.png; sourceTree = "<group>"; };
+		AD4252FE1F1F38140034BF2B /* icon_compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_compass.png; sourceTree = "<group>"; };
 		AD437EB91EF907D1008CEA76 /* Languages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupContent.swift; sourceTree = "<group>"; };
 		AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
@@ -313,6 +319,7 @@
 			children = (
 				AD41232E1F040A73009874BD /* GPSLocationController.swift */,
 				AD4123301F040A7C009874BD /* GPSLocationView.swift */,
+				AD061BD31F1E653300F523B8 /* LocationExtensions.swift */,
 			);
 			name = "GPS Location";
 			sourceTree = "<group>";
@@ -420,6 +427,7 @@
 				ADE093001F01074B00C569F9 /* StateSwitch.swift */,
 				AD9786C91EF82D3C002912DF /* SlideInPopupContent */,
 				AD9786AC1EF80CBB002912DF /* SlideInPopup */,
+				AD061BD11F1E57DC00F523B8 /* Compass.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -637,6 +645,7 @@
 		ADC8B8DE1F05042D00B62852 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				AD4252FE1F1F38140034BF2B /* icon_compass.png */,
 				AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */,
 				AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */,
 				ADC8B8DF1F05043C00B62852 /* icon_trashcan.png */,
@@ -797,6 +806,7 @@
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
 				AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */,
 				AD061BCF1F1E4BED00F523B8 /* icon_wifi_off.png in Resources */,
+				AD4252FF1F1F38140034BF2B /* icon_compass.png in Resources */,
 				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
 				AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */,
@@ -873,6 +883,7 @@
 				AD73565E1F02558700D4D6EF /* CityDownloadView.swift in Sources */,
 				AD9786CB1EF82D54002912DF /* InformationPopupContent.swift in Sources */,
 				AD9786B01EF80E7C002912DF /* PopupView.swift in Sources */,
+				AD061BD41F1E653300F523B8 /* LocationExtensions.swift in Sources */,
 				ADB27EC11EF41754004198D3 /* MainView.swift in Sources */,
 				ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */,
 				ADC8B8DD1F04F3B500B62852 /* EditEventListener.swift in Sources */,
@@ -895,6 +906,7 @@
 				AD4123221F03F402009874BD /* ClusterBuilder.swift in Sources */,
 				ADA977FE1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
+				AD061BD21F1E57DC00F523B8 /* Compass.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
 				ADE093031F01080700C569F9 /* ProgressLabel.swift in Sources */,
 				AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */,
@@ -977,7 +989,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1022,7 +1034,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "Feature-Demo-Bridging-Header.h";

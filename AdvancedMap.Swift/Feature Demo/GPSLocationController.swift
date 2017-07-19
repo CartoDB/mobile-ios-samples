@@ -50,6 +50,7 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         
         manager.delegate = self
         manager.startUpdatingLocation()
+        manager.startUpdatingHeading()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,19 +59,30 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         contentView.removeRecognizers()
         
         manager.stopUpdatingLocation()
+        manager.stopUpdatingHeading()
         manager.delegate = nil
     }
     
+    var latestLocation: CLLocation!
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
+        // Latest location saved as class variable to get bearing to adjust compass
+        latestLocation = locations[0]
         
         // Not "online", but reusing the online switch to achieve location tracking functionality
         if (contentView.switchButton.isOnline()) {
-            contentView.showUserAt(location: location)
+            contentView.showUserAt(location: latestLocation)
         }
     }
-}
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        let bearingRadians = latestLocation.bearingToLocationRadian(UserDefaults.standard.currentLocation)
+        let headingRadians = newHeading.trueHeading.degreesToRadians
+        
+        contentView.compass.rotate(bearingRadians: bearingRadians, headingRadians: headingRadians)
+    }
 
+}
 
 
 
