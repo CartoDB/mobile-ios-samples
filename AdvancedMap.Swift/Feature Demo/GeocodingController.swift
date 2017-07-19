@@ -101,7 +101,7 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         
         let result = addresses[indexPath.row]
         cell.tag = indexPath.row
-        cell.textLabel?.text = getPrintableAdress(result: result)
+        cell.textLabel?.text = result.getPrettyAddress()
         cell.textLabel?.font = contentView.font
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = Colors.lightTransparentGray
@@ -174,53 +174,12 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
     
     func showResult(result: NTGeocodingResult!) {
         let title = ""
-        let description = self.getPrintableAdress(result: result)
+        let description = result.getPrettyAddress()
         let goToPosition = true
         
         self.contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
     }
-    
-    func getPrintableAdress(result: NTGeocodingResult) -> String {
-        
-        let address = result.getAddress()
-        var string = ""
-        
-        if ((address?.getName().characters.count)! > 0) {
-            string += (address?.getName())!
-        }
-        
-        if ((address?.getStreet().characters.count)! > 0) {
-            string.addCommaIfNecessary()
-            string += (address?.getHouseNumber())!
-        }
-        
-        if ((address?.getNeighbourhood().characters.count)! > 0) {
-            string.addCommaIfNecessary()
-            string += (address?.getNeighbourhood())!
-        }
-        
-        if ((address?.getLocality().characters.count)! > 0) {
-            string.addCommaIfNecessary()
-            string += (address?.getLocality())!
-        }
-        
-        if ((address?.getCounty().characters.count)! > 0) {
-            string.addCommaIfNecessary()
-            string += (address?.getCounty())!
-        }
-        
-        if ((address?.getRegion().characters.count)! > 0) {
-            string.addCommaIfNecessary()
-            string += (address?.getRegion())!
-        }
-        
-        if ((address?.getCountry().characters.count)! > 0) {
-            string.addCommaIfNecessary()
-            string += (address?.getCountry())!
-        }
-        
-        return string
-    }
+
     
     func listDownloadComplete() {
         contentView.updatePackages()

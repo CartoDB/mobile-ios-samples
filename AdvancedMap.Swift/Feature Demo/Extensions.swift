@@ -82,6 +82,59 @@ extension NTPackageInfo {
     }
 }
 
+extension NTGeocodingResult {
+    
+    func getPrettyAddress() -> String {
+        
+        let address = self.getAddress()
+        var string = ""
+        
+        if ((address?.getName().characters.count)! > 0) {
+            string += (address?.getName())!
+        }
+        
+        if ((address?.getStreet().characters.count)! > 0) {
+            string.addCommaIfNecessary()
+            string += (address?.getStreet())!
+        }
+        
+        if ((address?.getHouseNumber().characters.count)! > 0) {
+            string += " " + (address?.getHouseNumber())!
+        }
+        
+        if ((address?.getNeighbourhood().characters.count)! > 0) {
+            string.addCommaIfNecessary()
+            string += (address?.getNeighbourhood())!
+        }
+        
+        if ((address?.getLocality().characters.count)! > 0) {
+            string.addCommaIfNecessary()
+            string += (address?.getLocality())!
+        }
+        
+        if ((address?.getCounty().characters.count)! > 0) {
+            string.addCommaIfNecessary()
+            string += (address?.getCounty())!
+        }
+        
+        if ((address?.getRegion().characters.count)! > 0) {
+            string.addCommaIfNecessary()
+            string += (address?.getRegion())!
+        }
+        
+        if ((address?.getCountry().characters.count)! > 0) {
+            string.addCommaIfNecessary()
+            string += (address?.getCountry())!
+        }
+        
+        return string
+    }
+}
+
+
+
+
+
 
 
 
