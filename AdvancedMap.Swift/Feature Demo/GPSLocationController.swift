@@ -76,6 +76,7 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        // cf. LocationExtensions.swift to see how these calculations are made
         let bearingRadians = latestLocation.bearingToLocationRadian(UserDefaults.standard.currentLocation)
         let headingRadians = newHeading.trueHeading.degreesToRadians
         

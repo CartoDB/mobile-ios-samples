@@ -50,12 +50,12 @@ class Compass: UIView {
     }
     
     func rotate(bearingRadians: CGFloat, headingRadians: Double) {
-        let angle = computeNewAngle(bearingRadians: bearingRadians, headingRadians: CGFloat(headingRadians))
+        // Compass orientation calculation partly taken from: https://github.com/zntfdr/Compass
+        let angle = getAngle(bearingRadians: bearingRadians, headingRadians: CGFloat(headingRadians))
         image.transform = CGAffineTransform(rotationAngle: angle)
     }
     
-    
-    func computeNewAngle(bearingRadians: CGFloat, headingRadians: CGFloat) -> CGFloat {
+    func getAngle(bearingRadians: CGFloat, headingRadians: CGFloat) -> CGFloat {
         
         let originalHeading = bearingRadians - headingRadians
         var heading = originalHeading
@@ -67,10 +67,14 @@ class Compass: UIView {
         
         let adjAngle: CGFloat = {
             switch UIApplication.shared.statusBarOrientation {
-            case .landscapeLeft:  return 90
-            case .landscapeRight: return -90
-            case .portrait, .unknown: return 0
-            case .portraitUpsideDown: return isFaceDown ? 180 : -180
+            case .landscapeLeft:
+                return 90
+            case .landscapeRight:
+                return -90
+            case .portrait, .unknown:
+                return 0
+            case .portraitUpsideDown:
+                return isFaceDown ? 180 : -180
             }
         }()
         
