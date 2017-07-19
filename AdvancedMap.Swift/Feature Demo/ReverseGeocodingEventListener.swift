@@ -23,7 +23,7 @@ class ReverseGeocodingEventListener: NTMapEventListener {
         let request = NTReverseGeocodingRequest(projection: projection, location: location)
         
         let meters: Float = 125.0
-        service.setSearchRadius(meters)
+        request?.setSearchRadius(meters)
         
         let results = service.calculateAddresses(request)
         
