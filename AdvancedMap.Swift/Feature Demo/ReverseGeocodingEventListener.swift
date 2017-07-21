@@ -18,7 +18,6 @@ class ReverseGeocodingEventListener: NTMapEventListener {
     
     override func onMapClicked(_ mapClickInfo: NTMapClickInfo!) {
         
-        
         let location = mapClickInfo.getClickPos()
         let request = NTReverseGeocodingRequest(projection: projection, location: location)
         
@@ -32,6 +31,7 @@ class ReverseGeocodingEventListener: NTMapEventListener {
         // In case of POIs within buildings, this allows us to hightlight POI instead of the building
         
         var result: NTGeocodingResult?
+        
         let count = (results?.size())!
         
         if (count > 0) {

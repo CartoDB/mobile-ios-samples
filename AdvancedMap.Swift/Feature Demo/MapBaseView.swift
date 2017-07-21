@@ -41,6 +41,8 @@ class MapBaseView : UIView {
         addButton(button: infoButton)
         
         infoContent = InformationPopupContent()
+        
+        map.getOptions().setPanningMode(NTPanningMode.PANNING_MODE_STICKY)
     }
     
     override func layoutSubviews() {
@@ -99,7 +101,7 @@ class MapBaseView : UIView {
             addSubview(map)
         }
         
-        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DEFAULT)
+        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_VOYAGER)
         map.getLayers().add(layer)
         
         return layer!
@@ -112,7 +114,7 @@ class MapBaseView : UIView {
             addSubview(map)
         }
         
-        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_GRAY)
+        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_POSITRON)
         map.getLayers().add(layer)
         
         return layer!
@@ -125,7 +127,7 @@ class MapBaseView : UIView {
             addSubview(map)
         }
         
-        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DARK)
+        let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DARKMATTER)
         map.getLayers().add(layer)
         
         return layer!

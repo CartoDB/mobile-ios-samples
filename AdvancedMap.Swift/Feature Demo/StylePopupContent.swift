@@ -36,12 +36,9 @@ class StylePopupContent : UIScrollView {
         cartoVector = StylePopupContentSection()
         cartoVector.source = StylePopupContent.NutiteqSource
         cartoVector.header.text = "CARTO VECTOR"
-        cartoVector.addItem(text: StylePopupContent.Bright, imageUrl: "style_image_nutiteq_bright.png")
-        cartoVector.addItem(text: StylePopupContent.Gray, imageUrl: "style_image_nutiteq_gray.png")
-        cartoVector.addItem(text: StylePopupContent.Dark, imageUrl: "style_image_nutiteq_dark.png")
+        cartoVector.addItem(text: StylePopupContent.Voyager, imageUrl: "style_image_nutiteq_voyager.png")
         cartoVector.addItem(text: StylePopupContent.Positron, imageUrl: "style_image_nutiteq_positron.png")
         cartoVector.addItem(text: StylePopupContent.DarkMatter, imageUrl: "style_image_nutiteq_darkmatter.png")
-        cartoVector.addItem(text: StylePopupContent.Voyager, imageUrl: "style_image_nutiteq_voyager.png")
         
         addSubview(cartoVector)
         

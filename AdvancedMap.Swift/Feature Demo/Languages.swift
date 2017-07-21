@@ -16,7 +16,7 @@ class Languages {
     static func initialize() {
         
         var language = Language()
-        language.name = "Default"
+        language.name = "Local"
         language.value = ""
         
         list.append(language)

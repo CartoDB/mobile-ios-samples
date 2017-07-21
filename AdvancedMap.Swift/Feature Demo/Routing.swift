@@ -12,6 +12,7 @@ class Routing {
     
     static let ROUTING_TAG = "routing:"
     static let ROUTING_SOURCE = "valhalla.osm"
+    
     static let MAP_SOURCE = "nutiteq.osm"
     static let TRANSPORT_MODE = ".car"
     
