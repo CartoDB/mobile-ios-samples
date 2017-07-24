@@ -32,8 +32,11 @@ class MapBaseView : UIView {
     }
     
     func initialize() {
-        popup = SlideInPopup()
         
+        map = NTMapView()
+        addSubview(map)
+        
+        popup = SlideInPopup()
         addSubview(popup)
         sendSubview(toBack: popup)
         
@@ -95,11 +98,6 @@ class MapBaseView : UIView {
     }
     
     func addBaseLayer() -> NTCartoOnlineVectorTileLayer {
-        
-        if (map == nil) {
-            map = NTMapView()
-            addSubview(map)
-        }
         
         let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_VOYAGER)
         map.getLayers().add(layer)

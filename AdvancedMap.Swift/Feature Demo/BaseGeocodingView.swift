@@ -30,10 +30,6 @@ class BaseGeocodingView: PackageDownloadBaseView {
         let layer = NTVectorLayer(dataSource: source)
         
         map.getLayers().add(layer)
-        
-        let position = projection?.fromWgs84(NTMapPos(x: 26.7, y: 58.38))
-        map.setFocus(position, durationSeconds: 0)
-        map.setZoom(14.5, durationSeconds: 0)
     }
     
     func showResult(result: NTGeocodingResult!, title: String, description: String, goToPosition: Bool) {
@@ -97,12 +93,8 @@ class BaseGeocodingView: PackageDownloadBaseView {
         }
         
         if (goToPosition) {
-            
-            let min = NTScreenPos(x: 10, y: 10)
-            let max = NTScreenPos(x: Float(map.drawableWidth - 20), y: Float(map.drawableHeight - 20))
-            let bounds = NTScreenBounds(min: min, max: max)
-            
-            map.move(toFit: geometry?.getBounds(), screenBounds: bounds, integerZoom: false, durationSeconds: 0.5)
+            map.setFocus(position, durationSeconds: 1.0)
+            map.setZoom(16, durationSeconds: 1)
         }
         
         let popup = NTBalloonPopup(pos: position, style: builder?.buildStyle(), title: title, desc: description)
