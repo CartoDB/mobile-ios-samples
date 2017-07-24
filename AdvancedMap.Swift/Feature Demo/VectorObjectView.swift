@@ -96,12 +96,49 @@ class VectorObjectView : MapBaseView {
         balloonBuilder?.setTitleFontSize(15)
         balloonBuilder?.setDescriptionFontSize(12)
         
-        let position = projection?.fromWgs84(NTMapPos(x: longitude + 0.003, y: latitude + 0.003))
+        var position = projection?.fromWgs84(NTMapPos(x: longitude + 0.003, y: latitude + 0.003))
         let balloonPopup = NTBalloonPopup(pos: position, style: balloonBuilder?.buildStyle(), title: "Balloon popup", desc: "Look at me, whee!")
         balloonPopup?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Did you just click me?"))
         balloonPopup?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "You'd better not try that again"))
         source?.add(balloonPopup)
         
+        positions?.clear()
+        
+        /*
+         * Line
+         */
+        let lineBuilder = NTLineStyleBuilder()
+        positions?.add(projection?.fromWgs84(NTMapPos(x: longitude - 0.0015, y: latitude - 0.001)))
+        positions?.add(projection?.fromWgs84(NTMapPos(x: longitude - 0.001, y: latitude - 0.002)))
+        lineBuilder?.setColor(Colors.green.toNTColor())
+        let line = NTLine(poses: positions, style: lineBuilder?.buildStyle())
+        line?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Hi! They call me Line!"))
+        line?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "I'm just a little fatso line between the point and the car. I dislike the car"))
+        source?.add(line)
+        
+        /*
+         * Marker
+         */
+        let markerBuilder = NTMarkerStyleBuilder()
+        markerBuilder?.setColor(Colors.appleBlue.toNTColor())
+        markerBuilder?.setSize(15)
+        markerBuilder?.setBitmap(Utils.pathToBitmap(path: "icon_pin_red.png"))
+        position = projection?.fromWgs84(NTMapPos(x: longitude - 0.005, y: latitude - 0.005))
+        let marker = NTMarker(pos: position, style: markerBuilder?.buildStyle())
+        marker?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Hi!"))
+        marker?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "I'm a dark blue marker, my name is Mark"))
+        source?.add(marker)
+        
+        /*
+         * Point
+         */
+        let pointBuilder = NTPointStyleBuilder()
+        pointBuilder?.setColor(Colors.locationRed.toNTColor())
+        position = projection?.fromWgs84(NTMapPos(x: longitude - 0.003, y: latitude - 0.003))
+        let point = NTPoint(pos: position, style: pointBuilder?.buildStyle())
+        point?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Hi!"))
+        point?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "I'm just a red dot lying on the ground"))
+        source?.add(point)
     }
 }
 
