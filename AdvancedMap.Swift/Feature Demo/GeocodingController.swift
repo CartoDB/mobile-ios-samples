@@ -53,6 +53,12 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         
         contentView.packageContent.table.delegate = self
         contentView.popup.popup.header.backButton.delegate = self
+        
+        if (contentView.hasLocalPackages()) {
+            contentView.showLocalPackages()
+        } else {
+            contentView.showBannerInsteadOfSearchBar()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -195,6 +201,14 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
     
     func downloadComplete(sender: PackageListener, id: String) {
         contentView.downloadComplete(id: id)
+        DispatchQueue.main.async {
+            let package = self.contentView.manager?.getLocalPackage(id)!
+            let text = "DOWNLOADED MAP (" + String(describing: (package?.getSizeInMB())!) + "MB)"
+            self.contentView.progressLabel.complete(message: text)
+            
+            self.contentView.showSearchBar()
+        }
+        
     }
     
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {

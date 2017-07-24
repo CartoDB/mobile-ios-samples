@@ -131,6 +131,22 @@ extension NTGeocodingResult {
     }
 }
 
+extension NTPackageInfoVector {
+    func toList() -> [NTPackageInfo] {
+        
+        var list = [NTPackageInfo]()
+        
+        let total = Int(size())
+        
+        for i in stride(from: 0, to: total, by: 1) {
+            let package = get(Int32(i))
+            list.append(package!)
+        }
+        
+        return list
+    }
+}
+
 
 
 
