@@ -17,9 +17,8 @@ class ClusteringView : MapBaseView {
     convenience init() {
         self.init(frame: CGRect.zero)
         
-        baseLayer = addGrayBaseLayer()
-        
         initialize()
+        baseLayer = addGrayBaseLayer()
         
         infoContent.setText(headerText: Texts.clusteringInfoHeader, contentText: Texts.clusteringInfoContainer)
     }

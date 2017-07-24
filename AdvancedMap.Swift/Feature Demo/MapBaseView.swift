@@ -20,7 +20,7 @@ class MapBaseView : UIView {
     var infoButton: PopupButton!
     var infoContent: InformationPopupContent!
     
-    var topBar: UIView!
+    var banner: Banner!
     
     let bottomLabelHeight: CGFloat = 40
     let smallPadding: CGFloat = 5
@@ -51,10 +51,7 @@ class MapBaseView : UIView {
     override func layoutSubviews() {
         
         popup.frame = bounds
-        
-        if (map != nil) {
-            map?.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
-        }
+        map.frame = bounds
         
         if (buttons != nil) {
             
@@ -77,8 +74,8 @@ class MapBaseView : UIView {
             }
         }
         
-        if (topBar != nil) {
-            topBar.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: 45)
+        if (banner != nil) {
+            banner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: bannerHeight)
         }
     }
     
@@ -98,36 +95,20 @@ class MapBaseView : UIView {
     }
     
     func addBaseLayer() -> NTCartoOnlineVectorTileLayer {
-        
         let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_VOYAGER)
         map.getLayers().add(layer)
-        
         return layer!
     }
     
     func addGrayBaseLayer() -> NTCartoOnlineVectorTileLayer {
-        
-        if (map == nil) {
-            map = NTMapView()
-            addSubview(map)
-        }
-        
         let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_POSITRON)
         map.getLayers().add(layer)
-        
         return layer!
     }
     
     func addDarkBaseLayer() -> NTCartoOnlineVectorTileLayer {
-        
-        if (map == nil) {
-            map = NTMapView()
-            addSubview(map)
-        }
-        
         let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DARKMATTER)
         map.getLayers().add(layer)
-        
         return layer!
     }
     
@@ -141,10 +122,12 @@ class MapBaseView : UIView {
         addSubview(button)
     }
     
-    func addTopBar() {
-        topBar = UIView()
-        topBar.backgroundColor = Colors.transparentGray
-        addSubview(topBar)
+    let bannerHeight: CGFloat = 45
+    
+    func addBanner() {
+        banner = Banner()
+        addSubview(banner)
+        banner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: bannerHeight)
     }
 }
 

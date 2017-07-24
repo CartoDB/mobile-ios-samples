@@ -17,9 +17,9 @@ class VectorObjectView : MapBaseView {
     convenience init() {
         self.init(frame: CGRect.zero)
         
+        initialize()
         baseLayer = addBaseLayer()
         
-        initialize()
         infoContent.setText(headerText: Texts.vectorElementsInfoHeader, contentText: Texts.vectorElementsInfoContainer)
         
         let projection = map.getOptions().getBaseProjection()

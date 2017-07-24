@@ -15,4 +15,8 @@ class ReverseGeocodingView : BaseGeocodingView {
         
         initializeGeocodingView(popupTitle: Texts.reverseGeocodingInfoHeader, popupDescription: Texts.reverseGeocodingInfoContainer)
     }
+    
+    func showDownloadedPackages(packages: [NTPackageInfo]) {
+        
+    }
 }

@@ -99,6 +99,8 @@
 		ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */; };
 		ADA978051F0FB1000040E090 /* icon_sample_reverse_geocoding.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */; };
 		ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */; };
+		ADA9A9561F25DBF300B7D580 /* banner_icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA9A9551F25DBF300B7D580 /* banner_icon_info.png */; };
+		ADA9A9581F25DC0300B7D580 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A9571F25DC0300B7D580 /* Banner.swift */; };
 		ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */; };
 		ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */; };
 		ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD241EFBF945005F53CB /* Routing.swift */; };
@@ -232,6 +234,8 @@
 		ADA978011F0F79F90040E090 /* BaseGeocodingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGeocodingView.swift; sourceTree = "<group>"; };
 		ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_reverse_geocoding.png; sourceTree = "<group>"; };
 		ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_geocoding.png; sourceTree = "<group>"; };
+		ADA9A9551F25DBF300B7D580 /* banner_icon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_info.png; sourceTree = "<group>"; };
+		ADA9A9571F25DC0300B7D580 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadController.swift; sourceTree = "<group>"; };
 		ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadView.swift; sourceTree = "<group>"; };
 		ADAFCD241EFBF945005F53CB /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 				AD9786C91EF82D3C002912DF /* SlideInPopupContent */,
 				AD9786AC1EF80CBB002912DF /* SlideInPopup */,
 				AD061BD11F1E57DC00F523B8 /* Compass.swift */,
+				ADA9A9571F25DC0300B7D580 /* Banner.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 		ADC8B8DE1F05042D00B62852 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				ADA9A9551F25DBF300B7D580 /* banner_icon_info.png */,
 				AD4252FE1F1F38140034BF2B /* icon_compass.png */,
 				AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */,
 				AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */,
@@ -773,6 +779,7 @@
 				AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */,
+				ADA9A9561F25DBF300B7D580 /* banner_icon_info.png in Resources */,
 				AD9786B61EF82284002912DF /* icon_basemap.png in Resources */,
 				AD4123351F040C0C009874BD /* icon_sample_vector_objects.png in Resources */,
 				AD5B2AEC1F03A60300EF738C /* icon_forward_blue.png in Resources */,
@@ -925,6 +932,7 @@
 				AD4123201F03E80A009874BD /* VectorObjectMapListener.swift in Sources */,
 				AD9786C61EF8281B002912DF /* SlideInPopupHeader.swift in Sources */,
 				AD97868D1EF7F152002912DF /* BaseController.swift in Sources */,
+				ADA9A9581F25DC0300B7D580 /* Banner.swift in Sources */,
 				AD41232C1F040A36009874BD /* VectorObjectEditingView.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
 				AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */,

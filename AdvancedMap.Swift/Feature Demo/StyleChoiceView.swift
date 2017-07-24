@@ -26,10 +26,10 @@ class StyleChoiceView : MapBaseView {
         
         self.init(frame: CGRect.zero)
         
+        initialize()
+        
         currentLayer = addBaseLayer()
         
-        initialize()
-
         languageButton = PopupButton(imageUrl: "icon_language.png")
         baseMapButton = PopupButton(imageUrl: "icon_basemap.png")
         

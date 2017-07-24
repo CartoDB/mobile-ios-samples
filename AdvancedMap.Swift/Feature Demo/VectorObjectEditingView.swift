@@ -19,18 +19,17 @@ class VectorObjectEditingView : MapBaseView {
     
     var projection: NTProjection!
     
-    var topBarLabel: UILabel!
     var trashCan: UIImageView!
     
     convenience init() {
         self.init(frame: CGRect.zero)
         
+        initialize()
         baseLayer = addDarkBaseLayer()
         
-        initialize()
         infoContent.setText(headerText: Texts.objectEditingInfoHeader, contentText: Texts.objectEditingInfoContainer)
         
-        addTopBar()
+        addBanner()
         
         projection = map.getOptions().getBaseProjection()
         
@@ -38,33 +37,19 @@ class VectorObjectEditingView : MapBaseView {
         editLayer = NTEditableVectorLayer(dataSource: editSource)
         map.getLayers().add(editLayer)
         
-        topBarLabel = UILabel()
-        topBarLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
-
-        topBarLabel.textColor = UIColor.white
-        topBarLabel.text = "CLICK ON AN ELEMENT TO EDIT IT"
-        topBar.addSubview(topBarLabel)
+        banner.label.text = "CLICK ON AN ELEMENT TO EDIT IT"
         
         trashCan = UIImageView()
         trashCan.image = UIImage(named: "icon_trashcan.png")
         trashCan.isUserInteractionEnabled = true
         trashCan.isHidden = true
-        topBar.addSubview(trashCan)
+        banner.addRightItem(item: trashCan)
         
         map.setZoom(0, durationSeconds: 0)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        let padding: CGFloat = 10
-        
-        topBarLabel.frame = CGRect(x: padding, y: 0, width: topBar.frame.width  - padding, height: topBar.frame.height)
-        
-        let height: CGFloat = topBar.frame.height - 2 * padding
-        let width: CGFloat = height
-        
-        trashCan.frame = CGRect(x: topBar.frame.width - (width + padding), y: padding, width: width, height: height)
     }
     
     func addElements() {

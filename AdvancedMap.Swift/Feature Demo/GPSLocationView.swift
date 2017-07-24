@@ -25,9 +25,9 @@ class GPSLocationView : MapBaseView {
     convenience init() {
         self.init(frame: CGRect.zero)
         
+        initialize()
         baseLayer = addBaseLayer()
         
-        initialize()
         infoContent.setText(headerText: Texts.gpsLocationInfoHeader, contentText: Texts.gpsLocationInfoContainer)
         
         projection = map.getOptions().getBaseProjection()
