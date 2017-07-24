@@ -43,7 +43,12 @@ class ProgressLabel : UIView {
     }
 
     func update(text: String, progress: CGFloat) {
-        label.text = text
+        
+        if (!isVisible()) {
+            show()
+        }
+        
+        update(text: text)
         updateProgressBar(progress: progress)
     }
     

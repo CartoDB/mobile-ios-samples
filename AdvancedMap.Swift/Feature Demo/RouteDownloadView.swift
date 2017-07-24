@@ -33,6 +33,10 @@ class RouteDownloadView : DownloadBaseView {
         map.getLayers().add(layer)
         
         layer?.setVectorElementEventListener(VectorElementIgnoreListener())
+        
+        let washingtonDC = projection.fromWgs84(NTMapPos(x: -77.0369, y: 38.9072))
+        map.setFocus(washingtonDC, durationSeconds: 0)
+        map.setZoom(8, durationSeconds: 0)
     }
     
     override func layoutSubviews() {
