@@ -13,7 +13,7 @@ class Colors {
     
     public static var appleBlue: UIColor = fromRgba(red: 14, green: 122, blue: 254, alpha: 255)
     
-    public static var lightTransparentAppleBlue: UIColor = fromRgba(red: 14, green: 122, blue: 254, alpha: 100)
+    public static var lightTransparentAppleBlue: UIColor = fromRgba(red: 14, green: 122, blue: 254, alpha: 70)
     
     public static var darkTransparentAppleBlue: UIColor = fromRgba(red: 14, green: 122, blue: 254, alpha: 150)
     

@@ -70,7 +70,12 @@ class GPSLocationView : MapBaseView {
         
         let builder = NTPolygonStyleBuilder()
         builder?.setColor(Colors.lightTransparentAppleBlue.toNTColor())
-
+        let borderBuilder = NTLineStyleBuilder()
+        borderBuilder?.setColor(Colors.darkTransparentAppleBlue.toNTColor())
+        borderBuilder?.setWidth(1)
+        
+        builder?.setLineStyle(borderBuilder?.buildStyle())
+        
         let points = getCirclePoints(latitude: latitude, longitude: longitude, accuracy: accuracy)
         
         if (accuracyMarker == nil) {
@@ -87,7 +92,7 @@ class GPSLocationView : MapBaseView {
             builder?.setSize(16.0)
             
             userMarker = NTPoint(pos: position, style: builder?.buildStyle())
-//            source.add(userMarker)
+            source.add(userMarker)
         }
         
         userMarker.setPos(position)
@@ -106,7 +111,7 @@ class GPSLocationView : MapBaseView {
         
         let points = NTMapPosVector()
         
-        for var i in 0..<N {
+        for i in stride(from: 0, to: N, by: 1) {
             
             let angle = Double.pi * 2 * (Double(i).truncatingRemainder(dividingBy:Double(N))) / Double(N)
             let dx = radius * cos(angle)
@@ -115,7 +120,7 @@ class GPSLocationView : MapBaseView {
             let lat = latitude + (180 / Double.pi) * (dy / EARTH_RADIUS)
             let lon = longitude + (180 / Double.pi) * (dx / EARTH_RADIUS) / cos(Double(latitude * Double.pi / 180))
             
-            let point = NTMapPos(x: lon, y: lat)
+            let point = projection.fromWgs84(NTMapPos(x: lon, y: lat))
             points?.add(point)
         }
         
