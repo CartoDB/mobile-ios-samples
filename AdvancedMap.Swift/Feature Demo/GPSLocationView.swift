@@ -54,27 +54,40 @@ class GPSLocationView : MapBaseView {
         compass.frame = CGRect(x: x, y: y, width: width, height: height)
     }
     
-    var userMarker: NTMarker!
+    var userMarker: NTPoint!
+    var accuracyMarker: NTPolygon!
     
     func showUserAt(location: CLLocation) {
         
         let latitude = Double(location.coordinate.latitude)
         let longitude = Double(location.coordinate.longitude)
+        let accuracy = Float(location.horizontalAccuracy)
         
         let position = projection?.fromWgs84(NTMapPos(x: longitude, y: latitude))
         
         map.setFocus(position, durationSeconds: 1)
         map.setZoom(16, durationSeconds: 1)
         
+        let builder = NTPolygonStyleBuilder()
+        builder?.setColor(Colors.lightTransparentAppleBlue.toNTColor())
+
+        let points = getCirclePoints(latitude: latitude, longitude: longitude, accuracy: accuracy)
+        
+        if (accuracyMarker == nil) {
+            accuracyMarker = NTPolygon(poses: points, holes: NTMapPosVectorVector(), style: builder?.buildStyle())
+            source.add(accuracyMarker)
+        } else {
+            accuracyMarker.setStyle(builder?.buildStyle())
+            accuracyMarker.setGeometry(NTPolygonGeometry(poses: points))
+        }
+
         if (userMarker == nil) {
-            let builder = NTMarkerStyleBuilder()
+            let builder = NTPointStyleBuilder()
+            builder?.setColor(Colors.appleBlue.toNTColor())
+            builder?.setSize(16.0)
             
-            let bitmap = NTBitmapUtils.createBitmap(from: UIImage(named: "icon_marker_blue.png"))
-            builder?.setBitmap(bitmap)
-            builder?.setSize(25)
-            
-            userMarker = NTMarker(pos: position, style: builder?.buildStyle())
-            source.add(userMarker)
+            userMarker = NTPoint(pos: position, style: builder?.buildStyle())
+//            source.add(userMarker)
         }
         
         userMarker.setPos(position)
@@ -83,7 +96,38 @@ class GPSLocationView : MapBaseView {
     func resetMapRotation() {
         map.setRotation(0, durationSeconds: 0.5)
     }
+    
+    func getCirclePoints(latitude: Double, longitude: Double, accuracy: Float) -> NTMapPosVector {
+        // Number of points of circle
+        let N = 100
+        let EARTH_RADIUS = 6378137.0
+        
+        let radius = Double(accuracy)
+        
+        let points = NTMapPosVector()
+        
+        for var i in 0..<N {
+            
+            let angle = Double.pi * 2 * (Double(i).truncatingRemainder(dividingBy:Double(N))) / Double(N)
+            let dx = radius * cos(angle)
+            let dy = radius * sin(angle)
+            
+            let lat = latitude + (180 / Double.pi) * (dy / EARTH_RADIUS)
+            let lon = longitude + (180 / Double.pi) * (dx / EARTH_RADIUS) / cos(Double(latitude * Double.pi / 180))
+            
+            let point = NTMapPos(x: lon, y: lat)
+            points?.add(point)
+        }
+        
+        return points!
+    }
 }
+
+
+
+
+
+
 
 
 
