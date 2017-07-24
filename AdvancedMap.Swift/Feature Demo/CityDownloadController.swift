@@ -104,7 +104,9 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
     
     func statusChanged(sender: PackageListener, status: NTPackageStatus) {
         DispatchQueue.main.async {
-            let text = "Downloading " + self.currentDownload.name + ": " + String(describing: status.getProgress()) + ""
+            
+            let progress = String(describing: Int(exactly: status.getProgress())!)
+            let text = "Downloading " + self.currentDownload.name + ": " + progress + "%"
             self.contentView.progressLabel.update(text: text)
             self.contentView.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
         }
@@ -115,11 +117,19 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         let boundingBox = BoundingBox.fromString(projection: contentView.projection, route: id)
         
         let package = mapManager.getLocalPackage(boundingBox.toString())
+        
         if (package != nil) {
             contentView.cityContent.update(id: boundingBox.toString(), size: package!.getSizeInMB())
         }
         
         zoomTo(position: boundingBox.bounds.getCenter())
+        
+        DispatchQueue.main.async {
+            let name = String(describing:self.currentDownload.name!)
+            let size = String(describing:package!.getSizeInMB())
+            let text = "Downloaded " + name + " (" + size + " MB)"
+            self.contentView.progressLabel.complete(message: text)
+        }
     }
     
     func zoomTo(position: NTMapPos) {

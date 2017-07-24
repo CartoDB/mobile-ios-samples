@@ -41,14 +41,7 @@ class ProgressLabel : UIView {
     override func layoutSubviews() {
         label.frame = bounds
     }
-    
-    func update(progress: CGFloat, position: NTMapPos) {
-        
-        label.text = "DOWNLOADING" + positionToString(position: position) + " (" + String(describing: round(progress * 10) / 10) + "%)"
-        
-        updateProgressBar(progress: progress)
-    }
-    
+
     func update(text: String, progress: CGFloat) {
         label.text = text
         updateProgressBar(progress: progress)
@@ -65,10 +58,12 @@ class ProgressLabel : UIView {
         }
         
         label.text = message
+        
+        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(onTimerCompleted), userInfo: nil, repeats: false)
     }
     
-    func complete(position: NTMapPos) {
-        label.text = "DOWNLOAD OF" + positionToString(position: position) + "COMPLETED"
+    func onTimerCompleted() {
+        hide()
     }
     
     func updateProgressBar(progress: CGFloat) {
@@ -79,14 +74,7 @@ class ProgressLabel : UIView {
         
         progressBar.frame = CGRect(x: 0, y: y, width: width, height: height)
     }
-    
-    func positionToString(position: NTMapPos) -> String {
-        
-        let lat = round(position.getX() * 100) / 100
-        let lon = round(position.getY() * 100) / 100
-        return  " [lat: " + String(lat) + ", lon: " + String(lon) + "] "
-    }
-    
+
     func hide() {
         if (isVisible()) {
             animateAlpha(alpha: 0)
