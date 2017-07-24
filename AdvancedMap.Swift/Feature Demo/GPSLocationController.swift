@@ -10,17 +10,22 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class GPSLocationController : BaseController, CLLocationManagerDelegate {
+class GPSLocationController : BaseController, CLLocationManagerDelegate, RotationDelegate {
     
     var contentView: GPSLocationView!
     
     var manager: CLLocationManager!
+    
+    var rotationListener: RotationListener!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contentView = GPSLocationView()
         view = contentView
+        
+        rotationListener = RotationListener()
+        rotationListener?.map = contentView.map
         
         manager = CLLocationManager()
         manager.pausesLocationUpdatesAutomatically = false
@@ -51,6 +56,9 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         manager.delegate = self
         manager.startUpdatingLocation()
         manager.startUpdatingHeading()
+        
+        contentView.map.setMapEventListener(rotationListener)
+        rotationListener?.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,6 +69,9 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
         manager.stopUpdatingHeading()
         manager.delegate = nil
+        
+        contentView.map.setMapEventListener(nil)
+        rotationListener?.delegate = nil
     }
     
     var latestLocation: CLLocation!
@@ -72,16 +83,18 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate {
         // Not "online", but reusing the online switch to achieve location tracking functionality
         if (contentView.switchButton.isOnline()) {
             contentView.showUserAt(location: latestLocation)
-            contentView.resetMapRotation()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         // cf. LocationExtensions.swift to see how these calculations are made
-        let bearingRadians = latestLocation.bearingToLocationRadian(UserDefaults.standard.currentLocation)
-        let headingRadians = newHeading.trueHeading.degreesToRadians
-        
-        contentView.compass.rotate(bearingRadians: bearingRadians, headingRadians: headingRadians)
+//        let bearingRadians = latestLocation.bearingToLocationRadian(UserDefaults.standard.currentLocation)
+//        let headingRadians = newHeading.trueHeading.degreesToRadians
+//        contentView.compass.rotate(bearingRadians: bearingRadians, headingRadians: headingRadians)
+    }
+    
+    func rotated(angle: CGFloat) {
+        contentView?.rotationResetButton.rotate(angle: angle)
     }
 
 }
