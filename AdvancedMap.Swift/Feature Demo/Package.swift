@@ -34,23 +34,14 @@ class Package : NSObject {
         
         var status = "Available";
         
-        let version =  String(info.getVersion())
-        
-        if (isSmallerThan1MB())
-        {
-            status += " v." + version + " (<1MB)";
-        }
-        else {
-            
-            let size = String(describing: info.getSize() / 1024 / 1024)
-            status += " v." + version + " (" + size + "MB)";
-        }
+        status += getVersionAndSize()
         
         // Check if the package is downloaded/is being downloaded (so that status is not null)
         if (self.status != nil) {
             
             if (self.status.getCurrentAction() == NTPackageAction.PACKAGE_ACTION_READY) {
                 status = "Ready";
+                status += getVersionAndSize()
             } else if (self.status.getCurrentAction() == NTPackageAction.PACKAGE_ACTION_WAITING) {
                 status = "Queued";
             } else {
@@ -63,11 +54,24 @@ class Package : NSObject {
                     status = "Removing";
                 }
                 
+                
                 status += " " + String(describing: self.status.getProgress()) + "%";
             }
         }
         
         return status;
+    }
+    
+    func getVersionAndSize() -> String {
+
+        let version =  String(info.getVersion())
+        let size = String(describing: info.getSizeInMB())
+        
+        if (isSmallerThan1MB()) {
+            return " v." + version + " (<1MB)";
+        }
+        
+        return " v." + version + " (" + size + " MB)";
     }
     
     static let READY = "READY"
