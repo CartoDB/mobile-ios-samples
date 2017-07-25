@@ -11,9 +11,9 @@ import UIKit
 
 class StylePopupContent : UIScrollView {
     
-    static let NutiteqSource = "carto.streets"
+    static let CartoVectorSource = "carto.streets"
     static let MapzenSource = "mapzen.osm"
-    static let CartoSource = "carto.osm"
+    static let CartoRasterSource = "carto.osm"
     
     static let Bright = "BRIGHT"
     static let Gray = "GRAY"
@@ -34,7 +34,7 @@ class StylePopupContent : UIScrollView {
         self.init(frame: CGRect.zero)
         
         cartoVector = StylePopupContentSection()
-        cartoVector.source = StylePopupContent.NutiteqSource
+        cartoVector.source = StylePopupContent.CartoVectorSource
         cartoVector.header.text = "CARTO VECTOR"
         cartoVector.addItem(text: StylePopupContent.Voyager, imageUrl: "style_image_nutiteq_voyager.png")
         cartoVector.addItem(text: StylePopupContent.Positron, imageUrl: "style_image_nutiteq_positron.png")
@@ -52,7 +52,7 @@ class StylePopupContent : UIScrollView {
         addSubview(mapzen)
         
         cartoRaster = StylePopupContentSection()
-        cartoRaster.source = StylePopupContent.CartoSource
+        cartoRaster.source = StylePopupContent.CartoRasterSource
         cartoRaster.header.text = "CARTO RASTER"
         cartoRaster.addItem(text: StylePopupContent.Positron, imageUrl: "style_image_carto_positron.png")
         cartoRaster.addItem(text: StylePopupContent.DarkMatter, imageUrl: "style_image_carto_darkmatter.png")

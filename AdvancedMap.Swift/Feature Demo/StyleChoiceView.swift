@@ -91,7 +91,7 @@ class StyleChoiceView : MapBaseView {
 
     func updateBaseLayer(selection: String, source: String) {
         
-        if (source == StylePopupContent.NutiteqSource) {
+        if (source == StylePopupContent.CartoVectorSource) {
             
             if (selection == StylePopupContent.Bright) {
                 currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_DEFAULT)
@@ -130,7 +130,7 @@ class StyleChoiceView : MapBaseView {
             
             currentLayer = NTVectorTileLayer(dataSource: datasource, decoder: decoder)
             
-        } else if (source == StylePopupContent.CartoSource) {
+        } else if (source == StylePopupContent.CartoRasterSource) {
             
             // We know that the value of raster will be Positron or Darkmatter,
             // as Nutiteq and Mapzen use vector tiles
@@ -146,7 +146,7 @@ class StyleChoiceView : MapBaseView {
             currentLayer = NTRasterTileLayer(dataSource: datasource)
         }
         
-        if (source == StylePopupContent.CartoSource) {
+        if (source == StylePopupContent.CartoRasterSource) {
             languageButton.disable()
         } else {
             languageButton.enable()
