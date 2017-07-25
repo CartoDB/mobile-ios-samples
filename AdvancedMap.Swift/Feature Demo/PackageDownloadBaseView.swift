@@ -88,9 +88,10 @@ class PackageDownloadBaseView  : DownloadBaseView {
         }
     }
     
-    func onStatusChanged(status: NTPackageStatus) {
+    func onStatusChanged(id: String, status: NTPackageStatus) {
         
         DispatchQueue.main.async {
+            
             if (self.currentDownload == nil) {
                 // TODO in case a download has been started and the controller is reloaded
                 return
@@ -116,6 +117,25 @@ class PackageDownloadBaseView  : DownloadBaseView {
     }
     
     var currentDownload: Package!
+    // TODO queue logic | setting currentDownload after download automatically continues 
+//    var downloadQueue = [Package]()
+//    
+//    func getCurrentDownload() -> Package? {
+//        
+//        if (downloadQueue.count == 0) {
+//            setDownloadQueue()
+//            if (downloadQueue.count == 0) {
+//                return nil
+//            }
+//        }
+//        
+//        return downloadQueue[0]
+//    }
+//    
+//    func setDownloadQueue() {
+//        
+//    }
+    
     
     func onPopupBackButtonClick() {
         

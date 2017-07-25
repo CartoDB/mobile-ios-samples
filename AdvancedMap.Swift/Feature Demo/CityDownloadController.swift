@@ -102,7 +102,7 @@ class CityDownloadController : BaseController, UITableViewDelegate, PackageDownl
         // No implemenetation
     }
     
-    func statusChanged(sender: PackageListener, status: NTPackageStatus) {
+    func statusChanged(sender: PackageListener, id: String, status: NTPackageStatus) {
         DispatchQueue.main.async {
             
             let progress = String(describing: Int(exactly: status.getProgress())!)

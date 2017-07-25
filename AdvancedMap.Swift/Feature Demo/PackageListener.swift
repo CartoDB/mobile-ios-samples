@@ -25,7 +25,7 @@ class PackageListener : NTPackageManagerListener {
     }
     
     override func onPackageStatusChanged(_ arg1: String!, version: Int32, status: NTPackageStatus!) {
-        delegate?.statusChanged(sender: self, status: status)
+        delegate?.statusChanged(sender: self, id: arg1, status: status)
     }
     
     override func onPackageFailed(_ arg1: String!, version: Int32, errorType: NTPackageErrorType) {
@@ -43,5 +43,5 @@ protocol PackageDownloadDelegate {
     
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType);
     
-    func statusChanged(sender: PackageListener, status: NTPackageStatus);
+    func statusChanged(sender: PackageListener, id: String, status: NTPackageStatus);
 }

@@ -58,7 +58,7 @@ class PackagePopupContent : UIView, UITableViewDataSource {
     func findAndUpdate(package: Package) {
         find(package: package)?.update(package: package)
     }
-    
+
     func find(package: Package) -> PackageCell? {
         for cell in table.visibleCells {
             let packageCell = cell as? PackageCell
@@ -70,7 +70,6 @@ class PackagePopupContent : UIView, UITableViewDataSource {
         
         return nil
     }
-    
 }
 
 

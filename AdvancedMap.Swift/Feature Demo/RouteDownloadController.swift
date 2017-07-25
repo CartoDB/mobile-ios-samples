@@ -237,7 +237,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         })
     }
     
-    func statusChanged(sender: PackageListener, status: NTPackageStatus) {
+    func statusChanged(sender: PackageListener, id: String, status: NTPackageStatus) {
         
         let progress = CGFloat(status.getProgress())
         var text = "Downloading map: " + String(describing: progress) + "%"

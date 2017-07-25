@@ -88,8 +88,8 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         // TODO
     }
     
-    func statusChanged(sender: PackageListener, status: NTPackageStatus) {
-        contentView.onStatusChanged(status: status)
+    func statusChanged(sender: PackageListener, id: String, status: NTPackageStatus) {
+        contentView.onStatusChanged(id: id, status: status)
     }
     
     func downloadComplete(sender: PackageListener, id: String) {
