@@ -96,18 +96,21 @@ class MapBaseView : UIView {
     
     func addBaseLayer() -> NTCartoOnlineVectorTileLayer {
         let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_VOYAGER)
+        layer?.setPreloading(true)
         map.getLayers().add(layer)
         return layer!
     }
     
     func addGrayBaseLayer() -> NTCartoOnlineVectorTileLayer {
         let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_POSITRON)
+        layer?.setPreloading(true)
         map.getLayers().add(layer)
         return layer!
     }
     
     func addDarkBaseLayer() -> NTCartoOnlineVectorTileLayer {
         let layer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DARKMATTER)
+        layer?.setPreloading(true)
         map.getLayers().add(layer)
         return layer!
     }

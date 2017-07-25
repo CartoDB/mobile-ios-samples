@@ -72,6 +72,7 @@ class DownloadBaseView : MapBaseView {
 
         if (offlineLayer == nil) {
             offlineLayer = NTCartoOfflineVectorTileLayer(packageManager: manager, style: .CARTO_BASEMAP_STYLE_DEFAULT)
+            offlineLayer?.setPreloading(true)
         }
         
         map.getLayers().insert(0, layer: offlineLayer)
