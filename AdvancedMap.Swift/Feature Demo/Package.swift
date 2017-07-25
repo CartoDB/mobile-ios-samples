@@ -82,6 +82,24 @@ class Package : NSObject {
     static let ACTION_DOWNLOAD = "DOWNLOAD"
     static let ACTION_REMOVE = "REMOVE"
     
+    var isDownloading: Bool {
+        
+        if (status == nil) {
+            return false
+        }
+        
+        return status.getCurrentAction() == NTPackageAction.PACKAGE_ACTION_DOWNLOADING
+    }
+    
+    var isQueued: Bool {
+        
+        if (status == nil) {
+            return false
+        }
+        
+        return status.getCurrentAction() == NTPackageAction.PACKAGE_ACTION_WAITING && !status.isPaused()
+    }
+    
     func getActionText() -> String {
         
         if (self.info == nil) {

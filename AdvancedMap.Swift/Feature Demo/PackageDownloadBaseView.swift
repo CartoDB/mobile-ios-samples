@@ -117,26 +117,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
     }
     
     var currentDownload: Package!
-    // TODO queue logic | setting currentDownload after download automatically continues 
-//    var downloadQueue = [Package]()
-//    
-//    func getCurrentDownload() -> Package? {
-//        
-//        if (downloadQueue.count == 0) {
-//            setDownloadQueue()
-//            if (downloadQueue.count == 0) {
-//                return nil
-//            }
-//        }
-//        
-//        return downloadQueue[0]
-//    }
-//    
-//    func setDownloadQueue() {
-//        
-//    }
-    
-    
+
     func onPopupBackButtonClick() {
         
         folder = folder.substring(to: folder.characters.count - 1)
@@ -213,6 +194,69 @@ class PackageDownloadBaseView  : DownloadBaseView {
         
         return packages
     }
+    
+    /*
+     * Download queue
+     */
+ 
+    var downloadQueue = [Package]()
+    
+    func getCurrentDownload() -> Package? {
+        
+        if (downloadQueue.count > 0) {
+            return downloadQueue[0]
+        }
+        
+        downloadQueue = getAllPackages().filter({ $0.isDownloading || $0.isQueued })
+        
+        if (downloadQueue.count == 0) {
+            return nil
+        }
+        
+        
+        return downloadQueue[0]
+    }
+    
+    func enqueue(package: Package) {
+        downloadQueue.append(package)
+    }
+    
+    func dequeue() {
+        downloadQueue.remove(at: 0)
+    }
+    
+    func getAllPackages() -> [Package] {
+        
+        var packages = [Package]()
+        
+        let vector = manager.getServerPackages()
+        let total = Int((vector?.size())!)
+        
+        for i in stride(from: 0, to: total, by: 1) {
+            
+            let info = vector?.get(Int32(i))
+            let name = info?.getName()
+            
+            let split = name?.components(separatedBy: "/")
+            
+            if (split?.count == 0) {
+                continue
+            }
+            
+            let modified = split?[(split?.count)! - 1]
+            
+            let package = Package()
+            package.id = info?.getPackageId()
+            package.name = modified
+            package.status = manager.getLocalPackageStatus(package.id, version: -1)
+            package.info = info
+            
+            packages.append(package)
+        }
+        
+        return packages
+    }
+    
 }
 
 
