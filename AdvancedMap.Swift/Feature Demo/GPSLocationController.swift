@@ -94,6 +94,11 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate, Rotatio
     }
     
     func rotated(angle: CGFloat) {
+        
+        if (contentView.isRotationInProgress) {
+            // Do not rotate when rotation reset animation is in progress
+            return
+        }
         contentView?.rotationResetButton.rotate(angle: angle)
     }
 

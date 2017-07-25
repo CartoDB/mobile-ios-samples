@@ -38,6 +38,7 @@ class GPSLocationView : MapBaseView {
         switchButton = SwitchButton(onImageUrl: "icon_track_location_on.png", offImageUrl: "icon_track_location_off.png")
         addButton(button: switchButton)
         
+        rotationResetButton.resetDuration = rotationDuration
         addSubview(rotationResetButton)
     }
     
@@ -52,6 +53,32 @@ class GPSLocationView : MapBaseView {
         let y = Device.trueY0() + padding
         
         rotationResetButton.frame = CGRect(x: x, y: y, width: width, height: height)
+    }
+    
+    override func addRecognizers() {
+        super.addRecognizers()
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.rotationButtonTapped(_:)))
+        rotationResetButton.addGestureRecognizer(recognizer)
+    }
+    
+    override func removeRecognizers() {
+        super.removeRecognizers()
+        rotationResetButton.gestureRecognizers?.forEach(rotationResetButton.removeGestureRecognizer)
+    }
+    
+    let rotationDuration: Float = 0.4
+    var isRotationInProgress = false
+    
+    func rotationButtonTapped(_ sender: UITapGestureRecognizer) {
+        isRotationInProgress = true
+        map.setRotation(0, durationSeconds: rotationDuration)
+        rotationResetButton.reset()
+        Timer.scheduledTimer(timeInterval: TimeInterval(rotationDuration + 0.1), target: self, selector: #selector(onRotationCompleted), userInfo: nil, repeats: false)
+    }
+    
+    func onRotationCompleted() {
+        isRotationInProgress = false
     }
     
     var userMarker: NTPoint!

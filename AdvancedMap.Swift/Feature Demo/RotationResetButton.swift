@@ -11,9 +11,11 @@ import UIKit
 
 class RotationResetButton: PopupButton {
 
+    let url = "icon_compass.png"
+    
     convenience init() {
         self.init(frame: CGRect.zero)
-        initialize(imageUrl: "icon_compass.png")
+        initialize(imageUrl: url)
     }
     
     var isInitialized = false
@@ -29,9 +31,18 @@ class RotationResetButton: PopupButton {
             }
         }
     }
-
+    
     func rotate(angle: CGFloat) {
-        imageView.transform = CGAffineTransform(rotationAngle: angle)
+        imageView.transform = CGAffineTransform(rotationAngle: angle.degreesToRadians)
+    }
+    
+    var resetDuration: Float = 0
+    
+    func reset() {
+        UIView.animate(withDuration: TimeInterval(resetDuration), animations: {
+            self.imageView.transform = CGAffineTransform.identity
+            self.imageView.image = UIImage(named: self.url)
+        })
     }
     
 //    func rotate(bearingRadians: CGFloat, headingRadians: Double) {
