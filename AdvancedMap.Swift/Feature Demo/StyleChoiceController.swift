@@ -56,6 +56,8 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         
         if (previous != nil) {
             previous.normalize()
+        } else {
+            contentView.baseMapContent.normalizeDefaultHighlight()
         }
         
         selection.highlight()

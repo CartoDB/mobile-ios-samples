@@ -11,7 +11,7 @@ import UIKit
 
 class StylePopupContent : UIScrollView {
     
-    static let NutiteqSource = "nutiteq.osm"
+    static let NutiteqSource = "carto.streets"
     static let MapzenSource = "mapzen.osm"
     static let CartoSource = "carto.osm"
     
@@ -86,7 +86,15 @@ class StylePopupContent : UIScrollView {
     }
     
     func highlightDefault() {
-        cartoVector.list[0].highlight()
+        getDefault().highlight()
+    }
+    
+    func normalizeDefaultHighlight() {
+        getDefault().normalize()
+    }
+    
+    func getDefault() -> StylePopupContentSectionItem {
+        return cartoVector.list[0]
     }
     
 }
