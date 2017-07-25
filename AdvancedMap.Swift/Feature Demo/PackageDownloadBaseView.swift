@@ -70,20 +70,23 @@ class PackageDownloadBaseView  : DownloadBaseView {
         } else {
             
             let action = package.getActionText()
-            currentDownload = package
             
             if (action == Package.ACTION_DOWNLOAD) {
-                
                 manager.startPackageDownload(package.id)
                 progressLabel.show()
+                enqueue(package: package)
             } else if (action == Package.ACTION_PAUSE) {
                 manager.setPackagePriority(package.id, priority: -1)
+                dequeue(package: package)
             } else if (action == Package.ACTION_RESUME) {
                 manager.setPackagePriority(package.id, priority: 0)
+                enqueue(package: package)
             } else if (action == Package.ACTION_CANCEL) {
                 manager.cancelPackageTasks(package.id)
+                dequeue(package: package)
             } else if (action == Package.ACTION_REMOVE) {
                 manager.startPackageRemove(package.id)
+                dequeue(package: package)
             }
         }
     }
@@ -92,32 +95,40 @@ class PackageDownloadBaseView  : DownloadBaseView {
         
         DispatchQueue.main.async {
             
-            if (self.currentDownload == nil) {
-                // TODO in case a download has been started and the controller is reloaded
-                return
+            let download: Package? = self.getCurrentDownload()
+            
+            if (download != nil) {
+                
+                let text = "Downloading " + download!.name + ": " + String(describing: status.getProgress()) + ""
+                self.progressLabel.update(text: text)
+                self.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
+                
+                // Need to get it again, as else we'd be change the status of this variable,
+                // not the one in the queue. However, no longer the need to null check
+                self.getCurrentDownload()!.status = status
             }
             
-            let text = "Downloading " + self.currentDownload.name + ": " + String(describing: status.getProgress()) + ""
-            self.progressLabel.update(text: text)
-            self.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
-            
-            self.currentDownload.status = self.manager.getLocalPackageStatus(self.currentDownload.id, version: -1)
-            self.packageContent.findAndUpdate(package: self.currentDownload, progress: CGFloat(status.getProgress()))
+            self.packageContent.findAndUpdate(id: id, status: status)
         }
     }
     
     func downloadComplete(id: String) {
         DispatchQueue.main.async {
             
-            if (self.currentDownload != nil) {
-                self.currentDownload.status = self.manager.getLocalPackageStatus(id, version: -1)
-                self.packageContent.findAndUpdate(package: self.currentDownload)
-            }
+            // TODO why won't it correctly update itself
+//            let download: Package? = self.getCurrentDownload()
+//            
+//            if (download != nil) {
+//                download!.status = self.manager.getLocalPackageStatus(id, version: -1)
+//                self.packageContent.findAndUpdate(package: download!)
+//                self.dequeue(download)
+//            }
+            
+            self.packageContent.addPackages(packages: self.getPackages())
+            self.packageContent.table.reloadData()
         }
     }
     
-    var currentDownload: Package!
-
     func onPopupBackButtonClick() {
         
         folder = folder.substring(to: folder.characters.count - 1)
@@ -204,17 +215,23 @@ class PackageDownloadBaseView  : DownloadBaseView {
     func getCurrentDownload() -> Package? {
         
         if (downloadQueue.count > 0) {
-            return downloadQueue[0]
+            let downloading = downloadQueue.filter({ $0.isDownloading })
+            if (downloading.count == 1) {
+                return downloading[0]
+            }
         }
         
         downloadQueue = getAllPackages().filter({ $0.isDownloading || $0.isQueued })
         
-        if (downloadQueue.count == 0) {
-            return nil
+        if (downloadQueue.count > 0) {
+            let downloading = downloadQueue.filter({ $0.isDownloading })
+
+            if (downloading.count == 1) {
+                return downloading[0]
+            }
         }
         
-        
-        return downloadQueue[0]
+        return nil
     }
     
     func enqueue(package: Package) {
@@ -223,6 +240,10 @@ class PackageDownloadBaseView  : DownloadBaseView {
     
     func dequeue() {
         downloadQueue.remove(at: 0)
+    }
+    
+    func dequeue(package: Package) {
+        downloadQueue.remove(object: package)
     }
     
     func getAllPackages() -> [Package] {
@@ -259,7 +280,15 @@ class PackageDownloadBaseView  : DownloadBaseView {
     
 }
 
-
+extension Array where Element: Equatable {
+    
+    // Remove first collection element that is equal to the given `object`:
+    mutating func remove(object: Element) {
+        if let index = index(of: object) {
+            remove(at: index)
+        }
+    }
+}
 
 
 

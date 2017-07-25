@@ -88,7 +88,7 @@ class Package : NSObject {
             return false
         }
         
-        return status.getCurrentAction() == NTPackageAction.PACKAGE_ACTION_DOWNLOADING
+        return status.getCurrentAction() == NTPackageAction.PACKAGE_ACTION_DOWNLOADING && !status.isPaused()
     }
     
     var isQueued: Bool {
@@ -115,7 +115,7 @@ class Package : NSObject {
         } else if (self.status.getCurrentAction() == NTPackageAction.PACKAGE_ACTION_WAITING) {
             return Package.ACTION_CANCEL
         }
-        
+
         if (status.isPaused()) {
             return Package.ACTION_RESUME
         } else {

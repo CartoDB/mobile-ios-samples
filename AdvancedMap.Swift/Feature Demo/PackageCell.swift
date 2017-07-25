@@ -151,14 +151,24 @@ class PackageCell : UITableViewCell {
         }
     }
     
+    func update(status: NTPackageStatus) {
+        self.package.status = status
+        update(package: package)
+        updateProgress(progress: CGFloat(status.getProgress()))
+    }
+    
     func update(package: Package, progress: CGFloat) {
         
         update(package: package)
+        updateProgress(progress: progress)
+    }
+    
+    func updateProgress(progress: CGFloat) {
         
         let width: CGFloat = ((frame.width - 2 * leftPadding) * progress) / 100
         let height: CGFloat = 1
         let y: CGFloat = frame.height - 4
-
+        
         progressIndicator.frame = CGRect(x: leftPadding, y: y, width: width, height: height)
     }
 }

@@ -10,7 +10,8 @@ import Foundation
 
 class BaseGeocodingView: PackageDownloadBaseView {
     
-    static let SOURCE = "geocoding:carto.geocode"
+    // TODO requires newest sdk
+    static let SOURCE = "geocoding:carto.streets"
     
     var source: NTLocalVectorDataSource!
     

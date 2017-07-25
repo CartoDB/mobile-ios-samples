@@ -59,11 +59,19 @@ class PackagePopupContent : UIView, UITableViewDataSource {
         find(package: package)?.update(package: package)
     }
 
+    func findAndUpdate(id: String, status: NTPackageStatus) {
+        find(id: id)?.update(status: status)
+    }
+    
     func find(package: Package) -> PackageCell? {
+        return find(id: package.id)
+    }
+    
+    func find(id: String) -> PackageCell? {
         for cell in table.visibleCells {
             let packageCell = cell as? PackageCell
             
-            if (packageCell?.package.id == package.id) {
+            if (packageCell?.package.id == id) {
                 return packageCell
             }
         }
