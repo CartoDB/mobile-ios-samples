@@ -106,7 +106,7 @@ class GeocodingView : BaseGeocodingView, UIGestureRecognizerDelegate {
     
     func showSearchBar() {
         inputField.isHidden = false
-        banner.isHidden = true
+        banner?.isHidden = true
     }
 }
 

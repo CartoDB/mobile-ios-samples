@@ -11,11 +11,11 @@ import Foundation
 class Routing {
     
     static let ROUTING_TAG = "routing:"
-    static let ROUTING_SOURCE = "valhalla.osm"
-    // TODO carto.streets.routing
-    
-    static let MAP_SOURCE = "nutiteq.osm"
+    static let OFFLINE_ROUTING_SOURCE = "carto.streets.routing"
+    static let ONLINE_ROUTING_SOURCE = "nutiteq.osm"
     static let TRANSPORT_MODE = ".car"
+
+    static let MAP_SOURCE = "carto.streets"
     
     var service: NTRoutingService?
     

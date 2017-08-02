@@ -208,7 +208,6 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
             
             self.contentView.showSearchBar()
         }
-        
     }
     
     func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {

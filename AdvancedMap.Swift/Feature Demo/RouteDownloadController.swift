@@ -39,7 +39,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         mapManager = NTCartoPackageManager(source: Routing.MAP_SOURCE, dataFolder: folder)
         
         folder = Utils.createDirectory(name: "routingpackages")
-        routingManager = NTCartoPackageManager(source: Routing.ROUTING_TAG + Routing.ROUTING_SOURCE, dataFolder: folder)
+        routingManager = NTCartoPackageManager(source: Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE, dataFolder: folder)
         
         setOnlineMode()
         
@@ -127,7 +127,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
     
     func setOnlineMode() {
         contentView.setOnlineMode()
-        routing.service = NTCartoOnlineRoutingService(source: Routing.MAP_SOURCE + Routing.TRANSPORT_MODE)
+        routing.service = NTCartoOnlineRoutingService(source: Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE)
     }
     
     func setOfflineMode() {
@@ -240,10 +240,10 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
     func statusChanged(sender: PackageListener, id: String, status: NTPackageStatus) {
         
         let progress = CGFloat(status.getProgress())
-        var text = "Downloading map: " + String(describing: progress) + "%"
+        var text = "Downloading map: " + String(describing: Int(progress)) + "%"
  
         if (type(of: sender) == RoutingPackageListener.self) {
-            text = "Downloading route: " + String(describing: progress) + "%"
+            text = "Downloading route: " + String(describing: Int(progress)) + "%"
         }
         
         DispatchQueue.main.async(execute: {
