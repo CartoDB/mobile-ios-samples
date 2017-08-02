@@ -18,7 +18,7 @@ class StyleChoiceView : MapBaseView {
     var baseMapContent: StylePopupContent!
     
     var currentLanguage: String = ""
-    var currentSource: String = "nutiteq.osm"
+    var currentSource: String = "carto.streets"
     var currentLayer: NTTileLayer!
 
     
@@ -93,13 +93,7 @@ class StyleChoiceView : MapBaseView {
         
         if (source == StylePopupContent.CartoVectorSource) {
             
-            if (selection == StylePopupContent.Bright) {
-                currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_DEFAULT)
-            } else if (selection == StylePopupContent.Gray) {
-                currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_GRAY)
-            } else if (selection == StylePopupContent.Dark) {
-                currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_DARK)
-            } else if (selection == StylePopupContent.Positron) {
+            if (selection == StylePopupContent.Positron) {
                 currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_POSITRON)
             } else if (selection == StylePopupContent.DarkMatter) {
                 currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_DARKMATTER)
