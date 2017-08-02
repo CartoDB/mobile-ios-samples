@@ -99,7 +99,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
             
             if (download != nil) {
                 
-                let text = "Downloading " + download!.name + ": " + String(describing: status.getProgress()) + ""
+                let text = "Downloading " + download!.name + ": " + String(describing: Int(status.getProgress())) + "%"
                 self.progressLabel.update(text: text)
                 self.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
                 
@@ -121,7 +121,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
 //            if (download != nil) {
 //                download!.status = self.manager.getLocalPackageStatus(id, version: -1)
 //                self.packageContent.findAndUpdate(package: download!)
-//                self.dequeue(download)
+//                self.dequeue(package: download!)
 //            }
             
             self.packageContent.addPackages(packages: self.getPackages())
