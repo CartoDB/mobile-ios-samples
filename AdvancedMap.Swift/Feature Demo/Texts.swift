@@ -10,16 +10,16 @@ import Foundation
 
 class Texts {
     
-    static let basemapInfoHeader = "CARTO BASE MAPS"
+    static let basemapInfoHeader = "ONLINE BASE MAPS AND STYLES"
     
     static let basemapInfoContainer =
-        "CARTO offers a variety of different base map styles, here are a few samples:\n \n" +
-        "Nutiteq Bright is your classic style, when you want to go old school, used mainly for routing, navigation etc.\n \n" +
-        "Nutiteq Gray is a bit more humble, shades of light gray, for when you need to display information on top of your base map: great for colorful visualizations.\n \n" +
-        "Nutiteq Dark is dark, heavy, like the night, it's for when you're feeling extra frisky, when you want to walk on the wild side or... just for visualizations that work better with a dark background. \n \n" +
-        "Mapzen and CARTO are similar in that way, the difference lies in the fact that CARTO's base maps use raster tiles, and mapzen's styles come from a different source."
+        "CARTO offers a variety of different base map styles, 3 of them are bundled :\n \n" +
+        "Voyager - generic color streetmap for routing, navigation etc.\n \n" +
+        "Positron - gray base map: great for colorful visualizations.\n \n" +
+        "Dark Matter - heavy, like the night, it's for when you're feeling extra frisky, when you want to walk on the wild side or... just for visualizations that work better with a dark background. \n \n" +
+        "Mapzen styles are provided as custom bundled styles, as CartoCSS in zip files. As their vector data is different, then they need also different styling."
     
-    static let routeDownloadInfoHeader = "ROUTE DOWNLOAD"
+    static let routeDownloadInfoHeader = "AREA ROUTE DOWNLOAD"
     
     static let routeDownloadInfoContainer =
         "CARTOMobileSDK 4.1.0 uses Valhalla routing. With that, we have the option to download a specific bounding box... and that is exactly what this example does.\n\n" +
@@ -28,14 +28,14 @@ class Texts {
         "Now you have the option to download that bounding box. After you download a route, a transparent visualization of the downloaded area appears on your map.\n\n" +
         "Oh, and downloaded areas stay forever. You're gonna have to uninstall the app to get rid of the bounding boxes. So be careful, don't fill your phone with bounding boxes!\n\n"
     
-    static let cityDownloadInfoHeader = "CITY DOWNLOAD"
+    static let cityDownloadInfoHeader = "CITY MAP DOWNLOAD"
     
     static let cityDownloadInfoContainer =
         "This example lets you download specific cities. Cities are also based on bounding boxes, we used http://bboxfinder.com to cut out the bounding boxes of specific cities.\n\n" +
         "Simply click on the city you wish to download, a progress bar will appear and your're free to browse the map as you wish. You will be zoomed in to the location when the download is completed.\n\n" +
         "If you wish to see more cities on this list, simply contact CARTO or, if you're the technical kind, find this app on github.com and make a pull request."
     
-    static let packageDownloadInfoHeader = "PACKAGE DOWNLOAD"
+    static let packageDownloadInfoHeader = "COUNTRY MAP DOWNLOAD"
     
     static let packageDownloadInfoContainer =
         "This example lets you download pre-defined packages. The packages are mostly country-based, but some larger countries, like The United States, Russia and Germany, are municipality (or oblast etc.) based.\n\n" +
@@ -51,10 +51,10 @@ class Texts {
         "All elements are also interactive. Go ahead, click on one!\n\n" +
         "In this example, the nml model is a file bundled with the app. NML is CARTO's own compact format for 2D and 3D models.\n\n"
     
-    static let clusteringInfoHeader = "VECTOR ELEMENT CLUSTERING"
+    static let clusteringInfoHeader = "POINT CLUSTERING"
     
     static let clusteringInfoContainer =
-        "CARTO offers a convenient way to build clusters.\n\n" +
+        "CARTO offers a convenient way to build point clusters.\n\n" +
         "Here's an example of the clustering of cities with over 15000 residents, which is approximately 20,000 cities around the world.\n\n" +
         "CARTO's Mobile SDK creates these clusters in a matter of milliseconds and animates them to place when zooming in, animates them back when zooming out.\n\n" +
         "With our sdk, You can style your clusters however you want (they are regular markers on the map), we decided to stick to the classic: white background, black number"
@@ -66,22 +66,22 @@ class Texts {
         "Simply click on the element you wish to edit, and then drag from the navy-colored dots to change its size or from the center to move it.\n\n" +
         "We even installed a small trash can in the top right corner so you can delete and element if you get sick of it.\n\n"
     
-    static let gpsLocationInfoHeader = "GPS LOCATION"
+    static let gpsLocationInfoHeader = "DEVICE LOCATION"
     
     static let gpsLocationInfoContainer =
         "CartoMobileSDK is also compatible with native APIs. You get latitude and longitude from CLLoationManager and you can easily place a highly customized marker on those coordinates.\n\n" +
         "This example also has a 'track location' switch, as it by default zooms to your location when it receives a location update. Turn it off if you wish to browse the map"
     
-    static let geocodingInfoHeader = "GEOCODING"
+    static let geocodingInfoHeader = "OFFLINE GEOCODING"
     
     static let geocodingInfoContainer =
-        "CartoMobileSDK version 4.1.0 introduces geocoding. You can now type in an adress and locate it on the map. And everything's offline!\n\n" +
+        "CartoMobileSDK version 4.1.0 introduces geocoding. You can now type in an address and locate it on the map. And everything's offline!\n\n" +
         "All you have to do is download the correct package and you're good to go\n\n" + "I don't really know what to say here any more. Geocoding is rather self-explanatory. It's an awesome feature, though, that's worth a mention!"
     
-    static let reverseGeocodingInfoHeader = "REVERSE GEOCODING"
+    static let reverseGeocodingInfoHeader = "REVERSE GEOCODING OFFLINE"
     
     static let reverseGeocodingInfoContainer =
-        "CartoMobileSDK version 4.1.0 introduces (reverse) geocoding. You simply click an area on the map, any location, to find out detailed information about it. And everything's offline!\n\n" +
+        "CartoMobileSDK version 4.1.0 introduces offline (reverse) geocoding. You simply click an area on the map, any location, to find out detailed information about it. And everything's offline!\n\n" +
         "All you have to do is download the correct package (current sample features Estonia) and you're good to go\n\n" +
         "I don't really know what to say here any more. Geocoding is rather self-explanatory. It's an awesome feature, though, that's worth a mention!"
 }
