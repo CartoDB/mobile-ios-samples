@@ -45,6 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BITHockeyManager.shared().configure(withIdentifier: identifier)
         BITHockeyManager.shared().start()
 
+        NTLog.setShowError(true)
+        NTLog.setShowDebug(true)
+        NTLog.setShowWarn(true)
+        NTLog.setShowInfo(true)
+        
         return true
     }
 
