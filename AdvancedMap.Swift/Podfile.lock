@@ -1,18 +1,18 @@
 PODS:
-  - CartoMobileSDK (4.0.2)
+  - CartoMobileSDK (4.1.0-beta.1)
   - HockeySDK/CrashOnlyLib (4.1.6)
   - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
-  - CartoMobileSDK (~> 4.0.2)
+  - CartoMobileSDK (~> 4.1.0-beta.1)
   - HockeySDK/CrashOnlyLib
   - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
-  CartoMobileSDK: d8397c233523fca24a985a030710015e6cadab30
+  CartoMobileSDK: 5249f1649d9e9f234e0706d5dab89593627c5615
   HockeySDK: 95db557d54489a570dcdefae0d02f98eecc279a3
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: e27bc0b240eae01b192e432683327f4d4de5b7da
+PODFILE CHECKSUM: 332422f485497e9f4582a03e038dde80cc75c2ff
 
 COCOAPODS: 1.2.0
