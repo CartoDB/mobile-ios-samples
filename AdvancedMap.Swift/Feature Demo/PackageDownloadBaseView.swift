@@ -16,6 +16,8 @@ class PackageDownloadBaseView  : DownloadBaseView {
     
     var manager: NTCartoPackageManager!
     
+    var containsCustomRegionPackages = false
+    
     func initializePackageDownloadContent() {
         
         countryButton = PopupButton(imageUrl: "icon_global.png")
@@ -152,6 +154,21 @@ class PackageDownloadBaseView  : DownloadBaseView {
         
         let vector = manager.getServerPackages()
         let total = Int((vector?.size())!)
+
+        if (folder == CUSTOM_REGION_FOLDER_NAME + "/") {
+            let custom = getCustomRegionPackages()
+            for package in custom {
+                packages.append(package)
+            }
+
+            return packages
+        }
+        
+        // Map package download screen's first folder features custom region packages (cities)
+        if (folder.isEmpty && containsCustomRegionPackages) {
+            packages.append(getCustomRegionFolder())
+        }
+        
         
         for i in stride(from: 0, to: total, by: 1) {
             
@@ -200,6 +217,28 @@ class PackageDownloadBaseView  : DownloadBaseView {
                 }
             }
             
+            packages.append(package)
+        }
+        
+        return packages
+    }
+    
+    let CUSTOM_REGION_FOLDER_NAME = "CUSTOM REGIONS"
+    
+    func getCustomRegionFolder() -> Package {
+        let package = Package()
+        package.name = CUSTOM_REGION_FOLDER_NAME
+        package.id = "NONE"
+        return package
+    }
+    
+    func getCustomRegionPackages() -> [Package] {
+        var packages = [Package]()
+        
+        for item in Cities.list {
+            let package = Package()
+            package.id = item.boundingBox.toString()
+            package.name = item.name
             packages.append(package)
         }
         

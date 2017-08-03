@@ -18,8 +18,20 @@ class Package : NSObject {
     
     var info: NTPackageInfo!
     
+    let BBOX_IDENTIFIER = "bbox("
+    var isCustomRegionPackage: Bool {
+        get {
+            if (id == nil) {
+                return false;
+            }
+            
+            return id.contains(BBOX_IDENTIFIER)
+        }
+    }
+    
     func isGroup() -> Bool {
-        return status == nil && info == nil
+        // Custom region packages will have status & info == nil, but they're not groups
+        return status == nil && info == nil && !isCustomRegionPackage
     }
     
     func isSmallerThan1MB() -> Bool {
