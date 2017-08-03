@@ -1,5 +1,6 @@
 
 #import "OfflineRoutingBaseController.h"
+#import "Sources.h"
 
 @implementation OfflineRoutingBaseController
 
@@ -11,7 +12,8 @@
     
     [[NSFileManager defaultManager] createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:&error];
     
-    self.packageManager = [[NTCartoPackageManager alloc] initWithSource:[self getSource] dataFolder:directory];
+    NSString *source = [ROUTING_TAG stringByAppendingString: OFFLINE_ROUTING_SOURCE];
+    self.packageManager = [[NTCartoPackageManager alloc] initWithSource:source dataFolder:directory];
     
     // Create offline routing service connected to package manager
     self.service = [self getService];
@@ -44,11 +46,6 @@
     
     self._packageManagerListener = nil;
     [self.packageManager setPackageManagerListener:self._packageManagerListener];
-}
-
-- (NSString *) getSource
-{
-    return @"routing:nutiteq.osm.car";
 }
 
 - (NSString *) getPackageDirectory

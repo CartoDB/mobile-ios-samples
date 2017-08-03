@@ -6,22 +6,19 @@
 //  Copyright © 2017 Nutiteq. All rights reserved.
 //
 
-#ifndef Sources_h
-#define Sources_h
-
-
-#endif /* Sources_h */
+#import "Sources.h"
 
 @implementation Sources
 
-    static NSString *CARTO_VECTOR = "carto.streets"
-    static NSString *MAPZEN = "mapzen.osm"
-    static NSString *CARTO_RASTER = "carto.osm"
+NSString *const CARTO_VECTOR_SOURCE = @"carto.streets";
+NSString *const MAPZEN_SOURCE = @"mapzen.osm";
+NSString *const CARTO_RASTER_SOURCE = @"carto.osm";
 
-    static NSString *OFFLINE_ROUTING = "carto.streets"
-    static NSString *ONLINE_ROUTING = "nutiteq.osm"
+NSString *const OFFLINE_ROUTING_SOURCE = @"carto.streets";
+NSString *const ONLINE_ROUTING_SOURCE = @"nutiteq.osm";
 
-    static NSString *ROUTING_TAG = "routing:"
-    static NSString *TRANSPORT_MODE_CART = ".car"
+NSString *const ROUTING_TAG = @"routing:";
+NSString *const TRANSPORT_MODE_CAR = @".car";
+
 
 @end

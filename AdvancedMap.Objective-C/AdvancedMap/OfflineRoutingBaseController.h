@@ -14,7 +14,6 @@
 @property NTCartoPackageManager* packageManager;
 @property RoutePackageManagerListener* _packageManagerListener;
 
-- (NSString *) getSource;
 - (NSString *)getPackageDirectory;
 - (NSString *)getAppSupportDirectory;
 - (NTRoutingService *)getService;
