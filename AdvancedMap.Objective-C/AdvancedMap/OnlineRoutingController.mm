@@ -15,7 +15,7 @@
     self.service = [[NTCartoOnlineRoutingService alloc] initWithSource:source];
     
     // There are no packages to download, simply set the flag to true
-    self.isPackageDownloaded = YES;
+    self.mapListener.isPackageDownloaded = YES;
     
     // Call base class where most other setup is done
     [super viewDidLoad];

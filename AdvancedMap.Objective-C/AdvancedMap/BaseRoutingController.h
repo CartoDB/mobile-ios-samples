@@ -11,6 +11,8 @@
 @property (strong, nonatomic) NTLocalVectorDataSource* routeDataSource;
 @property (strong, nonatomic) NTBalloonPopup* oldClickLabel;
 
+@property BOOL isPackageDownloaded;
+
 @end;
 
 @interface BaseRoutingController : MapBaseController
@@ -31,7 +33,5 @@
 
 - (void)setStart:(NTMapPos*)mapPos;
 - (void)setStop:(NTMapPos*)mapPos;
-
-@property BOOL isPackageDownloaded;
 
 @end

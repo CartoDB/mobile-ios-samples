@@ -61,7 +61,7 @@
 
 - (NTRoutingService *)getService
 {
-    return [[NTPackageManagerRoutingService alloc] initWithPackageManager:self.packageManager];
+    return [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.packageManager];
 }
 
 @end

@@ -19,7 +19,7 @@
         [_packageManager startPackageDownload: package];
     } else if ([status getCurrentAction] == NT_PACKAGE_ACTION_READY) {
         
-        ((OfflineRoutingBaseController*)self.routingController).isPackageDownloaded = YES;
+        ((OfflineRoutingBaseController*)self.routingController).mapListener.isPackageDownloaded = YES;
         
         [(OfflineRoutingBaseController*)self.routingController alert:[NSString stringWithFormat:@"Routing package %@ downloaded", package ]];
     }
@@ -41,7 +41,7 @@
 
 - (void)onPackageUpdated:(NSString*)packageId version:(int)version
 {
-    ((OfflineRoutingBaseController*)self.routingController).isPackageDownloaded = YES;
+    ((OfflineRoutingBaseController*)self.routingController).mapListener.isPackageDownloaded = YES;
 }
 
 - (void)onPackageCancelled:(NSString*)packageId version:(int)version

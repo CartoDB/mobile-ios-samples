@@ -32,7 +32,7 @@
     
     // Zoom to center of bbox
     [self.mapView setFocusPos:[proj fromWgs84:[self.bbox getCenter]]  durationSeconds:0];
-    [self.mapView setZoom:8 durationSeconds:0];
+    [self.mapView setZoom:10 durationSeconds:0];
     
     self._packageManagerListener.PackageName = [self.bbox toString];
 }
@@ -40,23 +40,11 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [self.packageManager startPackageDownload:self._packageManagerListener.PackageName];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [self alert:@"This example downloads a routing package (not a map package) of New York"];
-}
-
--(NSString *)getSource
-{
-    return @"routing:valhalla.osm";
-}
-
--(NTRoutingService *)getService
-{
-    return [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.packageManager];
 }
 
 -(NSString *)getPackageDirectory
