@@ -157,11 +157,11 @@ NTTileLayer *currentLayer;
         if ([currentOSM isEqualToString:@"nutiteq.osm"]) {
             
             if ([currentSelection isEqualToString:@"default"]) {
-                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
             } else if ([currentSelection isEqualToString:@"gray"]) {
-                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_GRAY];
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_POSITRON];
             } else if ([currentSelection isEqualToString:@"dark"]) {
-                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARK];
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARKMATTER];
             }
         } else if ([currentOSM isEqualToString:@"mapzen.osm"]) {
             

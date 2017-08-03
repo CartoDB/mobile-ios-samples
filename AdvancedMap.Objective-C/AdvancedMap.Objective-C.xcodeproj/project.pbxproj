@@ -196,6 +196,7 @@
 		ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADED5F111D92A31800AB2D13 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
 		ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
+		ADF672581F33106B00527D49 /* Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sources.m; sourceTree = "<group>"; };
 		ADFC10241E76EAFB009DC903 /* BoundingBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoundingBox.h; sourceTree = "<group>"; };
 		ADFC10251E76EB10009DC903 /* BoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundingBox.m; sourceTree = "<group>"; };
 		ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfflineRoutingBaseController.h; sourceTree = "<group>"; };
@@ -300,6 +301,7 @@
 				2AD24F8418FEDB89000969F4 /* Images.xcassets */,
 				2AD24F6918FEDAA6000969F4 /* AppDelegate.h */,
 				2AD24F6A18FEDAA6000969F4 /* AppDelegate.m */,
+				ADF672581F33106B00527D49 /* Sources.m */,
 			);
 			name = "AdvancedMap.Objective-C";
 			path = AdvancedMap;
@@ -563,6 +565,7 @@
 				ADA114141DA399FF00481261 /* Frameworks */,
 				ADA114151DA399FF00481261 /* Resources */,
 				5419D738B107D73308287310 /* [CP] Copy Pods Resources */,
+				C4E9255CBDF4C2D40F7B914C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -677,7 +680,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5419D738B107D73308287310 /* [CP] Copy Pods Resources */ = {
@@ -695,6 +698,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C4E9255CBDF4C2D40F7B914C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D23D83F2BDC0EEB488B16630 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -707,7 +725,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DAB242C9203C6AEECA59E6DF /* [CP] Copy Pods Resources */ = {

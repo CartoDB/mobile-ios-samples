@@ -138,7 +138,7 @@
 
 - (void)setbaseLayer
 {
-    NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc]initWithPackageManager:self.manager style:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc]initWithPackageManager:self.manager style:NT_CARTO_BASEMAP_STYLE_VOYAGER];
     [[self.mapView getLayers] add:layer];
 }
 
