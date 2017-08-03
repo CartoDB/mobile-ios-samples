@@ -22,15 +22,15 @@
     [super viewDidLoad];
     
     self._packageManagerListener = [[RoutePackageManagerListener alloc] init];
+    
+    // Register this controller with listener to receive notifications about events
+    [self._packageManagerListener setRoutingController:self];
+    [self._packageManagerListener setPackageManager:self.packageManager];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    // Register this controller with listener to receive notifications about events
-    [self._packageManagerListener setRoutingController:self];
-    [self._packageManagerListener setPackageManager:self.packageManager];
     
     [self.packageManager setPackageManagerListener:self._packageManagerListener];
     
@@ -44,8 +44,7 @@
     
     [self.packageManager stop:YES];
     
-    self._packageManagerListener = nil;
-    [self.packageManager setPackageManagerListener:self._packageManagerListener];
+    [self.packageManager setPackageManagerListener:nil];
 }
 
 - (NSString *) getPackageDirectory

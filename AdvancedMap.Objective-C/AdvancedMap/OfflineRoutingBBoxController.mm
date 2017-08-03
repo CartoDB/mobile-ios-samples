@@ -43,6 +43,7 @@
     
     [self.packageManager startPackageDownload:self._packageManagerListener.PackageName];
 }
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [self alert:@"This example downloads a routing package (not a map package) of New York"];
