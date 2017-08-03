@@ -8,88 +8,58 @@
 
 import Foundation
 
-class GeocodingController : BaseController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, PackageDownloadDelegate, ClickDelegate {
-    
-    var contentView: GeocodingView!
-    
-    var service: NTPackageManagerGeocodingService!
-    
+class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITextFieldDelegate {
+
     var searchQueueSize: Int = 0
     
     var addresses = [NTGeocodingResult]()
     
     static let identifier = "AutocompleteRowId"
     
-    var listener: PackageListener?
+    var service: NTGeocodingService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contentView = GeocodingView()
         view = contentView
-        
-        listener = PackageListener()
-        
-        let folder = Utils.createDirectory(name: "geocodingpackages")
+  
+        let folder = Utils.createDirectory(name: BaseGeocodingView.PACKAGE_FOLDER)
         contentView.manager = NTCartoPackageManager(source: BaseGeocodingView.SOURCE, dataFolder: folder)
         
-        service = NTPackageManagerGeocodingService(packageManager: contentView.manager)
+        setOnlineMode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        contentView.addRecognizers()
-        
-        listener?.delegate = self
-        
-        contentView.inputField.delegate = self
-        contentView.resultTable.delegate = self
-        contentView.resultTable.dataSource = self
-        
-        contentView.manager?.setPackageManagerListener(listener)
-        contentView.manager?.start()
-        contentView.manager?.startPackageListDownload()
-        
-        contentView.packageContent.table.delegate = self
-        contentView.popup.popup.header.backButton.delegate = self
+   
+        (contentView as! GeocodingView).inputField.delegate = self
+        (contentView as! GeocodingView).resultTable.delegate = self
+        (contentView as! GeocodingView).resultTable.dataSource = self
         
         if (contentView.hasLocalPackages()) {
             contentView.showLocalPackages()
         } else {
-            contentView.showBannerInsteadOfSearchBar()
+            (contentView as! GeocodingView).showBannerInsteadOfSearchBar()
         }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        contentView.removeRecognizers()
-        
-        listener?.delegate = nil
-        
-        contentView.inputField.delegate = nil
-        contentView.resultTable.delegate = nil
-        contentView.resultTable.dataSource = nil
-        
-        contentView.manager?.setPackageManagerListener(nil)
-        contentView.manager?.stop(false)
+
+        (contentView as! GeocodingView).inputField.delegate = nil
+        (contentView as! GeocodingView).resultTable.delegate = nil
+        (contentView as! GeocodingView).resultTable.dataSource = nil
     }
-    
-    func click(sender: UIView) {
-        // Currently the only generic button on this page is the popup back button,
-        // no need to type check.
-        contentView.onPopupBackButtonClick()
-    }
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        contentView.closeTextField()
-        geocode(text: contentView.inputField.text!, autocomplete: false)
+        (contentView as! GeocodingView).closeTextField()
+        geocode(text: (contentView as! GeocodingView).inputField.text!, autocomplete: false)
         return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        contentView.resultTable.isHidden = false
+        (contentView as! GeocodingView).resultTable.isHidden = false
         
         let substring = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
         
@@ -108,23 +78,24 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         let result = addresses[indexPath.row]
         cell.tag = indexPath.row
         cell.textLabel?.text = result.getPrettyAddress()
-        cell.textLabel?.font = contentView.font
+        cell.textLabel?.font = (contentView as! GeocodingView).font
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = Colors.lightTransparentGray
         cell.textLabel?.backgroundColor = Colors.fromRgba(red: 0, green: 0, blue: 0, alpha: 0)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        // We have two tableviews in this controller, one for search results and the other for packages
-        if (tableView == contentView.resultTable) {
-            contentView.closeTextField()
+        // This controller contains two tableviews: package table and autocomplete table,
+        // both delegates direct here. Make the distinction:
+        if (tableView.isEqual((contentView as! GeocodingView).resultTable)) {
+            (contentView as! GeocodingView).closeTextField()
             let result = addresses[indexPath.row]
             showResult(result: result)
         } else {
-            let package = contentView.packageContent.packages[indexPath.row]
-            contentView.onPackageClick(package: package)
+            // Base class handles package table actions
+            super.tableView(tableView, didSelectRowAt: indexPath)
         }
     }
     
@@ -145,7 +116,12 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
             
             let request = NTGeocodingRequest(projection: self.contentView.projection, query: text)
             
-            self.service.setAutocomplete(autocomplete)
+            if (self.service is NTPackageManagerGeocodingService) {
+                (self.service as! NTPackageManagerGeocodingService).setAutocomplete(autocomplete)
+            } else {
+                (self.service as! NTPeliasGeocodingService).setAutocomplete(autocomplete)
+            }
+            
             let results = self.service.calculateAddresses(request)
             
             let duration = NSDate.timeIntervalSinceReferenceDate - start
@@ -164,7 +140,7 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
                         
                     }
                     
-                    self.contentView.resultTable.reloadData()
+                    (self.contentView as! GeocodingView).resultTable.reloadData()
                     return
                 }
                 
@@ -185,35 +161,14 @@ class GeocodingController : BaseController, UITableViewDelegate, UITableViewData
         
         self.contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
     }
-
     
-    func listDownloadComplete() {
-        contentView.updatePackages()
+    override func setOnlineMode() {
+        service = NTPeliasGeocodingService(apiKey: API_KEY)
     }
     
-    func listDownloadFailed() {
-        // TODO
+    override func setOfflineMode() {
+        service = NTPackageManagerGeocodingService(packageManager: contentView.manager)
     }
-    
-    func statusChanged(sender: PackageListener, id: String, status: NTPackageStatus) {
-        contentView.onStatusChanged(id: id, status: status)
-    }
-    
-    func downloadComplete(sender: PackageListener, id: String) {
-        contentView.downloadComplete(id: id)
-        DispatchQueue.main.async {
-            let package = self.contentView.manager?.getLocalPackage(id)!
-            let text = "DOWNLOADED MAP (" + String(describing: (package?.getSizeInMB())!) + "MB)"
-            self.contentView.progressLabel.complete(message: text)
-            
-            self.contentView.showSearchBar()
-        }
-    }
-    
-    func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
-        // TODO
-    }
-    
 }
 
 

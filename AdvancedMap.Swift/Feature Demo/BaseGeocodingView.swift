@@ -10,6 +10,8 @@ import Foundation
 
 class BaseGeocodingView: PackageDownloadBaseView {
     
+    static let PACKAGE_FOLDER = "geocodingpackages"
+    
     static let SOURCE = "geocoding:carto.streets"
     
     var source: NTLocalVectorDataSource!
@@ -21,7 +23,7 @@ class BaseGeocodingView: PackageDownloadBaseView {
     func initializeGeocodingView(popupTitle: String, popupDescription: String) {
         
         initialize()
-        initializeDownloadContent(withSwitch: false)
+        initializeDownloadContent(withSwitch: true)
         initializePackageDownloadContent()
         
         infoContent.setText(headerText: popupTitle, contentText: popupDescription)
