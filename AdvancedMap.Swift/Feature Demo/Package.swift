@@ -18,8 +18,25 @@ class Package : NSObject {
     
     var info: NTPackageInfo!
     
+    static let BBOX_IDENTIFIER = "bbox("
+    var isCustomRegionPackage: Bool {
+        get {
+            if (id == nil) {
+                return false;
+            }
+            
+            return id.contains(Package.BBOX_IDENTIFIER)
+        }
+    }
+    
+    static let CUSTOM_REGION_FOLDER_NAME = "CUSTOM REGIONS"
+    var isCustomRegionFolder: Bool {
+        get { return name == Package.CUSTOM_REGION_FOLDER_NAME }
+    }
+    
     func isGroup() -> Bool {
-        return status == nil && info == nil
+        // Custom region packages will have status & info == nil, but they're not groups
+        return status == nil && info == nil && !isCustomRegionPackage
     }
     
     func isSmallerThan1MB() -> Bool {
@@ -27,11 +44,7 @@ class Package : NSObject {
     }
     
     func getStatusText() -> String {
-        
-        if (info == nil) {
-            return "";
-        }
-        
+
         var status = "Available";
         
         status += getVersionAndSize()
@@ -63,7 +76,11 @@ class Package : NSObject {
     }
     
     func getVersionAndSize() -> String {
-
+        
+        if (isCustomRegionPackage) {
+            return "";
+        }
+        
         let version =  String(info.getVersion())
         let size = String(describing: info.getSizeInMB())
         
@@ -101,11 +118,7 @@ class Package : NSObject {
     }
     
     func getActionText() -> String {
-        
-        if (self.info == nil) {
-            return "NONE"
-        }
-        
+
         if (self.status == nil) {
             return Package.ACTION_DOWNLOAD
         }

@@ -8,12 +8,9 @@
 
 import Foundation
 
-class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate, UITableViewDelegate, PackageDownloadDelegate, ClickDelegate {
-    
-    var contentView: ReverseGeocodingView!
+class ReverseGecodingController : BaseGeocodingController, ReverseGeocodingEventDelegate {
     
     var geocodingListener: ReverseGeocodingEventListener!
-    var packageListener: PackageListener?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,47 +21,26 @@ class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate,
         geocodingListener = ReverseGeocodingEventListener()
         geocodingListener.projection = contentView.projection
         
-        packageListener = PackageListener()
-        
-        let folder = Utils.createDirectory(name: "geocodingpackages")
+        let folder = Utils.createDirectory(name: BaseGeocodingView.PACKAGE_FOLDER)
         contentView.manager = NTCartoPackageManager(source: BaseGeocodingView.SOURCE, dataFolder: folder)
-
-        geocodingListener.service = NTPackageManagerReverseGeocodingService(packageManager: contentView.manager)
+        
+        setOnlineMode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        contentView.addRecognizers()
-        
         geocodingListener.delegate = self
-        packageListener?.delegate = self
-        
+
         contentView.map.setMapEventListener(geocodingListener)
-        
-        contentView.manager?.setPackageManagerListener(packageListener)
-        contentView.manager?.start()
-        contentView.manager?.startPackageListDownload()
-        
-        contentView.packageContent.table.delegate = self
-        contentView.popup.popup.header.backButton.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        contentView.removeRecognizers()
-        
         geocodingListener.delegate = nil
-        packageListener?.delegate = nil
         
         contentView.map.setMapEventListener(nil)
-        
-        contentView.manager?.setPackageManagerListener(nil)
-        contentView.manager?.stop(false)
-        
-        contentView.packageContent.table.delegate = nil
-        contentView.popup.popup.header.backButton.delegate = nil
     }
     
     func foundResult(result: NTGeocodingResult!) {
@@ -79,40 +55,16 @@ class ReverseGecodingController : BaseController, ReverseGeocodingEventDelegate,
 
         let goToPosition = false
         
-        contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
+        (contentView as! ReverseGeocodingView).showResult(result: result, title: title, description: description, goToPosition: goToPosition)
     }
     
-    func click(sender: UIView) {
-        // Currently the only generic button on this page is the popup back button,
-        // no need to type check.
-        contentView.onPopupBackButtonClick()
+    override func setOnlineMode() {
+        geocodingListener.service = NTPeliasOnlineReverseGeocodingService(apiKey: API_KEY)
     }
     
-    func listDownloadComplete() {
-        contentView.updatePackages()
+    override func setOfflineMode() {
+        geocodingListener.service = NTPackageManagerReverseGeocodingService(packageManager: contentView.manager)
     }
-    
-    func listDownloadFailed() {
-        // TODO
-    }
-    
-    func statusChanged(sender: PackageListener, id: String, status: NTPackageStatus) {
-        contentView.onStatusChanged(id: id, status: status)
-    }
-    
-    func downloadComplete(sender: PackageListener, id: String) {
-        contentView.downloadComplete(id: id)
-    }
-    
-    func downloadFailed(sender: PackageListener, errorType: NTPackageErrorType) {
-        // TODO
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let package = contentView.packageContent.packages[indexPath.row]
-        contentView.onPackageClick(package: package)
-    }
-    
 }
 
 

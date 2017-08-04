@@ -25,7 +25,7 @@
     [self.mapView setFocusPos:[proj fromWgs84:andorra]  durationSeconds:0];
     [self.mapView setZoom:10 durationSeconds:0];
     
-    self._packageManagerListener.PackageName = @"AD-routing";
+    self._packageManagerListener.PackageName = @"AD";
 }
 
 -(void)viewDidAppear:(BOOL)animated

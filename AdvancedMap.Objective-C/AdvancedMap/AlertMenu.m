@@ -17,7 +17,7 @@
     [label setNumberOfLines:0];
     
     [label setTextColor:[UIColor whiteColor]];
-    [label setBackgroundColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.5]];
+    [label setBackgroundColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.7]];
     [[label layer]setCornerRadius:5];
     [label setClipsToBounds:YES];
     
@@ -32,7 +32,7 @@
 {
     [[[UIApplication sharedApplication] keyWindow] addSubview:self];
     
-    [UIView animateWithDuration:0.5 animations:^(void) {
+    [UIView animateWithDuration:1.5 animations:^(void) {
         self.alpha = 1;
     }];
     
@@ -50,7 +50,7 @@
                                       attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:12] }
                                          context:nil];
     
-    CGFloat padding = 10;
+    CGFloat padding = 20;
     
     CGFloat w = self.frame.size.width / 2 + 2 * padding;
     CGFloat h = size2.size.height + 2 * padding;

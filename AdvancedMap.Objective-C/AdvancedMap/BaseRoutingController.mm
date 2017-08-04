@@ -71,13 +71,13 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.mapListener = nil;
-    [self.mapView setMapEventListener:self.mapListener];
+    
+    [self.mapView setMapEventListener:nil];
 }
 
 -(void)setStart:(NTMapPos *)mapPos
 {
-    if (!self.isPackageDownloaded) {
+    if (!self.mapListener.isPackageDownloaded) {
         // Only OfflineRoutingController uses this flag. Is simply set to true in OnlineRoutingController's viewDidload
         [self alert:@"Your package doesn't seem to be ready yet"];
         return;
@@ -247,6 +247,10 @@
 -(void)onMapClicked:(NTMapClickInfo*)mapClickInfo
 {
     // set start and end pos
+    
+    if (!self.isPackageDownloaded) {
+        return;
+    }
     
     // Remove old click label
     if (_oldClickLabel)

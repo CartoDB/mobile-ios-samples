@@ -152,6 +152,21 @@ class PackageDownloadBaseView  : DownloadBaseView {
         
         let vector = manager.getServerPackages()
         let total = Int((vector?.size())!)
+
+        if (folder == Package.CUSTOM_REGION_FOLDER_NAME + "/") {
+            let custom = getCustomRegionPackages()
+            for package in custom {
+                packages.append(package)
+            }
+
+            return packages
+        }
+        
+        // Map package download screen's first folder features custom region packages (cities)
+        if (folder.isEmpty) {
+            packages.append(getCustomRegionFolder())
+        }
+        
         
         for i in stride(from: 0, to: total, by: 1) {
             
@@ -200,6 +215,27 @@ class PackageDownloadBaseView  : DownloadBaseView {
                 }
             }
             
+            packages.append(package)
+        }
+        
+        return packages
+    }
+    
+    func getCustomRegionFolder() -> Package {
+        let package = Package()
+        package.name = Package.CUSTOM_REGION_FOLDER_NAME
+        package.id = "NONE"
+        return package
+    }
+    
+    func getCustomRegionPackages() -> [Package] {
+        var packages = [Package]()
+        
+        for item in Cities.list {
+            let package = Package()
+            package.id = item.boundingBox.toString()
+            package.name = item.name
+            package.status = manager.getLocalPackageStatus(package.id, version: -1)
             packages.append(package)
         }
         

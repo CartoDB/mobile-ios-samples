@@ -1,5 +1,6 @@
 
 #import "OfflineRoutingBaseController.h"
+#import "Sources.h"
 
 @implementation OfflineRoutingBaseController
 
@@ -11,7 +12,8 @@
     
     [[NSFileManager defaultManager] createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:&error];
     
-    self.packageManager = [[NTCartoPackageManager alloc] initWithSource:[self getSource] dataFolder:directory];
+    NSString *source = [ROUTING_TAG stringByAppendingString: OFFLINE_ROUTING_SOURCE];
+    self.packageManager = [[NTCartoPackageManager alloc] initWithSource:source dataFolder:directory];
     
     // Create offline routing service connected to package manager
     self.service = [self getService];
@@ -20,15 +22,15 @@
     [super viewDidLoad];
     
     self._packageManagerListener = [[RoutePackageManagerListener alloc] init];
+    
+    // Register this controller with listener to receive notifications about events
+    [self._packageManagerListener setRoutingController:self];
+    [self._packageManagerListener setPackageManager:self.packageManager];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    // Register this controller with listener to receive notifications about events
-    [self._packageManagerListener setRoutingController:self];
-    [self._packageManagerListener setPackageManager:self.packageManager];
     
     [self.packageManager setPackageManagerListener:self._packageManagerListener];
     
@@ -42,13 +44,7 @@
     
     [self.packageManager stop:YES];
     
-    self._packageManagerListener = nil;
-    [self.packageManager setPackageManagerListener:self._packageManagerListener];
-}
-
-- (NSString *) getSource
-{
-    return @"routing:nutiteq.osm.car";
+    [self.packageManager setPackageManagerListener:nil];
 }
 
 - (NSString *) getPackageDirectory
@@ -65,7 +61,7 @@
 
 - (NTRoutingService *)getService
 {
-    return [[NTPackageManagerRoutingService alloc] initWithPackageManager:self.packageManager];
+    return [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.packageManager];
 }
 
 @end

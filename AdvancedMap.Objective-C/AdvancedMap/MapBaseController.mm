@@ -8,7 +8,7 @@
     self.mapView = [[NTMapView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.view = self.mapView;
     
-    NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
     
     [[self.mapView getLayers] add:layer];
     

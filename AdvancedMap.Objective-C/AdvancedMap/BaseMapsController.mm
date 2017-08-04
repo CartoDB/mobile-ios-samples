@@ -1,6 +1,7 @@
 
 #import "MapBaseController.h"
 #import "VectorTileListener.h"
+#import "Sources.h"
 
 /** OptionLabel **/
 @interface OptionLabel : UILabel
@@ -117,7 +118,7 @@ NTTileLayer *currentLayer;
     [self.menu setInitialValues];
     
     // Default values for osm, tiletype and style, respectively
-    [self updateBaseLayer:@"nutiteq.osm" :@"Vector" :@"default"];
+    [self updateBaseLayer:CARTO_VECTOR_SOURCE :@"Vector" :@"voyager"];
     
     // Default language
     [self updateLanguage:@""];
@@ -154,16 +155,16 @@ NTTileLayer *currentLayer;
     
     if ([type isEqualToString:@"Vector"]) {
         
-        if ([currentOSM isEqualToString:@"nutiteq.osm"]) {
+        if ([currentOSM isEqualToString:CARTO_VECTOR_SOURCE]) {
             
-            if ([currentSelection isEqualToString:@"default"]) {
-                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
-            } else if ([currentSelection isEqualToString:@"gray"]) {
-                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_GRAY];
-            } else if ([currentSelection isEqualToString:@"dark"]) {
-                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARK];
+            if ([currentSelection isEqualToString:@"voyager"]) {
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
+            } else if ([currentSelection isEqualToString:@"positron"]) {
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_POSITRON];
+            } else if ([currentSelection isEqualToString:@"darkmatter"]) {
+                currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARKMATTER];
             }
-        } else if ([currentOSM isEqualToString:@"mapzen.osm"]) {
+        } else if ([currentOSM isEqualToString:MAPZEN_SOURCE]) {
             
             NSString *fileName = [[currentSelection componentsSeparatedByString:@":"] objectAtIndex:0];
             NSString *styleName = [[currentSelection componentsSeparatedByString:@":"] objectAtIndex:1];
@@ -259,16 +260,16 @@ NTTileLayer *currentLayer;
 {
     return @[
                  @{
-                     @"OSM": @{ @"name": @"Nutiteq", @"value": @"nutiteq.osm" },
+                     @"OSM": @{ @"name": @"Carto Vector", @"value": CARTO_VECTOR_SOURCE },
                      @"Type": @"Vector",
                      @"Styles": @[
-                            @{ @"name": @"Bright", @"value": @"default" },
-                            @{ @"name": @"Gray", @"value": @"gray" },
-                            @{ @"name": @"Dark", @"value": @"dark" }
+                            @{ @"name": @"Voyager", @"value": @"voyager" },
+                            @{ @"name": @"Positron", @"value": @"positron" },
+                            @{ @"name": @"Darkmatter", @"value": @"darkmatter" }
                         ]
                     },
                  @{
-                     @"OSM": @{ @"name": @"Mapzen", @"value": @"mapzen.osm" },
+                     @"OSM": @{ @"name": @"Mapzen", @"value": MAPZEN_SOURCE },
                      @"Type": @"Vector",
                      @"Styles": @[
                              @{ @"name": @"Bright", @"value": @"styles_mapzen:style" },
@@ -277,7 +278,7 @@ NTTileLayer *currentLayer;
                              ]
                      },
                  @{
-                     @"OSM": @{ @"name": @"CARTO", @"value": @"carto.osm" },
+                     @"OSM": @{ @"name": @"Carto Raster", @"value": CARTO_RASTER_SOURCE },
                      @"Type": @"Raster",
                      @"Styles": @[
                              @{ @"name": @"Positron", @"value": @"positron" },

@@ -44,7 +44,6 @@
     NTMapPos* position = [projection fromLat:8.11065195 lng:99.89845797];
     [self.mapView setFocusPos:position durationSeconds:0];
     [self.mapView setZoom:11 durationSeconds:0];
-    
 }
 
 - (NTTileDataSource*)createTileDataSource
