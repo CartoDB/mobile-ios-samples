@@ -29,6 +29,11 @@ class Package : NSObject {
         }
     }
     
+    static let CUSTOM_REGION_FOLDER_NAME = "CUSTOM REGIONS"
+    var isCustomRegionFolder: Bool {
+        get { return name == Package.CUSTOM_REGION_FOLDER_NAME }
+    }
+    
     func isGroup() -> Bool {
         // Custom region packages will have status & info == nil, but they're not groups
         return status == nil && info == nil && !isCustomRegionPackage
@@ -39,11 +44,7 @@ class Package : NSObject {
     }
     
     func getStatusText() -> String {
-        
-        if (info == nil) {
-            return "";
-        }
-        
+
         var status = "Available";
         
         status += getVersionAndSize()
@@ -75,7 +76,11 @@ class Package : NSObject {
     }
     
     func getVersionAndSize() -> String {
-
+        
+        if (isCustomRegionPackage) {
+            return "";
+        }
+        
         let version =  String(info.getVersion())
         let size = String(describing: info.getSizeInMB())
         

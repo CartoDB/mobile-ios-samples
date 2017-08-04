@@ -20,13 +20,13 @@ class PackageCell : UITableViewCell {
     
     var progressIndicator: UIView!
     
+    let titleFont = UIFont(name: "HelveticaNeue-Bold", size: 13)
+    let titleColor = Colors.navy
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
-        
-        let titleFont = UIFont(name: "HelveticaNeue-Bold", size: 13)
-        let titleColor = Colors.navy
         
         textLabel?.font = titleFont
         textLabel?.textColor = titleColor
@@ -121,6 +121,13 @@ class PackageCell : UITableViewCell {
             // It's a package group. These are displayed with a single label
             textLabel?.text = package.name.uppercased()
             forwardIcon.isHidden = false
+            
+            if (package.isCustomRegionFolder) {
+                textLabel?.textColor = Colors.appleBlue
+            } else {
+                textLabel?.textColor = titleColor
+            }
+            
             return
         }
         

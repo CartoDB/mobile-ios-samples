@@ -155,7 +155,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
         let vector = manager.getServerPackages()
         let total = Int((vector?.size())!)
 
-        if (folder == CUSTOM_REGION_FOLDER_NAME + "/") {
+        if (folder == Package.CUSTOM_REGION_FOLDER_NAME + "/") {
             let custom = getCustomRegionPackages()
             for package in custom {
                 packages.append(package)
@@ -223,11 +223,9 @@ class PackageDownloadBaseView  : DownloadBaseView {
         return packages
     }
     
-    let CUSTOM_REGION_FOLDER_NAME = "CUSTOM REGIONS"
-    
     func getCustomRegionFolder() -> Package {
         let package = Package()
-        package.name = CUSTOM_REGION_FOLDER_NAME
+        package.name = Package.CUSTOM_REGION_FOLDER_NAME
         package.id = "NONE"
         return package
     }
