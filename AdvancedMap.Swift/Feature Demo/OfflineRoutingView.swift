@@ -17,8 +17,8 @@ class OfflineRoutingView: PackageDownloadBaseView {
         initializeDownloadContent(withSwitch: true)
         initializePackageDownloadContent()
         
-        let popupTitle = ""
-        let popupDescription = ""
+        let popupTitle = Texts.offlineRoutingInfoHeader
+        let popupDescription = Texts.offlineRoutingInfoContainer
         infoContent.setText(headerText: popupTitle, contentText: popupDescription)
     }
 }

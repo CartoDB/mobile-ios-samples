@@ -43,7 +43,7 @@ class Samples {
         sample = Sample()
         sample.title = "OFFLINE ROUTING"
         sample.description = "Download existing routing packages for offline use"
-        sample.imageResource = folder + "icon_sample_package_download.png"
+        sample.imageResource = folder + "icon_sample_offline_routing.png"
         sample.controller = OfflineRoutingController()
         
         list.append(sample)
