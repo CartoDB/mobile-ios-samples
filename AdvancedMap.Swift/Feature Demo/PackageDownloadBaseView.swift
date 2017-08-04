@@ -239,6 +239,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
             let package = Package()
             package.id = item.boundingBox.toString()
             package.name = item.name
+            package.status = manager.getLocalPackageStatus(package.id, version: -1)
             packages.append(package)
         }
         

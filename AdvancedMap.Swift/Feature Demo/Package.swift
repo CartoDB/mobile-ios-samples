@@ -113,11 +113,7 @@ class Package : NSObject {
     }
     
     func getActionText() -> String {
-        
-        if (self.info == nil) {
-            return "NONE"
-        }
-        
+
         if (self.status == nil) {
             return Package.ACTION_DOWNLOAD
         }
