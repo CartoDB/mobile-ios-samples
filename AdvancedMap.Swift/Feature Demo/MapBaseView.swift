@@ -52,7 +52,7 @@ class MapBaseView : UIView {
         
         popup.frame = bounds
         map.frame = bounds
-        
+
         if (buttons != nil) {
             
             let count = CGFloat(self.buttons.count)

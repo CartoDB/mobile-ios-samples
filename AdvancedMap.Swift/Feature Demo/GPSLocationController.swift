@@ -85,14 +85,7 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate, Rotatio
             contentView.showUserAt(location: latestLocation)
         }
     }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        // cf. LocationExtensions.swift to see how these calculations are made
-//        let bearingRadians = latestLocation.bearingToLocationRadian(UserDefaults.standard.currentLocation)
-//        let headingRadians = newHeading.trueHeading.degreesToRadians
-//        contentView.compass.rotate(bearingRadians: bearingRadians, headingRadians: headingRadians)
-    }
-    
+
     func rotated(angle: CGFloat) {
         
         if (contentView.isRotationInProgress) {
