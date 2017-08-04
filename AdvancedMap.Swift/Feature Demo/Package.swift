@@ -18,14 +18,14 @@ class Package : NSObject {
     
     var info: NTPackageInfo!
     
-    let BBOX_IDENTIFIER = "bbox("
+    static let BBOX_IDENTIFIER = "bbox("
     var isCustomRegionPackage: Bool {
         get {
             if (id == nil) {
                 return false;
             }
             
-            return id.contains(BBOX_IDENTIFIER)
+            return id.contains(Package.BBOX_IDENTIFIER)
         }
     }
     

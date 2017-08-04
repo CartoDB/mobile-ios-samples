@@ -65,6 +65,17 @@ class Cities {
         city.boundingBox = box
         list.append(city)
     }
+    
+    static func findNameById(id: String) -> String {
+        
+        for city in list {
+            if (city.boundingBox.toString() == id) {
+                return city.name
+            }
+        }
+        
+        return ""
+    }
 }
 
 class City : NSObject {

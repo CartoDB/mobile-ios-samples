@@ -55,7 +55,7 @@ class ReverseGecodingController : BaseGeocodingController, ReverseGeocodingEvent
 
         let goToPosition = false
         
-        contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
+        (contentView as! ReverseGeocodingView).showResult(result: result, title: title, description: description, goToPosition: goToPosition)
     }
     
     override func setOnlineMode() {

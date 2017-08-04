@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		668C4E9E700C4C0DB448B390 /* Pods_AdvancedMap_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */; };
+		AD01E6521F3479250001D8A3 /* OfflineRoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6511F3479250001D8A3 /* OfflineRoutingController.swift */; };
+		AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */; };
 		AD061BC81F1E2F2300F523B8 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */; };
 		AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */; };
 		AD061BCE1F1E4BED00F523B8 /* icon_track_location_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */; };
@@ -142,6 +144,8 @@
 		64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Feature Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		AD01E6511F3479250001D8A3 /* OfflineRoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingController.swift; sourceTree = "<group>"; };
+		AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePackageDownloadController.swift; sourceTree = "<group>"; };
 		AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_off.png; sourceTree = "<group>"; };
 		AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_on.png; sourceTree = "<group>"; };
@@ -298,6 +302,14 @@
 			name = _deprecated;
 			sourceTree = "<group>";
 		};
+		AD01E6501F34790C0001D8A3 /* Offline Routing */ = {
+			isa = PBXGroup;
+			children = (
+				AD01E6511F3479250001D8A3 /* OfflineRoutingController.swift */,
+			);
+			name = "Offline Routing";
+			sourceTree = "<group>";
+		};
 		AD0CD3101EF420DE007E4378 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				AD01E64F1F346D750001D8A3 /* _deprecated */,
+				AD01E6501F34790C0001D8A3 /* Offline Routing */,
 				ADA977F31F0E897D0040E090 /* Reverse Geocoding */,
 				ADA977F81F0E8A7A0040E090 /* Geocoding */,
 				AD4123281F040A1D009874BD /* GPS Location */,
@@ -711,6 +724,7 @@
 			children = (
 				AD97868C1EF7F152002912DF /* BaseController.swift */,
 				ADF6725B1F335CBE00527D49 /* BaseGeocodingController.swift */,
+				AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -937,6 +951,7 @@
 				AD41232F1F040A73009874BD /* GPSLocationController.swift in Sources */,
 				ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */,
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
+				AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */,
 				ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */,
 				ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */,
 				AD7356661F02679200D4D6EF /* Utils.swift in Sources */,
@@ -952,6 +967,7 @@
 				ADE092FC1F00F26C00C569F9 /* RoutingPackageListener.swift in Sources */,
 				AD9786881EF7DACF002912DF /* StyleChoiceView.swift in Sources */,
 				AD7356621F02581F00D4D6EF /* Cities.swift in Sources */,
+				AD01E6521F3479250001D8A3 /* OfflineRoutingController.swift in Sources */,
 				AD061BC81F1E2F2300F523B8 /* SwitchButton.swift in Sources */,
 				AD73566D1F02777500D4D6EF /* PackageDownloadView.swift in Sources */,
 				AD7356721F0277F700D4D6EF /* Package.swift in Sources */,

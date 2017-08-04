@@ -37,8 +37,8 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
         (contentView as! GeocodingView).resultTable.delegate = self
         (contentView as! GeocodingView).resultTable.dataSource = self
         
-        if (contentView.hasLocalPackages()) {
-            contentView.showLocalPackages()
+        if ((contentView as! GeocodingView).hasLocalPackages()) {
+            (contentView as! GeocodingView).showLocalPackages()
         } else {
             (contentView as! GeocodingView).showBannerInsteadOfSearchBar()
         }
@@ -159,7 +159,7 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
         let description = result.getPrettyAddress()
         let goToPosition = true
         
-        self.contentView.showResult(result: result, title: title, description: description, goToPosition: goToPosition)
+        (self.contentView as! GeocodingView).showResult(result: result, title: title, description: description, goToPosition: goToPosition)
     }
     
     override func setOnlineMode() {
