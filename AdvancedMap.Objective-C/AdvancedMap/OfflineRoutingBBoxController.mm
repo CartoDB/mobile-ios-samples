@@ -47,6 +47,12 @@
     [self alert:@"This example downloads a routing package (not a map package) of New York"];
 }
 
+-(NTRoutingService *)getService
+{
+    
+    return [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.packageManager];
+}
+
 -(NSString *)getPackageDirectory
 {
     return [[self getAppSupportDirectory] stringByAppendingString:@"/cityroutingpackages"];

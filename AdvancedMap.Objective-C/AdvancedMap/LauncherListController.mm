@@ -55,10 +55,19 @@
                 @"description": @"Offline Routing where a country package (Androrra) is downloaded",
                 @"controller": @"OfflineRoutingPackageController"
                 },
+<<<<<<< HEAD
              @{ @"name": @"Offline Routing (bbox)",
                 @"description": @"Offline Routing where a bounding box of New York is downloaded",
                 @"controller": @"OfflineRoutingBBoxController"
                 },
+=======
+             
+//             Currently commented out, offline routing with a bbox will be available in v4.1.0
+//             @{ @"name": @"Offline Routing (bbox)",
+//                @"description": @"Offline Routing where a bounding box of New York is downloaded",
+//                @"controller": @"OfflineRoutingBBoxController"
+//                },
+>>>>>>> 1d0dd7f7f35e1d48095db445f243af8dc873ce2b
              
              /* Vector Objects */
              @{ @"name": @"Vector objects", @"controller": @"Header" },
