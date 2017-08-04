@@ -16,8 +16,6 @@ class PackageDownloadView : PackageDownloadBaseView {
         initializePackageDownloadContent()
         
         infoContent.setText(headerText: Texts.packageDownloadInfoHeader, contentText: Texts.packageDownloadInfoContainer)
-        
-        containsCustomRegionPackages = true
     }
 
 }

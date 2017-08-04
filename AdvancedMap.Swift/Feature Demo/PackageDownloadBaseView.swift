@@ -16,8 +16,6 @@ class PackageDownloadBaseView  : DownloadBaseView {
     
     var manager: NTCartoPackageManager!
     
-    var containsCustomRegionPackages = false
-    
     func initializePackageDownloadContent() {
         
         countryButton = PopupButton(imageUrl: "icon_global.png")
@@ -165,7 +163,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
         }
         
         // Map package download screen's first folder features custom region packages (cities)
-        if (folder.isEmpty && containsCustomRegionPackages) {
+        if (folder.isEmpty) {
             packages.append(getCustomRegionFolder())
         }
         
