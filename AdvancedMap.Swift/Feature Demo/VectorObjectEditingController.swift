@@ -40,7 +40,6 @@ class VectorObjectEditingController : BaseController, VectorElementSelectDelegat
         selectListener?.delegate = self
         contentView.editLayer.setVectorElementEventListener(selectListener)
         
-        
         deselectListener?.delegate = self
         contentView.map.setMapEventListener(deselectListener)
         
