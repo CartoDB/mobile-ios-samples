@@ -35,7 +35,7 @@ class VectorObjectView : MapBaseView {
         listener?.source = source
         vectorLayer?.setVectorElementEventListener(listener)
         
-        // Set map listener to receive vector object click event
+        // Set map listener to receive map click event
         let mapListener = VectorObjectMapListener()
         mapListener?.objectListener = listener
         map.setMapEventListener(mapListener)
@@ -139,6 +139,14 @@ class VectorObjectView : MapBaseView {
         point?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Hi!"))
         point?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "I'm just a red dot lying on the ground"))
         source?.add(point)
+    }
+    
+    override func addRecognizers() {
+        super.addRecognizers()
+    }
+    
+    override func removeRecognizers() {
+        super.removeRecognizers()
     }
 }
 
