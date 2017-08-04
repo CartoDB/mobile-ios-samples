@@ -119,7 +119,7 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
             if (self.service is NTPackageManagerGeocodingService) {
                 (self.service as! NTPackageManagerGeocodingService).setAutocomplete(autocomplete)
             } else {
-                (self.service as! NTPeliasGeocodingService).setAutocomplete(autocomplete)
+                (self.service as! NTPeliasOnlineGeocodingService).setAutocomplete(autocomplete)
             }
             
             let results = self.service.calculateAddresses(request)
@@ -163,7 +163,7 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
     }
     
     override func setOnlineMode() {
-        service = NTPeliasGeocodingService(apiKey: API_KEY)
+        service = NTPeliasOnlineGeocodingService(apiKey: API_KEY)
     }
     
     override func setOfflineMode() {
