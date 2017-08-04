@@ -66,15 +66,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
             self.contentView.progressLabel.complete(message: text)
         }
     }
-    
-    override func setOnlineMode() {
-        routing.service = NTCartoOnlineRoutingService(source: Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE)
-    }
-    
-    override func setOfflineMode() {
-        routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
-    }
-    
+
     func startClicked(event: RouteMapEvent) {
         DispatchQueue.main.async(execute: {
             self.routing.setStartMarker(position: event.clickPosition)
@@ -109,7 +101,17 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
             })
         }
     }
-
+    
+    override func setOnlineMode() {
+        super.setOnlineMode()
+        routing.service = NTCartoOnlineRoutingService(source: Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE)
+    }
+    
+    override func setOfflineMode() {
+        super.setOfflineMode()
+        routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
+    }
+    
 }
 
 

@@ -23,6 +23,8 @@ class PackageDownloadBaseView  : DownloadBaseView {
         countryButton = PopupButton(imageUrl: "icon_global.png")
         addButton(button: countryButton)
         
+        addBanner(visible: false)
+        
         packageContent = PackagePopupContent()
     }
     
@@ -244,8 +246,24 @@ class PackageDownloadBaseView  : DownloadBaseView {
         return packages
     }
     
+    func showNoPackagesBanner() {
+        banner.show(text: "You need to download a package for offline use")
+    }
+    
+    func hideNoPackagesBanner() {
+        banner.hide()
+    }
+    
+    func hasLocalPackages() -> Bool {
+        return getLocalPAckages().count > 0
+    }
+    
+    func getLocalPAckages() -> [NTPackageInfo] {
+        return manager.getLocalPackages().toList()
+    }
+    
     /*
-     * Download queue
+     * Region: Download queue
      */
  
     var downloadQueue = [Package]()
@@ -315,7 +333,29 @@ class PackageDownloadBaseView  : DownloadBaseView {
         
         return packages
     }
-    
+
+    func showLocalPackages() {
+        var text = "You have downloaded "
+        
+        let packages = getLocalPAckages()
+        let total = packages.count
+        var counter = 0
+        
+        for package in packages {
+            
+            let split = package.getName().characters.split(separator: "/")
+            let shortName = split[split.count - 1]
+            
+            text += String(shortName)
+            counter += 1
+            
+            if (counter < total) {
+                text += ", "
+            }
+        }
+        
+        progressLabel.complete(message: text)
+    }
 }
 
 extension Array where Element: Equatable {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Banner: UIView {
+class Banner: AlertBaseView {
     
     let imageView = UIImageView()
     let label = UILabel()
@@ -59,5 +59,10 @@ class Banner: UIView {
         rightItem = item
         addSubview(rightItem!)
         layoutSubviews()
+    }
+    
+    func show(text: String) {
+        label.text = text
+        show()
     }
 }

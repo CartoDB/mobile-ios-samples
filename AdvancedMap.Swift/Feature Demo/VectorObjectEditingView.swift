@@ -29,7 +29,7 @@ class VectorObjectEditingView : MapBaseView {
         
         infoContent.setText(headerText: Texts.objectEditingInfoHeader, contentText: Texts.objectEditingInfoContainer)
         
-        addBanner()
+        addBanner(visible: true)
         
         projection = map.getOptions().getBaseProjection()
         

@@ -100,13 +100,12 @@ class GeocodingView : BaseGeocodingView, UIGestureRecognizerDelegate {
     
     func showBannerInsteadOfSearchBar() {
         inputField.isHidden = true
-        addBanner()
-        banner.label.text = "DOWNLOAD A PACKAGE TO START GEOCODING"
+        banner.show(text: "DOWNLOAD A PACKAGE TO START GEOCODING")
     }
     
     func showSearchBar() {
         inputField.isHidden = false
-        banner?.isHidden = true
+        banner.hide()
     }
 }
 

@@ -9,17 +9,13 @@
 import Foundation
 import UIKit
 
-class ProgressLabel : UIView {
+class ProgressLabel : AlertBaseView {
     
     var label: UILabel!
     var progressBar: UIView!
     
     var height: CGFloat!
-    
-    func isVisible() -> Bool {
-        return self.alpha == 1
-    }
-    
+
     convenience init() {
         self.init(frame: CGRect.zero)
         
@@ -80,23 +76,6 @@ class ProgressLabel : UIView {
         progressBar.frame = CGRect(x: 0, y: y, width: width, height: height)
     }
 
-    func hide() {
-        if (isVisible()) {
-            animateAlpha(alpha: 0)
-        }
-    }
-    
-    func show() {
-        if (!isVisible()) {
-            animateAlpha(alpha: 1)
-        }
-    }
-    
-    func animateAlpha(alpha: CGFloat) {
-        UIView.animate(withDuration: 0.5, animations: {
-            self.alpha = alpha
-        })
-    }
 }
 
 

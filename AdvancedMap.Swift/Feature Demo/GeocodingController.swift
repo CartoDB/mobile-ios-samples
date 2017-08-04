@@ -163,10 +163,12 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
     }
     
     override func setOnlineMode() {
+        super.setOnlineMode()
         service = NTPeliasOnlineGeocodingService(apiKey: API_KEY)
     }
     
     override func setOfflineMode() {
+        super.setOfflineMode()
         service = NTPackageManagerGeocodingService(packageManager: contentView.manager)
     }
 }

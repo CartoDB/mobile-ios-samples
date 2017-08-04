@@ -127,10 +127,16 @@ class MapBaseView : UIView {
     
     let bannerHeight: CGFloat = 45
     
-    func addBanner() {
+    func addBanner(visible: Bool) {
         banner = Banner()
         addSubview(banner)
         banner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: bannerHeight)
+        
+        if (visible) {
+            banner.alpha = 1
+        } else {
+            banner.alpha = 0
+        }
     }
 }
 

@@ -59,10 +59,12 @@ class ReverseGecodingController : BaseGeocodingController, ReverseGeocodingEvent
     }
     
     override func setOnlineMode() {
+        super.setOnlineMode()
         geocodingListener.service = NTPeliasOnlineReverseGeocodingService(apiKey: API_KEY)
     }
     
     override func setOfflineMode() {
+        super.setOfflineMode()
         geocodingListener.service = NTPackageManagerReverseGeocodingService(packageManager: contentView.manager)
     }
 }

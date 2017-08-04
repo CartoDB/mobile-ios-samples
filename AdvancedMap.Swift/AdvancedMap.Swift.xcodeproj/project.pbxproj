@@ -12,6 +12,7 @@
 		AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */; };
 		AD01E6571F3483440001D8A3 /* OfflineRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6561F3483440001D8A3 /* OfflineRoutingView.swift */; };
 		AD01E6591F348AC40001D8A3 /* icon_sample_offline_routing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD01E6581F348AC40001D8A3 /* icon_sample_offline_routing.png */; };
+		AD01E65B1F349D9A0001D8A3 /* AlertBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E65A1F349D9A0001D8A3 /* AlertBaseView.swift */; };
 		AD061BC81F1E2F2300F523B8 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */; };
 		AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */; };
 		AD061BCE1F1E4BED00F523B8 /* icon_track_location_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */; };
@@ -150,6 +151,7 @@
 		AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePackageDownloadController.swift; sourceTree = "<group>"; };
 		AD01E6561F3483440001D8A3 /* OfflineRoutingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingView.swift; sourceTree = "<group>"; };
 		AD01E6581F348AC40001D8A3 /* icon_sample_offline_routing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_offline_routing.png; sourceTree = "<group>"; };
+		AD01E65A1F349D9A0001D8A3 /* AlertBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBaseView.swift; sourceTree = "<group>"; };
 		AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_off.png; sourceTree = "<group>"; };
 		AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_on.png; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 				AD9786AC1EF80CBB002912DF /* SlideInPopup */,
 				AD061BD11F1E57DC00F523B8 /* RotationResetButton.swift */,
 				ADA9A9571F25DC0300B7D580 /* Banner.swift */,
+				AD01E65A1F349D9A0001D8A3 /* AlertBaseView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				AD437ED31EF93880008CEA76 /* Texts.swift in Sources */,
 				AD5B2AFB1F03CC2F00EF738C /* ClusteringView.swift in Sources */,
 				ADA977FA1F0E8A910040E090 /* GeocodingView.swift in Sources */,
+				AD01E65B1F349D9A0001D8A3 /* AlertBaseView.swift in Sources */,
 				ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */,
 				AD5B2AEE1F03B27200EF738C /* PackageCell.swift in Sources */,
 				AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */,

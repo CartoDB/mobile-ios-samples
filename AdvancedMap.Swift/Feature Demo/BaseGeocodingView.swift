@@ -102,37 +102,6 @@ class BaseGeocodingView: PackageDownloadBaseView {
         let popup = NTBalloonPopup(pos: position, style: builder?.buildStyle(), title: title, desc: description)
         source.add(popup)
     }
-    
-    func hasLocalPackages() -> Bool {
-        return getLocalPAckages().count > 0
-    }
-    
-    func showLocalPackages() {
-        var text = "You have downloaded "
-        
-        let packages = getLocalPAckages()
-        let total = packages.count
-        var counter = 0
-        
-        for package in packages {
-        
-            let split = package.getName().characters.split(separator: "/")
-            let shortName = split[split.count - 1]
-            
-            text += String(shortName)
-            counter += 1
-            
-            if (counter < total) {
-                text += ", "
-            }
-        }
-        
-        progressLabel.complete(message: text)
-    }
-    
-    func getLocalPAckages() -> [NTPackageInfo] {
-        return manager.getLocalPackages().toList()
-    }
 }
 
 

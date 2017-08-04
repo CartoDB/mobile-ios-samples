@@ -92,9 +92,15 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         }
     }
     
-    func setOnlineMode() { }
+    func setOnlineMode() {
+        contentView.hideNoPackagesBanner();
+    }
     
-    func setOfflineMode() { }
+    func setOfflineMode() {
+        if (!contentView.hasLocalPackages()) {
+            contentView.showNoPackagesBanner();
+        }
+    }
 
 }
 
