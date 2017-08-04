@@ -10,6 +10,7 @@
 		668C4E9E700C4C0DB448B390 /* Pods_AdvancedMap_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */; };
 		AD01E6521F3479250001D8A3 /* OfflineRoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6511F3479250001D8A3 /* OfflineRoutingController.swift */; };
 		AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */; };
+		AD01E6571F3483440001D8A3 /* OfflineRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6561F3483440001D8A3 /* OfflineRoutingView.swift */; };
 		AD061BC81F1E2F2300F523B8 /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */; };
 		AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */; };
 		AD061BCE1F1E4BED00F523B8 /* icon_track_location_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */; };
@@ -146,6 +147,7 @@
 		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		AD01E6511F3479250001D8A3 /* OfflineRoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingController.swift; sourceTree = "<group>"; };
 		AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePackageDownloadController.swift; sourceTree = "<group>"; };
+		AD01E6561F3483440001D8A3 /* OfflineRoutingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingView.swift; sourceTree = "<group>"; };
 		AD061BC71F1E2F2300F523B8 /* SwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_off.png; sourceTree = "<group>"; };
 		AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_track_location_on.png; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				AD01E6511F3479250001D8A3 /* OfflineRoutingController.swift */,
+				AD01E6561F3483440001D8A3 /* OfflineRoutingView.swift */,
 			);
 			name = "Offline Routing";
 			sourceTree = "<group>";
@@ -983,6 +986,7 @@
 				AD41232C1F040A36009874BD /* VectorObjectEditingView.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
 				AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */,
+				AD01E6571F3483440001D8A3 /* OfflineRoutingView.swift in Sources */,
 				ADA977F71F0E89BA0040E090 /* ReverseGeocodingView.swift in Sources */,
 				AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */,
 				ADF6725C1F335CBE00527D49 /* BaseGeocodingController.swift in Sources */,

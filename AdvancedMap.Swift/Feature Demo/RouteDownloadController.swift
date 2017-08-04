@@ -38,7 +38,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         var folder = Utils.createDirectory(name: "mappackages")
         mapManager = NTCartoPackageManager(source: Routing.MAP_SOURCE, dataFolder: folder)
         
-        folder = Utils.createDirectory(name: "routingpackages")
+        folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
         routingManager = NTCartoPackageManager(source: Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE, dataFolder: folder)
         
         setOnlineMode()

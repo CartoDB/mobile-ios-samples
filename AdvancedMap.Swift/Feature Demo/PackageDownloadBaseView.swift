@@ -10,6 +10,8 @@ import Foundation
 
 class PackageDownloadBaseView  : DownloadBaseView {
     
+    static let ROUTING_FOLDER = "routingpackages"
+    
     var countryButton: PopupButton!
     
     var packageContent: PackagePopupContent!

@@ -33,10 +33,18 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
-        sample.title = "PACKAGE DOWNLOAD"
-        sample.description = "Download existing packages for offline use"
+        sample.title = "OFFLINE MAP"
+        sample.description = "Download existing map packages for offline use"
         sample.imageResource = folder + "icon_sample_package_download.png"
         sample.controller = PackageDownloadController()
+        
+        list.append(sample)
+        
+        sample = Sample()
+        sample.title = "OFFLINE ROUTING"
+        sample.description = "Download existing routing packages for offline use"
+        sample.imageResource = folder + "icon_sample_package_download.png"
+        sample.controller = OfflineRoutingController()
         
         list.append(sample)
         
