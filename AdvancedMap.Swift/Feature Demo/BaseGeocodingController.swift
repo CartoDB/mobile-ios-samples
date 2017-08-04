@@ -30,7 +30,9 @@ class BaseGeocodingController : BasePackageDownloadController {
             let text = "DOWNLOADED (" + name! + String(describing: (package?.getSizeInMB())!) + "MB)"
             self.contentView.progressLabel.complete(message: text)
             
-            (self.contentView as! GeocodingView).showSearchBar()
+            if (self.contentView is GeocodingView) {
+                (self.contentView as! GeocodingView).showSearchBar()
+            }
         }
     }
 
