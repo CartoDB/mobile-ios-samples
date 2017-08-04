@@ -127,7 +127,7 @@ class StyleChoiceView : MapBaseView {
         } else if (source == StylePopupContent.CartoRasterSource) {
             
             // We know that the value of raster will be Positron or Darkmatter,
-            // as Nutiteq and Mapzen use vector tiles
+            // as CARTO and Mapzen use vector tiles
             var url = ""
             
             if (selection == StylePopupContent.Positron) {
