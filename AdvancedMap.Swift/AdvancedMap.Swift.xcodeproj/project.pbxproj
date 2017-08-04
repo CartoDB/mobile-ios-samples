@@ -290,6 +290,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD01E64F1F346D750001D8A3 /* _deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				AD7356591F02472500D4D6EF /* City Download */,
+			);
+			name = _deprecated;
+			sourceTree = "<group>";
+		};
 		AD0CD3101EF420DE007E4378 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +401,7 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				AD01E64F1F346D750001D8A3 /* _deprecated */,
 				ADA977F31F0E897D0040E090 /* Reverse Geocoding */,
 				ADA977F81F0E8A7A0040E090 /* Geocoding */,
 				AD4123281F040A1D009874BD /* GPS Location */,
@@ -400,7 +409,6 @@
 				AD5B2AF21F03CB9D00EF738C /* Clustering */,
 				AD5B2AF11F03CB9300EF738C /* Vector Objects */,
 				AD7356691F02760800D4D6EF /* Package Download */,
-				AD7356591F02472500D4D6EF /* City Download */,
 				ADAFCD1E1EFBEEAC005F53CB /* Route Download */,
 				AD9786841EF7DA8C002912DF /* Styles */,
 				AD97868B1EF7F145002912DF /* Base */,
