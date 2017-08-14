@@ -41,6 +41,6 @@ class MainViewController: UIViewController, GalleryDelegate {
         
         navigationController?.pushViewController(controller, animated: true)
     }
-
+    
 }
 
