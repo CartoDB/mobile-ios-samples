@@ -18,7 +18,7 @@ class ViewController: GLKViewController {
         mapView = NTMapView();
         view = mapView;
         
-        let baseLayer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DEFAULT);
+        let baseLayer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_VOYAGER);
         mapView?.getLayers().add(baseLayer);
         
         let projection = mapView?.getOptions().getBaseProjection();

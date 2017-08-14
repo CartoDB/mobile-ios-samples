@@ -10,7 +10,7 @@
 -(void) viewDidLoad
 {
     // Init default vector layer
-    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
     [[self.mapView getLayers] add:layer];
     
     NTCartoMapsService* mapsService = [[NTCartoMapsService alloc] init];
