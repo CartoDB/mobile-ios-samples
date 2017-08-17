@@ -23,6 +23,7 @@ class RouteMapEventListener : NTMapEventListener {
         
         if (mapClickInfo.getClickType() != NTClickType.CLICK_TYPE_LONG) {
             // Only listen to long clicks
+            delegate?.singleTap()
             return
         }
         
@@ -56,6 +57,8 @@ protocol RouteMapEventDelegate {
     func startClicked(event: RouteMapEvent)
     
     func stopClicked(event: RouteMapEvent)
+    
+    func singleTap()
 }
 
 class RouteMapEvent : NSObject {

@@ -110,6 +110,10 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
         contentView.switchButton.delegate = nil
     }
     
+    func singleTap() {
+        // No actions for single tap
+    }
+    
     func downloadButtonTapped(_ sender: UITapGestureRecognizer) {
         
         let id = boundingBox.toString()

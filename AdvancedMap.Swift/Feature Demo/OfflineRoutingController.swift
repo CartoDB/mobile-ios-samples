@@ -44,6 +44,10 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
         contentView.map.setMapEventListener(nil)
     }
     
+    func singleTap() {
+        // No actions for single tap
+    }
+    
     override func downloadComplete(sender: PackageListener, id: String) {
         
         contentView.downloadComplete(id: id)

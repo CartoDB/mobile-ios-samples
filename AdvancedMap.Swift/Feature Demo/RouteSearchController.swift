@@ -13,7 +13,8 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
     let contentView = RouteSearchView()
     var routing: Routing!
     
-    let listener = RouteMapEventListener()
+    let mapListener = RouteMapEventListener()
+    let selectListener = VectorObjectClickListener()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +26,26 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
         
         let source = Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE
         routing.service = NTCartoOnlineRoutingService(source: source)
+        
+        selectListener?.source = contentView.popupSource
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        contentView.map.setMapEventListener(listener)
-        listener?.delegate = self
+        contentView.map.setMapEventListener(mapListener)
+        mapListener?.delegate = self
+        
+        contentView.overlayLayer.setVectorElementEventListener(selectListener)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         contentView.map.setMapEventListener(nil)
-        listener?.delegate = nil
+        mapListener?.delegate = nil
+        
+        contentView.overlayLayer.setVectorElementEventListener(nil)
     }
     
     func startClicked(event: RouteMapEvent) {
@@ -48,6 +55,10 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
     func stopClicked(event: RouteMapEvent) {
         routing.setStopMarker(position: event.clickPosition)
         showRoute(start: event.startPosition, stop: event.stopPosition)
+    }
+    
+    func singleTap() {
+        contentView.popupSource.clear()
     }
     
     func showRoute(start: NTMapPos, stop: NTMapPos) {

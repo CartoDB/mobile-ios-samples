@@ -25,6 +25,10 @@ class VectorObjectClickListener : NTVectorElementEventListener {
         
         let element = clickInfo.getVectorElement()
         
+        let animationBuilder = NTAnimationStyleBuilder()
+        animationBuilder?.setRelativeSpeed(2.0)
+        animationBuilder?.setSizeAnimationType(NTAnimationType.ANIMATION_TYPE_SPRING)
+        
         let builder = NTBalloonPopupStyleBuilder()
         builder?.setLeftMargins(NTBalloonPopupMargins(left: 0, top: 0, right: 0, bottom: 0))
         builder?.setRightMargins(NTBalloonPopupMargins(left: 6, top: 3, right: 6, bottom: 3))
@@ -33,6 +37,7 @@ class VectorObjectClickListener : NTVectorElementEventListener {
         builder?.setDescriptionFontSize(10)
         builder?.setCornerRadius(5)
         builder?.setDescriptionColor(UIColor.gray.toNTColor())
+        builder?.setAnimationStyle(animationBuilder?.buildStyle())
         
         let style = builder?.buildStyle()
         

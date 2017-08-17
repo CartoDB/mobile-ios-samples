@@ -16,6 +16,9 @@ class RouteSearchView: MapBaseView {
     var overlaySource: NTLocalVectorDataSource!
     var overlayLayer: NTVectorLayer!
     
+    var popupSource: NTLocalVectorDataSource!
+    var popupLayer: NTVectorLayer!
+    
     var searchService: NTVectorTileSearchService!
     
     convenience init() {
@@ -28,9 +31,14 @@ class RouteSearchView: MapBaseView {
         baseSource = baseLayer.getDataSource()
         
         let projection = map.getOptions().getBaseProjection()
+        
         overlaySource = NTLocalVectorDataSource(projection: projection)
         overlayLayer = NTVectorLayer(dataSource: overlaySource)
         map.getLayers().add(overlayLayer)
+        
+        popupSource = NTLocalVectorDataSource(projection: projection)
+        popupLayer = NTVectorLayer(dataSource: popupSource)
+        map.getLayers().add(popupLayer)
         
         searchService = NTVectorTileSearchService(dataSource: baseSource, tileDecoder: baseLayer.getTileDecoder())
         
