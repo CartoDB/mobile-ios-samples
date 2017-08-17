@@ -135,6 +135,9 @@
 		ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE093001F01074B00C569F9 /* StateSwitch.swift */; };
 		ADE093031F01080700C569F9 /* ProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE093021F01080700C569F9 /* ProgressLabel.swift */; };
 		ADE093051F01143000C569F9 /* RouteMapEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE093041F01143000C569F9 /* RouteMapEventListener.swift */; };
+		ADE4A00C1F45829100D6E05F /* RouteSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE4A00B1F45829100D6E05F /* RouteSearchController.swift */; };
+		ADE4A00E1F45829B00D6E05F /* RouteSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE4A00D1F45829B00D6E05F /* RouteSearchView.swift */; };
+		ADE4A0101F458F8500D6E05F /* icon_sample_route_search.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE4A00F1F458F8500D6E05F /* icon_sample_route_search.png */; };
 		ADE6DCC21EF97D71002B2189 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6DCC11EF97D71002B2189 /* Device.swift */; };
 		ADF6725C1F335CBE00527D49 /* BaseGeocodingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6725B1F335CBE00527D49 /* BaseGeocodingController.swift */; };
 /* End PBXBuildFile section */
@@ -277,6 +280,9 @@
 		ADE093001F01074B00C569F9 /* StateSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateSwitch.swift; sourceTree = "<group>"; };
 		ADE093021F01080700C569F9 /* ProgressLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
 		ADE093041F01143000C569F9 /* RouteMapEventListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMapEventListener.swift; sourceTree = "<group>"; };
+		ADE4A00B1F45829100D6E05F /* RouteSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSearchController.swift; sourceTree = "<group>"; };
+		ADE4A00D1F45829B00D6E05F /* RouteSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSearchView.swift; sourceTree = "<group>"; };
+		ADE4A00F1F458F8500D6E05F /* icon_sample_route_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_route_search.png; sourceTree = "<group>"; };
 		ADE6DCC11EF97D71002B2189 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		ADF6725B1F335CBE00527D49 /* BaseGeocodingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGeocodingController.swift; sourceTree = "<group>"; };
 		E57D46BD0081D1E13A2730D1 /* Pods-AdvancedMap.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.release.xcconfig"; sourceTree = "<group>"; };
@@ -399,6 +405,7 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				ADE4A00A1F45828000D6E05F /* Route Search */,
 				AD01E6501F34790C0001D8A3 /* Offline Routing */,
 				ADA977F31F0E897D0040E090 /* Reverse Geocoding */,
 				ADA977F81F0E8A7A0040E090 /* Geocoding */,
@@ -449,6 +456,7 @@
 		AD97869E1EF809CE002912DF /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				ADE4A00F1F458F8500D6E05F /* icon_sample_route_search.png */,
 				AD01E6581F348AC40001D8A3 /* icon_sample_offline_routing.png */,
 				ADA978031F0FB1000040E090 /* icon_sample_reverse_geocoding.png */,
 				ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */,
@@ -695,6 +703,15 @@
 			name = Listener;
 			sourceTree = "<group>";
 		};
+		ADE4A00A1F45828000D6E05F /* Route Search */ = {
+			isa = PBXGroup;
+			children = (
+				ADE4A00B1F45829100D6E05F /* RouteSearchController.swift */,
+				ADE4A00D1F45829B00D6E05F /* RouteSearchView.swift */,
+			);
+			name = "Route Search";
+			sourceTree = "<group>";
+		};
 		ADF6725D1F335CE900527D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -855,6 +872,7 @@
 				ADC8B8EA1F052A2800B62852 /* icon_sample_styles.png in Resources */,
 				AD437ECE1EF933C5008CEA76 /* style_image_mapzen_bright.png in Resources */,
 				AD41231D1F03E1E1009874BD /* arrow.png in Resources */,
+				ADE4A0101F458F8500D6E05F /* icon_sample_route_search.png in Resources */,
 				ADAFCD2B1EFC0745005F53CB /* icon_download.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -939,6 +957,7 @@
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD68C5751F26382900211087 /* RotationListener.swift in Sources */,
 				AD41232A1F040A2B009874BD /* VectorObjectEditingController.swift in Sources */,
+				ADE4A00E1F45829B00D6E05F /* RouteSearchView.swift in Sources */,
 				AD437EBE1EF91D98008CEA76 /* StylePopupContent.swift in Sources */,
 				AD5B2AF41F03CBA800EF738C /* VectorObjectController.swift in Sources */,
 				ADE093051F01143000C569F9 /* RouteMapEventListener.swift in Sources */,
@@ -948,6 +967,7 @@
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
 				AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */,
 				ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */,
+				ADE4A00C1F45829100D6E05F /* RouteSearchController.swift in Sources */,
 				ADE092FA1F00F26300C569F9 /* MapPackageListener.swift in Sources */,
 				AD7356661F02679200D4D6EF /* Utils.swift in Sources */,
 				AD7356741F0291E000D4D6EF /* Extensions.swift in Sources */,

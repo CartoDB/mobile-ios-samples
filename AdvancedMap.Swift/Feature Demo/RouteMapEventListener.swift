@@ -66,3 +66,8 @@ class RouteMapEvent : NSObject {
     
     var stopPosition: NTMapPos!
 }
+
+
+
+
+

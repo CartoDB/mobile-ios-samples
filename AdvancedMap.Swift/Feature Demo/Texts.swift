@@ -85,6 +85,15 @@ class Texts {
         "CartoMobileSDK version 4.1.0 introduces offline (reverse) geocoding. You simply click an area on the map, any location, to find out detailed information about it. And everything's offline!\n\n" +
         "All you have to do is download the correct package (current sample features Estonia) and you're good to go\n\n" +
         "I don't really know what to say here any more. Geocoding is rather self-explanatory. It's an awesome feature, though, that's worth a mention!"
+    
+    static let routeSearchInfoHeader = "ROUTE SEARCH"
+    
+    static let routeSearchInfoContainer = "CARTOMobileSDK 4.1.0 supports searching from various sources. " +
+        "This sample combines online routing with online searching from vector tiles. \n\n" +
+        "To see this in action, just click on two different points. The sample will first " +
+        "calculate the fastest route between the points and then uses search APIs to find " +
+        "all attractions along the route within 500 meters. These Points of Interests are then " +
+    "shown as clickable red dots.\n\n"
 }
 
 

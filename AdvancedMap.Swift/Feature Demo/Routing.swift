@@ -27,6 +27,8 @@ class Routing {
     var mapView: NTMapView!
     var projection: NTProjection!
     
+    var showTurns: Bool = true
+    
     init(mapView: NTMapView) {
         
         self.mapView = mapView
@@ -107,8 +109,10 @@ class Routing {
             let index = Int32((instruction?.getPointIndex())!)
             let position = result.getPoints().get(index)
             
+            if (showTurns) {
+                createRoutePoint(position: position!, instruction: instruction!, source: routeDataSource!)
+            }
             
-            createRoutePoint(position: position!, instruction: instruction!, source: routeDataSource!)
             vector?.add(position)
         }
         

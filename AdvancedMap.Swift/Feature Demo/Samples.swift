@@ -33,6 +33,14 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
+        sample.title = "ROUTE SEARCH"
+        sample.description = "Search points of interests near route"
+        sample.imageResource = folder + "icon_sample_route_search.png"
+        sample.controller = RouteSearchController()
+        
+        list.append(sample)
+        
+        sample = Sample()
         sample.title = "OFFLINE MAP"
         sample.description = "Download existing map packages for offline use"
         sample.imageResource = folder + "icon_sample_package_download.png"
