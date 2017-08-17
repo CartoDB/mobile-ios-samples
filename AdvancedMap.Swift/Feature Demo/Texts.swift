@@ -27,14 +27,7 @@ class Texts {
         "Long-click anywhere on the map, that's the start position – now click again to set the stop position. When you're done, the route is calculated.\n\n" +
         "Now you have the option to download that bounding box. After you download a route, a transparent visualization of the downloaded area appears on your map.\n\n" +
         "Oh, and downloaded areas stay forever. You're gonna have to uninstall the app to get rid of the bounding boxes. So be careful, don't fill your phone with bounding boxes!\n\n"
-    
-    static let cityDownloadInfoHeader = "CITY MAP DOWNLOAD"
-    
-    static let cityDownloadInfoContainer =
-        "This example lets you download specific cities. Cities are also based on bounding boxes, we used http://bboxfinder.com to cut out the bounding boxes of specific cities.\n\n" +
-        "Simply click on the city you wish to download, a progress bar will appear and your're free to browse the map as you wish. You will be zoomed in to the location when the download is completed.\n\n" +
-        "If you wish to see more cities on this list, simply contact CARTO or, if you're the technical kind, find this app on github.com and make a pull request."
-    
+
     static let packageDownloadInfoHeader = "COUNTRY MAP DOWNLOAD"
     
     static let packageDownloadInfoContainer =
