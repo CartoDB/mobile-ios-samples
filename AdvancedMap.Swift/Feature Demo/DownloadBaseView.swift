@@ -42,9 +42,11 @@ class DownloadBaseView : MapBaseView {
         super.removeRecognizers()
     }
 
-    func initializeDownloadContent(withSwitch: Bool = true) {
+    func initializeDownloadContent(withSwitch: Bool = true, withBaseLayer: Bool = true) {
         
-        onlineLayer = addBaseLayer()
+        if (withBaseLayer) {
+            onlineLayer = addBaseLayer()
+        }
         
         progressLabel = ProgressLabel()
         addSubview(progressLabel)

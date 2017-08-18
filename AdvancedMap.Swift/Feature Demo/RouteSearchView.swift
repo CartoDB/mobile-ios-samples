@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RouteSearchView: MapBaseView {
+class RouteSearchView: PackageDownloadBaseView {
     
     var baseLayer: NTVectorTileLayer!
     var baseSource: NTTileDataSource!
@@ -25,6 +25,8 @@ class RouteSearchView: MapBaseView {
         self.init(frame: CGRect.zero)
         
         initialize()
+        initializeDownloadContent(withSwitch: true, withBaseLayer: false)
+        initializePackageDownloadContent()
         addBanner(visible: false)
         
         baseLayer = addGrayBaseLayer()

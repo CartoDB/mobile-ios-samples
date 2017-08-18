@@ -8,9 +8,8 @@
 
 import Foundation
 
-class RouteSearchController : BaseController, RouteMapEventDelegate {
+class RouteSearchController : BasePackageDownloadController, RouteMapEventDelegate {
     
-    let contentView = RouteSearchView()
     var routing: Routing!
     
     let mapListener = RouteMapEventListener()
@@ -19,15 +18,18 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        contentView = RouteSearchView()
         view = contentView
         
         routing = Routing(mapView: contentView.map)
         routing.showTurns = false
         
-        let source = Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE
-        routing.service = NTCartoOnlineRoutingService(source: source)
+        selectListener?.source = (contentView as! RouteSearchView).popupSource
         
-        selectListener?.source = contentView.popupSource
+        let folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
+        contentView.manager = NTCartoPackageManager(source: Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE, dataFolder: folder)
+        
+        setOnlineMode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +38,7 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
         contentView.map.setMapEventListener(mapListener)
         mapListener?.delegate = self
         
-        contentView.overlayLayer.setVectorElementEventListener(selectListener)
+        (contentView as! RouteSearchView).overlayLayer.setVectorElementEventListener(selectListener)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,7 +47,7 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
         contentView.map.setMapEventListener(nil)
         mapListener?.delegate = nil
         
-        contentView.overlayLayer.setVectorElementEventListener(nil)
+        (contentView as! RouteSearchView).overlayLayer.setVectorElementEventListener(nil)
     }
     
     func startClicked(event: RouteMapEvent) {
@@ -58,7 +60,19 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
     }
     
     func singleTap() {
-        contentView.popupSource.clear()
+        (contentView as! RouteSearchView).popupSource.clear()
+    }
+    
+    override func setOnlineMode() {
+        super.setOnlineMode()
+        let source = Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE
+        routing.service = NTCartoOnlineRoutingService(source: source)
+        
+    }
+    
+    override func setOfflineMode() {
+        super.setOfflineMode()
+        routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
     }
     
     func showRoute(start: NTMapPos, stop: NTMapPos) {
@@ -101,20 +115,43 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
     func showAttractions(geometry: NTGeometry) {
         
         let request = NTSearchRequest()
-        request?.setProjection(contentView.baseSource.getProjection())
+        request?.setProjection((contentView as! RouteSearchView).baseSource.getProjection())
         request?.setGeometry(geometry)
         request?.setSearchRadius(500.0)
         request?.setFilterExpression("class='attraction'")
         
-        let results = contentView.searchService.findFeatures(request)
+        let results = (contentView as! RouteSearchView).searchService.findFeatures(request)
         let count = Int((results?.getFeatureCount())!)
         
         for i in 0..<count {
             let item = results?.getFeature(Int32(i))!
             
             if (item?.getGeometry() is NTPointGeometry) {
-                contentView.addPOI(feature: item!)
+                (contentView as! RouteSearchView).addPOI(feature: item!)
             }
+        }
+    }
+    
+    override func downloadComplete(sender: PackageListener, id: String) {
+        
+        contentView.downloadComplete(id: id)
+        
+        DispatchQueue.main.async {
+            let package = self.contentView.manager?.getLocalPackage(id)
+            
+            if (package == nil) {
+                return;
+            }
+            
+            var name = package?.getName()
+            let id = package?.getPackageId()
+            
+            if (id?.contains(Package.BBOX_IDENTIFIER))! {
+                name = Cities.findNameById(id: (package?.getPackageId())!)
+            }
+            
+            let text = "DOWNLOADED (" + name! + String(describing: (package?.getSizeInMB())!) + "MB)"
+            self.contentView.progressLabel.complete(message: text)
         }
     }
 }
