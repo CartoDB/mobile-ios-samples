@@ -1,7 +1,3 @@
-#import <Foundation/Foundation.h>
-#import <CartoMobileSDK/CartoMobileSDK.h>
-#import "PackageMapController.h"
-#import "Sources.h"
 
 /*
  * A sample demonstrating how to use offline package manager of the Carto Mobile SDK.
@@ -14,76 +10,10 @@
  * that will automatically display all imported or downloaded packages.
  */
 
-static NSString* _language = @"en"; // the language for the package names
+#import "PackageManagerController.h"
+#import "PackageManagerListener.h"
 
-/*
- * Controller for package list manipulation.
- */
-@interface PackageManagerController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
-
-- (id)init;
-- (id)initWithParent:(PackageManagerController*)parent folder:(NSString*)folder;
-- (void)updatePackages;
-- (void)updatePackage:(NSString*)packageId;
-+ (void)displayToastWithMessage:(NSString*)toastMessage;
-
-@property(readonly) NSString* currentFolder;
-@property(readonly) NSArray* currentPackages;
-
-@end
-
-/*
- * Package manager listener. Listener is notified about asynchronous events
- * about packages.
- */
-@interface PackageManagerListener : NTPackageManagerListener
-
-- (id)init;
-- (void)addPackageManagerController:(PackageManagerController*)controller;
-- (void)removePackageManagerController:(PackageManagerController*)controller;
-
-- (void)onPackageListUpdated;
-- (void)onPackageListFailed;
-- (void)onPackageUpdated:(NSString*)packageId version:(int)version;
-- (void)onPackageCancelled:(NSString*)packageId version:(int)version;
-- (void)onPackageFailed:(NSString*)packageId version:(int)version errorType:(enum NTPackageErrorType)errorType;
-- (void)onPackageStatusChanged:(NSString*)packageId version:(int)version status:(NTPackageStatus*)status;
-
-@property(readonly, atomic) NSHashTable* packageManagerControllers;
-
-@end
-
-/*
- * A package holder containing package (or package group) name, package id, info and status.
- */
-@interface Package : NSObject
-
-- (id)initWithPackageName:(NSString*)packageName packageInfo:(NTPackageInfo*)packageInfo packageStatus:(NTPackageStatus*)packageStatus;
-
-@property(readonly) NSString* packageName;
-@property(readonly) NSString* packageId;
-@property(readonly) NTPackageInfo* packageInfo;
-@property NTPackageStatus* packageStatus;
-
-@end
-
-/*
- * Special UITableView cell class for displaying packages.
- */
-@interface PackageTableViewCell : UITableViewCell
-
-- (IBAction)buttonTapped:(id)sender;
-
-@property (nonatomic, copy) void (^customActionBlock)();
-
-@end
-
-@interface PackageManagerController()
-
-@property NTCartoPackageManager* packageManager;
-@property PackageManagerListener* packageManagerListener;
-
-@end
+static NSString* _language = @"en"; // the language for package names
 
 @implementation PackageManagerController
 
@@ -101,7 +31,7 @@ static NSString* _language = @"en"; // the language for the package names
     _packageManagerListener = [[PackageManagerListener alloc] init];
     
     // Register this controller with listener to receive notifications about events
-    [_packageManagerListener addPackageManagerController:self];
+    [(PackageManagerListener *)_packageManagerListener addPackageManagerController:self];
     
     // Attach package manager listener
     [_packageManager setPackageManagerListener:_packageManagerListener];
@@ -119,7 +49,7 @@ static NSString* _language = @"en"; // the language for the package names
     _packageManagerListener = [controller packageManagerListener];
     
     // Register this controller with listener to receive notifications about events
-    [_packageManagerListener addPackageManagerController:self];
+    [(PackageManagerListener *)_packageManagerListener addPackageManagerController:self];
     
     _currentFolder = folder;
     
@@ -132,7 +62,7 @@ static NSString* _language = @"en"; // the language for the package names
 {
     // Check if the view is closing
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [_packageManagerListener removePackageManagerController:self];
+        [(PackageManagerListener *)_packageManagerListener removePackageManagerController:self];
         
         if ([_currentFolder length] == 0) {
             // Stop package manager
@@ -144,6 +74,7 @@ static NSString* _language = @"en"; // the language for the package names
         
         // Reset references
         _packageManagerListener = nil;
+
         _packageManager = nil;
     }
     
@@ -297,12 +228,6 @@ static NSString* _language = @"en"; // the language for the package names
     return cell;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (NSArray*)getPackages
 {
     @synchronized(self) {
@@ -314,7 +239,6 @@ static NSString* _language = @"en"; // the language for the package names
         NTPackageInfoVector* packageInfoVector = [_packageManager getServerPackages];
         NSMutableArray* packages = [[NSMutableArray alloc] init];
         
-        NSLog(@"----------------------------------------------");
         for (int i = 0; i < [packageInfoVector size]; i++) {
             
             NTPackageInfo* packageInfo = [packageInfoVector get:i];
@@ -452,109 +376,4 @@ static NSString* _language = @"en"; // the language for the package names
 
 @end
 
-@implementation PackageManagerListener
-
-- (id)init
-{
-    _packageManagerControllers = [NSHashTable weakObjectsHashTable];
-    return [super init];
-}
-
-- (void)addPackageManagerController:(PackageManagerController*)controller
-{
-    @synchronized(self) {
-        [_packageManagerControllers addObject:controller];
-    }
-}
-
-- (void)removePackageManagerController:(PackageManagerController*)controller
-{
-    @synchronized(self) {
-        [_packageManagerControllers removeObject:controller];
-    }
-}
-
-- (void)onPackageListUpdated
-{
-    @synchronized(self) {
-        for (PackageManagerController* controller in _packageManagerControllers) {
-            [controller updatePackages];
-        }
-    }
-}
-
-- (void)onPackageListFailed
-{
-    @synchronized(self) {
-        for (PackageManagerController* controller in _packageManagerControllers) {
-            [controller updatePackages];
-        }
-    }
-    [PackageManagerController displayToastWithMessage:@"Failed to download package list"];
-}
-
-- (void)onPackageUpdated:(NSString*)packageId version:(int)version
-{
-    @synchronized(self) {
-        for (PackageManagerController* controller in _packageManagerControllers) {
-            [controller updatePackage:packageId];
-        }
-    }
-}
-
-- (void)onPackageCancelled:(NSString*)packageId version:(int)version
-{
-    @synchronized(self) {
-        for (PackageManagerController* controller in _packageManagerControllers) {
-            [controller updatePackage:packageId];
-        }
-    }
-}
-
-- (void)onPackageFailed:(NSString*)packageId version:(int)version errorType:(enum NTPackageErrorType)errorType
-{
-    @synchronized(self) {
-        for (PackageManagerController* controller in _packageManagerControllers) {
-            [controller updatePackage:packageId];
-        }
-    }
-    [PackageManagerController displayToastWithMessage:@"Failed to download package"];
-}
-
-- (void)onPackageStatusChanged:(NSString*)packageId version:(int)version status:(NTPackageStatus*)status
-{
-    @synchronized(self) {
-        for (PackageManagerController* controller in _packageManagerControllers) {
-            [controller updatePackage:packageId];
-            NSLog(@"onPackageStatusChanged progress: %f", [status getProgress]);
-        }
-    }
-}
-
-@end
-
-@implementation Package
-
-- (id)initWithPackageName:(NSString*)packageName packageInfo:(NTPackageInfo*)packageInfo packageStatus:(NTPackageStatus*)packageStatus
-{
-    _packageName = packageName;
-    if (packageInfo) {
-        _packageId = [packageInfo getPackageId];
-        _packageInfo = packageInfo;
-        _packageStatus = packageStatus;
-    }
-    return self;
-}
-
-@end
-
-@implementation PackageTableViewCell
-
-- (IBAction)buttonTapped:(id)sender {
-    if (self.customActionBlock) {
-        self.customActionBlock();
-    }
-}
-
-@end
 

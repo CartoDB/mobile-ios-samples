@@ -28,6 +28,9 @@
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredMarkersController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredMarkersController.mm */; };
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
 		AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD031F231DCCE81400072781 /* styles_mapzen.zip */; };
+		AD2AD56F1F4B023D00F3C479 /* Package.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD56E1F4B023D00F3C479 /* Package.mm */; };
+		AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */; };
+		AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
 		AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
@@ -135,6 +138,13 @@
 		65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		AD02FEE866BAAE942D33FB01 /* Pods-AdvancedMap.Objective-C.UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; sourceTree = "<group>"; };
 		AD031F231DCCE81400072781 /* styles_mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = styles_mapzen.zip; path = ../../Assets/styles_mapzen.zip; sourceTree = "<group>"; };
+		AD2AD56D1F4B020C00F3C479 /* Package.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Package.h; sourceTree = "<group>"; };
+		AD2AD56E1F4B023D00F3C479 /* Package.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Package.mm; sourceTree = "<group>"; };
+		AD2AD5701F4B032600F3C479 /* PackageManagerListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageManagerListener.h; sourceTree = "<group>"; };
+		AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PackageManagerListener.mm; sourceTree = "<group>"; };
+		AD2AD5731F4B03FB00F3C479 /* PackageManagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageManagerController.h; sourceTree = "<group>"; };
+		AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageTableViewCell.h; sourceTree = "<group>"; };
+		AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageTableViewCell.m; sourceTree = "<group>"; };
 		AD3D629F1DD07F0F00C97356 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_more.png; path = ../../Assets/icon_more.png; sourceTree = "<group>"; };
 		AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@3x.png"; path = "../../Assets/icon_more@3x.png"; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
@@ -291,6 +301,7 @@
 		2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				AD2AD56C1F4B01BD00F3C479 /* PackageManager */,
 				ADFC10231E76EAEF009DC903 /* Utils */,
 				AD860A6B1D7DA103005994B2 /* BaseClasses */,
 				ADC7313A1DBFA2A400E1CDCA /* Sections */,
@@ -308,6 +319,21 @@
 			);
 			name = "AdvancedMap.Objective-C";
 			path = AdvancedMap;
+			sourceTree = "<group>";
+		};
+		AD2AD56C1F4B01BD00F3C479 /* PackageManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD2AD5731F4B03FB00F3C479 /* PackageManagerController.h */,
+				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
+				AD2AD56D1F4B020C00F3C479 /* Package.h */,
+				AD2AD56E1F4B023D00F3C479 /* Package.mm */,
+				AD2AD5701F4B032600F3C479 /* PackageManagerListener.h */,
+				AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */,
+				AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */,
+				AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */,
+			);
+			name = PackageManager;
 			sourceTree = "<group>";
 		};
 		AD54BF351DCB601C00B0C190 /* Overlays */ = {
@@ -399,7 +425,7 @@
 		ADC7313E1DBFA33800E1CDCA /* OfflineMap */ = {
 			isa = PBXGroup;
 			children = (
-				ADC731431DBFA3C200E1CDCA /* Packagemanager */,
+				ADC731431DBFA3C200E1CDCA /* MapPackageManager */,
 				4DEB06D71A10CDC0003D111C /* BundledMapController.mm */,
 				ADE5B9351DD5FC3D002ADD34 /* BasicPackageManagerController.mm */,
 			);
@@ -434,14 +460,13 @@
 			name = BaseMap;
 			sourceTree = "<group>";
 		};
-		ADC731431DBFA3C200E1CDCA /* Packagemanager */ = {
+		ADC731431DBFA3C200E1CDCA /* MapPackageManager */ = {
 			isa = PBXGroup;
 			children = (
-				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
 				0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */,
 				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
 			);
-			name = Packagemanager;
+			name = MapPackageManager;
 			sourceTree = "<group>";
 		};
 		ADC731471DBFA78D00E1CDCA /* CustomPopup */ = {
@@ -761,21 +786,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E38F95898DD56596EFC8E2BC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -795,7 +805,9 @@
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
 				AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */,
 				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
+				AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */,
 				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */,
+				AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
 				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
@@ -815,6 +827,7 @@
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,
 				AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */,
+				AD2AD56F1F4B023D00F3C479 /* Package.mm in Sources */,
 				2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
