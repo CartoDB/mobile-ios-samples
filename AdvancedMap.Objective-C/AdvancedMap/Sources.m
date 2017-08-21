@@ -20,5 +20,8 @@ NSString *const ONLINE_ROUTING_SOURCE = @"nutiteq.osm";
 NSString *const ROUTING_TAG = @"routing:";
 NSString *const TRANSPORT_MODE_CAR = @".car";
 
+NSString *const GEOCODING_TAG = @"geocoding:";
+NSString *const OFFLINE_GEOCODING_SOURCE = @"carto.streets";
+
 
 @end

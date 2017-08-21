@@ -24,4 +24,11 @@
     return CARTO_VECTOR_SOURCE;
 }
 
+- (void)showMap
+{
+    PackageMapController* mapController = [[PackageMapController alloc] init];
+    mapController.packageManager = self.packageManager;
+    [self.navigationController pushViewController:mapController animated:YES];
+}
+
 @end

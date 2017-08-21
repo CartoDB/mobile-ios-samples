@@ -381,9 +381,7 @@ static NSString* _language = @"en"; // the language for package names
 
 - (void)showMap
 {
-    PackageMapController* mapController = [[PackageMapController alloc] init];
-    mapController.packageManager = _packageManager;
-    [self.navigationController pushViewController:mapController animated:YES];
+    
 }
 
 @end

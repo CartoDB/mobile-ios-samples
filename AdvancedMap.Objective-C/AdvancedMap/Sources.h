@@ -24,4 +24,7 @@ extern NSString * const OFFLINE_ROUTING_SOURCE;
 extern NSString * const ROUTING_TAG;
 extern NSString * const TRANSPORT_MODE_CAR;
 
+extern NSString * const GEOCODING_TAG;
+extern NSString * const OFFLINE_GEOCODING_SOURCE;
+
 @end
