@@ -85,7 +85,7 @@
                 },
              @{ @"name": @"Advanced Package Manager",
                 @"description": @"Download country map packages for offline",
-                @"controller": @"PackageManagerController"
+                @"controller": @"MapPackageController"
                 },
              
             /* Other */

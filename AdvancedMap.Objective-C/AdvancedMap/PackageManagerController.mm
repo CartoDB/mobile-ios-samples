@@ -22,12 +22,12 @@ static NSString* _language = @"en"; // the language for package names
     // Create folder for package manager. Package manager needs persistent writable folder.
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask,YES);
     NSString* appSupportDir = [paths objectAtIndex: 0];
-    NSString* packagesDir = [appSupportDir stringByAppendingString:@"regionpackages"];
+    NSString* packagesDir = [appSupportDir stringByAppendingString:[self getFolder]];
     NSError *error;
     [[NSFileManager defaultManager] createDirectoryAtPath:packagesDir withIntermediateDirectories:YES attributes:nil error:&error];
     
     // Create package manager and package manager listener
-    _packageManager = [[NTCartoPackageManager alloc] initWithSource:CARTO_VECTOR_SOURCE dataFolder:packagesDir];
+    _packageManager = [[NTCartoPackageManager alloc] initWithSource:[self getSource] dataFolder:packagesDir];
     _packageManagerListener = [[PackageManagerListener alloc] init];
     
     // Register this controller with listener to receive notifications about events
@@ -56,6 +56,18 @@ static NSString* _language = @"en"; // the language for package names
     [self createMenu];
     
     return [super init];
+}
+
+- (NSString *)getFolder
+{
+    [NSException raise:@"NotImplementedException" format:@"getFolder function should be overridden in child class"];
+    return @"";
+}
+
+- (NSString *)getSource
+{
+    [NSException raise:@"NotImplementedException" format:@"getSource function should be overridden in child class"];
+    return @"";
 }
 
 - (void)viewWillDisappear:(BOOL)animated

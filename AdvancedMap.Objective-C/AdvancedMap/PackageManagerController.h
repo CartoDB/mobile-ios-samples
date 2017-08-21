@@ -27,6 +27,9 @@
 - (void)updatePackage:(NSString*)packageId;
 + (void)displayToastWithMessage:(NSString*)toastMessage;
 
+- (NSString *)getFolder;
+- (NSString *)getSource;
+
 @property(readonly) NSString* currentFolder;
 @property(readonly) NSArray* currentPackages;
 

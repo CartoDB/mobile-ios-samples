@@ -31,6 +31,7 @@
 		AD2AD56F1F4B023D00F3C479 /* Package.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD56E1F4B023D00F3C479 /* Package.mm */; };
 		AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */; };
 		AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */; };
+		AD2AD5781F4B1ACC00F3C479 /* MapPackageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
 		AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
@@ -145,6 +146,7 @@
 		AD2AD5731F4B03FB00F3C479 /* PackageManagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageManagerController.h; sourceTree = "<group>"; };
 		AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageTableViewCell.h; sourceTree = "<group>"; };
 		AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageTableViewCell.m; sourceTree = "<group>"; };
+		AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPackageController.m; sourceTree = "<group>"; };
 		AD3D629F1DD07F0F00C97356 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_more.png; path = ../../Assets/icon_more.png; sourceTree = "<group>"; };
 		AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@3x.png"; path = "../../Assets/icon_more@3x.png"; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 			children = (
 				0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */,
 				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
+				AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */,
 			);
 			name = MapPackageManager;
 			sourceTree = "<group>";
@@ -818,6 +821,7 @@
 				ADFC102F1E76F406009DC903 /* OfflineRoutingBBoxController.mm in Sources */,
 				AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
+				AD2AD5781F4B1ACC00F3C479 /* MapPackageController.m in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */,
 				AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */,
 				4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */,
