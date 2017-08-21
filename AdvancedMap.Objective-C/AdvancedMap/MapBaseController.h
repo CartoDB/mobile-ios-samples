@@ -12,6 +12,8 @@
 
 -(void) alert:(NSString *)message;
 
+-(NTProjection *)getProjection;
+
 @property AlertMenu *alert;
 
 @end

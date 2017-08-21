@@ -73,6 +73,13 @@
                 @"controller": @"VectorObjectEditingController"
                 },
              
+             /* Geocoding */
+             @{ @"name": @"Geocoding", @"controller": @"Header" },
+             @{ @"name": @"Online Reverse Geocoding",
+                @"description": @"Online reverse geocoding with Pelias geocoder",
+                @"controller": @"OnlineReverseGeocodingController"
+                },
+             
              /* Offline maps */
              @{ @"name": @"Offline maps", @"controller": @"Header" },
              @{ @"name": @"Bundled Map",

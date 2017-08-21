@@ -32,6 +32,7 @@
 		AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */; };
 		AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */; };
 		AD2AD5781F4B1ACC00F3C479 /* MapPackageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */; };
+		AD2AD57F1F4B22C500F3C479 /* GeocodingBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD57E1F4B22C500F3C479 /* GeocodingBaseController.mm */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
 		AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
@@ -40,6 +41,7 @@
 		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
 		AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE71DC105A1004E68B2 /* GPSLocationController.m */; };
 		AD589CEA1DC108E9004E68B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD589CE91DC108E9004E68B2 /* CoreLocation.framework */; };
+		AD5991481F4B306900CDF426 /* OnlineReverseGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5991471F4B306900CDF426 /* OnlineReverseGeocodingController.m */; };
 		AD7A5D1F1D9ABE0700F5EE4E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */; };
 		AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */; };
 		AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */; };
@@ -58,6 +60,7 @@
 		ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */; };
 		ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */; };
 		ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148971DC0A708009A899B /* BasicEditEventListener.mm */; };
+		ADCB208B1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCB208A1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm */; };
 		ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */; };
 		ADE5B9361DD5FC3D002ADD34 /* BasicPackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B9351DD5FC3D002ADD34 /* BasicPackageManagerController.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
@@ -147,6 +150,8 @@
 		AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageTableViewCell.h; sourceTree = "<group>"; };
 		AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageTableViewCell.m; sourceTree = "<group>"; };
 		AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPackageController.m; sourceTree = "<group>"; };
+		AD2AD57D1F4B22C500F3C479 /* GeocodingBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodingBaseController.h; sourceTree = "<group>"; };
+		AD2AD57E1F4B22C500F3C479 /* GeocodingBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GeocodingBaseController.mm; sourceTree = "<group>"; };
 		AD3D629F1DD07F0F00C97356 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_more.png; path = ../../Assets/icon_more.png; sourceTree = "<group>"; };
 		AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@3x.png"; path = "../../Assets/icon_more@3x.png"; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
@@ -154,6 +159,8 @@
 		AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSMapController.m; sourceTree = "<group>"; };
 		AD589CE71DC105A1004E68B2 /* GPSLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSLocationController.m; sourceTree = "<group>"; };
 		AD589CE91DC108E9004E68B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AD5991461F4B306900CDF426 /* OnlineReverseGeocodingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineReverseGeocodingController.h; sourceTree = "<group>"; };
+		AD5991471F4B306900CDF426 /* OnlineReverseGeocodingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineReverseGeocodingController.m; sourceTree = "<group>"; };
 		AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = "<absolute>"; };
 		AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRoutingController.h; sourceTree = "<group>"; };
 		AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseRoutingController.mm; sourceTree = "<group>"; };
@@ -176,6 +183,8 @@
 		ADB1489B1DC0B0BD009A899B /* VectorElementSelectEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorElementSelectEventListener.h; sourceTree = "<group>"; };
 		ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
 		ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
+		ADCB20891F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReverseGeocodingBaseController.h; sourceTree = "<group>"; };
+		ADCB208A1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ReverseGeocodingBaseController.mm; sourceTree = "<group>"; };
 		ADCF53BF1DC1FFA8004AD5C3 /* MyVectorElementEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVectorElementEventListener.h; sourceTree = "<group>"; };
 		ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyVectorElementEventListener.mm; sourceTree = "<group>"; };
 		ADE5B9351DD5FC3D002ADD34 /* BasicPackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicPackageManagerController.mm; sourceTree = "<group>"; };
@@ -338,6 +347,43 @@
 			name = PackageManager;
 			sourceTree = "<group>";
 		};
+		AD2AD5791F4B20FE00F3C479 /* Geocoding */ = {
+			isa = PBXGroup;
+			children = (
+				AD2AD57C1F4B211900F3C479 /* Offline */,
+				AD2AD57B1F4B211400F3C479 /* Online */,
+				AD2AD57A1F4B210400F3C479 /* Base */,
+			);
+			name = Geocoding;
+			sourceTree = "<group>";
+		};
+		AD2AD57A1F4B210400F3C479 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AD2AD57D1F4B22C500F3C479 /* GeocodingBaseController.h */,
+				AD2AD57E1F4B22C500F3C479 /* GeocodingBaseController.mm */,
+				ADCB20891F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.h */,
+				ADCB208A1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		AD2AD57B1F4B211400F3C479 /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				AD5991461F4B306900CDF426 /* OnlineReverseGeocodingController.h */,
+				AD5991471F4B306900CDF426 /* OnlineReverseGeocodingController.m */,
+			);
+			name = Online;
+			sourceTree = "<group>";
+		};
+		AD2AD57C1F4B211900F3C479 /* Offline */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Offline;
+			sourceTree = "<group>";
+		};
 		AD54BF351DCB601C00B0C190 /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +450,7 @@
 		ADC7313A1DBFA2A400E1CDCA /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				AD2AD5791F4B20FE00F3C479 /* Geocoding */,
 				AD90F9441E096BF700E6EF51 /* Routing */,
 				ADC731421DBFA36D00E1CDCA /* BaseMap */,
 				ADC731411DBFA35000E1CDCA /* OverlayDataSource */,
@@ -796,10 +843,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2AD57F1F4B22C500F3C479 /* GeocodingBaseController.mm in Sources */,
 				ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */,
 				ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */,
 				4DEB06D01A10BDB7003D111C /* OverlaysController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
+				AD5991481F4B306900CDF426 /* OnlineReverseGeocodingController.m in Sources */,
 				ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */,
 				ADF6725A1F331AF800527D49 /* Sources.m in Sources */,
 				AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */,
@@ -827,6 +876,7 @@
 				4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
 				0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */,
+				ADCB208B1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm in Sources */,
 				ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,

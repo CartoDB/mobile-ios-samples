@@ -46,4 +46,9 @@
     });
 }
 
+-(NTProjection *) getProjection
+{
+    return [[self.mapView getOptions]getBaseProjection];
+}
+
 @end
