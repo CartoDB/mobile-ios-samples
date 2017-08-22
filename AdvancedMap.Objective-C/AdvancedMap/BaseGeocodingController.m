@@ -29,6 +29,8 @@
     
     self.font = [UIFont fontWithName:@"HelveticaNeue" size:15];
     
+    self.addresses = [[NSMutableArray alloc]init];
+    
     self.inputField = [[UITextField alloc]init];
     [self.inputField setTextColor:UIColor.whiteColor];
     [self.inputField setBackgroundColor:self.darkTransparentGray];

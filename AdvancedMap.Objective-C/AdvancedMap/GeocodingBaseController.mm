@@ -103,6 +103,7 @@
     }
     
     if ([address getHouseNumber].length > 0) {
+        string = [string stringByAppendingString:@" "];
         string = [string stringByAppendingString:[address getHouseNumber]];
     }
     
