@@ -79,6 +79,10 @@
                 @"description": @"Online reverse geocoding with Pelias geocoder",
                 @"controller": @"OnlineReverseGeocodingController"
                 },
+             @{ @"name": @"Online Geocoding",
+                @"description": @"Online geocoding with Pelias geocoder",
+                @"controller": @"OnlineGeocodingController"
+                },
              @{ @"name": @"Offline Reverse Geocoding",
                 @"description": @"Download and package and click the map to find an address",
                 @"controller": @"ReverseGeoPackageDownloadController"

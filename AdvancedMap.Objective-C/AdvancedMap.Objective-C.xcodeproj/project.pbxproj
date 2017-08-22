@@ -98,6 +98,7 @@
 		ADED5F311D92A31800AB2D13 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */; };
 		ADF6725A1F331AF800527D49 /* Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF672581F33106B00527D49 /* Sources.m */; };
 		ADFBF6CA1F4C19CB00F98741 /* BaseGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6C91F4C19CB00F98741 /* BaseGeocodingController.m */; };
+		ADFBF6CC1F4C2C5B00F98741 /* OnlineGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6CB1F4C2C5B00F98741 /* OnlineGeocodingController.m */; };
 		ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10251E76EB10009DC903 /* BoundingBox.m */; };
 		ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */; };
 		ADFC102C1E76F190009DC903 /* OfflineRoutingPackageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */; };
@@ -231,6 +232,7 @@
 		ADF672591F33169600527D49 /* Sources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sources.h; sourceTree = "<group>"; };
 		ADFBF6C81F4C19CB00F98741 /* BaseGeocodingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGeocodingController.h; sourceTree = "<group>"; };
 		ADFBF6C91F4C19CB00F98741 /* BaseGeocodingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGeocodingController.m; sourceTree = "<group>"; };
+		ADFBF6CB1F4C2C5B00F98741 /* OnlineGeocodingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineGeocodingController.m; sourceTree = "<group>"; };
 		ADFC10241E76EAFB009DC903 /* BoundingBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoundingBox.h; sourceTree = "<group>"; };
 		ADFC10251E76EB10009DC903 /* BoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundingBox.m; sourceTree = "<group>"; };
 		ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfflineRoutingBaseController.h; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 			children = (
 				AD5991461F4B306900CDF426 /* OnlineReverseGeocodingController.h */,
 				AD5991471F4B306900CDF426 /* OnlineReverseGeocodingController.m */,
+				ADFBF6CB1F4C2C5B00F98741 /* OnlineGeocodingController.m */,
 			);
 			name = Online;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
 				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
+				ADFBF6CC1F4C2C5B00F98741 /* OnlineGeocodingController.m in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				AD59914F1F4B3CC900CDF426 /* ReverseGeoPackageDownloadController.m in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,

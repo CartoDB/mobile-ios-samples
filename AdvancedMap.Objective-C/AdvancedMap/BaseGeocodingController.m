@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.IDENTIFIER = @"result_table_id";
     
     self.darkTransparentGray = [UIColor colorWithRed:50 / 255.0 green:50 / 255.0 blue:50 / 255.0 alpha:200 / 255.0];
@@ -38,14 +38,14 @@
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 20)];
     [self.inputField setLeftView:view];
     [self.inputField setLeftViewMode:UITextFieldViewModeAlways];
-    [view addSubview:_inputField];
+    [self.view addSubview:_inputField];
     
     self.resultTable = [[UITableView alloc]init];
     [self.resultTable registerClass:[UITableViewCell class] forCellReuseIdentifier:self.IDENTIFIER];
     [self.resultTable setBackgroundColor:self.transparent];
     [self.resultTable setAllowsSelection:YES];
     [self.resultTable setUserInteractionEnabled:YES];
-    [view addSubview:_resultTable];
+    [self.view addSubview:_resultTable];
     
     [self hideTable];
 }
@@ -54,8 +54,11 @@
     
     CGFloat padding = 5.0f;
     
+    CGFloat statusBarHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
+    CGFloat navBarHeight = self.navigationController.navigationBar.frame.size.height;
+    
     CGFloat x = padding;
-    CGFloat y = 0;
+    CGFloat y = statusBarHeight + navBarHeight + padding;
     CGFloat w = [self.view frame].size.width - 2 * padding;
     CGFloat h = 50;
     
