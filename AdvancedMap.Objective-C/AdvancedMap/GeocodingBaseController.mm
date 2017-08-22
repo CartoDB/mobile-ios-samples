@@ -1,11 +1,7 @@
-//
-//  GeocodingBaseController.m
-//  AdvancedMap.Objective-C
-//
-//  Created by Aare Undo on 21/08/2017.
-//  Copyright © 2017 Nutiteq. All rights reserved.
-//
 
+/*
+ * Base class for both reverse and normal geocoding
+ */
 #import "GeocodingBaseController.h"
 
 @implementation GeocodingBaseController
@@ -88,6 +84,64 @@
     
     NTBalloonPopup *popup = [[NTBalloonPopup alloc]initWithPos:position style:[builder buildStyle] title:title desc:description];
     [_geocodingSource add:popup];
+}
+
+- (NSString *)getPrettyAddress:(NTGeocodingResult *)result {
+    
+    NTAddress *address = [result getAddress];
+    NSString *string = @"";
+    
+    if ([address getName].length > 0) {
+        string = [string stringByAppendingString:[address getName]];
+    }
+    
+    if ([address getStreet].length > 0) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@", "];
+        }
+        string = [string stringByAppendingString: [address getStreet]];
+    }
+    
+    if ([address getHouseNumber].length > 0) {
+        string = [string stringByAppendingString:[address getHouseNumber]];
+    }
+    
+    if ([address getNeighbourhood].length > 0) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@", "];
+        }
+        string = [string stringByAppendingString: [address getStreet]];
+    }
+    
+    if ([address getLocality].length > 0) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@", "];
+        }
+        string = [string stringByAppendingString: [address getLocality]];
+    }
+    
+    if ([address getCounty].length > 0) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@", "];
+        }
+        string = [string stringByAppendingString: [address getCounty]];
+    }
+    
+    if ([address getRegion].length > 0) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@", "];
+        }
+        string = [string stringByAppendingString: [address getRegion]];
+    }
+    
+    if ([address getCountry].length > 0) {
+        if (string.length > 0) {
+            string = [string stringByAppendingString:@", "];
+        }
+        string = [string stringByAppendingString: [address getCountry]];
+    }
+    
+    return string;
 }
 
 @end

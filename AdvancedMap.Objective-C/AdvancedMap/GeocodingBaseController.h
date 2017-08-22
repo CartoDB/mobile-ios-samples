@@ -8,6 +8,10 @@
 // Serves as the base class for both normal and reverse geocoding
 //
 
+/*
+ * Base class for both reverse and normal geocoding
+ */
+
 #import <Foundation/Foundation.h>
 #import <CartoMobileSDK/CartoMobileSDK.h>
 #import "MapBaseController.h"
@@ -21,5 +25,7 @@
 @property NTVectorLayer *geocodingLayer;
 
 - (NSString *)getApiKey;
+
+- (NSString *)getPrettyAddress:(NTGeocodingResult *)result;
 
 @end
