@@ -99,6 +99,8 @@
 		ADF6725A1F331AF800527D49 /* Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF672581F33106B00527D49 /* Sources.m */; };
 		ADFBF6CA1F4C19CB00F98741 /* BaseGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6C91F4C19CB00F98741 /* BaseGeocodingController.m */; };
 		ADFBF6CC1F4C2C5B00F98741 /* OnlineGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6CB1F4C2C5B00F98741 /* OnlineGeocodingController.m */; };
+		ADFBF6CF1F4C349100F98741 /* OfflineGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6CE1F4C349100F98741 /* OfflineGeocodingController.m */; };
+		ADFBF6D11F4C351100F98741 /* GeoPackageDownloadController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6D01F4C351100F98741 /* GeoPackageDownloadController.m */; };
 		ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10251E76EB10009DC903 /* BoundingBox.m */; };
 		ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */; };
 		ADFC102C1E76F190009DC903 /* OfflineRoutingPackageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */; };
@@ -233,6 +235,9 @@
 		ADFBF6C81F4C19CB00F98741 /* BaseGeocodingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGeocodingController.h; sourceTree = "<group>"; };
 		ADFBF6C91F4C19CB00F98741 /* BaseGeocodingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGeocodingController.m; sourceTree = "<group>"; };
 		ADFBF6CB1F4C2C5B00F98741 /* OnlineGeocodingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineGeocodingController.m; sourceTree = "<group>"; };
+		ADFBF6CD1F4C349100F98741 /* OfflineGeocodingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineGeocodingController.h; sourceTree = "<group>"; };
+		ADFBF6CE1F4C349100F98741 /* OfflineGeocodingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineGeocodingController.m; sourceTree = "<group>"; };
+		ADFBF6D01F4C351100F98741 /* GeoPackageDownloadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPackageDownloadController.m; sourceTree = "<group>"; };
 		ADFC10241E76EAFB009DC903 /* BoundingBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoundingBox.h; sourceTree = "<group>"; };
 		ADFC10251E76EB10009DC903 /* BoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundingBox.m; sourceTree = "<group>"; };
 		ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfflineRoutingBaseController.h; sourceTree = "<group>"; };
@@ -401,6 +406,9 @@
 				AD5991501F4B3D8100CDF426 /* OfflineReverseGeocodingController.h */,
 				AD59914C1F4B3BB200CDF426 /* OfflineReverseGeocodingController.m */,
 				AD59914E1F4B3CC900CDF426 /* ReverseGeoPackageDownloadController.m */,
+				ADFBF6CD1F4C349100F98741 /* OfflineGeocodingController.h */,
+				ADFBF6CE1F4C349100F98741 /* OfflineGeocodingController.m */,
+				ADFBF6D01F4C351100F98741 /* GeoPackageDownloadController.m */,
 			);
 			name = Offline;
 			sourceTree = "<group>";
@@ -897,6 +905,7 @@
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				AD2AD5781F4B1ACC00F3C479 /* MapPackageController.m in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */,
+				ADFBF6CF1F4C349100F98741 /* OfflineGeocodingController.m in Sources */,
 				AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */,
 				4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
@@ -904,6 +913,7 @@
 				ADCB208B1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm in Sources */,
 				AD59914D1F4B3BB200CDF426 /* OfflineReverseGeocodingController.m in Sources */,
 				ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */,
+				ADFBF6D11F4C351100F98741 /* GeoPackageDownloadController.m in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,
 				AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */,

@@ -87,6 +87,10 @@
                 @"description": @"Download and package and click the map to find an address",
                 @"controller": @"ReverseGeoPackageDownloadController"
                 },
+             @{ @"name": @"Offline Geocoding",
+                @"description": @"Download and package and search for an address",
+                @"controller": @"GeoPackageDownloadController"
+                },
              
              /* Offline maps */
              @{ @"name": @"Offline maps", @"controller": @"Header" },
