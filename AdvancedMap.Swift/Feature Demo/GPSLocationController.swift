@@ -79,7 +79,7 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate, Rotatio
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // Latest location saved as class variable to get bearing to adjust compass
         latestLocation = locations[0]
-        
+
         // Not "online", but reusing the online switch to achieve location tracking functionality
         if (contentView.switchButton.isOnline()) {
             contentView.showUserAt(location: latestLocation)
@@ -87,12 +87,15 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate, Rotatio
     }
 
     func rotated(angle: CGFloat) {
-        
         if (contentView.isRotationInProgress) {
             // Do not rotate when rotation reset animation is in progress
             return
         }
         contentView?.rotationResetButton.rotate(angle: angle)
+    }
+    
+    func zoomed(zoom: CGFloat) {
+        contentView?.scaleBar.update()
     }
 
 }

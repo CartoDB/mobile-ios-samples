@@ -13,20 +13,27 @@ class RotationListener: NTMapEventListener {
     var delegate: RotationDelegate?
     var map: NTMapView!
     
-    var previous: CGFloat?
+    var previousAngle: CGFloat?
+    var previousZoom: CGFloat?
     
     override func onMapMoved() {
         
         let angle = CGFloat(map.getRotation())
+        let zoom = CGFloat(map.getZoom())
         
-        if (previous != angle) {
+        if (previousAngle != angle) {
             delegate?.rotated(angle: angle)
-            previous = angle
+            previousAngle = angle
+        } else if (previousZoom != zoom) {
+            delegate?.zoomed(zoom: zoom)
+            previousZoom = zoom
         }
     }
-    
 }
 
 protocol RotationDelegate {
+    
     func rotated(angle: CGFloat)
+    
+    func zoomed(zoom: CGFloat)
 }

@@ -21,6 +21,7 @@ class GPSLocationView : MapBaseView {
     var projection: NTProjection!
     
     let rotationResetButton = RotationResetButton()
+    let scaleBar = ScaleBar()
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -40,19 +41,30 @@ class GPSLocationView : MapBaseView {
         
         rotationResetButton.resetDuration = rotationDuration
         addSubview(rotationResetButton)
+        
+        scaleBar.map = map
+        addSubview(scaleBar)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         let padding: CGFloat = 5
+        let scaleBarPadding = padding * 3;
         
-        let width: CGFloat = 50
-        let height = width
-        let x = frame.width - (width + padding)
-        let y = Device.trueY0() + padding
+        var width: CGFloat = 50
+        var height = width
+        var x = frame.width - (width + padding)
+        var y = Device.trueY0() + padding
         
         rotationResetButton.frame = CGRect(x: x, y: y, width: width, height: height)
+        
+        width = frame.width / 5
+        height = 20
+        y = frame.height - (height + scaleBarPadding)
+        x = scaleBarPadding
+        
+        scaleBar.frame = CGRect(x: x, y: y, width: width, height: height)
     }
     
     override func addRecognizers() {
