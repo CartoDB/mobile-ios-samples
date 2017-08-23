@@ -96,6 +96,8 @@ class ScaleBar: UIView {
         let pos2Wgs = projection.toWgs84(map.screen(toMap: sp2))!
         
         // Calculate distance with haversine formula
+        // https://en.wikipedia.org/wiki/Haversine_formula
+        
         let latDistance = (pos1Wgs.getY() - pos2Wgs.getY()).toRadians
         let lonDistance = (pos1Wgs.getX() - pos2Wgs.getX()).toRadians
         
@@ -115,6 +117,8 @@ class ScaleBar: UIView {
         var scale = CGFloat(distanceMeters) * ratio
         
         // Multiply by pixel density
+        // This multiplication can also be done earlier,
+        // but leaving it here for readability
         scale = UIScreen.main.scale * scale
         
         DispatchQueue.main.async {
