@@ -82,9 +82,12 @@ class ScaleBar: UIView {
         
         // Total distance shown by the MapView
         let distanceMeters = AVERAGE_RADIUS_OF_EARTH * c
-
+        
         let ratio = frame.width / map!.frame.width
-        let scale = CGFloat(distanceMeters) * ratio
+        var scale = CGFloat(distanceMeters) * ratio
+        
+        // TODO calculation incorrect, gives almost exactly 0.5x the actual value
+        scale = 2 * scale
         
         DispatchQueue.main.async {
             if (scale > 1000) {
