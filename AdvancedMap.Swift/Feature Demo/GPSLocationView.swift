@@ -62,7 +62,7 @@ class GPSLocationView : MapBaseView {
         width = frame.width / 5
         height = 20
         y = frame.height - (height + scaleBarPadding)
-        x = scaleBarPadding
+        x = frame.width - (width + scaleBarPadding)
         
         scaleBar.frame = CGRect(x: x, y: y, width: width, height: height)
     }

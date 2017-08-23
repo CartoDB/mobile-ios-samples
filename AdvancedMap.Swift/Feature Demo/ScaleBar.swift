@@ -24,6 +24,9 @@ class ScaleBar: UIView {
     var projection: NTProjection { return map.getOptions().getBaseProjection() }
     
     let bottomBorder = UIView()
+    let leftBorder = UIView()
+    let rightBorder = UIView()
+    
     let label = UILabel()
     
     convenience init() {
@@ -34,19 +37,44 @@ class ScaleBar: UIView {
         label.textAlignment = .right
         addSubview(label)
         
-        bottomBorder.backgroundColor = UIColor.lightGray
+        let borderColor = UIColor.gray
+        bottomBorder.backgroundColor = borderColor
         addSubview(bottomBorder)
+        
+        leftBorder.backgroundColor = borderColor
+        addSubview(leftBorder)
+        
+        rightBorder.backgroundColor = borderColor
+        addSubview(rightBorder)
     }
     
     override func layoutSubviews() {
         
-        label.frame = bounds
+        let padding: CGFloat = 5;
         
-        let w: CGFloat = frame.width
-        let h: CGFloat = 1
-        let x: CGFloat = 0
-        let y: CGFloat = frame.height - h;
+        var x: CGFloat = padding
+        var y: CGFloat = 0
+        var w = frame.width - 2 * padding
+        var h = frame.height - padding
+        
+        label.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        w = frame.width
+        h = 1
+        x = 0
+        y = frame.height - (h + padding);
+        
         bottomBorder.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        h = 6
+        w = 1
+        y = frame.height - (h + padding / 2)
+        
+        leftBorder.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        x = frame.width - w
+        
+        rightBorder.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
     func update() {
@@ -86,8 +114,8 @@ class ScaleBar: UIView {
         let ratio = frame.width / map!.frame.width
         var scale = CGFloat(distanceMeters) * ratio
         
-        // TODO calculation incorrect, gives almost exactly 0.5x the actual value
-        scale = 2 * scale
+        // Multiply by pixel density
+        scale = UIScreen.main.scale * scale
         
         DispatchQueue.main.async {
             if (scale > 1000) {
