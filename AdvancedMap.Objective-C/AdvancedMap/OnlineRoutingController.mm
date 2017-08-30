@@ -11,9 +11,7 @@
 - (void)viewDidLoad
 {
     // Create also online routing service if no offline package is yet downloaded
-    NSString *source = [ONLINE_ROUTING_SOURCE stringByAppendingString: TRANSPORT_MODE_CAR];
-    self.service = [[NTCartoOnlineRoutingService alloc] initWithSource:source];
-    
+    self.service = [[NTValhallaOnlineRoutingService alloc]initWithApiKey:MAPZEN_API_KEY];
     // There are no packages to download, simply set the flag to true
     self.mapListener.isPackageDownloaded = YES;
     

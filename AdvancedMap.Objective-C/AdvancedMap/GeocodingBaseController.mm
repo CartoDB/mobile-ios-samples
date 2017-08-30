@@ -3,11 +3,11 @@
  * Base class for both reverse and normal geocoding
  */
 #import "GeocodingBaseController.h"
-
+#import "Sources.h"
 @implementation GeocodingBaseController
 
 - (NSString *)getApiKey {
-    return @"mapzen-e2gmwsC";
+    return MAPZEN_API_KEY;
 }
 
 - (NSString *)getFailMessage

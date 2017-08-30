@@ -23,5 +23,6 @@ NSString *const TRANSPORT_MODE_CAR = @".car";
 NSString *const GEOCODING_TAG = @"geocoding:";
 NSString *const OFFLINE_GEOCODING_SOURCE = @"carto.streets";
 
+NSString *const MAPZEN_API_KEY = @"mapzen-e2gmwsC";
 
 @end
