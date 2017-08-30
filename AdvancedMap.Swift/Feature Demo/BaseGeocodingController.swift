@@ -36,7 +36,7 @@ class BaseGeocodingController : BasePackageDownloadController {
         }
     }
 
-    let API_KEY = "mapzen-e2gmwsC"
+    static let API_KEY = "mapzen-e2gmwsC"
 }
 
 

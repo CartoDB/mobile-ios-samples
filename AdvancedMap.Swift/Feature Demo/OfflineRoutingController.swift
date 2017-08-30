@@ -108,7 +108,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
     
     override func setOnlineMode() {
         super.setOnlineMode()
-        routing.service = NTCartoOnlineRoutingService(source: Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE)
+        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
     }
     
     override func setOfflineMode() {

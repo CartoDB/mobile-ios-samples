@@ -131,7 +131,7 @@ class RouteDownloadController : BaseController, PackageDownloadDelegate, RouteMa
     
     func setOnlineMode() {
         contentView.setOnlineMode()
-        routing.service = NTCartoOnlineRoutingService(source: Routing.ONLINE_ROUTING_SOURCE + Routing.TRANSPORT_MODE)
+        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
     }
     
     func setOfflineMode() {
