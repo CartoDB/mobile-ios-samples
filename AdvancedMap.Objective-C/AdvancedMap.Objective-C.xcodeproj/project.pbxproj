@@ -33,6 +33,7 @@
 		AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */; };
 		AD2AD5781F4B1ACC00F3C479 /* MapPackageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */; };
 		AD2AD57F1F4B22C500F3C479 /* GeocodingBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD57E1F4B22C500F3C479 /* GeocodingBaseController.mm */; };
+		AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
 		AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
@@ -95,7 +96,6 @@
 		ADED5F2E1D92A31800AB2D13 /* nutibright-v3.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F0F1D92A31800AB2D13 /* nutibright-v3.zip */; };
 		ADED5F2F1D92A31800AB2D13 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */; };
 		ADED5F301D92A31800AB2D13 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F111D92A31800AB2D13 /* positron.zip */; };
-		ADED5F311D92A31800AB2D13 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */; };
 		ADF6725A1F331AF800527D49 /* Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF672581F33106B00527D49 /* Sources.m */; };
 		ADFBF6CA1F4C19CB00F98741 /* BaseGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6C91F4C19CB00F98741 /* BaseGeocodingController.m */; };
 		ADFBF6CC1F4C2C5B00F98741 /* OnlineGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6CB1F4C2C5B00F98741 /* OnlineGeocodingController.m */; };
@@ -159,6 +159,7 @@
 		AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPackageController.m; sourceTree = "<group>"; };
 		AD2AD57D1F4B22C500F3C479 /* GeocodingBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodingBaseController.h; sourceTree = "<group>"; };
 		AD2AD57E1F4B22C500F3C479 /* GeocodingBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GeocodingBaseController.mm; sourceTree = "<group>"; };
+		AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rome_carto-streets.mbtiles"; sourceTree = "<group>"; };
 		AD3D629F1DD07F0F00C97356 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_more.png; path = ../../Assets/icon_more.png; sourceTree = "<group>"; };
 		AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@3x.png"; path = "../../Assets/icon_more@3x.png"; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
@@ -229,7 +230,6 @@
 		ADED5F0F1D92A31800AB2D13 /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutibright-v3.zip"; path = "../../Assets/nutibright-v3.zip"; sourceTree = "<group>"; };
 		ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADED5F111D92A31800AB2D13 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
-		ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
 		ADF672581F33106B00527D49 /* Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sources.m; sourceTree = "<group>"; };
 		ADF672591F33169600527D49 /* Sources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sources.h; sourceTree = "<group>"; };
 		ADFBF6C81F4C19CB00F98741 /* BaseGeocodingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGeocodingController.h; sourceTree = "<group>"; };
@@ -579,6 +579,7 @@
 		ADED5EF41D92A30200AB2D13 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */,
 				ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */,
 				ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */,
 				ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */,
@@ -613,7 +614,6 @@
 				ADED5F0F1D92A31800AB2D13 /* nutibright-v3.zip */,
 				ADED5F101D92A31800AB2D13 /* nutiteq-dark.zip */,
 				ADED5F111D92A31800AB2D13 /* positron.zip */,
-				ADED5F121D92A31800AB2D13 /* rome_ntvt.mbtiles */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -726,7 +726,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADED5F311D92A31800AB2D13 /* rome_ntvt.mbtiles in Resources */,
 				ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */,
 				ADED5F271D92A31800AB2D13 /* marker_black.png in Resources */,
 				ADED5F191D92A31800AB2D13 /* basic.zip in Resources */,
@@ -761,6 +760,7 @@
 				ADED5F2D1D92A31800AB2D13 /* nutibright-contourstyle.zip in Resources */,
 				ADED5F211D92A31800AB2D13 /* fcd_auto.nml in Resources */,
 				ADED5F1B1D92A31800AB2D13 /* carto-fonts.zip in Resources */,
+				AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */,
 				ADED5F1C1D92A31800AB2D13 /* cartodark.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

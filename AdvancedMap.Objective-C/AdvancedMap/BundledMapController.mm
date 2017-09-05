@@ -28,15 +28,11 @@
     // Zoom to Rome
     [self.mapView setFocusPos:[projection fromWgs84:[[NTMapPos alloc] initWithX:12.4807 y: 41.8962]]  durationSeconds:0];
     [self.mapView setZoom:13 durationSeconds:0];
-    
-    NTMapPos* position = [projection fromLat:8.11065195 lng:99.89845797];
-    [self.mapView setFocusPos:position durationSeconds:0];
-    [self.mapView setZoom:11 durationSeconds:0];
 }
 
 - (NTTileDataSource*)createTileDataSource
 {
-    NSString *name = @"rome_ntvt";
+    NSString *name = @"rome_carto-streets";
     NSString *extension = @"mbtiles";
     
     // file-based local offline datasource
