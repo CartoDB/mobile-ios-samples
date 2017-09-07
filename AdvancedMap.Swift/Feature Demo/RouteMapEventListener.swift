@@ -9,8 +9,7 @@
 import Foundation
 
 /*
- * This MapListener waits for two clicks on map - first to set routing start point, and then
- * second to mark end point and start routing service.
+ * This MapListener waits for two clicks on map - first to set routing start point, and then second to mark end point and start routing service.
  */
 class RouteMapEventListener : NTMapEventListener {
     
