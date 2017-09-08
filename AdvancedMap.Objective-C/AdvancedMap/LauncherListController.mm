@@ -55,14 +55,10 @@
                 @"description": @"Offline Routing where a country package (Androrra) is downloaded",
                 @"controller": @"OfflineRoutingPackageController"
                 },
-             
-//             Currently commented out, offline routing with a bbox will be available in v4.1.0
-//             @{ @"name": @"Offline Routing (bbox)",
-//                @"description": @"Offline Routing where a bounding box of New York is downloaded",
-//                @"controller": @"OfflineRoutingBBoxController"
-//                },
-             
-             /* Vector Objects */
+             @{ @"name": @"Offline Routing (bbox)",
+                @"description": @"Offline Routing where a bounding box of New York is downloaded",
+                @"controller": @"OfflineRoutingBBoxController"
+                },
              @{ @"name": @"Vector objects", @"controller": @"Header" },
              @{ @"name": @"Clustered Markers",
                 @"description": @"Read points from .geojson and show as dynamic clusters",
@@ -77,6 +73,25 @@
                 @"controller": @"VectorObjectEditingController"
                 },
              
+             /* Geocoding */
+             @{ @"name": @"Geocoding", @"controller": @"Header" },
+             @{ @"name": @"Online Reverse Geocoding",
+                @"description": @"Online reverse geocoding with Pelias geocoder",
+                @"controller": @"OnlineReverseGeocodingController"
+                },
+             @{ @"name": @"Online Geocoding",
+                @"description": @"Online geocoding with Pelias geocoder",
+                @"controller": @"OnlineGeocodingController"
+                },
+             @{ @"name": @"Offline Reverse Geocoding",
+                @"description": @"Download and package and click the map to find an address",
+                @"controller": @"ReverseGeoPackageDownloadController"
+                },
+             @{ @"name": @"Offline Geocoding",
+                @"description": @"Download and package and search for an address",
+                @"controller": @"GeoPackageDownloadController"
+                },
+             
              /* Offline maps */
              @{ @"name": @"Offline maps", @"controller": @"Header" },
              @{ @"name": @"Bundled Map",
@@ -89,7 +104,7 @@
                 },
              @{ @"name": @"Advanced Package Manager",
                 @"description": @"Download country map packages for offline",
-                @"controller": @"PackageManagerController"
+                @"controller": @"MapPackageController"
                 },
              
             /* Other */

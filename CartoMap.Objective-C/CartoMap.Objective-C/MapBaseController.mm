@@ -29,13 +29,13 @@
 
 - (void)addGrayBaseLayer
 {
-    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_GRAY];
+    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_POSITRON];
     [[self.mapView getLayers] add:layer];
 }
 
 - (void)addDarkBaseLayer
 {
-    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARK];
+    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARKMATTER];
     [[self.mapView getLayers] add:layer];
 }
 

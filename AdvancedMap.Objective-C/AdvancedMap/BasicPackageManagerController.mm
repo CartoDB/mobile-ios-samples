@@ -1,6 +1,7 @@
 
 #import "MapBaseController.h"
 #import "BoundingBox.h"
+#import "Sources.h"
 
 @interface BasicPackageManagerController : MapBaseController
 
@@ -43,7 +44,7 @@
     self.bbox.maxLon = 0.6406;
     self.bbox.maxLat = 51.7401;
     
-    self.manager = [[NTCartoPackageManager alloc] initWithSource:@"nutiteq.osm" dataFolder:folder];
+    self.manager = [[NTCartoPackageManager alloc] initWithSource:CARTO_VECTOR_SOURCE dataFolder:folder];
 
     [self setbaseLayer];
     
@@ -138,7 +139,7 @@
 
 - (void)setbaseLayer
 {
-    NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc]initWithPackageManager:self.manager style:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc]initWithPackageManager:self.manager style:NT_CARTO_BASEMAP_STYLE_VOYAGER];
     [[self.mapView getLayers] add:layer];
 }
 

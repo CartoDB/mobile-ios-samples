@@ -29,7 +29,7 @@
     NTMapView* mapView = (NTMapView*) self.view;
     
     // Add base layer
-    NTVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DEFAULT];
+    NTVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
     [[mapView getLayers] add:layer];
     
     NTProjection* proj = [[mapView getOptions] getBaseProjection];

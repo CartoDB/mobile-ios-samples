@@ -18,7 +18,7 @@ class VisBaseController: GLKViewController {
         view = mapView;
         
         // Add default base layer
-        let baseLayer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_DEFAULT);
+        let baseLayer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_VOYAGER);
         mapView?.getLayers().add(baseLayer);
         
         // GLKViewController-specific parameters for smoother animations
