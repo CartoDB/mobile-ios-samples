@@ -106,8 +106,6 @@
 		ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */; };
 		ADA9A9561F25DBF300B7D580 /* banner_icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA9A9551F25DBF300B7D580 /* banner_icon_info.png */; };
 		ADA9A9581F25DC0300B7D580 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9A9571F25DC0300B7D580 /* Banner.swift */; };
-		ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */; };
-		ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */; };
 		ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD241EFBF945005F53CB /* Routing.swift */; };
 		ADAFCD271EFBFBFC005F53CB /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFCD261EFBFBFC005F53CB /* Route.swift */; };
 		ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ADAFCD281EFC05B5005F53CB /* icon_pin_red.png */; };
@@ -250,8 +248,6 @@
 		ADA978041F0FB1000040E090 /* icon_sample_geocoding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_geocoding.png; sourceTree = "<group>"; };
 		ADA9A9551F25DBF300B7D580 /* banner_icon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_info.png; sourceTree = "<group>"; };
 		ADA9A9571F25DC0300B7D580 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
-		ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadController.swift; sourceTree = "<group>"; };
-		ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDownloadView.swift; sourceTree = "<group>"; };
 		ADAFCD241EFBF945005F53CB /* Routing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		ADAFCD261EFBFBFC005F53CB /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		ADAFCD281EFC05B5005F53CB /* icon_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_pin_red.png; sourceTree = "<group>"; };
@@ -416,7 +412,6 @@
 				AD5B2AF21F03CB9D00EF738C /* Clustering */,
 				AD5B2AF11F03CB9300EF738C /* Vector Objects */,
 				AD7356691F02760800D4D6EF /* Package Download */,
-				ADAFCD1E1EFBEEAC005F53CB /* Route Download */,
 				AD9786841EF7DA8C002912DF /* Styles */,
 				AD97868B1EF7F145002912DF /* Base */,
 			);
@@ -553,15 +548,6 @@
 				ADA977F91F0E8A910040E090 /* GeocodingView.swift */,
 			);
 			name = Geocoding;
-			sourceTree = "<group>";
-		};
-		ADAFCD1E1EFBEEAC005F53CB /* Route Download */ = {
-			isa = PBXGroup;
-			children = (
-				ADAFCD1F1EFBEECA005F53CB /* RouteDownloadController.swift */,
-				ADAFCD211EFBEED8005F53CB /* RouteDownloadView.swift */,
-			);
-			name = "Route Download";
 			sourceTree = "<group>";
 		};
 		ADAFCD231EFBF920005F53CB /* Routing */ = {
@@ -945,7 +931,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD97869D1EF80740002912DF /* PopupButton.swift in Sources */,
-				ADAFCD221EFBEED8005F53CB /* RouteDownloadView.swift in Sources */,
 				AD9786AE1EF80CD5002912DF /* SlideInPopup.swift in Sources */,
 				AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */,
 				ADB27EB01EF416C6004198D3 /* MainViewController.swift in Sources */,
@@ -966,7 +951,6 @@
 				ADE093051F01143000C569F9 /* RouteMapEventListener.swift in Sources */,
 				ADA977F51F0E89B00040E090 /* ReverseGeocodingController.swift in Sources */,
 				AD41232F1F040A73009874BD /* GPSLocationController.swift in Sources */,
-				ADAFCD201EFBEECA005F53CB /* RouteDownloadController.swift in Sources */,
 				ADE093011F01074B00C569F9 /* StateSwitch.swift in Sources */,
 				AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */,
 				ADA978021F0F79F90040E090 /* BaseGeocodingView.swift in Sources */,

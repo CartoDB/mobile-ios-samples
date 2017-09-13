@@ -25,14 +25,6 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
-        sample.title = "ROUTE DOWNLOAD"
-        sample.description = "Route download via bounding box for offline use"
-        sample.imageResource = folder + "icon_sample_route_download.png"
-        sample.controller = RouteDownloadController()
-        
-        list.append(sample)
-        
-        sample = Sample()
         sample.title = "ROUTE SEARCH"
         sample.description = "Search points of interests near route"
         sample.imageResource = folder + "icon_sample_route_search.png"
