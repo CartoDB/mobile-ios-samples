@@ -103,8 +103,14 @@ class PackageDownloadBaseView  : DownloadBaseView {
             
             if (download != nil) {
                 
-                let text = "Downloading " + download!.name + ": " + String(describing: Int(status.getProgress())) + "%"
-                self.progressLabel.update(text: text)
+                if (status.getProgress() == 100) {
+                    let text = "Download complete"
+                    self.progressLabel.complete(message: text)
+                } else {
+                    let text = "Downloading " + download!.name + ": " + String(describing: Int(status.getProgress())) + "%"
+                    self.progressLabel.update(text: text)
+                }
+                
                 self.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
                 
                 // Need to get it again, as else we'd be change the status of this variable,
@@ -277,7 +283,8 @@ class PackageDownloadBaseView  : DownloadBaseView {
             }
         }
         
-        downloadQueue = getAllPackages().filter({ $0.isDownloading || $0.isQueued })
+        let local = getAllPackages().filter({ $0.isDownloading || $0.isQueued })
+        downloadQueue.append(contentsOf: local)
         
         if (downloadQueue.count > 0) {
             let downloading = downloadQueue.filter({ $0.isDownloading })

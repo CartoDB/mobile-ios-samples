@@ -43,6 +43,11 @@ class PackageDownloadController : BaseController, UITableViewDelegate, PackageDo
         contentView.manager.startPackageListDownload()
         
         contentView.popup.popup.header.backButton.delegate = self
+        
+        if (!contentView.hasLocalPackages()) {
+            let text = "Click on the globe icon to download a package"
+            contentView.banner.showInformation(text: text, autoclose: true)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
