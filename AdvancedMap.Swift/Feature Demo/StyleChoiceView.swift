@@ -126,18 +126,13 @@ class StyleChoiceView : MapBaseView {
             
         } else if (source == StylePopupContent.CartoRasterSource) {
             
-            // We know that the value of raster will be Positron or Darkmatter,
-            // as CARTO and Mapzen use vector tiles
-            var url = ""
-            
-            if (selection == StylePopupContent.Positron) {
-                url = StylePopupContent.PositronUrl
+            if (selection == StylePopupContent.Voyager) {
+                currentLayer = NTCartoOnlineRasterTileLayer(source: "carto.voyager@2x")
+            } else if (selection == StylePopupContent.Positron) {
+                currentLayer = NTCartoOnlineRasterTileLayer(source: "carto.positron@2x")
             } else {
-                url = StylePopupContent.DarkMatterUrl
+                currentLayer = NTCartoOnlineRasterTileLayer(source: "carto.darkmatter@2x")
             }
-            
-            let datasource = NTHTTPTileDataSource(minZoom: 1, maxZoom: 19, baseURL: url)
-            currentLayer = NTRasterTileLayer(dataSource: datasource)
         }
         
         if (source == StylePopupContent.CartoRasterSource) {

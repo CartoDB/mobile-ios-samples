@@ -23,6 +23,7 @@ class StylePopupContent : UIScrollView {
     static let DarkMatter = "DARKMATTER"
     static let Voyager = "VOYAGER"
     
+    static let VoyagerUrl = "http://{s}.basemaps.cartocdn.com/voyager_all/{z}/{x}/{y}.png";
     static let PositronUrl = "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
     static let DarkMatterUrl = "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png";
     
@@ -54,6 +55,7 @@ class StylePopupContent : UIScrollView {
         cartoRaster = StylePopupContentSection()
         cartoRaster.source = StylePopupContent.CartoRasterSource
         cartoRaster.header.text = "CARTO RASTER"
+        cartoRaster.addItem(text: StylePopupContent.Voyager, imageUrl: "style_image_carto_voyager.png")
         cartoRaster.addItem(text: StylePopupContent.Positron, imageUrl: "style_image_carto_positron.png")
         cartoRaster.addItem(text: StylePopupContent.DarkMatter, imageUrl: "style_image_carto_darkmatter.png")
         

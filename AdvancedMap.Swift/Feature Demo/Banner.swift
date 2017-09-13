@@ -65,4 +65,12 @@ class Banner: AlertBaseView {
         label.text = text
         show()
     }
+    
+    func showInformation(text: String, autoclose: Bool) {
+        show(text: text)
+        
+        if (autoclose) {
+            Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.hide), userInfo: nil, repeats: false)
+        }
+    }
 }

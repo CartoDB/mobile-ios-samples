@@ -30,6 +30,10 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
         contentView.manager = NTCartoPackageManager(source: Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE, dataFolder: folder)
         
         setOnlineMode()
+        
+        let washingtonDC = contentView.projection.fromWgs84(NTMapPos(x: -77.0369, y: 38.9072))
+        contentView.map.setFocus(washingtonDC, durationSeconds: 0)
+        contentView.map.setZoom(14, durationSeconds: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +43,9 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
         mapListener?.delegate = self
         
         (contentView as! RouteSearchView).overlayLayer.setVectorElementEventListener(selectListener)
+        
+        let text = "Long-click on the map to set a route point"
+        contentView.banner.showInformation(text: text, autoclose: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -82,7 +89,7 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
             
             if (result == nil) {
                 DispatchQueue.main.async {
-                    self.contentView.banner.show(text: "Routing failed. Please try again")
+                    self.contentView.banner.showInformation(text: "Routing failed. Please try again", autoclose: true)
                 }
                 return
             }
@@ -90,12 +97,15 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
             let color = NTColor(r: 14, g: 122, b: 254, a: 150)
             DispatchQueue.main.async {
                 
-                self.contentView.banner.show(text: self.routing.getMessage(result: result!))
+                let text = self.routing.getMessage(result: result!)
+                self.contentView.banner.showInformation(text: text, autoclose: true)
                 self.routing.show(result: result!, lineColor: color!, complete: {_ in })
             
                 let collection = self.routing.routeDataSource?.getFeatureCollection()
                 let count = Int((collection?.getFeatureCount())!)
-            
+                
+                (self.contentView as! RouteSearchView).overlaySource.clear()
+                
                 for i in 0..<count {
                     let item = collection?.getFeature(Int32(i))
                 

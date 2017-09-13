@@ -75,6 +75,7 @@
 		AD7356701F0277A800D4D6EF /* PackagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566F1F0277A800D4D6EF /* PackagePopupContent.swift */; };
 		AD7356721F0277F700D4D6EF /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356711F0277F700D4D6EF /* Package.swift */; };
 		AD7356741F0291E000D4D6EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356731F0291E000D4D6EF /* Extensions.swift */; };
+		AD82682C1F696F1D00D59DB7 /* style_image_carto_voyager.png in Resources */ = {isa = PBXBuildFile; fileRef = AD82682B1F696F1D00D59DB7 /* style_image_carto_voyager.png */; };
 		AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */; };
 		AD9786881EF7DACF002912DF /* StyleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786871EF7DACF002912DF /* StyleChoiceView.swift */; };
 		AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9786891EF7EB34002912DF /* GalleryDelegate.swift */; };
@@ -215,6 +216,7 @@
 		AD73566F1F0277A800D4D6EF /* PackagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagePopupContent.swift; sourceTree = "<group>"; };
 		AD7356711F0277F700D4D6EF /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		AD7356731F0291E000D4D6EF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AD82682B1F696F1D00D59DB7 /* style_image_carto_voyager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_voyager.png; sourceTree = "<group>"; };
 		AD9786851EF7DAAB002912DF /* StyleChoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceController.swift; sourceTree = "<group>"; };
 		AD9786871EF7DACF002912DF /* StyleChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceView.swift; sourceTree = "<group>"; };
 		AD9786891EF7EB34002912DF /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 		AD437EC11EF93269008CEA76 /* BaseMapIcons */ = {
 			isa = PBXGroup;
 			children = (
+				AD82682B1F696F1D00D59DB7 /* style_image_carto_voyager.png */,
 				AD251F2E1F14C9C000B863BD /* style_image_nutiteq_positron.png */,
 				AD251F2F1F14C9C000B863BD /* style_image_nutiteq_darkmatter.png */,
 				AD251F301F14C9C000B863BD /* style_image_nutiteq_voyager.png */,
@@ -831,6 +834,7 @@
 				AD9786B81EF82284002912DF /* icon_info.png in Resources */,
 				AD251F331F14C9C000B863BD /* style_image_nutiteq_voyager.png in Resources */,
 				AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */,
+				AD82682C1F696F1D00D59DB7 /* style_image_carto_voyager.png in Resources */,
 				AD9786C81EF82B00002912DF /* icon_close.png in Resources */,
 				ADAFCD291EFC05B5005F53CB /* icon_pin_red.png in Resources */,
 				AD5B2AF01F03BEC400EF738C /* icon_sample_package_download.png in Resources */,
