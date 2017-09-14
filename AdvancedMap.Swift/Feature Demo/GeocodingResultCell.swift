@@ -24,12 +24,12 @@ class GeocodingResultCell: UITableViewCell {
         
         title = UILabel()
         title.textColor = UIColor.white
-        title.font = UIFont(name: "HelveticaNeue-Bold", size: 13)
+        title.font = UIFont(name: "HelveticaNeue", size: 13)
         addSubview(title)
         
         subtitle = UILabel()
         subtitle.textColor = Colors.nearWhite
-        subtitle.font = UIFont(name: "HelveticaNeue", size: 11)
+        subtitle.font = UIFont(name: "HelveticaNeue-Light", size: 10)
         addSubview(subtitle)
     }
     

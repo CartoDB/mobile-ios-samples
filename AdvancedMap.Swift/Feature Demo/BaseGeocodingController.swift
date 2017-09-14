@@ -33,7 +33,13 @@ class BaseGeocodingController : BasePackageDownloadController {
             if (self.contentView is GeocodingView) {
                 (self.contentView as! GeocodingView).showSearchBar()
             }
+            
+            if (self.contentView.switchButton.isOnline()) {
+                self.contentView.switchButton.toggle()
+                self.setOfflineMode()
+            }
         }
+        
     }
 
     static let API_KEY = "mapzen-e2gmwsC"
