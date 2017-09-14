@@ -139,6 +139,34 @@ class VectorObjectView : MapBaseView {
         point?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Hi!"))
         point?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "I'm just a red dot lying on the ground"))
         source?.add(point)
+        
+        /*
+         * Custom Popup
+         */
+        let bitmap = NTBitmapUtils.createBitmap(from: UIImage(named: "marker.png"))
+        
+        let customMarkerBuilder = NTMarkerStyleBuilder()
+        customMarkerBuilder?.setBitmap(bitmap)
+        customMarkerBuilder?.setSize(30)
+        
+        position = projection?.fromWgs84(NTMapPos(x: longitude - 0.01, y: latitude))
+        
+        let customMarker = NTMarker(pos: position, style: customMarkerBuilder?.buildStyle())
+        customMarker?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Howdy!"))
+        customMarker?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "I'm just a regular ol' marker with a custom bitmap"))
+        source?.add(customMarker)
+        
+        let handler = CustomPopupHandler()
+        handler?.text = "Custom popup\n attached to a marker"
+        
+        let popupBuilder = NTPopupStyleBuilder()
+        popupBuilder?.setAttachAnchorPointX(0.5, attachAnchorPointY: 0)
+        
+        let customPopup = NTCustomPopup(baseBillboard: customMarker, style: popupBuilder?.buildStyle(), popupHandler: handler)
+        customPopup?.setAnchorPointX(-1.0, anchorPointY: 0.0)
+        customPopup?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Howdy!"))
+        customPopup?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "And I'm an entirely custom popup. I'm awesome!"))
+        source?.add(customPopup)
     }
     
     override func addRecognizers() {

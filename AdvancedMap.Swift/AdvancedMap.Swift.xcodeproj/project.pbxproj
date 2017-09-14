@@ -27,6 +27,8 @@
 		AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = AD251F2F1F14C9C000B863BD /* style_image_nutiteq_darkmatter.png */; };
 		AD251F331F14C9C000B863BD /* style_image_nutiteq_voyager.png in Resources */ = {isa = PBXBuildFile; fileRef = AD251F301F14C9C000B863BD /* style_image_nutiteq_voyager.png */; };
 		AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */; };
+		AD33A7B41F6A740C0098DF15 /* CustomPopupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A7B31F6A740C0098DF15 /* CustomPopupHandler.swift */; };
+		AD33A7B61F6A84310098DF15 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AD33A7B51F6A84310098DF15 /* marker.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
 		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
@@ -167,6 +169,8 @@
 		AD251F2F1F14C9C000B863BD /* style_image_nutiteq_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_darkmatter.png; sourceTree = "<group>"; };
 		AD251F301F14C9C000B863BD /* style_image_nutiteq_voyager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_voyager.png; sourceTree = "<group>"; };
 		AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
+		AD33A7B31F6A740C0098DF15 /* CustomPopupHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupHandler.swift; sourceTree = "<group>"; };
+		AD33A7B51F6A84310098DF15 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
 		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
@@ -380,6 +384,7 @@
 				AD5B2AF51F03CBB300EF738C /* VectorObjectView.swift */,
 				AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */,
 				AD41231F1F03E80A009874BD /* VectorObjectMapListener.swift */,
+				AD33A7B31F6A740C0098DF15 /* CustomPopupHandler.swift */,
 			);
 			name = "Vector Objects";
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 		AD9786BA1EF8229A002912DF /* Markers */ = {
 			isa = PBXGroup;
 			children = (
+				AD33A7B51F6A84310098DF15 /* marker.png */,
 				AD9786BB1EF822B7002912DF /* icon_marker_blue.png */,
 				AD9786BC1EF822B7002912DF /* icon_marker_gray.png */,
 				AD9786BD1EF822B7002912DF /* icon_marker_green.png */,
@@ -852,6 +858,7 @@
 				AD4123241F03F444009874BD /* marker_black.png in Resources */,
 				ADC8B8E81F05299800B62852 /* icon_sample_city_download.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
+				AD33A7B61F6A84310098DF15 /* marker.png in Resources */,
 				AD4123341F040C0C009874BD /* icon_sample_clustering.png in Resources */,
 				AD061BCF1F1E4BED00F523B8 /* icon_wifi_off.png in Resources */,
 				AD4252FF1F1F38140034BF2B /* icon_compass.png in Resources */,
@@ -1007,6 +1014,7 @@
 				ADE092F71F00EF3E00C569F9 /* PackageListener.swift in Sources */,
 				ADA977FC1F0E8AAC0040E090 /* GeocodingController.swift in Sources */,
 				ADC8B8D91F04F2C600B62852 /* VectorElementSelectListener.swift in Sources */,
+				AD33A7B41F6A740C0098DF15 /* CustomPopupHandler.swift in Sources */,
 				AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
