@@ -36,12 +36,6 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
         (contentView as! GeocodingView).inputField.delegate = self
         (contentView as! GeocodingView).resultTable.delegate = self
         (contentView as! GeocodingView).resultTable.dataSource = self
-        
-        if ((contentView as! GeocodingView).hasLocalPackages()) {
-            (contentView as! GeocodingView).showLocalPackages()
-        } else {
-            (contentView as! GeocodingView).showBannerInsteadOfSearchBar()
-        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -165,11 +159,20 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
     override func setOnlineMode() {
         super.setOnlineMode()
         service = NTPeliasOnlineGeocodingService(apiKey: BaseGeocodingController.API_KEY)
+        
+        (contentView as! GeocodingView).showSearchBar()
     }
     
     override func setOfflineMode() {
         super.setOfflineMode()
         service = NTPackageManagerGeocodingService(packageManager: contentView.manager)
+        
+        if ((contentView as! GeocodingView).hasLocalPackages()) {
+            (contentView as! GeocodingView).showLocalPackages()
+            (contentView as! GeocodingView).showSearchBar()
+        } else {
+            (contentView as! GeocodingView).showBannerInsteadOfSearchBar()
+        }
     }
 }
 

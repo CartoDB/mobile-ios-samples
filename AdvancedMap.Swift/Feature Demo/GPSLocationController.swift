@@ -35,17 +35,16 @@ class GPSLocationController : BaseController, CLLocationManagerDelegate, Rotatio
          * In addition to requesting background location updates, you need to add the following lines to your Info.plist:
          *
          * 1. Privacy - Location When In Use Usage Description
-         * 2. Privacy - Location Always Usage Description
          * 3. Required background modes:
          *    3.1 App registers for location updates
          */
         if #available(iOS 9.0, *) {
-            manager.requestAlwaysAuthorization()
+            manager.requestWhenInUseAuthorization()
         }
         
-        if #available(iOS 9.0, *) {
-            manager.allowsBackgroundLocationUpdates = true
-        }
+        contentView.addBanner(visible: true)
+        let text = "Click the tracking icon if you wish to turn off tracking"
+        contentView.banner.showInformation(text: text, autoclose: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -33,6 +33,9 @@ class ReverseGecodingController : BaseGeocodingController, ReverseGeocodingEvent
         geocodingListener.delegate = self
 
         contentView.map.setMapEventListener(geocodingListener)
+        
+        let text = "Click on the map to find out more about a location"
+        contentView.banner.showInformation(text: text, autoclose: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
