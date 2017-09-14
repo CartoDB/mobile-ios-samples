@@ -129,6 +129,31 @@ extension NTGeocodingResult {
         
         return string
     }
+    
+    func getType() -> String {
+        
+        let address = self.getAddress()
+        
+        if (address?.getName() != "") {
+            return "Point of Interest"
+        } else if (address?.getHouseNumber() != "") {
+            return "Address"
+        } else if (address?.getStreet() != "") {
+            return "Street"
+        } else if (address?.getNeighbourhood() != "") {
+            return "Neighbourhood"
+        } else if (address?.getLocality() != "") {
+            return "Town/village"
+        } else if (address?.getCounty() != "") {
+            return "County"
+        } else if (address?.getRegion() != "") {
+            return "Region"
+        } else if (address?.getCountry() != "") {
+            return "Country"
+        } else {
+            return ""
+        }
+    }
 }
 
 extension NTPackageInfoVector {

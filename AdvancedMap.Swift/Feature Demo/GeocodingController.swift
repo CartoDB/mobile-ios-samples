@@ -67,15 +67,12 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: GeocodingController.identifier, for: indexPath as IndexPath)
-        
+        let id = GeocodingController.identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: id) as! GeocodingResultCell
+
         let result = addresses[indexPath.row]
-        cell.tag = indexPath.row
-        cell.textLabel?.text = result.getPrettyAddress()
-        cell.textLabel?.font = (contentView as! GeocodingView).font
-        cell.textLabel?.textColor = UIColor.white
-        cell.backgroundColor = Colors.lightTransparentGray
-        cell.textLabel?.backgroundColor = Colors.fromRgba(red: 0, green: 0, blue: 0, alpha: 0)
+        cell.update(result: result)
+        
         return cell
     }
     

@@ -13,7 +13,7 @@ class GeocodingView : BaseGeocodingView, UIGestureRecognizerDelegate {
     var inputField: UITextField!
     var resultTable: UITableView!
     
-    let font = UIFont(name: "HelveticaNeue", size: 15)!
+    let font = UIFont(name: "HelveticaNeue", size: 14)!
     
     let placeholder = "Type address..."
 
@@ -41,7 +41,7 @@ class GeocodingView : BaseGeocodingView, UIGestureRecognizerDelegate {
         
         resultTable = UITableView()
         resultTable.isHidden = true
-        resultTable.register(UITableViewCell.self, forCellReuseIdentifier: GeocodingController.identifier)
+        resultTable.register(GeocodingResultCell.self, forCellReuseIdentifier: GeocodingController.identifier)
         resultTable.backgroundColor = Colors.fromRgba(red: 0, green: 0, blue: 0, alpha: 0)
         resultTable.allowsSelection = true
         resultTable.isUserInteractionEnabled = true

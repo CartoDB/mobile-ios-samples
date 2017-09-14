@@ -29,6 +29,7 @@
 		AD30FB191F06481A00F14012 /* icon_sample_object_editing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */; };
 		AD33A7B41F6A740C0098DF15 /* CustomPopupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A7B31F6A740C0098DF15 /* CustomPopupHandler.swift */; };
 		AD33A7B61F6A84310098DF15 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AD33A7B51F6A84310098DF15 /* marker.png */; };
+		AD33A7B81F6AB5570098DF15 /* GeocodingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
 		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
@@ -171,6 +172,7 @@
 		AD30FB181F06481A00F14012 /* icon_sample_object_editing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_object_editing.png; sourceTree = "<group>"; };
 		AD33A7B31F6A740C0098DF15 /* CustomPopupHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupHandler.swift; sourceTree = "<group>"; };
 		AD33A7B51F6A84310098DF15 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
+		AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingResultCell.swift; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
 		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
@@ -555,6 +557,7 @@
 			children = (
 				ADA977FB1F0E8AAC0040E090 /* GeocodingController.swift */,
 				ADA977F91F0E8A910040E090 /* GeocodingView.swift */,
+				AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */,
 			);
 			name = Geocoding;
 			sourceTree = "<group>";
@@ -999,6 +1002,7 @@
 				AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */,
 				AD01E6571F3483440001D8A3 /* OfflineRoutingView.swift in Sources */,
 				ADA977F71F0E89BA0040E090 /* ReverseGeocodingView.swift in Sources */,
+				AD33A7B81F6AB5570098DF15 /* GeocodingResultCell.swift in Sources */,
 				AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */,
 				ADF6725C1F335CBE00527D49 /* BaseGeocodingController.swift in Sources */,
 				AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */,
