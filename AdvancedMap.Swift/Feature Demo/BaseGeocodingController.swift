@@ -34,10 +34,7 @@ class BaseGeocodingController : BasePackageDownloadController {
                 (self.contentView as! GeocodingView).showSearchBar()
             }
             
-            if (self.contentView.switchButton.isOnline()) {
-                self.contentView.switchButton.toggle()
-                self.setOfflineMode()
-            }
+            self.goOffline()
         }
         
     }

@@ -50,6 +50,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
     
     override func downloadComplete(sender: PackageListener, id: String) {
         contentView.downloadComplete(id: id)
+        goOffline()
     }
 
     func startClicked(event: RouteMapEvent) {
@@ -96,7 +97,6 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
         super.setOfflineMode()
         routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
     }
-    
 }
 
 

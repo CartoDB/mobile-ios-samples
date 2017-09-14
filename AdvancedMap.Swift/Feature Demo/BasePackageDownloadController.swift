@@ -36,6 +36,13 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         contentView.popup.popup.header.backButton.delegate = self
         
         contentView.switchButton.delegate = self
+        
+        if (!contentView.hasLocalPackages()) {
+            let text = "Click on the globe icon to download a package"
+            contentView.banner.showInformation(text: text, autoclose: true)
+        } else {
+            goOffline()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -102,6 +109,15 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         }
     }
 
+    
+    func goOffline() {
+        if (self.contentView.switchButton.isOnline()) {
+            DispatchQueue.main.async {
+                self.contentView.switchButton.toggle()
+                self.setOfflineMode()
+            }
+        }
+    }
 }
 
 

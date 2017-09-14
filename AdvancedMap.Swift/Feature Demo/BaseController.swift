@@ -29,6 +29,5 @@ class BaseController : UIViewController {
         DispatchQueue.main.async {
             self.view.makeToast(message)
         }
-        
     }
 }
