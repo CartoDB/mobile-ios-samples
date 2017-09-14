@@ -49,26 +49,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
     }
     
     override func downloadComplete(sender: PackageListener, id: String) {
-        
         contentView.downloadComplete(id: id)
-        
-        DispatchQueue.main.async {
-            let package = self.contentView.manager?.getLocalPackage(id)
-            
-            if (package == nil) {
-                return;
-            }
-            
-            var name = package?.getName()
-            let id = package?.getPackageId()
-            
-            if (id?.contains(Package.BBOX_IDENTIFIER))! {
-                name = Cities.findNameById(id: (package?.getPackageId())!)
-            }
-            
-            let text = "DOWNLOADED (" + name! + String(describing: (package?.getSizeInMB())!) + "MB)"
-            self.contentView.progressLabel.complete(message: text)
-        }
     }
 
     func startClicked(event: RouteMapEvent) {

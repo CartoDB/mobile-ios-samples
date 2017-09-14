@@ -17,7 +17,7 @@ class Samples {
         let folder = ""
         
         var sample = Sample()
-        sample.title = "STYLES"
+        sample.title = "BASEMAP STYLES"
         sample.description = "Various samples of different CARTO Base Maps"
         sample.imageResource = folder + "icon_sample_styles.png"
         sample.controller = StyleChoiceController()

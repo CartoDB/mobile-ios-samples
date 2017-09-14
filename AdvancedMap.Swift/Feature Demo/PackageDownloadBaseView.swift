@@ -284,7 +284,23 @@ class PackageDownloadBaseView  : DownloadBaseView {
         }
         
         let local = getAllPackages().filter({ $0.isDownloading || $0.isQueued })
-        downloadQueue.append(contentsOf: local)
+        
+        for element in local {
+            
+            var found = false
+            
+            for existing in downloadQueue {
+                if (existing.id == element.id) {
+                    existing.status = element.status
+                    existing.info = element.info
+                    found = true
+                }
+            }
+            
+            if (!found) {
+                downloadQueue.append(element)
+            }
+        }
         
         if (downloadQueue.count > 0) {
             let downloading = downloadQueue.filter({ $0.isDownloading })
