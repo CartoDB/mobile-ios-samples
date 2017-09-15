@@ -50,11 +50,6 @@
     
     [markerStyleBuilder setBitmap:[NTBitmapUtils createBitmapFromUIImage:[UIImage imageNamed:@"direction_upthenright.png"]]];
     _instructionRight = [markerStyleBuilder buildStyle];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
     
     // Create a map event listener
     self.mapListener = [[RouteClickListener alloc] init];
@@ -62,6 +57,11 @@
     // MapEventListener needs the data source and the layer to display balloons over the clicked vector elements
     [self.mapListener setRoutingController: self];
     [self.mapListener setRouteDataSource:_routeDataSource];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     [self.mapView setMapEventListener:self.mapListener];
     

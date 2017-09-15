@@ -54,7 +54,6 @@ class ClusterBuilder : NTClusterElementBuilder {
             let builder = NTMarkerStyleBuilder()
             builder?.setBitmap(NTBitmapUtils.createBitmap(from: newImage))
             builder?.setSize(30)
-            builder?.setPlacementPriority(-(Int32)(elements.size()))
             
             style = builder?.buildStyle()
         }
