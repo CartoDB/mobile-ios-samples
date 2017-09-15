@@ -17,7 +17,7 @@
 {
     [super viewDidLoad];
     
-    NTProjection* proj = [[self.mapView getOptions] getBaseProjection];
+    NTProjection* proj = [[self.contentView.mapView getOptions] getBaseProjection];
 
     // Load ground overlay bitmap
     NTBitmap* overlayBitmap = [NTBitmapUtils loadBitmapFromAssets:@"jefferson-building-ground-floor.jpg"];
@@ -42,17 +42,17 @@
     // Create bitmap overlay raster tile data source
     NTBitmapOverlayRasterTileDataSource* rasterDataSource = [[NTBitmapOverlayRasterTileDataSource alloc] initWithMinZoom:0 maxZoom:20 bitmap:overlayBitmap projection:proj mapPoses:mapPoses bitmapPoses:bitmapPoses];
     NTRasterTileLayer* rasterLayer = [[NTRasterTileLayer alloc] initWithDataSource:rasterDataSource];
-    [[self.mapView getLayers] add:rasterLayer];
+    [[self.contentView.mapView getLayers] add:rasterLayer];
     
     // Apply zoom level bias to the raster layer.
     // By default, bitmaps are upsampled on high-DPI screens.
     // We will correct this by applying appropriate bias
-    float zoomLevelBias = log([[self.mapView getOptions] getDPI] / 160.0f) / log(2);
+    float zoomLevelBias = log([[self.contentView.mapView getOptions] getDPI] / 160.0f) / log(2);
     [rasterLayer setZoomLevelBias:zoomLevelBias * 0.75f];
     [rasterLayer setTileSubstitutionPolicy:NT_TILE_SUBSTITUTION_POLICY_VISIBLE];
     
-    [self.mapView setFocusPos:pos durationSeconds:0];
-    [self.mapView setZoom:15.5f durationSeconds:0];
+    [self.contentView.mapView setFocusPos:pos durationSeconds:0];
+    [self.contentView.mapView setZoom:15.5f durationSeconds:0];
 }
 
 @end

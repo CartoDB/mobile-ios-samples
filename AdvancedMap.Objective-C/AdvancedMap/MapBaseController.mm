@@ -3,40 +3,17 @@
 
 @implementation MapBaseController
 
-- (void)loadView
-{
-    self.mapView = [[NTMapView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.view = self.mapView;
-    
-    NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
-    
-    [[self.mapView getLayers] add:layer];
-    
-    self.alert = [[AlertMenu alloc]init];
-}
-
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-
-    // GLKViewController-specific parameters for smoother animations
-    [self setResumeOnDidBecomeActive:NO];
-    [self setPreferredFramesPerSecond:60];
-}
-
-- (void)didReceiveMemoryWarning
-{
-	[super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    // GLKViewController-specific, do on-demand rendering instead of constant redrawing.
-    // This is VERY IMPORTANT as it stops battery drain when nothing changes on the screen!
-    [self setPaused:YES];
+    
+    self.contentView = [[MapBaseView alloc] init];
+    self.view = self.contentView;
+    
+    NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
+    [[self.contentView.mapView getLayers] add:layer];
+    
+    self.alert = [[AlertMenu alloc]init];
 }
 
 -(void) alert:(NSString *)message
@@ -48,7 +25,7 @@
 
 -(NTProjection *) getProjection
 {
-    return [[self.mapView getOptions]getBaseProjection];
+    return [[self.contentView.mapView getOptions] getBaseProjection];
 }
 
 @end

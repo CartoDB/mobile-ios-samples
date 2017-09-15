@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
     // Clear default base layer
-    [[self.mapView getLayers] clear];
+    [[self.contentView.mapView getLayers] clear];
     
     NSString *folder = [self createFolder:@"citypackages"];
     
@@ -104,10 +104,10 @@
 - (void)zoomTo:(NTMapPos *)position
 {
     // Translate position to WGS84
-    position = [[[self.mapView getOptions]getBaseProjection] fromWgs84:position];
+    position = [[[self.contentView.mapView getOptions]getBaseProjection] fromWgs84:position];
     
-    [self.mapView setFocusPos:position durationSeconds:0];
-    [self.mapView setZoom:12 durationSeconds:2];
+    [self.contentView.mapView setFocusPos:position durationSeconds:0];
+    [self.contentView.mapView setZoom:12 durationSeconds:2];
 }
 
 - (void)setStatusLabel
@@ -123,7 +123,7 @@
     [[self.status layer] setCornerRadius:5];
     [self.status setClipsToBounds:true];
     
-    [self.mapView addSubview:self.status];
+    [self.contentView addSubview:self.status];
     
     CGRect screen = [UIScreen mainScreen].bounds;
     
@@ -140,7 +140,7 @@
 - (void)setbaseLayer
 {
     NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc]initWithPackageManager:self.manager style:NT_CARTO_BASEMAP_STYLE_VOYAGER];
-    [[self.mapView getLayers] add:layer];
+    [[self.contentView.mapView getLayers] add:layer];
 }
 
 @end

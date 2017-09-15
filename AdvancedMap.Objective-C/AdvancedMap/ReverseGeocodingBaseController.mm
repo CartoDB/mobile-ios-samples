@@ -32,12 +32,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.mapView setMapEventListener:self.listener];
+    [self.contentView.mapView setMapEventListener:self.listener];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.mapView setMapEventListener:nil];
+    [self.contentView.mapView setMapEventListener:nil];
 }
 
 @end

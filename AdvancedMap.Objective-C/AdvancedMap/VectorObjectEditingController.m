@@ -14,12 +14,12 @@
 {
     [super viewDidLoad];
     
-    NTProjection* projection = [[self.mapView getOptions] getBaseProjection];
+    NTProjection* projection = [[self.contentView.mapView getOptions] getBaseProjection];
     NTLocalVectorDataSource* source = [[NTLocalVectorDataSource alloc] initWithProjection:projection];
     
     // Initialize edit layer
     NTEditableVectorLayer* editLayer = [[NTEditableVectorLayer alloc] initWithDataSource:source];
-    [[self.mapView getLayers] add:editLayer];
+    [[self.contentView.mapView getLayers] add:editLayer];
     
     // Add some elements that we can change and move
     [self addPoint:source];
@@ -34,7 +34,7 @@
     // Add a map even listener to deselect element (on map click)
     VectorElementDeselectEventListener* deselectListener = [[VectorElementDeselectEventListener alloc]init];
     deselectListener.vectorLayer = editLayer;
-    [self.mapView setMapEventListener:deselectListener];
+    [self.contentView.mapView setMapEventListener:deselectListener];
     
     // Add the vector element edit even listener
     BasicEditEventListener* editListener = [[BasicEditEventListener alloc]init];

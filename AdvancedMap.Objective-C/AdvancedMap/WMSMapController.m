@@ -25,7 +25,9 @@
 
 -(void) viewDidLoad
 {
-    NTProjection *projection = [[self.mapView getOptions] getBaseProjection];
+    [super viewDidLoad];
+    
+    NTProjection *projection = [[self.contentView.mapView getOptions] getBaseProjection];
     
     NSString *url = @"http://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WmsServer?";
     NSString *layer = @"0";
@@ -42,14 +44,14 @@
     NTRasterTileLayer *wmsLayer = [[NTRasterTileLayer alloc] initWithDataSource:source];
     
     
-    double zoomLevelBias = log([[self.mapView getOptions] getDPI] / 160) / log(2);
+    double zoomLevelBias = log([[self.contentView.mapView getOptions] getDPI] / 160) / log(2);
     [wmsLayer setZoomLevelBias:zoomLevelBias];
     
-    [[self.mapView getLayers] add:wmsLayer];
+    [[self.contentView.mapView getLayers] add:wmsLayer];
     
     NTMapPos *position = [[NTMapPos alloc] initWithX:-100 y:40];
-    [self.mapView setFocusPos: [projection fromWgs84:position] durationSeconds:1];
-    [self.mapView setZoom:5 durationSeconds:1];
+    [self.contentView.mapView setFocusPos: [projection fromWgs84:position] durationSeconds:1];
+    [self.contentView.mapView setZoom:5 durationSeconds:1];
 }
 
 @end

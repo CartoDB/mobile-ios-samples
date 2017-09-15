@@ -28,11 +28,11 @@
     self.bbox.minLat = 40.4621;
     self.bbox.maxLat = 41.0043;
     
-    NTProjection *proj = [[self.mapView getOptions]getBaseProjection];
+    NTProjection *proj = [[self.contentView.mapView getOptions]getBaseProjection];
     
     // Zoom to center of bbox
-    [self.mapView setFocusPos:[proj fromWgs84:[self.bbox getCenter]]  durationSeconds:0];
-    [self.mapView setZoom:10 durationSeconds:0];
+    [self.contentView.mapView setFocusPos:[proj fromWgs84:[self.bbox getCenter]]  durationSeconds:0];
+    [self.contentView.mapView setZoom:10 durationSeconds:0];
     
     self._packageManagerListener.PackageName = [self.bbox toString];
 }

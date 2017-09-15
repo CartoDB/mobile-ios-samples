@@ -18,6 +18,8 @@
 
 -(void) viewDidLoad
 {
+    [super viewDidLoad];
+    
     self.manager = [[CLLocationManager alloc] init];
     self.manager.pausesLocationUpdatesAutomatically = YES;
     self.manager.delegate = self;
@@ -34,10 +36,11 @@
     if ([CLLocationManager locationServicesEnabled]) {
         [self.manager startUpdatingLocation];
         
-        self.source = [[NTLocalVectorDataSource alloc] initWithProjection:[[self.mapView getOptions] getBaseProjection]];
+        NTProjection *projection = [[self.contentView.mapView getOptions] getBaseProjection];
+        self.source = [[NTLocalVectorDataSource alloc] initWithProjection:projection];
         NTVectorLayer *layer = [[NTVectorLayer alloc] initWithDataSource:self.source];
         
-        [[self.mapView getLayers] add:layer];
+        [[self.contentView.mapView getLayers] add:layer];
     }
 }
 
@@ -60,7 +63,7 @@
     description = [description stringByAppendingString:@", "];
     description = [description stringByAppendingFormat:@"%.04f", longitude];
     
-    NTProjection *projection = [[self.mapView getOptions] getBaseProjection];
+    NTProjection *projection = [[self.contentView.mapView getOptions] getBaseProjection];
     NTMapPos *position = [[NTMapPos alloc] initWithX:longitude y:latitude];
     position = [projection fromWgs84:position];
     
@@ -78,8 +81,8 @@
     self.markerLabel.description = description;
     [self.positionMarker setGeometry:[[NTPointGeometry alloc]initWithPos:position]];
     
-    [self.mapView setFocusPos:position durationSeconds:1];
-    [self.mapView setZoom:19 durationSeconds:0];
+    [self.contentView.mapView setFocusPos:position durationSeconds:1];
+    [self.contentView.mapView setZoom:19 durationSeconds:0];
 }
 
 @end

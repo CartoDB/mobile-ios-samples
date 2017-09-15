@@ -47,6 +47,7 @@
 		AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F92091F6BF41F00139F79 /* SlideInPopupHeader.swift */; };
 		AD4F920C1F6BF48200139F79 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F920B1F6BF48200139F79 /* Device.swift */; };
 		AD4F920F1F6C0C7300139F79 /* SlideInMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */; };
+		AD4F92131F6C13CF00139F79 /* MapBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F92121F6C13CF00139F79 /* MapBaseView.m */; };
 		AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */; };
 		AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */; };
 		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
@@ -183,6 +184,8 @@
 		AD4F92091F6BF41F00139F79 /* SlideInPopupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPopupHeader.swift; sourceTree = "<group>"; };
 		AD4F920B1F6BF48200139F79 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInMenuView.swift; sourceTree = "<group>"; };
+		AD4F92111F6C13CF00139F79 /* MapBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBaseView.h; sourceTree = "<group>"; };
+		AD4F92121F6C13CF00139F79 /* MapBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBaseView.m; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
 		AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureController.mm; sourceTree = "<group>"; };
 		AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSMapController.m; sourceTree = "<group>"; };
@@ -461,6 +464,15 @@
 			name = SlideInPopup;
 			sourceTree = "<group>";
 		};
+		AD4F92101F6C13AE00139F79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD4F92111F6C13CF00139F79 /* MapBaseView.h */,
+				AD4F92121F6C13CF00139F79 /* MapBaseView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		AD54BF351DCB601C00B0C190 /* Overlays */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +486,7 @@
 		AD860A6B1D7DA103005994B2 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				AD4F92101F6C13AE00139F79 /* Views */,
 				ADC731491DBFAC6500E1CDCA /* Listeners */,
 				ADC731481DBFAC6000E1CDCA /* Controllers */,
 				AD9F814F1E4B67340091DB26 /* AlertMenu.h */,
@@ -955,6 +968,7 @@
 				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
 				ADFBF6CC1F4C2C5B00F98741 /* OnlineGeocodingController.m in Sources */,
+				AD4F92131F6C13CF00139F79 /* MapBaseView.m in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				AD59914F1F4B3CC900CDF426 /* ReverseGeoPackageDownloadController.m in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,

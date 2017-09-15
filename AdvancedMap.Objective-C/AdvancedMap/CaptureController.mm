@@ -22,13 +22,15 @@
 
 -(void) viewDidLoad
 {
+    [super viewDidLoad];
+    
     // Initialize projection and data source
-    NTProjection* projection = [[self.mapView getOptions] getBaseProjection];
+    NTProjection* projection = [[self.contentView.mapView getOptions] getBaseProjection];
     NTLocalVectorDataSource* source = [[NTLocalVectorDataSource alloc]initWithProjection:projection];
     
     // Intialize a vector layer for our marker
     NTVectorLayer* layer = [[NTVectorLayer alloc] initWithDataSource:source];
-    [[self.mapView getLayers] add:layer];
+    [[self.contentView.mapView getLayers] add:layer];
     
     // Load bitmap
     UIImage* image = [UIImage imageNamed:@"marker"];
@@ -46,8 +48,8 @@
     [source add:marker];
     
     // Animate zoom to position
-    [self.mapView setFocusPos:berlin durationSeconds:1];
-    [self.mapView setZoom:12 durationSeconds:1];
+    [self.contentView.mapView setFocusPos:berlin durationSeconds:1];
+    [self.contentView.mapView setZoom:12 durationSeconds:1];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -55,11 +57,11 @@
     // Initialize renderer
     self.listener = [[RendererListener alloc] init];
     self.listener.controller = self;
-    self.listener.mapView = self.mapView;
+    self.listener.mapView = self.contentView.mapView;
     self.listener.number = 0;
     self.listener.position = [[NTMapPos alloc]init];
     
-    [[self.mapView getMapRenderer] captureRendering:self.listener waitWhileUpdating:true];
+    [[self.contentView.mapView getMapRenderer] captureRendering:self.listener waitWhileUpdating:true];
 }
 
 -(void)viewWillDisappear:(BOOL)animated

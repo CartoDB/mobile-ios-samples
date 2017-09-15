@@ -8,7 +8,7 @@
     [super viewDidLoad];
     
     // Get the base projection set in the base class
-    NTProjection* proj = [[self.mapView getOptions] getBaseProjection];
+    NTProjection* proj = [[self.contentView.mapView getOptions] getBaseProjection];
     
     // Initialize an online vector data source for base map
     _routeDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
@@ -19,8 +19,8 @@
     NTVectorLayer* vectorLayerStartStop = [[NTVectorLayer alloc] initWithDataSource:_routeStartStopDataSource];
     
     // Add the previous vector layer to the map
-    [[self.mapView getLayers] add:vectorLayer];
-    [[self.mapView getLayers] add:vectorLayerStartStop];
+    [[self.contentView.mapView getLayers] add:vectorLayer];
+    [[self.contentView.mapView getLayers] add:vectorLayerStartStop];
     
     // Create markers for start and end
     NTMarkerStyleBuilder* markerStyleBuilder = [[NTMarkerStyleBuilder alloc] init];
@@ -63,7 +63,7 @@
 {
     [super viewWillAppear:animated];
     
-    [self.mapView setMapEventListener:self.mapListener];
+    [self.contentView.mapView setMapEventListener:self.mapListener];
     
     [self alert:@"Long click on the map to set the start and end position"];
 }
@@ -72,7 +72,7 @@
 {
     [super viewWillDisappear:animated];
     
-    [self.mapView setMapEventListener:nil];
+    [self.contentView.mapView setMapEventListener:nil];
 }
 
 -(void)setStart:(NTMapPos *)mapPos
@@ -104,7 +104,8 @@
     [poses add:startPos];
     [poses add:stopPos];
     
-    NTRoutingRequest* request = [[NTRoutingRequest alloc] initWithProjection:[[self.mapView getOptions] getBaseProjection] points:poses];
+    NTProjection *projection = [[self.contentView.mapView getOptions] getBaseProjection];
+    NTRoutingRequest* request = [[NTRoutingRequest alloc] initWithProjection:projection points:poses];
     
     NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
     

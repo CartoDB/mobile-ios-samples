@@ -18,12 +18,12 @@
 {
     [super viewDidLoad];
     
-    NTProjection *proj = [[self.mapView getOptions]getBaseProjection];
+    NTProjection *proj = [[self.contentView.mapView getOptions]getBaseProjection];
     NTMapPos *andorra = [[NTMapPos alloc]initWithX:1.5218 y:42.5063];
     
     // Zoom to Andorra as this is the package we're downloading
-    [self.mapView setFocusPos:[proj fromWgs84:andorra]  durationSeconds:0];
-    [self.mapView setZoom:10 durationSeconds:0];
+    [self.contentView.mapView setFocusPos:[proj fromWgs84:andorra]  durationSeconds:0];
+    [self.contentView.mapView setZoom:10 durationSeconds:0];
     
     self._packageManagerListener.PackageName = @"AD";
 }

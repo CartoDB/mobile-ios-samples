@@ -16,7 +16,7 @@
     [super viewDidLoad];
 
     // Initialize a local vector data source
-    NTProjection* projection = [[self.mapView getOptions] getBaseProjection];
+    NTProjection* projection = [[self.contentView.mapView getOptions] getBaseProjection];
     NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:projection];
 
     // Create element builder
@@ -26,7 +26,7 @@
     NTClusteredVectorLayer* vectorLayer = [[NTClusteredVectorLayer alloc] initWithDataSource:vectorDataSource clusterElementBuilder:clusterElementBuilder];
     
     // Add the previous vector layer to the map
-    [[self.mapView getLayers] add:vectorLayer];
+    [[self.contentView.mapView getLayers] add:vectorLayer];
     
     // Read .geojson
     NSString* fullpath = [[NSBundle mainBundle] pathForResource:@"cities15000" ofType:@"geojson"];

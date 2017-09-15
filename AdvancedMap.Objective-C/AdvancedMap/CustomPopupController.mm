@@ -18,12 +18,12 @@
 	[super viewDidLoad];
 	
 	// Initialize a local vector data source
-	NTProjection* proj = [[self.mapView getOptions] getBaseProjection];
+	NTProjection* proj = [[self.contentView.mapView getOptions] getBaseProjection];
 	NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];
 	// Initialize a vector layer with the previous data source
 	NTVectorLayer* vectorLayer = [[NTVectorLayer alloc] initWithDataSource:vectorDataSource];
 	// Add the previous vector layer to the map
-	[[self.mapView getLayers] add:vectorLayer];
+	[[self.contentView.mapView getLayers] add:vectorLayer];
 	
 	// Load bitmaps for custom markers
 	UIImage* markerImage = [UIImage imageNamed:@"marker.png"];

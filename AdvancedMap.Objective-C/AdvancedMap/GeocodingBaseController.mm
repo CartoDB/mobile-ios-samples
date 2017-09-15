@@ -21,7 +21,7 @@
     
     _geocodingSource = [[NTLocalVectorDataSource alloc]initWithProjection:[self getProjection]];
     _geocodingLayer = [[NTVectorLayer alloc]initWithDataSource:_geocodingSource];
-    [[self.mapView getLayers]add:_geocodingLayer];
+    [[self.contentView.mapView getLayers]add:_geocodingLayer];
 }
 
 - (void)showResult:(NTGeocodingResult *)result title:(NSString *)title description:(NSString *)description goToPosition: (BOOL)goToPosition {
@@ -78,8 +78,8 @@
     }
     
     if (goToPosition) {
-        [self.mapView setFocusPos:position durationSeconds:1.0f];
-        [self.mapView setZoom:17.0f durationSeconds:1.0f];
+        [self.contentView.mapView setFocusPos:position durationSeconds:1.0f];
+        [self.contentView.mapView setZoom:17.0f durationSeconds:1.0f];
     }
     
     NTBalloonPopup *popup = [[NTBalloonPopup alloc]initWithPos:position style:[builder buildStyle] title:title desc:description];

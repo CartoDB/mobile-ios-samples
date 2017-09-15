@@ -20,7 +20,7 @@
 	[super viewDidLoad];
 	
 	// Get the base projection set in the base class
-	self.projection = [[self.mapView getOptions] getBaseProjection];
+	self.projection = [[self.contentView.mapView getOptions] getBaseProjection];
 	
 	// Initialize a local vector data source
 	self.source = [[NTLocalVectorDataSource alloc] initWithProjection:self.projection];
@@ -29,7 +29,7 @@
 	self.layer = [[NTVectorLayer alloc] initWithDataSource:self.source];
 	
     // Add the previous vector layer to the map
-	[[self.mapView getLayers] add:self.layer];
+	[[self.contentView.mapView getLayers] add:self.layer];
 	
     // Set visible zoom range for the vector layer
 	[self.layer setVisibleZoomRange:[[NTMapRange alloc] initWithMin:10 max:24]];
@@ -143,16 +143,16 @@
     [self add3DCar];
 
     // Set initial location and other parameters, don't animate
-    [self.mapView setFocusPos:[self.projection fromWgs84:[[NTMapPos alloc] initWithX:24.650415 y:59.428773]]  durationSeconds:0];
-    [self.mapView setZoom:13 durationSeconds:0];
+    [self.contentView.mapView setFocusPos:[self.projection fromWgs84:[[NTMapPos alloc] initWithX:24.650415 y:59.428773]]  durationSeconds:0];
+    [self.contentView.mapView setZoom:13 durationSeconds:0];
     
     // Create vector element event listener
     MyVectorElementEventListener* vectorElementListener = [[MyVectorElementEventListener alloc] init];
-    [vectorElementListener setMapView:self.mapView vectorDataSource:self.source];
+    [vectorElementListener setMapView:self.contentView.mapView vectorDataSource:self.source];
     
-    for (int i = 0; i < [[self.mapView getLayers] count]; i++) {
+    for (int i = 0; i < [[self.contentView.mapView getLayers] count]; i++) {
         
-        NTLayer* layer = [[self.mapView getLayers] get:i];
+        NTLayer* layer = [[self.contentView.mapView getLayers] get:i];
         
         if ([layer isKindOfClass:[NTVectorLayer class]]) {
             NTVectorLayer* vectorLayer = (NTVectorLayer*) layer;
@@ -164,9 +164,9 @@
 -(void) viewWillDisappear:(BOOL)animated {
     
     // Reset all listeners. Without this the sample would leak due to cyclical references between MapView and listeners
-    for (int i = 0; i < [[self.mapView getLayers] count]; i++) {
+    for (int i = 0; i < [[self.contentView.mapView getLayers] count]; i++) {
         
-        NTLayer* layer = [[self.mapView getLayers] get:i];
+        NTLayer* layer = [[self.contentView.mapView getLayers] get:i];
         
         if ([layer isKindOfClass:[NTVectorLayer class]]) {
             NTVectorLayer* vectorLayer = (NTVectorLayer*) layer;
@@ -259,7 +259,7 @@
     NTLocalVectorDataSource* vectorDataSource2 = [[NTLocalVectorDataSource alloc] initWithProjection:self.projection];
     NTVectorLayer* vectorLayer2 = [[NTVectorLayer alloc] initWithDataSource:vectorDataSource2];
     
-    [[self.mapView getLayers] add:vectorLayer2];
+    [[self.contentView.mapView getLayers] add:vectorLayer2];
     [vectorLayer2 setVisibleZoomRange:[[NTMapRange alloc] initWithMin:10 max:24]];
     
     // Add vector elements. All vector elements need a position, which defines the location

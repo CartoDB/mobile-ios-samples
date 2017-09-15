@@ -97,10 +97,10 @@ NTTileLayer *currentLayer;
     
     // Zoom to Central Europe so some texts would be visible
     NTMapPos *position = [[NTMapPos alloc] initWithX:15.2551 y:54.5260];
-    position = [[[self.mapView getOptions] getBaseProjection] fromWgs84:position];
+    position = [[[self.contentView.mapView getOptions] getBaseProjection] fromWgs84:position];
     
-    [self.mapView setFocusPos:position durationSeconds:0];
-    [self.mapView setZoom:5 durationSeconds:0];
+    [self.contentView.mapView setFocusPos:position durationSeconds:0];
+    [self.contentView.mapView setZoom:5 durationSeconds:0];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -109,7 +109,7 @@ NTTileLayer *currentLayer;
     
     CGSize size = [[UIScreen mainScreen] bounds].size;
     self.menu = [[OptionsMenu alloc]initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-    self.menu.map = self.mapView;
+    self.menu.map = self.contentView.mapView;
     self.menu.controller = self;
     
     [self.menu addItems: self.options];
@@ -198,8 +198,8 @@ NTTileLayer *currentLayer;
         [self updateLanguage:style];
     }
     
-    [[self.mapView getLayers] clear];
-    [[self.mapView getLayers] add:currentLayer];
+    [[self.contentView.mapView getLayers] clear];
+    [[self.contentView.mapView getLayers] add:currentLayer];
     
     [self initializeVectorTileListener];
 }
@@ -208,20 +208,21 @@ NTTileLayer *currentLayer;
 - (void)initializeVectorTileListener
 {
     if (self.vectorLayer == nil) {
-        NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc]initWithProjection:[[self.mapView getOptions]getBaseProjection]];
+        NTProjection *projection = [[self.contentView.mapView getOptions]getBaseProjection];
+        NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc]initWithProjection:projection];
         self.vectorLayer = [[NTVectorLayer alloc]initWithDataSource:source];
     } else {
-        [[self.mapView getLayers] remove:self.vectorLayer];
+        [[self.contentView.mapView getLayers] remove:self.vectorLayer];
     }
 
-    [[self.mapView getLayers] add:self.vectorLayer];
+    [[self.contentView.mapView getLayers] add:self.vectorLayer];
     
     [self updateListener];
 }
 
 - (void)updateListener
 {
-    NTLayer *layer = [[self.mapView getLayers] get:0];
+    NTLayer *layer = [[self.contentView.mapView getLayers] get:0];
     
     if ([layer isKindOfClass:NTVectorTileLayer.class]) {
         if (self.listener == nil) {

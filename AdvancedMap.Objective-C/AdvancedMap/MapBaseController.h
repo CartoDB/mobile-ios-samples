@@ -1,14 +1,14 @@
-#import <GLKit/GLKit.h>
+
 #import <CartoMobileSDK/CartoMobileSDK.h>
 #import "UIView+Toast.h"
 #import "AlertMenu.h"
-
+#import "MapBaseView.h"
 /*
  * Base controller for map samples. Includes simple lifecycle management.
  */
-@interface MapBaseController : GLKViewController
+@interface MapBaseController : UIViewController
 
-@property (nonatomic,strong) NTMapView* mapView;
+@property (nonatomic,strong) MapBaseView* contentView;
 
 -(void) alert:(NSString *)message;
 
