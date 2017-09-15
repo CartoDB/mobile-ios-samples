@@ -46,8 +46,11 @@
 		AD4F92081F6BF41200139F79 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F92071F6BF41200139F79 /* PopupView.swift */; };
 		AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F92091F6BF41F00139F79 /* SlideInPopupHeader.swift */; };
 		AD4F920C1F6BF48200139F79 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F920B1F6BF48200139F79 /* Device.swift */; };
-		AD4F920F1F6C0C7300139F79 /* SlideInMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */; };
 		AD4F92131F6C13CF00139F79 /* MapBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4F92121F6C13CF00139F79 /* MapBaseView.m */; };
+		AD4F92191F6C250400139F79 /* icon_basemap.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4F92151F6C250400139F79 /* icon_basemap.png */; };
+		AD4F921A1F6C250400139F79 /* icon_global.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4F92161F6C250400139F79 /* icon_global.png */; };
+		AD4F921B1F6C250400139F79 /* icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4F92171F6C250400139F79 /* icon_info.png */; };
+		AD4F921C1F6C250400139F79 /* icon_language.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4F92181F6C250400139F79 /* icon_language.png */; };
 		AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */; };
 		AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */; };
 		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
@@ -183,9 +186,12 @@
 		AD4F92071F6BF41200139F79 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		AD4F92091F6BF41F00139F79 /* SlideInPopupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPopupHeader.swift; sourceTree = "<group>"; };
 		AD4F920B1F6BF48200139F79 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInMenuView.swift; sourceTree = "<group>"; };
 		AD4F92111F6C13CF00139F79 /* MapBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapBaseView.h; sourceTree = "<group>"; };
 		AD4F92121F6C13CF00139F79 /* MapBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapBaseView.m; sourceTree = "<group>"; };
+		AD4F92151F6C250400139F79 /* icon_basemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_basemap.png; sourceTree = "<group>"; };
+		AD4F92161F6C250400139F79 /* icon_global.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_global.png; sourceTree = "<group>"; };
+		AD4F92171F6C250400139F79 /* icon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_info.png; sourceTree = "<group>"; };
+		AD4F92181F6C250400139F79 /* icon_language.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_language.png; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
 		AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureController.mm; sourceTree = "<group>"; };
 		AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSMapController.m; sourceTree = "<group>"; };
@@ -354,6 +360,7 @@
 		2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				AD4F92141F6C24F900139F79 /* Resources */,
 				AD4F91F61F6BE32000139F79 /* Components */,
 				AD2AD56C1F4B01BD00F3C479 /* PackageManager */,
 				ADFC10231E76EAEF009DC903 /* Utils */,
@@ -441,7 +448,6 @@
 		AD4F91F61F6BE32000139F79 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */,
 				AD4F920B1F6BF48200139F79 /* Device.swift */,
 				AD4F92021F6BF3F600139F79 /* SlideInPopup */,
 				AD4F92001F6BF3D000139F79 /* Banner.swift */,
@@ -471,6 +477,17 @@
 				AD4F92121F6C13CF00139F79 /* MapBaseView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		AD4F92141F6C24F900139F79 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD4F92151F6C250400139F79 /* icon_basemap.png */,
+				AD4F92161F6C250400139F79 /* icon_global.png */,
+				AD4F92171F6C250400139F79 /* icon_info.png */,
+				AD4F92181F6C250400139F79 /* icon_language.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		AD54BF351DCB601C00B0C190 /* Overlays */ = {
@@ -797,6 +814,7 @@
 				ADED5F251D92A31800AB2D13 /* looseleaf.zip in Resources */,
 				ADED5F2B1D92A31800AB2D13 /* menu@2x.png in Resources */,
 				2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */,
+				AD4F92191F6C250400139F79 /* icon_basemap.png in Resources */,
 				ADED5F2E1D92A31800AB2D13 /* nutibright-v3.zip in Resources */,
 				AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */,
 				ADED5F261D92A31800AB2D13 /* mapzen.zip in Resources */,
@@ -804,6 +822,7 @@
 				ADED5F171D92A31800AB2D13 /* arrow.png in Resources */,
 				ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */,
 				ADED5F181D92A31800AB2D13 /* arrow@2x.png in Resources */,
+				AD4F921B1F6C250400139F79 /* icon_info.png in Resources */,
 				ADED5F1E1D92A31800AB2D13 /* direction_up.png in Resources */,
 				ADED5F1F1D92A31800AB2D13 /* direction_upthenleft.png in Resources */,
 				ADED5F1D1D92A31800AB2D13 /* direction_down.png in Resources */,
@@ -818,6 +837,8 @@
 				ADED5F2F1D92A31800AB2D13 /* nutiteq-dark.zip in Resources */,
 				AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */,
 				ADED5F281D92A31800AB2D13 /* marker_red.png in Resources */,
+				AD4F921C1F6C250400139F79 /* icon_language.png in Resources */,
+				AD4F921A1F6C250400139F79 /* icon_global.png in Resources */,
 				ADED5F1A1D92A31800AB2D13 /* capitals_3857.geojson in Resources */,
 				ADED5F2D1D92A31800AB2D13 /* nutibright-contourstyle.zip in Resources */,
 				ADED5F211D92A31800AB2D13 /* fcd_auto.nml in Resources */,
@@ -963,7 +984,6 @@
 				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */,
 				AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
-				AD4F920F1F6C0C7300139F79 /* SlideInMenuView.swift in Sources */,
 				AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */,
 				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
