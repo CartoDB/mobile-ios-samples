@@ -36,6 +36,8 @@ class MapBaseView : UIView {
         map = NTMapView()
         addSubview(map)
         
+        map.getOptions().setZoomGestures(true)
+        
         popup = SlideInPopup()
         addSubview(popup)
         sendSubview(toBack: popup)

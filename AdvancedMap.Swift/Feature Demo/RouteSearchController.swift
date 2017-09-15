@@ -8,7 +8,9 @@
 
 import Foundation
 
-class RouteSearchController : BasePackageDownloadController, RouteMapEventDelegate {
+class RouteSearchController : BaseController, RouteMapEventDelegate {
+    
+    let contentView = RouteSearchView()
     
     var routing: Routing!
     
@@ -18,22 +20,19 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        contentView = RouteSearchView()
         view = contentView
         
         routing = Routing(mapView: contentView.map)
         routing.showTurns = false
         
-        selectListener?.source = (contentView as! RouteSearchView).popupSource
+        selectListener?.source = contentView.popupSource
         
-        let folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
-        contentView.manager = NTCartoPackageManager(source: Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE, dataFolder: folder)
-        
-        setOnlineMode()
-        
-        let washingtonDC = contentView.projection.fromWgs84(NTMapPos(x: -77.0369, y: 38.9072))
+        let projection = contentView.baseSource.getProjection()
+        let washingtonDC = projection?.fromWgs84(NTMapPos(x: -77.0369, y: 38.9072))
         contentView.map.setFocus(washingtonDC, durationSeconds: 0)
         contentView.map.setZoom(14, durationSeconds: 0)
+        
+        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +41,7 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
         contentView.map.setMapEventListener(mapListener)
         mapListener?.delegate = self
         
-        (contentView as! RouteSearchView).overlayLayer.setVectorElementEventListener(selectListener)
+        contentView.overlayLayer.setVectorElementEventListener(selectListener)
         
         let text = "Long-click on the map to set a route point"
         contentView.banner.showInformation(text: text, autoclose: true)
@@ -54,7 +53,7 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
         contentView.map.setMapEventListener(nil)
         mapListener?.delegate = nil
         
-        (contentView as! RouteSearchView).overlayLayer.setVectorElementEventListener(nil)
+        contentView.overlayLayer.setVectorElementEventListener(nil)
     }
     
     func startClicked(event: RouteMapEvent) {
@@ -67,20 +66,9 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
     }
     
     func singleTap() {
-        (contentView as! RouteSearchView).popupSource.clear()
+        contentView.popupSource.clear()
     }
-    
-    override func setOnlineMode() {
-        super.setOnlineMode()
-        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
-        
-    }
-    
-    override func setOfflineMode() {
-        super.setOfflineMode()
-        routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
-    }
-    
+
     func showRoute(start: NTMapPos, stop: NTMapPos) {
         
         DispatchQueue.global().async {
@@ -104,7 +92,7 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
                 let collection = self.routing.routeDataSource?.getFeatureCollection()
                 let count = Int((collection?.getFeatureCount())!)
                 
-                (self.contentView as! RouteSearchView).overlaySource.clear()
+                self.contentView.overlaySource.clear()
                 
                 for i in 0..<count {
                     let item = collection?.getFeature(Int32(i))
@@ -124,43 +112,20 @@ class RouteSearchController : BasePackageDownloadController, RouteMapEventDelega
     func showAttractions(geometry: NTGeometry) {
         
         let request = NTSearchRequest()
-        request?.setProjection((contentView as! RouteSearchView).baseSource.getProjection())
+        request?.setProjection(contentView.baseSource.getProjection())
         request?.setGeometry(geometry)
         request?.setSearchRadius(500.0)
         request?.setFilterExpression("class='attraction'")
         
-        let results = (contentView as! RouteSearchView).searchService.findFeatures(request)
+        let results = contentView.searchService.findFeatures(request)
         let count = Int((results?.getFeatureCount())!)
         
         for i in 0..<count {
             let item = results?.getFeature(Int32(i))!
             
             if (item?.getGeometry() is NTPointGeometry) {
-                (contentView as! RouteSearchView).addPOI(feature: item!)
+                contentView.addPOI(feature: item!)
             }
-        }
-    }
-    
-    override func downloadComplete(sender: PackageListener, id: String) {
-        
-        contentView.downloadComplete(id: id)
-        
-        DispatchQueue.main.async {
-            let package = self.contentView.manager?.getLocalPackage(id)
-            
-            if (package == nil) {
-                return;
-            }
-            
-            var name = package?.getName()
-            let id = package?.getPackageId()
-            
-            if (id?.contains(Package.BBOX_IDENTIFIER))! {
-                name = Cities.findNameById(id: (package?.getPackageId())!)
-            }
-            
-            let text = "DOWNLOADED (" + name! + String(describing: (package?.getSizeInMB())!) + "MB)"
-            self.contentView.progressLabel.complete(message: text)
         }
     }
 }
