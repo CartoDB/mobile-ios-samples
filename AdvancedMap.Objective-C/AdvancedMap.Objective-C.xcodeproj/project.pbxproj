@@ -46,6 +46,7 @@
 		AD4F92081F6BF41200139F79 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F92071F6BF41200139F79 /* PopupView.swift */; };
 		AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F92091F6BF41F00139F79 /* SlideInPopupHeader.swift */; };
 		AD4F920C1F6BF48200139F79 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F920B1F6BF48200139F79 /* Device.swift */; };
+		AD4F920F1F6C0C7300139F79 /* SlideInMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */; };
 		AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */; };
 		AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */; };
 		AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */; };
@@ -181,6 +182,7 @@
 		AD4F92071F6BF41200139F79 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		AD4F92091F6BF41F00139F79 /* SlideInPopupHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPopupHeader.swift; sourceTree = "<group>"; };
 		AD4F920B1F6BF48200139F79 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInMenuView.swift; sourceTree = "<group>"; };
 		AD54BF361DCB6C9900B0C190 /* icon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@2x.png"; path = "../../Assets/icon_more@2x.png"; sourceTree = "<group>"; };
 		AD589CE31DC0BDD3004E68B2 /* CaptureController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureController.mm; sourceTree = "<group>"; };
 		AD589CE51DC0D1E7004E68B2 /* WMSMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSMapController.m; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 		AD4F91F61F6BE32000139F79 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AD4F920E1F6C0C7300139F79 /* SlideInMenuView.swift */,
 				AD4F920B1F6BF48200139F79 /* Device.swift */,
 				AD4F92021F6BF3F600139F79 /* SlideInPopup */,
 				AD4F92001F6BF3D000139F79 /* Banner.swift */,
@@ -947,6 +950,7 @@
 				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */,
 				AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
+				AD4F920F1F6C0C7300139F79 /* SlideInMenuView.swift in Sources */,
 				AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */,
 				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,

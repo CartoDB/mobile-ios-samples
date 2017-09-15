@@ -33,7 +33,6 @@ import UIKit
         
         addSubview(transparentArea)
         addSubview(popup)
-        
     }
     
     func isVisible() -> Bool {
