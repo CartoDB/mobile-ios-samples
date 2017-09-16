@@ -65,7 +65,6 @@
 		ADCA455F1D9293C600814350 /* nutibright-v3.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45401D9293C600814350 /* nutibright-v3.zip */; };
 		ADCA45601D9293C600814350 /* nutiteq-dark.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45411D9293C600814350 /* nutiteq-dark.zip */; };
 		ADCA45611D9293C600814350 /* positron.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45421D9293C600814350 /* positron.zip */; };
-		ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */; };
 		ADD8BEBF1D7EAB7400E4B1A8 /* TorqueController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD8BEBE1D7EAB7400E4B1A8 /* TorqueController.m */; };
 /* End PBXBuildFile section */
 
@@ -161,7 +160,6 @@
 		ADCA45401D9293C600814350 /* nutibright-v3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutibright-v3.zip"; path = "../../Assets/nutibright-v3.zip"; sourceTree = "<group>"; };
 		ADCA45411D9293C600814350 /* nutiteq-dark.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "nutiteq-dark.zip"; path = "../../Assets/nutiteq-dark.zip"; sourceTree = "<group>"; };
 		ADCA45421D9293C600814350 /* positron.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = positron.zip; path = ../../Assets/positron.zip; sourceTree = "<group>"; };
-		ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = rome_ntvt.mbtiles; path = ../../Assets/rome_ntvt.mbtiles; sourceTree = "<group>"; };
 		ADD8BEBE1D7EAB7400E4B1A8 /* TorqueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -382,7 +380,6 @@
 				ADCA45401D9293C600814350 /* nutibright-v3.zip */,
 				ADCA45411D9293C600814350 /* nutiteq-dark.zip */,
 				ADCA45421D9293C600814350 /* positron.zip */,
-				ADCA45431D9293C600814350 /* rome_ntvt.mbtiles */,
 				0CC811B01DAD0607005A5C4F /* cartocss.css */,
 			);
 			name = Assets;
@@ -514,7 +511,6 @@
 				AD4111621E69CFA500C96535 /* button_pause.png in Resources */,
 				ADCA45511D9293C600814350 /* direction_upthenright.png in Resources */,
 				ADCA455E1D9293C600814350 /* nutibright-contourstyle.zip in Resources */,
-				ADCA45621D9293C600814350 /* rome_ntvt.mbtiles in Resources */,
 				ADCA45561D9293C600814350 /* looseleaf.zip in Resources */,
 				ADC28F811D782FB300796134 /* Assets.xcassets in Resources */,
 				0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */,
@@ -597,7 +593,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC8690569F4480B56AFBB95A /* [CP] Embed Pods Frameworks */ = {
@@ -787,7 +783,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "CartoMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carto.CartoMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.carto.map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -801,7 +797,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "CartoMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carto.CartoMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.carto.map;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

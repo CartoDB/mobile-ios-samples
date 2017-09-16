@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					AD74B8011D941D700007701F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 79LP8BB5PK;
 					};
 				};
 			};
@@ -370,11 +371,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 79LP8BB5PK;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CartoMap.Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = carto.CartoMap.Swift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.carto.map.swift;
 				PRODUCT_NAME = CartoMap.Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "CartoMap.Swift/CartoMap.Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -388,11 +390,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 79LP8BB5PK;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = CartoMap.Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = carto.CartoMap.Swift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carto.carto.map.swift;
 				PRODUCT_NAME = CartoMap.Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "CartoMap.Swift/CartoMap.Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

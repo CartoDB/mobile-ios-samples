@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var License = "XTUN3Q0ZGZm5HTUtROUUyQ3AwNXRVOTR6b2U5VUVsYXhBaFJOaHhLS2NldEM4MGVRcUhPK0I0cXB6b2Y2OGc9PQoKYXBwVG9rZW49MzNkNzY2NTAtNjZjNy00YjJlLTkyMWYtMDczMzBmZWNmMDNkCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmhlbGxvbWFwCm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg==";
+    var License = "XTUN3Q0ZGVElyN0E0QzlKbXRSZncycUxEMUlGTHFpbXVBaFF4WXp5MHVYUlRjSHNZWXo1VklxZDlBWU9GS3c9PQoKYXBwVG9rZW49MGM0ZjAwNTYtNjUxYS00ODJkLTgzZDAtOGE1YzA0YjQwYzdhCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmhlbGxvbWFwLnN3aWZ0Cm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg==";
     
     func application(_: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 

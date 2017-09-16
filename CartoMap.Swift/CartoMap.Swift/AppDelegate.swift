@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var License = "XTUN3Q0ZCL1ZER2R2Ukw3WmV0MkROSnYxYy9PRVZkaTJBaFE3OVZsUktoV3E5L1hPbTlvSlYrUGx0am1ETGc9PQoKYXBwVG9rZW49ODU4OWM5NTQtMjc5Zi00NmVkLTljOTQtNjNkOTg4MzMyZWFiCnZhbGlkVW50aWw9MjAxNi0xMC0yMgp3YXRlcm1hcms9Y2FydG9kYgpidW5kbGVJZGVudGlmaWVyPWNhcnRvLkhlbGxvTWFwLVN3aWZ0Cm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgo=";
+    var License = "XTUM0Q0ZRQ253QllUc2pweno2dmM1RGtxMnFybVZyWldRd0lWQUpKN1dOOXU5bDRiWXJFKzhvZHhoUlE2YXlBegoKYXBwVG9rZW49YjUwNzg2YzUtZjg3OS00NTI0LTg1ZGEtMWQyNzdlZjIyMTY1CmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmNhcnRvLm1hcC5zd2lmdApvbmxpbmVMaWNlbnNlPTEKcHJvZHVjdHM9c2RrLWlvcy00LioKd2F0ZXJtYXJrPWN1c3RvbQo=";
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
