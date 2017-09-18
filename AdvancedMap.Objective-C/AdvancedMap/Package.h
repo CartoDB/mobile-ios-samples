@@ -16,9 +16,31 @@
 
 - (id)initWithPackageName:(NSString*)packageName packageInfo:(NTPackageInfo*)packageInfo packageStatus:(NTPackageStatus*)packageStatus;
 
-@property(readonly) NSString* packageName;
-@property(readonly) NSString* packageId;
-@property(readonly) NTPackageInfo* packageInfo;
-@property NTPackageStatus* packageStatus;
+@property NSString *name;
+
+@property NSString *identifier;
+
+@property NTPackageInfo *info;
+
+@property NTPackageStatus *status;
+
+extern NSString * const BBOX_IDENTIFIER;
+extern NSString * const CUSTOM_REGION_FOLDER_NAME;
+
+extern NSString * const READY;
+extern NSString * const QUEUED;
+extern NSString * const ACTION_PAUSE;
+extern NSString * const ACTION_RESUME;
+extern NSString * const ACTION_CANCEL;
+extern NSString * const ACTION_DOWNLOAD;
+extern NSString * const ACTION_REMOVE;
+
+- (BOOL)isGroup;
+
+- (BOOL)isCustomRegionFolder;
+
+- (NSString *)getStatusText;
+
+- (NSString *)getActionText;
 
 @end

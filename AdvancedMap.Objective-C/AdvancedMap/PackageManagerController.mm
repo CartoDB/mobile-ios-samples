@@ -127,13 +127,13 @@ static NSString* _language = @"en"; // the language for package names
     
     // If actual package was selected, use associated cell callback (block).
     // Otherwise open subcontroller with a new subfolder.
-    if (pkg.packageInfo) {
+    if (pkg.info) {
         PackageTableViewCell* cell = (PackageTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
         [cell buttonTapped:self];
     } else {
-        NSString* newFolder = [[_currentFolder stringByAppendingString:[pkg packageName]] stringByAppendingString:@"/"];
+        NSString* newFolder = [[_currentFolder stringByAppendingString:[pkg name]] stringByAppendingString:@"/"];
         UIViewController* subViewController = [[PackageManagerController alloc] initWithParent:self folder:newFolder];
-        [subViewController setTitle: [pkg packageName]];
+        [subViewController setTitle: [pkg name]];
         [self.navigationController pushViewController: subViewController animated:YES];
     }
 }
@@ -173,58 +173,58 @@ static NSString* _language = @"en"; // the language for package names
     }
     
     // Set cell name
-    cell.textLabel.text = [pkg packageName];
+    cell.textLabel.text = [pkg name];
     
     // Display details and action button depending whether this is an actual package or simply folder
-    if (pkg.packageInfo) {
+    if (pkg.info) {
         NSString* status;
-        if ([pkg.packageInfo getSize] < 1024 * 1024) {
-            status = [NSString stringWithFormat: @"version %d available (<1MB)", [pkg.packageInfo getVersion]];
+        if ([pkg.info getSize] < 1024 * 1024) {
+            status = [NSString stringWithFormat: @"version %d available (<1MB)", [pkg.info getVersion]];
         } else {
-            status = [NSString stringWithFormat: @"version %d  available (%lluMB)", [pkg.packageInfo getVersion], [pkg.packageInfo getSize] / 1024 / 1024];
+            status = [NSString stringWithFormat: @"version %d  available (%lluMB)", [pkg.info getVersion], [pkg.info getSize] / 1024 / 1024];
         }
         
         NSString* action = @"DL";
         
-        if (pkg.packageStatus) {
-            if ([pkg.packageStatus getCurrentAction] == NT_PACKAGE_ACTION_READY) {
+        if (pkg.status) {
+            if ([pkg.status getCurrentAction] == NT_PACKAGE_ACTION_READY) {
                 status = @"ready";
                 action = @"RM";
                 cell.customActionBlock = ^ {
-                    [_packageManager startPackageRemove:[pkg.packageInfo getPackageId]];
+                    [_packageManager startPackageRemove:[pkg.info getPackageId]];
                     
                 };
-            } else if ([pkg.packageStatus getCurrentAction] == NT_PACKAGE_ACTION_WAITING) {
+            } else if ([pkg.status getCurrentAction] == NT_PACKAGE_ACTION_WAITING) {
                 status = @"queued";
                 action = @"C";
                 cell.customActionBlock = ^ {
-                    [_packageManager cancelPackageTasks:[pkg.packageInfo getPackageId]];
+                    [_packageManager cancelPackageTasks:[pkg.info getPackageId]];
                 };
             } else {
-                if ([pkg.packageStatus getCurrentAction] == NT_PACKAGE_ACTION_COPYING) {
+                if ([pkg.status getCurrentAction] == NT_PACKAGE_ACTION_COPYING) {
                     status = @"copying";
-                } else if ([pkg.packageStatus getCurrentAction] == NT_PACKAGE_ACTION_DOWNLOADING) {
+                } else if ([pkg.status getCurrentAction] == NT_PACKAGE_ACTION_DOWNLOADING) {
                     status = @"downloading";
-                } else if ([pkg.packageStatus getCurrentAction] == NT_PACKAGE_ACTION_REMOVING) {
+                } else if ([pkg.status getCurrentAction] == NT_PACKAGE_ACTION_REMOVING) {
                     status = @"removing";
                 }
-                status = [NSString stringWithFormat: @"%@ %d%%", status, (int) [pkg.packageStatus getProgress]];
-                if ([pkg.packageStatus isPaused]) {
+                status = [NSString stringWithFormat: @"%@ %d%%", status, (int) [pkg.status getProgress]];
+                if ([pkg.status isPaused]) {
                     status = [NSString stringWithFormat: @"%@ (paused)", status];
                     action = @"R";
                     cell.customActionBlock = ^{
-                        [_packageManager setPackagePriority:[pkg.packageInfo getPackageId] priority:0];
+                        [_packageManager setPackagePriority:[pkg.info getPackageId] priority:0];
                     };
                 } else {
                     action = @"P";
                     cell.customActionBlock = ^{
-                        [_packageManager setPackagePriority:[pkg.packageInfo getPackageId] priority:-1];
+                        [_packageManager setPackagePriority:[pkg.info getPackageId] priority:-1];
                     };
                 }
             }
         } else {
             cell.customActionBlock = ^{
-                [_packageManager startPackageDownload:pkg.packageId];
+                [_packageManager startPackageDownload:pkg.identifier];
             };
         }
         
@@ -285,7 +285,7 @@ static NSString* _language = @"en"; // the language for package names
                     
                     for (int k = 0; k < packages.count; k++) {
                         Package *package = [packages objectAtIndex:k];
-                        if ([package.packageName isEqualToString: packageName]) {
+                        if ([package.name isEqualToString: packageName]) {
                             [existingPackages addObject:package];
                         }
                     }
@@ -295,7 +295,7 @@ static NSString* _language = @"en"; // the language for package names
                         // If there are none, add a package group if we don't have an existing list item
                         pkg = [[Package alloc] initWithPackageName:packageName packageInfo:nil packageStatus:nil];
                         
-                    } else if (existingPackages.count == 1 && ((Package *)[existingPackages objectAtIndex:0]).packageInfo != nil) {
+                    } else if (existingPackages.count == 1 && ((Package *)[existingPackages objectAtIndex:0]).info != nil) {
 
                         // Sometimes we need to add two labels with the same name.
                         // One a downloadable package and the other pointing to a list of said country's counties,

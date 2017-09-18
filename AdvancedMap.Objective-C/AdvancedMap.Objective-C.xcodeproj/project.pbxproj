@@ -60,6 +60,9 @@
 		AD46EB301F6FB317004B662F /* background_gps_location.png in Resources */ = {isa = PBXBuildFile; fileRef = AD46EB1C1F6FB317004B662F /* background_gps_location.png */; };
 		AD46EB311F6FB317004B662F /* background_screen_capture.png in Resources */ = {isa = PBXBuildFile; fileRef = AD46EB1D1F6FB317004B662F /* background_screen_capture.png */; };
 		AD46EB321F6FB317004B662F /* background_advanced_package_manager.png in Resources */ = {isa = PBXBuildFile; fileRef = AD46EB1E1F6FB317004B662F /* background_advanced_package_manager.png */; };
+		AD46EB351F6FD2A4004B662F /* PackageDownloadBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB341F6FD2A4004B662F /* PackageDownloadBaseView.m */; };
+		AD46EB3D1F6FD63A004B662F /* PackagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB3B1F6FD63A004B662F /* PackagePopupContent.swift */; };
+		AD46EB3E1F6FD63A004B662F /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB3C1F6FD63A004B662F /* PackageCell.swift */; };
 		AD4F91FB1F6BE9D600139F79 /* ProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FA1F6BE9D600139F79 /* ProgressLabel.swift */; };
 		AD4F91FD1F6BEA0400139F79 /* AlertBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FC1F6BEA0400139F79 /* AlertBaseView.swift */; };
 		AD4F91FF1F6BEFCE00139F79 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FE1F6BEFCE00139F79 /* Colors.swift */; };
@@ -222,6 +225,10 @@
 		AD46EB1C1F6FB317004B662F /* background_gps_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_gps_location.png; sourceTree = "<group>"; };
 		AD46EB1D1F6FB317004B662F /* background_screen_capture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_screen_capture.png; sourceTree = "<group>"; };
 		AD46EB1E1F6FB317004B662F /* background_advanced_package_manager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_advanced_package_manager.png; sourceTree = "<group>"; };
+		AD46EB331F6FD2A4004B662F /* PackageDownloadBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageDownloadBaseView.h; sourceTree = "<group>"; };
+		AD46EB341F6FD2A4004B662F /* PackageDownloadBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDownloadBaseView.m; sourceTree = "<group>"; };
+		AD46EB3B1F6FD63A004B662F /* PackagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagePopupContent.swift; sourceTree = "<group>"; };
+		AD46EB3C1F6FD63A004B662F /* PackageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
 		AD4F91F71F6BE96400139F79 /* AdvancedMap.Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdvancedMap.Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD4F91FA1F6BE9D600139F79 /* ProgressLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
 		AD4F91FC1F6BEA0400139F79 /* AlertBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBaseView.swift; sourceTree = "<group>"; };
@@ -406,8 +413,8 @@
 		2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				AD4F91F61F6BE32000139F79 /* SwiftUI */,
 				AD4F92141F6C24F900139F79 /* Resources */,
-				AD4F91F61F6BE32000139F79 /* Components */,
 				AD2AD56C1F4B01BD00F3C479 /* PackageManager */,
 				ADFC10231E76EAEF009DC903 /* Utils */,
 				AD860A6B1D7DA103005994B2 /* BaseClasses */,
@@ -502,9 +509,19 @@
 			name = "Launcher List";
 			sourceTree = "<group>";
 		};
-		AD4F91F61F6BE32000139F79 /* Components */ = {
+		AD46EB3A1F6FD5EC004B662F /* PopupContentViews */ = {
 			isa = PBXGroup;
 			children = (
+				AD46EB3B1F6FD63A004B662F /* PackagePopupContent.swift */,
+				AD46EB3C1F6FD63A004B662F /* PackageCell.swift */,
+			);
+			name = PopupContentViews;
+			sourceTree = "<group>";
+		};
+		AD4F91F61F6BE32000139F79 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				AD46EB3A1F6FD5EC004B662F /* PopupContentViews */,
 				AD46EB021F6FA9F0004B662F /* Launcher List */,
 				AD4F920B1F6BF48200139F79 /* Device.swift */,
 				AD4F92021F6BF3F600139F79 /* SlideInPopup */,
@@ -514,7 +531,7 @@
 				AD4F91FA1F6BE9D600139F79 /* ProgressLabel.swift */,
 				AD4F91F71F6BE96400139F79 /* AdvancedMap.Objective-C-Bridging-Header.h */,
 			);
-			name = Components;
+			name = SwiftUI;
 			sourceTree = "<group>";
 		};
 		AD4F92021F6BF3F600139F79 /* SlideInPopup */ = {
@@ -533,6 +550,8 @@
 			children = (
 				AD4F92111F6C13CF00139F79 /* MapBaseView.h */,
 				AD4F92121F6C13CF00139F79 /* MapBaseView.m */,
+				AD46EB331F6FD2A4004B662F /* PackageDownloadBaseView.h */,
+				AD46EB341F6FD2A4004B662F /* PackageDownloadBaseView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1067,8 +1086,10 @@
 				4DEB06D01A10BDB7003D111C /* OverlaysController.mm in Sources */,
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
 				AD5991481F4B306900CDF426 /* OnlineReverseGeocodingController.m in Sources */,
+				AD46EB3D1F6FD63A004B662F /* PackagePopupContent.swift in Sources */,
 				ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */,
 				AD4F92081F6BF41200139F79 /* PopupView.swift in Sources */,
+				AD46EB351F6FD2A4004B662F /* PackageDownloadBaseView.m in Sources */,
 				ADF6725A1F331AF800527D49 /* Sources.m in Sources */,
 				AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */,
 				AD46EB081F6FADC7004B662F /* MainView.swift in Sources */,
@@ -1079,6 +1100,7 @@
 				AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */,
 				AD4F92011F6BF3D000139F79 /* Banner.swift in Sources */,
 				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
+				AD46EB3E1F6FD63A004B662F /* PackageCell.swift in Sources */,
 				AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */,
 				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */,
 				AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */,

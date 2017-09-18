@@ -10,15 +10,44 @@
 
 @implementation Package
 
+NSString *const BBOX_IDENTIFIER = @"bbox(";
+NSString * const CUSTOM_REGION_FOLDER_NAME = @"CUSTOM REGIONS";
+
+NSString * const READY = @"READY";
+NSString * const QUEUED = @"QUEUED";
+NSString * const ACTION_PAUSE = @"PAUSE";
+NSString * const ACTION_RESUME = @"RESUME";
+NSString * const ACTION_CANCEL = @"CANCEL";
+NSString * const ACTION_DOWNLOAD = @"DOWNLOAD";
+NSString * const ACTION_REMOVE = @"REMOVE";
+
 - (id)initWithPackageName:(NSString*)packageName packageInfo:(NTPackageInfo*)packageInfo packageStatus:(NTPackageStatus*)packageStatus
 {
-    _packageName = packageName;
+    self.name = packageName;
+    
     if (packageInfo) {
-        _packageId = [packageInfo getPackageId];
-        _packageInfo = packageInfo;
-        _packageStatus = packageStatus;
+        self.identifier = [packageInfo getPackageId];
+        self.info = packageInfo;
+        self.status = packageStatus;
     }
+    
     return self;
+}
+
+- (BOOL)isGroup {
+    return YES;
+}
+
+- (BOOL)isCustomRegionFolder {
+    return YES;
+}
+
+- (NSString *)getStatusText {
+    return @"";
+}
+
+- (NSString *)getActionText {
+    return @"";
 }
 
 @end
