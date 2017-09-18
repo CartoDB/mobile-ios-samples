@@ -39,8 +39,16 @@ extern NSString * const ACTION_REMOVE;
 
 - (BOOL)isCustomRegionFolder;
 
+- (BOOL)isCustomRegionPackage;
+
+- (BOOL)isSmallerThan1MB;
+
 - (NSString *)getStatusText;
 
 - (NSString *)getActionText;
+
+- (NSString *)getVersionAndSize;
+
+- (CGFloat)getSizeInMB;
 
 @end
