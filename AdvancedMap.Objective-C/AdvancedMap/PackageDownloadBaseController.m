@@ -25,6 +25,8 @@
     [self.contentView.manager start];
     [self.contentView.manager startPackageListDownload];
     
+    self.contentView.packageContent.table.delegate = self;
+    self.contentView.popup.popup.header.backButton.delegate = self;
     
     [self.contentView addRecognizer:self view:self.contentView.downloadButton action:@selector(downloadButtonTap:)];
 }
@@ -37,7 +39,19 @@
     [self.contentView.manager setPackageManagerListener: nil];
     [self.contentView.manager stop:false];
     
+    self.contentView.packageContent.table.delegate = nil;
+    self.contentView.popup.popup.header.backButton.delegate = nil;
+    
     [self.contentView removeRecognizerFrom: self.contentView.downloadButton];
+}
+
+- (void)clickWithSender:(UIView *)sender {
+    [self.contentView onBackButtonClick];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Package *package = self.contentView.packageContent.packages[indexPath.row];
+    [self.contentView onPackageClick: package];
 }
 
 - (void)downloadButtonTap:(UITapGestureRecognizer *)recognizer {
@@ -69,4 +83,19 @@
     
 }
 
+- (NSString *)createFolder:(NSString *)name {
+    // Create folder for package manager. Package manager needs persistent writable folder.
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask,YES);
+    NSString* appSupportDir = [paths objectAtIndex: 0];
+    NSString* packagesDir = [appSupportDir stringByAppendingString:name];
+    NSError *error;
+    [[NSFileManager defaultManager] createDirectoryAtPath:packagesDir withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    return packagesDir;
+}
+
 @end
+
+
+
+

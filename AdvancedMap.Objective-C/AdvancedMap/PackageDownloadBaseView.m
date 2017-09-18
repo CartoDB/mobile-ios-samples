@@ -17,6 +17,9 @@
     [self addButton:_downloadButton];
     
     self.packageContent = [[PackagePopupContent alloc] init];
+    
+    self.folder = @"";
+    
     return self;
 }
 
@@ -32,7 +35,63 @@
     
 }
 - (void)setPackageContent {
-    [self.popup setContent:self.packageContent];
+
+    [self.popup.popup.header setTextWithText:@"SELECT A PACKAGE"];
+    [self updateList];
+    [self setContent:self.packageContent];
+}
+
+- (void)setContent: (UIView *)content {
+    
+    [self.popup.popup addSubview:_packageContent];
+    
+    CGFloat x = 0;
+    CGFloat y = self.popup.popup.header.height;
+    CGFloat w = [self.popup.popup frame].size.width;
+    CGFloat h = [self.popup.popup frame].size.height - y;
+    
+    [self.packageContent setFrame:CGRectMake(x, y, w, h)];
+}
+
+- (void)onBackButtonClick {
+    // Remove end slash
+    self.folder = [self.folder substringToIndex:self.folder.length - 1];
+    
+    int lastSlash = [self.folder rangeOfString:@"/"].location;
+    
+    if (lastSlash == -1) {
+        self.folder = @"";
+        [self.popup.popup.header.backButton setHidden:YES];
+    } else {
+        self.folder = [self.folder substringToIndex:lastSlash + 1];
+    }
+    
+    [self.packageContent addPackagesWithPackages:[self getPackages]];
+}
+
+- (void)onPackageClick: (Package *)package {
+    
+    if ([package isGroup]) {
+        self.folder = [[self.folder stringByAppendingString:package.name] stringByAppendingString: @"/"];
+        [self.packageContent addPackagesWithPackages:[self getPackages]];
+        [self.popup.popup.header.backButton setHidden:false];
+    } else {
+        
+        NSString *action = [package getActionText];
+        
+        if (action == ACTION_DOWNLOAD) {
+            [self.manager startPackageDownload:package.identifier];
+            [self.progressLabel show];
+        } else if (action == ACTION_PAUSE) {
+            [self.manager setPackagePriority:package.identifier priority:-1];
+        } else if (action == ACTION_RESUME) {
+            [self.manager setPackagePriority:package.identifier priority:0];
+        } else if (action == ACTION_CANCEL) {
+            [self.manager cancelPackageTasks:package.identifier];
+        } else if (action == ACTION_REMOVE) {
+            [self.manager startPackageRemove:package.identifier];
+        }
+    }
 }
 
 - (BOOL)isPackageContent {
@@ -45,7 +104,7 @@
 
 - (void)statusChanged:(NSString *)identifier status: (NTPackageStatus *)status {
     
-    dispatch_sync(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         Package *download = [self getCurrentDownload];
         
         if (download != nil) {
@@ -77,7 +136,8 @@
 
 - (void)updateList {
     NSArray *packages = [self getPackages];
-    dispatch_sync(dispatch_get_main_queue(), ^{
+
+    dispatch_async(dispatch_get_main_queue(), ^{
         [self.packageContent addPackagesWithPackages:packages];
         [self.packageContent.table reloadData];
     });
@@ -114,13 +174,14 @@
             
             name = [name substringFromIndex:[self.folder length]];
             NSRange range = [name rangeOfString:@"/"];
+            
             Package* pkg = nil;
             
             if (range.location == NSNotFound) {
                     
                 // This is an actual package
-                NTPackageStatus* status = [self.manager getLocalPackageStatus:[info getPackageId] version:-1];
-                pkg = [[Package alloc] initWithPackageName:name packageInfo:info packageStatus:status];
+                NTPackageStatus* status = [self.manager getLocalPackageStatus: [info getPackageId] version: -1];
+                pkg = [[Package alloc] initWithPackageName: name packageInfo: info packageStatus: status];
             
             } else {
                     
@@ -156,7 +217,9 @@
                     // Shouldn't be added, as both cases are accounted for
                     continue;
                 }
-                
+            }
+            
+            if (pkg != nil) {
                 [packages addObject:pkg];
             }
         }
@@ -174,7 +237,9 @@
 
 - (Package *)getCurrentDownload {
     // TODO after we complete initial build logic
-    return [[Package alloc] init];
+    Package *package = [[Package alloc] init];
+    package.name = @"";
+    return package;
 }
 
 @end

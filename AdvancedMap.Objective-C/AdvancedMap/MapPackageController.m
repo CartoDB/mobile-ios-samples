@@ -8,27 +8,37 @@
 
 #import <Foundation/Foundation.h>
 #import <CartoMobileSDK/CartoMobileSDK.h>
-#import "PackageManagerController.h"
+#import "PackageDownloadBaseController.h"
+#import "Sources.h"
 
-@interface MapPackageController : PackageManagerController
+@interface MapPackageController : PackageDownloadBaseController
 
 @end
 
 @implementation MapPackageController
 
-- (NSString *)getFolder {
-    return @"regionpackages";
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.contentView = [[PackageDownloadBaseView alloc] init];
+    self.view = self.contentView;
+    
+    NSString *folder = [self createFolder:@"com.carto.mappackages"];
+    self.contentView.manager = [[NTCartoPackageManager alloc] initWithSource:CARTO_VECTOR_SOURCE dataFolder:folder];
 }
 
-- (NSString *)getSource {
-    return CARTO_VECTOR_SOURCE;
-}
+//- (NSString *)getFolder {
+//    return @"regionpackages";
+//}
+//
+//- (NSString *)getSource {
+//    return CARTO_VECTOR_SOURCE;
+//}
 
-- (void)showMap
-{
-    PackageMapController* mapController = [[PackageMapController alloc] init];
-    mapController.packageManager = self.packageManager;
-    [self.navigationController pushViewController:mapController animated:YES];
-}
+//- (void)showMap
+//{
+//    PackageMapController* mapController = [[PackageMapController alloc] init];
+//    mapController.packageManager = self.packageManager;
+//    [self.navigationController pushViewController:mapController animated:YES];
+//}
 
 @end

@@ -10,10 +10,12 @@
 #import "PackageDownloadListener.h"
 #import "PackageDownloadBaseView.h"
 
-@interface PackageDownloadBaseController : UIViewController<PackageDownloadDelegate>
+@interface PackageDownloadBaseController : UIViewController<UITableViewDelegate, PackageDownloadDelegate, ClickDelegate>
 
 @property PackageDownloadBaseView *contentView;
 
 @property PackageDownloadListener *listener;
+
+- (NSString *)createFolder: (NSString *)name;
 
 @end

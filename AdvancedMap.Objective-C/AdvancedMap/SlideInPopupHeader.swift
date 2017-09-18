@@ -140,7 +140,7 @@ class PopupBackButton : UIView {
     }
 }
 
-protocol ClickDelegate {
+@objc protocol ClickDelegate {
     func click(sender: UIView);
 }
 

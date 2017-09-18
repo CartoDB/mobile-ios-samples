@@ -65,6 +65,9 @@
 		AD46EB3E1F6FD63A004B662F /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB3C1F6FD63A004B662F /* PackageCell.swift */; };
 		AD46EB411F6FEBB8004B662F /* PackageDownloadBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB401F6FEBB8004B662F /* PackageDownloadBaseController.m */; };
 		AD46EB441F6FF07A004B662F /* PackageDownloadListener.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB431F6FF07A004B662F /* PackageDownloadListener.m */; };
+		AD46EB461F700E65004B662F /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = AD46EB451F700E65004B662F /* icon_close.png */; };
+		AD46EB481F701C27004B662F /* icon_forward_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = AD46EB471F701C27004B662F /* icon_forward_blue.png */; };
+		AD46EB4A1F701C99004B662F /* icon_back_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = AD46EB491F701C99004B662F /* icon_back_blue.png */; };
 		AD4F91FB1F6BE9D600139F79 /* ProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FA1F6BE9D600139F79 /* ProgressLabel.swift */; };
 		AD4F91FD1F6BEA0400139F79 /* AlertBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FC1F6BEA0400139F79 /* AlertBaseView.swift */; };
 		AD4F91FF1F6BEFCE00139F79 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FE1F6BEFCE00139F79 /* Colors.swift */; };
@@ -235,6 +238,9 @@
 		AD46EB401F6FEBB8004B662F /* PackageDownloadBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDownloadBaseController.m; sourceTree = "<group>"; };
 		AD46EB421F6FF07A004B662F /* PackageDownloadListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageDownloadListener.h; sourceTree = "<group>"; };
 		AD46EB431F6FF07A004B662F /* PackageDownloadListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDownloadListener.m; sourceTree = "<group>"; };
+		AD46EB451F700E65004B662F /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		AD46EB471F701C27004B662F /* icon_forward_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_forward_blue.png; sourceTree = "<group>"; };
+		AD46EB491F701C99004B662F /* icon_back_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_blue.png; sourceTree = "<group>"; };
 		AD4F91F71F6BE96400139F79 /* AdvancedMap.Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdvancedMap.Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD4F91FA1F6BE9D600139F79 /* ProgressLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
 		AD4F91FC1F6BEA0400139F79 /* AlertBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBaseView.swift; sourceTree = "<group>"; };
@@ -565,6 +571,9 @@
 		AD4F92141F6C24F900139F79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD46EB491F701C99004B662F /* icon_back_blue.png */,
+				AD46EB471F701C27004B662F /* icon_forward_blue.png */,
+				AD46EB451F700E65004B662F /* icon_close.png */,
 				AD46EB0B1F6FB317004B662F /* background_basic_package_manager.png */,
 				AD46EB0C1F6FB317004B662F /* background_bundled_map.png */,
 				AD46EB0D1F6FB317004B662F /* background_offline_geocoding.png */,
@@ -934,6 +943,7 @@
 				AD46EB301F6FB317004B662F /* background_gps_location.png in Resources */,
 				AD4F921B1F6C250400139F79 /* icon_info.png in Resources */,
 				ADED5F1E1D92A31800AB2D13 /* direction_up.png in Resources */,
+				AD46EB461F700E65004B662F /* icon_close.png in Resources */,
 				ADED5F1F1D92A31800AB2D13 /* direction_upthenleft.png in Resources */,
 				AD46EB311F6FB317004B662F /* background_screen_capture.png in Resources */,
 				ADED5F1D1D92A31800AB2D13 /* direction_down.png in Resources */,
@@ -955,6 +965,7 @@
 				ADED5F241D92A31800AB2D13 /* jefferson-building-ground-floor.jpg in Resources */,
 				ADED5F2F1D92A31800AB2D13 /* nutiteq-dark.zip in Resources */,
 				AD46EB2F1F6FB317004B662F /* background_custom_popup.png in Resources */,
+				AD46EB4A1F701C99004B662F /* icon_back_blue.png in Resources */,
 				AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */,
 				AD46EB201F6FB317004B662F /* background_bundled_map.png in Resources */,
 				AD46EB2D1F6FB317004B662F /* background_custom_raster_source.png in Resources */,
@@ -968,6 +979,7 @@
 				ADED5F2D1D92A31800AB2D13 /* nutibright-contourstyle.zip in Resources */,
 				ADED5F211D92A31800AB2D13 /* fcd_auto.nml in Resources */,
 				ADED5F1B1D92A31800AB2D13 /* carto-fonts.zip in Resources */,
+				AD46EB481F701C27004B662F /* icon_forward_blue.png in Resources */,
 				AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */,
 				ADED5F1C1D92A31800AB2D13 /* cartodark.zip in Resources */,
 			);

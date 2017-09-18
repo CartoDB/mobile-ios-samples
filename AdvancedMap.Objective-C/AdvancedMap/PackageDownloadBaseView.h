@@ -29,6 +29,9 @@
 
 - (void)updateList;
 
+- (void)onPackageClick: (Package *)package;
+- (void)onBackButtonClick;
+
 @property NSString *folder;
 
 @end
