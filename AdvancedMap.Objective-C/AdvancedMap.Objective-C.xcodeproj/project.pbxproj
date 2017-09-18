@@ -63,6 +63,8 @@
 		AD46EB351F6FD2A4004B662F /* PackageDownloadBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB341F6FD2A4004B662F /* PackageDownloadBaseView.m */; };
 		AD46EB3D1F6FD63A004B662F /* PackagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB3B1F6FD63A004B662F /* PackagePopupContent.swift */; };
 		AD46EB3E1F6FD63A004B662F /* PackageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB3C1F6FD63A004B662F /* PackageCell.swift */; };
+		AD46EB411F6FEBB8004B662F /* PackageDownloadBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB401F6FEBB8004B662F /* PackageDownloadBaseController.m */; };
+		AD46EB441F6FF07A004B662F /* PackageDownloadListener.m in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB431F6FF07A004B662F /* PackageDownloadListener.m */; };
 		AD4F91FB1F6BE9D600139F79 /* ProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FA1F6BE9D600139F79 /* ProgressLabel.swift */; };
 		AD4F91FD1F6BEA0400139F79 /* AlertBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FC1F6BEA0400139F79 /* AlertBaseView.swift */; };
 		AD4F91FF1F6BEFCE00139F79 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F91FE1F6BEFCE00139F79 /* Colors.swift */; };
@@ -229,6 +231,10 @@
 		AD46EB341F6FD2A4004B662F /* PackageDownloadBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDownloadBaseView.m; sourceTree = "<group>"; };
 		AD46EB3B1F6FD63A004B662F /* PackagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagePopupContent.swift; sourceTree = "<group>"; };
 		AD46EB3C1F6FD63A004B662F /* PackageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
+		AD46EB3F1F6FEBB8004B662F /* PackageDownloadBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageDownloadBaseController.h; sourceTree = "<group>"; };
+		AD46EB401F6FEBB8004B662F /* PackageDownloadBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDownloadBaseController.m; sourceTree = "<group>"; };
+		AD46EB421F6FF07A004B662F /* PackageDownloadListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageDownloadListener.h; sourceTree = "<group>"; };
+		AD46EB431F6FF07A004B662F /* PackageDownloadListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageDownloadListener.m; sourceTree = "<group>"; };
 		AD4F91F71F6BE96400139F79 /* AdvancedMap.Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AdvancedMap.Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD4F91FA1F6BE9D600139F79 /* ProgressLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
 		AD4F91FC1F6BEA0400139F79 /* AlertBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBaseView.swift; sourceTree = "<group>"; };
@@ -599,8 +605,8 @@
 		AD860A6B1D7DA103005994B2 /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				AD4F92101F6C13AE00139F79 /* Views */,
 				ADC731491DBFAC6500E1CDCA /* Listeners */,
+				AD4F92101F6C13AE00139F79 /* Views */,
 				ADC731481DBFAC6000E1CDCA /* Controllers */,
 				AD9F814F1E4B67340091DB26 /* AlertMenu.h */,
 				AD9F81501E4B67490091DB26 /* AlertMenu.m */,
@@ -737,6 +743,8 @@
 			children = (
 				4D2BE70A1A52F89C0013ABB3 /* MapBaseController.h */,
 				4D2BE7081A52F86F0013ABB3 /* MapBaseController.mm */,
+				AD46EB3F1F6FEBB8004B662F /* PackageDownloadBaseController.h */,
+				AD46EB401F6FEBB8004B662F /* PackageDownloadBaseController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -746,6 +754,8 @@
 			children = (
 				ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */,
 				ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */,
+				AD46EB421F6FF07A004B662F /* PackageDownloadListener.h */,
+				AD46EB431F6FF07A004B662F /* PackageDownloadListener.m */,
 			);
 			name = Listeners;
 			sourceTree = "<group>";
@@ -1112,6 +1122,7 @@
 				AD4F92131F6C13CF00139F79 /* MapBaseView.m in Sources */,
 				4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */,
 				AD59914F1F4B3CC900CDF426 /* ReverseGeoPackageDownloadController.m in Sources */,
+				AD46EB411F6FEBB8004B662F /* PackageDownloadBaseController.m in Sources */,
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
 				AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */,
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
@@ -1133,6 +1144,7 @@
 				AD59914D1F4B3BB200CDF426 /* OfflineReverseGeocodingController.m in Sources */,
 				AD4F920C1F6BF48200139F79 /* Device.swift in Sources */,
 				ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */,
+				AD46EB441F6FF07A004B662F /* PackageDownloadListener.m in Sources */,
 				ADFBF6D11F4C351100F98741 /* GeoPackageDownloadController.m in Sources */,
 				AD4F91FD1F6BEA0400139F79 /* AlertBaseView.swift in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,

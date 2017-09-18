@@ -66,4 +66,19 @@
     [self addSubview:button];
 }
 
+- (void)addRecognizer:(UIViewController *)sender view:(UIView *)view action: (nullable SEL)action {
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:sender action:action];
+    [view addGestureRecognizer:recognizer];
+}
+
+- (void)removeRecognizerFrom:(UIView *)view {
+    for (UIGestureRecognizer *recognizer in view.gestureRecognizers) {
+        [view removeGestureRecognizer:recognizer];
+    }
+}
+
 @end
+
+
+
+

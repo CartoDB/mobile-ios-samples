@@ -113,8 +113,10 @@ class PackageDownloadBaseView  : DownloadBaseView {
                 
                 self.progressLabel.updateProgressBar(progress: CGFloat(status.getProgress()))
                 
-                // Need to get it again, as else we'd be change the status of this variable,
+                // Need to get it again, as else we'd be changing the status of this variable,
                 // not the one in the queue. However, no longer the need to null check
+                // I actually have no idea if this is necessary or not.
+                // Different languages behave differently when dealing with memory managment
                 self.getCurrentDownload()!.status = status
             }
             

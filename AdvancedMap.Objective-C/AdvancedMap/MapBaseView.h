@@ -24,4 +24,7 @@
 
 - (void)addButton:(PopupButton *)button;
 
+- (void)addRecognizer:(UIViewController *)sender view:(UIView *)view action: (nullable SEL)action;
+- (void)removeRecognizerFrom:(UIView *)view;
+
 @end
