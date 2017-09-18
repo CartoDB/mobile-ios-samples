@@ -12,13 +12,9 @@ import Toast_Swift
 
 class BaseController : UIViewController {
     
-    var sample: Sample!
-
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        title = sample.title
     }
     
     func onCellSelected(item: NSObject) {

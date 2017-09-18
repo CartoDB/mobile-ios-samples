@@ -1,10 +1,13 @@
 #import <CartoMobileSDK/CartoMobileSDK.h>
+#import "AdvancedMap_Objective_C-Swift.h"
 
 /*
  * A controller for displaying sample list and launching the selected sample controller.
  */
-@interface LauncherListController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
+@interface LauncherListController : UIViewController <GalleryDelegate>
 
--(NSArray*)samples;
+-(NSArray *)samples;
+
+@property MainView *contentView;
 
 @end
