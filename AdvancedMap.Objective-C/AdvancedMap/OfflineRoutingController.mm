@@ -27,9 +27,25 @@
     self.service = [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.contentView.manager];
 }
 
--(void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-//    [self alert:@"This example downloads a routing package (not a map package) of Andorra, Europe"];
+    [super viewWillAppear:animated];
+    
+    if ([self.contentView hasLocalPackages]) {
+        [self showInformationBanner:@"Long Click on the map to set route positions"];
+    } else {
+        [self showInformationBanner: @"Click the globe icon and download a geocoding package to continue"];
+    }
+}
+
+- (void)downloadComplete:(NSString *)identifier {
+    [self showInformationBanner:@"Long Click on the map to set route positions"];
+}
+
+- (void)showInformationBanner: (NSString *)text {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.contentView.banner showInformationWithText:text autoclose:YES];
+    });
 }
 
 @end

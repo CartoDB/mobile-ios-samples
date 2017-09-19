@@ -40,6 +40,8 @@
 
 - (void)addDefaultBaseLayer;
 
+- (BOOL) hasLocalPackages;
+
 @property NSMutableArray *downloadQueue;
 
 @property NSString *folder;

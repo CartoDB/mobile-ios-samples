@@ -29,6 +29,8 @@ import UIKit
         label.font = UIFont(name: "HelveticaNeue", size: 12)
         label.textAlignment = .center
         label.textColor = UIColor.white
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 0
         addSubview(label)
     }
     

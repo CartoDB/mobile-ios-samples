@@ -278,6 +278,10 @@
     return packages;
 }
 
+- (BOOL) hasLocalPackages {
+    return [self.manager getLocalPackages].size > 0;
+}
+
 /*
  * Region: Download queue
  */

@@ -25,4 +25,25 @@
     self.service = [[NTPackageManagerGeocodingService alloc] initWithPackageManager: self.contentView.manager];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ([self.contentView hasLocalPackages]) {
+        [self showInformationBanner:@"Type an address to see whether it can be found :)"];
+    } else {
+        [self showInformationBanner: @"Click the globe icon and download a geocoding package to continue"];
+    }
+}
+
+- (void)downloadComplete:(NSString *)identifier {
+    [self showInformationBanner:@"Click on the map to find out more about a location"];
+}
+
+- (void)showInformationBanner: (NSString *)text {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.contentView.banner showInformationWithText:text autoclose:YES];
+    });
+}
+
 @end

@@ -30,4 +30,18 @@
     [self.contentView setOfflineLayer];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    if (![self.contentView hasLocalPackages]) {
+        [self showInformationBanner: @"Click the globe icon and download a map package to continue"];
+    }
+}
+
+- (void)showInformationBanner: (NSString *)text {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.contentView.banner showInformationWithText:text autoclose:YES];
+    });
+}
+
 @end
