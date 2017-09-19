@@ -43,14 +43,7 @@
     sample.subtitle = @"Adding ground-level raster overlay with indoor plan";
     sample.imageUrl = @"background_ground_overlay.png";
     sample.controller = @"GroundOverlayController";
-    
-    sample = [[Sample alloc] init];
-    sample.title = @"WMS MAP";
-    sample.subtitle = @"WMS raster map on top of vector base map";
-    sample.imageUrl = @"background_wms.png";
-    sample.controller = @"WMSMapController";
-    [array addObject: sample];
-    
+
     sample = [[Sample alloc] init];
     sample.title = @"ONLINE ROUTING";
     sample.subtitle = @"Online routing with OpenStreetMap data packages";
@@ -62,10 +55,15 @@
     sample.title = @"OFFLINE ROUTING";
     sample.subtitle = @"Routing where you first need to download a package";
     sample.imageUrl = @"background_routing_offline.png";
-    sample.controller = @"OfflineRoutingPackageController";
+    sample.controller = @"OfflineRoutingController";
     [array addObject: sample];
     
-    // TODO Unify package logic, OfflineRoutingBboxController currently not added
+    sample = [[Sample alloc] init];
+    sample.title = @"WMS MAP";
+    sample.subtitle = @"WMS raster map on top of vector base map";
+    sample.imageUrl = @"background_wms.png";
+    sample.controller = @"WMSMapController";
+    [array addObject: sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"CLUSTERED MARKERS";

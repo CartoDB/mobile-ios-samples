@@ -7,6 +7,11 @@
 {
     [super viewDidLoad];
     
+    self.contentView = [[PackageDownloadBaseView alloc] init];
+    self.view = self.contentView;
+    
+    [self.contentView addDefaultBaseLayer];
+    
     // Get the base projection set in the base class
     NTProjection* proj = [[self.contentView.mapView getOptions] getBaseProjection];
     
@@ -65,7 +70,7 @@
     
     [self.contentView.mapView setMapEventListener:self.mapListener];
     
-    [self alert:@"Long click on the map to set the start and end position"];
+//    [self alert:@"Long click on the map to set the start and end position"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -77,12 +82,6 @@
 
 -(void)setStart:(NTMapPos *)mapPos
 {
-    if (!self.mapListener.isPackageDownloaded) {
-        // Only OfflineRoutingController uses this flag. Is simply set to true in OnlineRoutingController's viewDidload
-        [self alert:@"Your package doesn't seem to be ready yet"];
-        return;
-    }
-    
     [_routeDataSource clear];
     [_stopMarker setVisible:NO];
     [_startMarker setPos:mapPos];
@@ -119,7 +118,7 @@
             NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
             
             if (route == nil) {
-                [self alert:@"route error"];
+//                [self alert:@"route error"];
                 return;
             }
             
@@ -129,7 +128,7 @@
             
             NSString* routeDesc = [NSString stringWithFormat:@"Route: %0.3f km, travel %@. Calculation took %0.3f s", [route getTotalDistance]/1000.0, [dateFormatter stringFromDate: [NSDate dateWithTimeIntervalSince1970:[route getTotalTime]]], duration];
             
-            [self alert:[NSString stringWithFormat:@"%@",routeDesc]];
+//            [self alert:[NSString stringWithFormat:@"%@",routeDesc]];
             
             // Show line
             NTLine* routeLine = [self calculateRouteLine: route];
@@ -209,7 +208,6 @@
         return nil;
     }
     
-
     NTMarker* marker = [[NTMarker alloc] initWithPos:pos style:style];
     
     [marker setMetaDataElement:@"desc" element:[[NTVariant alloc] initWithString:desc]];
@@ -233,103 +231,6 @@
 
 @end
 
-@implementation RouteClickListener
-
--(void)setVectorDataSource:(NTLocalVectorDataSource*)vectorDataSource
-{
-    _routeDataSource = vectorDataSource;
-}
-
--(void)onMapMoved
-{
-    // do nothing
-}
-
--(void)onMapClicked:(NTMapClickInfo*)mapClickInfo
-{
-    // set start and end pos
-    
-    if (!self.isPackageDownloaded) {
-        return;
-    }
-    
-    // Remove old click label
-    if (_oldClickLabel)
-    {
-        [_routeDataSource remove:_oldClickLabel];
-        _oldClickLabel = nil;
-    }
-    
-    if ([mapClickInfo getClickType] == NT_CLICK_TYPE_LONG) {
-        
-        NTMapPos* clickPos = [mapClickInfo getClickPos];
-        
-        if(_startPos == nil) {
-            _startPos = clickPos;
-            [(BaseRoutingController*)_routingController setStart: clickPos];
-            
-        } else if (_stopPos == nil) {
-            
-            _stopPos = clickPos;
-            
-            [(BaseRoutingController*)_routingController setStop: clickPos];
-            
-            // restart to force new route next time
-            _startPos = nil;
-            _stopPos = nil;
-        }
-    }
-}
-
--(void)onVectorElementClicked:(NTVectorElementClickInfo*)clickInfo
-{
-    // Remove old click label
-    if (_oldClickLabel)
-    {
-        [_routeDataSource remove:_oldClickLabel];
-        _oldClickLabel = nil;
-    }
-    
-    // Check the type of vector element
-    NTVectorElement* vectorElement = [clickInfo getVectorElement];
-    
-    NSString* desc = [[vectorElement getMetaDataElement:@"desc"] getString];
-    NSString* title = [[vectorElement getMetaDataElement:@"title"] getString];
-    
-    if([desc isEqualToString:@""]) {
-        return;
-    }
-    
-    NTBalloonPopup* clickPopup = [[NTBalloonPopup alloc] init];
-    NTBalloonPopupStyleBuilder* styleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
-    
-    [styleBuilder setPlacementPriority: 1]; // make sure it is on top of Markers
-    
-    if([title isEqualToString:@""]){
-        
-        // route description if clicked to line
-        [styleBuilder setLeftColor:[[NTColor alloc] initWithColor:0xFF0000AA]]; // blue
-        
-        clickPopup = [[NTBalloonPopup alloc] initWithPos:[clickInfo getElementClickPos] style:[styleBuilder buildStyle] title:desc desc:@""];
-        
-    } else {
-        [styleBuilder setLeftColor:[[NTColor alloc] initWithColor:0xFF00AA00]]; // green
-        
-        NTVectorElement* vectorElement = [clickInfo getVectorElement];
-        
-        if([vectorElement isKindOfClass:[NTBillboard class]]) {
-            
-            NTBillboard* billboard = (NTBillboard*)vectorElement;
-            
-            clickPopup = [[NTBalloonPopup alloc] initWithBaseBillboard:billboard style:[styleBuilder buildStyle] title:title desc:desc];
-        }
-    }
-    
-    [_routeDataSource add:clickPopup];
-    _oldClickLabel = clickPopup;
-}
-
-@end
 
 
 

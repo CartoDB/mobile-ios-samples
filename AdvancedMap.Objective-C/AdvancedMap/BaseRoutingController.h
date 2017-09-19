@@ -1,21 +1,8 @@
 
-#import "MapBaseController.h"
+#import "PackageDownloadBaseController.h"
+#import "RouteClickListener.h"
 
-@interface  RouteClickListener : NTMapEventListener
-
-@property (strong, nonatomic) NTMapView* mapView;
-@property (strong, nonatomic) UIViewController* routingController;
-
-@property (strong, nonatomic) NTMapPos* startPos;
-@property (strong, nonatomic) NTMapPos* stopPos;
-@property (strong, nonatomic) NTLocalVectorDataSource* routeDataSource;
-@property (strong, nonatomic) NTBalloonPopup* oldClickLabel;
-
-@property BOOL isPackageDownloaded;
-
-@end;
-
-@interface BaseRoutingController : MapBaseController
+@interface BaseRoutingController : PackageDownloadBaseController
 
 @property NTRoutingService* service;
 

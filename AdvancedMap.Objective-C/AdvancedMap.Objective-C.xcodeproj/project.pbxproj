@@ -37,6 +37,7 @@
 		AD3FFFAE1F710FCC005642F9 /* Cities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFAD1F710FCC005642F9 /* Cities.m */; };
 		AD3FFFB11F71237F005642F9 /* GeocodingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB01F71237F005642F9 /* GeocodingView.m */; };
 		AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */; };
+		AD3FFFB81F714D89005642F9 /* RouteClickListener.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB71F714D89005642F9 /* RouteClickListener.m */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB031F6FADC0004B662F /* GalleryRow.swift */; };
 		AD46EB061F6FADC0004B662F /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */; };
@@ -93,7 +94,6 @@
 		AD7A5D1F1D9ABE0700F5EE4E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */; };
 		AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */; };
 		AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */; };
-		AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */; };
 		AD9B19B91DC1E5850025B767 /* cities15000.geojson in Resources */ = {isa = PBXBuildFile; fileRef = AD9B19B81DC1E5850025B767 /* cities15000.geojson */; };
 		AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F81501E4B67490091DB26 /* AlertMenu.m */; };
 		ADA1141A1DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */; };
@@ -144,9 +144,7 @@
 		ADFBF6CC1F4C2C5B00F98741 /* OnlineGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6CB1F4C2C5B00F98741 /* OnlineGeocodingController.m */; };
 		ADFBF6CF1F4C349100F98741 /* OfflineGeocodingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBF6CE1F4C349100F98741 /* OfflineGeocodingController.m */; };
 		ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10251E76EB10009DC903 /* BoundingBox.m */; };
-		ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */; };
-		ADFC102C1E76F190009DC903 /* OfflineRoutingPackageController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */; };
-		ADFC102F1E76F406009DC903 /* OfflineRoutingBBoxController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102E1E76F406009DC903 /* OfflineRoutingBBoxController.mm */; };
+		ADFC102C1E76F190009DC903 /* OfflineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADFC102B1E76F190009DC903 /* OfflineRoutingController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -206,6 +204,8 @@
 		AD3FFFB01F71237F005642F9 /* GeocodingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocodingView.m; sourceTree = "<group>"; };
 		AD3FFFB21F712538005642F9 /* GeocodingBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodingBaseView.h; sourceTree = "<group>"; };
 		AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocodingBaseView.m; sourceTree = "<group>"; };
+		AD3FFFB61F714D89005642F9 /* RouteClickListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteClickListener.h; sourceTree = "<group>"; };
+		AD3FFFB71F714D89005642F9 /* RouteClickListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteClickListener.m; sourceTree = "<group>"; };
 		AD46EB031F6FADC0004B662F /* GalleryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRow.swift; sourceTree = "<group>"; };
 		AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
 		AD46EB071F6FADC7004B662F /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -267,7 +267,6 @@
 		AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRoutingController.h; sourceTree = "<group>"; };
 		AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseRoutingController.mm; sourceTree = "<group>"; };
 		AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OnlineRoutingController.mm; sourceTree = "<group>"; };
-		AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingBaseController.mm; sourceTree = "<group>"; };
 		AD9B19B81DC1E5850025B767 /* cities15000.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cities15000.geojson; path = ../../Assets/cities15000.geojson; sourceTree = "<group>"; };
 		AD9F814F1E4B67340091DB26 /* AlertMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertMenu.h; sourceTree = "<group>"; };
 		AD9F81501E4B67490091DB26 /* AlertMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertMenu.m; sourceTree = "<group>"; };
@@ -326,11 +325,7 @@
 		ADFBF6CE1F4C349100F98741 /* OfflineGeocodingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineGeocodingController.m; sourceTree = "<group>"; };
 		ADFC10241E76EAFB009DC903 /* BoundingBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoundingBox.h; sourceTree = "<group>"; };
 		ADFC10251E76EB10009DC903 /* BoundingBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoundingBox.m; sourceTree = "<group>"; };
-		ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfflineRoutingBaseController.h; sourceTree = "<group>"; };
-		ADFC10281E76F031009DC903 /* RoutePackageManagerListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoutePackageManagerListener.h; sourceTree = "<group>"; };
-		ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RoutePackageManagerListener.mm; sourceTree = "<group>"; };
-		ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingPackageController.mm; sourceTree = "<group>"; };
-		ADFC102E1E76F406009DC903 /* OfflineRoutingBBoxController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingBBoxController.mm; sourceTree = "<group>"; };
+		ADFC102B1E76F190009DC903 /* OfflineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OfflineRoutingController.mm; sourceTree = "<group>"; };
 		B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E918DC6CE207EA525F4C3D2C /* libPods-AdvancedMap.Objective-C.UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvancedMap.Objective-C.UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -488,6 +483,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		AD3FFFB51F714D71005642F9 /* Listener */ = {
+			isa = PBXGroup;
+			children = (
+				AD3FFFB61F714D89005642F9 /* RouteClickListener.h */,
+				AD3FFFB71F714D89005642F9 /* RouteClickListener.m */,
+			);
+			name = Listener;
+			sourceTree = "<group>";
+		};
 		AD46EB021F6FA9F0004B662F /* Launcher List */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,10 +608,10 @@
 		AD90F9441E096BF700E6EF51 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				ADFC102D1E76F3E4009DC903 /* Utils */,
+				AD3FFFB51F714D71005642F9 /* Listener */,
+				ADFC102D1E76F3E4009DC903 /* Base */,
 				AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */,
-				ADFC102B1E76F190009DC903 /* OfflineRoutingPackageController.mm */,
-				ADFC102E1E76F406009DC903 /* OfflineRoutingBBoxController.mm */,
+				ADFC102B1E76F190009DC903 /* OfflineRoutingController.mm */,
 			);
 			name = Routing;
 			sourceTree = "<group>";
@@ -789,17 +793,13 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		ADFC102D1E76F3E4009DC903 /* Utils */ = {
+		ADFC102D1E76F3E4009DC903 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				ADFC10281E76F031009DC903 /* RoutePackageManagerListener.h */,
-				ADFC10291E76F067009DC903 /* RoutePackageManagerListener.mm */,
 				AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */,
 				AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */,
-				ADFC10271E76EF10009DC903 /* OfflineRoutingBaseController.h */,
-				AD90F94C1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm */,
 			);
-			name = Utils;
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1077,7 +1077,6 @@
 				2AD24F7918FEDAA6000969F4 /* main.m in Sources */,
 				AD5991481F4B306900CDF426 /* OnlineReverseGeocodingController.m in Sources */,
 				AD46EB3D1F6FD63A004B662F /* PackagePopupContent.swift in Sources */,
-				ADFC102A1E76F067009DC903 /* RoutePackageManagerListener.mm in Sources */,
 				AD4F92081F6BF41200139F79 /* PopupView.swift in Sources */,
 				AD46EB351F6FD2A4004B662F /* PackageDownloadBaseView.m in Sources */,
 				ADF6725A1F331AF800527D49 /* Sources.m in Sources */,
@@ -1085,14 +1084,13 @@
 				AD46EB081F6FADC7004B662F /* MainView.swift in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredMarkersController.mm in Sources */,
 				ADFBF6CA1F4C19CB00F98741 /* BaseGeocodingController.m in Sources */,
-				ADFC102C1E76F190009DC903 /* OfflineRoutingPackageController.mm in Sources */,
+				ADFC102C1E76F190009DC903 /* OfflineRoutingController.mm in Sources */,
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
 				AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */,
 				AD4F92011F6BF3D000139F79 /* Banner.swift in Sources */,
 				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
 				AD46EB3E1F6FD63A004B662F /* PackageCell.swift in Sources */,
 				AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */,
-				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */,
 				AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
 				AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */,
@@ -1107,7 +1105,6 @@
 				AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */,
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
 				AD3FFFAE1F710FCC005642F9 /* Cities.m in Sources */,
-				ADFC102F1E76F406009DC903 /* OfflineRoutingBBoxController.mm in Sources */,
 				AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				AD4F91FF1F6BEFCE00139F79 /* Colors.swift in Sources */,
@@ -1130,6 +1127,7 @@
 				AD589CE41DC0BDD3004E68B2 /* CaptureController.mm in Sources */,
 				AD2AD56F1F4B023D00F3C479 /* Package.mm in Sources */,
 				2AD24F7518FEDAA6000969F4 /* AppDelegate.m in Sources */,
+				AD3FFFB81F714D89005642F9 /* RouteClickListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
