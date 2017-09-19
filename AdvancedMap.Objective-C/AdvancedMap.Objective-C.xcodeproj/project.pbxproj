@@ -35,6 +35,7 @@
 		AD3FFFB11F71237F005642F9 /* GeocodingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB01F71237F005642F9 /* GeocodingView.m */; };
 		AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */; };
 		AD3FFFB81F714D89005642F9 /* RouteClickListener.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB71F714D89005642F9 /* RouteClickListener.m */; };
+		AD3FFFBA1F716384005642F9 /* banner_icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3FFFB91F716384005642F9 /* banner_icon_info.png */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB031F6FADC0004B662F /* GalleryRow.swift */; };
 		AD46EB061F6FADC0004B662F /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */; };
@@ -196,6 +197,7 @@
 		AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocodingBaseView.m; sourceTree = "<group>"; };
 		AD3FFFB61F714D89005642F9 /* RouteClickListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteClickListener.h; sourceTree = "<group>"; };
 		AD3FFFB71F714D89005642F9 /* RouteClickListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteClickListener.m; sourceTree = "<group>"; };
+		AD3FFFB91F716384005642F9 /* banner_icon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_info.png; sourceTree = "<group>"; };
 		AD46EB031F6FADC0004B662F /* GalleryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRow.swift; sourceTree = "<group>"; };
 		AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
 		AD46EB071F6FADC7004B662F /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 		AD4F92141F6C24F900139F79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD3FFFB91F716384005642F9 /* banner_icon_info.png */,
 				AD46EB491F701C99004B662F /* icon_back_blue.png */,
 				AD46EB471F701C27004B662F /* icon_forward_blue.png */,
 				AD46EB451F700E65004B662F /* icon_close.png */,
@@ -887,6 +890,7 @@
 				AD46EB461F700E65004B662F /* icon_close.png in Resources */,
 				ADED5F1F1D92A31800AB2D13 /* direction_upthenleft.png in Resources */,
 				AD46EB311F6FB317004B662F /* background_screen_capture.png in Resources */,
+				AD3FFFBA1F716384005642F9 /* banner_icon_info.png in Resources */,
 				ADED5F1D1D92A31800AB2D13 /* direction_down.png in Resources */,
 				ADED5F221D92A31800AB2D13 /* info.png in Resources */,
 				ADED5F301D92A31800AB2D13 /* positron.zip in Resources */,
