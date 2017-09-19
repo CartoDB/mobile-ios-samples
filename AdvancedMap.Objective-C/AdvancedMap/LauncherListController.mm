@@ -124,17 +124,10 @@
     [array addObject: sample];
     
     sample = [[Sample alloc] init];
-    sample.title = @"BASIC PACKAGE MANAGER";
-    sample.subtitle = @"Download a map of London for offline use";
-    sample.imageUrl = @"background_basic_package_manager.png";
-    sample.controller = @"BasicPackageManagerController";
-    [array addObject: sample];
-    
-    sample = [[Sample alloc] init];
-    sample.title = @"ADVANCED PACKAGE MANAGER";
-    sample.subtitle = @"Download country map packages for offline use";
+    sample.title = @"OFFLINE MAP";
+    sample.subtitle = @"Download map packages for offline use";
     sample.imageUrl = @"background_advanced_package_manager.png";
-    sample.controller = @"MapPackageController";
+    sample.controller = @"OfflineMapController";
     [array addObject: sample];
     
     sample = [[Sample alloc] init];

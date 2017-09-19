@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */; };
 		2A319B43187C4F8F0004A3CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B42187C4F8F0004A3CB /* Foundation.framework */; };
 		2A319B45187C4F8F0004A3CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */; };
 		2A319B47187C4F8F0004A3CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A319B46187C4F8F0004A3CB /* UIKit.framework */; };
@@ -31,7 +30,7 @@
 		AD2AD56F1F4B023D00F3C479 /* Package.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD56E1F4B023D00F3C479 /* Package.mm */; };
 		AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */; };
 		AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */; };
-		AD2AD5781F4B1ACC00F3C479 /* MapPackageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */; };
+		AD2AD5781F4B1ACC00F3C479 /* OfflineMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5771F4B1ACC00F3C479 /* OfflineMapController.m */; };
 		AD2AD57F1F4B22C500F3C479 /* GeocodingBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD57E1F4B22C500F3C479 /* GeocodingBaseController.mm */; };
 		AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
@@ -112,7 +111,6 @@
 		ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148971DC0A708009A899B /* BasicEditEventListener.mm */; };
 		ADCB208B1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCB208A1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm */; };
 		ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */; };
-		ADE5B9361DD5FC3D002ADD34 /* BasicPackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B9351DD5FC3D002ADD34 /* BasicPackageManagerController.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
 		ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */; };
 		ADED5F161D92A31800AB2D13 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */; };
@@ -164,8 +162,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageMapController.mm; path = AdvancedMap/PackageMapController.mm; sourceTree = SOURCE_ROOT; };
-		0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PackageMapController.h; path = AdvancedMap/PackageMapController.h; sourceTree = SOURCE_ROOT; };
 		2A319B3F187C4F8F0004A3CB /* AdvancedMap.Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AdvancedMap.Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A319B42187C4F8F0004A3CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A319B44187C4F8F0004A3CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,7 +198,7 @@
 		AD2AD5731F4B03FB00F3C479 /* PackageManagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageManagerController.h; sourceTree = "<group>"; };
 		AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageTableViewCell.h; sourceTree = "<group>"; };
 		AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageTableViewCell.m; sourceTree = "<group>"; };
-		AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPackageController.m; sourceTree = "<group>"; };
+		AD2AD5771F4B1ACC00F3C479 /* OfflineMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineMapController.m; sourceTree = "<group>"; };
 		AD2AD57D1F4B22C500F3C479 /* GeocodingBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodingBaseController.h; sourceTree = "<group>"; };
 		AD2AD57E1F4B22C500F3C479 /* GeocodingBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GeocodingBaseController.mm; sourceTree = "<group>"; };
 		AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rome_carto-streets.mbtiles"; sourceTree = "<group>"; };
@@ -298,7 +294,6 @@
 		ADCB208A1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ReverseGeocodingBaseController.mm; sourceTree = "<group>"; };
 		ADCF53BF1DC1FFA8004AD5C3 /* MyVectorElementEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVectorElementEventListener.h; sourceTree = "<group>"; };
 		ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyVectorElementEventListener.mm; sourceTree = "<group>"; };
-		ADE5B9351DD5FC3D002ADD34 /* BasicPackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BasicPackageManagerController.mm; sourceTree = "<group>"; };
 		ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
 		ADED5EF61D92A31800AB2D13 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "../../Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
 		ADED5EF71D92A31800AB2D13 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "../../Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
@@ -456,8 +451,6 @@
 			children = (
 				AD2AD5731F4B03FB00F3C479 /* PackageManagerController.h */,
 				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
-				AD2AD56D1F4B020C00F3C479 /* Package.h */,
-				AD2AD56E1F4B023D00F3C479 /* Package.mm */,
 				AD2AD5701F4B032600F3C479 /* PackageManagerListener.h */,
 				AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */,
 				AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */,
@@ -705,9 +698,8 @@
 		ADC7313E1DBFA33800E1CDCA /* OfflineMap */ = {
 			isa = PBXGroup;
 			children = (
-				ADC731431DBFA3C200E1CDCA /* MapPackageManager */,
+				AD2AD5771F4B1ACC00F3C479 /* OfflineMapController.m */,
 				4DEB06D71A10CDC0003D111C /* BundledMapController.mm */,
-				ADE5B9351DD5FC3D002ADD34 /* BasicPackageManagerController.mm */,
 			);
 			name = OfflineMap;
 			sourceTree = "<group>";
@@ -738,16 +730,6 @@
 				ADB1488D1DC09C59009A899B /* BaseMapsController.mm */,
 			);
 			name = BaseMap;
-			sourceTree = "<group>";
-		};
-		ADC731431DBFA3C200E1CDCA /* MapPackageManager */ = {
-			isa = PBXGroup;
-			children = (
-				0C0E589D1A83CFD30072D7E8 /* PackageMapController.h */,
-				0C0E589B1A83CD540072D7E8 /* PackageMapController.mm */,
-				AD2AD5771F4B1ACC00F3C479 /* MapPackageController.m */,
-			);
-			name = MapPackageManager;
 			sourceTree = "<group>";
 		};
 		ADC731471DBFA78D00E1CDCA /* CustomPopup */ = {
@@ -827,6 +809,8 @@
 		ADFC10231E76EAEF009DC903 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD2AD56D1F4B020C00F3C479 /* Package.h */,
+				AD2AD56E1F4B023D00F3C479 /* Package.mm */,
 				ADFC10241E76EAFB009DC903 /* BoundingBox.h */,
 				ADFC10251E76EB10009DC903 /* BoundingBox.m */,
 			);
@@ -1153,19 +1137,17 @@
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
 				AD3FFFAE1F710FCC005642F9 /* Cities.m in Sources */,
 				AD59914B1F4B388900CDF426 /* BaseGeoPackageDownloadController.m in Sources */,
-				ADE5B9361DD5FC3D002ADD34 /* BasicPackageManagerController.mm in Sources */,
 				ADFC102F1E76F406009DC903 /* OfflineRoutingBBoxController.mm in Sources */,
 				AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */,
 				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				AD4F91FF1F6BEFCE00139F79 /* Colors.swift in Sources */,
-				AD2AD5781F4B1ACC00F3C479 /* MapPackageController.m in Sources */,
+				AD2AD5781F4B1ACC00F3C479 /* OfflineMapController.m in Sources */,
 				AD4F91FB1F6BE9D600139F79 /* ProgressLabel.swift in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */,
 				ADFBF6CF1F4C349100F98741 /* OfflineGeocodingController.m in Sources */,
 				AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */,
 				4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
-				0C0E589C1A83CD540072D7E8 /* PackageMapController.mm in Sources */,
 				ADCB208B1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm in Sources */,
 				AD59914D1F4B3BB200CDF426 /* OfflineReverseGeocodingController.m in Sources */,
 				AD4F920C1F6BF48200139F79 /* Device.swift in Sources */,

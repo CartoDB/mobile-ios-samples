@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import <CartoMobileSDK/CartoMobileSDK.h>
 #import <GLKit/GLKit.h>
-#import "PackageMapController.h"
+//#import "PackageMapController.h"
 #import "Sources.h"
 #import "Package.h"
 #import "PackageTableViewCell.h"

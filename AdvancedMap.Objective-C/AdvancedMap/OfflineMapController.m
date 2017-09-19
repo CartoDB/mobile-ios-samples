@@ -11,11 +11,11 @@
 #import "PackageDownloadBaseController.h"
 #import "Sources.h"
 
-@interface MapPackageController : PackageDownloadBaseController
+@interface OfflineMapController : PackageDownloadBaseController
 
 @end
 
-@implementation MapPackageController
+@implementation OfflineMapController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
