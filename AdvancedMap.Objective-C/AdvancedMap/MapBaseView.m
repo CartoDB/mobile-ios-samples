@@ -78,6 +78,11 @@
 }
 
 
+- (void)addBaseLayer: (NTCartoBaseMapStyle)style {
+    NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:style];
+    [[self.mapView getLayers] add:layer];
+}
+
 @end
 
 

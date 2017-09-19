@@ -19,6 +19,8 @@
 {
 	[super viewDidLoad];
 	
+    [self.contentView addBaseLayer: NT_CARTO_BASEMAP_STYLE_POSITRON];
+    
 	// Get the base projection set in the base class
 	self.projection = [[self.contentView.mapView getOptions] getBaseProjection];
 	

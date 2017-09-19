@@ -14,7 +14,9 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    [self.contentView addBaseLayer: NT_CARTO_BASEMAP_STYLE_POSITRON];
+    
     // Initialize a local vector data source
     NTProjection* projection = [[self.contentView.mapView getOptions] getBaseProjection];
     NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:projection];

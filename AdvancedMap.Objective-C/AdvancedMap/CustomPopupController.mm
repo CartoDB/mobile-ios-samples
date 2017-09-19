@@ -17,6 +17,8 @@
 {
 	[super viewDidLoad];
 	
+    [self.contentView addBaseLayer: NT_CARTO_BASEMAP_STYLE_VOYAGER];
+    
 	// Initialize a local vector data source
 	NTProjection* proj = [[self.contentView.mapView getOptions] getBaseProjection];
 	NTLocalVectorDataSource* vectorDataSource = [[NTLocalVectorDataSource alloc] initWithProjection:proj];

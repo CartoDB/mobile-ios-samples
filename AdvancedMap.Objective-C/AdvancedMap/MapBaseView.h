@@ -27,4 +27,6 @@
 - (void)addRecognizer:(UIViewController *_Nonnull)sender view:(UIView *_Nonnull)view action: (nullable SEL)action;
 - (void)removeRecognizerFrom:(UIView *_Nonnull)view;
 
+- (void)addBaseLayer: (NTCartoBaseMapStyle)style;
+
 @end

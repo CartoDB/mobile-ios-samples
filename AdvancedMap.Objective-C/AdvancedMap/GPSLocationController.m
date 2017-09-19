@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
     
+    [self.contentView addBaseLayer: NT_CARTO_BASEMAP_STYLE_VOYAGER];
+    
     self.manager = [[CLLocationManager alloc] init];
     self.manager.pausesLocationUpdatesAutomatically = YES;
     self.manager.delegate = self;
