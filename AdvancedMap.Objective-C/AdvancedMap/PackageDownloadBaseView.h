@@ -8,6 +8,7 @@
 
 #import "MapBaseView.h"
 #import "Package.h"
+#import "Cities.h"
 
 @interface PackageDownloadBaseView : MapBaseView
 

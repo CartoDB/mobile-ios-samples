@@ -35,11 +35,11 @@ NSString * const ACTION_REMOVE = @"REMOVE";
 }
 
 - (BOOL)isGroup {
-    return self.status == nil && self.info == nil && ![self isCustomRegionFolder];
+    return self.status == nil && self.info == nil && ![self isCustomRegionPackage];
 }
 
 - (BOOL)isCustomRegionFolder {
-    return self.name == CUSTOM_REGION_FOLDER_NAME;
+    return [self.name isEqualToString: CUSTOM_REGION_FOLDER_NAME];
 }
 
 - (BOOL)isCustomRegionPackage {

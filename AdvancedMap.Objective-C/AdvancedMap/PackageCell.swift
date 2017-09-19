@@ -130,7 +130,7 @@ class PackageCell : UITableViewCell {
             
             return
         }
-        
+
         forwardIcon.isHidden = true
         
         // "Hide" the original label, as these aren't used in advanced cells

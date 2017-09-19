@@ -172,14 +172,14 @@
         NTPackageInfoVector* packageInfoVector = [self.manager getServerPackages];
         NSMutableArray* packages = [[NSMutableArray alloc] init];
         
-        if (self.folder == CUSTOM_REGION_FOLDER_NAME) {
+        if ([self.folder isEqualToString: [CUSTOM_REGION_FOLDER_NAME stringByAppendingString:@"/"]]) {
             NSArray *custom = [self getCustomRegionPackages];
             [packages addObjectsFromArray:custom];
             return packages;
         }
         
         if (self.folder.length == 0) {
-            [packages addObjectsFromArray:[self getCustomRegionPackages]];
+            [packages addObject:[self getCustomRegionFolder]];
         }
         
         for (int i = 0; i < [packageInfoVector size]; i++) {
@@ -250,11 +250,30 @@
     }
 }
 
+- (Package *)getCustomRegionFolder {
+    Package *package = [[Package alloc] init];
+    package.name = CUSTOM_REGION_FOLDER_NAME;
+    package.identifier = @"NONE";
+    return package;
+}
+
 - (NSArray *)getCustomRegionPackages
 {
-    NSMutableArray *list = [[NSMutableArray alloc] init];
-    // TODO after we get the list of cities
-    return list;
+    NSMutableArray *packages = [[NSMutableArray alloc] init];
+    NSMutableArray *cities = [Cities getList];
+    
+    for (int i = 0; i < cities.count; i++) {
+        City *city = [cities objectAtIndex:i];
+        
+        Package *package = [[Package alloc] init];
+        package.identifier = [city.boundingBox toString];
+        package.name = city.name;
+        package.status = [self.manager getLocalPackageStatus:package.identifier version:-1];
+        
+        [packages addObject:package];
+        
+    }
+    return packages;
 }
 
 /*

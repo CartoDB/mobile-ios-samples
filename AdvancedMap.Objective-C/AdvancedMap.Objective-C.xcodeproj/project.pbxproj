@@ -36,6 +36,7 @@
 		AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
 		AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */; };
+		AD3FFFAE1F710FCC005642F9 /* Cities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFAD1F710FCC005642F9 /* Cities.m */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB031F6FADC0004B662F /* GalleryRow.swift */; };
 		AD46EB061F6FADC0004B662F /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */; };
@@ -207,6 +208,8 @@
 		AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rome_carto-streets.mbtiles"; sourceTree = "<group>"; };
 		AD3D629F1DD07F0F00C97356 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_more.png; path = ../../Assets/icon_more.png; sourceTree = "<group>"; };
 		AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@3x.png"; path = "../../Assets/icon_more@3x.png"; sourceTree = "<group>"; };
+		AD3FFFAC1F710FCC005642F9 /* Cities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cities.h; sourceTree = "<group>"; };
+		AD3FFFAD1F710FCC005642F9 /* Cities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cities.m; sourceTree = "<group>"; };
 		AD46EB031F6FADC0004B662F /* GalleryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRow.swift; sourceTree = "<group>"; };
 		AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
 		AD46EB071F6FADC7004B662F /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -425,6 +428,7 @@
 		2A319B48187C4F8F0004A3CB /* AdvancedMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				AD3FFFAB1F710E5C005642F9 /* Model */,
 				AD4F91F61F6BE32000139F79 /* SwiftUI */,
 				AD4F92141F6C24F900139F79 /* Resources */,
 				AD2AD56C1F4B01BD00F3C479 /* PackageManager */,
@@ -508,6 +512,15 @@
 				ADFBF6D01F4C351100F98741 /* GeoPackageDownloadController.m */,
 			);
 			name = Offline;
+			sourceTree = "<group>";
+		};
+		AD3FFFAB1F710E5C005642F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD3FFFAC1F710FCC005642F9 /* Cities.h */,
+				AD3FFFAD1F710FCC005642F9 /* Cities.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		AD46EB021F6FA9F0004B662F /* Launcher List */ = {
@@ -1138,6 +1151,7 @@
 				4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */,
 				AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */,
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
+				AD3FFFAE1F710FCC005642F9 /* Cities.m in Sources */,
 				AD59914B1F4B388900CDF426 /* BaseGeoPackageDownloadController.m in Sources */,
 				ADE5B9361DD5FC3D002ADD34 /* BasicPackageManagerController.mm in Sources */,
 				ADFC102F1E76F406009DC903 /* OfflineRoutingBBoxController.mm in Sources */,
