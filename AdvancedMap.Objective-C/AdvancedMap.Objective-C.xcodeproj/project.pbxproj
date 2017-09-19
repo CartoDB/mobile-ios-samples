@@ -18,7 +18,6 @@
 		4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */; };
 		4D2BE7091A52F86F0013ABB3 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BE7081A52F86F0013ABB3 /* MapBaseController.mm */; };
 		4D4B1F601D018C2A001C2F30 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4B1F5F1D018C2A001C2F30 /* libz.tbd */; };
-		4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */; };
 		4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DAF41AE1AD3C307004E7092 /* GroundOverlayController.mm */; };
 		4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850071A0E718100C5124F /* LauncherListController.mm */; };
 		4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DC850111A0E7DC500C5124F /* CustomRasterDataSourceController.mm */; };
@@ -28,8 +27,6 @@
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
 		AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD031F231DCCE81400072781 /* styles_mapzen.zip */; };
 		AD2AD56F1F4B023D00F3C479 /* Package.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD56E1F4B023D00F3C479 /* Package.mm */; };
-		AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */; };
-		AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */; };
 		AD2AD5781F4B1ACC00F3C479 /* OfflineMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5771F4B1ACC00F3C479 /* OfflineMapController.m */; };
 		AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */; };
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
@@ -176,7 +173,6 @@
 		4D2BE7081A52F86F0013ABB3 /* MapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MapBaseController.mm; path = AdvancedMap/MapBaseController.mm; sourceTree = SOURCE_ROOT; };
 		4D2BE70A1A52F89C0013ABB3 /* MapBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapBaseController.h; path = AdvancedMap/MapBaseController.h; sourceTree = SOURCE_ROOT; };
 		4D4B1F5F1D018C2A001C2F30 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PackageManagerController.mm; path = AdvancedMap/PackageManagerController.mm; sourceTree = SOURCE_ROOT; };
 		4DAF41AE1AD3C307004E7092 /* GroundOverlayController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GroundOverlayController.mm; path = AdvancedMap/GroundOverlayController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850071A0E718100C5124F /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LauncherListController.mm; path = AdvancedMap/LauncherListController.mm; sourceTree = SOURCE_ROOT; };
 		4DC850111A0E7DC500C5124F /* CustomRasterDataSourceController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomRasterDataSourceController.mm; path = AdvancedMap/CustomRasterDataSourceController.mm; sourceTree = SOURCE_ROOT; };
@@ -189,11 +185,6 @@
 		AD031F231DCCE81400072781 /* styles_mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = styles_mapzen.zip; path = ../../Assets/styles_mapzen.zip; sourceTree = "<group>"; };
 		AD2AD56D1F4B020C00F3C479 /* Package.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Package.h; sourceTree = "<group>"; };
 		AD2AD56E1F4B023D00F3C479 /* Package.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Package.mm; sourceTree = "<group>"; };
-		AD2AD5701F4B032600F3C479 /* PackageManagerListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageManagerListener.h; sourceTree = "<group>"; };
-		AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PackageManagerListener.mm; sourceTree = "<group>"; };
-		AD2AD5731F4B03FB00F3C479 /* PackageManagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PackageManagerController.h; sourceTree = "<group>"; };
-		AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageTableViewCell.h; sourceTree = "<group>"; };
-		AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackageTableViewCell.m; sourceTree = "<group>"; };
 		AD2AD5771F4B1ACC00F3C479 /* OfflineMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineMapController.m; sourceTree = "<group>"; };
 		AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rome_carto-streets.mbtiles"; sourceTree = "<group>"; };
 		AD3D629F1DD07F0F00C97356 /* icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_more.png; path = ../../Assets/icon_more.png; sourceTree = "<group>"; };
@@ -414,7 +405,6 @@
 				AD3FFFAB1F710E5C005642F9 /* Model */,
 				AD4F91F61F6BE32000139F79 /* SwiftUI */,
 				AD4F92141F6C24F900139F79 /* Resources */,
-				AD2AD56C1F4B01BD00F3C479 /* PackageManager */,
 				ADFC10231E76EAEF009DC903 /* Utils */,
 				AD860A6B1D7DA103005994B2 /* BaseClasses */,
 				ADC7313A1DBFA2A400E1CDCA /* Sections */,
@@ -432,19 +422,6 @@
 			);
 			name = "AdvancedMap.Objective-C";
 			path = AdvancedMap;
-			sourceTree = "<group>";
-		};
-		AD2AD56C1F4B01BD00F3C479 /* PackageManager */ = {
-			isa = PBXGroup;
-			children = (
-				AD2AD5731F4B03FB00F3C479 /* PackageManagerController.h */,
-				4D94545D1A80E48D00D37B3B /* PackageManagerController.mm */,
-				AD2AD5701F4B032600F3C479 /* PackageManagerListener.h */,
-				AD2AD5711F4B033500F3C479 /* PackageManagerListener.mm */,
-				AD2AD5741F4B0E5300F3C479 /* PackageTableViewCell.h */,
-				AD2AD5751F4B0E5300F3C479 /* PackageTableViewCell.m */,
-			);
-			name = PackageManager;
 			sourceTree = "<group>";
 		};
 		AD2AD5791F4B20FE00F3C479 /* Geocoding */ = {
@@ -1090,8 +1067,6 @@
 				AD4F92011F6BF3D000139F79 /* Banner.swift in Sources */,
 				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
 				AD46EB3E1F6FD63A004B662F /* PackageCell.swift in Sources */,
-				AD2AD5761F4B0E5300F3C479 /* PackageTableViewCell.m in Sources */,
-				AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
 				AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */,
 				AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */,
@@ -1106,7 +1081,6 @@
 				AD589CE81DC105A1004E68B2 /* GPSLocationController.m in Sources */,
 				AD3FFFAE1F710FCC005642F9 /* Cities.m in Sources */,
 				AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */,
-				4D94545E1A80E48D00D37B3B /* PackageManagerController.mm in Sources */,
 				AD4F91FF1F6BEFCE00139F79 /* Colors.swift in Sources */,
 				AD2AD5781F4B1ACC00F3C479 /* OfflineMapController.m in Sources */,
 				AD4F91FB1F6BE9D600139F79 /* ProgressLabel.swift in Sources */,
