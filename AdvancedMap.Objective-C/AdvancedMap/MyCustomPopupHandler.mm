@@ -76,10 +76,9 @@ static const int BACKGROUND_COLOR = 0xffffffff;
 	NSString* text = self.text;
 	NSLineBreakMode textBreakMode = NSLineBreakByWordWrapping;
 	CGSize textSize = CGSizeMake(0, 0);
-	if (text) {
-		textSize = [text sizeWithFont:textFont
-					  constrainedToSize:CGSizeMake(maxTextWidth, CGFLOAT_MAX)
-						  lineBreakMode:textBreakMode];
+	
+    if (text) {
+        textSize = [text boundingRectWithSize:CGSizeMake(maxTextWidth, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes: @{ NSFontAttributeName:textFont } context:nil].size;
 	}
 	
 	// Calculate bitmap size and create graphics context
@@ -137,15 +136,17 @@ static const int BACKGROUND_COLOR = 0xffffffff;
 	
 	// Draw text
 	NTColor* textColor = [[NTColor alloc] initWithColor:TEXT_COLOR];
-	CGContextSetRGBFillColor(context, [textColor getR] / 255.0, [textColor getG] / 255.0,
-							 [textColor getB] / 255.0, [textColor getA] / 255.0);
-	CGRect textRect = CGRectMake(halfStrokeWidth + POPUP_PADDING + triangleWidth,
-								  POPUP_PADDING,
-								  textSize.width,
-								  textSize.height);
-	[text drawInRect:textRect withFont:textFont lineBreakMode:textBreakMode];
-
-	// Extract image
+	CGContextSetRGBFillColor(context, [textColor getR] / 255.0, [textColor getG] / 255.0, [textColor getB] / 255.0, [textColor getA] / 255.0);
+    
+	CGRect textRect = CGRectMake(halfStrokeWidth + POPUP_PADDING + triangleWidth, POPUP_PADDING, textSize.width, textSize.height);
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = textBreakMode;
+    NSDictionary *attributes = @{ NSFontAttributeName: textFont, NSParagraphStyleAttributeName: paragraphStyle };
+    
+    [text drawInRect:textRect withAttributes:attributes];
+	
+    // Extract image
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
 	
 	// Clean up

@@ -92,7 +92,6 @@
 		AD90F9471E096C6E00E6EF51 /* BaseRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */; };
 		AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */; };
 		AD9B19B91DC1E5850025B767 /* cities15000.geojson in Resources */ = {isa = PBXBuildFile; fileRef = AD9B19B81DC1E5850025B767 /* cities15000.geojson */; };
-		AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F81501E4B67490091DB26 /* AlertMenu.m */; };
 		ADA1141A1DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */; };
 		ADA114231DA3A24E00481261 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4B1F5F1D018C2A001C2F30 /* libz.tbd */; };
 		ADA114241DA3A25500481261 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7A5D1D1D9ABE0700F5EE4E /* GLKit.framework */; };
@@ -259,8 +258,6 @@
 		AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseRoutingController.mm; sourceTree = "<group>"; };
 		AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OnlineRoutingController.mm; sourceTree = "<group>"; };
 		AD9B19B81DC1E5850025B767 /* cities15000.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cities15000.geojson; path = ../../Assets/cities15000.geojson; sourceTree = "<group>"; };
-		AD9F814F1E4B67340091DB26 /* AlertMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertMenu.h; sourceTree = "<group>"; };
-		AD9F81501E4B67490091DB26 /* AlertMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertMenu.m; sourceTree = "<group>"; };
 		ADA114171DA399FF00481261 /* AdvancedMap.Objective-C.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AdvancedMap.Objective-C.UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA114191DA399FF00481261 /* AdvancedMap_Objective_C_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvancedMap_Objective_C_UITests.m; sourceTree = "<group>"; };
 		ADA1141B1DA399FF00481261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -576,8 +573,6 @@
 				ADC731491DBFAC6500E1CDCA /* Listeners */,
 				AD4F92101F6C13AE00139F79 /* Views */,
 				ADC731481DBFAC6000E1CDCA /* Controllers */,
-				AD9F814F1E4B67340091DB26 /* AlertMenu.h */,
-				AD9F81501E4B67490091DB26 /* AlertMenu.m */,
 			);
 			name = BaseClasses;
 			sourceTree = "<group>";
@@ -1063,7 +1058,6 @@
 				ADFBF6CA1F4C19CB00F98741 /* BaseGeocodingController.m in Sources */,
 				ADFC102C1E76F190009DC903 /* OfflineRoutingController.mm in Sources */,
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
-				AD9F81511E4B67490091DB26 /* AlertMenu.m in Sources */,
 				AD4F92011F6BF3D000139F79 /* Banner.swift in Sources */,
 				ADB148901DC0A5AD009A899B /* VectorObjectEditingController.m in Sources */,
 				AD46EB3E1F6FD63A004B662F /* PackageCell.swift in Sources */,

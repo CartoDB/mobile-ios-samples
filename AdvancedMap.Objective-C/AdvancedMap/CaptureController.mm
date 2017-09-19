@@ -98,8 +98,6 @@
         } else {
             result = [@"Unable to save image to " stringByAppendingString:path];
         }
-
-        [(CaptureController*)self.controller alert:result];
     }
 }
 

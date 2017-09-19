@@ -12,19 +12,19 @@
 
 @interface MapBaseView : UIView
 
-@property Banner *banner;
-@property NTMapView *mapView;
-@property SlideInPopup *popup;
+@property Banner * _Nonnull banner;
+@property NTMapView * _Nonnull mapView;
+@property SlideInPopup * _Nonnull popup;
 
-@property NSMutableArray *buttons;
+@property NSMutableArray * _Nonnull buttons;
 
 @property CGFloat bannerHeight;
 @property CGFloat bottomLabelHeight;
 @property CGFloat smallPadding;
 
-- (void)addButton:(PopupButton *)button;
+- (void)addButton:(PopupButton *_Nonnull)button;
 
-- (void)addRecognizer:(UIViewController *)sender view:(UIView *)view action: (nullable SEL)action;
-- (void)removeRecognizerFrom:(UIView *)view;
+- (void)addRecognizer:(UIViewController *_Nonnull)sender view:(UIView *_Nonnull)view action: (nullable SEL)action;
+- (void)removeRecognizerFrom:(UIView *_Nonnull)view;
 
 @end
