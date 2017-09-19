@@ -8,18 +8,20 @@
 
 #import "BaseGeoPackageDownloadController.h"
 
-@interface BaseGeoPackageDownloadController ()
-
-@end
-
 @implementation BaseGeoPackageDownloadController
 
-- (NSString *)getFolder {
-    return @"geocodingpackages";
-}
-
-- (NSString *)getSource {
-    return [GEOCODING_TAG stringByAppendingString: OFFLINE_GEOCODING_SOURCE];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.contentView = [[PackageDownloadBaseView alloc] init];
+    self.view = self.contentView;
+    
+    NSString *source = [ROUTING_TAG stringByAppendingString: CARTO_VECTOR_SOURCE];
+    NSString *folder = [self createFolder:@"com.carto.geocodingpackages"];
+    
+    [self.contentView setManager:source folder:folder];
+    
+    [self.contentView addDefaultBaseLayer];
 }
 
 @end

@@ -10,6 +10,10 @@
 
 @implementation PackageDownloadBaseView
 
+- (NTProjection *)getProjection {
+    return [[self.mapView getOptions] getBaseProjection];
+}
+
 - (id) init {
     self = [super init];
     
@@ -42,7 +46,6 @@
 
 - (void)setManager: (NSString *)source folder: (NSString *)folder {
     self.manager = [[NTCartoPackageManager alloc] initWithSource:source dataFolder:folder];
-    [self setOfflineLayer];
 }
 
 - (void)setOfflineLayer {
@@ -382,6 +385,11 @@
     }
     
     return packages;
+}
+
+- (void)addDefaultBaseLayer {
+    NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
+    [[self.mapView getLayers] add:layer];
 }
 
 @end

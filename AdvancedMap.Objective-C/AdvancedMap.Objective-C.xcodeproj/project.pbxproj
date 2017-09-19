@@ -36,6 +36,8 @@
 		AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D629F1DD07F0F00C97356 /* icon_more.png */; };
 		AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */; };
 		AD3FFFAE1F710FCC005642F9 /* Cities.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFAD1F710FCC005642F9 /* Cities.m */; };
+		AD3FFFB11F71237F005642F9 /* GeocodingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB01F71237F005642F9 /* GeocodingView.m */; };
+		AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB031F6FADC0004B662F /* GalleryRow.swift */; };
 		AD46EB061F6FADC0004B662F /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */; };
@@ -206,6 +208,10 @@
 		AD3D62A01DD07F0F00C97356 /* icon_more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_more@3x.png"; path = "../../Assets/icon_more@3x.png"; sourceTree = "<group>"; };
 		AD3FFFAC1F710FCC005642F9 /* Cities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cities.h; sourceTree = "<group>"; };
 		AD3FFFAD1F710FCC005642F9 /* Cities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cities.m; sourceTree = "<group>"; };
+		AD3FFFAF1F71237F005642F9 /* GeocodingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodingView.h; sourceTree = "<group>"; };
+		AD3FFFB01F71237F005642F9 /* GeocodingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocodingView.m; sourceTree = "<group>"; };
+		AD3FFFB21F712538005642F9 /* GeocodingBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeocodingBaseView.h; sourceTree = "<group>"; };
+		AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeocodingBaseView.m; sourceTree = "<group>"; };
 		AD46EB031F6FADC0004B662F /* GalleryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRow.swift; sourceTree = "<group>"; };
 		AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
 		AD46EB071F6FADC7004B662F /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -465,6 +471,12 @@
 				AD2AD57C1F4B211900F3C479 /* Offline */,
 				AD2AD57B1F4B211400F3C479 /* Online */,
 				AD2AD57A1F4B210400F3C479 /* Base */,
+				AD3FFFAF1F71237F005642F9 /* GeocodingView.h */,
+				AD3FFFB01F71237F005642F9 /* GeocodingView.m */,
+				AD3FFFB21F712538005642F9 /* GeocodingBaseView.h */,
+				AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */,
+				ADFBF6C81F4C19CB00F98741 /* BaseGeocodingController.h */,
+				ADFBF6C91F4C19CB00F98741 /* BaseGeocodingController.m */,
 			);
 			name = Geocoding;
 			sourceTree = "<group>";
@@ -478,8 +490,6 @@
 				ADCB208A1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm */,
 				AD5991491F4B388900CDF426 /* BaseGeoPackageDownloadController.h */,
 				AD59914A1F4B388900CDF426 /* BaseGeoPackageDownloadController.m */,
-				ADFBF6C81F4C19CB00F98741 /* BaseGeocodingController.h */,
-				ADFBF6C91F4C19CB00F98741 /* BaseGeocodingController.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1124,6 +1134,7 @@
 				AD90F94D1E0970AD00E6EF51 /* OfflineRoutingBaseController.mm in Sources */,
 				AD2AD5721F4B033500F3C479 /* PackageManagerListener.mm in Sources */,
 				4DAF41AF1AD3C307004E7092 /* GroundOverlayController.mm in Sources */,
+				AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */,
 				AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */,
 				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
@@ -1147,6 +1158,7 @@
 				ADFBF6CF1F4C349100F98741 /* OfflineGeocodingController.m in Sources */,
 				AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */,
 				4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */,
+				AD3FFFB11F71237F005642F9 /* GeocodingView.m in Sources */,
 				4DC850081A0E718100C5124F /* LauncherListController.mm in Sources */,
 				ADCB208B1F4B2A5C00E6F8E0 /* ReverseGeocodingBaseController.mm in Sources */,
 				AD59914D1F4B3BB200CDF426 /* OfflineReverseGeocodingController.m in Sources */,

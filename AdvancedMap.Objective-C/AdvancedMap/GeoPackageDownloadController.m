@@ -16,13 +16,4 @@
 
 @implementation GeoPackageDownloadController
 
-- (void)showMap
-{
-    OfflineGeocodingController* controller = [[OfflineGeocodingController alloc] init];
-    controller.manager = self.packageManager;
-    controller.service = [[NTPackageManagerGeocodingService alloc] initWithPackageManager:self.packageManager];
-    
-    [self.navigationController pushViewController:controller animated:YES];
-}
-
 @end

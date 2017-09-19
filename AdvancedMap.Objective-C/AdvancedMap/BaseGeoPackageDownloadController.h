@@ -6,8 +6,12 @@
 //  Copyright © 2017 Nutiteq. All rights reserved.
 //
 
-#import "PackageManagerController.h"
+#import <Foundation/Foundation.h>
+#import <CartoMobileSDK/CartoMobileSDK.h>
+#import "PackageDownloadBaseController.h"
+#import "Sources.h"
 
-@interface BaseGeoPackageDownloadController : PackageManagerController
+@interface BaseGeoPackageDownloadController : PackageDownloadBaseController
 
 @end
+

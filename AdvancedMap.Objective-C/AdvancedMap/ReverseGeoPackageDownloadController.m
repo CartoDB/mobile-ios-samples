@@ -16,15 +16,6 @@
 
 @implementation ReverseGeoPackageDownloadController
 
-- (void)showMap
-{
-    OfflineReverseGeocodingController* controller = [[OfflineReverseGeocodingController alloc] init];
-    controller.manager = self.packageManager;
-    controller.service = [[NTPackageManagerReverseGeocodingService alloc] initWithPackageManager:self.packageManager];
-    
-    [self.navigationController pushViewController:controller animated:YES];
-}
-
 @end
     
 

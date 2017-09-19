@@ -18,6 +18,8 @@
 @property PackagePopupContent *packageContent;
 @property NTCartoPackageManager *manager;
 
+- (NTProjection *)getProjection;
+
 - (void)setManager: (NSString *)source folder: (NSString *)folder;
 - (void)setOfflineLayer;
 
@@ -35,6 +37,8 @@
 
 - (void)onPackageClick: (Package *)package;
 - (void)onBackButtonClick;
+
+- (void)addDefaultBaseLayer;
 
 @property NSMutableArray *downloadQueue;
 

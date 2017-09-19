@@ -113,7 +113,7 @@
     sample.title = @"OFFLINE GEOCODING";
     sample.subtitle = @"Download and package and search for an address";
     sample.imageUrl = @"background_offline_geocoding.png";
-    sample.controller = @"GeoPackageDownloadController";
+    sample.controller = @"OfflineGeocodingController";
     [array addObject: sample];
     
     sample = [[Sample alloc] init];

@@ -33,7 +33,9 @@
 @implementation Cities
 
 + (NSMutableArray *)getList {
+    
     static NSMutableArray *list = nil;
+    
     if (list == nil) {
         
         list = [[NSMutableArray alloc] init];

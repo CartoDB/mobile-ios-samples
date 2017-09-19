@@ -10,6 +10,4 @@
 
 @interface OfflineGeocodingController : BaseGeocodingController
 
-@property NTCartoPackageManager *manager;
-
 @end

@@ -27,6 +27,7 @@
     NSString *folder = [self createFolder:@"com.carto.mappackages"];
     
     [self.contentView setManager:source folder:folder];
+    [self.contentView setOfflineLayer];
 }
 
 @end

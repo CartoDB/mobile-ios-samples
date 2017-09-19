@@ -11,6 +11,8 @@
  */
 
 #import "BaseGeocodingController.h"
+#import "GeocodingView.h"
+#import "Sources.h"
 
 @interface BaseGeocodingController ()
 
@@ -18,94 +20,45 @@
 
 @implementation BaseGeocodingController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    self.IDENTIFIER = @"result_table_id";
-    
-    self.darkTransparentGray = [UIColor colorWithRed:50 / 255.0 green:50 / 255.0 blue:50 / 255.0 alpha:200 / 255.0];
-    self.lightTransparentGray = [UIColor colorWithRed:50 / 255.0 green:50 / 255.0 blue:50 / 255.0 alpha:120 / 255.0];
-    self.transparent = [UIColor colorWithRed:0 / 255.0 green:0 / 255.0 blue:0 / 255.0 alpha:0 / 255.0];
-    
-    self.font = [UIFont fontWithName:@"HelveticaNeue" size:15];
-    
-    self.addresses = [[NSMutableArray alloc]init];
-    
-    self.inputField = [[UITextField alloc]init];
-    [self.inputField setTextColor:UIColor.whiteColor];
-    [self.inputField setBackgroundColor:self.darkTransparentGray];
-    [self.inputField setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [self.inputField setFont:self.font];
-    // Text padding
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 20)];
-    [self.inputField setLeftView:view];
-    [self.inputField setLeftViewMode:UITextFieldViewModeAlways];
-    [self.view addSubview:_inputField];
-    
-    self.resultTable = [[UITableView alloc]init];
-    [self.resultTable registerClass:[UITableViewCell class] forCellReuseIdentifier:self.IDENTIFIER];
-    [self.resultTable setBackgroundColor:self.transparent];
-    [self.resultTable setAllowsSelection:YES];
-    [self.resultTable setUserInteractionEnabled:YES];
-    [self.view addSubview:_resultTable];
-    
-    [self hideTable];
+- (GeocodingView *)getGeocodingView {
+    return (GeocodingView *)self.contentView;
 }
 
-- (void)viewDidLayoutSubviews {
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    CGFloat padding = 5.0f;
+    self.contentView = [[GeocodingView alloc] init];
+    self.view = self.contentView;
     
-    CGFloat statusBarHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
-    CGFloat navBarHeight = self.navigationController.navigationBar.frame.size.height;
-    
-    CGFloat x = padding;
-    CGFloat y = statusBarHeight + navBarHeight + padding;
-    CGFloat w = [self.view frame].size.width - 2 * padding;
-    CGFloat h = 50;
-    
-    [self.inputField setFrame:CGRectMake(x, y, w, h)];
-    
-    y += h + 1;
-    h = 240;
-    
-    [self.resultTable setFrame:CGRectMake(x, y, w, h)];
+    [self.contentView addDefaultBaseLayer];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.inputField setDelegate:self];
-    [self.resultTable setDelegate:self];
-    [self.resultTable setDataSource:self];
+    [[self getGeocodingView].inputField setDelegate:self];
+    [[self getGeocodingView].resultTable setDelegate:self];
+    [[self getGeocodingView].resultTable setDataSource:self];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [self.inputField setDelegate:nil];
-    [self.resultTable setDelegate:nil];
-    [self.resultTable setDataSource:nil];
-}
-
-- (void)showTable {
-    [self.resultTable setHidden:NO];
-}
-
-- (void)hideTable {
-    [self.resultTable setHidden:YES];
+    [[self getGeocodingView].inputField setDelegate:nil];
+    [[self getGeocodingView].resultTable setDelegate:nil];
+    [[self getGeocodingView].resultTable setDataSource:nil];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    [self closeTextField];
-    NSString *text = [self.inputField text];
+    [[self getGeocodingView] closeTextField];
+    NSString *text = [[self getGeocodingView].inputField text];
     [self geoCode:text autoComplete:false];
     return YES;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
-    [self showTable];
+    [[self getGeocodingView] showTable];
     
     NSString *substring = [[textField text] stringByReplacingCharactersInRange:range withString:string];
     [self geoCode:substring autoComplete:true];
@@ -115,10 +68,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self closeTextField];
-    
-    NTGeocodingResult *result = [self.addresses objectAtIndex:indexPath.row];
-    [self showResult:result];
+    // This controller contains a view with two tableViews,
+    // one for package popup and the other for geocoding results.
+    // Check the type and see which was called
+    if (tableView == [self getGeocodingView].packageContent.table) {
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    } else {
+        [[self getGeocodingView] closeTextField];
+        NTGeocodingResult *result = [[self getGeocodingView].addresses objectAtIndex:indexPath.row];
+        [[self getGeocodingView] showAndGoToResult:result];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -127,25 +86,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self.addresses count];
+    return [[self getGeocodingView].addresses count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.IDENTIFIER forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self getGeocodingView].IDENTIFIER forIndexPath:indexPath];
     
-    NTGeocodingResult *result = [self.addresses objectAtIndex:indexPath.row];
+    NTGeocodingResult *result = [[self getGeocodingView].addresses objectAtIndex:indexPath.row];
     
     [cell setTag:indexPath.row];
-    [cell setBackgroundColor:self.lightTransparentGray];
+    [cell setBackgroundColor:[self getGeocodingView].lightTransparentGray];
     
-    [[cell textLabel] setText:[self getPrettyAddress:result]];
-    [[cell textLabel] setFont:self.font];
+    [[cell textLabel] setText:[[self getGeocodingView] getPrettyAddress:result]];
+    [[cell textLabel] setFont:[self getGeocodingView].font];
     [[cell textLabel] setTextColor:UIColor.whiteColor];
-    [[cell textLabel]setBackgroundColor:self.transparent];
+    [[cell textLabel] setBackgroundColor:[self getGeocodingView].transparent];
     
     return cell;
-    
 }
 
 - (void)geoCode:(NSString *)text autoComplete:(BOOL)autocomplete {
@@ -153,7 +111,7 @@
     self.searchQueueSize += 1;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
+    
         if (self.searchQueueSize - 1 > 0) {
             // Cancel the request if we have additional pending requests queued
             return;
@@ -161,7 +119,7 @@
         
         self.searchQueueSize -= 1;
         
-        NTGeocodingRequest *request = [[NTGeocodingRequest alloc]initWithProjection:[self getProjection] query:text];
+        NTGeocodingRequest *request = [[NTGeocodingRequest alloc]initWithProjection:[[self getGeocodingView] getProjection] query:text];
         
         NTGeocodingResultVector *results = [self.service calculateAddresses:request];
         int count = [results size];
@@ -172,36 +130,23 @@
             
             if (autocomplete) {
              
-                [self.addresses removeAllObjects];
+                [[self getGeocodingView].addresses removeAllObjects];
                 
                 for (int i = 0; i < count; i++) {
                     NTGeocodingResult *result = [results get:i];
-                    [self.addresses addObject:result];
+                    [[self getGeocodingView].addresses addObject:result];
                 }
                 
-                [self.resultTable reloadData];
+                [[self getGeocodingView].resultTable reloadData];
                 return;
             }
             
             if (count > 0) {
                 NTGeocodingResult *result = [results get:0];
-                [self showResult:result];
+                [[self getGeocodingView] showAndGoToResult:result];
             }
         });
     });
-}
-
-- (void)showResult:(NTGeocodingResult *)result {
-    
-    NSString *title = @"";
-    NSString *description = [self getPrettyAddress:result];
-    
-    [self showResult:result title:title description:description goToPosition:true];
-}
-
-- (void)closeTextField {
-    [self.inputField resignFirstResponder];
-    [self hideTable];
 }
 
 @end
