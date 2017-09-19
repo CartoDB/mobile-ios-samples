@@ -70,6 +70,10 @@ import UIKit
     func showInformation(text: String, autoclose: Bool) {
         show(text: text)
         
+        if (superview != nil) {
+            superview?.bringSubview(toFront: self)
+        }
+        
         if (autoclose) {
             Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.hide), userInfo: nil, repeats: false)
         }

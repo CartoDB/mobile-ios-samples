@@ -41,7 +41,6 @@
     CGFloat y = [self frame].size.height - h;
     
     [self.progressLabel setFrame:CGRectMake(x, y, w, h)];
-    
 }
 
 - (void)setManager: (NSString *)source folder: (NSString *)folder {

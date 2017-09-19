@@ -106,7 +106,7 @@
     sample.title = @"OFFLINE REVERSE GEOCODING";
     sample.subtitle = @"Download and package and click the map to find an address";
     sample.imageUrl = @"background_offline_reverse_geocoding.png";
-    sample.controller = @"ReverseGeoPackageDownloadController";
+    sample.controller = @"OfflineReverseGeocodingController";
     [array addObject: sample];
     
     sample = [[Sample alloc] init];

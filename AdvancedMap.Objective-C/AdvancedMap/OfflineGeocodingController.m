@@ -6,7 +6,11 @@
 //  Copyright © 2017 Nutiteq. All rights reserved.
 //
 
-#import "OfflineGeocodingController.h"
+#import "BaseGeocodingController.h"
+
+@interface OfflineGeocodingController : BaseGeocodingController
+
+@end
 
 @implementation OfflineGeocodingController
 

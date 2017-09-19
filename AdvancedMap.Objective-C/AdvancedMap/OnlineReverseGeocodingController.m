@@ -6,10 +6,9 @@
 //  Copyright © 2017 Nutiteq. All rights reserved.
 //
 
-#import "OnlineReverseGeocodingController.h"
-#import "GeocodingBaseController.h"
+#import "BaseReverseGeocodingController.h"
 
-@interface OnlineReverseGeocodingController ()
+@interface OnlineReverseGeocodingController : BaseReverseGeocodingController
 
 @end
 
@@ -18,7 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.service = [[NTPeliasOnlineReverseGeocodingService alloc]initWithApiKey:[self getApiKey]];
+    self.service = [[NTPeliasOnlineReverseGeocodingService alloc]initWithApiKey:MAPZEN_API_KEY];
+}
+
+- (void)hidePackageDownloadButton {
+    // For the sake of brevity and convenience,
+    // both Online and Offline Reverse Geocoding controllers inherit from PackageDownloadBaseView.
+    // Since this is our online sample, simply hide download the button,
+    // PackageManager isn't initialized either, as it's not used
+    [[self.contentView.buttons objectAtIndex:0] setHidden:YES];
 }
 
 @end

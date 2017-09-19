@@ -6,33 +6,39 @@
 //  Copyright © 2017 Nutiteq. All rights reserved.
 //
 
-#import "ReverseGeocodingBaseController.h"
+#import "BaseReverseGeocodingController.h"
 
 @interface ReverseGeocodingListener : NTMapEventListener
 
 - (void)onMapClicked: (NTMapClickInfo *)mapClickinfo;
 
-@property (nonatomic, strong) ReverseGeocodingBaseController *controller;
+@property (nonatomic, strong) BaseReverseGeocodingController *controller;
 
 @end
 
-@interface ReverseGeocodingBaseController ()
+@interface BaseReverseGeocodingController ()
 
-@property ReverseGeocodingListener *listener;
+@property ReverseGeocodingListener *geocodingListener;
 
 @end
 
-@implementation ReverseGeocodingBaseController
+@implementation BaseReverseGeocodingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.listener = [[ReverseGeocodingListener alloc]init];
-    self.listener.controller = self;
+    
+    self.contentView = [[GeocodingBaseView alloc] init];
+    self.view = self.contentView;
+    
+    [self.contentView addDefaultBaseLayer];
+    
+    self.geocodingListener = [[ReverseGeocodingListener alloc]init];
+    self.geocodingListener.controller = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.contentView.mapView setMapEventListener:self.listener];
+    [self.contentView.mapView setMapEventListener:self.geocodingListener];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -47,7 +53,7 @@
 - (void)onMapClicked: (NTMapClickInfo *)mapClickinfo {
     
     NTMapPos *location = [mapClickinfo getClickPos];
-    NTProjection *projection = [self.controller getProjection];
+    NTProjection *projection = [self.controller.contentView getProjection];
     
     NTReverseGeocodingRequest *request = [[NTReverseGeocodingRequest alloc]initWithProjection:projection location:location];
     [request setSearchRadius:125.0f];
@@ -83,7 +89,17 @@
     NSString *description = result.description;
     BOOL goToPosition = NO;
     
-    [self.controller showResult:result title:title description:description goToPosition:goToPosition];
+    GeocodingBaseView *view = (GeocodingBaseView *)self.controller.contentView;
+    
+    if (result == nil) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *text = @"Couldn't find any results...";
+            [view.banner showInformationWithText:text autoclose:YES];
+        });
+        return;
+    }
+    
+    [view showResult:result title:title description:description goToPosition:goToPosition];
 }
 
 @end

@@ -6,9 +6,11 @@
 //  Copyright © 2017 Nutiteq. All rights reserved.
 //
 
-#import "GeocodingBaseController.h"
+#import "PackageDownloadBaseController.h"
+#import "Sources.h"
+#import "GeocodingBaseView.h"
 
-@interface ReverseGeocodingBaseController : GeocodingBaseController
+@interface BaseReverseGeocodingController : PackageDownloadBaseController
 
 @property (nonatomic, strong) NTReverseGeocodingService *service;
 
