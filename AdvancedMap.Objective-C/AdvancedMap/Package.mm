@@ -51,6 +51,24 @@ NSString * const ACTION_REMOVE = @"REMOVE";
     return [self.identifier rangeOfString:BBOX_IDENTIFIER].location != NSNotFound;
 }
 
+- (BOOL)isDownloading {
+    if (self.status == nil) {
+        return NO;
+    }
+    
+    NTPackageAction action = [self.status getCurrentAction];
+    return action == NT_PACKAGE_ACTION_DOWNLOADING && ![self.status isPaused];
+}
+
+- (BOOL)isQueued {
+    if (self.status == nil) {
+        return NO;
+    }
+    
+    NTPackageAction action = [self.status getCurrentAction];
+    return action == NT_PACKAGE_ACTION_WAITING && ![self.status isPaused];
+}
+
 - (NSString *)getStatusText {
     
     NSString *status = @"Available";

@@ -35,6 +35,8 @@
 - (void)onPackageClick: (Package *)package;
 - (void)onBackButtonClick;
 
+@property NSMutableArray *downloadQueue;
+
 @property NSString *folder;
 
 @end

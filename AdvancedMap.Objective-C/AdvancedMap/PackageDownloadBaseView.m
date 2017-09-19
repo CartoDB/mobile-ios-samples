@@ -16,9 +16,14 @@
     self.downloadButton = [[PopupButton alloc] initWithImageUrl:@"icon_global.png"];
     [self addButton:_downloadButton];
     
+    self.progressLabel = [[ProgressLabel alloc] init];
+    [self addSubview:self.progressLabel];
+    
     self.packageContent = [[PackagePopupContent alloc] init];
     
     self.folder = @"";
+    
+    self.downloadQueue = [[NSMutableArray alloc] init];
     
     return self;
 }
@@ -93,14 +98,19 @@
         if (action == ACTION_DOWNLOAD) {
             [self.manager startPackageDownload:package.identifier];
             [self.progressLabel show];
+            [self enqueue: package];
         } else if (action == ACTION_PAUSE) {
             [self.manager setPackagePriority:package.identifier priority:-1];
+            [self dequeue: package];
         } else if (action == ACTION_RESUME) {
             [self.manager setPackagePriority:package.identifier priority:0];
+            [self enqueue: package];
         } else if (action == ACTION_CANCEL) {
             [self.manager cancelPackageTasks:package.identifier];
+            [self dequeue: package];
         } else if (action == ACTION_REMOVE) {
             [self.manager startPackageRemove:package.identifier];
+            [self dequeue: package];
         }
     }
 }
@@ -125,6 +135,7 @@
             } else {
                 NSString *progress = [NSString stringWithFormat:@"%d", (int)[status getProgress]];
                 NSString *text = [[[[@"Downloading " stringByAppendingString: download.name] stringByAppendingString:@": "] stringByAppendingString:progress] stringByAppendingString:@"%"];
+                [self.progressLabel show];
                 [self.progressLabel updateWithText:text];
             }
             
@@ -246,11 +257,112 @@
     return list;
 }
 
+/*
+ * Region: Download queue
+ */
 - (Package *)getCurrentDownload {
-    // TODO after we complete initial build logic
-    Package *package = [[Package alloc] init];
-    package.name = @"";
-    return package;
+    
+    if (self.downloadQueue.count > 0) {
+        
+        NSMutableArray *downloading = [self getDownloadingPackages];
+        
+        if (downloading.count == 1) {
+            return [downloading objectAtIndex:0];
+        }
+    }
+    
+    NSMutableArray *local = [self getAllPackages];
+    NSMutableArray *filtered = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < local.count; i++) {
+        
+        Package *package = [local objectAtIndex:i];
+        if ([package isDownloading] || [package isQueued]) {
+            [filtered addObject:package];
+        }
+    }
+    
+    for (int i = 0; i < filtered.count; i++) {
+        Package *package = [filtered objectAtIndex:i];
+        
+        BOOL found = NO;
+        
+        for (int i = 0; i < self.downloadQueue.count; i++) {
+            Package *existing = [self.downloadQueue objectAtIndex:i];
+            
+            if (existing.identifier == package.identifier) {
+                existing.status = package.status;
+                existing.info = package.info;
+                found = YES;
+            }
+        }
+        
+        if (!found) {
+            [self.downloadQueue addObject:package];
+        }
+        
+    }
+    
+    if (self.downloadQueue.count > 0) {
+        NSMutableArray *downloading = [self getDownloadingPackages];
+        
+        if (downloading.count == 1) {
+            return [downloading objectAtIndex:0];
+        }
+    }
+    
+    return nil;
+}
+
+- (NSMutableArray *)getDownloadingPackages {
+    NSMutableArray *downloading = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < self.downloadQueue.count; i++) {
+        
+        Package *package = [self.downloadQueue objectAtIndex:i];
+        if ([package isDownloading]) {
+            [downloading addObject:package];
+        }
+    }
+    
+    return downloading;
+}
+
+- (void)enqueue: (Package *)package {
+    [self.downloadQueue addObject:package];
+}
+
+- (void)dequeue: (Package *)package {
+    [self.downloadQueue removeObject:package];
+}
+
+- (NSMutableArray *)getAllPackages {
+    
+    NTPackageInfoVector* vector = [self.manager getServerPackages];
+    NSMutableArray *packages = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < [vector size]; i++) {
+        
+        NTPackageInfo *info = [vector get:i];
+        NSString *name = [info getName];
+        
+        NSArray *split = [name componentsSeparatedByString:@"/"];
+        
+        if ([split count] == 0) {
+            continue;
+        }
+        
+        NSString *modified = [split objectAtIndex:[split count] - 1];
+        
+        Package *package = [[Package alloc] init];
+        package.identifier = [info getPackageId];
+        package.name = modified;
+        package.status = [_manager getLocalPackageStatus:package.identifier version: -1];
+        
+        [packages addObject:package];
+    }
+    
+    return packages;
 }
 
 @end

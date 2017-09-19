@@ -17,11 +17,8 @@
 - (id)initWithPackageName:(NSString*)packageName packageInfo:(NTPackageInfo*)packageInfo packageStatus:(NTPackageStatus*)packageStatus;
 
 @property NSString *name;
-
 @property NSString *identifier;
-
 @property NTPackageInfo *info;
-
 @property NTPackageStatus *status;
 
 extern NSString * const BBOX_IDENTIFIER;
@@ -36,17 +33,14 @@ extern NSString * const ACTION_DOWNLOAD;
 extern NSString * const ACTION_REMOVE;
 
 - (BOOL)isGroup;
-
 - (BOOL)isCustomRegionFolder;
-
 - (BOOL)isCustomRegionPackage;
-
 - (BOOL)isSmallerThan1MB;
+- (BOOL)isDownloading;
+- (BOOL)isQueued;
 
 - (NSString *)getStatusText;
-
 - (NSString *)getActionText;
-
 - (NSString *)getVersionAndSize;
 
 - (CGFloat)getSizeInMB;
