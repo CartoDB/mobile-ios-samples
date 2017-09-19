@@ -36,6 +36,7 @@
 		AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB31F712538005642F9 /* GeocodingBaseView.m */; };
 		AD3FFFB81F714D89005642F9 /* RouteClickListener.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFB71F714D89005642F9 /* RouteClickListener.m */; };
 		AD3FFFBA1F716384005642F9 /* banner_icon_info.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3FFFB91F716384005642F9 /* banner_icon_info.png */; };
+		AD3FFFBD1F716576005642F9 /* BaseRoutingView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3FFFBC1F716576005642F9 /* BaseRoutingView.m */; };
 		AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */; };
 		AD46EB051F6FADC0004B662F /* GalleryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB031F6FADC0004B662F /* GalleryRow.swift */; };
 		AD46EB061F6FADC0004B662F /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */; };
@@ -198,6 +199,8 @@
 		AD3FFFB61F714D89005642F9 /* RouteClickListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteClickListener.h; sourceTree = "<group>"; };
 		AD3FFFB71F714D89005642F9 /* RouteClickListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteClickListener.m; sourceTree = "<group>"; };
 		AD3FFFB91F716384005642F9 /* banner_icon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_info.png; sourceTree = "<group>"; };
+		AD3FFFBB1F716576005642F9 /* BaseRoutingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRoutingView.h; sourceTree = "<group>"; };
+		AD3FFFBC1F716576005642F9 /* BaseRoutingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRoutingView.m; sourceTree = "<group>"; };
 		AD46EB031F6FADC0004B662F /* GalleryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRow.swift; sourceTree = "<group>"; };
 		AD46EB041F6FADC0004B662F /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
 		AD46EB071F6FADC7004B662F /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -773,6 +776,8 @@
 			children = (
 				AD90F9451E096C0E00E6EF51 /* BaseRoutingController.h */,
 				AD90F9461E096C6E00E6EF51 /* BaseRoutingController.mm */,
+				AD3FFFBB1F716576005642F9 /* BaseRoutingView.h */,
+				AD3FFFBC1F716576005642F9 /* BaseRoutingView.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -1045,6 +1050,7 @@
 			files = (
 				AD46EB061F6FADC0004B662F /* GalleryDelegate.swift in Sources */,
 				AD4F92041F6BF40400139F79 /* PopupButton.swift in Sources */,
+				AD3FFFBD1F716576005642F9 /* BaseRoutingView.m in Sources */,
 				AD46EB0A1F6FAFDB004B662F /* Sample.swift in Sources */,
 				AD4F92061F6BF40D00139F79 /* SlideInPopup.swift in Sources */,
 				ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */,
