@@ -17,6 +17,9 @@
 @property PackagePopupContent *packageContent;
 @property NTCartoPackageManager *manager;
 
+- (void)setManager: (NSString *)source folder: (NSString *)folder;
+- (void)setOfflineLayer;
+
 - (void)setPackageContent;
 - (BOOL)isPackageContent;
 

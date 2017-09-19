@@ -19,26 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.contentView = [[PackageDownloadBaseView alloc] init];
     self.view = self.contentView;
     
+    NSString *source = CARTO_VECTOR_SOURCE;
     NSString *folder = [self createFolder:@"com.carto.mappackages"];
-    self.contentView.manager = [[NTCartoPackageManager alloc] initWithSource:CARTO_VECTOR_SOURCE dataFolder:folder];
+    
+    [self.contentView setManager:source folder:folder];
 }
-
-//- (NSString *)getFolder {
-//    return @"regionpackages";
-//}
-//
-//- (NSString *)getSource {
-//    return CARTO_VECTOR_SOURCE;
-//}
-
-//- (void)showMap
-//{
-//    PackageMapController* mapController = [[PackageMapController alloc] init];
-//    mapController.packageManager = self.packageManager;
-//    [self.navigationController pushViewController:mapController animated:YES];
-//}
 
 @end

@@ -48,7 +48,7 @@ NSString * const ACTION_REMOVE = @"REMOVE";
         return false;
     }
     
-    return [self.identifier rangeOfString:BBOX_IDENTIFIER].location == NSNotFound;
+    return [self.identifier rangeOfString:BBOX_IDENTIFIER].location != NSNotFound;
 }
 
 - (NSString *)getStatusText {
@@ -76,10 +76,10 @@ NSString * const ACTION_REMOVE = @"REMOVE";
             } else if (action == NT_PACKAGE_ACTION_REMOVING) {
                 status = @"Removing";
             }
+            
+            NSString *progress = [NSString stringWithFormat:@"%d", (int)[self.status getProgress]];
+            status = [[[status stringByAppendingString:@" "] stringByAppendingString:progress] stringByAppendingString:@"%"];
         }
-        
-        NSString *progress = [NSString stringWithFormat:@"%f", [self.status getProgress]];
-        status = [[[status stringByAppendingString:@" "] stringByAppendingString:progress] stringByAppendingString:@"%"];
     }
     
     return status;
@@ -113,13 +113,13 @@ NSString * const ACTION_REMOVE = @"REMOVE";
     }
     
     NSString *version = [NSString stringWithFormat:@"%d", [self.info getVersion]];
-    version = [[@"v." stringByAppendingString:version] stringByAppendingString:@" ("];
+    version = [[@" v." stringByAppendingString:version] stringByAppendingString:@" ("];
     
     if ([self isSmallerThan1MB]) {
         return [version stringByAppendingString:@"<1MB)"];
     }
     
-    NSString *size = [NSString stringWithFormat:@"%f", [self getSizeInMB]];
+    NSString *size = [NSString stringWithFormat:@"%.01f", [self getSizeInMB]];
     return [[version stringByAppendingString:size] stringByAppendingString:@" MB)"];
 }
 

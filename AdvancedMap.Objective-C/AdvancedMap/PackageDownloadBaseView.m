@@ -34,6 +34,17 @@
     [self.progressLabel setFrame:CGRectMake(x, y, w, h)];
     
 }
+
+- (void)setManager: (NSString *)source folder: (NSString *)folder {
+    self.manager = [[NTCartoPackageManager alloc] initWithSource:source dataFolder:folder];
+    [self setOfflineLayer];
+}
+
+- (void)setOfflineLayer {
+    NTCartoOfflineVectorTileLayer *layer = [[NTCartoOfflineVectorTileLayer alloc] initWithPackageManager:self.manager style:NT_CARTO_BASEMAP_STYLE_VOYAGER];
+    [[self.mapView getLayers] add:layer];
+}
+
 - (void)setPackageContent {
 
     [self.popup.popup.header setTextWithText:@"SELECT A PACKAGE"];
@@ -112,7 +123,7 @@
             if ([status getProgress] == 100) {
                 [self.progressLabel completeWithMessage:@"Download complete"];
             } else {
-                NSString *progress = [NSString stringWithFormat:@"%f", [status getProgress]];
+                NSString *progress = [NSString stringWithFormat:@"%d", (int)[status getProgress]];
                 NSString *text = [[[[@"Downloading " stringByAppendingString: download.name] stringByAppendingString:@": "] stringByAppendingString:progress] stringByAppendingString:@"%"];
                 [self.progressLabel updateWithText:text];
             }
