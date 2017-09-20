@@ -89,9 +89,11 @@
 
 - (NTLine*)calculateRouteLine:(NTRoutingResult*) result
 {
+    NTColor *color = [[NTColor alloc] initWithR:14 g:122 b:254 a:150];
+    
     // Style for the line
     NTLineStyleBuilder* builder = [[NTLineStyleBuilder alloc] init];
-    [builder setColor:[[NTColor alloc] initWithR:14 g:122 b:254 a:150]];
+    [builder setColor:color];
     [builder setWidth:12];
     
     return [[NTLine alloc] initWithPoses:[result getPoints] style:[builder buildStyle]];
