@@ -7,6 +7,8 @@
 /** BaseMapsController **/
 @interface BaseMapsController : MapBaseController <UITableViewDelegate, StyleUpdateDelegate>
 
+@property StylePopupContentSectionItem *previousSelection;
+
 @end
 
 @implementation BaseMapsController
@@ -31,19 +33,11 @@
     [view.languageContent addLanguagesWithLanguages:languages];
     
     [view.styleContent highlightDefault];
-    // Get initial highlighted element
-    previous = [view.styleContent.cartoVector.list objectAtIndex:0];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    // Default values for osm, tiletype and style, respectively
-//    [(BaseMapsView *)self.contentView updateBaseLayer:CARTO_VECTOR_SOURCE :@"Vector" :@"voyager"];
-    
-    // Default language
-//    [self.contentView updateLanguage:@""];
     
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
     
@@ -61,10 +55,6 @@
 {
     [super viewWillDisappear:animated];
 
-//    self.listener = nil;
-//    self.vectorLayer = nil;
-//    [self updateListener];
-    
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
     
     [view removeRecognizerFrom: view.styleButton];
@@ -91,8 +81,6 @@
     [self.contentView.popup show];
 }
 
-StylePopupContentSectionItem *previous;
-
 - (void)styleClickedWithSelection:(StylePopupContentSectionItem *)selection source:(NSString *)source {
     
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
@@ -100,14 +88,14 @@ StylePopupContentSectionItem *previous;
     [view.popup hide];
     [view updateBaseLayer:selection.label.text :source];
     
-    if (previous != nil) {
-        [previous normalize];
+    if (self.previousSelection != nil) {
+        [self.previousSelection normalize];
     } else {
         [view.styleContent normalizeDefaultHighlight];
     }
     
     [selection highlight];
-    previous = selection;
+    self.previousSelection = selection;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
