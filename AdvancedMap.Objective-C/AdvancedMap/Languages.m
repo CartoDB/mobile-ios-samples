@@ -26,6 +26,8 @@
     
     if (list == nil) {
         
+        list = [[NSMutableArray alloc] init];
+        
         [list addObject:[[Language alloc] initWithName:@"Local" value:@""]];
         [list addObject:[[Language alloc] initWithName:@"English" value:@"en"]];
         [list addObject:[[Language alloc] initWithName:@"German" value:@"de"]];

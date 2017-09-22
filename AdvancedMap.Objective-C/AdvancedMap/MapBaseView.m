@@ -77,10 +77,29 @@
     }
 }
 
-
 - (void)addBaseLayer: (NTCartoBaseMapStyle)style {
     NTCartoOnlineVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:style];
     [[self.mapView getLayers] add:layer];
+}
+
+UIView *previous;
+
+- (void)setContent: (UIView *)content {
+    
+    if (previous != nil) {
+        [previous removeFromSuperview];
+    }
+    
+    [self.popup.popup addSubview:content];
+    
+    CGFloat x = 0;
+    CGFloat y = self.popup.popup.header.height;
+    CGFloat w = [self.popup.popup frame].size.width;
+    CGFloat h = [self.popup.popup frame].size.height - y;
+    
+    [content setFrame:CGRectMake(x, y, w, h)];
+    
+    previous = content;
 }
 
 @end

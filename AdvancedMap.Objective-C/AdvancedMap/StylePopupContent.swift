@@ -247,7 +247,7 @@ class StylePopupContentSectionItem : UIView {
     }
 }
 
-protocol StyleUpdateDelegate {
+@objc protocol StyleUpdateDelegate {
     
     func styleClicked(selection: StylePopupContentSectionItem, source: String)
 }

@@ -108,6 +108,16 @@
 		ADC02EA91F7525F200849DBD /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC02EA71F7525F200849DBD /* LanguagePopupContent.swift */; };
 		ADC02EAA1F7525F200849DBD /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC02EA81F7525F200849DBD /* StylePopupContent.swift */; };
 		ADC02EAD1F75263F00849DBD /* Languages.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC02EAC1F75263F00849DBD /* Languages.m */; };
+		ADC02EB01F752BE100849DBD /* BaseMapsView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC02EAF1F752BE100849DBD /* BaseMapsView.m */; };
+		ADC02EBA1F753C1B00849DBD /* style_image_carto_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB11F753C1B00849DBD /* style_image_carto_darkmatter.png */; };
+		ADC02EBB1F753C1B00849DBD /* style_image_carto_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB21F753C1B00849DBD /* style_image_carto_positron.png */; };
+		ADC02EBC1F753C1B00849DBD /* style_image_carto_voyager.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB31F753C1B00849DBD /* style_image_carto_voyager.png */; };
+		ADC02EBD1F753C1B00849DBD /* style_image_mapzen_bright.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB41F753C1B00849DBD /* style_image_mapzen_bright.png */; };
+		ADC02EBE1F753C1B00849DBD /* style_image_mapzen_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB51F753C1B00849DBD /* style_image_mapzen_darkmatter.png */; };
+		ADC02EBF1F753C1B00849DBD /* style_image_mapzen_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB61F753C1B00849DBD /* style_image_mapzen_positron.png */; };
+		ADC02EC01F753C1B00849DBD /* style_image_nutiteq_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB71F753C1B00849DBD /* style_image_nutiteq_darkmatter.png */; };
+		ADC02EC11F753C1B00849DBD /* style_image_nutiteq_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB81F753C1B00849DBD /* style_image_nutiteq_positron.png */; };
+		ADC02EC21F753C1B00849DBD /* style_image_nutiteq_voyager.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB91F753C1B00849DBD /* style_image_nutiteq_voyager.png */; };
 		ADCB208B1F4B2A5C00E6F8E0 /* BaseReverseGeocodingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCB208A1F4B2A5C00E6F8E0 /* BaseReverseGeocodingController.mm */; };
 		ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
@@ -279,6 +289,17 @@
 		ADC02EA81F7525F200849DBD /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
 		ADC02EAB1F75263F00849DBD /* Languages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Languages.h; sourceTree = "<group>"; };
 		ADC02EAC1F75263F00849DBD /* Languages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Languages.m; sourceTree = "<group>"; };
+		ADC02EAE1F752BE100849DBD /* BaseMapsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMapsView.h; sourceTree = "<group>"; };
+		ADC02EAF1F752BE100849DBD /* BaseMapsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMapsView.m; sourceTree = "<group>"; };
+		ADC02EB11F753C1B00849DBD /* style_image_carto_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_darkmatter.png; sourceTree = "<group>"; };
+		ADC02EB21F753C1B00849DBD /* style_image_carto_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_positron.png; sourceTree = "<group>"; };
+		ADC02EB31F753C1B00849DBD /* style_image_carto_voyager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_voyager.png; sourceTree = "<group>"; };
+		ADC02EB41F753C1B00849DBD /* style_image_mapzen_bright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_bright.png; sourceTree = "<group>"; };
+		ADC02EB51F753C1B00849DBD /* style_image_mapzen_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_darkmatter.png; sourceTree = "<group>"; };
+		ADC02EB61F753C1B00849DBD /* style_image_mapzen_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_positron.png; sourceTree = "<group>"; };
+		ADC02EB71F753C1B00849DBD /* style_image_nutiteq_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_darkmatter.png; sourceTree = "<group>"; };
+		ADC02EB81F753C1B00849DBD /* style_image_nutiteq_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_positron.png; sourceTree = "<group>"; };
+		ADC02EB91F753C1B00849DBD /* style_image_nutiteq_voyager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_voyager.png; sourceTree = "<group>"; };
 		ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
 		ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
 		ADCB20891F4B2A5C00E6F8E0 /* BaseReverseGeocodingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseReverseGeocodingController.h; sourceTree = "<group>"; };
@@ -540,6 +561,15 @@
 		AD4F92141F6C24F900139F79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ADC02EB11F753C1B00849DBD /* style_image_carto_darkmatter.png */,
+				ADC02EB21F753C1B00849DBD /* style_image_carto_positron.png */,
+				ADC02EB31F753C1B00849DBD /* style_image_carto_voyager.png */,
+				ADC02EB41F753C1B00849DBD /* style_image_mapzen_bright.png */,
+				ADC02EB51F753C1B00849DBD /* style_image_mapzen_darkmatter.png */,
+				ADC02EB61F753C1B00849DBD /* style_image_mapzen_positron.png */,
+				ADC02EB71F753C1B00849DBD /* style_image_nutiteq_darkmatter.png */,
+				ADC02EB81F753C1B00849DBD /* style_image_nutiteq_positron.png */,
+				ADC02EB91F753C1B00849DBD /* style_image_nutiteq_voyager.png */,
 				AD3FFFB91F716384005642F9 /* banner_icon_info.png */,
 				AD46EB491F701C99004B662F /* icon_back_blue.png */,
 				AD46EB471F701C27004B662F /* icon_forward_blue.png */,
@@ -690,6 +720,8 @@
 			isa = PBXGroup;
 			children = (
 				ADB1488D1DC09C59009A899B /* BaseMapsController.mm */,
+				ADC02EAE1F752BE100849DBD /* BaseMapsView.h */,
+				ADC02EAF1F752BE100849DBD /* BaseMapsView.m */,
 			);
 			name = BaseMap;
 			sourceTree = "<group>";
@@ -876,6 +908,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */,
+				ADC02EBE1F753C1B00849DBD /* style_image_mapzen_darkmatter.png in Resources */,
 				AD46EB271F6FB317004B662F /* background_clusters.png in Resources */,
 				ADED5F271D92A31800AB2D13 /* marker_black.png in Resources */,
 				ADED5F191D92A31800AB2D13 /* basic.zip in Resources */,
@@ -884,6 +917,7 @@
 				AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */,
 				ADED5F251D92A31800AB2D13 /* looseleaf.zip in Resources */,
 				ADED5F2B1D92A31800AB2D13 /* menu@2x.png in Resources */,
+				ADC02EBF1F753C1B00849DBD /* style_image_mapzen_positron.png in Resources */,
 				2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */,
 				AD4F92191F6C250400139F79 /* icon_basemap.png in Resources */,
 				ADED5F2E1D92A31800AB2D13 /* nutibright-v3.zip in Resources */,
@@ -899,6 +933,9 @@
 				AD4F921B1F6C250400139F79 /* icon_info.png in Resources */,
 				ADED5F1E1D92A31800AB2D13 /* direction_up.png in Resources */,
 				AD46EB461F700E65004B662F /* icon_close.png in Resources */,
+				ADC02EBA1F753C1B00849DBD /* style_image_carto_darkmatter.png in Resources */,
+				ADC02EC01F753C1B00849DBD /* style_image_nutiteq_darkmatter.png in Resources */,
+				ADC02EBC1F753C1B00849DBD /* style_image_carto_voyager.png in Resources */,
 				ADED5F1F1D92A31800AB2D13 /* direction_upthenleft.png in Resources */,
 				AD46EB311F6FB317004B662F /* background_screen_capture.png in Resources */,
 				AD3FFFBA1F716384005642F9 /* banner_icon_info.png in Resources */,
@@ -920,6 +957,8 @@
 				AD46EB2B1F6FB317004B662F /* background_wms.png in Resources */,
 				ADED5F241D92A31800AB2D13 /* jefferson-building-ground-floor.jpg in Resources */,
 				ADED5F2F1D92A31800AB2D13 /* nutiteq-dark.zip in Resources */,
+				ADC02EC21F753C1B00849DBD /* style_image_nutiteq_voyager.png in Resources */,
+				ADC02EC11F753C1B00849DBD /* style_image_nutiteq_positron.png in Resources */,
 				AD46EB2F1F6FB317004B662F /* background_custom_popup.png in Resources */,
 				AD46EB4A1F701C99004B662F /* icon_back_blue.png in Resources */,
 				AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */,
@@ -933,9 +972,11 @@
 				AD4F921A1F6C250400139F79 /* icon_global.png in Resources */,
 				ADED5F1A1D92A31800AB2D13 /* capitals_3857.geojson in Resources */,
 				ADED5F2D1D92A31800AB2D13 /* nutibright-contourstyle.zip in Resources */,
+				ADC02EBD1F753C1B00849DBD /* style_image_mapzen_bright.png in Resources */,
 				ADED5F211D92A31800AB2D13 /* fcd_auto.nml in Resources */,
 				ADED5F1B1D92A31800AB2D13 /* carto-fonts.zip in Resources */,
 				AD46EB481F701C27004B662F /* icon_forward_blue.png in Resources */,
+				ADC02EBB1F753C1B00849DBD /* style_image_carto_positron.png in Resources */,
 				AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */,
 				ADED5F1C1D92A31800AB2D13 /* cartodark.zip in Resources */,
 			);
@@ -1107,6 +1148,7 @@
 				AD4F920C1F6BF48200139F79 /* Device.swift in Sources */,
 				ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */,
 				AD46EB441F6FF07A004B662F /* PackageDownloadListener.m in Sources */,
+				ADC02EB01F752BE100849DBD /* BaseMapsView.m in Sources */,
 				AD4F91FD1F6BEA0400139F79 /* AlertBaseView.swift in Sources */,
 				4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */,
 				ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */,

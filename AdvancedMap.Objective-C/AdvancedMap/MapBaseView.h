@@ -29,4 +29,6 @@
 
 - (void)addBaseLayer: (NTCartoBaseMapStyle)style;
 
+- (void)setContent: (UIView *_Nullable)content;
+
 @end
