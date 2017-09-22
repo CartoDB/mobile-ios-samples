@@ -105,6 +105,9 @@
 		ADB148941DC0A6ED009A899B /* VectorElementSelectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148931DC0A6ED009A899B /* VectorElementSelectEventListener.mm */; };
 		ADB148961DC0A6FB009A899B /* VectorElementDeselectEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148951DC0A6FB009A899B /* VectorElementDeselectEventListener.mm */; };
 		ADB148981DC0A708009A899B /* BasicEditEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADB148971DC0A708009A899B /* BasicEditEventListener.mm */; };
+		ADC02EA91F7525F200849DBD /* LanguagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC02EA71F7525F200849DBD /* LanguagePopupContent.swift */; };
+		ADC02EAA1F7525F200849DBD /* StylePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC02EA81F7525F200849DBD /* StylePopupContent.swift */; };
+		ADC02EAD1F75263F00849DBD /* Languages.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC02EAC1F75263F00849DBD /* Languages.m */; };
 		ADCB208B1F4B2A5C00E6F8E0 /* BaseReverseGeocodingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCB208A1F4B2A5C00E6F8E0 /* BaseReverseGeocodingController.mm */; };
 		ADCF53C11DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADCF53C01DC1FFC3004AD5C3 /* MyVectorElementEventListener.mm */; };
 		ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */; };
@@ -272,6 +275,10 @@
 		ADB148991DC0AC33009A899B /* BasicEditEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicEditEventListener.h; sourceTree = "<group>"; };
 		ADB1489A1DC0B073009A899B /* VectorElementDeselectEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorElementDeselectEventListener.h; sourceTree = "<group>"; };
 		ADB1489B1DC0B0BD009A899B /* VectorElementSelectEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorElementSelectEventListener.h; sourceTree = "<group>"; };
+		ADC02EA71F7525F200849DBD /* LanguagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupContent.swift; sourceTree = "<group>"; };
+		ADC02EA81F7525F200849DBD /* StylePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StylePopupContent.swift; sourceTree = "<group>"; };
+		ADC02EAB1F75263F00849DBD /* Languages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Languages.h; sourceTree = "<group>"; };
+		ADC02EAC1F75263F00849DBD /* Languages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Languages.m; sourceTree = "<group>"; };
 		ADC731441DBFA4C400E1CDCA /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
 		ADC731451DBFA5B000E1CDCA /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
 		ADCB20891F4B2A5C00E6F8E0 /* BaseReverseGeocodingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseReverseGeocodingController.h; sourceTree = "<group>"; };
@@ -455,6 +462,8 @@
 			children = (
 				AD3FFFAC1F710FCC005642F9 /* Cities.h */,
 				AD3FFFAD1F710FCC005642F9 /* Cities.m */,
+				ADC02EAB1F75263F00849DBD /* Languages.h */,
+				ADC02EAC1F75263F00849DBD /* Languages.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -482,6 +491,8 @@
 		AD46EB3A1F6FD5EC004B662F /* PopupContentViews */ = {
 			isa = PBXGroup;
 			children = (
+				ADC02EA71F7525F200849DBD /* LanguagePopupContent.swift */,
+				ADC02EA81F7525F200849DBD /* StylePopupContent.swift */,
 				AD46EB3B1F6FD63A004B662F /* PackagePopupContent.swift */,
 				AD46EB3C1F6FD63A004B662F /* PackageCell.swift */,
 			);
@@ -1057,8 +1068,10 @@
 				AD46EB351F6FD2A4004B662F /* PackageDownloadBaseView.m in Sources */,
 				ADF6725A1F331AF800527D49 /* Sources.m in Sources */,
 				AD589CE61DC0D1E7004E68B2 /* WMSMapController.m in Sources */,
+				ADC02EAA1F7525F200849DBD /* StylePopupContent.swift in Sources */,
 				AD46EB081F6FADC7004B662F /* MainView.swift in Sources */,
 				4DFC6C6D1B6224D300AF8E06 /* ClusteredMarkersController.mm in Sources */,
+				ADC02EAD1F75263F00849DBD /* Languages.m in Sources */,
 				ADFBF6CA1F4C19CB00F98741 /* BaseGeocodingController.m in Sources */,
 				ADFC102C1E76F190009DC903 /* OfflineRoutingController.mm in Sources */,
 				ADB1488E1DC09C59009A899B /* BaseMapsController.mm in Sources */,
@@ -1069,6 +1082,7 @@
 				AD3FFFB41F712538005642F9 /* GeocodingBaseView.m in Sources */,
 				AD4F920A1F6BF41F00139F79 /* SlideInPopupHeader.swift in Sources */,
 				ADFC10261E76EB10009DC903 /* BoundingBox.m in Sources */,
+				ADC02EA91F7525F200849DBD /* LanguagePopupContent.swift in Sources */,
 				AD90F9491E096C8200E6EF51 /* OnlineRoutingController.mm in Sources */,
 				ADFBF6CC1F4C2C5B00F98741 /* OnlineGeocodingController.m in Sources */,
 				AD4F92131F6C13CF00139F79 /* MapBaseView.m in Sources */,
