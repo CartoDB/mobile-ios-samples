@@ -34,7 +34,7 @@
     if ([self.contentView hasLocalPackages]) {
         [self showInformationBanner:@"Long Click on the map to set route positions"];
     } else {
-        [self showInformationBanner: @"Click the globe icon and download a geocoding package to continue"];
+        [self showInformationBanner: @"Click the globe icon and download a routing package to continue"];
     }
 }
 
