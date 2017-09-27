@@ -8,14 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		56D3805B6D574A38EDE1F477 /* libPods-CartoMap.Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D16A7EAAA3730756F1C9433 /* libPods-CartoMap.Swift.a */; };
-		AD1A15061DC22A10009DBC0B /* LauncherListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15051DC22A10009DBC0B /* LauncherListController.swift */; };
-		AD1A15081DC232AB009DBC0B /* FontsVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15071DC232AB009DBC0B /* FontsVisController.swift */; };
+		AD1A15081DC232AB009DBC0B /* TrainVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15071DC232AB009DBC0B /* TrainVisController.swift */; };
 		AD1A150A1DC232B8009DBC0B /* CountriesVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15091DC232B8009DBC0B /* CountriesVisController.swift */; };
-		AD1A150C1DC232C3009DBC0B /* DotsVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A150B1DC232C3009DBC0B /* DotsVisController.swift */; };
+		AD1A150C1DC232C3009DBC0B /* StoresVisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A150B1DC232C3009DBC0B /* StoresVisController.swift */; };
 		AD1A150F1DC23597009DBC0B /* carto-fonts.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD1A150E1DC23597009DBC0B /* carto-fonts.zip */; };
+		AD2AC7AE1F7BE7FD00F948DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2AC7AC1F7BE7FD00F948DB /* MainViewController.swift */; };
+		AD2AC7AF1F7BE7FD00F948DB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2AC7AD1F7BE7FD00F948DB /* MainView.swift */; };
+		AD2AC7B21F7BE80B00F948DB /* GalleryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2AC7B01F7BE80B00F948DB /* GalleryRow.swift */; };
+		AD2AC7B31F7BE80B00F948DB /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2AC7B11F7BE80B00F948DB /* GalleryDelegate.swift */; };
+		AD2AC7B61F7BE82800F948DB /* Samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2AC7B51F7BE82800F948DB /* Samples.swift */; };
+		AD2AC7B81F7BE99800F948DB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2AC7B71F7BE99800F948DB /* Colors.swift */; };
+		AD2AC7BB1F7BEC8600F948DB /* image_countries.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2AC7BA1F7BEC8600F948DB /* image_countries.png */; };
+		AD2AC7BE1F7BECC600F948DB /* image_viz_store.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2AC7BC1F7BECC600F948DB /* image_viz_store.png */; };
+		AD2AC7BF1F7BECC600F948DB /* image_viz_subway.png in Resources */ = {isa = PBXBuildFile; fileRef = AD2AC7BD1F7BECC600F948DB /* image_viz_subway.png */; };
 		AD74B8061D941D710007701F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8051D941D710007701F /* AppDelegate.swift */; };
 		AD74B8081D941D710007701F /* VisBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD74B8071D941D710007701F /* VisBaseController.swift */; };
-		AD74B80B1D941D710007701F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B8091D941D710007701F /* Main.storyboard */; };
 		AD74B80D1D941D710007701F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80C1D941D710007701F /* Assets.xcassets */; };
 		AD74B8101D941D710007701F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD74B80E1D941D710007701F /* LaunchScreen.storyboard */; };
 		AD74B81D1D941FDD0007701F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD74B81C1D941FDD0007701F /* GLKit.framework */; };
@@ -27,15 +34,22 @@
 		5D16A7EAAA3730756F1C9433 /* libPods-CartoMap.Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CartoMap.Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFBB2DAAF19C0E9AD547B7F /* Pods-CartoMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Swift/Pods-CartoMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		95FED7F87425178EDA52091E /* Pods-CartoMap.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Swift/Pods-CartoMap.Swift.release.xcconfig"; sourceTree = "<group>"; };
-		AD1A15051DC22A10009DBC0B /* LauncherListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LauncherListController.swift; sourceTree = "<group>"; };
-		AD1A15071DC232AB009DBC0B /* FontsVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsVisController.swift; sourceTree = "<group>"; };
+		AD1A15071DC232AB009DBC0B /* TrainVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainVisController.swift; sourceTree = "<group>"; };
 		AD1A15091DC232B8009DBC0B /* CountriesVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesVisController.swift; sourceTree = "<group>"; };
-		AD1A150B1DC232C3009DBC0B /* DotsVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotsVisController.swift; sourceTree = "<group>"; };
+		AD1A150B1DC232C3009DBC0B /* StoresVisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresVisController.swift; sourceTree = "<group>"; };
 		AD1A150E1DC23597009DBC0B /* carto-fonts.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = "carto-fonts.zip"; path = "../../Assets/carto-fonts.zip"; sourceTree = "<group>"; };
+		AD2AC7AC1F7BE7FD00F948DB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AD2AC7AD1F7BE7FD00F948DB /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AD2AC7B01F7BE80B00F948DB /* GalleryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryRow.swift; sourceTree = "<group>"; };
+		AD2AC7B11F7BE80B00F948DB /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
+		AD2AC7B51F7BE82800F948DB /* Samples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Samples.swift; sourceTree = "<group>"; };
+		AD2AC7B71F7BE99800F948DB /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AD2AC7BA1F7BEC8600F948DB /* image_countries.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_countries.png; sourceTree = "<group>"; };
+		AD2AC7BC1F7BECC600F948DB /* image_viz_store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_viz_store.png; sourceTree = "<group>"; };
+		AD2AC7BD1F7BECC600F948DB /* image_viz_subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_viz_subway.png; sourceTree = "<group>"; };
 		AD74B8021D941D700007701F /* CartoMap.Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartoMap.Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD74B8051D941D710007701F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD74B8071D941D710007701F /* VisBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisBaseController.swift; sourceTree = "<group>"; };
-		AD74B80A1D941D710007701F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD74B80C1D941D710007701F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD74B80F1D941D710007701F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD74B8111D941D710007701F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +90,48 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		AD2AC7AA1F7BE7DB00F948DB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AD2AC7B71F7BE99800F948DB /* Colors.swift */,
+				AD2AC7B51F7BE82800F948DB /* Samples.swift */,
+				AD2AC7AC1F7BE7FD00F948DB /* MainViewController.swift */,
+				AD2AC7AD1F7BE7FD00F948DB /* MainView.swift */,
+				AD2AC7B01F7BE80B00F948DB /* GalleryRow.swift */,
+				AD2AC7B11F7BE80B00F948DB /* GalleryDelegate.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		AD2AC7AB1F7BE7E700F948DB /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				AD2AC7B41F7BE81000F948DB /* Base */,
+				AD1A15071DC232AB009DBC0B /* TrainVisController.swift */,
+				AD1A15091DC232B8009DBC0B /* CountriesVisController.swift */,
+				AD1A150B1DC232C3009DBC0B /* StoresVisController.swift */,
+			);
+			name = Sections;
+			sourceTree = "<group>";
+		};
+		AD2AC7B41F7BE81000F948DB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AD74B8071D941D710007701F /* VisBaseController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		AD2AC7B91F7BEAA900F948DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD2AC7BC1F7BECC600F948DB /* image_viz_store.png */,
+				AD2AC7BD1F7BECC600F948DB /* image_viz_subway.png */,
+				AD2AC7BA1F7BEC8600F948DB /* image_countries.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		AD74B7F91D941D700007701F = {
 			isa = PBXGroup;
 			children = (
@@ -100,18 +156,15 @@
 		AD74B8041D941D710007701F /* CartoMap.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				AD2AC7B91F7BEAA900F948DB /* Resources */,
+				AD2AC7AB1F7BE7E700F948DB /* Sections */,
+				AD2AC7AA1F7BE7DB00F948DB /* Main */,
 				AD1A150D1DC2358D009DBC0B /* Assets */,
 				AD74B8051D941D710007701F /* AppDelegate.swift */,
-				AD74B8071D941D710007701F /* VisBaseController.swift */,
-				AD74B8091D941D710007701F /* Main.storyboard */,
 				AD74B80C1D941D710007701F /* Assets.xcassets */,
 				AD74B80E1D941D710007701F /* LaunchScreen.storyboard */,
 				AD74B8111D941D710007701F /* Info.plist */,
 				ADA7069F1D9512E3008EDDDB /* CartoMap.Swift-Bridging-Header.h */,
-				AD1A15051DC22A10009DBC0B /* LauncherListController.swift */,
-				AD1A15071DC232AB009DBC0B /* FontsVisController.swift */,
-				AD1A15091DC232B8009DBC0B /* CountriesVisController.swift */,
-				AD1A150B1DC232C3009DBC0B /* DotsVisController.swift */,
 			);
 			path = CartoMap.Swift;
 			sourceTree = "<group>";
@@ -188,9 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD1A150F1DC23597009DBC0B /* carto-fonts.zip in Resources */,
+				AD2AC7BF1F7BECC600F948DB /* image_viz_subway.png in Resources */,
+				AD2AC7BB1F7BEC8600F948DB /* image_countries.png in Resources */,
 				AD74B8101D941D710007701F /* LaunchScreen.storyboard in Resources */,
 				AD74B80D1D941D710007701F /* Assets.xcassets in Resources */,
-				AD74B80B1D941D710007701F /* Main.storyboard in Resources */,
+				AD2AC7BE1F7BECC600F948DB /* image_viz_store.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,26 +304,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD1A150C1DC232C3009DBC0B /* DotsVisController.swift in Sources */,
+				AD2AC7AE1F7BE7FD00F948DB /* MainViewController.swift in Sources */,
+				AD2AC7B81F7BE99800F948DB /* Colors.swift in Sources */,
+				AD2AC7AF1F7BE7FD00F948DB /* MainView.swift in Sources */,
+				AD1A150C1DC232C3009DBC0B /* StoresVisController.swift in Sources */,
+				AD2AC7B21F7BE80B00F948DB /* GalleryRow.swift in Sources */,
 				AD74B8081D941D710007701F /* VisBaseController.swift in Sources */,
-				AD1A15061DC22A10009DBC0B /* LauncherListController.swift in Sources */,
+				AD2AC7B61F7BE82800F948DB /* Samples.swift in Sources */,
 				AD1A150A1DC232B8009DBC0B /* CountriesVisController.swift in Sources */,
 				AD74B8061D941D710007701F /* AppDelegate.swift in Sources */,
-				AD1A15081DC232AB009DBC0B /* FontsVisController.swift in Sources */,
+				AD1A15081DC232AB009DBC0B /* TrainVisController.swift in Sources */,
+				AD2AC7B31F7BE80B00F948DB /* GalleryDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD74B8091D941D710007701F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD74B80A1D941D710007701F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD74B80E1D941D710007701F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
