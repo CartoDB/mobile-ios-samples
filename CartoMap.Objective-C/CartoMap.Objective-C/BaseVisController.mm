@@ -48,7 +48,7 @@
         MyCartoVisBuilder* visBuilder = [[MyCartoVisBuilder alloc] init];
         visBuilder.vectorLayer = vectorLayer;
         visBuilder.mapView = self.mapView;
-
+        
         [loader loadVis:visBuilder visURL:url];
 
         [[self.mapView getLayers] add:vectorLayer];

@@ -12,7 +12,6 @@
 		7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */; };
 		AD1A15171DC24599009DBC0B /* CountriesVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15161DC24599009DBC0B /* CountriesVisController.m */; };
 		AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15181DC245A5009DBC0B /* DotsVisController.m */; };
-		AD1A151B1DC245B1009DBC0B /* FontsVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151A1DC245B1009DBC0B /* FontsVisController.m */; };
 		AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */; };
 		AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151F1DC24933009DBC0B /* SQLServiceController.m */; };
 		AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */; };
@@ -24,6 +23,17 @@
 		AD41115F1E69BF4600C96535 /* TorqueIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41115E1E69BF4600C96535 /* TorqueIndicator.m */; };
 		AD4111621E69CFA500C96535 /* button_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111601E69CFA500C96535 /* button_pause.png */; };
 		AD4111631E69CFA500C96535 /* button_play.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111611E69CFA500C96535 /* button_play.png */; };
+		ADA5A8A11F7CDC200078FDB3 /* Samples.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A01F7CDC200078FDB3 /* Samples.m */; };
+		ADA5A8A41F7CDF2F0078FDB3 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A31F7CDF2F0078FDB3 /* MainView.m */; };
+		ADA5A8A81F7CE4990078FDB3 /* GalleryRow.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A71F7CE4990078FDB3 /* GalleryRow.m */; };
+		ADA5A8AB1F7CF0220078FDB3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8AA1F7CF0220078FDB3 /* MainViewController.m */; };
+		ADA5A8B41F7D01D70078FDB3 /* icon_sample_torque.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8AD1F7D01D70078FDB3 /* icon_sample_torque.png */; };
+		ADA5A8B51F7D01D70078FDB3 /* icon_sample_sql_service.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8AE1F7D01D70078FDB3 /* icon_sample_sql_service.png */; };
+		ADA5A8B61F7D01D70078FDB3 /* icon_sample_named_map.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8AF1F7D01D70078FDB3 /* icon_sample_named_map.png */; };
+		ADA5A8B71F7D01D70078FDB3 /* icon_sample_vector_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8B01F7D01D70078FDB3 /* icon_sample_vector_tile.png */; };
+		ADA5A8B81F7D01D70078FDB3 /* icon_sample_raster_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8B11F7D01D70078FDB3 /* icon_sample_raster_tile.png */; };
+		ADA5A8B91F7D01D70078FDB3 /* icon_sample_dots_vis.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8B21F7D01D70078FDB3 /* icon_sample_dots_vis.png */; };
+		ADA5A8BA1F7D01D70078FDB3 /* icon_sample_countries_vis.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8B31F7D01D70078FDB3 /* icon_sample_countries_vis.png */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
 		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
@@ -32,7 +42,6 @@
 		ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */; };
 		ADC28F761D782FB300796134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F751D782FB300796134 /* main.m */; };
 		ADC28F791D782FB300796134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F781D782FB300796134 /* AppDelegate.m */; };
-		ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F7D1D782FB300796134 /* Main.storyboard */; };
 		ADC28F811D782FB300796134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F801D782FB300796134 /* Assets.xcassets */; };
 		ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F821D782FB300796134 /* LaunchScreen.storyboard */; };
 		ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3351D79673200841945 /* AnonymousRasterTableController.mm */; };
@@ -93,7 +102,6 @@
 		A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		AD1A15161DC24599009DBC0B /* CountriesVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesVisController.m; sourceTree = "<group>"; };
 		AD1A15181DC245A5009DBC0B /* DotsVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotsVisController.m; sourceTree = "<group>"; };
-		AD1A151A1DC245B1009DBC0B /* FontsVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontsVisController.m; sourceTree = "<group>"; };
 		AD1A151C1DC245FE009DBC0B /* BaseVisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVisController.h; sourceTree = "<group>"; };
 		AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilePackagerController.m; sourceTree = "<group>"; };
 		AD1A151F1DC24933009DBC0B /* SQLServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLServiceController.m; sourceTree = "<group>"; };
@@ -112,6 +120,21 @@
 		AD41115E1E69BF4600C96535 /* TorqueIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueIndicator.m; sourceTree = "<group>"; };
 		AD4111601E69CFA500C96535 /* button_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_pause.png; path = ../../Assets/button_pause.png; sourceTree = "<group>"; };
 		AD4111611E69CFA500C96535 /* button_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_play.png; path = ../../Assets/button_play.png; sourceTree = "<group>"; };
+		ADA5A89F1F7CDC200078FDB3 /* Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Samples.h; sourceTree = "<group>"; };
+		ADA5A8A01F7CDC200078FDB3 /* Samples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Samples.m; sourceTree = "<group>"; };
+		ADA5A8A21F7CDF2F0078FDB3 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		ADA5A8A31F7CDF2F0078FDB3 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		ADA5A8A61F7CE4990078FDB3 /* GalleryRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryRow.h; sourceTree = "<group>"; };
+		ADA5A8A71F7CE4990078FDB3 /* GalleryRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryRow.m; sourceTree = "<group>"; };
+		ADA5A8A91F7CF0220078FDB3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		ADA5A8AA1F7CF0220078FDB3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		ADA5A8AD1F7D01D70078FDB3 /* icon_sample_torque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_torque.png; sourceTree = "<group>"; };
+		ADA5A8AE1F7D01D70078FDB3 /* icon_sample_sql_service.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_sql_service.png; sourceTree = "<group>"; };
+		ADA5A8AF1F7D01D70078FDB3 /* icon_sample_named_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_named_map.png; sourceTree = "<group>"; };
+		ADA5A8B01F7D01D70078FDB3 /* icon_sample_vector_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_vector_tile.png; sourceTree = "<group>"; };
+		ADA5A8B11F7D01D70078FDB3 /* icon_sample_raster_tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_raster_tile.png; sourceTree = "<group>"; };
+		ADA5A8B21F7D01D70078FDB3 /* icon_sample_dots_vis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_dots_vis.png; sourceTree = "<group>"; };
+		ADA5A8B31F7D01D70078FDB3 /* icon_sample_countries_vis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_countries_vis.png; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
 		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
 		ADBFDA741D786F39003DCBC9 /* LauncherListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherListController.h; sourceTree = "<group>"; };
@@ -124,7 +147,6 @@
 		ADC28F751D782FB300796134 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ADC28F771D782FB300796134 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ADC28F781D782FB300796134 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ADC28F7E1D782FB300796134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADC28F801D782FB300796134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC28F831D782FB300796134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADC28F851D782FB300796134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -228,7 +250,6 @@
 				ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */,
 				AD1A15161DC24599009DBC0B /* CountriesVisController.m */,
 				AD1A15181DC245A5009DBC0B /* DotsVisController.m */,
-				AD1A151A1DC245B1009DBC0B /* FontsVisController.m */,
 			);
 			name = "CARTO.js API";
 			sourceTree = "<group>";
@@ -295,6 +316,35 @@
 			name = Subviews;
 			sourceTree = "<group>";
 		};
+		ADA5A89E1F7CDBF40078FDB3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5A89F1F7CDC200078FDB3 /* Samples.h */,
+				ADA5A8A01F7CDC200078FDB3 /* Samples.m */,
+				ADA5A8A21F7CDF2F0078FDB3 /* MainView.h */,
+				ADA5A8A31F7CDF2F0078FDB3 /* MainView.m */,
+				ADA5A8A61F7CE4990078FDB3 /* GalleryRow.h */,
+				ADA5A8A71F7CE4990078FDB3 /* GalleryRow.m */,
+				ADA5A8A91F7CF0220078FDB3 /* MainViewController.h */,
+				ADA5A8AA1F7CF0220078FDB3 /* MainViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		ADA5A8AC1F7CFAF50078FDB3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5A8AD1F7D01D70078FDB3 /* icon_sample_torque.png */,
+				ADA5A8AE1F7D01D70078FDB3 /* icon_sample_sql_service.png */,
+				ADA5A8AF1F7D01D70078FDB3 /* icon_sample_named_map.png */,
+				ADA5A8B01F7D01D70078FDB3 /* icon_sample_vector_tile.png */,
+				ADA5A8B11F7D01D70078FDB3 /* icon_sample_raster_tile.png */,
+				ADA5A8B21F7D01D70078FDB3 /* icon_sample_dots_vis.png */,
+				ADA5A8B31F7D01D70078FDB3 /* icon_sample_countries_vis.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		ADC28F681D782FB300796134 = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +371,8 @@
 		ADC28F731D782FB300796134 /* CartoMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				ADA5A8AC1F7CFAF50078FDB3 /* Resources */,
+				ADA5A89E1F7CDBF40078FDB3 /* Main */,
 				ADBFDA741D786F39003DCBC9 /* LauncherListController.h */,
 				ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */,
 				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
@@ -329,7 +381,6 @@
 				ADC2B2FA1D79651C00841945 /* Assets */,
 				ADC28F771D782FB300796134 /* AppDelegate.h */,
 				ADC28F781D782FB300796134 /* AppDelegate.m */,
-				ADC28F7D1D782FB300796134 /* Main.storyboard */,
 				ADC28F801D782FB300796134 /* Assets.xcassets */,
 				AD4111601E69CFA500C96535 /* button_pause.png */,
 				AD4111611E69CFA500C96535 /* button_play.png */,
@@ -494,8 +545,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCA45571D9293C600814350 /* mapzen.zip in Resources */,
+				ADA5A8BA1F7D01D70078FDB3 /* icon_sample_countries_vis.png in Resources */,
+				ADA5A8B71F7D01D70078FDB3 /* icon_sample_vector_tile.png in Resources */,
 				ADCA455C1D9293C600814350 /* menu@2x.png in Resources */,
 				ADCA45451D9293C600814350 /* 852-map-toolbar.png in Resources */,
+				ADA5A8B61F7D01D70078FDB3 /* icon_sample_named_map.png in Resources */,
 				ADCA45601D9293C600814350 /* nutiteq-dark.zip in Resources */,
 				ADCA455A1D9293C600814350 /* marker.png in Resources */,
 				ADCA45501D9293C600814350 /* direction_upthenleft.png in Resources */,
@@ -506,11 +560,13 @@
 				ADCA45531D9293C600814350 /* info.png in Resources */,
 				ADCA45521D9293C600814350 /* fcd_auto.nml in Resources */,
 				ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */,
+				ADA5A8B91F7D01D70078FDB3 /* icon_sample_dots_vis.png in Resources */,
 				ADCA45481D9293C600814350 /* arrow.png in Resources */,
 				ADCA454F1D9293C600814350 /* direction_up.png in Resources */,
 				AD4111621E69CFA500C96535 /* button_pause.png in Resources */,
 				ADCA45511D9293C600814350 /* direction_upthenright.png in Resources */,
 				ADCA455E1D9293C600814350 /* nutibright-contourstyle.zip in Resources */,
+				ADA5A8B41F7D01D70078FDB3 /* icon_sample_torque.png in Resources */,
 				ADCA45561D9293C600814350 /* looseleaf.zip in Resources */,
 				ADC28F811D782FB300796134 /* Assets.xcassets in Resources */,
 				0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */,
@@ -519,13 +575,14 @@
 				ADCA454A1D9293C600814350 /* basic.zip in Resources */,
 				ADCA454D1D9293C600814350 /* cartodark.zip in Resources */,
 				ADCA45471D9293C600814350 /* 852-map-toolbar@3x.png in Resources */,
+				ADA5A8B51F7D01D70078FDB3 /* icon_sample_sql_service.png in Resources */,
+				ADA5A8B81F7D01D70078FDB3 /* icon_sample_raster_tile.png in Resources */,
 				AD4111631E69CFA500C96535 /* button_play.png in Resources */,
 				ADCA455D1D9293C600814350 /* milktruck.nml in Resources */,
 				ADCA455F1D9293C600814350 /* nutibright-v3.zip in Resources */,
 				ADCA45491D9293C600814350 /* arrow@2x.png in Resources */,
 				ADCA45461D9293C600814350 /* 852-map-toolbar@2x.png in Resources */,
 				ADCA455B1D9293C600814350 /* menu.png in Resources */,
-				ADC28F7F1D782FB300796134 /* Main.storyboard in Resources */,
 				ADCA454B1D9293C600814350 /* capitals_3857.geojson in Resources */,
 				ADCA45541D9293C600814350 /* info@2x.png in Resources */,
 			);
@@ -618,9 +675,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD1A151B1DC245B1009DBC0B /* FontsVisController.m in Sources */,
 				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
 				ADD8BEBF1D7EAB7400E4B1A8 /* TorqueController.m in Sources */,
+				ADA5A8A81F7CE4990078FDB3 /* GalleryRow.m in Sources */,
+				ADA5A8A41F7CDF2F0078FDB3 /* MainView.m in Sources */,
+				ADA5A8A11F7CDC200078FDB3 /* Samples.m in Sources */,
 				AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */,
 				ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
@@ -634,6 +693,7 @@
 				AD4111501E698A7F00C96535 /* TorqueView.m in Sources */,
 				ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
+				ADA5A8AB1F7CF0220078FDB3 /* MainViewController.m in Sources */,
 				AD1A15171DC24599009DBC0B /* CountriesVisController.m in Sources */,
 				AD41115F1E69BF4600C96535 /* TorqueIndicator.m in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
@@ -671,14 +731,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADC28F7D1D782FB300796134 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADC28F7E1D782FB300796134 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADC28F821D782FB300796134 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

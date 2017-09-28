@@ -1,5 +1,6 @@
+
 #import "AppDelegate.h"
-#import "LauncherListController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
 
@@ -10,7 +11,7 @@
     [NTLog setShowDebug:YES];
     [NTLog setShowInfo:YES];
     
-    LauncherListController* controller = [[LauncherListController alloc] init];
+    MainViewController* controller = [[MainViewController alloc] init];
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController: controller];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
