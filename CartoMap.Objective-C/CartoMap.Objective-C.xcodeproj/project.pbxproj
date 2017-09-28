@@ -12,7 +12,6 @@
 		7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */; };
 		AD1A15171DC24599009DBC0B /* CountriesVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15161DC24599009DBC0B /* CountriesVisController.m */; };
 		AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15181DC245A5009DBC0B /* DotsVisController.m */; };
-		AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */; };
 		AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151F1DC24933009DBC0B /* SQLServiceController.m */; };
 		AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */; };
 		AD4111501E698A7F00C96535 /* TorqueView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41114F1E698A7F00C96535 /* TorqueView.m */; };
@@ -35,7 +34,6 @@
 		ADA5A8B91F7D01D70078FDB3 /* icon_sample_dots_vis.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8B21F7D01D70078FDB3 /* icon_sample_dots_vis.png */; };
 		ADA5A8BA1F7D01D70078FDB3 /* icon_sample_countries_vis.png in Resources */ = {isa = PBXBuildFile; fileRef = ADA5A8B31F7D01D70078FDB3 /* icon_sample_countries_vis.png */; };
 		ADBFDA711D786E95003DCBC9 /* CartoMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */; };
-		ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */; };
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
 		ADBFDA7B1D787494003DCBC9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7A1D787494003DCBC9 /* GLKit.framework */; };
 		ADBFDA7D1D7874B8003DCBC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */; };
@@ -103,7 +101,6 @@
 		AD1A15161DC24599009DBC0B /* CountriesVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesVisController.m; sourceTree = "<group>"; };
 		AD1A15181DC245A5009DBC0B /* DotsVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotsVisController.m; sourceTree = "<group>"; };
 		AD1A151C1DC245FE009DBC0B /* BaseVisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVisController.h; sourceTree = "<group>"; };
-		AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilePackagerController.m; sourceTree = "<group>"; };
 		AD1A151F1DC24933009DBC0B /* SQLServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLServiceController.m; sourceTree = "<group>"; };
 		AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnonymousVectorTableController.m; sourceTree = "<group>"; };
 		AD41114E1E698A6B00C96535 /* TorqueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueView.h; sourceTree = "<group>"; };
@@ -136,8 +133,6 @@
 		ADA5A8B21F7D01D70078FDB3 /* icon_sample_dots_vis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_dots_vis.png; sourceTree = "<group>"; };
 		ADA5A8B31F7D01D70078FDB3 /* icon_sample_countries_vis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_countries_vis.png; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
-		ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LauncherListController.mm; sourceTree = "<group>"; };
-		ADBFDA741D786F39003DCBC9 /* LauncherListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LauncherListController.h; sourceTree = "<group>"; };
 		ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseVisController.mm; sourceTree = "<group>"; };
 		ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapBaseController.mm; sourceTree = "<group>"; };
 		ADBFDA7A1D787494003DCBC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -235,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				AD1A15111DC242E6009DBC0B /* CARTO.js API */,
-				AD1A15121DC242F1009DBC0B /* Import API */,
 				AD1A15151DC24307009DBC0B /* Maps API */,
 				AD1A15141DC24301009DBC0B /* SQL API */,
 				AD1A15131DC242FB009DBC0B /* Torque API */,
@@ -246,20 +240,10 @@
 		AD1A15111DC242E6009DBC0B /* CARTO.js API */ = {
 			isa = PBXGroup;
 			children = (
-				AD1A151C1DC245FE009DBC0B /* BaseVisController.h */,
-				ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */,
 				AD1A15161DC24599009DBC0B /* CountriesVisController.m */,
 				AD1A15181DC245A5009DBC0B /* DotsVisController.m */,
 			);
 			name = "CARTO.js API";
-			sourceTree = "<group>";
-		};
-		AD1A15121DC242F1009DBC0B /* Import API */ = {
-			isa = PBXGroup;
-			children = (
-				AD1A151D1DC2483F009DBC0B /* TilePackagerController.m */,
-			);
-			name = "Import API";
 			sourceTree = "<group>";
 		};
 		AD1A15131DC242FB009DBC0B /* Torque API */ = {
@@ -345,6 +329,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		ADA5A8BB1F7D1F0A0078FDB3 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A151C1DC245FE009DBC0B /* BaseVisController.h */,
+				ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */,
+				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
+				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
+			);
+			name = BaseClasses;
+			sourceTree = "<group>";
+		};
 		ADC28F681D782FB300796134 = {
 			isa = PBXGroup;
 			children = (
@@ -371,12 +366,9 @@
 		ADC28F731D782FB300796134 /* CartoMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				ADA5A8BB1F7D1F0A0078FDB3 /* BaseClasses */,
 				ADA5A8AC1F7CFAF50078FDB3 /* Resources */,
 				ADA5A89E1F7CDBF40078FDB3 /* Main */,
-				ADBFDA741D786F39003DCBC9 /* LauncherListController.h */,
-				ADBFDA721D786EFE003DCBC9 /* LauncherListController.mm */,
-				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
-				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
 				AD1A15101DC242D1009DBC0B /* Sections */,
 				ADC2B2FA1D79651C00841945 /* Assets */,
 				ADC28F771D782FB300796134 /* AppDelegate.h */,
@@ -675,7 +667,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADBFDA731D786EFE003DCBC9 /* LauncherListController.mm in Sources */,
 				ADD8BEBF1D7EAB7400E4B1A8 /* TorqueController.m in Sources */,
 				ADA5A8A81F7CE4990078FDB3 /* GalleryRow.m in Sources */,
 				ADA5A8A41F7CDF2F0078FDB3 /* MainView.m in Sources */,
@@ -685,7 +676,6 @@
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
 				AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */,
 				AD4111561E6997E500C96535 /* HistogramView.m in Sources */,
-				AD1A151E1DC2483F009DBC0B /* TilePackagerController.m in Sources */,
 				AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */,
 				AD41115C1E69B6C000C96535 /* TorqueCounter.m in Sources */,
 				0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */,
