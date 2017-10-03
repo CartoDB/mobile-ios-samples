@@ -61,8 +61,15 @@ class Cities {
         
         city = City(name: "New Delhi")
         box = BoundingBox(minLon: 77.1477, maxLon: 77.2757, minLat: 28.5361, maxLat: 28.6368)
+        city.boundingBox = box
+        
+        city = City(name: "Rome")
+        // use 'standard' bbox string format as input from bboxfinder.com etc
+        var boxString = "12.43935,41.85283,12.55333,41.92516".components(separatedBy: ",")
+        box = BoundingBox(minLon: Double(boxString[0])!, maxLon: Double(boxString[2])!, minLat: Double(boxString[1])!, maxLat: Double(boxString[3])!)
         
         city.boundingBox = box
+        
         list.append(city)
     }
     
