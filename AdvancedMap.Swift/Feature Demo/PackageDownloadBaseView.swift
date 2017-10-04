@@ -196,7 +196,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
             var modified = name?.substring(from: folder.characters.count)
             let index = modified?.index(of: "/")
             
-            if (index == -1) {
+            if (index == nil) {
                 // This is an actual package
                 package.id = info?.getPackageId()
                 package.name = modified
@@ -204,7 +204,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
                 package.info = info
             } else {
                 // This is a package group
-                modified = modified?.substring(from: 0, to: index!)
+                modified = modified?.substring(to: index!)
                 
                 // Try n' find an existing package from the list
                 let found = packages.filter({ $0.name == modified })
