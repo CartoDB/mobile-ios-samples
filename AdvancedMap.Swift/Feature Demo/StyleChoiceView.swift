@@ -126,12 +126,10 @@ class StyleChoiceView : MapBaseView {
             
         } else if (source == StylePopupContent.CartoRasterSource) {
             
-            if (selection == StylePopupContent.Voyager) {
-                currentLayer = NTCartoOnlineRasterTileLayer(source: "carto.voyager@2x")
-            } else if (selection == StylePopupContent.Positron) {
-                currentLayer = NTCartoOnlineRasterTileLayer(source: "carto.positron@2x")
-            } else {
-                currentLayer = NTCartoOnlineRasterTileLayer(source: "carto.darkmatter@2x")
+            if (selection == StylePopupContent.HereSatelliteDaySource) {
+                currentLayer = NTCartoOnlineRasterTileLayer(source: "here.satellite.day@2x")
+            } else if (selection == StylePopupContent.HereNormalDaySource) {
+                currentLayer = NTCartoOnlineRasterTileLayer(source: "here.normal.day@2x")
             }
         }
         
