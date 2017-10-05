@@ -22,6 +22,7 @@
 		AD41115F1E69BF4600C96535 /* TorqueIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41115E1E69BF4600C96535 /* TorqueIndicator.m */; };
 		AD4111621E69CFA500C96535 /* button_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111601E69CFA500C96535 /* button_pause.png */; };
 		AD4111631E69CFA500C96535 /* button_play.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111611E69CFA500C96535 /* button_play.png */; };
+		AD70D9821F866CDE00D5F0C6 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD70D9811F866CDE00D5F0C6 /* VectorTileListener.mm */; };
 		ADA5A8A11F7CDC200078FDB3 /* Samples.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A01F7CDC200078FDB3 /* Samples.m */; };
 		ADA5A8A41F7CDF2F0078FDB3 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A31F7CDF2F0078FDB3 /* MainView.m */; };
 		ADA5A8A81F7CE4990078FDB3 /* GalleryRow.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A71F7CE4990078FDB3 /* GalleryRow.m */; };
@@ -117,6 +118,8 @@
 		AD41115E1E69BF4600C96535 /* TorqueIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TorqueIndicator.m; sourceTree = "<group>"; };
 		AD4111601E69CFA500C96535 /* button_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_pause.png; path = ../../Assets/button_pause.png; sourceTree = "<group>"; };
 		AD4111611E69CFA500C96535 /* button_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_play.png; path = ../../Assets/button_play.png; sourceTree = "<group>"; };
+		AD70D9801F866CD900D5F0C6 /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
+		AD70D9811F866CDE00D5F0C6 /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
 		ADA5A89F1F7CDC200078FDB3 /* Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Samples.h; sourceTree = "<group>"; };
 		ADA5A8A01F7CDC200078FDB3 /* Samples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Samples.m; sourceTree = "<group>"; };
 		ADA5A8A21F7CDF2F0078FDB3 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
@@ -329,15 +332,17 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		ADA5A8BB1F7D1F0A0078FDB3 /* BaseClasses */ = {
+		ADA5A8BB1F7D1F0A0078FDB3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AD70D9801F866CD900D5F0C6 /* VectorTileListener.h */,
+				AD70D9811F866CDE00D5F0C6 /* VectorTileListener.mm */,
 				AD1A151C1DC245FE009DBC0B /* BaseVisController.h */,
 				ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */,
 				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
 				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
 			);
-			name = BaseClasses;
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		ADC28F681D782FB300796134 = {
@@ -366,7 +371,7 @@
 		ADC28F731D782FB300796134 /* CartoMap.Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				ADA5A8BB1F7D1F0A0078FDB3 /* BaseClasses */,
+				ADA5A8BB1F7D1F0A0078FDB3 /* Shared */,
 				ADA5A8AC1F7CFAF50078FDB3 /* Resources */,
 				ADA5A89E1F7CDBF40078FDB3 /* Main */,
 				AD1A15101DC242D1009DBC0B /* Sections */,
@@ -673,6 +678,7 @@
 				ADA5A8A11F7CDC200078FDB3 /* Samples.m in Sources */,
 				AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */,
 				ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */,
+				AD70D9821F866CDE00D5F0C6 /* VectorTileListener.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
 				AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */,
 				AD4111561E6997E500C96535 /* HistogramView.m in Sources */,
