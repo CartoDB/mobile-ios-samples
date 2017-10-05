@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Advanced Map";
+    self.navigationItem.title = @"CARTO MAP";
     
     self.contentView = [[MainView alloc] init];
     self.view = self.contentView;

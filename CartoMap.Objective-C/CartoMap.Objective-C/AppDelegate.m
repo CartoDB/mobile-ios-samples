@@ -19,6 +19,15 @@
     [self.window setRootViewController: self.navigationController];
     [self.window makeKeyAndVisible];
     
+    
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                UIColor.whiteColor, NSForegroundColorAttributeName, nil];
+    
+    UINavigationBar *bar = [self.navigationController navigationBar];
+    [bar setTintColor:UIColor.whiteColor];
+    [bar setBarTintColor:[UIColor colorWithRed:242/255.0f green:68/255.0f blue:64/255.0f alpha:1.0]];
+    [bar setTitleTextAttributes:attributes];
+    
     return YES;
 }
 
