@@ -22,49 +22,49 @@
     
     sample = [[Sample alloc] init];
     sample.title = @"Countries Vis";
-    sample.subtitle = @"Vis displaying countries in different colors using UTFGrid";
+    sample.subtitle = @"Map of countries in different colors using CartoCSS";
     sample.controller = @"CountriesVisController";
     sample.imageUrl = @"icon_sample_countries_vis.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"Dots Vis";
-    sample.subtitle = @"Vis showing dots on the map using UTFGrid";
+    sample.subtitle = @"Cities as dots on map";
     sample.controller = @"DotsVisController";
     sample.imageUrl = @"icon_sample_dots_vis.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"Raster Tile";
-    sample.subtitle = @"Using Carto PostGIS anonymous raster data";
+    sample.subtitle = @"PostGIS Raster in CARTO as anonymous map";
     sample.controller = @"AnonymousRasterTableController";
     sample.imageUrl = @"icon_sample_raster_tile.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"Vector Tile";
-    sample.subtitle = @"Usage of Carto Maps API with anonymous vector tiles";
+    sample.subtitle = @"CARTO Maps API with vector tiles";
     sample.controller = @"AnonymousVectorTableController";
     sample.imageUrl = @"icon_sample_vector_tile.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"Named Map";
-    sample.subtitle = @"CARTO data as vector tiles from a named map using Vector listener";
+    sample.subtitle = @"Indoor map as vector tiles from CARTO";
     sample.controller = @"NamedMapController";
     sample.imageUrl = @"icon_sample_named_map.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"SQL Service";
-    sample.subtitle = @"Displays cities on the map via SQL query";
+    sample.subtitle = @"Cities from CARTO Engine SQL API";
     sample.controller = @"SQLServiceController";
     sample.imageUrl = @"icon_sample_sql_service.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"Torque Map";
-    sample.subtitle = @"Shopper movemenet in a mall throughout the da";
+    sample.subtitle = @"Indoor positions as animated Torque view";
     sample.controller = @"TorqueController";
     sample.imageUrl = @"icon_sample_torque.png";
     [list addObject:sample];
