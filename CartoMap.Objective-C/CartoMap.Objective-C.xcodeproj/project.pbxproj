@@ -23,6 +23,7 @@
 		AD4111621E69CFA500C96535 /* button_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111601E69CFA500C96535 /* button_pause.png */; };
 		AD4111631E69CFA500C96535 /* button_play.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4111611E69CFA500C96535 /* button_play.png */; };
 		AD70D9821F866CDE00D5F0C6 /* VectorTileListener.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD70D9811F866CDE00D5F0C6 /* VectorTileListener.mm */; };
+		AD70D9851F86782300D5F0C6 /* MapEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = AD70D9841F86782300D5F0C6 /* MapEventListener.m */; };
 		ADA5A8A11F7CDC200078FDB3 /* Samples.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A01F7CDC200078FDB3 /* Samples.m */; };
 		ADA5A8A41F7CDF2F0078FDB3 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A31F7CDF2F0078FDB3 /* MainView.m */; };
 		ADA5A8A81F7CE4990078FDB3 /* GalleryRow.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA5A8A71F7CE4990078FDB3 /* GalleryRow.m */; };
@@ -120,6 +121,8 @@
 		AD4111611E69CFA500C96535 /* button_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_play.png; path = ../../Assets/button_play.png; sourceTree = "<group>"; };
 		AD70D9801F866CD900D5F0C6 /* VectorTileListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTileListener.h; sourceTree = "<group>"; };
 		AD70D9811F866CDE00D5F0C6 /* VectorTileListener.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VectorTileListener.mm; sourceTree = "<group>"; };
+		AD70D9831F86782300D5F0C6 /* MapEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapEventListener.h; sourceTree = "<group>"; };
+		AD70D9841F86782300D5F0C6 /* MapEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapEventListener.m; sourceTree = "<group>"; };
 		ADA5A89F1F7CDC200078FDB3 /* Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Samples.h; sourceTree = "<group>"; };
 		ADA5A8A01F7CDC200078FDB3 /* Samples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Samples.m; sourceTree = "<group>"; };
 		ADA5A8A21F7CDF2F0078FDB3 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 				ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */,
 				ADBFDA851D787DB4003DCBC9 /* MapBaseController.h */,
 				ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */,
+				AD70D9831F86782300D5F0C6 /* MapEventListener.h */,
+				AD70D9841F86782300D5F0C6 /* MapEventListener.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -681,6 +686,7 @@
 				AD70D9821F866CDE00D5F0C6 /* VectorTileListener.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
 				AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */,
+				AD70D9851F86782300D5F0C6 /* MapEventListener.m in Sources */,
 				AD4111561E6997E500C96535 /* HistogramView.m in Sources */,
 				AD1A15191DC245A5009DBC0B /* DotsVisController.m in Sources */,
 				AD41115C1E69B6C000C96535 /* TorqueCounter.m in Sources */,
