@@ -21,17 +21,17 @@
     Sample *sample = [[Sample alloc] init];
     
     sample = [[Sample alloc] init];
-    sample.title = @"Countries Vis";
-    sample.subtitle = @"Map of countries in different colors using CartoCSS";
-    sample.controller = @"CountriesVisController";
-    sample.imageUrl = @"icon_sample_countries_vis.png";
+    sample.title = @"L-train Area Vis";
+    sample.subtitle = @"L-train travel area analysis visualisation";
+    sample.controller = @"TrainVisController";
+    sample.imageUrl = @"image_viz_subway.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
-    sample.title = @"Dots Vis";
-    sample.subtitle = @"Cities as dots on map";
-    sample.controller = @"DotsVisController";
-    sample.imageUrl = @"icon_sample_dots_vis.png";
+    sample.title = @"Store Locations Vis";
+    sample.subtitle = @"Predicted store locations analysis";
+    sample.controller = @"StoresVisController";
+    sample.imageUrl = @"image_viz_store.png";
     [list addObject:sample];
     
     sample = [[Sample alloc] init];
