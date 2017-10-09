@@ -18,7 +18,7 @@ class Samples {
         
         var sample = Sample()
         sample.title = "TURN-BY-TURN"
-        sample.description = "Combines offline packages with Mapzen's OnTheRoad SDK"
+        sample.description = "Online routing with Turn-By-Turn instructions"
         sample.imageResource = folder + "icon_sample_turn_by_turn.png"
         sample.controller = TurnByTurnController()
         
