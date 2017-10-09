@@ -16,6 +16,8 @@ class TurnByTurnView : MapBaseView {
         self.init(frame: CGRect.zero)
         
         initialize()
+        addBanner(visible: true)
+        
         baseLayer = addBaseLayer()
     }
     

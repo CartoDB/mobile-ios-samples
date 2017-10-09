@@ -11,10 +11,17 @@ import CoreLocation
 
 class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate {
 
+    var delegate: NextTurnDelegate?
+    
     let manager = CLLocationManager()
     
     var mapView: NTMapView!
     var marker: LocationMarker!
+    
+    /*
+     * Ideally it wouldn't be, but Routing is currently a dependeny of this Client.
+     * If you want to reuse it in your own application, you need to implement Routing as well (the Routing folder)
+     */
     var routing: Routing!
     
     let destinationListener = DestinationClickListener()
@@ -96,6 +103,11 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
             let color = NTColor(r: 14, g: 122, b: 254, a: 150)
             DispatchQueue.main.async {
                 self.routing.show(result: result!, lineColor: color!, complete: {_ in })
+                
+                if (result!.getInstructions().size() > 0) {
+                    let instruction = result!.getInstructions().get(0)!
+                    self.delegate?.instructionFound(instruction: instruction)
+                }
             }
         }
     }
@@ -148,7 +160,9 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     }
 }
 
-
+protocol NextTurnDelegate {
+    func instructionFound(instruction: NTRoutingInstruction)
+}
 
 
 
