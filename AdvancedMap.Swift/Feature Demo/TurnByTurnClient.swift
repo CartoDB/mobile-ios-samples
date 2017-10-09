@@ -15,6 +15,9 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
     
     var mapView: NTMapView!
     var marker: LocationMarker!
+    var routing: Routing!
+    
+    let destinationListener = DestinationClickListener()
     
     init(mapView: NTMapView) {
         super.init()
@@ -22,6 +25,13 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         self.mapView = mapView;
         
         marker = LocationMarker(mapView: mapView)
+        routing = Routing(mapView: mapView)
+        
+        /*
+         * For offline use, this service should be NTPackageManagerValhallaRoutingService,
+         * using online mode out of convenience, to keep the code cleaner
+         */
+        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
         
         manager.pausesLocationUpdatesAutomatically = false
         manager.desiredAccuracy = 1
@@ -38,24 +48,47 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
          * and need to call call manager.requestAlwaysAuthorization(), 
          * but we're not doing this here, as it's a sample applocation
          */
-        
         if #available(iOS 9.0, *) {
             manager.requestWhenInUseAuthorization()
         }
     }
     
+    // Attach all listeners when your controller appear
     func onResume() {
         manager.delegate = self
         manager.startUpdatingLocation()
         manager.startUpdatingHeading()
+        
+        mapView.setMapEventListener(destinationListener)
     }
     
+    // Detach all listeners when your controller disappears
     func onPause() {
         manager.stopUpdatingLocation()
         manager.stopUpdatingHeading()
         manager.delegate = nil
+        
+        mapView.setMapEventListener(nil)
     }
-    
+
+    func showRoute(start: NTMapPos, stop: NTMapPos) {
+        
+        DispatchQueue.global().async {
+            
+            let result = self.routing.getResult(startPos: start, stopPos: stop)
+            
+            if (result == nil) {
+                // Routing failed, try again
+                return
+            }
+            
+            let color = NTColor(r: 14, g: 122, b: 254, a: 150)
+            DispatchQueue.main.async {
+                self.routing.show(result: result!, lineColor: color!, complete: {_ in })
+            }
+        }
+    }
+
     var latest = CLLocation()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -76,6 +109,17 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         print("Updated Coordinates: " + String(describing: latitude) + ", " + String(describing: longitude))
         
         marker.showAt(location: location)
+        
+        // Zoom & focus is enabled by default, disable after initial location is set
+        marker.focus = false
+        
+        let destination = destinationListener?.destination
+        
+        if (destination != nil) {
+            let position = marker.projection.fromLat(latitude, lng: longitude)
+            routing.setStopMarker(position: destination!)
+            showRoute(start: position!, stop: destination!)
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {

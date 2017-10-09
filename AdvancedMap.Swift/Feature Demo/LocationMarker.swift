@@ -29,6 +29,8 @@ class LocationMarker: NSObject {
     var userMarker: NTPoint!
     var accuracyMarker: NTPolygon!
     
+    var focus = true
+    
     func showAt(location: CLLocation) {
         
         let latitude = Double(location.coordinate.latitude)
@@ -37,8 +39,10 @@ class LocationMarker: NSObject {
         
         let position = projection?.fromWgs84(NTMapPos(x: longitude, y: latitude))
         
-        map.setFocus(position, durationSeconds: 1)
-        map.setZoom(16, durationSeconds: 1)
+        if (focus) {
+            map.setFocus(position, durationSeconds: 1)
+            map.setZoom(16, durationSeconds: 1)
+        }
         
         let builder = NTPolygonStyleBuilder()
         builder?.setColor(Colors.lightTransparentAppleBlue.toNTColor())
