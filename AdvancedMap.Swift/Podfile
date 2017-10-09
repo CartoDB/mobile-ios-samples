@@ -4,7 +4,6 @@ target 'AdvancedMap.Swift' do
   pod 'CartoMobileSDK', '4.1.0-rc.3'
   pod 'Toast-Swift', '2.0.0'
   pod 'HockeySDK', '5.0.0'
-  pod 'OnTheRoad', '1.0.0'
 
   use_frameworks!
 end

@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreLocation
-import OnTheRoad
 
 class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
     
