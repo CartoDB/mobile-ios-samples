@@ -9,31 +9,18 @@
 import Foundation
 import CoreLocation
 
-class TurnByTurnController: BaseController, CLLocationManagerDelegate {
+class TurnByTurnController: BaseController {
     
     let contentView = TurnByTurnView()
-    
-    var manager: CLLocationManager!
+
+    var client: TurnByTurnClient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view = contentView
         
-        manager = CLLocationManager()
-        manager.pausesLocationUpdatesAutomatically = false
-        manager.desiredAccuracy = 1
-        
-        /*
-         * In addition to requesting background location updates, you need to add the following lines to your Info.plist:
-         *
-         * 1. Privacy - Location When In Use Usage Description
-         * 3. Required background modes:
-         *    3.1 App registers for location updates
-         */
-        if #available(iOS 9.0, *) {
-            manager.requestWhenInUseAuthorization()
-        }
+        client = TurnByTurnClient(mapView: contentView.map)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,18 +28,14 @@ class TurnByTurnController: BaseController, CLLocationManagerDelegate {
         
         contentView.addRecognizers()
         
-        manager.delegate = self
-        manager.startUpdatingLocation()
-        manager.startUpdatingHeading()
+        client.onResume()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         contentView.removeRecognizers()
-        
-        manager.stopUpdatingLocation()
-        manager.stopUpdatingHeading()
-        manager.delegate = nil
+
+        client.onPause()
     }
 }
