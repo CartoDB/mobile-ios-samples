@@ -57,9 +57,20 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         manager.delegate = nil
     }
     
+    var latest = CLLocation()
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations[0]
+        
+        if (latest.coordinate.latitude == location.coordinate.latitude) {
+            if (latest.coordinate.longitude == location.coordinate.longitude) {
+                return
+            }
+        }
+        
+        latest = location
+        
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         

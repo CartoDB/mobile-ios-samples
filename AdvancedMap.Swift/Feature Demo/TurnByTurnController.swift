@@ -27,7 +27,6 @@ class TurnByTurnController: BaseController {
         super.viewWillAppear(animated)
         
         contentView.addRecognizers()
-        
         client.onResume()
     }
     
@@ -35,7 +34,6 @@ class TurnByTurnController: BaseController {
         super.viewWillDisappear(animated)
         
         contentView.removeRecognizers()
-
         client.onPause()
     }
 }
