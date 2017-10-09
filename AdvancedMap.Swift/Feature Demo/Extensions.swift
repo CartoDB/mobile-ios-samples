@@ -30,14 +30,7 @@ extension String {
         let endIndex = index(from: r.upperBound)
         return substring(with: startIndex..<endIndex)
     }
-    
-    func index(of: Character) -> Int {
-        guard let index = characters.index(of: of) else {
-            return -1
-        }
-        return distance(from: startIndex, to: index)
-    }
-    
+
     func lastIndexOf(s: String) -> Int {
         
         if let r: Range<Index> = range(of: s) {
@@ -48,7 +41,7 @@ extension String {
     }
     
     mutating func addCommaIfNecessary() {
-        if (characters.count > 0) {
+        if (count > 0) {
             self += ", "
         }
     }
@@ -89,40 +82,40 @@ extension NTGeocodingResult {
         let address = self.getAddress()
         var string = ""
         
-        if ((address?.getName().characters.count)! > 0) {
+        if ((address?.getName().count)! > 0) {
             string += (address?.getName())!
         }
         
-        if ((address?.getStreet().characters.count)! > 0) {
+        if ((address?.getStreet().count)! > 0) {
             string.addCommaIfNecessary()
             string += (address?.getStreet())!
         }
         
-        if ((address?.getHouseNumber().characters.count)! > 0) {
+        if ((address?.getHouseNumber().count)! > 0) {
             string += " " + (address?.getHouseNumber())!
         }
         
-        if ((address?.getNeighbourhood().characters.count)! > 0) {
+        if ((address?.getNeighbourhood().count)! > 0) {
             string.addCommaIfNecessary()
             string += (address?.getNeighbourhood())!
         }
         
-        if ((address?.getLocality().characters.count)! > 0) {
+        if ((address?.getLocality().count)! > 0) {
             string.addCommaIfNecessary()
             string += (address?.getLocality())!
         }
         
-        if ((address?.getCounty().characters.count)! > 0) {
+        if ((address?.getCounty().count)! > 0) {
             string.addCommaIfNecessary()
             string += (address?.getCounty())!
         }
         
-        if ((address?.getRegion().characters.count)! > 0) {
+        if ((address?.getRegion().count)! > 0) {
             string.addCommaIfNecessary()
             string += (address?.getRegion())!
         }
         
-        if ((address?.getCountry().characters.count)! > 0) {
+        if ((address?.getCountry().count)! > 0) {
             string.addCommaIfNecessary()
             string += (address?.getCountry())!
         }

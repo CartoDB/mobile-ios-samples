@@ -27,8 +27,8 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
          * In addition to requesting background location updates, you need to add the following lines to your Info.plist:
          *
          * 1. Privacy - Location When In Use Usage Description
-         * 3. Required background modes:
-         *    3.1 App registers for location updates
+         * 2. Required background modes:
+         *    2.1 App registers for location updates
          *
          * In most realistic scenarios, you'd also require:
          * Privacy - Location Always Usage Description
@@ -59,10 +59,27 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         
-        print("Coordinates: " + String(describing: latitude) + ", " + String(describing: longitude))
+        print("Updated Coordinates: " + String(describing: latitude) + ", " + String(describing: longitude))
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        print("Updated heading: " + String(describing: newHeading.magneticHeading))
+        
+        if (newHeading.headingAccuracy < 0) {
+            // Ignore if there's no accuracy, no point in processing it
+            return
+        }
+        
+        // Use true heading if it is valid.
+        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
+        
+        print("Updated Heading: " + String(describing: heading))
     }
 }
+
+
+
+
+
+
+
+
