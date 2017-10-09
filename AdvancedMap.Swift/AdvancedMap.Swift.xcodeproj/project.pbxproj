@@ -32,6 +32,7 @@
 		AD33A7B41F6A740C0098DF15 /* CustomPopupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A7B31F6A740C0098DF15 /* CustomPopupHandler.swift */; };
 		AD33A7B61F6A84310098DF15 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = AD33A7B51F6A84310098DF15 /* marker.png */; };
 		AD33A7B81F6AB5570098DF15 /* GeocodingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */; };
+		AD3C01F71F8B67F700F371D7 /* LocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
 		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
@@ -174,6 +175,7 @@
 		AD33A7B31F6A740C0098DF15 /* CustomPopupHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPopupHandler.swift; sourceTree = "<group>"; };
 		AD33A7B51F6A84310098DF15 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
 		AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingResultCell.swift; sourceTree = "<group>"; };
+		AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMarker.swift; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
 		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
@@ -714,6 +716,7 @@
 				ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */,
 				ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */,
 				ADF5A9481F8B569B008F17E3 /* TurnByTurnClient.swift */,
+				AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */,
 			);
 			name = "Turn by Turn";
 			sourceTree = "<group>";
@@ -1019,6 +1022,7 @@
 				AD5B2AEE1F03B27200EF738C /* PackageCell.swift in Sources */,
 				AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */,
 				ADE092F71F00EF3E00C569F9 /* PackageListener.swift in Sources */,
+				AD3C01F71F8B67F700F371D7 /* LocationMarker.swift in Sources */,
 				ADA977FC1F0E8AAC0040E090 /* GeocodingController.swift in Sources */,
 				ADC8B8D91F04F2C600B62852 /* VectorElementSelectListener.swift in Sources */,
 				ADF5A9471F8B4F28008F17E3 /* TurnByTurnView.swift in Sources */,
