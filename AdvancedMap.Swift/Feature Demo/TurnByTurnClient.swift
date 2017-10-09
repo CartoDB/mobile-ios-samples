@@ -129,8 +129,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         let latitude = location.coordinate.latitude
         let longitude = location.coordinate.longitude
         
-        print("Updated Coordinates: " + String(describing: latitude) + ", " + String(describing: longitude))
-        
         marker.showAt(location: location)
         
         // Zoom & focus is enabled by default, disable after initial location is set
@@ -153,8 +151,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         // Use true heading if it is valid.
         let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
-        
-        print("Updated Heading: " + String(describing: heading))
         
         // TODO calculate heading to see whether the user should turn around or is facing the correct direction
     }
