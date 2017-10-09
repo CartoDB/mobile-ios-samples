@@ -34,7 +34,7 @@ class CustomPopupHandler : NTCustomPopupHandler {
         let screenWidth = CGFloat(popupDrawInfo.getScreenBounds().getWidth() * pxToDP)
         let screenHeight = CGFloat(popupDrawInfo.getScreenBounds().getHeight() * pxToDP)
         
-        var textFontSize = CustomPopupHandler.FONT_SIZE * dpToPX
+        let textFontSize = CustomPopupHandler.FONT_SIZE * dpToPX
         let triangleWidth = CustomPopupHandler.TRIANGLE_SIZE * CGFloat(dpToPX)
         let triangleHeight = CustomPopupHandler.TRIANGLE_SIZE * CGFloat(dpToPX)
         let strokeWidth = CustomPopupHandler.STROKE_WIDTH * CGFloat(dpToPX)
