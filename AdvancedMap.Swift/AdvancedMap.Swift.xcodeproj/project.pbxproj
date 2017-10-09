@@ -138,6 +138,8 @@
 		ADE4A00E1F45829B00D6E05F /* RouteSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE4A00D1F45829B00D6E05F /* RouteSearchView.swift */; };
 		ADE4A0101F458F8500D6E05F /* icon_sample_route_search.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE4A00F1F458F8500D6E05F /* icon_sample_route_search.png */; };
 		ADE6DCC21EF97D71002B2189 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6DCC11EF97D71002B2189 /* Device.swift */; };
+		ADF5A9451F8B4F1C008F17E3 /* TurnByTurnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */; };
+		ADF5A9471F8B4F28008F17E3 /* TurnByTurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */; };
 		ADF6725C1F335CBE00527D49 /* BaseGeocodingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF6725B1F335CBE00527D49 /* BaseGeocodingController.swift */; };
 /* End PBXBuildFile section */
 
@@ -282,6 +284,8 @@
 		ADE4A00D1F45829B00D6E05F /* RouteSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSearchView.swift; sourceTree = "<group>"; };
 		ADE4A00F1F458F8500D6E05F /* icon_sample_route_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_route_search.png; sourceTree = "<group>"; };
 		ADE6DCC11EF97D71002B2189 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnByTurnController.swift; sourceTree = "<group>"; };
+		ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnByTurnView.swift; sourceTree = "<group>"; };
 		ADF6725B1F335CBE00527D49 /* BaseGeocodingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGeocodingController.swift; sourceTree = "<group>"; };
 		E57D46BD0081D1E13A2730D1 /* Pods-AdvancedMap.Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -401,6 +405,7 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				ADF5A9431F8B4EFB008F17E3 /* Turn by Turn */,
 				ADE4A00A1F45828000D6E05F /* Route Search */,
 				AD01E6501F34790C0001D8A3 /* Offline Routing */,
 				ADA977F31F0E897D0040E090 /* Reverse Geocoding */,
@@ -701,6 +706,15 @@
 			name = "Route Search";
 			sourceTree = "<group>";
 		};
+		ADF5A9431F8B4EFB008F17E3 /* Turn by Turn */ = {
+			isa = PBXGroup;
+			children = (
+				ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */,
+				ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */,
+			);
+			name = "Turn by Turn";
+			sourceTree = "<group>";
+		};
 		ADF6725D1F335CE900527D49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -983,6 +997,7 @@
 				AD24D7741F4D5DE300B0F78F /* ScaleBar.swift in Sources */,
 				AD41232C1F040A36009874BD /* VectorObjectEditingView.swift in Sources */,
 				AD97868A1EF7EB34002912DF /* GalleryDelegate.swift in Sources */,
+				ADF5A9451F8B4F1C008F17E3 /* TurnByTurnController.swift in Sources */,
 				AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */,
 				AD01E6571F3483440001D8A3 /* OfflineRoutingView.swift in Sources */,
 				ADA977F71F0E89BA0040E090 /* ReverseGeocodingView.swift in Sources */,
@@ -1002,6 +1017,7 @@
 				ADE092F71F00EF3E00C569F9 /* PackageListener.swift in Sources */,
 				ADA977FC1F0E8AAC0040E090 /* GeocodingController.swift in Sources */,
 				ADC8B8D91F04F2C600B62852 /* VectorElementSelectListener.swift in Sources */,
+				ADF5A9471F8B4F28008F17E3 /* TurnByTurnView.swift in Sources */,
 				AD33A7B41F6A740C0098DF15 /* CustomPopupHandler.swift in Sources */,
 				AD437EBA1EF907D1008CEA76 /* Languages.swift in Sources */,
 			);

@@ -17,6 +17,14 @@ class Samples {
         let folder = ""
         
         var sample = Sample()
+        sample.title = "TURN-BY-TURN"
+        sample.description = "POC-level implementation of Turn-By-Turn navigation"
+        sample.imageResource = folder + "icon_sample_turn_by_turn.png"
+        sample.controller = TurnByTurnController()
+        
+        list.append(sample)
+        
+        sample = Sample()
         sample.title = "BASEMAP STYLES"
         sample.description = "Various samples of different CARTO Base Maps"
         sample.imageResource = folder + "icon_sample_styles.png"
