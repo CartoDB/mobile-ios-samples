@@ -8,17 +8,21 @@
 
 import Foundation
 import CoreLocation
+import OnTheRoad
 
 class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
     
     let manager = CLLocationManager()
     
     var mapView: NTMapView!
+    var marker: LocationMarker!
     
     init(mapView: NTMapView) {
         super.init()
         
         self.mapView = mapView;
+        
+        marker = LocationMarker(mapView: mapView)
         
         manager.pausesLocationUpdatesAutomatically = false
         manager.desiredAccuracy = 1
@@ -60,6 +64,8 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         let longitude = location.coordinate.longitude
         
         print("Updated Coordinates: " + String(describing: latitude) + ", " + String(describing: longitude))
+        
+        marker.showAt(location: location)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
