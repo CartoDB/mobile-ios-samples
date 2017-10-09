@@ -9,7 +9,9 @@
 import Foundation
 
 class DestinationClickListener : NTMapEventListener {
-
+    
+    var delegate: DestinationDelegate?
+    
     var destination: NTMapPos!
     
     override func onMapClicked(_ mapClickInfo: NTMapClickInfo!) {
@@ -21,5 +23,12 @@ class DestinationClickListener : NTMapEventListener {
         
         let position = mapClickInfo.getClickPos()
         destination = position
+        
+        delegate?.destinationSet(position: destination)
     }
+}
+
+protocol DestinationDelegate {
+    
+    func destinationSet(position: NTMapPos)
 }

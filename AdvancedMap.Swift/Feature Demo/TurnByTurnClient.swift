@@ -9,8 +9,8 @@
 import Foundation
 import CoreLocation
 
-class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
-    
+class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate {
+
     let manager = CLLocationManager()
     
     var mapView: NTMapView!
@@ -60,6 +60,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         manager.startUpdatingHeading()
         
         mapView.setMapEventListener(destinationListener)
+        destinationListener?.delegate = self
     }
     
     // Detach all listeners when your controller disappears
@@ -69,8 +70,18 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         manager.delegate = nil
         
         mapView.setMapEventListener(nil)
+        destinationListener?.delegate = nil
     }
 
+    func destinationSet(position: NTMapPos) {
+        routing.setStopMarker(position: position)
+        
+        if (latest.coordinate.latitude != 0 && latest.coordinate.longitude != 0) {
+            let start = marker.projection.fromLat(latest.coordinate.latitude, lng: latest.coordinate.longitude)
+            showRoute(start: start!, stop: position)
+        }
+    }
+    
     func showRoute(start: NTMapPos, stop: NTMapPos) {
         
         DispatchQueue.global().async {
@@ -117,7 +128,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         
         if (destination != nil) {
             let position = marker.projection.fromLat(latitude, lng: longitude)
-            routing.setStopMarker(position: destination!)
             showRoute(start: position!, stop: destination!)
         }
     }
@@ -133,6 +143,8 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate {
         let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
         
         print("Updated Heading: " + String(describing: heading))
+        
+        // TODO calculate heading to see whether the user should turn around or is facing the correct direction
     }
 }
 
