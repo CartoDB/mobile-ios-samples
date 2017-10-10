@@ -52,7 +52,7 @@ class CustomPopupHandler : NTCustomPopupHandler {
         let maxTextWidth = maxWidth - (screenPadding * 2 + strokeWidth)
         
         // Measure text and description sizes
-        let attributes = [NSFontAttributeName: textFont]
+        let attributes = [NSFontAttributeName: textFont!] as [String : Any]
         let maxSize = CGSize(width: Int(maxTextWidth), height: Int.max)
         let textSize = self.text.boundingRect(with: maxSize, options: .usesLineFragmentOrigin, attributes: attributes, context: nil).size
         
