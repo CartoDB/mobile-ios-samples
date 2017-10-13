@@ -7,12 +7,6 @@
  * CartoVisLoader class is used to load and configure all corresponding layers.
  */
 
-@interface MyUTFGridEventListener : NTUTFGridEventListener
-
-@property NTLocalVectorDataSource *source;
-
-@end
-
 @interface MyCartoVisBuilder : NTCartoVisBuilder
 
 @property NTMapView* mapView;
@@ -61,7 +55,8 @@
 
 - (void)setCenter:(NTMapPos *)mapPos
 {
-    [self.mapView setFocusPos:[[[self.mapView getOptions] getBaseProjection] fromWgs84:mapPos] durationSeconds:1.0f];
+    NTMapPos *position = [[[self.mapView getOptions] getBaseProjection] fromWgs84:mapPos];
+    [self.mapView setFocusPos:position durationSeconds:1.0f];
 }
 
 - (void)setZoom:(float)zoom
@@ -73,38 +68,10 @@
 {
     // Add the layer to the map view
     [[self.mapView getLayers] add:layer];
-    
-    NTTileLayer *tileLayer = (NTTileLayer*)layer;
-    
-    MyUTFGridEventListener *listener = [[MyUTFGridEventListener alloc] init];
-    listener.source = (NTLocalVectorDataSource *)[self.vectorLayer getDataSource];
-    [tileLayer setUTFGridEventListener:listener];
 }
 
 @end
 
-@implementation MyUTFGridEventListener
-
-- (BOOL)onUTFGridClicked:(NTUTFGridClickInfo *)clickInfo
-{
-    [self.source clear];
-
-    NTBalloonPopupStyleBuilder *builder = [[NTBalloonPopupStyleBuilder alloc] init];
-    NTBalloonPopupMargins *margins = [[NTBalloonPopupMargins alloc] initWithLeft:6 top:3 right:6 bottom:3];
-    [builder setLeftMargins:margins];
-    [builder setPlacementPriority:10];
-    
-    NSString *description = [NSString stringWithFormat:@"%@", [clickInfo getElementInfo]];
-    
-    NTBalloonPopup *popup = [[NTBalloonPopup alloc] initWithPos:[clickInfo getClickPos] style:[builder buildStyle] title:@"Clicked" desc:description];
-    
-    [self.source add:popup];
-    
-    return true;
-}
-
-@end
-    
      
      
      
