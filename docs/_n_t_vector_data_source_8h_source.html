@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CARTO Mobile SDK iOS: /Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTVectorDataSource.h Source File</title>
+<title>CARTO Mobile SDK iOS: /Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTVectorDataSource.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -110,40 +110,45 @@ $(document).ready(function(){initNavTree('_n_t_vector_data_source_8h_source.html
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;NTVectorData.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTProjection.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTCullState.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTViewState.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interface_n_t_vector_data_source.html">   31</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_vector_data_source.html">NTVectorDataSource</a> : NSObject</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> *swigCPtr;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  BOOL swigCMemOwn;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;-(void*)getCptr;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;+(<a class="code" href="interface_n_t_vector_data_source.html">NTVectorDataSource</a>*)swigCreatePolymorphicInstance:(<span class="keywordtype">void</span>*)cPtr swigOwnCObject:(BOOL)cMemoryOwn;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;-(<a class="code" href="interface_n_t_projection.html">NTProjection</a>*)getProjection;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;-(<a class="code" href="interface_n_t_vector_data.html">NTVectorData</a>*)loadElements: (<a class="code" href="interface_n_t_cull_state.html">NTCullState</a>*)cullState;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;-(void)notifyElementsChanged;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;-(id)initWithProjection: (<a class="code" href="interface_n_t_projection.html">NTProjection</a>*)projection;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;-(NSString*)swigGetClassName;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;-(<span class="keywordtype">void</span> *)swigGetDirectorObject;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;-(void)dealloc;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor"></span></div>
-<div class="ttc" id="interface_n_t_vector_data_source_html"><div class="ttname"><a href="interface_n_t_vector_data_source.html">NTVectorDataSource</a></div><div class="ttdef"><b>Definition:</b> NTVectorDataSource.h:31</div></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;NTMapBounds.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTVectorData.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTProjection.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTCullState.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &quot;NTViewState.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_n_t_vector_data_source.html">   32</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_vector_data_source.html">NTVectorDataSource</a> : NSObject</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> *swigCPtr;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  BOOL swigCMemOwn;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;-(void*)getCptr;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;+(<a class="code" href="interface_n_t_vector_data_source.html">NTVectorDataSource</a>*)swigCreatePolymorphicInstance:(<span class="keywordtype">void</span>*)cPtr swigOwnCObject:(BOOL)cMemoryOwn;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;-(<a class="code" href="interface_n_t_map_bounds.html">NTMapBounds</a>*)getDataExtent;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;-(<a class="code" href="interface_n_t_map_bounds.html">NTMapBounds</a>*)getDataExtentSwigExplicitNTVectorDataSource;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;-(<a class="code" href="interface_n_t_projection.html">NTProjection</a>*)getProjection;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;-(<a class="code" href="interface_n_t_vector_data.html">NTVectorData</a>*)loadElements: (<a class="code" href="interface_n_t_cull_state.html">NTCullState</a>*)cullState;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;-(void)notifyElementsChanged;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;-(id)initWithProjection: (<a class="code" href="interface_n_t_projection.html">NTProjection</a>*)projection;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;-(<span class="keywordtype">long</span> long)swigGetRawPtr;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;-(NSString*)swigGetClassName;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;-(<span class="keywordtype">void</span> *)swigGetDirectorObject;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;-(void)dealloc;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="interface_n_t_vector_data_source_html"><div class="ttname"><a href="interface_n_t_vector_data_source.html">NTVectorDataSource</a></div><div class="ttdef"><b>Definition:</b> NTVectorDataSource.h:32</div></div>
 <div class="ttc" id="interface_n_t_vector_data_html"><div class="ttname"><a href="interface_n_t_vector_data.html">NTVectorData</a></div><div class="ttdef"><b>Definition:</b> NTVectorData.h:25</div></div>
 <div class="ttc" id="interface_n_t_projection_html"><div class="ttname"><a href="interface_n_t_projection.html">NTProjection</a></div><div class="ttdef"><b>Definition:</b> NTProjection.h:25</div></div>
+<div class="ttc" id="interface_n_t_map_bounds_html"><div class="ttname"><a href="interface_n_t_map_bounds.html">NTMapBounds</a></div><div class="ttdef"><b>Definition:</b> NTMapBounds.h:26</div></div>
 <div class="ttc" id="interface_n_t_cull_state_html"><div class="ttname"><a href="interface_n_t_cull_state.html">NTCullState</a></div><div class="ttdef"><b>Definition:</b> NTCullState.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -151,7 +156,7 @@ $(document).ready(function(){initNavTree('_n_t_vector_data_source_8h_source.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_b7825bbd13b32a8f5a7f6eb81b6582d9.html">doxygen</a></li><li class="navelem"><b>NTVectorDataSource.h</b></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:07 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:51 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -12,5 +12,6 @@ var interface_n_t_color =
     [ "initWithColor:", "interface_n_t_color.html#ad57865ace78b6bff6cb604f5962fd13b", null ],
     [ "initWithR:g:b:a:", "interface_n_t_color.html#a0ca727eb8ecee7fb8f27cf5c6aff9fb6", null ],
     [ "isEqual:", "interface_n_t_color.html#a1f0edee74c3b581642ac8cb1b109acf5", null ],
-    [ "isEqualInternal:", "interface_n_t_color.html#a3d4950f2af8eb4744b95c72d970c3142", null ]
+    [ "isEqualInternal:", "interface_n_t_color.html#a3d4950f2af8eb4744b95c72d970c3142", null ],
+    [ "swigGetRawPtr", "interface_n_t_color.html#a07199edeae2d15fe67fd91e69b4d2047", null ]
 ];

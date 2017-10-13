@@ -13,5 +13,6 @@ var interface_n_t_map_bounds =
     [ "initWithMin:max:", "interface_n_t_map_bounds.html#ad368d61ed4ec64a42c194a467bceee11", null ],
     [ "intersects:", "interface_n_t_map_bounds.html#a563fa83b7d977ecd87e3880d7cf179c1", null ],
     [ "isEqual:", "interface_n_t_map_bounds.html#ad20f459c56ba27acfe50e6a2fbf1cf98", null ],
-    [ "isEqualInternal:", "interface_n_t_map_bounds.html#acef7b72ef864f99b7c5e422258baa71e", null ]
+    [ "isEqualInternal:", "interface_n_t_map_bounds.html#acef7b72ef864f99b7c5e422258baa71e", null ],
+    [ "swigGetRawPtr", "interface_n_t_map_bounds.html#ac0b751b99b09080b3c55fd829f6ef314", null ]
 ];

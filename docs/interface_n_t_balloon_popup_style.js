@@ -22,9 +22,9 @@ var interface_n_t_balloon_popup_style =
     [ "getTitleMargins", "interface_n_t_balloon_popup_style.html#a78ed44930469fdbb5bf66198cd1bcbaf", null ],
     [ "getTriangleHeight", "interface_n_t_balloon_popup_style.html#aee4c26d696ace2a1e5003611d65aa8c7", null ],
     [ "getTriangleWidth", "interface_n_t_balloon_popup_style.html#ad7b65701ff34ca1f2caba7aae38c9977", null ],
-    [ "initWithColor:attachAnchorPointX:attachAnchorPointY:causesOverlap:hideIfOverlapped:horizontalOffset:verticalOffset:placementPriority:scaleWithDPI:cornerRadius:leftColor:leftImage:leftMargins:rightColor:rightImage:rightMargins:titleColor:titleFontName:titleField:titleFontSize:titleMargins:titleWrap:descColor:descFontName:descField:descFontSize:descMargins:descWrap:strokeColor:strokeWidth:triangleWidth:triangleHeight:", "interface_n_t_balloon_popup_style.html#a12bea43956034dfc2b91f11fa44551d3", null ],
     [ "isDescriptionWrap", "interface_n_t_balloon_popup_style.html#a2874bf9586874be3339b9967f28b7adc", null ],
     [ "isTitleWrap", "interface_n_t_balloon_popup_style.html#a76f63901d8148b8970b9b4c370d439c9", null ],
     [ "swigGetClassName", "interface_n_t_balloon_popup_style.html#a66f9abd9c520c86cab5e1ff2986f47a7", null ],
-    [ "swigGetDirectorObject", "interface_n_t_balloon_popup_style.html#a50ce75f30af64960c4109d587daff283", null ]
+    [ "swigGetDirectorObject", "interface_n_t_balloon_popup_style.html#a50ce75f30af64960c4109d587daff283", null ],
+    [ "swigGetRawPtr", "interface_n_t_balloon_popup_style.html#abf3fc37849d677b2380dfb415eb8013c", null ]
 ];

@@ -4,5 +4,6 @@ var interface_n_t_package_manager_tile_data_source =
     [ "initWithPackageManager:", "interface_n_t_package_manager_tile_data_source.html#a557e54ff9096458e7dacd5e5cd4516bd", null ],
     [ "loadTile:", "interface_n_t_package_manager_tile_data_source.html#a9a21065f2eedd9588cddaf0c934d9c64", null ],
     [ "swigGetClassName", "interface_n_t_package_manager_tile_data_source.html#a506f916bd366f95cca2018b8fed86d33", null ],
-    [ "swigGetDirectorObject", "interface_n_t_package_manager_tile_data_source.html#aa84028e7224318b3405172a6ae444a89", null ]
+    [ "swigGetDirectorObject", "interface_n_t_package_manager_tile_data_source.html#aa84028e7224318b3405172a6ae444a89", null ],
+    [ "swigGetRawPtr", "interface_n_t_package_manager_tile_data_source.html#a0da450054a5c212c4dd0449c28063abd", null ]
 ];

@@ -5,5 +5,6 @@ var interface_n_t_multi_geometry =
     [ "getGeometryCount", "interface_n_t_multi_geometry.html#aa5e13eddebdde70e9691adb216487315", null ],
     [ "initWithGeometries:", "interface_n_t_multi_geometry.html#a70a35fb3f5b955af894759a699ca59ee", null ],
     [ "swigGetClassName", "interface_n_t_multi_geometry.html#af50b07bdd7ab496bd36a1be885199073", null ],
-    [ "swigGetDirectorObject", "interface_n_t_multi_geometry.html#a98e795fd533dc4f44bef0c0b4d2fc5e5", null ]
+    [ "swigGetDirectorObject", "interface_n_t_multi_geometry.html#a98e795fd533dc4f44bef0c0b4d2fc5e5", null ],
+    [ "swigGetRawPtr", "interface_n_t_multi_geometry.html#a4ba47006555d8e8edc387b89e44ebd8d", null ]
 ];

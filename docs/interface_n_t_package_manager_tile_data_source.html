@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -116,6 +116,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a25a7d433a68448d29e7e54927d2297aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a21065f2eedd9588cddaf0c934d9c64"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_tile_data.html">NTTileData</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_tile_data_source.html#a9a21065f2eedd9588cddaf0c934d9c64">loadTile:</a></td></tr>
 <tr class="separator:a9a21065f2eedd9588cddaf0c934d9c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da450054a5c212c4dd0449c28063abd"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_tile_data_source.html#a0da450054a5c212c4dd0449c28063abd">swigGetRawPtr</a></td></tr>
+<tr class="separator:a0da450054a5c212c4dd0449c28063abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a506f916bd366f95cca2018b8fed86d33"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_tile_data_source.html#a506f916bd366f95cca2018b8fed86d33">swigGetClassName</a></td></tr>
 <tr class="separator:a506f916bd366f95cca2018b8fed86d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa84028e7224318b3405172a6ae444a89"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_tile_data_source.html#aa84028e7224318b3405172a6ae444a89">swigGetDirectorObject</a></td></tr>
@@ -129,6 +131,10 @@ Instance Methods</h2></td></tr>
 <tr class="separator:acd0d7b6149fae3e25793df8bba4a8c00 inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1adadabf9db1b3cc015c9cb3b7c851a inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#aa1adadabf9db1b3cc015c9cb3b7c851a">getMaxZoomSwigExplicitNTTileDataSource</a></td></tr>
 <tr class="separator:aa1adadabf9db1b3cc015c9cb3b7c851a inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a73570a27e8411eea609c16fa6ea45 inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#ab9a73570a27e8411eea609c16fa6ea45">getDataExtent</a></td></tr>
+<tr class="separator:ab9a73570a27e8411eea609c16fa6ea45 inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae141386cca000aade293fd06f7045de5 inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#ae141386cca000aade293fd06f7045de5">getDataExtentSwigExplicitNTTileDataSource</a></td></tr>
+<tr class="separator:ae141386cca000aade293fd06f7045de5 inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accb37f687a2b2aafa5ec9acd28eb9789 inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_projection.html">NTProjection</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#accb37f687a2b2aafa5ec9acd28eb9789">getProjection</a></td></tr>
 <tr class="separator:accb37f687a2b2aafa5ec9acd28eb9789 inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84abbc725a042776ddbc92cab95d4f4f inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#a84abbc725a042776ddbc92cab95d4f4f">notifyTilesChanged:</a></td></tr>
@@ -204,6 +210,7 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Loads the specified tile.<br/>
+ Note: the tile coordinate system used here is vertically flipped relative to layer tile coordinate system.<br/>
  </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -295,9 +302,29 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0da450054a5c212c4dd0449c28063abd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="interface_n_t_tile_data_source.html#ade9798c005021506759080bbecf53880">NTTileDataSource</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_package_manager_tile_data_source_8h_source.html">NTPackageManagerTileDataSource.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTPackageManagerTileDataSource.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_package_manager_tile_data_source_8h_source.html">NTPackageManagerTileDataSource.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTPackageManagerTileDataSource.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -305,7 +332,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_package_manager_tile_data_source.html">NTPackageManagerTileDataSource</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:10 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:56 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

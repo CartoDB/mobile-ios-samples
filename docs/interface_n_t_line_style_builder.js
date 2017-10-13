@@ -15,5 +15,6 @@ var interface_n_t_line_style_builder =
     [ "setStretchFactor:", "interface_n_t_line_style_builder.html#ad698c34e314bf8adc17a024d2795b8f1", null ],
     [ "setWidth:", "interface_n_t_line_style_builder.html#ae018cad8d4de19b3c88c6f83a1cdb75c", null ],
     [ "swigGetClassName", "interface_n_t_line_style_builder.html#abc42c7edf6a0f71085ca7e617d987077", null ],
-    [ "swigGetDirectorObject", "interface_n_t_line_style_builder.html#a57c787c93a7243cbbc56518946336800", null ]
+    [ "swigGetDirectorObject", "interface_n_t_line_style_builder.html#a57c787c93a7243cbbc56518946336800", null ],
+    [ "swigGetRawPtr", "interface_n_t_line_style_builder.html#ae032b9b8671eb72c5bba40f38085b124", null ]
 ];

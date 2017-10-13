@@ -21,12 +21,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"interface_n_t_carto_maps_service.html#a5a4edc3fd5852445e18cbd47c4d9672e",
-"interface_n_t_h_t_t_p_tile_data_source.html#a50e997c956240c3d47a8af3d4a38164e",
-"interface_n_t_map_renderer.html",
-"interface_n_t_package_manager.html#a799c0f25d26052d3548eca98f1c256cf",
-"interface_n_t_routing_result.html#a513030c858375012f9231e2a29114142",
-"interface_n_t_vector_element_click_info.html#a3a1b466fc748ec63b4e662438f4d790a"
+"interface_n_t_billboard_style_builder.html#ad2eb2a9c5ac1bf946d9276d46514a4af",
+"interface_n_t_custom_popup.html#ab6c300ec2c0aba95a78b8e8288560bc3",
+"interface_n_t_line.html#a532809fa1ece9829d3074e3e39bee04b",
+"interface_n_t_map_view.html#aa74c229c7414669eda729de0e9607202",
+"interface_n_t_package_manager_listener.html#a5e7f139209c9093c4ea87bc1554fb7fc",
+"interface_n_t_raster_tile_click_info.html",
+"interface_n_t_tile_layer.html#a84840d0d651e892724f59f470fc1438b",
+"interface_n_t_vector_tile_layer.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

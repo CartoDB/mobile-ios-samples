@@ -9,5 +9,6 @@ var interface_n_t_point_style_builder =
     [ "setClickSize:", "interface_n_t_point_style_builder.html#ab4e47cca40d56f306e3c7d34f3b8d85b", null ],
     [ "setSize:", "interface_n_t_point_style_builder.html#a91f1454bee6c25274eb07021b65b8b9f", null ],
     [ "swigGetClassName", "interface_n_t_point_style_builder.html#a1fc365eca64f74a4c320965df88be7b4", null ],
-    [ "swigGetDirectorObject", "interface_n_t_point_style_builder.html#a4e8aa2747553c76695e778d78f95d1e6", null ]
+    [ "swigGetDirectorObject", "interface_n_t_point_style_builder.html#a4e8aa2747553c76695e778d78f95d1e6", null ],
+    [ "swigGetRawPtr", "interface_n_t_point_style_builder.html#a491cf8d2eee823a964042c1c89d96c54", null ]
 ];

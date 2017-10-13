@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CARTO Mobile SDK iOS: /Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTTileLayer.h Source File</title>
+<title>CARTO Mobile SDK iOS: /Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTTileLayer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -142,55 +142,63 @@ $(document).ready(function(){initNavTree('_n_t_tile_layer_8h_source.html','');})
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;-(enum NTTileSubstitutionPolicy)<a class="code" href="interface_n_t_tile_layer.html#ab8153764b16d7f2ff26d6ff753dfbbeb">getTileSubstitutionPolicy</a>;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;-(void)setTileSubstitutionPolicy: (enum NTTileSubstitutionPolicy)policy;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;-(float)<a class="code" href="interface_n_t_tile_layer.html#a08df2bde530f28ee1d554ad34ee1e428">getZoomLevelBias</a>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;-(void)setZoomLevelBias: (<span class="keywordtype">float</span>)bias;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;-(<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)calculateMapTile: (<a class="code" href="interface_n_t_map_pos.html">NTMapPos</a>*)mapPos zoom: (<span class="keywordtype">int</span>)zoom;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;-(<a class="code" href="interface_n_t_map_pos.html">NTMapPos</a>*)calculateMapTileOrigin: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)mapTile;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;-(<a class="code" href="interface_n_t_map_bounds.html">NTMapBounds</a>*)calculateMapTileBounds: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)mapTile;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;-(void)clearTileCaches: (BOOL)all;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;-(<a class="code" href="interface_n_t_tile_load_listener.html">NTTileLoadListener</a>*)<a class="code" href="interface_n_t_tile_layer.html#a63fc0fc7fafc4bce602270f1524a2a86">getTileLoadListener</a>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;-(void)setTileLoadListener: (<a class="code" href="interface_n_t_tile_load_listener.html">NTTileLoadListener</a>*)tileLoadListener;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;-(<a class="code" href="interface_n_t_u_t_f_grid_event_listener.html">NTUTFGridEventListener</a>*)<a class="code" href="interface_n_t_tile_layer.html#a50090dfbb0040b924eb60851258f739a">getUTFGridEventListener</a>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;-(void)setUTFGridEventListener: (<a class="code" href="interface_n_t_u_t_f_grid_event_listener.html">NTUTFGridEventListener</a>*)utfGridEventListener;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;-(BOOL)<a class="code" href="interface_n_t_tile_layer.html#aef2f81db70976983f1869b183fbb99f4">isUpdateInProgress</a>;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;-(NSString*)<a class="code" href="interface_n_t_tile_layer.html#af91bcffca66654f8fd157a813a2cce66">swigGetClassName</a>;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;-(<span class="keywordtype">void</span> *)<a class="code" href="interface_n_t_tile_layer.html#a67c6b2beff1b5ecf027861e841b88e14">swigGetDirectorObject</a>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;-(void)dealloc;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;-(void)setZoomLevelBias: (<span class="keywordtype">float</span>)bias;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;-(int)<a class="code" href="interface_n_t_tile_layer.html#a158c1b200b51823a843ca36593b08067">getMaxOverzoomLevel</a>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;-(void)setMaxOverzoomLevel: (<span class="keywordtype">int</span>)overzoomLevel;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;-(int)<a class="code" href="interface_n_t_tile_layer.html#ad511a558fca23e15bc9d9ee663419594">getMaxUnderzoomLevel</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;-(void)setMaxUnderzoomLevel: (<span class="keywordtype">int</span>)underzoomLevel;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;-(<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)calculateMapTile: (<a class="code" href="interface_n_t_map_pos.html">NTMapPos</a>*)mapPos zoom: (<span class="keywordtype">int</span>)zoom;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;-(<a class="code" href="interface_n_t_map_pos.html">NTMapPos</a>*)calculateMapTileOrigin: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)mapTile;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;-(<a class="code" href="interface_n_t_map_bounds.html">NTMapBounds</a>*)calculateMapTileBounds: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)mapTile;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;-(void)clearTileCaches: (BOOL)all;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;-(<a class="code" href="interface_n_t_tile_load_listener.html">NTTileLoadListener</a>*)<a class="code" href="interface_n_t_tile_layer.html#a63fc0fc7fafc4bce602270f1524a2a86">getTileLoadListener</a>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;-(void)setTileLoadListener: (<a class="code" href="interface_n_t_tile_load_listener.html">NTTileLoadListener</a>*)tileLoadListener;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;-(<a class="code" href="interface_n_t_u_t_f_grid_event_listener.html">NTUTFGridEventListener</a>*)<a class="code" href="interface_n_t_tile_layer.html#a50090dfbb0040b924eb60851258f739a">getUTFGridEventListener</a>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;-(void)setUTFGridEventListener: (<a class="code" href="interface_n_t_u_t_f_grid_event_listener.html">NTUTFGridEventListener</a>*)utfGridEventListener;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;-(BOOL)<a class="code" href="interface_n_t_tile_layer.html#aef2f81db70976983f1869b183fbb99f4">isUpdateInProgress</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;-(<span class="keywordtype">long</span> long)<a class="code" href="interface_n_t_tile_layer.html#aa0f7882608f18c5cf0c2b62e8944c15e">swigGetRawPtr</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;-(NSString*)<a class="code" href="interface_n_t_tile_layer.html#af91bcffca66654f8fd157a813a2cce66">swigGetClassName</a>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;-(<span class="keywordtype">void</span> *)<a class="code" href="interface_n_t_tile_layer.html#a67c6b2beff1b5ecf027861e841b88e14">swigGetDirectorObject</a>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;-(void)dealloc;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor"></span></div>
 <div class="ttc" id="interface_n_t_map_pos_html"><div class="ttname"><a href="interface_n_t_map_pos.html">NTMapPos</a></div><div class="ttdef"><b>Definition:</b> NTMapPos.h:26</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html_a99bcc7691c49efacc60988bcc70c3e57"><div class="ttname"><a href="interface_n_t_tile_layer.html#a99bcc7691c49efacc60988bcc70c3e57">-[NTTileLayer getUTFGridDataSource]</a></div><div class="ttdeci">NTTileDataSource * getUTFGridDataSource()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:58</div></div>
-<div class="ttc" id="interface_n_t_tile_layer_html_a63fc0fc7fafc4bce602270f1524a2a86"><div class="ttname"><a href="interface_n_t_tile_layer.html#a63fc0fc7fafc4bce602270f1524a2a86">-[NTTileLayer getTileLoadListener]</a></div><div class="ttdeci">NTTileLoadListener * getTileLoadListener()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:144</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_a63fc0fc7fafc4bce602270f1524a2a86"><div class="ttname"><a href="interface_n_t_tile_layer.html#a63fc0fc7fafc4bce602270f1524a2a86">-[NTTileLayer getTileLoadListener]</a></div><div class="ttdeci">NTTileLoadListener * getTileLoadListener()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:164</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_ad511a558fca23e15bc9d9ee663419594"><div class="ttname"><a href="interface_n_t_tile_layer.html#ad511a558fca23e15bc9d9ee663419594">-[NTTileLayer getMaxUnderzoomLevel]</a></div><div class="ttdeci">int getMaxUnderzoomLevel()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:134</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html_ab8153764b16d7f2ff26d6ff753dfbbeb"><div class="ttname"><a href="interface_n_t_tile_layer.html#ab8153764b16d7f2ff26d6ff753dfbbeb">-[NTTileLayer getTileSubstitutionPolicy]</a></div><div class="ttdeci">enum NTTileSubstitutionPolicy getTileSubstitutionPolicy()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:104</div></div>
-<div class="ttc" id="interface_n_t_tile_data_source_html"><div class="ttname"><a href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTTileDataSource.h:28</div></div>
-<div class="ttc" id="interface_n_t_tile_layer_html_af91bcffca66654f8fd157a813a2cce66"><div class="ttname"><a href="interface_n_t_tile_layer.html#af91bcffca66654f8fd157a813a2cce66">-[NTTileLayer swigGetClassName]</a></div><div class="ttdeci">NSString * swigGetClassName()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:181</div></div>
+<div class="ttc" id="interface_n_t_tile_data_source_html"><div class="ttname"><a href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTTileDataSource.h:29</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_af91bcffca66654f8fd157a813a2cce66"><div class="ttname"><a href="interface_n_t_tile_layer.html#af91bcffca66654f8fd157a813a2cce66">-[NTTileLayer swigGetClassName]</a></div><div class="ttdeci">NSString * swigGetClassName()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:206</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html_a08df2bde530f28ee1d554ad34ee1e428"><div class="ttname"><a href="interface_n_t_tile_layer.html#a08df2bde530f28ee1d554ad34ee1e428">-[NTTileLayer getZoomLevelBias]</a></div><div class="ttdeci">float getZoomLevelBias()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:114</div></div>
 <div class="ttc" id="interface_n_t_map_tile_html"><div class="ttname"><a href="interface_n_t_map_tile.html">NTMapTile</a></div><div class="ttdef"><b>Definition:</b> NTMapTile.h:21</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html_a3d8882c2ba826567048b880b76aac1bd"><div class="ttname"><a href="interface_n_t_tile_layer.html#a3d8882c2ba826567048b880b76aac1bd">-[NTTileLayer isSynchronizedRefresh]</a></div><div class="ttdeci">BOOL isSynchronizedRefresh()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:94</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html_a80305e14b06fd10b2c836d149356be96"><div class="ttname"><a href="interface_n_t_tile_layer.html#a80305e14b06fd10b2c836d149356be96">-[NTTileLayer getDataSource]</a></div><div class="ttdeci">NTTileDataSource * getDataSource()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:47</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html"><div class="ttname"><a href="interface_n_t_tile_layer.html">NTTileLayer</a></div><div class="ttdef"><b>Definition:</b> NTTileLayer.h:49</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html_a9ac1fca026d09d3c613a71a179dc6bd5"><div class="ttname"><a href="interface_n_t_tile_layer.html#a9ac1fca026d09d3c613a71a179dc6bd5">-[NTTileLayer isPreloading]</a></div><div class="ttdeci">BOOL isPreloading()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:84</div></div>
-<div class="ttc" id="interface_n_t_tile_layer_html_aef2f81db70976983f1869b183fbb99f4"><div class="ttname"><a href="interface_n_t_tile_layer.html#aef2f81db70976983f1869b183fbb99f4">-[NTTileLayer isUpdateInProgress]</a></div><div class="ttdeci">BOOL isUpdateInProgress()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:176</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_aef2f81db70976983f1869b183fbb99f4"><div class="ttname"><a href="interface_n_t_tile_layer.html#aef2f81db70976983f1869b183fbb99f4">-[NTTileLayer isUpdateInProgress]</a></div><div class="ttdeci">BOOL isUpdateInProgress()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:196</div></div>
 <div class="ttc" id="interface_n_t_tile_layer_html_a84840d0d651e892724f59f470fc1438b"><div class="ttname"><a href="interface_n_t_tile_layer.html#a84840d0d651e892724f59f470fc1438b">-[NTTileLayer getFrameNr]</a></div><div class="ttdeci">int getFrameNr()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:74</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_aa0f7882608f18c5cf0c2b62e8944c15e"><div class="ttname"><a href="interface_n_t_tile_layer.html#aa0f7882608f18c5cf0c2b62e8944c15e">-[NTTileLayer swigGetRawPtr]</a></div><div class="ttdeci">long long swigGetRawPtr()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:201</div></div>
 <div class="ttc" id="interface_n_t_tile_load_listener_html"><div class="ttname"><a href="interface_n_t_tile_load_listener.html">NTTileLoadListener</a></div><div class="ttdef"><b>Definition:</b> NTTileLoadListener.h:21</div></div>
-<div class="ttc" id="interface_n_t_tile_layer_html_a67c6b2beff1b5ecf027861e841b88e14"><div class="ttname"><a href="interface_n_t_tile_layer.html#a67c6b2beff1b5ecf027861e841b88e14">-[NTTileLayer swigGetDirectorObject]</a></div><div class="ttdeci">void * swigGetDirectorObject()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:186</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_a67c6b2beff1b5ecf027861e841b88e14"><div class="ttname"><a href="interface_n_t_tile_layer.html#a67c6b2beff1b5ecf027861e841b88e14">-[NTTileLayer swigGetDirectorObject]</a></div><div class="ttdeci">void * swigGetDirectorObject()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:211</div></div>
 <div class="ttc" id="interface_n_t_u_t_f_grid_event_listener_html"><div class="ttname"><a href="interface_n_t_u_t_f_grid_event_listener.html">NTUTFGridEventListener</a></div><div class="ttdef"><b>Definition:</b> NTUTFGridEventListener.h:24</div></div>
 <div class="ttc" id="interface_n_t_map_bounds_html"><div class="ttname"><a href="interface_n_t_map_bounds.html">NTMapBounds</a></div><div class="ttdef"><b>Definition:</b> NTMapBounds.h:26</div></div>
-<div class="ttc" id="interface_n_t_tile_layer_html_a50090dfbb0040b924eb60851258f739a"><div class="ttname"><a href="interface_n_t_tile_layer.html#a50090dfbb0040b924eb60851258f739a">-[NTTileLayer getUTFGridEventListener]</a></div><div class="ttdeci">NTUTFGridEventListener * getUTFGridEventListener()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:160</div></div>
-<div class="ttc" id="interface_n_t_layer_html"><div class="ttname"><a href="interface_n_t_layer.html">NTLayer</a></div><div class="ttdef"><b>Definition:</b> NTLayer.h:25</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_a158c1b200b51823a843ca36593b08067"><div class="ttname"><a href="interface_n_t_tile_layer.html#a158c1b200b51823a843ca36593b08067">-[NTTileLayer getMaxOverzoomLevel]</a></div><div class="ttdeci">int getMaxOverzoomLevel()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:124</div></div>
+<div class="ttc" id="interface_n_t_tile_layer_html_a50090dfbb0040b924eb60851258f739a"><div class="ttname"><a href="interface_n_t_tile_layer.html#a50090dfbb0040b924eb60851258f739a">-[NTTileLayer getUTFGridEventListener]</a></div><div class="ttdeci">NTUTFGridEventListener * getUTFGridEventListener()</div><div class="ttdef"><b>Definition:</b> NTTileLayer.mm:180</div></div>
+<div class="ttc" id="interface_n_t_layer_html"><div class="ttname"><a href="interface_n_t_layer.html">NTLayer</a></div><div class="ttdef"><b>Definition:</b> NTLayer.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_b7825bbd13b32a8f5a7f6eb81b6582d9.html">doxygen</a></li><li class="navelem"><b>NTTileLayer.h</b></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:07 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:51 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

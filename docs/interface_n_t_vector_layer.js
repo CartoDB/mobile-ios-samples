@@ -6,5 +6,6 @@ var interface_n_t_vector_layer =
     [ "isUpdateInProgress", "interface_n_t_vector_layer.html#a7e60c8a4ff130b14f7ae44ccd90e3305", null ],
     [ "setVectorElementEventListener:", "interface_n_t_vector_layer.html#a5081113f020ba60ba616b9c390c67550", null ],
     [ "swigGetClassName", "interface_n_t_vector_layer.html#a261d896b475eafe5f3e69ddba8a8545a", null ],
-    [ "swigGetDirectorObject", "interface_n_t_vector_layer.html#a1199e9fd3819b43058b0064e48b29d4e", null ]
+    [ "swigGetDirectorObject", "interface_n_t_vector_layer.html#a1199e9fd3819b43058b0064e48b29d4e", null ],
+    [ "swigGetRawPtr", "interface_n_t_vector_layer.html#abf8fe19f4c19f972f36c94ede5ab238b", null ]
 ];

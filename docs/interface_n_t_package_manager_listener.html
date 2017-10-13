@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -127,6 +127,16 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a9e20268b982fa82ed3552f52cd39de25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2d25096d34bac2cba148fc38f61882e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#aa2d25096d34bac2cba148fc38f61882e">onPackageFailedSwigExplicitNTPackageManagerListener:version:errorType:</a></td></tr>
 <tr class="separator:aa2d25096d34bac2cba148fc38f61882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67cce7f49b729ee5f5682aa69013139"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#ab67cce7f49b729ee5f5682aa69013139">onStyleUpdated:</a></td></tr>
+<tr class="separator:ab67cce7f49b729ee5f5682aa69013139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa779521d54f6ee4308d7094b7098e4ea"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#aa779521d54f6ee4308d7094b7098e4ea">onStyleUpdatedSwigExplicitNTPackageManagerListener:</a></td></tr>
+<tr class="separator:aa779521d54f6ee4308d7094b7098e4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a138e9888e6446af08897e922c642e9bd"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#a138e9888e6446af08897e922c642e9bd">onStyleFailed:</a></td></tr>
+<tr class="separator:a138e9888e6446af08897e922c642e9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e7f139209c9093c4ea87bc1554fb7fc"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#a5e7f139209c9093c4ea87bc1554fb7fc">onStyleFailedSwigExplicitNTPackageManagerListener:</a></td></tr>
+<tr class="separator:a5e7f139209c9093c4ea87bc1554fb7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af873045cc4918d2c1ce473bed27ba554"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#af873045cc4918d2c1ce473bed27ba554">swigGetRawPtr</a></td></tr>
+<tr class="separator:af873045cc4918d2c1ce473bed27ba554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f77d710adffec1831a585f784b00bf0"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#a4f77d710adffec1831a585f784b00bf0">swigGetClassName</a></td></tr>
 <tr class="separator:a4f77d710adffec1831a585f784b00bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ad4f100602c2a35cbb6c6db23ed4bb9"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager_listener.html#a1ad4f100602c2a35cbb6c6db23ed4bb9">swigGetDirectorObject</a></td></tr>
@@ -527,6 +537,102 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a138e9888e6446af08897e922c642e9bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onStyleFailed: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>styleName</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Listener method that is called when map style could not be downloaded or updated.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">styleName</td><td>The name of the style that could not be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e7f139209c9093c4ea87bc1554fb7fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onStyleFailedSwigExplicitNTPackageManagerListener: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>styleName</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Listener method that is called when map style could not be downloaded or updated.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">styleName</td><td>The name of the style that could not be updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab67cce7f49b729ee5f5682aa69013139"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onStyleUpdated: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>styleName</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Listener method that is called when map style has been successfully updated.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">styleName</td><td>The name of the style that was updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa779521d54f6ee4308d7094b7098e4ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) onStyleUpdatedSwigExplicitNTPackageManagerListener: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>styleName</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Listener method that is called when map style has been successfully updated.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">styleName</td><td>The name of the style that was updated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a8c6e67168c5e3d1f71d29257524517a5"></a>
 <div class="memitem">
 <div class="memproto">
@@ -598,9 +704,27 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af873045cc4918d2c1ce473bed27ba554"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_package_manager_listener_8h_source.html">NTPackageManagerListener.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTPackageManagerListener.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_package_manager_listener_8h_source.html">NTPackageManagerListener.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTPackageManagerListener.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -608,7 +732,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_package_manager_listener.html">NTPackageManagerListener</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:10 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:56 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

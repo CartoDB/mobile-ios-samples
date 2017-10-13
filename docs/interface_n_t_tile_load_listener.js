@@ -5,5 +5,6 @@ var interface_n_t_tile_load_listener =
     [ "onVisibleTilesLoaded", "interface_n_t_tile_load_listener.html#ae6e3c1e8677499eba981a5602a29eca5", null ],
     [ "onVisibleTilesLoadedSwigExplicitNTTileLoadListener", "interface_n_t_tile_load_listener.html#a88bb6616d4225e0bf79c74897a6feeb6", null ],
     [ "swigGetClassName", "interface_n_t_tile_load_listener.html#ab5a5ccd2aed44a353cf79abf61fdf707", null ],
-    [ "swigGetDirectorObject", "interface_n_t_tile_load_listener.html#a993696a59612eefacfdd380f8c161b9e", null ]
+    [ "swigGetDirectorObject", "interface_n_t_tile_load_listener.html#a993696a59612eefacfdd380f8c161b9e", null ],
+    [ "swigGetRawPtr", "interface_n_t_tile_load_listener.html#a987a738c52ac02d9d0fc63207886ce48", null ]
 ];

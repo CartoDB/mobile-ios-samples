@@ -6,6 +6,6 @@ var interface_n_t_vector_element_click_info =
     [ "getLayer", "interface_n_t_vector_element_click_info.html#aa43917ea84b143b53ae6b1d0ad08b284", null ],
     [ "getVectorElement", "interface_n_t_vector_element_click_info.html#a67dfd5d93360f907b8328637a1cc28ca", null ],
     [ "hash", "interface_n_t_vector_element_click_info.html#a3a1b466fc748ec63b4e662438f4d790a", null ],
-    [ "initWithClickType:clickPos:elementClickPos:vectorElement:layer:", "interface_n_t_vector_element_click_info.html#aea4544b130b24d13c2bebec30211afdb", null ],
-    [ "isEqual:", "interface_n_t_vector_element_click_info.html#a3f9ad63fc692d9828b0431da99097348", null ]
+    [ "isEqual:", "interface_n_t_vector_element_click_info.html#a3f9ad63fc692d9828b0431da99097348", null ],
+    [ "swigGetRawPtr", "interface_n_t_vector_element_click_info.html#aa0f975e951d777d6062dd13cb7a143f6", null ]
 ];

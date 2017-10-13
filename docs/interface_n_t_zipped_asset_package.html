@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -112,10 +112,14 @@ Inheritance diagram for NTZippedAssetPackage:</div>
 Instance Methods</h2></td></tr>
 <tr class="memitem:aee9e7fde7d1d93e1abf8d17d0173ce48"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_zipped_asset_package.html#aee9e7fde7d1d93e1abf8d17d0173ce48">initWithZipData:</a></td></tr>
 <tr class="separator:aee9e7fde7d1d93e1abf8d17d0173ce48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603a82ce5c6342db5430ccd66bb3ed17"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_zipped_asset_package.html#a603a82ce5c6342db5430ccd66bb3ed17">initWithZipData:baseAssetPackage:</a></td></tr>
+<tr class="separator:a603a82ce5c6342db5430ccd66bb3ed17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dea8967ea8e7c10a1ddc39da6463a24"><td class="memItemLeft" align="right" valign="top">(NTStringVector *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_zipped_asset_package.html#a2dea8967ea8e7c10a1ddc39da6463a24">getAssetNames</a></td></tr>
 <tr class="separator:a2dea8967ea8e7c10a1ddc39da6463a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f6bdd5ab69c29c66a02aa1c888a269c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_binary_data.html">NTBinaryData</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_zipped_asset_package.html#a0f6bdd5ab69c29c66a02aa1c888a269c">loadAsset:</a></td></tr>
 <tr class="separator:a0f6bdd5ab69c29c66a02aa1c888a269c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51204fb8f018e7a5eb32e98938ebc0b"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_zipped_asset_package.html#af51204fb8f018e7a5eb32e98938ebc0b">swigGetRawPtr</a></td></tr>
+<tr class="separator:af51204fb8f018e7a5eb32e98938ebc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afee8d5315456b44b612ffef1d6d18745"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_zipped_asset_package.html#afee8d5315456b44b612ffef1d6d18745">swigGetClassName</a></td></tr>
 <tr class="separator:afee8d5315456b44b612ffef1d6d18745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07e441bdff0358f56b70ccff9d821b4d"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_zipped_asset_package.html#a07e441bdff0358f56b70ccff9d821b4d">swigGetDirectorObject</a></td></tr>
@@ -174,6 +178,42 @@ Class Methods</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">zipData</td><td>The ZIP archive. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a603a82ce5c6342db5430ccd66bb3ed17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) <a class="el" href="interface_n_t_zipped_asset_package.html#aee9e7fde7d1d93e1abf8d17d0173ce48">initWithZipData:</a> </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_binary_data.html">NTBinaryData</a>*)&#160;</td>
+          <td class="paramname"><em>zipData</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">baseAssetPackage:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_asset_package.html">NTAssetPackage</a>*)&#160;</td>
+          <td class="paramname"><em>baseAssetPackage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructs a ZIP asset package from the archived binary data and a fallback asset package.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">zipData</td><td>The ZIP archive.<br/>
+ </td></tr>
+    <tr><td class="paramname">baseAssetPackage</td><td>The base asset package. If an asset is not found in the ZIP archive, base asset package is used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -285,9 +325,29 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af51204fb8f018e7a5eb32e98938ebc0b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="interface_n_t_asset_package.html#aa82fbbf09fe8f9a65242ba974edb1037">NTAssetPackage</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_zipped_asset_package_8h_source.html">NTZippedAssetPackage.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTZippedAssetPackage.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_zipped_asset_package_8h_source.html">NTZippedAssetPackage.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTZippedAssetPackage.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -295,7 +355,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_zipped_asset_package.html">NTZippedAssetPackage</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:05:00 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

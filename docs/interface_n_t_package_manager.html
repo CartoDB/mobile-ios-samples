@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -138,6 +138,10 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a1de081947247d51c919b782eb6403cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a799c0f25d26052d3548eca98f1c256cf"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_package_status.html">NTPackageStatus</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a799c0f25d26052d3548eca98f1c256cf">getLocalPackageStatus:version:</a></td></tr>
 <tr class="separator:a799c0f25d26052d3548eca98f1c256cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5357f74629227b19a6ec990d9809c3bc"><td class="memItemLeft" align="right" valign="top">(NTPackageInfoVector *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a5357f74629227b19a6ec990d9809c3bc">suggestPackages:projection:</a></td></tr>
+<tr class="separator:a5357f74629227b19a6ec990d9809c3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5469463cf6777e8f109c8b74d794c8"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a0f5469463cf6777e8f109c8b74d794c8">isAreaDownloaded:zoom:projection:</a></td></tr>
+<tr class="separator:a0f5469463cf6777e8f109c8b74d794c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840ff63a915a1434c035a69ad8344982"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a840ff63a915a1434c035a69ad8344982">startPackageListDownload</a></td></tr>
 <tr class="separator:a840ff63a915a1434c035a69ad8344982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a415d773b1ce84dc75d8cb3fb323c9ab7"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a415d773b1ce84dc75d8cb3fb323c9ab7">startPackageImport:version:packageFileName:</a></td></tr>
@@ -150,6 +154,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a230879bb31b53a7c00e859a0ad8fc9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a65f6358bc07ad123478c44707a94e7"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a3a65f6358bc07ad123478c44707a94e7">setPackagePriority:priority:</a></td></tr>
 <tr class="separator:a3a65f6358bc07ad123478c44707a94e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c89b604636ce153074f066ec2b9428c"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a0c89b604636ce153074f066ec2b9428c">swigGetRawPtr</a></td></tr>
+<tr class="separator:a0c89b604636ce153074f066ec2b9428c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54e4d74285721e486662e1ed7d1c8e6f"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#a54e4d74285721e486662e1ed7d1c8e6f">swigGetClassName</a></td></tr>
 <tr class="separator:a54e4d74285721e486662e1ed7d1c8e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbcf74c85a594a74828741164aa2c052"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_manager.html#abbcf74c85a594a74828741164aa2c052">swigGetDirectorObject</a></td></tr>
@@ -184,7 +190,7 @@ Class Methods</h2></td></tr>
  </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">packageId</td><td>The id of the package to cancel </td></tr>
+    <tr><td class="paramname">packageId</td><td>The id of the package to cancel. </td></tr>
   </table>
   </dd>
 </dl>
@@ -213,7 +219,7 @@ Class Methods</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The specified local package or null if it can not be found in the package list. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The specified local package or null if it can not be found in the local package list. Note that if the package is being downloaded, null is returned. </dd></dl>
 
 </div>
 </div>
@@ -269,7 +275,7 @@ Class Methods</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The status of the package or null if it is not yet downloaded or downloading. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The status of the package or null if it is not yet downloaded. If the package is currently being downloaded, its status is returned. </dd></dl>
 
 </div>
 </div>
@@ -451,6 +457,52 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0f5469463cf6777e8f109c8b74d794c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isAreaDownloaded: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a>*)&#160;</td>
+          <td class="paramname"><em>mapBounds</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">zoom:</td>
+          <td></td>
+          <td class="paramtype">(int)&#160;</td>
+          <td class="paramname"><em>zoom</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">projection:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_projection.html">NTProjection</a>*)&#160;</td>
+          <td class="paramname"><em>projection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tests if the specified map area at specified zoom level is downloaded.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mapBounds</td><td>The area bounding box.<br/>
+ </td></tr>
+    <tr><td class="paramname">zoom</td><td>The zoom level to check.<br/>
+ </td></tr>
+    <tr><td class="paramname">projection</td><td>The projection for the bounding box.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if all required tiles are downloaded and available. False otherwise. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aaf2daea103c45eee68218c6bcabe75ba"></a>
 <div class="memitem">
 <div class="memproto">
@@ -621,7 +673,7 @@ Class Methods</h2></td></tr>
  </td></tr>
     <tr><td class="paramname">version</td><td>The version of the package.<br/>
  </td></tr>
-    <tr><td class="paramname">packageFileName</td><td>The fully qualified path of the package.<br/>
+    <tr><td class="paramname">packageFileName</td><td>The fully qualified path of the package. The file name may also refer to URL or asset (using 'asset://' prefix).<br/>
  </td></tr>
   </table>
   </dd>
@@ -695,6 +747,44 @@ Class Methods</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a5357f74629227b19a6ec990d9809c3bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NTPackageInfoVector *) suggestPackages: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a>*)&#160;</td>
+          <td class="paramname"><em>mapPos</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">projection:</td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_projection.html">NTProjection</a>*)&#160;</td>
+          <td class="paramname"><em>projection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Suggests packages for given map position. Note that in order this to work, local package list must be available first.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mapPos</td><td>The map position.<br/>
+ </td></tr>
+    <tr><td class="paramname">projection</td><td>The projection for the map position.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The sorted list of suggested packages (from the best to the worst). The list may contain downloaded packages. </dd></dl>
 
 </div>
 </div>
@@ -775,9 +865,29 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0c89b604636ce153074f066ec2b9428c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_carto_package_manager.html#a7f993b5574c9705d6c61adc755d0a826">NTCartoPackageManager</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_package_manager_8h_source.html">NTPackageManager.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTPackageManager.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_package_manager_8h_source.html">NTPackageManager.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTPackageManager.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -785,7 +895,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_package_manager.html">NTPackageManager</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:10 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:56 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

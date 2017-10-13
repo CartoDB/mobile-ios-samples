@@ -5,5 +5,6 @@ var interface_n_t_geometry =
     [ "hash", "interface_n_t_geometry.html#a8631d88284bea2f824b19840652baa3c", null ],
     [ "isEqual:", "interface_n_t_geometry.html#ae147f5ec7418a30ea4ebc59fba2932b4", null ],
     [ "swigGetClassName", "interface_n_t_geometry.html#adac135ede112cc2a7e622c3dd719782e", null ],
-    [ "swigGetDirectorObject", "interface_n_t_geometry.html#a8f8b87d30351773c1bab2d38a18d87b4", null ]
+    [ "swigGetDirectorObject", "interface_n_t_geometry.html#a8f8b87d30351773c1bab2d38a18d87b4", null ],
+    [ "swigGetRawPtr", "interface_n_t_geometry.html#af4eedadcf30ab1af976cb4e18bde877b", null ]
 ];

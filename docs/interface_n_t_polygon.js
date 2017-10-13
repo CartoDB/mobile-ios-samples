@@ -12,5 +12,6 @@ var interface_n_t_polygon =
     [ "setPoses:", "interface_n_t_polygon.html#a39e3d3a98f716efae88ec6bf8342e340", null ],
     [ "setStyle:", "interface_n_t_polygon.html#a8d409b5a972604fd813f15ed77de656a", null ],
     [ "swigGetClassName", "interface_n_t_polygon.html#ad7caf30979fe72243686e050bedfbc07", null ],
-    [ "swigGetDirectorObject", "interface_n_t_polygon.html#af8d74700720d6d678647a323f9ba1dc7", null ]
+    [ "swigGetDirectorObject", "interface_n_t_polygon.html#af8d74700720d6d678647a323f9ba1dc7", null ],
+    [ "swigGetRawPtr", "interface_n_t_polygon.html#aec97047d871a9e0eb834cc9c31dc0207", null ]
 ];

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -106,8 +106,6 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a6ed67935ffa98e1157484c52ca8b9c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b2c7e837fdbcd179cb48b6ef136f91f"><td class="memItemLeft" align="right" valign="top">(NSUInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a3b2c7e837fdbcd179cb48b6ef136f91f">hash</a></td></tr>
 <tr class="separator:a3b2c7e837fdbcd179cb48b6ef136f91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a915adf2382a6401ac5651800184733b0"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a915adf2382a6401ac5651800184733b0">initWithClickType:clickPos:elementInfo:layer:</a></td></tr>
-<tr class="separator:a915adf2382a6401ac5651800184733b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8109edbe506d22793bfea3522eed8a71"><td class="memItemLeft" align="right" valign="top">(enum NTClickType)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a8109edbe506d22793bfea3522eed8a71">getClickType</a></td></tr>
 <tr class="separator:a8109edbe506d22793bfea3522eed8a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a129d040b17dd254b1f7701d78530d810"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a129d040b17dd254b1f7701d78530d810">getClickPos</a></td></tr>
@@ -116,6 +114,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a5fa3eebc2c1bfc0b43c8c8d46f0b4cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69784b9a3d749956ccb7dce580f44da8"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_layer.html">NTLayer</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a69784b9a3d749956ccb7dce580f44da8">getLayer</a></td></tr>
 <tr class="separator:a69784b9a3d749956ccb7dce580f44da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c48925c2cacababca8a86ba409c9ec"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a09c48925c2cacababca8a86ba409c9ec">swigGetRawPtr</a></td></tr>
+<tr class="separator:a09c48925c2cacababca8a86ba409c9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A container class that provides information about a click performed on<br/>
@@ -210,58 +210,6 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a915adf2382a6401ac5651800184733b0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (id) initWithClickType: </td>
-          <td></td>
-          <td class="paramtype">(enum NTClickType)&#160;</td>
-          <td class="paramname"><em>clickType</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">clickPos:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a>*)&#160;</td>
-          <td class="paramname"><em>clickPos</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">elementInfo:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_variant.html">NTVariant</a>*)&#160;</td>
-          <td class="paramname"><em>elementInfo</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">layer:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_layer.html">NTLayer</a>*)&#160;</td>
-          <td class="paramname"><em>layer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Constructs an UTFGridClickInfo object from a click position and grid element metadata.<br/>
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">clickType</td><td>The click type (SINGLE, DUAL, etc)<br/>
- </td></tr>
-    <tr><td class="paramname">clickPos</td><td>The click position in the coordinate system of the base projection.<br/>
- </td></tr>
-    <tr><td class="paramname">elementInfo</td><td>The info tag of the element that was clicked.<br/>
- </td></tr>
-    <tr><td class="paramname">layer</td><td>The layer on which the click was performed. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a6ed67935ffa98e1157484c52ca8b9c06"></a>
 <div class="memitem">
 <div class="memproto">
@@ -286,9 +234,27 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a09c48925c2cacababca8a86ba409c9ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_u_t_f_grid_click_info_8h_source.html">NTUTFGridClickInfo.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTUTFGridClickInfo.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_u_t_f_grid_click_info_8h_source.html">NTUTFGridClickInfo.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTUTFGridClickInfo.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -296,7 +262,7 @@ Instance Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_u_t_f_grid_click_info.html">NTUTFGridClickInfo</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:58 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

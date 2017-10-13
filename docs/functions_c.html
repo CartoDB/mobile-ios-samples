@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -91,6 +91,16 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>calculateAddresses:
+: <a class="el" href="interface_n_t_geocoding_service.html#a40b0401ad62c7e9bc72729a809033051">NTGeocodingService</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_geocoding_service.html#ab7cb5feb357b0a4e3cbc546c19f7a823">NTOSMOfflineGeocodingService</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_reverse_geocoding_service.html#a9495efcb92942615842efe6a6be62432">NTOSMOfflineReverseGeocodingService</a>
+, <a class="el" href="interface_n_t_package_manager_geocoding_service.html#a8eaf4ea8e993aeae74777e8410102534">NTPackageManagerGeocodingService</a>
+, <a class="el" href="interface_n_t_package_manager_reverse_geocoding_service.html#a62d639c675f156f6c2811f176e0de310">NTPackageManagerReverseGeocodingService</a>
+, <a class="el" href="interface_n_t_pelias_online_geocoding_service.html#af595522398238c73d2c845d85f91a918">NTPeliasOnlineGeocodingService</a>
+, <a class="el" href="interface_n_t_pelias_online_reverse_geocoding_service.html#aa2560ab9f307b1f90b9d57450f0df424">NTPeliasOnlineReverseGeocodingService</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_service.html#a495e71c38c76d8aae58b3172c5668984">NTReverseGeocodingService</a>
+</li>
 <li>calculateMapTile:zoom:
 : <a class="el" href="interface_n_t_tile_layer.html#ad69bfd60468c68c0e2c7eb550c41f093">NTTileLayer</a>
 </li>
@@ -107,7 +117,10 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="interface_n_t_carto_online_routing_service.html#af22fa8b3d87bcbc373a36ef7940674fc">NTCartoOnlineRoutingService</a>
 , <a class="el" href="interface_n_t_o_s_r_m_offline_routing_service.html#aafebd36f0ef5234830696d971129a77a">NTOSRMOfflineRoutingService</a>
 , <a class="el" href="interface_n_t_package_manager_routing_service.html#a0aa5b0c99923ada8880688d240be8fda">NTPackageManagerRoutingService</a>
+, <a class="el" href="interface_n_t_package_manager_valhalla_routing_service.html#a75b3fb454e444329b4fb1b3bb990836d">NTPackageManagerValhallaRoutingService</a>
 , <a class="el" href="interface_n_t_routing_service.html#a737e8c3bdc6c3f1ff266e8bf7c819ec4">NTRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_offline_routing_service.html#a6bdfad83e1549e159c50ff48a1d9d445">NTValhallaOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_online_routing_service.html#aa907a73713ade25d541fbf543706b927">NTValhallaOnlineRoutingService</a>
 </li>
 <li>calculateWritablePath:
 : <a class="el" href="interface_n_t_asset_utils.html#a36213aedc8e72fd4e6614a275ead0937">NTAssetUtils</a>
@@ -143,9 +156,6 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>close
 : <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#a31a1d2d693cf53b5f4fbffe5bfa4ccce">NTPersistentCacheTileDataSource</a>
 </li>
-<li>closeSwigExplicitNTPersistentCacheTileDataSource
-: <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#ab12f84501bf13059ee248169c84b9739">NTPersistentCacheTileDataSource</a>
-</li>
 <li>compressToInternal
 : <a class="el" href="interface_n_t_bitmap.html#ae5dbf4898e044b49dce393739f68cb1f">NTBitmap</a>
 </li>
@@ -159,6 +169,12 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 : <a class="el" href="interface_n_t_map_bounds.html#a3afcefe4885983324fd8dcc7a440a42f">NTMapBounds</a>
 , <a class="el" href="interface_n_t_screen_bounds.html#aef9b073a3e6e738db43677a8bc437499">NTScreenBounds</a>
 </li>
+<li>containsMetaDataKey:
+: <a class="el" href="interface_n_t_vector_element.html#ad8762d865303942099364bb43584b365">NTVectorElement</a>
+</li>
+<li>containsObjectKey:
+: <a class="el" href="interface_n_t_variant.html#a5fdb5b82a67e4da0d8ff2e1d203f84a8">NTVariant</a>
+</li>
 <li>containsPos:
 : <a class="el" href="interface_n_t_map_bounds.html#af057d8c118c884184b5d78765f289d35">NTMapBounds</a>
 , <a class="el" href="interface_n_t_screen_bounds.html#a7349c04bf64d089d4602931359d4c285">NTScreenBounds</a>
@@ -166,11 +182,26 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>count
 : <a class="el" href="interface_n_t_layers.html#a5da32280ad46645ef446a66631b2348c">NTLayers</a>
 </li>
+<li>countVisibleFeatures:
+: <a class="el" href="interface_n_t_torque_tile_layer.html#a2ba78ec08ba5e890837a1f2aa6b4916b">NTTorqueTileLayer</a>
+</li>
 <li>createBitmapFromUIImage:
 : <a class="el" href="interface_n_t_bitmap_utils.html#a0492a2f7785b85dac8b0e9515de6e271">NTBitmapUtils</a>
 </li>
+<li>createDataSource:
+: <a class="el" href="interface_n_t_carto_online_vector_tile_layer.html#a2ac22b3e6386e105a79f9278edbd66f1">NTCartoOnlineVectorTileLayer</a>
+</li>
 <li>createFromCompressed:
 : <a class="el" href="interface_n_t_bitmap.html#a7e70f45d50bc19ccef9178e863bfbb91">NTBitmap</a>
+</li>
+<li>createTileDecoder:styleName:
+: <a class="el" href="interface_n_t_carto_vector_tile_layer.html#afe3d9e344a8fbfe2d559d07c6390028a">NTCartoVectorTileLayer</a>
+</li>
+<li>createTileDecoderFromAssetPackage:
+: <a class="el" href="interface_n_t_carto_vector_tile_layer.html#a82f88e83bd98ad1dc03e36722eff0dd8">NTCartoVectorTileLayer</a>
+</li>
+<li>createTileDecoderFromStyle:
+: <a class="el" href="interface_n_t_carto_vector_tile_layer.html#aa70025509c3a5f9b42ecec4a736ea2cc">NTCartoVectorTileLayer</a>
 </li>
 <li>createUIImageFromBitmap:
 : <a class="el" href="interface_n_t_bitmap_utils.html#a23d1622e145c955571808fe664364d27">NTBitmapUtils</a>
@@ -190,7 +221,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:05:00 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

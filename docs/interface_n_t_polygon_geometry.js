@@ -8,5 +8,6 @@ var interface_n_t_polygon_geometry =
     [ "initWithPoses:holes:", "interface_n_t_polygon_geometry.html#a623584e618d6db07891627a531a9eda4", null ],
     [ "initWithRings:", "interface_n_t_polygon_geometry.html#a127d60d19c0c8fbdd3b467a3c1051de8", null ],
     [ "swigGetClassName", "interface_n_t_polygon_geometry.html#a76797d4a07cf7adfc8b79b1813d478d3", null ],
-    [ "swigGetDirectorObject", "interface_n_t_polygon_geometry.html#a58f1848085c20f193b89227d04c09f04", null ]
+    [ "swigGetDirectorObject", "interface_n_t_polygon_geometry.html#a58f1848085c20f193b89227d04c09f04", null ],
+    [ "swigGetRawPtr", "interface_n_t_polygon_geometry.html#ac91773d3b2c0cbf9bec27b6984a1ef6e", null ]
 ];

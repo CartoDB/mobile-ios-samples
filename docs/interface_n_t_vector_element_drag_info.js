@@ -5,5 +5,6 @@ var interface_n_t_vector_element_drag_info =
     [ "getScreenPos", "interface_n_t_vector_element_drag_info.html#ab0a2707a7a43de7cf1d3f85cb3882fd3", null ],
     [ "getVectorElement", "interface_n_t_vector_element_drag_info.html#a7af21fa29a04824820d287506465ce5e", null ],
     [ "hash", "interface_n_t_vector_element_drag_info.html#aa3208b3c39df126f9f9d0c86883abb45", null ],
-    [ "isEqual:", "interface_n_t_vector_element_drag_info.html#a693ffd62c45c85215e3972b9c6563fbb", null ]
+    [ "isEqual:", "interface_n_t_vector_element_drag_info.html#a693ffd62c45c85215e3972b9c6563fbb", null ],
+    [ "swigGetRawPtr", "interface_n_t_vector_element_drag_info.html#a578b2aec8444f3de227f92ce6ab3b814", null ]
 ];

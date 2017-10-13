@@ -31,5 +31,6 @@ var interface_n_t_view_state =
     [ "getZoom0Distance", "interface_n_t_view_state.html#afd324b55469dd69fee93a1b41d189c63", null ],
     [ "hash", "interface_n_t_view_state.html#ac889c7fbcf56a9a8a79d7bfe442d6a98", null ],
     [ "isCameraChanged", "interface_n_t_view_state.html#a4fe74c4db77176e6d3779183a482e22d", null ],
-    [ "isEqual:", "interface_n_t_view_state.html#ad8165a21281e51db2ab431779681962b", null ]
+    [ "isEqual:", "interface_n_t_view_state.html#ad8165a21281e51db2ab431779681962b", null ],
+    [ "swigGetRawPtr", "interface_n_t_view_state.html#a5f03edfc7e4dc73c05c7814ced14948a", null ]
 ];

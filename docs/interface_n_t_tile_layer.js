@@ -6,6 +6,8 @@ var interface_n_t_tile_layer =
     [ "clearTileCaches:", "interface_n_t_tile_layer.html#a7476325bcd6c99cca2b0f4a50ffbb0d2", null ],
     [ "getDataSource", "interface_n_t_tile_layer.html#a80305e14b06fd10b2c836d149356be96", null ],
     [ "getFrameNr", "interface_n_t_tile_layer.html#a84840d0d651e892724f59f470fc1438b", null ],
+    [ "getMaxOverzoomLevel", "interface_n_t_tile_layer.html#a158c1b200b51823a843ca36593b08067", null ],
+    [ "getMaxUnderzoomLevel", "interface_n_t_tile_layer.html#ad511a558fca23e15bc9d9ee663419594", null ],
     [ "getTileLoadListener", "interface_n_t_tile_layer.html#a63fc0fc7fafc4bce602270f1524a2a86", null ],
     [ "getTileSubstitutionPolicy", "interface_n_t_tile_layer.html#ab8153764b16d7f2ff26d6ff753dfbbeb", null ],
     [ "getUTFGridDataSource", "interface_n_t_tile_layer.html#a99bcc7691c49efacc60988bcc70c3e57", null ],
@@ -15,6 +17,8 @@ var interface_n_t_tile_layer =
     [ "isSynchronizedRefresh", "interface_n_t_tile_layer.html#a3d8882c2ba826567048b880b76aac1bd", null ],
     [ "isUpdateInProgress", "interface_n_t_tile_layer.html#aef2f81db70976983f1869b183fbb99f4", null ],
     [ "setFrameNr:", "interface_n_t_tile_layer.html#ac4fa67195c395679beea702e9a6a8533", null ],
+    [ "setMaxOverzoomLevel:", "interface_n_t_tile_layer.html#aba986d8239a130e033d2e27e0f732de7", null ],
+    [ "setMaxUnderzoomLevel:", "interface_n_t_tile_layer.html#a0ef4458ba9df543ce8f42b43c7789ad8", null ],
     [ "setPreloading:", "interface_n_t_tile_layer.html#a1b4ca7d180fb0629ed645eb37c16c017", null ],
     [ "setSynchronizedRefresh:", "interface_n_t_tile_layer.html#a0a44433d1373426ee3b284c4ea82c34f", null ],
     [ "setTileLoadListener:", "interface_n_t_tile_layer.html#a1acd2764c9c63a7f282e5ba9196d3698", null ],
@@ -23,5 +27,6 @@ var interface_n_t_tile_layer =
     [ "setUTFGridEventListener:", "interface_n_t_tile_layer.html#a4b63fd6b9c64c5e9ff81aea86a538a57", null ],
     [ "setZoomLevelBias:", "interface_n_t_tile_layer.html#a6d4f0fb9e51e82f6af2f0c78bba63914", null ],
     [ "swigGetClassName", "interface_n_t_tile_layer.html#af91bcffca66654f8fd157a813a2cce66", null ],
-    [ "swigGetDirectorObject", "interface_n_t_tile_layer.html#a67c6b2beff1b5ecf027861e841b88e14", null ]
+    [ "swigGetDirectorObject", "interface_n_t_tile_layer.html#a67c6b2beff1b5ecf027861e841b88e14", null ],
+    [ "swigGetRawPtr", "interface_n_t_tile_layer.html#aa0f7882608f18c5cf0c2b62e8944c15e", null ]
 ];

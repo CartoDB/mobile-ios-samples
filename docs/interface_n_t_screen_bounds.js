@@ -14,5 +14,6 @@ var interface_n_t_screen_bounds =
     [ "initWithMin:max:", "interface_n_t_screen_bounds.html#a4331f4f6592f228631e2c82e8bb4b299", null ],
     [ "intersects:", "interface_n_t_screen_bounds.html#a2bdd600ce0b38c68ff39ed175d140e69", null ],
     [ "isEqual:", "interface_n_t_screen_bounds.html#a84762672b99e60845117ce2ea3ead03a", null ],
-    [ "isEqualInternal:", "interface_n_t_screen_bounds.html#a367e5410f0af923c1c9036d309d5557e", null ]
+    [ "isEqualInternal:", "interface_n_t_screen_bounds.html#a367e5410f0af923c1c9036d309d5557e", null ],
+    [ "swigGetRawPtr", "interface_n_t_screen_bounds.html#a32704f4514522b50e3559ed35701a022", null ]
 ];

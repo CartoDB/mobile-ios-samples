@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -100,6 +100,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>getAction
 : <a class="el" href="interface_n_t_routing_instruction.html#a4e247b2531fc8a3bc72b0f97c0981c28">NTRoutingInstruction</a>
 </li>
+<li>getAddress
+: <a class="el" href="interface_n_t_geocoding_result.html#ab1e363d12ce508b006119bb72663bb6d">NTGeocodingResult</a>
+</li>
 <li>getAll
 : <a class="el" href="interface_n_t_layers.html#ae7d0e0bc2bca1b8f7472b9405ee1da73">NTLayers</a>
 , <a class="el" href="interface_n_t_local_vector_data_source.html#a3b4fe876c0f9396c9101a9ce5cf4c069">NTLocalVectorDataSource</a>
@@ -123,6 +126,10 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getAnchorScreenPos
 : <a class="el" href="interface_n_t_popup_draw_info.html#ab7b3ab7958ddd148d9398c3a30c6fd58">NTPopupDrawInfo</a>
+</li>
+<li>getAnimationStyle
+: <a class="el" href="interface_n_t_billboard_style.html#ae470effa0dba3451743a0172e6f17201">NTBillboardStyle</a>
+, <a class="el" href="interface_n_t_billboard_style_builder.html#a8743da6fce21204a088a03f6edabec42">NTBillboardStyleBuilder</a>
 </li>
 <li>getAPITemplate
 : <a class="el" href="interface_n_t_carto_maps_service.html#abafaa67eb21a7d12f5d8754d83cd01c1">NTCartoMapsService</a>
@@ -190,7 +197,6 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_marker_style_builder.html#a31ce1a44ca5510710d338ae4babb7fc6">NTMarkerStyleBuilder</a>
 , <a class="el" href="interface_n_t_point_style.html#a9a233ba76ce3c6387ed2f286e33ec509">NTPointStyle</a>
 , <a class="el" href="interface_n_t_point_style_builder.html#ab55a7fd9b36d1bb71b236672bcd77402">NTPointStyleBuilder</a>
-, <a class="el" href="interface_n_t_polygon_style.html#a65bbd758a40252122afa85b2c8466392">NTPolygonStyle</a>
 , <a class="el" href="interface_n_t_solid_layer.html#a5f9002583f426b4ecabba6b88a19a5d8">NTSolidLayer</a>
 </li>
 <li>getBitmapScale
@@ -198,6 +204,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getBool
 : <a class="el" href="interface_n_t_variant.html#a2c614cd825a173435d84102243891377">NTVariant</a>
+</li>
+<li>getBoundingPolygon:
+: <a class="el" href="interface_n_t_package_tile_mask.html#a2e8d1dfc939e0ee5102cf6a019d55df3">NTPackageTileMask</a>
 </li>
 <li>getBounds
 : <a class="el" href="interface_n_t_billboard.html#a7b819bff0d8507c9ce37437fd7796dca">NTBillboard</a>
@@ -207,8 +216,11 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_projection.html#a71f68eb1b9cabe8a0ec93378bb8c271a">NTProjection</a>
 , <a class="el" href="interface_n_t_vector_element.html#a7332e6e76dd9f34d74031cde85f513b4">NTVectorElement</a>
 </li>
-<li>getBuffering
-: <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#a42226c2ff08994dc198329ba5273086a">NTMBVectorTileDecoder</a>
+<li>getBuilderMode
+: <a class="el" href="interface_n_t_cluster_element_builder.html#a728e450756a843f2df109b7ea0faa107">NTClusterElementBuilder</a>
+</li>
+<li>getBuilderModeSwigExplicitNTClusterElementBuilder
+: <a class="el" href="interface_n_t_cluster_element_builder.html#aca863239eb38a08005931b681ef97220">NTClusterElementBuilder</a>
 </li>
 <li>getBuildingRenderOrder
 : <a class="el" href="interface_n_t_vector_tile_layer.html#a88e4a3b38e90e6d93f4aa8067b3777d0">NTVectorTileLayer</a>
@@ -230,6 +242,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>getCartoCSSStyleSet
 : <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#ab33bc19a57ceafa3696a14c889de6786">NTMBVectorTileDecoder</a>
 </li>
+<li>getCategories
+: <a class="el" href="interface_n_t_address.html#a8b2ab623257df3fe88ed665d8ab0ed93">NTAddress</a>
+</li>
 <li>getCenter
 : <a class="el" href="interface_n_t_map_bounds.html#a597dbc27a6bebc6864a6f5d7b7c72123">NTMapBounds</a>
 , <a class="el" href="interface_n_t_screen_bounds.html#af995bc4f6198ff0fb398c1cd056d1ad0">NTScreenBounds</a>
@@ -241,20 +256,27 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_point_geometry.html#af63dd28ab99804ff56256ce283840c1d">NTPointGeometry</a>
 , <a class="el" href="interface_n_t_polygon_geometry.html#a0045f54d13ba281b0faa2daf5893c49f">NTPolygonGeometry</a>
 </li>
+<li>getClearColor
+: <a class="el" href="interface_n_t_options.html#ad334cd7bafa832d386db69b731dcd108">NTOptions</a>
+</li>
 <li>getClickPos
 : <a class="el" href="interface_n_t_map_click_info.html#a75c93657cd6160aad8f2425485c1fd02">NTMapClickInfo</a>
 , <a class="el" href="interface_n_t_popup_click_info.html#ac2f80b4edd894450d17d775c286972cd">NTPopupClickInfo</a>
+, <a class="el" href="interface_n_t_raster_tile_click_info.html#a2032cf04cfc122897e45de89befaf532">NTRasterTileClickInfo</a>
 , <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a129d040b17dd254b1f7701d78530d810">NTUTFGridClickInfo</a>
 , <a class="el" href="interface_n_t_vector_element_click_info.html#a2cd271b440cd906d26b9b3b6cb9f84c8">NTVectorElementClickInfo</a>
 , <a class="el" href="interface_n_t_vector_tile_click_info.html#ab44c5ec1be20324bef73b2cfa69f5468">NTVectorTileClickInfo</a>
 </li>
 <li>getClickSize
-: <a class="el" href="interface_n_t_point_style.html#a246a7c7d5bbf170aef8395d5bfbc3036">NTPointStyle</a>
+: <a class="el" href="interface_n_t_marker_style.html#acbca96a14825e1b3508bcb806891ed5c">NTMarkerStyle</a>
+, <a class="el" href="interface_n_t_marker_style_builder.html#a58c440052692488363d8472fe4e6cfd5">NTMarkerStyleBuilder</a>
+, <a class="el" href="interface_n_t_point_style.html#a246a7c7d5bbf170aef8395d5bfbc3036">NTPointStyle</a>
 , <a class="el" href="interface_n_t_point_style_builder.html#a8aedfb1e91f507834761aa4a30e81047">NTPointStyleBuilder</a>
 </li>
 <li>getClickType
 : <a class="el" href="interface_n_t_map_click_info.html#aa3819a8919d5e8dd80258cee30b35d50">NTMapClickInfo</a>
 , <a class="el" href="interface_n_t_popup_click_info.html#aea5e758214c2d4485053df7f80ce3fe9">NTPopupClickInfo</a>
+, <a class="el" href="interface_n_t_raster_tile_click_info.html#ad6de7a0454c34dce6397f01bb06a9184">NTRasterTileClickInfo</a>
 , <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a8109edbe506d22793bfea3522eed8a71">NTUTFGridClickInfo</a>
 , <a class="el" href="interface_n_t_vector_element_click_info.html#aa71ae55e1dfe3e2bd3468b265af211c8">NTVectorElementClickInfo</a>
 , <a class="el" href="interface_n_t_vector_tile_click_info.html#ab3ec8dea0616458ce6cf6d3dde6ce553">NTVectorTileClickInfo</a>
@@ -290,6 +312,12 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>getCosHalfFOVY
 : <a class="el" href="interface_n_t_view_state.html#acbbea62fac3029d99137bf2f1ba41106">NTViewState</a>
 </li>
+<li>getCountry
+: <a class="el" href="interface_n_t_address.html#aa82e68d19e105e89156462d42a3b7359">NTAddress</a>
+</li>
+<li>getCounty
+: <a class="el" href="interface_n_t_address.html#a007c70836d255eb77a822458972b8708">NTAddress</a>
+</li>
 <li>getCurrentAction
 : <a class="el" href="interface_n_t_package_status.html#a5a4ca2db738d9510eeb5b7c77bfb4da2">NTPackageStatus</a>
 </li>
@@ -299,13 +327,25 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getDataExtent
 : <a class="el" href="interface_n_t_bitmap_overlay_raster_tile_data_source.html#a717b79e27f94ee1700dc5ea2d36038b7">NTBitmapOverlayRasterTileDataSource</a>
+, <a class="el" href="interface_n_t_cache_tile_data_source.html#ac94f90fdf7e352ee896b4b4634edf7d6">NTCacheTileDataSource</a>
+, <a class="el" href="interface_n_t_combined_tile_data_source.html#af6c19515c5e9cba1ffa1791548622427">NTCombinedTileDataSource</a>
 , <a class="el" href="interface_n_t_local_vector_data_source.html#aaf44fc89518a56ad1d6f42207a098a7a">NTLocalVectorDataSource</a>
 , <a class="el" href="interface_n_t_m_b_tiles_tile_data_source.html#ac7e1863e295997b1d375064bae10c8c9">NTMBTilesTileDataSource</a>
+, <a class="el" href="interface_n_t_tile_data_source.html#ab9a73570a27e8411eea609c16fa6ea45">NTTileDataSource</a>
+, <a class="el" href="interface_n_t_vector_data_source.html#acd7e69384ad2ed2438a8cbd4dafe9f15">NTVectorDataSource</a>
+</li>
+<li>getDataExtentSwigExplicitNTTileDataSource
+: <a class="el" href="interface_n_t_tile_data_source.html#ae141386cca000aade293fd06f7045de5">NTTileDataSource</a>
+</li>
+<li>getDataExtentSwigExplicitNTVectorDataSource
+: <a class="el" href="interface_n_t_vector_data_source.html#a8e63201c6cccc56e48649e87dc7881d7">NTVectorDataSource</a>
 </li>
 <li>getDataSource
 : <a class="el" href="interface_n_t_cache_tile_data_source.html#a16dcd49d12009e545649a575cf07f285">NTCacheTileDataSource</a>
 , <a class="el" href="interface_n_t_tile_layer.html#a80305e14b06fd10b2c836d149356be96">NTTileLayer</a>
+, <a class="el" href="interface_n_t_vector_element_search_service.html#a101de0f3278cd69a70a7d00063fbac3b">NTVectorElementSearchService</a>
 , <a class="el" href="interface_n_t_vector_layer.html#a401abe6f11be0855f8fe806ffcadc1cb">NTVectorLayer</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a5ce555455b674a5fc2e3dad2c8448058">NTVectorTileSearchService</a>
 </li>
 <li>getDelta
 : <a class="el" href="interface_n_t_map_bounds.html#a81c5846eca596d40efa02772bdf721b4">NTMapBounds</a>
@@ -366,17 +406,30 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>getEnvelopeThreadPoolSize
 : <a class="el" href="interface_n_t_options.html#a6c65c1829db14e7402775652edb9ab4c">NTOptions</a>
 </li>
+<li>getFadeAnimationType
+: <a class="el" href="interface_n_t_animation_style.html#acc3e6a6ae2de3555dc6f2051312e1fa2">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#a6a43cae36a0535c5da299726d47bf133">NTAnimationStyleBuilder</a>
+</li>
+<li>getFallbackLanguage
+: <a class="el" href="interface_n_t_carto_vector_tile_layer.html#acbdeb7542e0d5aebb627de2126e39b48">NTCartoVectorTileLayer</a>
+</li>
 <li>getFar
 : <a class="el" href="interface_n_t_view_state.html#a9535ce9591a68079cf00f06facdf3663">NTViewState</a>
 </li>
 <li>getFeature
-: <a class="el" href="interface_n_t_vector_tile_click_info.html#a5d0c379dc62a3ed0477fb49a4a5ed3d0">NTVectorTileClickInfo</a>
+: <a class="el" href="interface_n_t_vector_tile_click_info.html#aabcf02a3d11cd68ffeff0bb63ce8b63a">NTVectorTileClickInfo</a>
 </li>
 <li>getFeature:
 : <a class="el" href="interface_n_t_feature_collection.html#ad9a146c48145a19e1b212834d4dfe8cf">NTFeatureCollection</a>
+, <a class="el" href="interface_n_t_vector_tile_feature_collection.html#a8a995e3e5f94c4395d1904beae90680a">NTVectorTileFeatureCollection</a>
 </li>
 <li>getFeatureClickPos
 : <a class="el" href="interface_n_t_vector_tile_click_info.html#ac859040c2277bdd33b5f1df834ef4c10">NTVectorTileClickInfo</a>
+</li>
+<li>getFeatureCollection
+: <a class="el" href="interface_n_t_feature_collection_search_service.html#ad9de47a94be9e1320c6854d1df887007">NTFeatureCollectionSearchService</a>
+, <a class="el" href="interface_n_t_geocoding_result.html#ab6369e55c7aae86fa60acd63837c2915">NTGeocodingResult</a>
+, <a class="el" href="interface_n_t_local_vector_data_source.html#a0a63537d0da9ab5096db3d84df94d752">NTLocalVectorDataSource</a>
 </li>
 <li>getFeatureCount
 : <a class="el" href="interface_n_t_feature_collection.html#a7ddb26e714a0bab03133facd7d0c82d7">NTFeatureCollection</a>
@@ -389,6 +442,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getFieldOfViewY
 : <a class="el" href="interface_n_t_options.html#a3c6aa7cc050b9fd4437fe162f7e596db">NTOptions</a>
+</li>
+<li>getFilterExpression
+: <a class="el" href="interface_n_t_search_request.html#aa71a6d14f970ac6a4a55ea105ce2276a">NTSearchRequest</a>
 </li>
 <li>getFocusPointOffset
 : <a class="el" href="interface_n_t_options.html#a3839336728a8a3db689d107307dff914">NTOptions</a>
@@ -405,8 +461,8 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_text_style_builder.html#aa9009f94c290f49070c2019b86f6c57e">NTTextStyleBuilder</a>
 </li>
 <li>getFontSize
-: <a class="el" href="interface_n_t_text_style.html#aa9d1a00d35c4eb0bc8229b0ed8018c62">NTTextStyle</a>
-, <a class="el" href="interface_n_t_text_style_builder.html#a9c24349a9134217ff9a66fc4949b8e83">NTTextStyleBuilder</a>
+: <a class="el" href="interface_n_t_text_style.html#a1219a50e6d8eb79d26ba60216e1eaa83">NTTextStyle</a>
+, <a class="el" href="interface_n_t_text_style_builder.html#adf2f992a75cb9be2c9e2b6a884c4dadb">NTTextStyleBuilder</a>
 </li>
 <li>getFOVY
 : <a class="el" href="interface_n_t_view_state.html#a6bd0393f4b84847580bae281178aeed2">NTViewState</a>
@@ -432,6 +488,7 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_point.html#a7480c120b5ec48bdd3e724a8f4fe472e">NTPoint</a>
 , <a class="el" href="interface_n_t_polygon.html#a05ff6bbd6c774b77ea517513b72dae18">NTPolygon</a>
 , <a class="el" href="interface_n_t_polygon3_d.html#aef8186f06e52ee043cc678fd6736af5b">NTPolygon3D</a>
+, <a class="el" href="interface_n_t_search_request.html#ac9796900ea5880dd24cba32f2b213ea7">NTSearchRequest</a>
 , <a class="el" href="interface_n_t_vector_element.html#a4cf96a43d8b29a93e49e0746d0d79187">NTVectorElement</a>
 </li>
 <li>getGeometry:
@@ -470,14 +527,21 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 : <a class="el" href="interface_n_t_billboard_style.html#af5dc637aa2057e026ad3e0054fa16a02">NTBillboardStyle</a>
 , <a class="el" href="interface_n_t_billboard_style_builder.html#a8980dc9ba6073a600a811a556eade104">NTBillboardStyleBuilder</a>
 </li>
+<li>getHouseNumber
+: <a class="el" href="interface_n_t_address.html#aa1ad87f22ed9ef5b5842879818eb209d">NTAddress</a>
+</li>
 <li>getHTTPHeaders
 : <a class="el" href="interface_n_t_h_t_t_p_tile_data_source.html#a793fe7be0d47d383789f23dcac213a5e">NTHTTPTileDataSource</a>
 </li>
 <li>getId
 : <a class="el" href="interface_n_t_vector_element.html#a7a8a3766f177ea07a981beaeba1fb1ed">NTVectorElement</a>
+, <a class="el" href="interface_n_t_vector_tile_feature.html#ae1e2176520cd6b8bcbf5100af0b29512">NTVectorTileFeature</a>
 </li>
 <li>getInstructions
 : <a class="el" href="interface_n_t_routing_result.html#a6cc5298d892b018959d4130a0adf31fc">NTRoutingResult</a>
+</li>
+<li>getInterpolatedColor
+: <a class="el" href="interface_n_t_raster_tile_click_info.html#a4b3748629747d194be55105e9f971576">NTRasterTileClickInfo</a>
 </li>
 <li>getLabelRenderOrder
 : <a class="el" href="interface_n_t_vector_tile_layer.html#a999fc5e122141bf3498456713dd3229d">NTVectorTileLayer</a>
@@ -486,15 +550,25 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 : <a class="el" href="interface_n_t_carto_vector_tile_layer.html#af00096e57343adfa90d36f06901fc89a">NTCartoVectorTileLayer</a>
 </li>
 <li>getLayer
-: <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a69784b9a3d749956ccb7dce580f44da8">NTUTFGridClickInfo</a>
+: <a class="el" href="interface_n_t_raster_tile_click_info.html#a7c571b6f87c6f0b08e7bc8633b7e34af">NTRasterTileClickInfo</a>
+, <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a69784b9a3d749956ccb7dce580f44da8">NTUTFGridClickInfo</a>
 , <a class="el" href="interface_n_t_vector_element_click_info.html#aa43917ea84b143b53ae6b1d0ad08b284">NTVectorElementClickInfo</a>
 , <a class="el" href="interface_n_t_vector_tile_click_info.html#aeb016a0ecdfe34ada255946747225733">NTVectorTileClickInfo</a>
 </li>
-<li>getLayerNameOverride
-: <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#a5a5179395534f7afdec40a8322670ae1">NTMBVectorTileDecoder</a>
+<li>getLayerIds
+: <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#a105879c725cc7be4de902d24858f7317">NTCartoVectorTileDecoder</a>
+</li>
+<li>getLayerIndices
+: <a class="el" href="interface_n_t_carto_maps_service.html#a81a263dd7987a7e8699301239a98a91c">NTCartoMapsService</a>
+</li>
+<li>getLayerName
+: <a class="el" href="interface_n_t_vector_tile_feature.html#ac1e46de5949340790515d9e85e5423fb">NTVectorTileFeature</a>
 </li>
 <li>getLayers
 : <a class="el" href="interface_n_t_map_view.html#abd71ec7913fc5f9731b51200a86a4f91">NTMapView</a>
+</li>
+<li>getLayerStyleSet:
+: <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#ab249ddf3b01cfea7af48336caa3614ca">NTCartoVectorTileDecoder</a>
 </li>
 <li>getLeftColor
 : <a class="el" href="interface_n_t_balloon_popup_style.html#aa1db71f4915ea39fcbea904844883939">NTBalloonPopupStyle</a>
@@ -522,6 +596,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_polygon_style.html#a40474efa2d41bf3032826baeebeb8f22">NTPolygonStyle</a>
 , <a class="el" href="interface_n_t_polygon_style_builder.html#a1c99edc14f9b05d343d67586a1c309fd">NTPolygonStyleBuilder</a>
 </li>
+<li>getLocality
+: <a class="el" href="interface_n_t_address.html#afdd159a207785d4a617868dd77e18a21">NTAddress</a>
+</li>
 <li>getLocalPackage:
 : <a class="el" href="interface_n_t_package_manager.html#a1de081947247d51c919b782eb6403cc2">NTPackageManager</a>
 </li>
@@ -533,6 +610,13 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getLocalScale:
 : <a class="el" href="interface_n_t_projection.html#ab228eaa3f569b9ee3779a04db70f309e">NTProjection</a>
+</li>
+<li>getLocation
+: <a class="el" href="interface_n_t_geocoding_request.html#a136508b07be422cc8d8194beaa3f97cb">NTGeocodingRequest</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_request.html#ad74c6bca02dad55ea422600f1c6e4180">NTReverseGeocodingRequest</a>
+</li>
+<li>getLocationRadius
+: <a class="el" href="interface_n_t_geocoding_request.html#a8b9050f18f57fb2da87a3a625e3820f5">NTGeocodingRequest</a>
 </li>
 <li>getLogEventListener
 : <a class="el" href="interface_n_t_log.html#a9e3f2b1975b46902922442a5dd490c78">NTLog</a>
@@ -559,7 +643,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 : <a class="el" href="interface_n_t_map_renderer.html#a2a17c160a1553cbc1d94c4a5f04b2bc3">NTMapRenderer</a>
 </li>
 <li>getMapTile
-: <a class="el" href="interface_n_t_vector_tile_click_info.html#a86e3f6d75d9be5108fde19595d16265f">NTVectorTileClickInfo</a>
+: <a class="el" href="interface_n_t_raster_tile_click_info.html#abd17f63b00a941a0a5c238243fe2cd1e">NTRasterTileClickInfo</a>
+, <a class="el" href="interface_n_t_vector_tile_click_info.html#a86e3f6d75d9be5108fde19595d16265f">NTVectorTileClickInfo</a>
+, <a class="el" href="interface_n_t_vector_tile_feature.html#a94773a484addcbcdf1ca99e61f90a2c6">NTVectorTileFeature</a>
 </li>
 <li>getMax
 : <a class="el" href="interface_n_t_map_bounds.html#a4e61dd240fe29b559002fe63bf1d4686">NTMapBounds</a>
@@ -572,13 +658,21 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>getMaximumClusterZoom
 : <a class="el" href="interface_n_t_clustered_vector_layer.html#ab79f3aa8d4758a801a726366ff928819">NTClusteredVectorLayer</a>
 </li>
+<li>getMaxOverzoomLevel
+: <a class="el" href="interface_n_t_tile_layer.html#a158c1b200b51823a843ca36593b08067">NTTileLayer</a>
+</li>
+<li>getMaxUnderzoomLevel
+: <a class="el" href="interface_n_t_tile_layer.html#ad511a558fca23e15bc9d9ee663419594">NTTileLayer</a>
+</li>
 <li>getMaxZoom
 : <a class="el" href="interface_n_t_cache_tile_data_source.html#a3b129e693e1702758c652f5fd952beca">NTCacheTileDataSource</a>
+, <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#a60d2e32a196364d08ea0f84b753429ad">NTCartoVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_combined_tile_data_source.html#ad24473fe9a7b4b9aa2f8c7cc4970062f">NTCombinedTileDataSource</a>
 , <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#a4ea6e3301d9c17cb9874ca224cc95602">NTMBVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_tile_data_source.html#acd0d7b6149fae3e25793df8bba4a8c00">NTTileDataSource</a>
 , <a class="el" href="interface_n_t_torque_tile_decoder.html#abf34bdd0b376d5216c3092352e7b1022">NTTorqueTileDecoder</a>
 , <a class="el" href="interface_n_t_vector_tile_decoder.html#a8584357e9201940e1dc5c630eb686c66">NTVectorTileDecoder</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a1d803ce883750f7d6532b2053aaf94ab">NTVectorTileSearchService</a>
 </li>
 <li>getMaxZoomLevel
 : <a class="el" href="interface_n_t_package_tile_mask.html#a4eb2ec7283d9ccf5297969b86b9fbac7">NTPackageTileMask</a>
@@ -606,17 +700,20 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getMinZoom
 : <a class="el" href="interface_n_t_cache_tile_data_source.html#a77bb867a37c5abdf3a7232f5df554cc7">NTCacheTileDataSource</a>
+, <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#aa66ad38b61dcd068a23f255d98a194e3">NTCartoVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_combined_tile_data_source.html#a7f5de94403d5316910d8ab17905c58f3">NTCombinedTileDataSource</a>
 , <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#a17067457cd6f04e54cbb338198f64b48">NTMBVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_tile_data_source.html#af75186f24f771cceb1a7cfdc9c71b951">NTTileDataSource</a>
 , <a class="el" href="interface_n_t_torque_tile_decoder.html#a9a8c4650190d42d664468ab7cfe30dbb">NTTorqueTileDecoder</a>
 , <a class="el" href="interface_n_t_vector_tile_decoder.html#a80cdb29c429d27a8635d6e799898b0f9">NTVectorTileDecoder</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a1153ffdb2c4525ae39069088c7b0e1fa">NTVectorTileSearchService</a>
 </li>
 <li>getMinZoomSwigExplicitNTTileDataSource
 : <a class="el" href="interface_n_t_tile_data_source.html#a0aa60e7be00c27ab1143e805a0745555">NTTileDataSource</a>
 </li>
 <li>getName
-: <a class="el" href="interface_n_t_e_p_s_g3857.html#af39e89858cd16aeb75d07840333cb9b8">NTEPSG3857</a>
+: <a class="el" href="interface_n_t_address.html#aff54b75a3aaa9048cd9ee39959bf2917">NTAddress</a>
+, <a class="el" href="interface_n_t_e_p_s_g3857.html#af39e89858cd16aeb75d07840333cb9b8">NTEPSG3857</a>
 , <a class="el" href="interface_n_t_package_info.html#a285e556696391bfc25ccd23639bab5e7">NTPackageInfo</a>
 , <a class="el" href="interface_n_t_projection.html#a2cc8ecdd8640ff3f0a72862f686c6a69">NTProjection</a>
 </li>
@@ -625,6 +722,12 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getNear
 : <a class="el" href="interface_n_t_view_state.html#a43db92fd096c50e046e3ff619bbac9f1">NTViewState</a>
+</li>
+<li>getNearestColor
+: <a class="el" href="interface_n_t_raster_tile_click_info.html#a487a9738e44bd2d41b5248a76f9774a0">NTRasterTileClickInfo</a>
+</li>
+<li>getNeighbourhood
+: <a class="el" href="interface_n_t_address.html#af9f68b1a208b45032208f1de73c54ac5">NTAddress</a>
 </li>
 <li>getNormalized
 : <a class="el" href="interface_n_t_map_vec.html#ac7b18f3eb6cf3aaf82c102714739e737">NTMapVec</a>
@@ -667,6 +770,14 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getPanningMode
 : <a class="el" href="interface_n_t_options.html#a2e67beec880d3c9909ae7391753b6b7f">NTOptions</a>
+</li>
+<li>getPhaseInDuration
+: <a class="el" href="interface_n_t_animation_style.html#a119349f040efde31bebf87d97701b296">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#ad24c71dc7388f7a9d4765242bb977bd3">NTAnimationStyleBuilder</a>
+</li>
+<li>getPhaseOutDuration
+: <a class="el" href="interface_n_t_animation_style.html#ab4b66c3ebe80e6845619967bbdd8c894">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#a8963c9d0ca729b95d9756a37307b6c71">NTAnimationStyleBuilder</a>
 </li>
 <li>getPivotMode
 : <a class="el" href="interface_n_t_options.html#a8751b88d9fcf395797e9f723c6dddf60">NTOptions</a>
@@ -711,12 +822,22 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_polygon3_d.html#a71d96374c405560c3b8f98c379cd77bc">NTPolygon3D</a>
 , <a class="el" href="interface_n_t_polygon_geometry.html#a92cd72602cfc19f1ea1c3a228f2c28e3">NTPolygonGeometry</a>
 </li>
+<li>getProfile
+: <a class="el" href="interface_n_t_package_manager_valhalla_routing_service.html#a52afa14e8ab820444eeeab89cc372a68">NTPackageManagerValhallaRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_offline_routing_service.html#a28a856a9be68bb2941901b5f1c2a13a0">NTValhallaOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_online_routing_service.html#ae52ce9a77844d510e7239046cb17706d">NTValhallaOnlineRoutingService</a>
+</li>
 <li>getProgress
 : <a class="el" href="interface_n_t_package_status.html#a0d1c9b4e97a32d92b5eca4261ef3ff2a">NTPackageStatus</a>
 </li>
 <li>getProjection
-: <a class="el" href="interface_n_t_routing_request.html#a3cad10a5925f2783c6eeab30e21c965c">NTRoutingRequest</a>
+: <a class="el" href="interface_n_t_feature_collection_search_service.html#ab8725596e764a254c761e63189935eb3">NTFeatureCollectionSearchService</a>
+, <a class="el" href="interface_n_t_geocoding_request.html#aba0385eeb420b1209ac47b4e20311781">NTGeocodingRequest</a>
+, <a class="el" href="interface_n_t_geocoding_result.html#aee825af6c3bfb61e8eea315ff74a4b5a">NTGeocodingResult</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_request.html#a2a055f02f0024bbbff2f1309849806f5">NTReverseGeocodingRequest</a>
+, <a class="el" href="interface_n_t_routing_request.html#a3cad10a5925f2783c6eeab30e21c965c">NTRoutingRequest</a>
 , <a class="el" href="interface_n_t_routing_result.html#a72dc460f1aadd28dd615b7245982496a">NTRoutingResult</a>
+, <a class="el" href="interface_n_t_search_request.html#ad3f7a722825c07f80513648760496128">NTSearchRequest</a>
 , <a class="el" href="interface_n_t_tile_data_source.html#accb37f687a2b2aafa5ec9acd28eb9789">NTTileDataSource</a>
 , <a class="el" href="interface_n_t_vector_data_source.html#a9f1acc715eac3be5484e5ee9e49f5d61">NTVectorDataSource</a>
 </li>
@@ -730,8 +851,31 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>getProperties
 : <a class="el" href="interface_n_t_feature.html#a73b58337d392b5e260217e7a48684bcb">NTFeature</a>
 </li>
+<li>getQuery
+: <a class="el" href="interface_n_t_geocoding_request.html#ae5ab694a8423bbafd5796844bd4b54d8">NTGeocodingRequest</a>
+</li>
 <li>getR
 : <a class="el" href="interface_n_t_color.html#ad0074439aa6b0e5c55360994c1e23933">NTColor</a>
+</li>
+<li>getRank
+: <a class="el" href="interface_n_t_geocoding_result.html#a663efde6dcec1e7b1c7c2103c7731c95">NTGeocodingResult</a>
+</li>
+<li>getRasterTileEventListener
+: <a class="el" href="interface_n_t_raster_tile_layer.html#aca0a731a26d8d108bc25e9cb76f4178b">NTRasterTileLayer</a>
+</li>
+<li>getRegexFilter
+: <a class="el" href="interface_n_t_search_request.html#ab144d83fe82d10d1b6bec47ee91027d9">NTSearchRequest</a>
+</li>
+<li>getRegion
+: <a class="el" href="interface_n_t_address.html#a38c1278dc716d4288dcd8987ba802836">NTAddress</a>
+</li>
+<li>getRelativeSpeed
+: <a class="el" href="interface_n_t_animation_style.html#a0e462dd47e2ab5d35fa5ad9193842165">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#a22cf98ea59a029f107f6b3f362d95f96">NTAnimationStyleBuilder</a>
+</li>
+<li>getRenderScale
+: <a class="el" href="interface_n_t_label_style.html#a1870b5ab2cc22edea49ffcc2733c6bb9">NTLabelStyle</a>
+, <a class="el" href="interface_n_t_label_style_builder.html#a7f9a31c19cceab8e885229556ca7f1ed">NTLabelStyleBuilder</a>
 </li>
 <li>getResizedBitmap:height:
 : <a class="el" href="interface_n_t_bitmap.html#a323705dd9f1a1300f5fb0e2b87cd6fb2">NTBitmap</a>
@@ -795,6 +939,10 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <li>getScreenWidth
 : <a class="el" href="interface_n_t_view_state.html#ad8251c2b9214c36ea13c6cdb5e895977">NTViewState</a>
 </li>
+<li>getSearchRadius
+: <a class="el" href="interface_n_t_reverse_geocoding_request.html#a9fd7dcea8632bde4a4b03c14c94adba7">NTReverseGeocodingRequest</a>
+, <a class="el" href="interface_n_t_search_request.html#ad82246933b369d440451301c57d3fca8">NTSearchRequest</a>
+</li>
 <li>getSelectedVectorElement
 : <a class="el" href="interface_n_t_editable_vector_layer.html#ae2ddb4fa218c4fbbcd77fc3bc387be8a">NTEditableVectorLayer</a>
 </li>
@@ -821,11 +969,18 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 , <a class="el" href="interface_n_t_point_style.html#afa8bd91d766e7d5971c54dca25625994">NTPointStyle</a>
 , <a class="el" href="interface_n_t_point_style_builder.html#a2f0916441dd4499013a3d4d3a1f9b39d">NTPointStyleBuilder</a>
 </li>
+<li>getSizeAnimationType
+: <a class="el" href="interface_n_t_animation_style.html#a9012ab5aa78629df01ee84bd161a4fb6">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#a5e49a7c548aa361292ef4b62f75ef67e">NTAnimationStyleBuilder</a>
+</li>
 <li>getSkyBitmap
 : <a class="el" href="interface_n_t_options.html#a2a4dde17197bc23b769af728ebe41b9f">NTOptions</a>
 </li>
 <li>getSourceProjection
 : <a class="el" href="interface_n_t_geo_j_s_o_n_geometry_writer.html#acbcde924c48ace874ec26b2f3fa589b8">NTGeoJSONGeometryWriter</a>
+</li>
+<li>getStreet
+: <a class="el" href="interface_n_t_address.html#a8158dfd6a3f287c13b41a9f42a01b1b8">NTAddress</a>
 </li>
 <li>getStreetName
 : <a class="el" href="interface_n_t_routing_instruction.html#a75e45963126303d1d69cfe40e4c90d35">NTRoutingInstruction</a>
@@ -866,6 +1021,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getStyleAssetName
 : <a class="el" href="interface_n_t_compiled_style_set.html#ac1d35b3cf9f521cbe2b79b50b3bc1983">NTCompiledStyleSet</a>
+</li>
+<li>getStyleAssetPackage:
+: <a class="el" href="interface_n_t_carto_package_manager.html#a7ae849cccb69163a5f79e4db758891f2">NTCartoPackageManager</a>
 </li>
 <li>getStyleName
 : <a class="el" href="interface_n_t_compiled_style_set.html#a9d46f59551f264b86f6f9ae64c5b1ab7">NTCompiledStyleSet</a>
@@ -912,6 +1070,7 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 </li>
 <li>getTileDecoder
 : <a class="el" href="interface_n_t_vector_tile_layer.html#a1756ae8a72a0f0d6f398fff7e8428083">NTVectorTileLayer</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a51a4a610878bf622501264b1a7d3e6a6">NTVectorTileSearchService</a>
 </li>
 <li>getTileDrawSize
 : <a class="el" href="interface_n_t_options.html#a49a6739efcd1aaf2921a3fe00e2fecda">NTOptions</a>
@@ -926,7 +1085,7 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 : <a class="el" href="interface_n_t_package_info.html#ad883a1e72e15db419d37d4c1ba74bf80">NTPackageInfo</a>
 </li>
 <li>getTileStatus:
-: <a class="el" href="interface_n_t_package_tile_mask.html#a61526e4cd941e50af9ede92982cf715d">NTPackageTileMask</a>
+: <a class="el" href="interface_n_t_package_tile_mask.html#a64211ed6557b5ef6a3c973a9ed506fec">NTPackageTileMask</a>
 </li>
 <li>getTileSubstitutionPolicy
 : <a class="el" href="interface_n_t_tile_layer.html#ab8153764b16d7f2ff26d6ff753dfbbeb">NTTileLayer</a>
@@ -1026,6 +1185,9 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 : <a class="el" href="interface_n_t_carto_maps_service.html#abbe8971246404ca02f81f33ffde52a56">NTCartoMapsService</a>
 , <a class="el" href="interface_n_t_carto_vis_loader.html#a5680aedce322e9c524a70972a3dae0f7">NTCartoVisLoader</a>
 </li>
+<li>getVectorTileBufferSize
+: <a class="el" href="interface_n_t_carto_maps_service.html#ae8a7e399aee007641ca4abe76fb74d78">NTCartoMapsService</a>
+</li>
 <li>getVectorTileEventListener
 : <a class="el" href="interface_n_t_vector_tile_layer.html#af3df96dcc91b0e0d28e5600e628fcfed">NTVectorTileLayer</a>
 </li>
@@ -1104,7 +1266,7 @@ $(document).ready(function(){initNavTree('functions_func_g.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:05:00 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

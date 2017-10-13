@@ -10,6 +10,7 @@ var interface_n_t_projection =
     [ "isEqual:", "interface_n_t_projection.html#a5ebb21e2a6a36627542617ac41f3e4e3", null ],
     [ "swigGetClassName", "interface_n_t_projection.html#a1c23a1fbfd246da6e1c20ef50481c942", null ],
     [ "swigGetDirectorObject", "interface_n_t_projection.html#ad7bfbe8106f28dbf637c663d991eff8e", null ],
+    [ "swigGetRawPtr", "interface_n_t_projection.html#a960fc78c4256f76258aa977eda00c5a9", null ],
     [ "toLatLong:y:", "interface_n_t_projection.html#a75c2de787037a49dcaefea79d69c1e52", null ],
     [ "toWgs84:", "interface_n_t_projection.html#a2cec82a05c83af4f63d18195e0275bd5", null ]
 ];

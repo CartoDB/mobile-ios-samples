@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CARTO Mobile SDK iOS: /Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTCartoMapsService.h Source File</title>
+<title>CARTO Mobile SDK iOS: /Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTCartoMapsService.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -111,54 +111,60 @@ $(document).ready(function(){initNavTree('_n_t_carto_maps_service_8h_source.html
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;NTVariant.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTStringMap.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTStringVector.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTLayer.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &quot;NTAssetPackage.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">@class</span> NTStringVariantMap;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@class</span> NTLayerVector;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_n_t_carto_maps_service.html">   32</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_carto_maps_service.html">NTCartoMapsService</a> : NSObject</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> *swigCPtr;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  BOOL swigCMemOwn;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;-(void*)getCptr;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;-(BOOL)isEqual:(<span class="keywordtype">id</span>)object;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;-(NSUInteger)hash;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;-(id)init;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;-(NSString*)getUsername;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;-(void)setUsername: (NSString*)username;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;-(NSString*)getAPITemplate;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;-(void)setAPITemplate: (NSString*)apiTemplate;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;-(BOOL)isInteractive;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;-(void)setInteractive: (BOOL)interactive;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;-(NTStringVector*)getAuthTokens;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;-(void)setAuthTokens: (NTStringVector*)authTokens;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;-(BOOL)isDefaultVectorLayerMode;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;-(void)setDefaultVectorLayerMode: (BOOL)vectorLayerMode;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;-(BOOL)isStrictMode;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;-(void)setStrictMode: (BOOL)strictMode;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;-(<a class="code" href="interface_n_t_asset_package.html">NTAssetPackage</a>*)getVectorTileAssetPackage;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;-(void)setVectorTileAssetPackage: (<a class="code" href="interface_n_t_asset_package.html">NTAssetPackage</a>*)assetPackage;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;-(NTLayerVector*)buildMap: (<a class="code" href="interface_n_t_variant.html">NTVariant</a>*)mapConfig;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;-(NTLayerVector*)buildNamedMap: (NSString*)templateId templateParams: (NTStringVariantMap*)templateParams;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;-(void)dealloc;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTIntVector.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTStringMap.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTStringVector.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &quot;NTLayer.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#import &quot;NTAssetPackage.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@class</span> NTStringVariantMap;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">@class</span> NTLayerVector;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_n_t_carto_maps_service.html">   33</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_carto_maps_service.html">NTCartoMapsService</a> : NSObject</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> *swigCPtr;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  BOOL swigCMemOwn;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;-(void*)getCptr;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;-(BOOL)isEqual:(<span class="keywordtype">id</span>)object;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;-(NSUInteger)hash;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;-(id)init;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;-(NSString*)getUsername;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;-(void)setUsername: (NSString*)username;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;-(NSString*)getAPITemplate;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;-(void)setAPITemplate: (NSString*)apiTemplate;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;-(BOOL)isInteractive;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;-(void)setInteractive: (BOOL)interactive;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;-(NTIntVector*)getLayerIndices;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;-(void)setLayerIndices: (NTIntVector*)layerIndices;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;-(NTStringVector*)getAuthTokens;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;-(void)setAuthTokens: (NTStringVector*)authTokens;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;-(BOOL)isDefaultVectorLayerMode;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;-(void)setDefaultVectorLayerMode: (BOOL)vectorLayerMode;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;-(float)getVectorTileBufferSize;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;-(void)setVectorTileBufferSize: (<span class="keywordtype">float</span>)bufferSize;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;-(BOOL)isStrictMode;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;-(void)setStrictMode: (BOOL)strictMode;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;-(<a class="code" href="interface_n_t_asset_package.html">NTAssetPackage</a>*)getVectorTileAssetPackage;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;-(void)setVectorTileAssetPackage: (<a class="code" href="interface_n_t_asset_package.html">NTAssetPackage</a>*)assetPackage;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;-(NTLayerVector*)buildMap: (<a class="code" href="interface_n_t_variant.html">NTVariant</a>*)mapConfig;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;-(NTLayerVector*)buildNamedMap: (NSString*)templateId templateParams: (NTStringVariantMap*)templateParams;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;-(<span class="keywordtype">long</span> long)swigGetRawPtr;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;-(void)dealloc;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor"></span></div>
 <div class="ttc" id="interface_n_t_asset_package_html"><div class="ttname"><a href="interface_n_t_asset_package.html">NTAssetPackage</a></div><div class="ttdef"><b>Definition:</b> NTAssetPackage.h:25</div></div>
-<div class="ttc" id="interface_n_t_carto_maps_service_html"><div class="ttname"><a href="interface_n_t_carto_maps_service.html">NTCartoMapsService</a></div><div class="ttdef"><b>Definition:</b> NTCartoMapsService.h:32</div></div>
+<div class="ttc" id="interface_n_t_carto_maps_service_html"><div class="ttname"><a href="interface_n_t_carto_maps_service.html">NTCartoMapsService</a></div><div class="ttdef"><b>Definition:</b> NTCartoMapsService.h:33</div></div>
 <div class="ttc" id="interface_n_t_variant_html"><div class="ttname"><a href="interface_n_t_variant.html">NTVariant</a></div><div class="ttdef"><b>Definition:</b> NTVariant.h:60</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -166,7 +172,7 @@ $(document).ready(function(){initNavTree('_n_t_carto_maps_service_8h_source.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_b7825bbd13b32a8f5a7f6eb81b6582d9.html">doxygen</a></li><li class="navelem"><b>NTCartoMapsService.h</b></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:06 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:49 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -10,5 +10,6 @@ var interface_n_t_package_info =
     [ "getVersion", "interface_n_t_package_info.html#a751729d307b68a94d07fc75eece56f39", null ],
     [ "hash", "interface_n_t_package_info.html#adf5835363814374893bd8c659a9c47d1", null ],
     [ "initWithPackageId:packageType:version:size:serverURL:tileMask:metaInfo:", "interface_n_t_package_info.html#a275549077fa3145e69a3b0785610a4d3", null ],
-    [ "isEqual:", "interface_n_t_package_info.html#a6a6cb02bc4754b686e4337d7dcfb0e7e", null ]
+    [ "isEqual:", "interface_n_t_package_info.html#a6a6cb02bc4754b686e4337d7dcfb0e7e", null ],
+    [ "swigGetRawPtr", "interface_n_t_package_info.html#ac8d186fdce36bf30ed01239b71a41b19", null ]
 ];

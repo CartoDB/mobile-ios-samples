@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -110,13 +110,43 @@ Instance Methods</h2></td></tr>
 <tr class="separator:aa70e9d0bdecd46556566603e9c1bf248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eb2ec7283d9ccf5297969b86b9fbac7"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_tile_mask.html#a4eb2ec7283d9ccf5297969b86b9fbac7">getMaxZoomLevel</a></td></tr>
 <tr class="separator:a4eb2ec7283d9ccf5297969b86b9fbac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61526e4cd941e50af9ede92982cf715d"><td class="memItemLeft" align="right" valign="top">(enum NTPackageTileStatus)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_tile_mask.html#a61526e4cd941e50af9ede92982cf715d">getTileStatus:</a></td></tr>
-<tr class="separator:a61526e4cd941e50af9ede92982cf715d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8d1dfc939e0ee5102cf6a019d55df3"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_multi_polygon_geometry.html">NTMultiPolygonGeometry</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_tile_mask.html#a2e8d1dfc939e0ee5102cf6a019d55df3">getBoundingPolygon:</a></td></tr>
+<tr class="separator:a2e8d1dfc939e0ee5102cf6a019d55df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64211ed6557b5ef6a3c973a9ed506fec"><td class="memItemLeft" align="right" valign="top">(enum NTPackageTileStatus)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_tile_mask.html#a64211ed6557b5ef6a3c973a9ed506fec">getTileStatus:</a></td></tr>
+<tr class="separator:a64211ed6557b5ef6a3c973a9ed506fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58abffbe729b64e5198c72efc351271f"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_package_tile_mask.html#a58abffbe729b64e5198c72efc351271f">swigGetRawPtr</a></td></tr>
+<tr class="separator:a58abffbe729b64e5198c72efc351271f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tile mask contains map package spatial coverage information and<br/>
  can be used for very fast 'tile in package' tests. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a2e8d1dfc939e0ee5102cf6a019d55df3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_n_t_multi_polygon_geometry.html">NTMultiPolygonGeometry</a> *) getBoundingPolygon: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_projection.html">NTProjection</a>*)&#160;</td>
+          <td class="paramname"><em>projection</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the bounding polygon of the tilemask.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">projection</td><td>The projection to use.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bounding polygon of the tilemask area. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a4eb2ec7283d9ccf5297969b86b9fbac7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -149,11 +179,11 @@ Instance Methods</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the encoded tile mask value. This should not be displayed to the user.<br/>
  </p>
-<dl class="section return"><dt>Returns</dt><dd>The tile mask of the package </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The tile mask of the package. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a61526e4cd941e50af9ede92982cf715d"></a>
+<a class="anchor" id="a64211ed6557b5ef6a3c973a9ed506fec"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -161,7 +191,7 @@ Instance Methods</h2></td></tr>
           <td class="memname">- (enum NTPackageTileStatus) getTileStatus: </td>
           <td></td>
           <td class="paramtype">(<a class="el" href="interface_n_t_map_tile.html">NTMapTile</a>*)&#160;</td>
-          <td class="paramname"><em>mapTile</em></td>
+          <td class="paramname"><em>tile</em></td>
           <td></td>
         </tr>
       </table>
@@ -170,7 +200,7 @@ Instance Methods</h2></td></tr>
  </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mapTile</td><td>The tile to check.<br/>
+    <tr><td class="paramname">tile</td><td>The tile to check.<br/>
  </td></tr>
   </table>
   </dd>
@@ -220,9 +250,27 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a58abffbe729b64e5198c72efc351271f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_package_tile_mask_8h_source.html">NTPackageTileMask.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTPackageTileMask.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_package_tile_mask_8h_source.html">NTPackageTileMask.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTPackageTileMask.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -230,7 +278,7 @@ Instance Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_package_tile_mask.html">NTPackageTileMask</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:10 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:56 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

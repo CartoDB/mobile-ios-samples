@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -106,8 +106,6 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a79de14065841bb2b41838d6fce2de614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36129312dccb935f8da9724500a3e832"><td class="memItemLeft" align="right" valign="top">(NSUInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_popup_click_info.html#a36129312dccb935f8da9724500a3e832">hash</a></td></tr>
 <tr class="separator:a36129312dccb935f8da9724500a3e832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c9e6fe8cfb1a804712b0d87bdeaba0f"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_popup_click_info.html#a5c9e6fe8cfb1a804712b0d87bdeaba0f">initWithClickType:clickPos:elementClickPos:popup:</a></td></tr>
-<tr class="separator:a5c9e6fe8cfb1a804712b0d87bdeaba0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea5e758214c2d4485053df7f80ce3fe9"><td class="memItemLeft" align="right" valign="top">(enum NTClickType)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_popup_click_info.html#aea5e758214c2d4485053df7f80ce3fe9">getClickType</a></td></tr>
 <tr class="separator:aea5e758214c2d4485053df7f80ce3fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2f80b4edd894450d17d775c286972cd"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_popup_click_info.html#ac2f80b4edd894450d17d775c286972cd">getClickPos</a></td></tr>
@@ -116,6 +114,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a7466d5c6732cf4d325daa1616184271b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5294dce941d64cbbbb17fc966d8d1803"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_popup.html">NTPopup</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_popup_click_info.html#a5294dce941d64cbbbb17fc966d8d1803">getPopup</a></td></tr>
 <tr class="separator:a5294dce941d64cbbbb17fc966d8d1803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee06a41dc2a8514daeb65e04bd2a0085"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_popup_click_info.html#aee06a41dc2a8514daeb65e04bd2a0085">swigGetRawPtr</a></td></tr>
+<tr class="separator:aee06a41dc2a8514daeb65e04bd2a0085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A container class that provides information about a click performed on<br/>
@@ -210,58 +210,6 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5c9e6fe8cfb1a804712b0d87bdeaba0f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (id) initWithClickType: </td>
-          <td></td>
-          <td class="paramtype">(enum NTClickType)&#160;</td>
-          <td class="paramname"><em>clickType</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">clickPos:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a>*)&#160;</td>
-          <td class="paramname"><em>clickPos</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">elementClickPos:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_screen_pos.html">NTScreenPos</a>*)&#160;</td>
-          <td class="paramname"><em>elementClickPos</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">popup:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_popup.html">NTPopup</a>*)&#160;</td>
-          <td class="paramname"><em>popup</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Constructs a PopupClickInfo object from a click position and a vector element.<br/>
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">clickType</td><td>The click type (SINGLE, DUAL, etc)<br/>
- </td></tr>
-    <tr><td class="paramname">clickPos</td><td>The click position in the coordinate system of the base projection.<br/>
- </td></tr>
-    <tr><td class="paramname">elementClickPos</td><td>The 2D click position on the popup.<br/>
- </td></tr>
-    <tr><td class="paramname">popup</td><td>The popup on which the click was performed. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a79de14065841bb2b41838d6fce2de614"></a>
 <div class="memitem">
 <div class="memproto">
@@ -286,9 +234,27 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aee06a41dc2a8514daeb65e04bd2a0085"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_popup_click_info_8h_source.html">NTPopupClickInfo.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTPopupClickInfo.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_popup_click_info_8h_source.html">NTPopupClickInfo.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTPopupClickInfo.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -296,7 +262,7 @@ Instance Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_popup_click_info.html">NTPopupClickInfo</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:10 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:57 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,5 +1,7 @@
 var interface_n_t_tile_data_source =
 [
+    [ "getDataExtent", "interface_n_t_tile_data_source.html#ab9a73570a27e8411eea609c16fa6ea45", null ],
+    [ "getDataExtentSwigExplicitNTTileDataSource", "interface_n_t_tile_data_source.html#ae141386cca000aade293fd06f7045de5", null ],
     [ "getMaxZoom", "interface_n_t_tile_data_source.html#acd0d7b6149fae3e25793df8bba4a8c00", null ],
     [ "getMaxZoomSwigExplicitNTTileDataSource", "interface_n_t_tile_data_source.html#aa1adadabf9db1b3cc015c9cb3b7c851a", null ],
     [ "getMinZoom", "interface_n_t_tile_data_source.html#af75186f24f771cceb1a7cfdc9c71b951", null ],
@@ -11,5 +13,6 @@ var interface_n_t_tile_data_source =
     [ "notifyTilesChanged:", "interface_n_t_tile_data_source.html#a84abbc725a042776ddbc92cab95d4f4f", null ],
     [ "notifyTilesChangedSwigExplicitNTTileDataSource:", "interface_n_t_tile_data_source.html#af431220222728238808db111cfbe922c", null ],
     [ "swigGetClassName", "interface_n_t_tile_data_source.html#a4b5113de0e1c47be06b8f525562a2369", null ],
-    [ "swigGetDirectorObject", "interface_n_t_tile_data_source.html#aa9bf0a78955be0db97a69fcb71df85d3", null ]
+    [ "swigGetDirectorObject", "interface_n_t_tile_data_source.html#aa9bf0a78955be0db97a69fcb71df85d3", null ],
+    [ "swigGetRawPtr", "interface_n_t_tile_data_source.html#ade9798c005021506759080bbecf53880", null ]
 ];

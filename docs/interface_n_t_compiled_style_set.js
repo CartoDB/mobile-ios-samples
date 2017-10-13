@@ -6,5 +6,6 @@ var interface_n_t_compiled_style_set =
     [ "hash", "interface_n_t_compiled_style_set.html#afd545715e3c45ad6333ac5d9f0b38341", null ],
     [ "initWithAssetPackage:", "interface_n_t_compiled_style_set.html#a66c847efba5046996cc13cf93bd3787e", null ],
     [ "initWithAssetPackage:styleName:", "interface_n_t_compiled_style_set.html#ad66e04ac10abaea42332754991567f14", null ],
-    [ "isEqual:", "interface_n_t_compiled_style_set.html#ab93d7d17dddb4068186901bd111f49d4", null ]
+    [ "isEqual:", "interface_n_t_compiled_style_set.html#ab93d7d17dddb4068186901bd111f49d4", null ],
+    [ "swigGetRawPtr", "interface_n_t_compiled_style_set.html#a708f63dc27c5a3f4e8bac6a1aab5aef6", null ]
 ];

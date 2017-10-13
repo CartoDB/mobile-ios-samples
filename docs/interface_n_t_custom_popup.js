@@ -7,5 +7,6 @@ var interface_n_t_custom_popup =
     [ "initWithPos:style:popupHandler:", "interface_n_t_custom_popup.html#a7658971215fad55650ad1c29a3dc1a5d", null ],
     [ "processClick:clickPos:elementClickPos:", "interface_n_t_custom_popup.html#ad1d4cdb8daea5adfc03f3af8ba7176d6", null ],
     [ "swigGetClassName", "interface_n_t_custom_popup.html#aa740eb36fd6dd5c08cdc9524f96ab738", null ],
-    [ "swigGetDirectorObject", "interface_n_t_custom_popup.html#abc2238e27bb6a4132acf65ba1f070945", null ]
+    [ "swigGetDirectorObject", "interface_n_t_custom_popup.html#abc2238e27bb6a4132acf65ba1f070945", null ],
+    [ "swigGetRawPtr", "interface_n_t_custom_popup.html#a9fb8ed8d1a38f03201d2cb5ab1eb0768", null ]
 ];

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -149,6 +149,12 @@ Instance Methods</h2></td></tr>
 <tr class="separator:ad2eb2a9c5ac1bf946d9276d46514a4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abda790b057cb627c475616142d7f9db6"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_billboard_style_builder.html#abda790b057cb627c475616142d7f9db6">setScaleWithDPI:</a></td></tr>
 <tr class="separator:abda790b057cb627c475616142d7f9db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8743da6fce21204a088a03f6edabec42"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_animation_style.html">NTAnimationStyle</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_billboard_style_builder.html#a8743da6fce21204a088a03f6edabec42">getAnimationStyle</a></td></tr>
+<tr class="separator:a8743da6fce21204a088a03f6edabec42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa440c33800f5bdd072f64dfb140b42ae"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_billboard_style_builder.html#aa440c33800f5bdd072f64dfb140b42ae">setAnimationStyle:</a></td></tr>
+<tr class="separator:aa440c33800f5bdd072f64dfb140b42ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f0f7f53d3f53b023cd529636ad3612"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_billboard_style_builder.html#a54f0f7f53d3f53b023cd529636ad3612">swigGetRawPtr</a></td></tr>
+<tr class="separator:a54f0f7f53d3f53b023cd529636ad3612"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae41680c0da9dc47c4d7178310a45b94c"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_billboard_style_builder.html#ae41680c0da9dc47c4d7178310a45b94c">swigGetClassName</a></td></tr>
 <tr class="separator:ae41680c0da9dc47c4d7178310a45b94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a0566b7e630561fdf15a9123f8dfd2d"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_billboard_style_builder.html#a3a0566b7e630561fdf15a9123f8dfd2d">swigGetDirectorObject</a></td></tr>
@@ -171,6 +177,24 @@ Class Methods</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base class for BillboardStyleBuilder subclasses. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a8743da6fce21204a088a03f6edabec42"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_n_t_animation_style.html">NTAnimationStyle</a> *) getAnimationStyle </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the animation style of the billboard.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The animation style of the billboard. Can be null if animations are not used. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac72704b8bdfc5e5ac7f17b59fd2b2a63"></a>
 <div class="memitem">
 <div class="memproto">
@@ -312,6 +336,30 @@ Class Methods</h2></td></tr>
 <p>Returns the state of the scale with DPI flag.<br/>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>True if this billboard's size will be scaled using the screen dot's per inch. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa440c33800f5bdd072f64dfb140b42ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setAnimationStyle: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="interface_n_t_animation_style.html">NTAnimationStyle</a>*)&#160;</td>
+          <td class="paramname"><em>animStyle</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the animation style of the billboard.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animStyle</td><td>The new animation style of the billboard. Can be null if animations are not needed (the default). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -604,7 +652,7 @@ Class Methods</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="interface_n_t_style_builder.html#a58abbdd64a796fafcf3a89a37d425f1d">NTStyleBuilder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="interface_n_t_balloon_popup_style_builder.html#a2578c46e0a3ddb65b88e933610e61c55">NTBalloonPopupStyleBuilder</a>, <a class="el" href="interface_n_t_popup_style_builder.html#afb8541fa2191d5f8a0a9a270cb32380a">NTPopupStyleBuilder</a>, <a class="el" href="interface_n_t_label_style_builder.html#a45141787fa40fea48c2466eccaf507f1">NTLabelStyleBuilder</a>, <a class="el" href="interface_n_t_text_style_builder.html#ace1be8f709dde9710934cdad445a3f74">NTTextStyleBuilder</a>, and <a class="el" href="interface_n_t_marker_style_builder.html#ab3660b27bd59efb7150922e11c8d4c59">NTMarkerStyleBuilder</a>.</p>
+<p>Reimplemented in <a class="el" href="interface_n_t_balloon_popup_style_builder.html#a2578c46e0a3ddb65b88e933610e61c55">NTBalloonPopupStyleBuilder</a>, <a class="el" href="interface_n_t_popup_style_builder.html#afb8541fa2191d5f8a0a9a270cb32380a">NTPopupStyleBuilder</a>, <a class="el" href="interface_n_t_text_style_builder.html#ace1be8f709dde9710934cdad445a3f74">NTTextStyleBuilder</a>, <a class="el" href="interface_n_t_marker_style_builder.html#ab3660b27bd59efb7150922e11c8d4c59">NTMarkerStyleBuilder</a>, and <a class="el" href="interface_n_t_label_style_builder.html#a45141787fa40fea48c2466eccaf507f1">NTLabelStyleBuilder</a>.</p>
 
 </div>
 </div>
@@ -626,7 +674,7 @@ Class Methods</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="interface_n_t_style_builder.html#a7154a49feb1a5afcc4151ebdf1bf9c3b">NTStyleBuilder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="interface_n_t_balloon_popup_style_builder.html#a4b563cc8eeeae71adc4a985aa9ec09a3">NTBalloonPopupStyleBuilder</a>, <a class="el" href="interface_n_t_popup_style_builder.html#a25352b0a9ca32b5bfbb6b7a79b84911a">NTPopupStyleBuilder</a>, <a class="el" href="interface_n_t_label_style_builder.html#a65c63baa8ea72acaa06b37b1c58a146f">NTLabelStyleBuilder</a>, <a class="el" href="interface_n_t_text_style_builder.html#aa4bd0c1212c95d75efe73ee6c0c29985">NTTextStyleBuilder</a>, and <a class="el" href="interface_n_t_marker_style_builder.html#a96b90791573e14773b3846ce41879701">NTMarkerStyleBuilder</a>.</p>
+<p>Reimplemented in <a class="el" href="interface_n_t_balloon_popup_style_builder.html#a4b563cc8eeeae71adc4a985aa9ec09a3">NTBalloonPopupStyleBuilder</a>, <a class="el" href="interface_n_t_popup_style_builder.html#a25352b0a9ca32b5bfbb6b7a79b84911a">NTPopupStyleBuilder</a>, <a class="el" href="interface_n_t_text_style_builder.html#aa4bd0c1212c95d75efe73ee6c0c29985">NTTextStyleBuilder</a>, <a class="el" href="interface_n_t_marker_style_builder.html#a96b90791573e14773b3846ce41879701">NTMarkerStyleBuilder</a>, and <a class="el" href="interface_n_t_label_style_builder.html#a65c63baa8ea72acaa06b37b1c58a146f">NTLabelStyleBuilder</a>.</p>
 
 </div>
 </div>
@@ -648,13 +696,35 @@ Class Methods</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="interface_n_t_style_builder.html#a426c43f29e590ce2c485cfa4ccb6596d">NTStyleBuilder</a>.</p>
 
-<p>Reimplemented in <a class="el" href="interface_n_t_balloon_popup_style_builder.html#ae9a686553695cc1d96cfe24a6ee3cf2e">NTBalloonPopupStyleBuilder</a>, <a class="el" href="interface_n_t_popup_style_builder.html#aad296321318812d3ab29beb778ef6951">NTPopupStyleBuilder</a>, <a class="el" href="interface_n_t_label_style_builder.html#a930272daa7bd6cdba2ae09ac572ea2da">NTLabelStyleBuilder</a>, <a class="el" href="interface_n_t_text_style_builder.html#acc222e2b57e843dae35d7faced4b65f4">NTTextStyleBuilder</a>, and <a class="el" href="interface_n_t_marker_style_builder.html#a6f3bb5913fff98a3796d253f66548453">NTMarkerStyleBuilder</a>.</p>
+<p>Reimplemented in <a class="el" href="interface_n_t_balloon_popup_style_builder.html#ae9a686553695cc1d96cfe24a6ee3cf2e">NTBalloonPopupStyleBuilder</a>, <a class="el" href="interface_n_t_popup_style_builder.html#aad296321318812d3ab29beb778ef6951">NTPopupStyleBuilder</a>, <a class="el" href="interface_n_t_text_style_builder.html#acc222e2b57e843dae35d7faced4b65f4">NTTextStyleBuilder</a>, <a class="el" href="interface_n_t_marker_style_builder.html#a6f3bb5913fff98a3796d253f66548453">NTMarkerStyleBuilder</a>, and <a class="el" href="interface_n_t_label_style_builder.html#a930272daa7bd6cdba2ae09ac572ea2da">NTLabelStyleBuilder</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a54f0f7f53d3f53b023cd529636ad3612"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="interface_n_t_style_builder.html#a25e2621ad6cf43e1fcceab91951dd6d7">NTStyleBuilder</a>.</p>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_balloon_popup_style_builder.html#acc8d374c91f638152c0322004f5645ef">NTBalloonPopupStyleBuilder</a>, <a class="el" href="interface_n_t_popup_style_builder.html#ac0cd9fca478c29625d4d9318304261de">NTPopupStyleBuilder</a>, <a class="el" href="interface_n_t_text_style_builder.html#ab7c0d73cdcc8f927b0acd6ff4bcb66b3">NTTextStyleBuilder</a>, <a class="el" href="interface_n_t_marker_style_builder.html#aa06951173d210927c364a5ace7ecf878">NTMarkerStyleBuilder</a>, and <a class="el" href="interface_n_t_label_style_builder.html#a58d1874d30c221ca247cfe168524154f">NTLabelStyleBuilder</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_billboard_style_builder_8h_source.html">NTBillboardStyleBuilder.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTBillboardStyleBuilder.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_billboard_style_builder_8h_source.html">NTBillboardStyleBuilder.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTBillboardStyleBuilder.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -662,7 +732,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_billboard_style_builder.html">NTBillboardStyleBuilder</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:07 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:52 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

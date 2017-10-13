@@ -9,5 +9,6 @@ var interface_n_t_carto_vis_loader =
     [ "loadVis:visURL:", "interface_n_t_carto_vis_loader.html#a683bbc642330bc6b3115f97c0c0a6a40", null ],
     [ "setDefaultVectorLayerMode:", "interface_n_t_carto_vis_loader.html#a169b04b9c4ab14ae5da6d0a0450d7a96", null ],
     [ "setStrictMode:", "interface_n_t_carto_vis_loader.html#a673867d873a8b9189a43d4e78ac6b5a0", null ],
-    [ "setVectorTileAssetPackage:", "interface_n_t_carto_vis_loader.html#adbc4be2fc9035d4b681a3e3645490d3c", null ]
+    [ "setVectorTileAssetPackage:", "interface_n_t_carto_vis_loader.html#adbc4be2fc9035d4b681a3e3645490d3c", null ],
+    [ "swigGetRawPtr", "interface_n_t_carto_vis_loader.html#ae8fcae25ac6d96234f7a1498479cc2bd", null ]
 ];

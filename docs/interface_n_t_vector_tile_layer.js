@@ -11,5 +11,6 @@ var interface_n_t_vector_tile_layer =
     [ "setTileCacheCapacity:", "interface_n_t_vector_tile_layer.html#a0e73e17651d6ffa11d1c0f8a4af073db", null ],
     [ "setVectorTileEventListener:", "interface_n_t_vector_tile_layer.html#a946413d4c4e81e8dc77d250bdaab2343", null ],
     [ "swigGetClassName", "interface_n_t_vector_tile_layer.html#a324d72858ca85372031682ce7cfe4b11", null ],
-    [ "swigGetDirectorObject", "interface_n_t_vector_tile_layer.html#aabdf8954d0995d4f7bfb870bef26bdf3", null ]
+    [ "swigGetDirectorObject", "interface_n_t_vector_tile_layer.html#aabdf8954d0995d4f7bfb870bef26bdf3", null ],
+    [ "swigGetRawPtr", "interface_n_t_vector_tile_layer.html#ab5cd89e2e44cc9ccfe41b3ad1247e6a1", null ]
 ];

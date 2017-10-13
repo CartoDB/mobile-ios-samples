@@ -5,6 +5,6 @@ var interface_n_t_popup_click_info =
     [ "getElementClickPos", "interface_n_t_popup_click_info.html#a7466d5c6732cf4d325daa1616184271b", null ],
     [ "getPopup", "interface_n_t_popup_click_info.html#a5294dce941d64cbbbb17fc966d8d1803", null ],
     [ "hash", "interface_n_t_popup_click_info.html#a36129312dccb935f8da9724500a3e832", null ],
-    [ "initWithClickType:clickPos:elementClickPos:popup:", "interface_n_t_popup_click_info.html#a5c9e6fe8cfb1a804712b0d87bdeaba0f", null ],
-    [ "isEqual:", "interface_n_t_popup_click_info.html#a79de14065841bb2b41838d6fce2de614", null ]
+    [ "isEqual:", "interface_n_t_popup_click_info.html#a79de14065841bb2b41838d6fce2de614", null ],
+    [ "swigGetRawPtr", "interface_n_t_popup_click_info.html#aee06a41dc2a8514daeb65e04bd2a0085", null ]
 ];

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -90,6 +90,7 @@ $(document).ready(function(){initNavTree('interface_n_t_feature_collection.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Instance Methods</a> &#124;
+<a href="#pub-static-methods">Class Methods</a> &#124;
 <a href="class_n_t_feature_collection-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">NTFeatureCollection Class Reference</div>  </div>
@@ -97,8 +98,15 @@ $(document).ready(function(){initNavTree('interface_n_t_feature_collection.html'
 <div class="contents">
 
 <p><code>#import &lt;<a class="el" href="_n_t_feature_collection_8h_source.html">NTFeatureCollection.h</a>&gt;</code></p>
-
-<p>Inherits NSObject.</p>
+<div class="dynheader">
+Inheritance diagram for NTFeatureCollection:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="interface_n_t_feature_collection.png" usemap="#NTFeatureCollection_map" alt=""/>
+  <map id="NTFeatureCollection_map" name="NTFeatureCollection_map">
+<area href="interface_n_t_vector_tile_feature_collection.html" alt="NTVectorTileFeatureCollection" shape="rect" coords="0,56,186,80"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
@@ -108,6 +116,17 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a7ddb26e714a0bab03133facd7d0c82d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a146c48145a19e1b212834d4dfe8cf"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_feature.html">NTFeature</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_feature_collection.html#ad9a146c48145a19e1b212834d4dfe8cf">getFeature:</a></td></tr>
 <tr class="separator:ad9a146c48145a19e1b212834d4dfe8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9353cc3f43ed3048bf4483abba5ca39"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_feature_collection.html#ab9353cc3f43ed3048bf4483abba5ca39">swigGetRawPtr</a></td></tr>
+<tr class="separator:ab9353cc3f43ed3048bf4483abba5ca39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ed2094df673b6f17ef3ca9ea3b73c5"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_feature_collection.html#a01ed2094df673b6f17ef3ca9ea3b73c5">swigGetClassName</a></td></tr>
+<tr class="separator:a01ed2094df673b6f17ef3ca9ea3b73c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f4b0f8d61b06fffcd4526648f2127d"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_feature_collection.html#ae6f4b0f8d61b06fffcd4526648f2127d">swigGetDirectorObject</a></td></tr>
+<tr class="separator:ae6f4b0f8d61b06fffcd4526648f2127d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Class Methods</h2></td></tr>
+<tr class="memitem:ae29aeaf3e2c1fd111b174f8c97c11ac2"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_feature_collection.html">NTFeatureCollection</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_n_t_feature_collection.html#ae29aeaf3e2c1fd111b174f8c97c11ac2">swigCreatePolymorphicInstance:swigOwnCObject:</a></td></tr>
+<tr class="separator:ae29aeaf3e2c1fd111b174f8c97c11ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A collection of features. </p>
@@ -127,6 +146,13 @@ Instance Methods</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the feature at the specified index. Index must be between 0 and getFeatureCount (exclusive).<br/>
  </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the feature to get.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>The feature at specified index.<br/>
  </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
@@ -135,6 +161,8 @@ Instance Methods</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_vector_tile_feature_collection.html#a8a995e3e5f94c4395d1904beae90680a">NTVectorTileFeatureCollection</a>.</p>
 
 </div>
 </div>
@@ -180,9 +208,106 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae29aeaf3e2c1fd111b174f8c97c11ac2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_n_t_feature_collection.html">NTFeatureCollection</a> *) swigCreatePolymorphicInstance: </td>
+          <td></td>
+          <td class="paramtype">(void*)&#160;</td>
+          <td class="paramname"><em>cPtr</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">swigOwnCObject:</td>
+          <td></td>
+          <td class="paramtype">(BOOL)&#160;</td>
+          <td class="paramname"><em>cMemoryOwn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a polymorphic instance of the given native object. This is used internally by the SDK. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cPtr</td><td>The native pointer of the instance. </td></tr>
+    <tr><td class="paramname">cMemoryOwn</td><td>The ownership flag. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The new instance. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_vector_tile_feature_collection.html#aa947bb823ef9534c7728067a8e9f7e45">NTVectorTileFeatureCollection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a01ed2094df673b6f17ef3ca9ea3b73c5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) swigGetClassName </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the actual class name of this object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The class name of this object. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_vector_tile_feature_collection.html#a3bd1f562850eb3dbc2eb6411de962c8e">NTVectorTileFeatureCollection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae6f4b0f8d61b06fffcd4526648f2127d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void *) swigGetDirectorObject </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the pointer to the connected director object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The pointer to the connected director object or null if director is not connected. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_vector_tile_feature_collection.html#a6685b3ad2d180143afa606c8cf9b22dc">NTVectorTileFeatureCollection</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9353cc3f43ed3048bf4483abba5ca39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_vector_tile_feature_collection.html#ae4bde038bc7ee5a2372e1cf77607c17f">NTVectorTileFeatureCollection</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_feature_collection_8h_source.html">NTFeatureCollection.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTFeatureCollection.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_feature_collection_8h_source.html">NTFeatureCollection.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTFeatureCollection.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -190,7 +315,7 @@ Instance Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_feature_collection.html">NTFeatureCollection</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:08 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:53 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

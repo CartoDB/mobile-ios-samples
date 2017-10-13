@@ -9,5 +9,6 @@ var interface_n_t_text =
     [ "setStyle:", "interface_n_t_text.html#adff0d4e128197375e384c305d2b1dfbc", null ],
     [ "setText:", "interface_n_t_text.html#ae8ee9d7e798e30b99429f5216ab4bd56", null ],
     [ "swigGetClassName", "interface_n_t_text.html#ac4e38c08000d49afa86500fb33fe9a4d", null ],
-    [ "swigGetDirectorObject", "interface_n_t_text.html#acd3aa6c8c1265b5f8f4f1084cd1ff173", null ]
+    [ "swigGetDirectorObject", "interface_n_t_text.html#acd3aa6c8c1265b5f8f4f1084cd1ff173", null ],
+    [ "swigGetRawPtr", "interface_n_t_text.html#ac2277d07b1a59b8b42060e4f085fab66", null ]
 ];

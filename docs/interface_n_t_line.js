@@ -9,5 +9,6 @@ var interface_n_t_line =
     [ "setPoses:", "interface_n_t_line.html#a0421dbba84410abcca266b9915f1d4ce", null ],
     [ "setStyle:", "interface_n_t_line.html#a80078a023cd9f66a689499fd66af11ab", null ],
     [ "swigGetClassName", "interface_n_t_line.html#a05139bda02ce73bcad25db63824b27d0", null ],
-    [ "swigGetDirectorObject", "interface_n_t_line.html#afaebe9e6c9b0c15895019e60bd7c81f8", null ]
+    [ "swigGetDirectorObject", "interface_n_t_line.html#afaebe9e6c9b0c15895019e60bd7c81f8", null ],
+    [ "swigGetRawPtr", "interface_n_t_line.html#a630bd549c5fdeae5aa8c96bd522db4c6", null ]
 ];

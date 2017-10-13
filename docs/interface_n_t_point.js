@@ -9,5 +9,6 @@ var interface_n_t_point =
     [ "setPos:", "interface_n_t_point.html#a4f56af487f908303586b6ae791e883f9", null ],
     [ "setStyle:", "interface_n_t_point.html#a5983b3028e9b5aadb1fabf64e7e5f0d8", null ],
     [ "swigGetClassName", "interface_n_t_point.html#a093884acd5262d22abc5a1abbd684264", null ],
-    [ "swigGetDirectorObject", "interface_n_t_point.html#af29cd8cda50a46aa2b97a2686296fef2", null ]
+    [ "swigGetDirectorObject", "interface_n_t_point.html#af29cd8cda50a46aa2b97a2686296fef2", null ],
+    [ "swigGetRawPtr", "interface_n_t_point.html#a6cb8c953e90e588ee5d3fbd74eb042ad", null ]
 ];

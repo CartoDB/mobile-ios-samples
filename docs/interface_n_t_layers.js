@@ -12,5 +12,6 @@ var interface_n_t_layers =
     [ "remove:", "interface_n_t_layers.html#aa4eb92e5dd3e01cd5825f8eab08c6f5a", null ],
     [ "removeAll:", "interface_n_t_layers.html#a190181588e4b691e88c981815f73c5da", null ],
     [ "set:layer:", "interface_n_t_layers.html#aba21fcf5a91e1022db9839abe559ed46", null ],
-    [ "setAll:", "interface_n_t_layers.html#afcb4a0bf88f4b12648c5bdf51217c109", null ]
+    [ "setAll:", "interface_n_t_layers.html#afcb4a0bf88f4b12648c5bdf51217c109", null ],
+    [ "swigGetRawPtr", "interface_n_t_layers.html#a8801b8c1513618079e58d8cbd2d133e2", null ]
 ];

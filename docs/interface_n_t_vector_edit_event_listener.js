@@ -14,5 +14,6 @@ var interface_n_t_vector_edit_event_listener =
     [ "onElementSelectSwigExplicitNTVectorEditEventListener:", "interface_n_t_vector_edit_event_listener.html#aeb0e98b8e4e0479b76672e49c38e2eaf", null ],
     [ "onSelectDragPointStyle:dragPointStyle:", "interface_n_t_vector_edit_event_listener.html#aef1847fb00abb1fced65d67ff3d80c22", null ],
     [ "swigGetClassName", "interface_n_t_vector_edit_event_listener.html#a4af2c35508bf7517bbec83d6181e8ae6", null ],
-    [ "swigGetDirectorObject", "interface_n_t_vector_edit_event_listener.html#a8845aae44653919c53ffc29a62089576", null ]
+    [ "swigGetDirectorObject", "interface_n_t_vector_edit_event_listener.html#a8845aae44653919c53ffc29a62089576", null ],
+    [ "swigGetRawPtr", "interface_n_t_vector_edit_event_listener.html#a61059e31070d6771dc032ee75c48708a", null ]
 ];

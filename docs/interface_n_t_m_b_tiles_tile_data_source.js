@@ -7,5 +7,6 @@ var interface_n_t_m_b_tiles_tile_data_source =
     [ "initWithPath:", "interface_n_t_m_b_tiles_tile_data_source.html#a655c0693ffb34c53d050522dbc7c1425", null ],
     [ "loadTile:", "interface_n_t_m_b_tiles_tile_data_source.html#adab6cfff07c6c6e700f7dedd3ace8ac0", null ],
     [ "swigGetClassName", "interface_n_t_m_b_tiles_tile_data_source.html#a64e94e7b49db5d9f0617f63b8953c909", null ],
-    [ "swigGetDirectorObject", "interface_n_t_m_b_tiles_tile_data_source.html#a03878356fa809cdeaf25509050e77d1f", null ]
+    [ "swigGetDirectorObject", "interface_n_t_m_b_tiles_tile_data_source.html#a03878356fa809cdeaf25509050e77d1f", null ],
+    [ "swigGetRawPtr", "interface_n_t_m_b_tiles_tile_data_source.html#a9847804bd7abfd1f336e87dba9188334", null ]
 ];

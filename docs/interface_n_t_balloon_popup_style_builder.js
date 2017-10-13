@@ -49,5 +49,6 @@ var interface_n_t_balloon_popup_style_builder =
     [ "setTriangleHeight:", "interface_n_t_balloon_popup_style_builder.html#a816ba1fa72655c3203083ab14170da92", null ],
     [ "setTriangleWidth:", "interface_n_t_balloon_popup_style_builder.html#aa637dd1814b75ddc5bf42a384d340cc5", null ],
     [ "swigGetClassName", "interface_n_t_balloon_popup_style_builder.html#a4b563cc8eeeae71adc4a985aa9ec09a3", null ],
-    [ "swigGetDirectorObject", "interface_n_t_balloon_popup_style_builder.html#ae9a686553695cc1d96cfe24a6ee3cf2e", null ]
+    [ "swigGetDirectorObject", "interface_n_t_balloon_popup_style_builder.html#ae9a686553695cc1d96cfe24a6ee3cf2e", null ],
+    [ "swigGetRawPtr", "interface_n_t_balloon_popup_style_builder.html#acc8d374c91f638152c0322004f5645ef", null ]
 ];

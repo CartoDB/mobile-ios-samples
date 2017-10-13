@@ -7,5 +7,6 @@ var interface_n_t_tile_data =
     [ "isEqual:", "interface_n_t_tile_data.html#a7154bb3b6e87d131a9c2c6fddd4f78a9", null ],
     [ "isReplaceWithParent", "interface_n_t_tile_data.html#ac2de3f72c4de816cadea9ab8d6802488", null ],
     [ "setMaxAge:", "interface_n_t_tile_data.html#abdfdd83ef82b6431b413579f24086156", null ],
-    [ "setReplaceWithParent:", "interface_n_t_tile_data.html#a4936cc7c3cd652f4017872da2239c27c", null ]
+    [ "setReplaceWithParent:", "interface_n_t_tile_data.html#a4936cc7c3cd652f4017872da2239c27c", null ],
+    [ "swigGetRawPtr", "interface_n_t_tile_data.html#a1ef228d640412ef3fcb638d2e097ccfc", null ]
 ];
