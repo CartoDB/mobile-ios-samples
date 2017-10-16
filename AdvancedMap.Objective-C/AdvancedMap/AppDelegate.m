@@ -20,6 +20,12 @@
     // The license string used here is intended only for Carto demos and WILL NOT WORK with other apps!
     [NTMapView registerLicense:@"XTUN3Q0ZEenZKWnNJSmZTQ1pHeEZreTFpVnNsNmJkQ0pBaFE3QldULzNPZUt4czBMNHpRUk5VaTFQenVsMmc9PQoKYXBwVG9rZW49N2I4ZjkzODItNGYzMC00ZDBiLWIxY2YtMWUwZTVkZDUwZjgwCmJ1bmRsZUlkZW50aWZpZXI9Y2FydG8uQWR2YW5jZWRNYXAtT2JqZWN0aXZlLUMKb25saW5lTGljZW5zZT0xCnByb2R1Y3RzPXNkay1pb3MtNC4qCndhdGVybWFyaz1jdXN0b20K"];
 
+    UINavigationBar *bar = [self.navigationController navigationBar];
+    bar.translucent = NO;
+    [bar setBarTintColor:[UIColor colorWithRed:242/255.0 green:68/255.0 blue:64/255.0 alpha:1.0]];
+    [bar setTintColor:UIColor.whiteColor];
+    [bar setTitleTextAttributes: @{ NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     return YES;
 }
 
