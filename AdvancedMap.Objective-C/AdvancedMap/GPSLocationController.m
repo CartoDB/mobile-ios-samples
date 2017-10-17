@@ -58,12 +58,11 @@
     double latitude = location.coordinate.latitude;
     double longitude = location.coordinate.longitude;
     
+    double course = location.course;
+    
     NSString *title = @"Your current location is";
     
-    NSString *description = [NSString stringWithFormat:@"%.04f", latitude];
-    
-    description = [description stringByAppendingString:@", "];
-    description = [description stringByAppendingFormat:@"%.04f", longitude];
+    NSString *description = [NSString stringWithFormat:@"%.04f, %.04f (course: %.0f)", latitude, longitude, course];
     
     NTProjection *projection = [[self.contentView.mapView getOptions] getBaseProjection];
     NTMapPos *position = [[NTMapPos alloc] initWithX:longitude y:latitude];
@@ -72,19 +71,26 @@
     if (self.positionMarker == nil) {
         
         NTMarkerStyleBuilder *builder = [[NTMarkerStyleBuilder alloc]init];
+        [builder setAnchorPointX:0 anchorPointY:0];
         self.positionMarker = [[NTMarker alloc] initWithPos:position style:[builder buildStyle]];
+        
         [self.source add:self.positionMarker];
         
         NTBalloonPopupStyleBuilder *balloonBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
         self.markerLabel = [[NTBalloonPopup alloc] initWithBaseBillboard:self.positionMarker style:[balloonBuilder buildStyle] title:title desc:description];
         [self.source add:self.markerLabel];
+        [self.contentView.mapView setZoom:19 durationSeconds:0];
     }
     
     self.markerLabel.description = description;
     [self.positionMarker setGeometry:[[NTPointGeometry alloc]initWithPos:position]];
     
-    [self.contentView.mapView setFocusPos:position durationSeconds:1];
-    [self.contentView.mapView setZoom:19 durationSeconds:0];
+    // following depends on marker graphics.
+    // 180-course is ok if it is "arrow down"
+    [self.positionMarker setRotation: 180 - course - self.contentView.mapView.getRotation];
+    
+    [self.contentView.mapView setFocusPos:position durationSeconds:0];
+    
 }
 
 @end
