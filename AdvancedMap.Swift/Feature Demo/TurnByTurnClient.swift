@@ -147,7 +147,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         latestLocations?.add(new)
         
-        var position = latestLocations?.get(Int32((latestLocations?.size())! - 1))
+        var position = routing.matchRoute(points: latestLocations!)
         // Calculations are made in the projection's units, translate it back to latitude & longitude
         position = projection?.toLatLong(position!.getX(), y: position!.getY())
         
