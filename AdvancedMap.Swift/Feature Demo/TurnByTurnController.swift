@@ -33,7 +33,7 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         
         contentView.addRecognizers()
         client.onResume()
-        client.instructionDelegate = self
+        client.delegate = self
         
         let text = "Long click on the map to set a destination"
         contentView.banner.showInformation(text: text, autoclose: false)
@@ -44,7 +44,14 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         
         contentView.removeRecognizers()
         client.onPause()
-        client.instructionDelegate = nil
+        client.delegate = nil
+    }
+    
+    func routingFailed() {
+        let text = "Routing failed. Are you sure you've downloaded the correct package?"
+        DispatchQueue.main.async {
+            self.contentView.banner.showInformation(text: text, autoclose: true)
+        }
     }
     
     func instructionFound(instruction: NTRoutingInstruction) {

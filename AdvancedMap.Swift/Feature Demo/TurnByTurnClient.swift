@@ -11,7 +11,7 @@ import CoreLocation
 
 class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate {
 
-    var instructionDelegate: NextTurnDelegate?
+    var delegate: NextTurnDelegate?
     
     let manager = CLLocationManager()
     
@@ -103,7 +103,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
             let result = self.routing.getResult(startPos: start, stopPos: stop)
             
             if (result == nil) {
-                // Routing failed, try again
+                self.delegate?.routingFailed()
                 return
             }
             
@@ -119,7 +119,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                        instruction = result!.getInstructions().get(1)!
                     }
                     
-                    self.instructionDelegate?.instructionFound(instruction: instruction)
+                    self.delegate?.instructionFound(instruction: instruction)
                 }
             }
         }
@@ -183,7 +183,10 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
 }
 
 protocol NextTurnDelegate {
+    
     func instructionFound(instruction: NTRoutingInstruction)
+    
+    func routingFailed()
 }
 
 
