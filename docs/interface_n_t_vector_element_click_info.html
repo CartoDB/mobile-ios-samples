@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -106,8 +106,6 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a3f9ad63fc692d9828b0431da99097348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a1b466fc748ec63b4e662438f4d790a"><td class="memItemLeft" align="right" valign="top">(NSUInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element_click_info.html#a3a1b466fc748ec63b4e662438f4d790a">hash</a></td></tr>
 <tr class="separator:a3a1b466fc748ec63b4e662438f4d790a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea4544b130b24d13c2bebec30211afdb"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element_click_info.html#aea4544b130b24d13c2bebec30211afdb">initWithClickType:clickPos:elementClickPos:vectorElement:layer:</a></td></tr>
-<tr class="separator:aea4544b130b24d13c2bebec30211afdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa71ae55e1dfe3e2bd3468b265af211c8"><td class="memItemLeft" align="right" valign="top">(enum NTClickType)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element_click_info.html#aa71ae55e1dfe3e2bd3468b265af211c8">getClickType</a></td></tr>
 <tr class="separator:aa71ae55e1dfe3e2bd3468b265af211c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd271b440cd906d26b9b3b6cb9f84c8"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element_click_info.html#a2cd271b440cd906d26b9b3b6cb9f84c8">getClickPos</a></td></tr>
@@ -118,6 +116,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a67dfd5d93360f907b8328637a1cc28ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa43917ea84b143b53ae6b1d0ad08b284"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_layer.html">NTLayer</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element_click_info.html#aa43917ea84b143b53ae6b1d0ad08b284">getLayer</a></td></tr>
 <tr class="separator:aa43917ea84b143b53ae6b1d0ad08b284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f975e951d777d6062dd13cb7a143f6"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element_click_info.html#aa0f975e951d777d6062dd13cb7a143f6">swigGetRawPtr</a></td></tr>
+<tr class="separator:aa0f975e951d777d6062dd13cb7a143f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A container class that provides information about a click performed on<br/>
@@ -233,66 +233,6 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aea4544b130b24d13c2bebec30211afdb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (id) initWithClickType: </td>
-          <td></td>
-          <td class="paramtype">(enum NTClickType)&#160;</td>
-          <td class="paramname"><em>clickType</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">clickPos:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a>*)&#160;</td>
-          <td class="paramname"><em>clickPos</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">elementClickPos:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_map_pos.html">NTMapPos</a>*)&#160;</td>
-          <td class="paramname"><em>elementClickPos</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">vectorElement:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_vector_element.html">NTVectorElement</a>*)&#160;</td>
-          <td class="paramname"><em>vectorElement</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">layer:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_layer.html">NTLayer</a>*)&#160;</td>
-          <td class="paramname"><em>layer</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Constructs a VectorElementClickInfo object from a click position and a vector element.<br/>
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">clickType</td><td>The click type (SINGLE, DUAL, etc)<br/>
- </td></tr>
-    <tr><td class="paramname">clickPos</td><td>The click position in the coordinate system of the base projection.<br/>
- </td></tr>
-    <tr><td class="paramname">elementClickPos</td><td>The click position in the coordinate system of the base projection that corresponds to element point.<br/>
- </td></tr>
-    <tr><td class="paramname">vectorElement</td><td>The vector element on which the click was performed.<br/>
- </td></tr>
-    <tr><td class="paramname">layer</td><td>The layer of the vector element on which the click was performed. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a3f9ad63fc692d9828b0431da99097348"></a>
 <div class="memitem">
 <div class="memproto">
@@ -317,9 +257,27 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa0f975e951d777d6062dd13cb7a143f6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_vector_element_click_info_8h_source.html">NTVectorElementClickInfo.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTVectorElementClickInfo.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_vector_element_click_info_8h_source.html">NTVectorElementClickInfo.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTVectorElementClickInfo.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -327,7 +285,7 @@ Instance Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_vector_element_click_info.html">NTVectorElementClickInfo</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:59 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

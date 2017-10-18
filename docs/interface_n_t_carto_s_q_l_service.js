@@ -8,5 +8,6 @@ var interface_n_t_carto_s_q_l_service =
     [ "queryData:", "interface_n_t_carto_s_q_l_service.html#ad069c774782cda27fafacc7b44593ecc", null ],
     [ "queryFeatures:proj:", "interface_n_t_carto_s_q_l_service.html#a4199b6cb4c53e9d70456bc02c59d746e", null ],
     [ "setAPITemplate:", "interface_n_t_carto_s_q_l_service.html#a5fb393c5dde24cca2759f779b4d1fd6c", null ],
-    [ "setUsername:", "interface_n_t_carto_s_q_l_service.html#a8aed4949ff085d410ca7839b03e2ed46", null ]
+    [ "setUsername:", "interface_n_t_carto_s_q_l_service.html#a8aed4949ff085d410ca7839b03e2ed46", null ],
+    [ "swigGetRawPtr", "interface_n_t_carto_s_q_l_service.html#a858edf29e7328ff71d96f1f4ada609bc", null ]
 ];

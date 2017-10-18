@@ -11,5 +11,6 @@ var interface_n_t_map_envelope =
     [ "initWithConvexHull:", "interface_n_t_map_envelope.html#a2334e9861b818248b2b4c011c84c96da", null ],
     [ "intersects:", "interface_n_t_map_envelope.html#a4e035f22bcb60985783bc5d483ebff9e", null ],
     [ "isEqual:", "interface_n_t_map_envelope.html#adc9e5479a10648c0acd64f51b497d9e6", null ],
-    [ "isEqualInternal:", "interface_n_t_map_envelope.html#a499a55c686bc0efcdb924c594b248ba1", null ]
+    [ "isEqualInternal:", "interface_n_t_map_envelope.html#a499a55c686bc0efcdb924c594b248ba1", null ],
+    [ "swigGetRawPtr", "interface_n_t_map_envelope.html#acb3cc88b2901be0fc4494bb259943906", null ]
 ];

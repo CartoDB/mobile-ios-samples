@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CARTO Mobile SDK iOS: /Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTAssetTileDataSource.h Source File</title>
+<title>CARTO Mobile SDK iOS: /Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTAssetTileDataSource.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -111,46 +111,49 @@ $(document).ready(function(){initNavTree('_n_t_asset_tile_data_source_8h_source.
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;NTMapTile.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTStringMap.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTTileDataSource.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTTileData.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="interface_n_t_asset_tile_data_source.html">   32</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_asset_tile_data_source.html">NTAssetTileDataSource</a> : <a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;-(void*)getCptr;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;+(<a class="code" href="interface_n_t_asset_tile_data_source.html">NTAssetTileDataSource</a>*)swigCreatePolymorphicInstance:(<span class="keywordtype">void</span>*)cPtr swigOwnCObject:(BOOL)cMemoryOwn;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;-(id)initWithMinZoom: (<span class="keywordtype">int</span>)minZoom maxZoom: (<span class="keywordtype">int</span>)maxZoom basePath: (NSString*)basePath;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;-(<a class="code" href="interface_n_t_tile_data.html">NTTileData</a>*)loadTile: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;-(<a class="code" href="interface_n_t_tile_data.html">NTTileData</a>*)loadTileSwigExplicitNTAssetTileDataSource: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;-(NSString*)buildAssetPath: (NSString*)basePath tile: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;-(NSString*)buildAssetPathSwigExplicitNTAssetTileDataSource: (NSString*)basePath tile: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;-(NSString*)<a class="code" href="interface_n_t_asset_tile_data_source.html#abeafd8881b148eced88ec3653436be48">swigGetClassName</a>;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;-(<span class="keywordtype">void</span> *)<a class="code" href="interface_n_t_asset_tile_data_source.html#a8e0f71c72abe2bca9f19621e9cd8501b">swigGetDirectorObject</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;-(void)dealloc;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTMapBounds.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTStringMap.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTTileDataSource.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &quot;NTTileData.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_n_t_asset_tile_data_source.html">   33</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_asset_tile_data_source.html">NTAssetTileDataSource</a> : <a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;-(void*)getCptr;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;+(<a class="code" href="interface_n_t_asset_tile_data_source.html">NTAssetTileDataSource</a>*)swigCreatePolymorphicInstance:(<span class="keywordtype">void</span>*)cPtr swigOwnCObject:(BOOL)cMemoryOwn;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;-(id)initWithMinZoom: (<span class="keywordtype">int</span>)minZoom maxZoom: (<span class="keywordtype">int</span>)maxZoom basePath: (NSString*)basePath;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;-(<a class="code" href="interface_n_t_tile_data.html">NTTileData</a>*)loadTile: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;-(<a class="code" href="interface_n_t_tile_data.html">NTTileData</a>*)loadTileSwigExplicitNTAssetTileDataSource: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;-(NSString*)buildAssetPath: (NSString*)basePath tile: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;-(NSString*)buildAssetPathSwigExplicitNTAssetTileDataSource: (NSString*)basePath tile: (<a class="code" href="interface_n_t_map_tile.html">NTMapTile</a>*)tile;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;-(<span class="keywordtype">long</span> long)<a class="code" href="interface_n_t_asset_tile_data_source.html#a823e9ad6a9c5072b243a5ff1d45916e4">swigGetRawPtr</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;-(NSString*)<a class="code" href="interface_n_t_asset_tile_data_source.html#abeafd8881b148eced88ec3653436be48">swigGetClassName</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;-(<span class="keywordtype">void</span> *)<a class="code" href="interface_n_t_asset_tile_data_source.html#a8e0f71c72abe2bca9f19621e9cd8501b">swigGetDirectorObject</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;-(void)dealloc;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor"></span></div>
 <div class="ttc" id="interface_n_t_tile_data_html"><div class="ttname"><a href="interface_n_t_tile_data.html">NTTileData</a></div><div class="ttdef"><b>Definition:</b> NTTileData.h:24</div></div>
-<div class="ttc" id="interface_n_t_tile_data_source_html"><div class="ttname"><a href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTTileDataSource.h:28</div></div>
+<div class="ttc" id="interface_n_t_tile_data_source_html"><div class="ttname"><a href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTTileDataSource.h:29</div></div>
 <div class="ttc" id="interface_n_t_map_tile_html"><div class="ttname"><a href="interface_n_t_map_tile.html">NTMapTile</a></div><div class="ttdef"><b>Definition:</b> NTMapTile.h:21</div></div>
-<div class="ttc" id="interface_n_t_asset_tile_data_source_html_a8e0f71c72abe2bca9f19621e9cd8501b"><div class="ttname"><a href="interface_n_t_asset_tile_data_source.html#a8e0f71c72abe2bca9f19621e9cd8501b">-[NTAssetTileDataSource swigGetDirectorObject]</a></div><div class="ttdeci">void * swigGetDirectorObject()</div><div class="ttdef"><b>Definition:</b> NTAssetTileDataSource.mm:90</div></div>
-<div class="ttc" id="interface_n_t_asset_tile_data_source_html_abeafd8881b148eced88ec3653436be48"><div class="ttname"><a href="interface_n_t_asset_tile_data_source.html#abeafd8881b148eced88ec3653436be48">-[NTAssetTileDataSource swigGetClassName]</a></div><div class="ttdeci">NSString * swigGetClassName()</div><div class="ttdef"><b>Definition:</b> NTAssetTileDataSource.mm:85</div></div>
-<div class="ttc" id="interface_n_t_asset_tile_data_source_html"><div class="ttname"><a href="interface_n_t_asset_tile_data_source.html">NTAssetTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTAssetTileDataSource.h:32</div></div>
+<div class="ttc" id="interface_n_t_asset_tile_data_source_html_a8e0f71c72abe2bca9f19621e9cd8501b"><div class="ttname"><a href="interface_n_t_asset_tile_data_source.html#a8e0f71c72abe2bca9f19621e9cd8501b">-[NTAssetTileDataSource swigGetDirectorObject]</a></div><div class="ttdeci">void * swigGetDirectorObject()</div><div class="ttdef"><b>Definition:</b> NTAssetTileDataSource.mm:95</div></div>
+<div class="ttc" id="interface_n_t_asset_tile_data_source_html_abeafd8881b148eced88ec3653436be48"><div class="ttname"><a href="interface_n_t_asset_tile_data_source.html#abeafd8881b148eced88ec3653436be48">-[NTAssetTileDataSource swigGetClassName]</a></div><div class="ttdeci">NSString * swigGetClassName()</div><div class="ttdef"><b>Definition:</b> NTAssetTileDataSource.mm:90</div></div>
+<div class="ttc" id="interface_n_t_asset_tile_data_source_html_a823e9ad6a9c5072b243a5ff1d45916e4"><div class="ttname"><a href="interface_n_t_asset_tile_data_source.html#a823e9ad6a9c5072b243a5ff1d45916e4">-[NTAssetTileDataSource swigGetRawPtr]</a></div><div class="ttdeci">long long swigGetRawPtr()</div><div class="ttdef"><b>Definition:</b> NTAssetTileDataSource.mm:85</div></div>
+<div class="ttc" id="interface_n_t_asset_tile_data_source_html"><div class="ttname"><a href="interface_n_t_asset_tile_data_source.html">NTAssetTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTAssetTileDataSource.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_b7825bbd13b32a8f5a7f6eb81b6582d9.html">doxygen</a></li><li class="navelem"><b>NTAssetTileDataSource.h</b></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:06 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:49 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

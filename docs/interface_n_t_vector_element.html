@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -138,6 +138,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a8e2f0abacc5a6d8b5baedda0ab017a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91d89d7ff6dd33e1ac203e18e6ebe9b7"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#a91d89d7ff6dd33e1ac203e18e6ebe9b7">setMetaData:</a></td></tr>
 <tr class="separator:a91d89d7ff6dd33e1ac203e18e6ebe9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8762d865303942099364bb43584b365"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#ad8762d865303942099364bb43584b365">containsMetaDataKey:</a></td></tr>
+<tr class="separator:ad8762d865303942099364bb43584b365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58b236e7502fc87c2fdd6ac18a1daf77"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_variant.html">NTVariant</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#a58b236e7502fc87c2fdd6ac18a1daf77">getMetaDataElement:</a></td></tr>
 <tr class="separator:a58b236e7502fc87c2fdd6ac18a1daf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6390e6d02b8d5ac9f77af4762f39b76e"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#a6390e6d02b8d5ac9f77af4762f39b76e">setMetaDataElement:element:</a></td></tr>
@@ -148,6 +150,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a151bb778e4021021dafee3e0df95a907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd8f7fe85fe8ab573954b744481a981"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#a8cd8f7fe85fe8ab573954b744481a981">notifyElementChanged</a></td></tr>
 <tr class="separator:a8cd8f7fe85fe8ab573954b744481a981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a741382e5467868208abffabd81019b"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#a1a741382e5467868208abffabd81019b">swigGetRawPtr</a></td></tr>
+<tr class="separator:a1a741382e5467868208abffabd81019b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a112d339c1a8dc7ba6947fe4506c404a1"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#a112d339c1a8dc7ba6947fe4506c404a1">swigGetClassName</a></td></tr>
 <tr class="separator:a112d339c1a8dc7ba6947fe4506c404a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a559ed4e2eae6791968258697610a2134"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_element.html#a559ed4e2eae6791968258697610a2134">swigGetDirectorObject</a></td></tr>
@@ -161,6 +165,32 @@ Class Methods</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A base class for all vector elements (points, lines, texts, models, etc). </p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="ad8762d865303942099364bb43584b365"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) containsMetaDataKey: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>key</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true if the specified key exists in the element meta data.<br/>
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key to use.<br/>
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the meta data element exists. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a7332e6e76dd9f34d74031cde85f513b4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -231,9 +261,9 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a modifiable meta data map. Users may add their data as key-value pairs.<br/>
+<p>Returns a copy of the meta data map. The changes you make to this map are NOT reflected in the actual meta data of the element.<br/>
  </p>
-<dl class="section return"><dt>Returns</dt><dd>The modifiable meta data map of this vector element. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of the meta data map. </dd></dl>
 
 </div>
 </div>
@@ -483,7 +513,7 @@ Class Methods</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new instance. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="interface_n_t_popup.html#a84490ee170df093d7d2541d0f4b950ae">NTPopup</a>, <a class="el" href="interface_n_t_geometry_collection.html#acd3c347c0e22bf4168e1acfd277c4125">NTGeometryCollection</a>, <a class="el" href="interface_n_t_polygon.html#a166bd8494470b53a15f6747566226208">NTPolygon</a>, <a class="el" href="interface_n_t_polygon3_d.html#a85d5cd47dd97f1c6a58f5aefb0185db9">NTPolygon3D</a>, <a class="el" href="interface_n_t_point.html#a9d22574a370eaf73f082588c1eb15ac2">NTPoint</a>, <a class="el" href="interface_n_t_custom_popup.html#ade4aa990921b091845f6ea432b9993c1">NTCustomPopup</a>, <a class="el" href="interface_n_t_billboard.html#a862baf93e16a51a0efc54bc4679fc288">NTBillboard</a>, <a class="el" href="interface_n_t_balloon_popup.html#ae6bf664c77f97e6d61cd809e591a7ee8">NTBalloonPopup</a>, <a class="el" href="interface_n_t_label.html#a23fe51a94d0be3a56bc941c715915c5b">NTLabel</a>, <a class="el" href="interface_n_t_text.html#a8bfdde121d8ed3c93241f7f90501ff80">NTText</a>, <a class="el" href="interface_n_t_line.html#ac3ed610401c5ddfd6e6cb0b35d60dfef">NTLine</a>, <a class="el" href="interface_n_t_marker.html#a2df3ca0f544305f46316868a2efb8553">NTMarker</a>, and <a class="el" href="interface_n_t_n_m_l_model.html#ac2fb702a90708a4e9333a7bbfa19da21">NTNMLModel</a>.</p>
+<p>Reimplemented in <a class="el" href="interface_n_t_popup.html#a84490ee170df093d7d2541d0f4b950ae">NTPopup</a>, <a class="el" href="interface_n_t_geometry_collection.html#acd3c347c0e22bf4168e1acfd277c4125">NTGeometryCollection</a>, <a class="el" href="interface_n_t_polygon.html#a166bd8494470b53a15f6747566226208">NTPolygon</a>, <a class="el" href="interface_n_t_polygon3_d.html#a85d5cd47dd97f1c6a58f5aefb0185db9">NTPolygon3D</a>, <a class="el" href="interface_n_t_point.html#a9d22574a370eaf73f082588c1eb15ac2">NTPoint</a>, <a class="el" href="interface_n_t_custom_popup.html#ade4aa990921b091845f6ea432b9993c1">NTCustomPopup</a>, <a class="el" href="interface_n_t_billboard.html#a862baf93e16a51a0efc54bc4679fc288">NTBillboard</a>, <a class="el" href="interface_n_t_balloon_popup.html#ae6bf664c77f97e6d61cd809e591a7ee8">NTBalloonPopup</a>, <a class="el" href="interface_n_t_text.html#a8bfdde121d8ed3c93241f7f90501ff80">NTText</a>, <a class="el" href="interface_n_t_marker.html#a2df3ca0f544305f46316868a2efb8553">NTMarker</a>, <a class="el" href="interface_n_t_line.html#ac3ed610401c5ddfd6e6cb0b35d60dfef">NTLine</a>, <a class="el" href="interface_n_t_label.html#a23fe51a94d0be3a56bc941c715915c5b">NTLabel</a>, and <a class="el" href="interface_n_t_n_m_l_model.html#ac2fb702a90708a4e9333a7bbfa19da21">NTNMLModel</a>.</p>
 
 </div>
 </div>
@@ -503,7 +533,7 @@ Class Methods</h2></td></tr>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>The class name of this object. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="interface_n_t_popup.html#a59d637e78e8c5d0dedf044358e91f3bc">NTPopup</a>, <a class="el" href="interface_n_t_geometry_collection.html#a920444d63a9d208e86a1fbdec4355eeb">NTGeometryCollection</a>, <a class="el" href="interface_n_t_polygon.html#ad7caf30979fe72243686e050bedfbc07">NTPolygon</a>, <a class="el" href="interface_n_t_polygon3_d.html#a13620eaccdb4fee1f210c3b26dc1eb5c">NTPolygon3D</a>, <a class="el" href="interface_n_t_point.html#a093884acd5262d22abc5a1abbd684264">NTPoint</a>, <a class="el" href="interface_n_t_custom_popup.html#aa740eb36fd6dd5c08cdc9524f96ab738">NTCustomPopup</a>, <a class="el" href="interface_n_t_billboard.html#a681c7d9b77244492271318e0cec19cf2">NTBillboard</a>, <a class="el" href="interface_n_t_balloon_popup.html#a95e3e9f4534af8f4164c6b25b06704e7">NTBalloonPopup</a>, <a class="el" href="interface_n_t_label.html#a0b265b45aaa1243a90ddea543bb83867">NTLabel</a>, <a class="el" href="interface_n_t_text.html#ac4e38c08000d49afa86500fb33fe9a4d">NTText</a>, <a class="el" href="interface_n_t_line.html#a05139bda02ce73bcad25db63824b27d0">NTLine</a>, <a class="el" href="interface_n_t_marker.html#af11421ced49bea4c0003f98ca5ae45af">NTMarker</a>, and <a class="el" href="interface_n_t_n_m_l_model.html#a5345868c520f25de7af3ec7bc2a0f69c">NTNMLModel</a>.</p>
+<p>Reimplemented in <a class="el" href="interface_n_t_popup.html#a59d637e78e8c5d0dedf044358e91f3bc">NTPopup</a>, <a class="el" href="interface_n_t_geometry_collection.html#a920444d63a9d208e86a1fbdec4355eeb">NTGeometryCollection</a>, <a class="el" href="interface_n_t_polygon.html#ad7caf30979fe72243686e050bedfbc07">NTPolygon</a>, <a class="el" href="interface_n_t_polygon3_d.html#a13620eaccdb4fee1f210c3b26dc1eb5c">NTPolygon3D</a>, <a class="el" href="interface_n_t_point.html#a093884acd5262d22abc5a1abbd684264">NTPoint</a>, <a class="el" href="interface_n_t_custom_popup.html#aa740eb36fd6dd5c08cdc9524f96ab738">NTCustomPopup</a>, <a class="el" href="interface_n_t_billboard.html#a681c7d9b77244492271318e0cec19cf2">NTBillboard</a>, <a class="el" href="interface_n_t_balloon_popup.html#a95e3e9f4534af8f4164c6b25b06704e7">NTBalloonPopup</a>, <a class="el" href="interface_n_t_text.html#ac4e38c08000d49afa86500fb33fe9a4d">NTText</a>, <a class="el" href="interface_n_t_marker.html#af11421ced49bea4c0003f98ca5ae45af">NTMarker</a>, <a class="el" href="interface_n_t_line.html#a05139bda02ce73bcad25db63824b27d0">NTLine</a>, <a class="el" href="interface_n_t_label.html#a0b265b45aaa1243a90ddea543bb83867">NTLabel</a>, and <a class="el" href="interface_n_t_n_m_l_model.html#a5345868c520f25de7af3ec7bc2a0f69c">NTNMLModel</a>.</p>
 
 </div>
 </div>
@@ -523,13 +553,33 @@ Class Methods</h2></td></tr>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>The pointer to the connected director object or null if director is not connected. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="interface_n_t_popup.html#a0cbebfb14f672dad3b4c60fefc22fe70">NTPopup</a>, <a class="el" href="interface_n_t_geometry_collection.html#af856e068a87a7eabf4247a1d1b6e7aa9">NTGeometryCollection</a>, <a class="el" href="interface_n_t_polygon.html#af8d74700720d6d678647a323f9ba1dc7">NTPolygon</a>, <a class="el" href="interface_n_t_polygon3_d.html#aa37a7aa72358102fafb213b958d5b79a">NTPolygon3D</a>, <a class="el" href="interface_n_t_point.html#af29cd8cda50a46aa2b97a2686296fef2">NTPoint</a>, <a class="el" href="interface_n_t_custom_popup.html#abc2238e27bb6a4132acf65ba1f070945">NTCustomPopup</a>, <a class="el" href="interface_n_t_billboard.html#ad7dd0ae793fc2c3412ee09b40c589c69">NTBillboard</a>, <a class="el" href="interface_n_t_balloon_popup.html#abb8364adbc493a9b598f0f4813c9d8c1">NTBalloonPopup</a>, <a class="el" href="interface_n_t_label.html#a2a715cdc1e391e3ebb60d3afda0374bd">NTLabel</a>, <a class="el" href="interface_n_t_text.html#acd3aa6c8c1265b5f8f4f1084cd1ff173">NTText</a>, <a class="el" href="interface_n_t_line.html#afaebe9e6c9b0c15895019e60bd7c81f8">NTLine</a>, <a class="el" href="interface_n_t_marker.html#a2181526801df88338fdf38975ce42b4a">NTMarker</a>, and <a class="el" href="interface_n_t_n_m_l_model.html#ab13eb377a9e8d983781a011266205e53">NTNMLModel</a>.</p>
+<p>Reimplemented in <a class="el" href="interface_n_t_popup.html#a0cbebfb14f672dad3b4c60fefc22fe70">NTPopup</a>, <a class="el" href="interface_n_t_geometry_collection.html#af856e068a87a7eabf4247a1d1b6e7aa9">NTGeometryCollection</a>, <a class="el" href="interface_n_t_polygon.html#af8d74700720d6d678647a323f9ba1dc7">NTPolygon</a>, <a class="el" href="interface_n_t_polygon3_d.html#aa37a7aa72358102fafb213b958d5b79a">NTPolygon3D</a>, <a class="el" href="interface_n_t_point.html#af29cd8cda50a46aa2b97a2686296fef2">NTPoint</a>, <a class="el" href="interface_n_t_custom_popup.html#abc2238e27bb6a4132acf65ba1f070945">NTCustomPopup</a>, <a class="el" href="interface_n_t_billboard.html#ad7dd0ae793fc2c3412ee09b40c589c69">NTBillboard</a>, <a class="el" href="interface_n_t_balloon_popup.html#abb8364adbc493a9b598f0f4813c9d8c1">NTBalloonPopup</a>, <a class="el" href="interface_n_t_text.html#acd3aa6c8c1265b5f8f4f1084cd1ff173">NTText</a>, <a class="el" href="interface_n_t_marker.html#a2181526801df88338fdf38975ce42b4a">NTMarker</a>, <a class="el" href="interface_n_t_line.html#afaebe9e6c9b0c15895019e60bd7c81f8">NTLine</a>, <a class="el" href="interface_n_t_label.html#a2a715cdc1e391e3ebb60d3afda0374bd">NTLabel</a>, and <a class="el" href="interface_n_t_n_m_l_model.html#ab13eb377a9e8d983781a011266205e53">NTNMLModel</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a741382e5467868208abffabd81019b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_popup.html#a85e79cf74e5a96cbff621bddc9898fd2">NTPopup</a>, <a class="el" href="interface_n_t_geometry_collection.html#a969836c372a2c56da895aba2f85d408b">NTGeometryCollection</a>, <a class="el" href="interface_n_t_polygon.html#aec97047d871a9e0eb834cc9c31dc0207">NTPolygon</a>, <a class="el" href="interface_n_t_polygon3_d.html#a65a6f6dea9b03da79afdac44fa876d5c">NTPolygon3D</a>, <a class="el" href="interface_n_t_point.html#a6cb8c953e90e588ee5d3fbd74eb042ad">NTPoint</a>, <a class="el" href="interface_n_t_custom_popup.html#a9fb8ed8d1a38f03201d2cb5ab1eb0768">NTCustomPopup</a>, <a class="el" href="interface_n_t_billboard.html#a7dae122296812ba2e1150a70bf1a6f15">NTBillboard</a>, <a class="el" href="interface_n_t_balloon_popup.html#ac955345ab88f9937697a8b8f267a6117">NTBalloonPopup</a>, <a class="el" href="interface_n_t_text.html#ac2277d07b1a59b8b42060e4f085fab66">NTText</a>, <a class="el" href="interface_n_t_marker.html#aa65b0b75dd9423f34680676e76097974">NTMarker</a>, <a class="el" href="interface_n_t_line.html#a630bd549c5fdeae5aa8c96bd522db4c6">NTLine</a>, <a class="el" href="interface_n_t_label.html#ac1713273f6db673fb21ada744c45c100">NTLabel</a>, and <a class="el" href="interface_n_t_n_m_l_model.html#ae4b0c5e6dd0a2dd747d33e464d9635a4">NTNMLModel</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_vector_element_8h_source.html">NTVectorElement.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTVectorElement.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_vector_element_8h_source.html">NTVectorElement.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTVectorElement.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -537,7 +587,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_vector_element.html">NTVectorElement</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:59 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

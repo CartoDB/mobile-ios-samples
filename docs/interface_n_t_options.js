@@ -3,6 +3,7 @@ var interface_n_t_options =
     [ "getAmbientLightColor", "interface_n_t_options.html#abd4f23ee56b20a6a57515f089c482635", null ],
     [ "getBackgroundBitmap", "interface_n_t_options.html#a43812aa1eedd6d7582e1e58965f99085", null ],
     [ "getBaseProjection", "interface_n_t_options.html#abb885dc8b1832c58caa5d7e8bf0b78e9", null ],
+    [ "getClearColor", "interface_n_t_options.html#ad334cd7bafa832d386db69b731dcd108", null ],
     [ "getDPI", "interface_n_t_options.html#a282e4cae9d041d944fda7e3f96012022", null ],
     [ "getDrawDistance", "interface_n_t_options.html#a7932893b637ddbe6d683887c81790657", null ],
     [ "getEnvelopeThreadPoolSize", "interface_n_t_options.html#a6c65c1829db14e7402775652edb9ab4c", null ],
@@ -34,9 +35,11 @@ var interface_n_t_options =
     [ "isSeamlessPanning", "interface_n_t_options.html#a702c8a866c3c87d9219253b2c0452107", null ],
     [ "isTiltGestureReversed", "interface_n_t_options.html#a1373e329acf5af40f6bba00222e5daa2", null ],
     [ "isUserInput", "interface_n_t_options.html#a8b456477a15d09ea909ef756707f172e", null ],
+    [ "isZoomGestures", "interface_n_t_options.html#a733c39fd0712d85b7518e6fec275a661", null ],
     [ "setAmbientLightColor:", "interface_n_t_options.html#a257243031232fa74af030c628b2c0ce5", null ],
     [ "setBackgroundBitmap:", "interface_n_t_options.html#adfb82d62d2970799b7f365513b6dfd0c", null ],
     [ "setBaseProjection:", "interface_n_t_options.html#ab2bbe316f4e8d8c10a19efc124b11e40", null ],
+    [ "setClearColor:", "interface_n_t_options.html#ab97469d0f54f8e6baacec30394b85ae6", null ],
     [ "setClickTypeDetection:", "interface_n_t_options.html#af496699cf6d0e5b5b788f94f9e75590f", null ],
     [ "setDPI:", "interface_n_t_options.html#ac27f068bbd459f638ebb0f8bb3920af6", null ],
     [ "setDrawDistance:", "interface_n_t_options.html#a6f294139b39e81116a647607f9576f99", null ],
@@ -65,5 +68,7 @@ var interface_n_t_options =
     [ "setWatermarkBitmap:", "interface_n_t_options.html#a5e94445488368461633ac74024880732", null ],
     [ "setWatermarkPaddingX:", "interface_n_t_options.html#a4d7b0318a01184e025a6864ea20c1dd0", null ],
     [ "setWatermarkScale:", "interface_n_t_options.html#ae9c93e209fdd4cabb3d352f70a2f70e8", null ],
-    [ "setZoomRange:", "interface_n_t_options.html#aafcf7a7b86048747f8c165f2dc09bbe9", null ]
+    [ "setZoomGestures:", "interface_n_t_options.html#a498af33882a643d6406e26167330e78a", null ],
+    [ "setZoomRange:", "interface_n_t_options.html#aafcf7a7b86048747f8c165f2dc09bbe9", null ],
+    [ "swigGetRawPtr", "interface_n_t_options.html#a1a2d5ea4b440c97e77514306cd39fe95", null ]
 ];

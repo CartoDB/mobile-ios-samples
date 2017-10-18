@@ -43,7 +43,10 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+
     [self.contentView.mapView setMapEventListener:nil];
+    
+    self.geocodingListener.controller = nil;
 }
 
 @end

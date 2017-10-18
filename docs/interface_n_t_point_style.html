@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -110,14 +110,14 @@ Inheritance diagram for NTPointStyle:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:a511e8bf7723ad2245dbf7cdfd35b67ce"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_point_style.html#a511e8bf7723ad2245dbf7cdfd35b67ce">initWithColor:bitmap:clickSize:size:</a></td></tr>
-<tr class="separator:a511e8bf7723ad2245dbf7cdfd35b67ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a233ba76ce3c6387ed2f286e33ec509"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_bitmap.html">NTBitmap</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_point_style.html#a9a233ba76ce3c6387ed2f286e33ec509">getBitmap</a></td></tr>
 <tr class="separator:a9a233ba76ce3c6387ed2f286e33ec509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a246a7c7d5bbf170aef8395d5bfbc3036"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_point_style.html#a246a7c7d5bbf170aef8395d5bfbc3036">getClickSize</a></td></tr>
 <tr class="separator:a246a7c7d5bbf170aef8395d5bfbc3036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa8bd91d766e7d5971c54dca25625994"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_point_style.html#afa8bd91d766e7d5971c54dca25625994">getSize</a></td></tr>
 <tr class="separator:afa8bd91d766e7d5971c54dca25625994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b52498a391456e57b49628be82e1bb8"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_point_style.html#a8b52498a391456e57b49628be82e1bb8">swigGetRawPtr</a></td></tr>
+<tr class="separator:a8b52498a391456e57b49628be82e1bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a875c3f606c7cde4d63a610feeb5eff6c"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_point_style.html#a875c3f606c7cde4d63a610feeb5eff6c">swigGetClassName</a></td></tr>
 <tr class="separator:a875c3f606c7cde4d63a610feeb5eff6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28802b15d9229bccb98f0ddfea96dd31"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_point_style.html#a28802b15d9229bccb98f0ddfea96dd31">swigGetDirectorObject</a></td></tr>
@@ -189,59 +189,6 @@ Class Methods</h2></td></tr>
 <p>Returns the size of the point.<br/>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>The size of the point. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a511e8bf7723ad2245dbf7cdfd35b67ce"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (id) initWithColor: </td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_color.html">NTColor</a>*)&#160;</td>
-          <td class="paramname"><em>color</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">bitmap:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_bitmap.html">NTBitmap</a>*)&#160;</td>
-          <td class="paramname"><em>bitmap</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">clickSize:</td>
-          <td></td>
-          <td class="paramtype">(float)&#160;</td>
-          <td class="paramname"><em>clickSize</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">size:</td>
-          <td></td>
-          <td class="paramtype">(float)&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Constructs a PointStyle object from various parameters. Instantiating the object directly is<br/>
- not recommended, PointStyleBuilder should be used instead.<br/>
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The color for the point.<br/>
- </td></tr>
-    <tr><td class="paramname">bitmap</td><td>The bitmap for the point.<br/>
- </td></tr>
-    <tr><td class="paramname">clickSize</td><td>The size of the point used for click detection.<br/>
- </td></tr>
-    <tr><td class="paramname">size</td><td>The size for the point. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -322,9 +269,29 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8b52498a391456e57b49628be82e1bb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="interface_n_t_style.html#ac0000c968c6f5d30289168591f186c7b">NTStyle</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_point_style_8h_source.html">NTPointStyle.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTPointStyle.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_point_style_8h_source.html">NTPointStyle.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTPointStyle.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -332,7 +299,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_point_style.html">NTPointStyle</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:10 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:56 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -6,5 +6,6 @@ var interface_n_t_geometry_collection =
     [ "setGeometry:", "interface_n_t_geometry_collection.html#aec82a5ebb8abd2fc5d5525d5d913f809", null ],
     [ "setStyle:", "interface_n_t_geometry_collection.html#ae6408da90a69f9955ab157efccc62415", null ],
     [ "swigGetClassName", "interface_n_t_geometry_collection.html#a920444d63a9d208e86a1fbdec4355eeb", null ],
-    [ "swigGetDirectorObject", "interface_n_t_geometry_collection.html#af856e068a87a7eabf4247a1d1b6e7aa9", null ]
+    [ "swigGetDirectorObject", "interface_n_t_geometry_collection.html#af856e068a87a7eabf4247a1d1b6e7aa9", null ],
+    [ "swigGetRawPtr", "interface_n_t_geometry_collection.html#a969836c372a2c56da895aba2f85d408b", null ]
 ];

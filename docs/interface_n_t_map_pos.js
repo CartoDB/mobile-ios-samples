@@ -13,5 +13,6 @@ var interface_n_t_map_pos =
     [ "isEqual:", "interface_n_t_map_pos.html#aa757d8054c908be394c5bce632a2aa32", null ],
     [ "isEqualInternal:", "interface_n_t_map_pos.html#a3ec96a55a6dabf2a90ec6aae3cf27dd6", null ],
     [ "subPos:", "interface_n_t_map_pos.html#a825979d6358149cf13467424ee352df1", null ],
-    [ "subVec:", "interface_n_t_map_pos.html#a98c5ebeecf40e092e48aa8398b89cd13", null ]
+    [ "subVec:", "interface_n_t_map_pos.html#a98c5ebeecf40e092e48aa8398b89cd13", null ],
+    [ "swigGetRawPtr", "interface_n_t_map_pos.html#a05ba97310a62882c1b2dbe38a4b37485", null ]
 ];

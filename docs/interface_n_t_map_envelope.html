@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -112,8 +112,6 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a8d659f21bcac749ecda553765d85b9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2334e9861b818248b2b4c011c84c96da"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#a2334e9861b818248b2b4c011c84c96da">initWithConvexHull:</a></td></tr>
 <tr class="separator:a2334e9861b818248b2b4c011c84c96da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a499a55c686bc0efcdb924c594b248ba1"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#a499a55c686bc0efcdb924c594b248ba1">isEqualInternal:</a></td></tr>
-<tr class="separator:a499a55c686bc0efcdb924c594b248ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac677f9233b7a10e45a72e5ad4189ac7a"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#ac677f9233b7a10e45a72e5ad4189ac7a">getBounds</a></td></tr>
 <tr class="separator:ac677f9233b7a10e45a72e5ad4189ac7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f71704cef022d4592e696964dcab579"><td class="memItemLeft" align="right" valign="top">(NTMapPosVector *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#a0f71704cef022d4592e696964dcab579">getConvexHull</a></td></tr>
@@ -122,10 +120,14 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a228b2e2e66bc7b4e240302f907f5f838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e035f22bcb60985783bc5d483ebff9e"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#a4e035f22bcb60985783bc5d483ebff9e">intersects:</a></td></tr>
 <tr class="separator:a4e035f22bcb60985783bc5d483ebff9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499a55c686bc0efcdb924c594b248ba1"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#a499a55c686bc0efcdb924c594b248ba1">isEqualInternal:</a></td></tr>
+<tr class="separator:a499a55c686bc0efcdb924c594b248ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74a60b1b26ef767956e48ae94c1a3ab"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#ad74a60b1b26ef767956e48ae94c1a3ab">hashInternal</a></td></tr>
 <tr class="separator:ad74a60b1b26ef767956e48ae94c1a3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c205bed561acddf8c103e88e19becf0"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#a3c205bed561acddf8c103e88e19becf0">description</a></td></tr>
 <tr class="separator:a3c205bed561acddf8c103e88e19becf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3cc88b2901be0fc4494bb259943906"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_envelope.html#acb3cc88b2901be0fc4494bb259943906">swigGetRawPtr</a></td></tr>
+<tr class="separator:acb3cc88b2901be0fc4494bb259943906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A bounding area on the map. Can be defined by a map bounds object or by a convex bounding polygon.<br/>
@@ -387,9 +389,27 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acb3cc88b2901be0fc4494bb259943906"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_map_envelope_8h_source.html">NTMapEnvelope.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTMapEnvelope.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_map_envelope_8h_source.html">NTMapEnvelope.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTMapEnvelope.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -397,7 +417,7 @@ Instance Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_map_envelope.html">NTMapEnvelope</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:09 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:54 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

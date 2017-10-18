@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -110,6 +110,10 @@ Inheritance diagram for NTVectorDataSource:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
+<tr class="memitem:acd7e69384ad2ed2438a8cbd4dafe9f15"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#acd7e69384ad2ed2438a8cbd4dafe9f15">getDataExtent</a></td></tr>
+<tr class="separator:acd7e69384ad2ed2438a8cbd4dafe9f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e63201c6cccc56e48649e87dc7881d7"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#a8e63201c6cccc56e48649e87dc7881d7">getDataExtentSwigExplicitNTVectorDataSource</a></td></tr>
+<tr class="separator:a8e63201c6cccc56e48649e87dc7881d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f1acc715eac3be5484e5ee9e49f5d61"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_projection.html">NTProjection</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#a9f1acc715eac3be5484e5ee9e49f5d61">getProjection</a></td></tr>
 <tr class="separator:a9f1acc715eac3be5484e5ee9e49f5d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc35d2d126571e7773dd30c2e859d614"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_vector_data.html">NTVectorData</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#acc35d2d126571e7773dd30c2e859d614">loadElements:</a></td></tr>
@@ -118,6 +122,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a6304f3c44f7b30dbafdea2c7a32ef8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa835fb45dc78897683b24f09814e6cd0"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#aa835fb45dc78897683b24f09814e6cd0">initWithProjection:</a></td></tr>
 <tr class="separator:aa835fb45dc78897683b24f09814e6cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccd000ddf83ccca1a3cd57d26c5e271"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#a0ccd000ddf83ccca1a3cd57d26c5e271">swigGetRawPtr</a></td></tr>
+<tr class="separator:a0ccd000ddf83ccca1a3cd57d26c5e271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2eac6a7571540e98695cc7709788725"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#af2eac6a7571540e98695cc7709788725">swigGetClassName</a></td></tr>
 <tr class="separator:af2eac6a7571540e98695cc7709788725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49bd60b79e7bbde57671b5493db859e6"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_vector_data_source.html#a49bd60b79e7bbde57671b5493db859e6">swigGetDirectorObject</a></td></tr>
@@ -135,6 +141,46 @@ Class Methods</h2></td></tr>
  <br/>
  The draw order of vector elements within the data source is undefined. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="acd7e69384ad2ed2438a8cbd4dafe9f15"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *) getDataExtent </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the extent of the data of this data source.<br/>
+ The bounds are in coordinate system of the projection of the data source.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The extent of the data source. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_local_vector_data_source.html#aaf44fc89518a56ad1d6f42207a098a7a">NTLocalVectorDataSource</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e63201c6cccc56e48649e87dc7881d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *) getDataExtentSwigExplicitNTVectorDataSource </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the extent of the data of this data source.<br/>
+ The bounds are in coordinate system of the projection of the data source.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The extent of the data source. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9f1acc715eac3be5484e5ee9e49f5d61"></a>
 <div class="memitem">
 <div class="memproto">
@@ -301,9 +347,29 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0ccd000ddf83ccca1a3cd57d26c5e271"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="interface_n_t_local_vector_data_source.html#aea715ef8b93fea9ee09f5c003525c0bd">NTLocalVectorDataSource</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_vector_data_source_8h_source.html">NTVectorDataSource.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTVectorDataSource.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_vector_data_source_8h_source.html">NTVectorDataSource.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTVectorDataSource.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -311,7 +377,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_vector_data_source.html">NTVectorDataSource</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:59 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

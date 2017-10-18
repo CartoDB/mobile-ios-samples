@@ -8,7 +8,9 @@ var interface_n_t_map_tile =
     [ "getZoom", "interface_n_t_map_tile.html#a97b3966a8cf1a405911637b61f6ee7be", null ],
     [ "hash", "interface_n_t_map_tile.html#af69541011e2976932a51117c46fe0f83", null ],
     [ "hashInternal", "interface_n_t_map_tile.html#a3853c66c1e05215cc7cb87ebbf01912f", null ],
+    [ "init", "interface_n_t_map_tile.html#a579b7cb64727fc84658c8b8c0c42e486", null ],
     [ "initWithX:y:zoom:frameNr:", "interface_n_t_map_tile.html#af2b7e3b1700659d85a811f3ece893bcd", null ],
     [ "isEqual:", "interface_n_t_map_tile.html#a1767a6e8222555f1162bcca7f87de8b5", null ],
-    [ "isEqualInternal:", "interface_n_t_map_tile.html#a387f2ce7c06b1c2efb88fded66f25de8", null ]
+    [ "isEqualInternal:", "interface_n_t_map_tile.html#a387f2ce7c06b1c2efb88fded66f25de8", null ],
+    [ "swigGetRawPtr", "interface_n_t_map_tile.html#aa52237bed2c4bda21ba4411d3f4a68c4", null ]
 ];

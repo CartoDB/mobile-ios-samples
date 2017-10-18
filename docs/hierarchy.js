@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "NTAddress", "interface_n_t_address.html", null ],
+    [ "NTAnimationStyle", "interface_n_t_animation_style.html", null ],
+    [ "NTAnimationStyleBuilder", "interface_n_t_animation_style_builder.html", null ],
     [ "NTAssetPackage", "interface_n_t_asset_package.html", [
       [ "NTZippedAssetPackage", "interface_n_t_zipped_asset_package.html", null ]
     ] ],
@@ -18,9 +21,21 @@ var hierarchy =
     [ "NTCompiledStyleSet", "interface_n_t_compiled_style_set.html", null ],
     [ "NTCullState", "interface_n_t_cull_state.html", null ],
     [ "NTCustomPopupHandler", "interface_n_t_custom_popup_handler.html", null ],
-    [ "NTFeature", "interface_n_t_feature.html", null ],
-    [ "NTFeatureCollection", "interface_n_t_feature_collection.html", null ],
+    [ "NTFeature", "interface_n_t_feature.html", [
+      [ "NTVectorTileFeature", "interface_n_t_vector_tile_feature.html", null ]
+    ] ],
+    [ "NTFeatureCollection", "interface_n_t_feature_collection.html", [
+      [ "NTVectorTileFeatureCollection", "interface_n_t_vector_tile_feature_collection.html", null ]
+    ] ],
+    [ "NTFeatureCollectionSearchService", "interface_n_t_feature_collection_search_service.html", null ],
     [ "NTFrustum", "interface_n_t_frustum.html", null ],
+    [ "NTGeocodingRequest", "interface_n_t_geocoding_request.html", null ],
+    [ "NTGeocodingResult", "interface_n_t_geocoding_result.html", null ],
+    [ "NTGeocodingService", "interface_n_t_geocoding_service.html", [
+      [ "NTOSMOfflineGeocodingService", "interface_n_t_o_s_m_offline_geocoding_service.html", null ],
+      [ "NTPackageManagerGeocodingService", "interface_n_t_package_manager_geocoding_service.html", null ],
+      [ "NTPeliasOnlineGeocodingService", "interface_n_t_pelias_online_geocoding_service.html", null ]
+    ] ],
     [ "NTGeoJSONGeometryReader", "interface_n_t_geo_j_s_o_n_geometry_reader.html", null ],
     [ "NTGeoJSONGeometryWriter", "interface_n_t_geo_j_s_o_n_geometry_writer.html", null ],
     [ "NTGeometry", "interface_n_t_geometry.html", [
@@ -84,17 +99,29 @@ var hierarchy =
     [ "NTProjection", "interface_n_t_projection.html", [
       [ "NTEPSG3857", "interface_n_t_e_p_s_g3857.html", null ]
     ] ],
+    [ "NTRasterTileClickInfo", "interface_n_t_raster_tile_click_info.html", null ],
+    [ "NTRasterTileEventListener", "interface_n_t_raster_tile_event_listener.html", null ],
     [ "NTRendererCaptureListener", "interface_n_t_renderer_capture_listener.html", null ],
+    [ "NTReverseGeocodingRequest", "interface_n_t_reverse_geocoding_request.html", null ],
+    [ "NTReverseGeocodingService", "interface_n_t_reverse_geocoding_service.html", [
+      [ "NTOSMOfflineReverseGeocodingService", "interface_n_t_o_s_m_offline_reverse_geocoding_service.html", null ],
+      [ "NTPackageManagerReverseGeocodingService", "interface_n_t_package_manager_reverse_geocoding_service.html", null ],
+      [ "NTPeliasOnlineReverseGeocodingService", "interface_n_t_pelias_online_reverse_geocoding_service.html", null ]
+    ] ],
     [ "NTRoutingInstruction", "interface_n_t_routing_instruction.html", null ],
     [ "NTRoutingRequest", "interface_n_t_routing_request.html", null ],
     [ "NTRoutingResult", "interface_n_t_routing_result.html", null ],
     [ "NTRoutingService", "interface_n_t_routing_service.html", [
       [ "NTCartoOnlineRoutingService", "interface_n_t_carto_online_routing_service.html", null ],
       [ "NTOSRMOfflineRoutingService", "interface_n_t_o_s_r_m_offline_routing_service.html", null ],
-      [ "NTPackageManagerRoutingService", "interface_n_t_package_manager_routing_service.html", null ]
+      [ "NTPackageManagerRoutingService", "interface_n_t_package_manager_routing_service.html", null ],
+      [ "NTPackageManagerValhallaRoutingService", "interface_n_t_package_manager_valhalla_routing_service.html", null ],
+      [ "NTValhallaOfflineRoutingService", "interface_n_t_valhalla_offline_routing_service.html", null ],
+      [ "NTValhallaOnlineRoutingService", "interface_n_t_valhalla_online_routing_service.html", null ]
     ] ],
     [ "NTScreenBounds", "interface_n_t_screen_bounds.html", null ],
     [ "NTScreenPos", "interface_n_t_screen_pos.html", null ],
+    [ "NTSearchRequest", "interface_n_t_search_request.html", null ],
     [ "NTStyle", "interface_n_t_style.html", [
       [ "NTBillboardStyle", "interface_n_t_billboard_style.html", [
         [ "NTLabelStyle", "interface_n_t_label_style.html", [
@@ -141,10 +168,13 @@ var hierarchy =
       [ "NTMBTilesTileDataSource", "interface_n_t_m_b_tiles_tile_data_source.html", null ],
       [ "NTPackageManagerTileDataSource", "interface_n_t_package_manager_tile_data_source.html", null ]
     ] ],
+    [ "NTTileDownloadListener", "interface_n_t_tile_download_listener.html", null ],
     [ "NTTileLoadListener", "interface_n_t_tile_load_listener.html", null ],
     [ "NTUTFGridClickInfo", "interface_n_t_u_t_f_grid_click_info.html", null ],
     [ "NTUTFGridEventListener", "interface_n_t_u_t_f_grid_event_listener.html", null ],
     [ "NTVariant", "interface_n_t_variant.html", null ],
+    [ "NTVariantArrayBuilder", "interface_n_t_variant_array_builder.html", null ],
+    [ "NTVariantObjectBuilder", "interface_n_t_variant_object_builder.html", null ],
     [ "NTVectorData", "interface_n_t_vector_data.html", null ],
     [ "NTVectorDataSource", "interface_n_t_vector_data_source.html", [
       [ "NTLocalVectorDataSource", "interface_n_t_local_vector_data_source.html", null ]
@@ -171,12 +201,15 @@ var hierarchy =
     [ "NTVectorElementClickInfo", "interface_n_t_vector_element_click_info.html", null ],
     [ "NTVectorElementDragInfo", "interface_n_t_vector_element_drag_info.html", null ],
     [ "NTVectorElementEventListener", "interface_n_t_vector_element_event_listener.html", null ],
+    [ "NTVectorElementSearchService", "interface_n_t_vector_element_search_service.html", null ],
     [ "NTVectorTileClickInfo", "interface_n_t_vector_tile_click_info.html", null ],
     [ "NTVectorTileDecoder", "interface_n_t_vector_tile_decoder.html", [
+      [ "NTCartoVectorTileDecoder", "interface_n_t_carto_vector_tile_decoder.html", null ],
       [ "NTMBVectorTileDecoder", "interface_n_t_m_b_vector_tile_decoder.html", null ],
       [ "NTTorqueTileDecoder", "interface_n_t_torque_tile_decoder.html", null ]
     ] ],
     [ "NTVectorTileEventListener", "interface_n_t_vector_tile_event_listener.html", null ],
+    [ "NTVectorTileSearchService", "interface_n_t_vector_tile_search_service.html", null ],
     [ "NTViewState", "interface_n_t_view_state.html", null ],
     [ "NTWKBGeometryReader", "interface_n_t_w_k_b_geometry_reader.html", null ],
     [ "NTWKBGeometryWriter", "interface_n_t_w_k_b_geometry_writer.html", null ],

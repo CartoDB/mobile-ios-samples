@@ -11,5 +11,6 @@ var interface_n_t_routing_instruction =
     [ "hash", "interface_n_t_routing_instruction.html#afe757cfb4b3985e08156fc07e0430feb", null ],
     [ "init", "interface_n_t_routing_instruction.html#ac0476d0131f517be1dc3e0a3628ce1d6", null ],
     [ "initWithAction:pointIndex:streetName:turnAngle:azimuth:distance:time:", "interface_n_t_routing_instruction.html#a1962f21ba3821dcb74cb484620494797", null ],
-    [ "isEqual:", "interface_n_t_routing_instruction.html#a02107706765b728e36eb1cfd1dbb3a08", null ]
+    [ "isEqual:", "interface_n_t_routing_instruction.html#a02107706765b728e36eb1cfd1dbb3a08", null ],
+    [ "swigGetRawPtr", "interface_n_t_routing_instruction.html#a331bc9d21f922fddd1ad967d88364f10", null ]
 ];

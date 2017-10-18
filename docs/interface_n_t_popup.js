@@ -9,5 +9,6 @@ var interface_n_t_popup =
     [ "setAnchorPointY:", "interface_n_t_popup.html#a27c3d75cbcf9133726e1d4431ec20c95", null ],
     [ "setStyle:", "interface_n_t_popup.html#aa451b9f8e94baee686e9e1bce1dadab5", null ],
     [ "swigGetClassName", "interface_n_t_popup.html#a59d637e78e8c5d0dedf044358e91f3bc", null ],
-    [ "swigGetDirectorObject", "interface_n_t_popup.html#a0cbebfb14f672dad3b4c60fefc22fe70", null ]
+    [ "swigGetDirectorObject", "interface_n_t_popup.html#a0cbebfb14f672dad3b4c60fefc22fe70", null ],
+    [ "swigGetRawPtr", "interface_n_t_popup.html#a85e79cf74e5a96cbff621bddc9898fd2", null ]
 ];

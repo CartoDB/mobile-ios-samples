@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -92,7 +92,9 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
 <li>hash
-: <a class="el" href="interface_n_t_asset_package.html#ab2efb9022f239f1ede2ab7bab2d1f9d3">NTAssetPackage</a>
+: <a class="el" href="interface_n_t_address.html#a23d3ddcfbc3a3cc7230f4077b63199be">NTAddress</a>
+, <a class="el" href="interface_n_t_animation_style.html#a149385f4aa087cc9fa01a0f48350e157">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_asset_package.html#ab2efb9022f239f1ede2ab7bab2d1f9d3">NTAssetPackage</a>
 , <a class="el" href="interface_n_t_binary_data.html#afe56d3917f4ed5b592367bf0e58a5cda">NTBinaryData</a>
 , <a class="el" href="interface_n_t_bitmap.html#a4d43587b5d439f94f8fc4a1ebd5d6574">NTBitmap</a>
 , <a class="el" href="interface_n_t_carto_c_s_s_style_set.html#a45e51b42a551b9e7870abbc1976153ee">NTCartoCSSStyleSet</a>
@@ -104,6 +106,8 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 , <a class="el" href="interface_n_t_cull_state.html#a668c4988140783ad93181bb515d2a112">NTCullState</a>
 , <a class="el" href="interface_n_t_feature.html#adba87b86f7372a9dfea749f800aa13bd">NTFeature</a>
 , <a class="el" href="interface_n_t_frustum.html#a748ef02ce8e47c4648ac8474d6fa5e54">NTFrustum</a>
+, <a class="el" href="interface_n_t_geocoding_request.html#a56d193657e0c0d312de6ba9715226130">NTGeocodingRequest</a>
+, <a class="el" href="interface_n_t_geocoding_result.html#a75e37c67fc491415d0b6c6729f40927b">NTGeocodingResult</a>
 , <a class="el" href="interface_n_t_geometry.html#a8631d88284bea2f824b19840652baa3c">NTGeometry</a>
 , <a class="el" href="interface_n_t_geometry_simplifier.html#a2d3c7ffe5928025e7fd785d92b7bef8d">NTGeometrySimplifier</a>
 , <a class="el" href="interface_n_t_layer.html#a02c1d5d0c29efc44404ed7ca5087f7ab">NTLayer</a>
@@ -125,26 +129,33 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 , <a class="el" href="interface_n_t_popup_click_info.html#a36129312dccb935f8da9724500a3e832">NTPopupClickInfo</a>
 , <a class="el" href="interface_n_t_popup_draw_info.html#a96a95160594e63262ccdf14ceb369398">NTPopupDrawInfo</a>
 , <a class="el" href="interface_n_t_projection.html#acce62ea39d59658bf7add21530b6efb1">NTProjection</a>
+, <a class="el" href="interface_n_t_raster_tile_click_info.html#a0cb7f9bbed027ede99e5d0cc93041afd">NTRasterTileClickInfo</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_request.html#af444e0d683dc3e8b5275e24c3f26240f">NTReverseGeocodingRequest</a>
 , <a class="el" href="interface_n_t_routing_instruction.html#afe757cfb4b3985e08156fc07e0430feb">NTRoutingInstruction</a>
 , <a class="el" href="interface_n_t_routing_request.html#ac7d3395e988e3571467cf226f056fa63">NTRoutingRequest</a>
 , <a class="el" href="interface_n_t_routing_result.html#a96123f56461b6408eb4ad637d5f411c2">NTRoutingResult</a>
 , <a class="el" href="interface_n_t_screen_bounds.html#abbbb94665dbc9c0055d918305d905b74">NTScreenBounds</a>
 , <a class="el" href="interface_n_t_screen_pos.html#aa2e56c582c8c6d1646f999dedc628e1e">NTScreenPos</a>
+, <a class="el" href="interface_n_t_search_request.html#a609ab3452633cd940480df63e7122f1e">NTSearchRequest</a>
 , <a class="el" href="interface_n_t_style.html#a81ffb77b11d7c6a60b7cfe95e28b0bd5">NTStyle</a>
 , <a class="el" href="interface_n_t_style_builder.html#ae4a34d9ce2f90d2be5e9af2a93681edb">NTStyleBuilder</a>
 , <a class="el" href="interface_n_t_tile_data.html#af2c4ea9c29a5f30208b02fe8a291ca6c">NTTileData</a>
 , <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a3b2c7e837fdbcd179cb48b6ef136f91f">NTUTFGridClickInfo</a>
 , <a class="el" href="interface_n_t_variant.html#ab3b1f5739231e500b26d2a964a5068ea">NTVariant</a>
+, <a class="el" href="interface_n_t_variant_array_builder.html#a0717357431e5facd1b48b9a41bfcff1d">NTVariantArrayBuilder</a>
+, <a class="el" href="interface_n_t_variant_object_builder.html#acdb6e1bcbcd520fbf0052138f0ba8066">NTVariantObjectBuilder</a>
 , <a class="el" href="interface_n_t_vector_data.html#aec589dd34bb7c3bd67b371fdcef70f7d">NTVectorData</a>
 , <a class="el" href="interface_n_t_vector_element.html#a9ccacdc3290cfea886f6eb8bc46f464d">NTVectorElement</a>
 , <a class="el" href="interface_n_t_vector_element_click_info.html#a3a1b466fc748ec63b4e662438f4d790a">NTVectorElementClickInfo</a>
 , <a class="el" href="interface_n_t_vector_element_drag_info.html#aa3208b3c39df126f9f9d0c86883abb45">NTVectorElementDragInfo</a>
 , <a class="el" href="interface_n_t_vector_tile_click_info.html#a9b6d346a6872135383611a3ed4fa52ac">NTVectorTileClickInfo</a>
 , <a class="el" href="interface_n_t_vector_tile_decoder.html#a5b14e123b8c5a270c4819cb582356fde">NTVectorTileDecoder</a>
+, <a class="el" href="interface_n_t_vector_tile_feature.html#aa5538a1cf6b83edf09e8c31af77f877d">NTVectorTileFeature</a>
 , <a class="el" href="interface_n_t_view_state.html#ac889c7fbcf56a9a8a79d7bfe442d6a98">NTViewState</a>
 </li>
 <li>hashInternal
-: <a class="el" href="interface_n_t_color.html#ae20d55d4407bffbe4609b666b9999440">NTColor</a>
+: <a class="el" href="interface_n_t_address.html#a9a1da8f1f05f75168c3b191397ba614e">NTAddress</a>
+, <a class="el" href="interface_n_t_color.html#ae20d55d4407bffbe4609b666b9999440">NTColor</a>
 , <a class="el" href="interface_n_t_map_bounds.html#a9921e09fff52ab8bd9792ab552b051b2">NTMapBounds</a>
 , <a class="el" href="interface_n_t_map_envelope.html#ad74a60b1b26ef767956e48ae94c1a3ab">NTMapEnvelope</a>
 , <a class="el" href="interface_n_t_map_pos.html#a7962c6518429ff8ff7b83828d6b75264">NTMapPos</a>
@@ -161,7 +172,7 @@ $(document).ready(function(){initNavTree('functions_h.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:05:00 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

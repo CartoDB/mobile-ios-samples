@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -110,12 +110,10 @@ Inheritance diagram for NTPolygonStyle:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:ad8c2dce7e66e7695358dc7a542f9e274"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_polygon_style.html#ad8c2dce7e66e7695358dc7a542f9e274">initWithColor:bitmap:lineStyle:</a></td></tr>
-<tr class="separator:ad8c2dce7e66e7695358dc7a542f9e274"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65bbd758a40252122afa85b2c8466392"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_bitmap.html">NTBitmap</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_polygon_style.html#a65bbd758a40252122afa85b2c8466392">getBitmap</a></td></tr>
-<tr class="separator:a65bbd758a40252122afa85b2c8466392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40474efa2d41bf3032826baeebeb8f22"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_line_style.html">NTLineStyle</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_polygon_style.html#a40474efa2d41bf3032826baeebeb8f22">getLineStyle</a></td></tr>
 <tr class="separator:a40474efa2d41bf3032826baeebeb8f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a9c59df7fec5b45207f9b8ddcb306c"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_polygon_style.html#a03a9c59df7fec5b45207f9b8ddcb306c">swigGetRawPtr</a></td></tr>
+<tr class="separator:a03a9c59df7fec5b45207f9b8ddcb306c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1124efce3def028d04d4272c8454ac2b"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_polygon_style.html#a1124efce3def028d04d4272c8454ac2b">swigGetClassName</a></td></tr>
 <tr class="separator:a1124efce3def028d04d4272c8454ac2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a855b5a6df0a14d58685989d2befad5ae"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_polygon_style.html#a855b5a6df0a14d58685989d2befad5ae">swigGetDirectorObject</a></td></tr>
@@ -136,24 +134,6 @@ Class Methods</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A style for polygons. Contains attributes for configuring how the polygon is drawn on the screen. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a65bbd758a40252122afa85b2c8466392"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (<a class="el" href="interface_n_t_bitmap.html">NTBitmap</a> *) getBitmap </td>
-          <td></td>
-          <td class="paramname"></td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Returns the bitmap of the polygon.<br/>
- </p>
-<dl class="section return"><dt>Returns</dt><dd>The bitmap of the polygon. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a40474efa2d41bf3032826baeebeb8f22"></a>
 <div class="memitem">
 <div class="memproto">
@@ -169,51 +149,6 @@ Class Methods</h2></td></tr>
 <p>Returns the style of the edges of the polygon.<br/>
  </p>
 <dl class="section return"><dt>Returns</dt><dd>The style of the edges of the polygon. May be null. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ad8c2dce7e66e7695358dc7a542f9e274"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (id) initWithColor: </td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_color.html">NTColor</a>*)&#160;</td>
-          <td class="paramname"><em>color</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">bitmap:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_bitmap.html">NTBitmap</a>*)&#160;</td>
-          <td class="paramname"><em>bitmap</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">lineStyle:</td>
-          <td></td>
-          <td class="paramtype">(<a class="el" href="interface_n_t_line_style.html">NTLineStyle</a>*)&#160;</td>
-          <td class="paramname"><em>lineStyle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Constructs a PolygonStyle object from various parameters. Instantiating the object directly is<br/>
- not recommended, PolygonStyleBuilder should be used instead.<br/>
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The color for the polygon.<br/>
- </td></tr>
-    <tr><td class="paramname">bitmap</td><td>The bitmap for the polygon.<br/>
- </td></tr>
-    <tr><td class="paramname">lineStyle</td><td>The line style for the edges of the polygon. May be null. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -294,9 +229,29 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a03a9c59df7fec5b45207f9b8ddcb306c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="interface_n_t_style.html#ac0000c968c6f5d30289168591f186c7b">NTStyle</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_polygon_style_8h_source.html">NTPolygonStyle.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTPolygonStyle.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_polygon_style_8h_source.html">NTPolygonStyle.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTPolygonStyle.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -304,7 +259,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_polygon_style.html">NTPolygonStyle</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:10 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:57 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

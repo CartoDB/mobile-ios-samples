@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 
 target 'HelloMap.Swift' do
-  pod 'CartoMobileSDK', '4.1.0-rc.3'
+  pod 'CartoMobileSDK', '4.1.0'
 end
 
 post_install do |installer|

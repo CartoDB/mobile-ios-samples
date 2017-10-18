@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -94,6 +94,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>screenToMap:
 : <a class="el" href="interface_n_t_map_view.html#a414a6092e152532c0d8486b07fe42f7d">NTMapView</a>
 </li>
+<li>screenToMap:viewState:
+: <a class="el" href="interface_n_t_map_renderer.html#a295dfafc158d6c4e604ed0e2f7871263">NTMapRenderer</a>
+</li>
 <li>set:layer:
 : <a class="el" href="interface_n_t_layers.html#aba21fcf5a91e1022db9839abe559ed46">NTLayers</a>
 </li>
@@ -119,6 +122,12 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_marker_style_builder.html#a05756f6d3f178ef18caaf988c8860d42">NTMarkerStyleBuilder</a>
 , <a class="el" href="interface_n_t_popup.html#a27c3d75cbcf9133726e1d4431ec20c95">NTPopup</a>
 </li>
+<li>setAnimatedClusters:
+: <a class="el" href="interface_n_t_clustered_vector_layer.html#aead853fb5913e13ce5e69e1616ffbf38">NTClusteredVectorLayer</a>
+</li>
+<li>setAnimationStyle:
+: <a class="el" href="interface_n_t_billboard_style_builder.html#aa440c33800f5bdd072f64dfb140b42ae">NTBillboardStyleBuilder</a>
+</li>
 <li>setAPITemplate:
 : <a class="el" href="interface_n_t_carto_maps_service.html#a28745babd3207e3a2d96138ab590fa01">NTCartoMapsService</a>
 , <a class="el" href="interface_n_t_carto_s_q_l_service.html#a5fb393c5dde24cca2759f779b4d1fd6c">NTCartoSQLService</a>
@@ -134,6 +143,11 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>setAuthTokens:
 : <a class="el" href="interface_n_t_carto_maps_service.html#ae8786950f5eed98b59129314da7caf54">NTCartoMapsService</a>
+</li>
+<li>setAutocomplete:
+: <a class="el" href="interface_n_t_o_s_m_offline_geocoding_service.html#a9a4863d25e944c92ff0f373b30e202ff">NTOSMOfflineGeocodingService</a>
+, <a class="el" href="interface_n_t_package_manager_geocoding_service.html#ac4283e20f9a0330d402f4de636b0c1a9">NTPackageManagerGeocodingService</a>
+, <a class="el" href="interface_n_t_pelias_online_geocoding_service.html#a8ef09690759436fb12658ae26d9ea748">NTPeliasOnlineGeocodingService</a>
 </li>
 <li>setBackgroundBitmap:
 : <a class="el" href="interface_n_t_options.html#adfb82d62d2970799b7f365513b6dfd0c">NTOptions</a>
@@ -159,14 +173,14 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setBitmapScale:
 : <a class="el" href="interface_n_t_solid_layer.html#a51e317ca94af45978a0db1fb690dbf23">NTSolidLayer</a>
 </li>
+<li>setBool:val:
+: <a class="el" href="interface_n_t_variant_object_builder.html#ae29988f48b8e20b3ff9fb6a3d08b9f07">NTVariantObjectBuilder</a>
+</li>
 <li>setBounds:
 : <a class="el" href="interface_n_t_carto_vis_builder.html#a3385e21b3606b2f73f837b71dbe402bf">NTCartoVisBuilder</a>
 </li>
 <li>setBoundsSwigExplicitNTCartoVisBuilder:
 : <a class="el" href="interface_n_t_carto_vis_builder.html#a62907a9c3fa7dfe55c77a3fed7cef78d">NTCartoVisBuilder</a>
-</li>
-<li>setBuffering:
-: <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#aad226de28ef3191ab7d34b40c5044762">NTMBVectorTileDecoder</a>
 </li>
 <li>setBuildingRenderOrder:
 : <a class="el" href="interface_n_t_vector_tile_layer.html#ab8291c5e4b288df05fe41e5ffe4d49f7">NTVectorTileLayer</a>
@@ -178,9 +192,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="interface_n_t_cache_tile_data_source.html#a0b5c4d577883e613b309d8d7051832c4">NTCacheTileDataSource</a>
 , <a class="el" href="interface_n_t_memory_cache_tile_data_source.html#a55e1c9644e406baeef4433008e036dfe">NTMemoryCacheTileDataSource</a>
 , <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#a128b4f1cccac830761ae50f2695cac4c">NTPersistentCacheTileDataSource</a>
-</li>
-<li>setCartoCSSLayerNamesIgnored:
-: <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#af38179bed7bc980530267f3b9fbe3317">NTMBVectorTileDecoder</a>
 </li>
 <li>setCartoCSSStyleSet:
 : <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#ad0ec8feed38cd4df988759f1a6bdf540">NTMBVectorTileDecoder</a>
@@ -194,8 +205,12 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setCenterSwigExplicitNTCartoVisBuilder:
 : <a class="el" href="interface_n_t_carto_vis_builder.html#a70462c756f50641bec3b952484d162db">NTCartoVisBuilder</a>
 </li>
+<li>setClearColor:
+: <a class="el" href="interface_n_t_options.html#ab97469d0f54f8e6baacec30394b85ae6">NTOptions</a>
+</li>
 <li>setClickSize:
-: <a class="el" href="interface_n_t_point_style_builder.html#ab4e47cca40d56f306e3c7d34f3b8d85b">NTPointStyleBuilder</a>
+: <a class="el" href="interface_n_t_marker_style_builder.html#a7010ef016cb35a941cdc0388043583a6">NTMarkerStyleBuilder</a>
+, <a class="el" href="interface_n_t_point_style_builder.html#ab4e47cca40d56f306e3c7d34f3b8d85b">NTPointStyleBuilder</a>
 </li>
 <li>setClickTypeDetection:
 : <a class="el" href="interface_n_t_options.html#af496699cf6d0e5b5b788f94f9e75590f">NTOptions</a>
@@ -245,6 +260,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setDescriptionWrap:
 : <a class="el" href="interface_n_t_balloon_popup_style_builder.html#aa9b7ace9617371ba761484cf17fb0383">NTBalloonPopupStyleBuilder</a>
 </li>
+<li>setDouble:val:
+: <a class="el" href="interface_n_t_variant_object_builder.html#aefa28386a62c609a735c324a0d91452c">NTVariantObjectBuilder</a>
+</li>
 <li>setDPI:
 : <a class="el" href="interface_n_t_options.html#ac27f068bbd459f638ebb0f8bb3920af6">NTOptions</a>
 </li>
@@ -254,11 +272,17 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setEnvelopeThreadPoolSize:
 : <a class="el" href="interface_n_t_options.html#ad8793e79a26aa07d633af348fb4b5b7c">NTOptions</a>
 </li>
-<li>setFeatureIdOverride:
-: <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#a5cefa92a5828de371f77f27917e0019c">NTMBVectorTileDecoder</a>
+<li>setFadeAnimationType:
+: <a class="el" href="interface_n_t_animation_style_builder.html#aeb8ae1a75f4be74de8f1835550c65cbc">NTAnimationStyleBuilder</a>
+</li>
+<li>setFallbackLanguage:
+: <a class="el" href="interface_n_t_carto_vector_tile_layer.html#a2b36786cf81c504e638a05c0ae549020">NTCartoVectorTileLayer</a>
 </li>
 <li>setFieldOfViewY:
 : <a class="el" href="interface_n_t_options.html#a150e472f556dd867e4ead6f046f7332a">NTOptions</a>
+</li>
+<li>setFilterExpression:
+: <a class="el" href="interface_n_t_search_request.html#adc56cca41900c4288b1bb724f6c7248a">NTSearchRequest</a>
 </li>
 <li>setFlippable:
 : <a class="el" href="interface_n_t_label_style_builder.html#a564fd3f024c9a8d1aba79f14054ed5a0">NTLabelStyleBuilder</a>
@@ -273,7 +297,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="interface_n_t_text_style_builder.html#a40a7aa16cc6a49ead9b3d5666fb9dada">NTTextStyleBuilder</a>
 </li>
 <li>setFontSize:
-: <a class="el" href="interface_n_t_text_style_builder.html#a0195b8a2bc40e9219da5a7f04cdf9de6">NTTextStyleBuilder</a>
+: <a class="el" href="interface_n_t_text_style_builder.html#a59e421b4c311275ff2a51696c1efc330">NTTextStyleBuilder</a>
 </li>
 <li>setFrameNr:
 : <a class="el" href="interface_n_t_tile_layer.html#ac4fa67195c395679beea702e9a6a8533">NTTileLayer</a>
@@ -286,6 +310,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_point.html#a6f45ba672adca1e20c6b31bfc340b60b">NTPoint</a>
 , <a class="el" href="interface_n_t_polygon.html#ab85b8aed5d6c105b60421e32325f76a2">NTPolygon</a>
 , <a class="el" href="interface_n_t_polygon3_d.html#a30e67c9ea617f66a9d6cc0ed2ded0c5d">NTPolygon3D</a>
+, <a class="el" href="interface_n_t_search_request.html#a82fa555b4f5514f99250ea166b5ddba9">NTSearchRequest</a>
 </li>
 <li>setGeometrySimplifier:
 : <a class="el" href="interface_n_t_local_vector_data_source.html#aadda66ea616b4518c8d2ff50e03676fb">NTLocalVectorDataSource</a>
@@ -327,8 +352,14 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setLanguage:
 : <a class="el" href="interface_n_t_carto_vector_tile_layer.html#a3e11e67ebd75facb6b788bf75921731c">NTCartoVectorTileLayer</a>
 </li>
-<li>setLayerNameOverride:
-: <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#ac348a1ac77ab5e9f59de6b94f73b7102">NTMBVectorTileDecoder</a>
+<li>setLayerIndices:
+: <a class="el" href="interface_n_t_carto_maps_service.html#a6e9581126709789e9db7501b3f0518ff">NTCartoMapsService</a>
+</li>
+<li>setLayerStyleSet:styleSet:
+: <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#a42c7d7ac7edb67517a85539cc495af67">NTCartoVectorTileDecoder</a>
+</li>
+<li>setLayerVisible:visible:
+: <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#aefaefdd048ba816557c26c8363bdc03c">NTCartoVectorTileDecoder</a>
 </li>
 <li>setLeftColor:
 : <a class="el" href="interface_n_t_balloon_popup_style_builder.html#af338c83f6e8c4e6bda078dc93a6fcd3c">NTBalloonPopupStyleBuilder</a>
@@ -349,8 +380,17 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="interface_n_t_geometry_collection_style_builder.html#a04ea76a566e54174ba0475da710266b6">NTGeometryCollectionStyleBuilder</a>
 , <a class="el" href="interface_n_t_polygon_style_builder.html#aa9928646fa7e59421786e67ca8d33461">NTPolygonStyleBuilder</a>
 </li>
+<li>setLocation:
+: <a class="el" href="interface_n_t_geocoding_request.html#aa5a2b622dcf2bcbe97be31a90ed43957">NTGeocodingRequest</a>
+</li>
+<li>setLocationRadius:
+: <a class="el" href="interface_n_t_geocoding_request.html#a4b36cb2ead9d1ac6df7e75ed250fc87c">NTGeocodingRequest</a>
+</li>
 <li>setLogEventListener:
 : <a class="el" href="interface_n_t_log.html#ad756e92b67474af4a32832aa4b1c7b59">NTLog</a>
+</li>
+<li>setLong:val:
+: <a class="el" href="interface_n_t_variant_object_builder.html#aaf3bfba5ce471fe7e94d9f08924e6402">NTVariantObjectBuilder</a>
 </li>
 <li>setMainLightColor:
 : <a class="el" href="interface_n_t_options.html#a66c88b39744559433c641ff26741bff8">NTOptions</a>
@@ -373,6 +413,15 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setMaximumClusterZoom:
 : <a class="el" href="interface_n_t_clustered_vector_layer.html#a36aafcea72e2094d7dd6e186b0222148">NTClusteredVectorLayer</a>
 </li>
+<li>setMaxOverzoomLevel:
+: <a class="el" href="interface_n_t_tile_layer.html#aba986d8239a130e033d2e27e0f732de7">NTTileLayer</a>
+</li>
+<li>setMaxUnderzoomLevel:
+: <a class="el" href="interface_n_t_tile_layer.html#a0ef4458ba9df543ce8f42b43c7789ad8">NTTileLayer</a>
+</li>
+<li>setMaxZoom:
+: <a class="el" href="interface_n_t_vector_tile_search_service.html#a2524934be9b28d24fe2f04d2ed0a1b9d">NTVectorTileSearchService</a>
+</li>
 <li>setMetaData:
 : <a class="el" href="interface_n_t_vector_element.html#a91d89d7ff6dd33e1ac203e18e6ebe9b7">NTVectorElement</a>
 </li>
@@ -381,6 +430,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>setMinimumClusterDistance:
 : <a class="el" href="interface_n_t_clustered_vector_layer.html#ae2922357ad1abf9085d58883ea836313">NTClusteredVectorLayer</a>
+</li>
+<li>setMinZoom:
+: <a class="el" href="interface_n_t_vector_tile_search_service.html#aac62f0125f42a3ad4b766c2cf19fcba0">NTVectorTileSearchService</a>
 </li>
 <li>setOrientationMode:
 : <a class="el" href="interface_n_t_label_style_builder.html#a1c9a9e1f15d5e18cd41b7824e2fbdfec">NTLabelStyleBuilder</a>
@@ -397,6 +449,12 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>setPanningMode:
 : <a class="el" href="interface_n_t_options.html#a8af8ef0af5d23375ad4870caf6902861">NTOptions</a>
+</li>
+<li>setPhaseInDuration:
+: <a class="el" href="interface_n_t_animation_style_builder.html#a347bac5fac02adbca142cbcab842b1c7">NTAnimationStyleBuilder</a>
+</li>
+<li>setPhaseOutDuration:
+: <a class="el" href="interface_n_t_animation_style_builder.html#a32d7b2390e2b642887c9a938d465d5f8">NTAnimationStyleBuilder</a>
 </li>
 <li>setPivotMode:
 : <a class="el" href="interface_n_t_options.html#abbb29a5109b83db46810486f2cf9e32b">NTOptions</a>
@@ -423,8 +481,28 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setPreloading:
 : <a class="el" href="interface_n_t_tile_layer.html#a1b4ca7d180fb0629ed645eb37c16c017">NTTileLayer</a>
 </li>
+<li>setProfile:
+: <a class="el" href="interface_n_t_package_manager_valhalla_routing_service.html#a808c107f59e50c34a6581fecbbab48bc">NTPackageManagerValhallaRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_offline_routing_service.html#a2ab15bddfa01c98d6018f8c3175f1fca">NTValhallaOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_online_routing_service.html#a5cfb9999134229daf4f278543502e3c7">NTValhallaOnlineRoutingService</a>
+</li>
+<li>setProjection:
+: <a class="el" href="interface_n_t_search_request.html#aaaff2f366347ba97002d87364fa49843">NTSearchRequest</a>
+</li>
 <li>setProjectionMode:
 : <a class="el" href="interface_n_t_options.html#a9aed93b3dbc730e4c51ef26791e9e27c">NTOptions</a>
+</li>
+<li>setRasterTileEventListener:
+: <a class="el" href="interface_n_t_raster_tile_layer.html#a1e5be64408303f67c0081ffa230ea722">NTRasterTileLayer</a>
+</li>
+<li>setRegexFilter:
+: <a class="el" href="interface_n_t_search_request.html#a995e2b112be0073c9b109f846a7686e6">NTSearchRequest</a>
+</li>
+<li>setRelativeSpeed:
+: <a class="el" href="interface_n_t_animation_style_builder.html#a3ea79096d615630c8b1705298a64c8bb">NTAnimationStyleBuilder</a>
+</li>
+<li>setRenderScale:
+: <a class="el" href="interface_n_t_label_style_builder.html#aba2288c4bad7d3fa234a7c01323f712e">NTLabelStyleBuilder</a>
 </li>
 <li>setReplaceWithParent:
 : <a class="el" href="interface_n_t_tile_data.html#a4936cc7c3cd652f4017872da2239c27c">NTTileData</a>
@@ -469,6 +547,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setSeamlessPanning:
 : <a class="el" href="interface_n_t_options.html#a70d65a3506d328fe7c86e3be4726fe2d">NTOptions</a>
 </li>
+<li>setSearchRadius:
+: <a class="el" href="interface_n_t_reverse_geocoding_request.html#a516e18b143b67413cb8401a42d15bad8">NTReverseGeocodingRequest</a>
+, <a class="el" href="interface_n_t_search_request.html#a2b9eb70f49fa279a9a0adf1bf1695c03">NTSearchRequest</a>
+</li>
 <li>setSelectedVectorElement:
 : <a class="el" href="interface_n_t_editable_vector_layer.html#afaaecfa76de6d0e762916b7bbdc7df7e">NTEditableVectorLayer</a>
 </li>
@@ -491,6 +573,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="interface_n_t_marker_style_builder.html#aa0291ac00f129068e185f1e086517b7b">NTMarkerStyleBuilder</a>
 , <a class="el" href="interface_n_t_point_style_builder.html#a91f1454bee6c25274eb07021b65b8b9f">NTPointStyleBuilder</a>
 </li>
+<li>setSizeAnimationType:
+: <a class="el" href="interface_n_t_animation_style_builder.html#a0107fcf069078e498c6e3da152e189af">NTAnimationStyleBuilder</a>
+</li>
 <li>setSkyBitmap:
 : <a class="el" href="interface_n_t_options.html#af00bd7fc0b8ac72820a1e4edab42d0f5">NTOptions</a>
 </li>
@@ -503,6 +588,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setStrictMode:
 : <a class="el" href="interface_n_t_carto_maps_service.html#a41364d0e0f10a64bacc1b590e7ce9773">NTCartoMapsService</a>
 , <a class="el" href="interface_n_t_carto_vis_loader.html#a673867d873a8b9189a43d4e78ac6b5a0">NTCartoVisLoader</a>
+</li>
+<li>setString:str:
+: <a class="el" href="interface_n_t_variant_object_builder.html#a0db42d89d2dfdeccfe81dec0f3c32d9c">NTVariantObjectBuilder</a>
 </li>
 <li>setStrokeColor:
 : <a class="el" href="interface_n_t_balloon_popup_style_builder.html#ad3d03a632b15cb8cf62daf3e7fe214e7">NTBalloonPopupStyleBuilder</a>
@@ -621,6 +709,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setUTFGridEventListener:
 : <a class="el" href="interface_n_t_tile_layer.html#a4b63fd6b9c64c5e9ff81aea86a538a57">NTTileLayer</a>
 </li>
+<li>setVariant:var:
+: <a class="el" href="interface_n_t_variant_object_builder.html#aa049f0f32d69dcfb0147150b25675930">NTVariantObjectBuilder</a>
+</li>
 <li>setVectorEditEventListener:
 : <a class="el" href="interface_n_t_editable_vector_layer.html#acca919b2ff3ec30c8e8bdd493f880b76">NTEditableVectorLayer</a>
 </li>
@@ -630,6 +721,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setVectorTileAssetPackage:
 : <a class="el" href="interface_n_t_carto_maps_service.html#a6c9bd3efee1857f8b19b1e260156b34c">NTCartoMapsService</a>
 , <a class="el" href="interface_n_t_carto_vis_loader.html#adbc4be2fc9035d4b681a3e3645490d3c">NTCartoVisLoader</a>
+</li>
+<li>setVectorTileBufferSize:
+: <a class="el" href="interface_n_t_carto_maps_service.html#a9e2d61c04463d393d28e61ef7789303c">NTCartoMapsService</a>
 </li>
 <li>setVectorTileEventListener:
 : <a class="el" href="interface_n_t_vector_tile_layer.html#a946413d4c4e81e8dc77d250bdaab2343">NTVectorTileLayer</a>
@@ -676,6 +770,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setZoom:targetPos:durationSeconds:
 : <a class="el" href="interface_n_t_map_view.html#a619c85ec2fd8f6cd0dea006f6f2df761">NTMapView</a>
 </li>
+<li>setZoomGestures:
+: <a class="el" href="interface_n_t_options.html#a498af33882a643d6406e26167330e78a">NTOptions</a>
+</li>
 <li>setZoomLevelBias:
 : <a class="el" href="interface_n_t_tile_layer.html#a6d4f0fb9e51e82f6af2f0c78bba63914">NTTileLayer</a>
 </li>
@@ -689,6 +786,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="interface_n_t_douglas_peucker_geometry_simplifier.html#af9f5e626962ff2cd5a2a3e2062b0fcf0">NTDouglasPeuckerGeometrySimplifier</a>
 , <a class="el" href="interface_n_t_geometry_simplifier.html#a3eab7e4b587b0bfe050f8a73f591f977">NTGeometrySimplifier</a>
 </li>
+<li>simulateClick:screenPos:viewState:
+: <a class="el" href="interface_n_t_layer.html#a963cd2a7d23365973c6a827ecd563c7a">NTLayer</a>
+</li>
 <li>size
 : <a class="el" href="interface_n_t_binary_data.html#a757457b2e9f963af28a91a1cc520c323">NTBinaryData</a>
 </li>
@@ -700,6 +800,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>start
 : <a class="el" href="interface_n_t_package_manager.html#a808bb4a0099351a98249fed6400aadd5">NTPackageManager</a>
+</li>
+<li>startDownloadArea:minZoom:maxZoom:tileDownloadListener:
+: <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#a9f003f40147b1d9670cd6d6436b0a5b2">NTPersistentCacheTileDataSource</a>
 </li>
 <li>startPackageDownload:
 : <a class="el" href="interface_n_t_package_manager.html#a83bff84894e14bb85957a09e003f1dec">NTPackageManager</a>
@@ -713,8 +816,14 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>startPackageRemove:
 : <a class="el" href="interface_n_t_package_manager.html#abb4c1d0f40b80e43aa76b3e6fa5dd28b">NTPackageManager</a>
 </li>
+<li>startStyleDownload:
+: <a class="el" href="interface_n_t_carto_package_manager.html#a100150965813e9f9ab855c9dba950dbc">NTCartoPackageManager</a>
+</li>
 <li>stop:
 : <a class="el" href="interface_n_t_package_manager.html#a6e1f599ebc4962c7d16f614136830e59">NTPackageManager</a>
+</li>
+<li>stopAllDownloads
+: <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#a98822a9ba5db4f704c4d083d7ab85d85">NTPersistentCacheTileDataSource</a>
 </li>
 <li>sub:
 : <a class="el" href="interface_n_t_map_vec.html#a1c3fcec20e5cb488c0f89743f3f1867c">NTMapVec</a>
@@ -725,8 +834,13 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>subVec:
 : <a class="el" href="interface_n_t_map_pos.html#a98c5ebeecf40e092e48aa8398b89cd13">NTMapPos</a>
 </li>
+<li>suggestPackages:projection:
+: <a class="el" href="interface_n_t_package_manager.html#a5357f74629227b19a6ec990d9809c3bc">NTPackageManager</a>
+</li>
 <li>swigCreatePolymorphicInstance:swigOwnCObject:
-: <a class="el" href="interface_n_t_asset_package.html#afaf69761322ec700a63bc900a878e563">NTAssetPackage</a>
+: <a class="el" href="interface_n_t_animation_style.html#a86bb8cd8794f7f2714b82f8b2477117a">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#a7c6f38510bf609f3879d09adc2b7148d">NTAnimationStyleBuilder</a>
+, <a class="el" href="interface_n_t_asset_package.html#afaf69761322ec700a63bc900a878e563">NTAssetPackage</a>
 , <a class="el" href="interface_n_t_asset_tile_data_source.html#a62cfc7273d3511b4f6be76a8c7904e77">NTAssetTileDataSource</a>
 , <a class="el" href="interface_n_t_balloon_popup.html#ae6bf664c77f97e6d61cd809e591a7ee8">NTBalloonPopup</a>
 , <a class="el" href="interface_n_t_balloon_popup_style.html#a34d4d671950152d23df8be2974440027">NTBalloonPopupStyle</a>
@@ -742,6 +856,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_carto_online_tile_data_source.html#aebd0bb7e8e7d029660c24183fc417c6b">NTCartoOnlineTileDataSource</a>
 , <a class="el" href="interface_n_t_carto_online_vector_tile_layer.html#a5c5bf5e5f89f2540b83e48e3c632f375">NTCartoOnlineVectorTileLayer</a>
 , <a class="el" href="interface_n_t_carto_package_manager.html#a197a83e6ee0ed7435b29bab0e5a5bb39">NTCartoPackageManager</a>
+, <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#ae075fe2216e3dd9c12990e75407b2b02">NTCartoVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_carto_vector_tile_layer.html#aa3b90b0a99b399b80d0cbd77400bf2a3">NTCartoVectorTileLayer</a>
 , <a class="el" href="interface_n_t_carto_vis_builder.html#a6167b28aa6679ed4c106b62d19204e51">NTCartoVisBuilder</a>
 , <a class="el" href="interface_n_t_clustered_vector_layer.html#a192d43a4d552054cfd787814271e669c">NTClusteredVectorLayer</a>
@@ -752,6 +867,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_douglas_peucker_geometry_simplifier.html#acb643ac7ba5457fba1c778467566a2d8">NTDouglasPeuckerGeometrySimplifier</a>
 , <a class="el" href="interface_n_t_editable_vector_layer.html#a1f2c45f1908df5afd4578bf931da70a8">NTEditableVectorLayer</a>
 , <a class="el" href="interface_n_t_e_p_s_g3857.html#a6061ea75581cdd092471065ea44ba96b">NTEPSG3857</a>
+, <a class="el" href="interface_n_t_feature.html#aaac0ba7195f7d97d6dd706692346d9b0">NTFeature</a>
+, <a class="el" href="interface_n_t_feature_collection.html#ae29aeaf3e2c1fd111b174f8c97c11ac2">NTFeatureCollection</a>
+, <a class="el" href="interface_n_t_feature_collection_search_service.html#a562c1644edd329cd4da0633b16656c0c">NTFeatureCollectionSearchService</a>
+, <a class="el" href="interface_n_t_geocoding_service.html#a8ba8a336edf014138be11da6a99efc4d">NTGeocodingService</a>
 , <a class="el" href="interface_n_t_geometry.html#a4487411bdfca4f979c2bdd3f76672cf7">NTGeometry</a>
 , <a class="el" href="interface_n_t_geometry_collection.html#acd3c347c0e22bf4168e1acfd277c4125">NTGeometryCollection</a>
 , <a class="el" href="interface_n_t_geometry_collection_style.html#a150c2a790a5514815411169ad52ff9d6">NTGeometryCollectionStyle</a>
@@ -782,11 +901,18 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_multi_point_geometry.html#a0f2109e2358525c64127dc34116ba36b">NTMultiPointGeometry</a>
 , <a class="el" href="interface_n_t_multi_polygon_geometry.html#a8206e52d31ea7ce01bd4c27afe56c947">NTMultiPolygonGeometry</a>
 , <a class="el" href="interface_n_t_n_m_l_model.html#ac2fb702a90708a4e9333a7bbfa19da21">NTNMLModel</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_geocoding_service.html#a33e956fdef3e6722c8cca1087ae03412">NTOSMOfflineGeocodingService</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_reverse_geocoding_service.html#a6d805cea35625def79928f967816ce2e">NTOSMOfflineReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_o_s_r_m_offline_routing_service.html#abe2e52563e79f891c87dd98d2341c054">NTOSRMOfflineRoutingService</a>
 , <a class="el" href="interface_n_t_package_manager.html#ac213d18bd7b2503d71e0e6e90b931e44">NTPackageManager</a>
+, <a class="el" href="interface_n_t_package_manager_geocoding_service.html#addece638f22dc51a95f2938b7f52f45e">NTPackageManagerGeocodingService</a>
 , <a class="el" href="interface_n_t_package_manager_listener.html#a8c6e67168c5e3d1f71d29257524517a5">NTPackageManagerListener</a>
+, <a class="el" href="interface_n_t_package_manager_reverse_geocoding_service.html#a4b69cf6b4ea2b9df39b35ac587d2b5a6">NTPackageManagerReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_package_manager_routing_service.html#a5c2ef7201a6a4ff12139a4838adf1f03">NTPackageManagerRoutingService</a>
 , <a class="el" href="interface_n_t_package_manager_tile_data_source.html#af6d78d4749f866c970b5b42c21e2b1c0">NTPackageManagerTileDataSource</a>
+, <a class="el" href="interface_n_t_package_manager_valhalla_routing_service.html#ad9b775bbbe7513ee739156de24e4dbb2">NTPackageManagerValhallaRoutingService</a>
+, <a class="el" href="interface_n_t_pelias_online_geocoding_service.html#ace1850a04c0be1c39286f271b54613c4">NTPeliasOnlineGeocodingService</a>
+, <a class="el" href="interface_n_t_pelias_online_reverse_geocoding_service.html#ae39c084a69be723148d8ab1e087c55d1">NTPeliasOnlineReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#a6fea7e0572dcd808f6c0a83de1823345">NTPersistentCacheTileDataSource</a>
 , <a class="el" href="interface_n_t_point.html#a9d22574a370eaf73f082588c1eb15ac2">NTPoint</a>
 , <a class="el" href="interface_n_t_point_geometry.html#a611b5199e63bd14b22200e9bf71753e1">NTPointGeometry</a>
@@ -803,8 +929,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_popup_style.html#a0901e971b617b6abb51794f60f7676fc">NTPopupStyle</a>
 , <a class="el" href="interface_n_t_popup_style_builder.html#afb8541fa2191d5f8a0a9a270cb32380a">NTPopupStyleBuilder</a>
 , <a class="el" href="interface_n_t_projection.html#ab77fe3e508120e2e8029089c643b4c84">NTProjection</a>
+, <a class="el" href="interface_n_t_raster_tile_event_listener.html#a5dc164a8ab6d4440514579612f0959da">NTRasterTileEventListener</a>
 , <a class="el" href="interface_n_t_raster_tile_layer.html#a6aca9ce343b846309edf8bfe8bff62eb">NTRasterTileLayer</a>
 , <a class="el" href="interface_n_t_renderer_capture_listener.html#a2b1ebd13ae97a61b59de214ae1b1c710">NTRendererCaptureListener</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_service.html#a12adbc078ab6f49f33632f9bd8fad0ef">NTReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_routing_service.html#aed768aaf7042682c24ec05874a60fdf7">NTRoutingService</a>
 , <a class="el" href="interface_n_t_solid_layer.html#a228a8c0d66e6de8c8c798441f7a28657">NTSolidLayer</a>
 , <a class="el" href="interface_n_t_style.html#a7e5076ae465d01e79df6ebcfc0a44051">NTStyle</a>
@@ -813,23 +941,32 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_text_style.html#ace63285c3ee5c55e4bb2c9d092332d66">NTTextStyle</a>
 , <a class="el" href="interface_n_t_text_style_builder.html#ace1be8f709dde9710934cdad445a3f74">NTTextStyleBuilder</a>
 , <a class="el" href="interface_n_t_tile_data_source.html#a177eb6da6f5dc971474319a881c550a3">NTTileDataSource</a>
+, <a class="el" href="interface_n_t_tile_download_listener.html#a41218161daefcef4ca958f727553619d">NTTileDownloadListener</a>
 , <a class="el" href="interface_n_t_tile_layer.html#a635f87c072def1dd0f25afe7fd497398">NTTileLayer</a>
 , <a class="el" href="interface_n_t_tile_load_listener.html#a58c597a76a6221bc768e1f6f4cec0d16">NTTileLoadListener</a>
 , <a class="el" href="interface_n_t_torque_tile_decoder.html#ac570c9d20c7cf56bc98fb6db7d104b03">NTTorqueTileDecoder</a>
 , <a class="el" href="interface_n_t_torque_tile_layer.html#a6108bf4035f5786b48252b0c3047b01b">NTTorqueTileLayer</a>
 , <a class="el" href="interface_n_t_u_t_f_grid_event_listener.html#abb2a813943d7cf3f220fc054659297fc">NTUTFGridEventListener</a>
+, <a class="el" href="interface_n_t_valhalla_offline_routing_service.html#af77fb5f009c7db285ccc1ec1cd1575a3">NTValhallaOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_online_routing_service.html#a2c38c6a86103d319babcd8a9023af247">NTValhallaOnlineRoutingService</a>
 , <a class="el" href="interface_n_t_vector_data_source.html#a97f9fa65081a7b946e03fc3552d37f43">NTVectorDataSource</a>
 , <a class="el" href="interface_n_t_vector_edit_event_listener.html#ad59e3164243768394e9743fdb4f3018d">NTVectorEditEventListener</a>
 , <a class="el" href="interface_n_t_vector_element.html#a95cd9789a53a2eefc450ffe061798313">NTVectorElement</a>
 , <a class="el" href="interface_n_t_vector_element_event_listener.html#a0868c6a7fabb1f9f65cf7e3f0817a329">NTVectorElementEventListener</a>
+, <a class="el" href="interface_n_t_vector_element_search_service.html#a4f8abcefd9393c3cc19a3cc0a472c420">NTVectorElementSearchService</a>
 , <a class="el" href="interface_n_t_vector_layer.html#a90c704df24ec621d50fb0a92db474204">NTVectorLayer</a>
 , <a class="el" href="interface_n_t_vector_tile_decoder.html#a19c67a10b0508ca8a9e227d384e1e7af">NTVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_vector_tile_event_listener.html#a71194e89085d1481d8fe28081716238f">NTVectorTileEventListener</a>
+, <a class="el" href="interface_n_t_vector_tile_feature.html#a42f99d4146c37cfce9ecbd6d442a41c5">NTVectorTileFeature</a>
+, <a class="el" href="interface_n_t_vector_tile_feature_collection.html#aa947bb823ef9534c7728067a8e9f7e45">NTVectorTileFeatureCollection</a>
 , <a class="el" href="interface_n_t_vector_tile_layer.html#aae4bf9ebf12dece67957f455d5ad16c8">NTVectorTileLayer</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a248be4a0a3a9c9d39df7e83e056db7cd">NTVectorTileSearchService</a>
 , <a class="el" href="interface_n_t_zipped_asset_package.html#adec57f84bce2568a4c524bdacab17cad">NTZippedAssetPackage</a>
 </li>
 <li>swigGetClassName
-: <a class="el" href="interface_n_t_asset_package.html#a81583d445272e0751997bd5a4dd15ae6">NTAssetPackage</a>
+: <a class="el" href="interface_n_t_animation_style.html#ae40fcd9bd3960be7af6a0eeb7b9e21b0">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#aa878e7e8b6470c71e5b096cbfd607e09">NTAnimationStyleBuilder</a>
+, <a class="el" href="interface_n_t_asset_package.html#a81583d445272e0751997bd5a4dd15ae6">NTAssetPackage</a>
 , <a class="el" href="interface_n_t_asset_tile_data_source.html#abeafd8881b148eced88ec3653436be48">NTAssetTileDataSource</a>
 , <a class="el" href="interface_n_t_balloon_popup.html#a95e3e9f4534af8f4164c6b25b06704e7">NTBalloonPopup</a>
 , <a class="el" href="interface_n_t_balloon_popup_style.html#a66f9abd9c520c86cab5e1ff2986f47a7">NTBalloonPopupStyle</a>
@@ -845,6 +982,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_carto_online_tile_data_source.html#a1fa36ade9492f821c75f78b92af4acb3">NTCartoOnlineTileDataSource</a>
 , <a class="el" href="interface_n_t_carto_online_vector_tile_layer.html#a6921ae853eba061672bf8a31190fe998">NTCartoOnlineVectorTileLayer</a>
 , <a class="el" href="interface_n_t_carto_package_manager.html#acbc949f07e13903ebb5281a9b980c0e9">NTCartoPackageManager</a>
+, <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#a891dfb153bfdc461c3a8eedeb1495d33">NTCartoVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_carto_vector_tile_layer.html#a364897e65b0f9ca950dea624c46e66e9">NTCartoVectorTileLayer</a>
 , <a class="el" href="interface_n_t_carto_vis_builder.html#ab4292cd98257fd8108cf5eef6f46cd13">NTCartoVisBuilder</a>
 , <a class="el" href="interface_n_t_clustered_vector_layer.html#afbf764f3486bba92df662e0fd4786d60">NTClusteredVectorLayer</a>
@@ -855,6 +993,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_douglas_peucker_geometry_simplifier.html#ae6ee1c7ebcec26888c0c20ba5e70bb2d">NTDouglasPeuckerGeometrySimplifier</a>
 , <a class="el" href="interface_n_t_editable_vector_layer.html#aed9e88016b9db199ed8ec04424998e4c">NTEditableVectorLayer</a>
 , <a class="el" href="interface_n_t_e_p_s_g3857.html#aee37bcdf24fd35cfc017fe140cf45259">NTEPSG3857</a>
+, <a class="el" href="interface_n_t_feature.html#a12fd6bd5359fa506972bac1804bf8120">NTFeature</a>
+, <a class="el" href="interface_n_t_feature_collection.html#a01ed2094df673b6f17ef3ca9ea3b73c5">NTFeatureCollection</a>
+, <a class="el" href="interface_n_t_feature_collection_search_service.html#a3e44096c8922791c8182b687d0f8fcd7">NTFeatureCollectionSearchService</a>
+, <a class="el" href="interface_n_t_geocoding_service.html#aef2660919b83525a7b6fcb2ec2f6ad0d">NTGeocodingService</a>
 , <a class="el" href="interface_n_t_geometry.html#adac135ede112cc2a7e622c3dd719782e">NTGeometry</a>
 , <a class="el" href="interface_n_t_geometry_collection.html#a920444d63a9d208e86a1fbdec4355eeb">NTGeometryCollection</a>
 , <a class="el" href="interface_n_t_geometry_collection_style.html#ae8e949a2fd0de03cdfc03cf1cfb02950">NTGeometryCollectionStyle</a>
@@ -885,11 +1027,18 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_multi_point_geometry.html#af17754be6148f2cc99fd3afefd9ede89">NTMultiPointGeometry</a>
 , <a class="el" href="interface_n_t_multi_polygon_geometry.html#a348837e7637fa60331f2b2161de146a6">NTMultiPolygonGeometry</a>
 , <a class="el" href="interface_n_t_n_m_l_model.html#a5345868c520f25de7af3ec7bc2a0f69c">NTNMLModel</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_geocoding_service.html#a25791e87ceda415c325ba5ecf0620fda">NTOSMOfflineGeocodingService</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_reverse_geocoding_service.html#af57a4f030c8163b20db0dfdbf377657b">NTOSMOfflineReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_o_s_r_m_offline_routing_service.html#ac2f33c3cea44552d993a965b095b5759">NTOSRMOfflineRoutingService</a>
 , <a class="el" href="interface_n_t_package_manager.html#a54e4d74285721e486662e1ed7d1c8e6f">NTPackageManager</a>
+, <a class="el" href="interface_n_t_package_manager_geocoding_service.html#a4d9036be49e2bc7fdeb3972f3cab0d33">NTPackageManagerGeocodingService</a>
 , <a class="el" href="interface_n_t_package_manager_listener.html#a4f77d710adffec1831a585f784b00bf0">NTPackageManagerListener</a>
+, <a class="el" href="interface_n_t_package_manager_reverse_geocoding_service.html#ae433dc6021430607bddd26c61f8e6c7c">NTPackageManagerReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_package_manager_routing_service.html#a9ace21a93d3748339b96edbf30aadfcc">NTPackageManagerRoutingService</a>
 , <a class="el" href="interface_n_t_package_manager_tile_data_source.html#a506f916bd366f95cca2018b8fed86d33">NTPackageManagerTileDataSource</a>
+, <a class="el" href="interface_n_t_package_manager_valhalla_routing_service.html#a93047f293aa49f8dc46d895f9065b94c">NTPackageManagerValhallaRoutingService</a>
+, <a class="el" href="interface_n_t_pelias_online_geocoding_service.html#ab8f29a9cb6680960af05cb2cfe63132a">NTPeliasOnlineGeocodingService</a>
+, <a class="el" href="interface_n_t_pelias_online_reverse_geocoding_service.html#a7e9aed49297ef6bc7b37f9d90ee9d016">NTPeliasOnlineReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#ae9b5f0fc7640aa7a3c0f4b11b294074c">NTPersistentCacheTileDataSource</a>
 , <a class="el" href="interface_n_t_point.html#a093884acd5262d22abc5a1abbd684264">NTPoint</a>
 , <a class="el" href="interface_n_t_point_geometry.html#a92298193cbb02246f9685b3a29790fd0">NTPointGeometry</a>
@@ -906,8 +1055,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_popup_style.html#a9897a53a22f5a5199d0bd5c250b3d993">NTPopupStyle</a>
 , <a class="el" href="interface_n_t_popup_style_builder.html#a25352b0a9ca32b5bfbb6b7a79b84911a">NTPopupStyleBuilder</a>
 , <a class="el" href="interface_n_t_projection.html#a1c23a1fbfd246da6e1c20ef50481c942">NTProjection</a>
+, <a class="el" href="interface_n_t_raster_tile_event_listener.html#a1c3ebdb762bd59e318b8d151068888fb">NTRasterTileEventListener</a>
 , <a class="el" href="interface_n_t_raster_tile_layer.html#ac741f37c3df31f14b686a5e866a1af30">NTRasterTileLayer</a>
 , <a class="el" href="interface_n_t_renderer_capture_listener.html#a0fc2b1fefe781bd7d9da2e266a0ae229">NTRendererCaptureListener</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_service.html#a59ad76fcf2a99245ecff4cf1aa8b2675">NTReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_routing_service.html#a9fb9d922f42ee7a7e88a782ee0483e72">NTRoutingService</a>
 , <a class="el" href="interface_n_t_solid_layer.html#a12f7765fc1a2b065912a1de172eaa7f8">NTSolidLayer</a>
 , <a class="el" href="interface_n_t_style.html#ac6666b03955a1a3c6c7bd0ccaa6485a2">NTStyle</a>
@@ -916,23 +1067,32 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_text_style.html#ad68f9bdc2f484241c95237e210eb4e57">NTTextStyle</a>
 , <a class="el" href="interface_n_t_text_style_builder.html#aa4bd0c1212c95d75efe73ee6c0c29985">NTTextStyleBuilder</a>
 , <a class="el" href="interface_n_t_tile_data_source.html#a4b5113de0e1c47be06b8f525562a2369">NTTileDataSource</a>
+, <a class="el" href="interface_n_t_tile_download_listener.html#a56cafd13348d112f0807ed007526e35d">NTTileDownloadListener</a>
 , <a class="el" href="interface_n_t_tile_layer.html#af91bcffca66654f8fd157a813a2cce66">NTTileLayer</a>
 , <a class="el" href="interface_n_t_tile_load_listener.html#ab5a5ccd2aed44a353cf79abf61fdf707">NTTileLoadListener</a>
 , <a class="el" href="interface_n_t_torque_tile_decoder.html#ac370b0d308b6b616d39f78a5a0cdb56e">NTTorqueTileDecoder</a>
 , <a class="el" href="interface_n_t_torque_tile_layer.html#afa79a4276903105520b725504e6cdd1d">NTTorqueTileLayer</a>
 , <a class="el" href="interface_n_t_u_t_f_grid_event_listener.html#a757a7cee7bba139440716ae70e5e646e">NTUTFGridEventListener</a>
+, <a class="el" href="interface_n_t_valhalla_offline_routing_service.html#a3839884b20a7d47108c5d21c63511db8">NTValhallaOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_online_routing_service.html#a83f6d75396b24f9c399c9bba2cb5c6ad">NTValhallaOnlineRoutingService</a>
 , <a class="el" href="interface_n_t_vector_data_source.html#af2eac6a7571540e98695cc7709788725">NTVectorDataSource</a>
 , <a class="el" href="interface_n_t_vector_edit_event_listener.html#a4af2c35508bf7517bbec83d6181e8ae6">NTVectorEditEventListener</a>
 , <a class="el" href="interface_n_t_vector_element.html#a112d339c1a8dc7ba6947fe4506c404a1">NTVectorElement</a>
 , <a class="el" href="interface_n_t_vector_element_event_listener.html#a6d7bbd7b88dc0d04cbead88ba46a26df">NTVectorElementEventListener</a>
+, <a class="el" href="interface_n_t_vector_element_search_service.html#a0be7e668cc9d2f15c2586776affdf26f">NTVectorElementSearchService</a>
 , <a class="el" href="interface_n_t_vector_layer.html#a261d896b475eafe5f3e69ddba8a8545a">NTVectorLayer</a>
 , <a class="el" href="interface_n_t_vector_tile_decoder.html#a8522178d6f02f5d43d9e1acac63c48ea">NTVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_vector_tile_event_listener.html#a00f7b6727e8c0cd48b79ce7f86578011">NTVectorTileEventListener</a>
+, <a class="el" href="interface_n_t_vector_tile_feature.html#a0af02aff3aee1b331d5a45fb4f5c41f2">NTVectorTileFeature</a>
+, <a class="el" href="interface_n_t_vector_tile_feature_collection.html#a3bd1f562850eb3dbc2eb6411de962c8e">NTVectorTileFeatureCollection</a>
 , <a class="el" href="interface_n_t_vector_tile_layer.html#a324d72858ca85372031682ce7cfe4b11">NTVectorTileLayer</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a6076412da449c5924e0ac900d10b9eb2">NTVectorTileSearchService</a>
 , <a class="el" href="interface_n_t_zipped_asset_package.html#afee8d5315456b44b612ffef1d6d18745">NTZippedAssetPackage</a>
 </li>
 <li>swigGetDirectorObject
-: <a class="el" href="interface_n_t_asset_package.html#a5cab12699c5efb41511331593b01f9f4">NTAssetPackage</a>
+: <a class="el" href="interface_n_t_animation_style.html#a2903116d9ec127985102ba0de2aac966">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#acc98fe2f94feb6fb7afb7ecde5a94e92">NTAnimationStyleBuilder</a>
+, <a class="el" href="interface_n_t_asset_package.html#a5cab12699c5efb41511331593b01f9f4">NTAssetPackage</a>
 , <a class="el" href="interface_n_t_asset_tile_data_source.html#a8e0f71c72abe2bca9f19621e9cd8501b">NTAssetTileDataSource</a>
 , <a class="el" href="interface_n_t_balloon_popup.html#abb8364adbc493a9b598f0f4813c9d8c1">NTBalloonPopup</a>
 , <a class="el" href="interface_n_t_balloon_popup_style.html#a50ce75f30af64960c4109d587daff283">NTBalloonPopupStyle</a>
@@ -948,6 +1108,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_carto_online_tile_data_source.html#acab4ff13c59efd02cd78287723657272">NTCartoOnlineTileDataSource</a>
 , <a class="el" href="interface_n_t_carto_online_vector_tile_layer.html#a224f3122109682f5dee4ae0fba2a4e20">NTCartoOnlineVectorTileLayer</a>
 , <a class="el" href="interface_n_t_carto_package_manager.html#a7ad3e95c5fc0e205fc11dbc33075d35b">NTCartoPackageManager</a>
+, <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#a24c397a36d6bd2a4da5c4f9bed8a7156">NTCartoVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_carto_vector_tile_layer.html#aac237575b0034934537ea2b5a0871242">NTCartoVectorTileLayer</a>
 , <a class="el" href="interface_n_t_carto_vis_builder.html#a0cd2cc0169351227ec0c8194ab100245">NTCartoVisBuilder</a>
 , <a class="el" href="interface_n_t_clustered_vector_layer.html#ae10aba657ed9e89edea636afd900199b">NTClusteredVectorLayer</a>
@@ -958,6 +1119,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_douglas_peucker_geometry_simplifier.html#a99e787726626e8dcce89560c203d8448">NTDouglasPeuckerGeometrySimplifier</a>
 , <a class="el" href="interface_n_t_editable_vector_layer.html#abf825ab0c9ca9c65a8e0efc97eba4b01">NTEditableVectorLayer</a>
 , <a class="el" href="interface_n_t_e_p_s_g3857.html#afd86cdd38a9d35f91585047766935df4">NTEPSG3857</a>
+, <a class="el" href="interface_n_t_feature.html#abf64bbbeaf622474c4eed255ead06df0">NTFeature</a>
+, <a class="el" href="interface_n_t_feature_collection.html#ae6f4b0f8d61b06fffcd4526648f2127d">NTFeatureCollection</a>
+, <a class="el" href="interface_n_t_feature_collection_search_service.html#a3e5064ce1369bd79fca80b22518490f7">NTFeatureCollectionSearchService</a>
+, <a class="el" href="interface_n_t_geocoding_service.html#aa53bff1c5cbc7d4c64eceb3afef0e47a">NTGeocodingService</a>
 , <a class="el" href="interface_n_t_geometry.html#a8f8b87d30351773c1bab2d38a18d87b4">NTGeometry</a>
 , <a class="el" href="interface_n_t_geometry_collection.html#af856e068a87a7eabf4247a1d1b6e7aa9">NTGeometryCollection</a>
 , <a class="el" href="interface_n_t_geometry_collection_style.html#a089cd8cd12d4d1b4e10b3e8a19496450">NTGeometryCollectionStyle</a>
@@ -988,11 +1153,18 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_multi_point_geometry.html#a1481e92f91b4e6f5c46282f9165dd703">NTMultiPointGeometry</a>
 , <a class="el" href="interface_n_t_multi_polygon_geometry.html#a80630ffdedce8266df3a27ba5b45a906">NTMultiPolygonGeometry</a>
 , <a class="el" href="interface_n_t_n_m_l_model.html#ab13eb377a9e8d983781a011266205e53">NTNMLModel</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_geocoding_service.html#a87963e42530354264c0406926e1c0582">NTOSMOfflineGeocodingService</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_reverse_geocoding_service.html#a5bf897cdd5712ea5491d747e527410f4">NTOSMOfflineReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_o_s_r_m_offline_routing_service.html#a1a21aaa5e1b4bc7b0c4d1fbd8f023043">NTOSRMOfflineRoutingService</a>
 , <a class="el" href="interface_n_t_package_manager.html#abbcf74c85a594a74828741164aa2c052">NTPackageManager</a>
+, <a class="el" href="interface_n_t_package_manager_geocoding_service.html#a076430ab3bb0bfb1f0c72bb6d93f8774">NTPackageManagerGeocodingService</a>
 , <a class="el" href="interface_n_t_package_manager_listener.html#a1ad4f100602c2a35cbb6c6db23ed4bb9">NTPackageManagerListener</a>
+, <a class="el" href="interface_n_t_package_manager_reverse_geocoding_service.html#a36849db77487b10b17c2c315f96f2da6">NTPackageManagerReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_package_manager_routing_service.html#adc3b28d0ecfa7c58c7529edf7e5a1760">NTPackageManagerRoutingService</a>
 , <a class="el" href="interface_n_t_package_manager_tile_data_source.html#aa84028e7224318b3405172a6ae444a89">NTPackageManagerTileDataSource</a>
+, <a class="el" href="interface_n_t_package_manager_valhalla_routing_service.html#aacfc82df098176626cca10087e46ac40">NTPackageManagerValhallaRoutingService</a>
+, <a class="el" href="interface_n_t_pelias_online_geocoding_service.html#a94a85a14cd2fc2d85fde2e81d43fe673">NTPeliasOnlineGeocodingService</a>
+, <a class="el" href="interface_n_t_pelias_online_reverse_geocoding_service.html#a8cf397c7c5e8da82c604b44380a6c995">NTPeliasOnlineReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#ab4e7893ce0f2db3d78ac3dde25fc4213">NTPersistentCacheTileDataSource</a>
 , <a class="el" href="interface_n_t_point.html#af29cd8cda50a46aa2b97a2686296fef2">NTPoint</a>
 , <a class="el" href="interface_n_t_point_geometry.html#ad7cf49e98138ef2ca44911ad3beec8d9">NTPointGeometry</a>
@@ -1009,8 +1181,10 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_popup_style.html#a406dd9f12f75e8e73222893478249909">NTPopupStyle</a>
 , <a class="el" href="interface_n_t_popup_style_builder.html#aad296321318812d3ab29beb778ef6951">NTPopupStyleBuilder</a>
 , <a class="el" href="interface_n_t_projection.html#ad7bfbe8106f28dbf637c663d991eff8e">NTProjection</a>
+, <a class="el" href="interface_n_t_raster_tile_event_listener.html#ac594c453d75dd8a19070d7f03148de62">NTRasterTileEventListener</a>
 , <a class="el" href="interface_n_t_raster_tile_layer.html#a625d241a5a7787d5c082c78a83413278">NTRasterTileLayer</a>
 , <a class="el" href="interface_n_t_renderer_capture_listener.html#ac34ea23c3d749bed4de971d48af6e06f">NTRendererCaptureListener</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_service.html#a6a4c30d428af93c40a2165027a2fb6c8">NTReverseGeocodingService</a>
 , <a class="el" href="interface_n_t_routing_service.html#aa5893642bc95563f652e72a417250b5a">NTRoutingService</a>
 , <a class="el" href="interface_n_t_solid_layer.html#a1872e052d629ef155cd5e8219acf8e15">NTSolidLayer</a>
 , <a class="el" href="interface_n_t_style.html#ab26bc6c309e036e5a4d08d8ca6a64475">NTStyle</a>
@@ -1019,20 +1193,200 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="interface_n_t_text_style.html#a7f95effbf9a355cf899ba46bf73204e5">NTTextStyle</a>
 , <a class="el" href="interface_n_t_text_style_builder.html#acc222e2b57e843dae35d7faced4b65f4">NTTextStyleBuilder</a>
 , <a class="el" href="interface_n_t_tile_data_source.html#aa9bf0a78955be0db97a69fcb71df85d3">NTTileDataSource</a>
+, <a class="el" href="interface_n_t_tile_download_listener.html#a922ae60c2ae6f643f24f26050a12ca4f">NTTileDownloadListener</a>
 , <a class="el" href="interface_n_t_tile_layer.html#a67c6b2beff1b5ecf027861e841b88e14">NTTileLayer</a>
 , <a class="el" href="interface_n_t_tile_load_listener.html#a993696a59612eefacfdd380f8c161b9e">NTTileLoadListener</a>
 , <a class="el" href="interface_n_t_torque_tile_decoder.html#a407c319bcc1e10cbab71d7865aefbfb9">NTTorqueTileDecoder</a>
 , <a class="el" href="interface_n_t_torque_tile_layer.html#a5a31a28bfd9c5de9d0514a22c0893899">NTTorqueTileLayer</a>
 , <a class="el" href="interface_n_t_u_t_f_grid_event_listener.html#a15c5895a97f065f02cddee3c9f0cab7c">NTUTFGridEventListener</a>
+, <a class="el" href="interface_n_t_valhalla_offline_routing_service.html#aaab6e8689c50201d2ff33007565fbfa9">NTValhallaOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_online_routing_service.html#a4187e6a51480ceff559672ebd74ae55d">NTValhallaOnlineRoutingService</a>
 , <a class="el" href="interface_n_t_vector_data_source.html#a49bd60b79e7bbde57671b5493db859e6">NTVectorDataSource</a>
 , <a class="el" href="interface_n_t_vector_edit_event_listener.html#a8845aae44653919c53ffc29a62089576">NTVectorEditEventListener</a>
 , <a class="el" href="interface_n_t_vector_element.html#a559ed4e2eae6791968258697610a2134">NTVectorElement</a>
 , <a class="el" href="interface_n_t_vector_element_event_listener.html#a3bf2e056bbe03eee7e8ea944278cb54f">NTVectorElementEventListener</a>
+, <a class="el" href="interface_n_t_vector_element_search_service.html#a242e5f3b68cb996cc7304adee08aad29">NTVectorElementSearchService</a>
 , <a class="el" href="interface_n_t_vector_layer.html#a1199e9fd3819b43058b0064e48b29d4e">NTVectorLayer</a>
 , <a class="el" href="interface_n_t_vector_tile_decoder.html#a359b1fc0f9b8fc067f4dc396a3bd270d">NTVectorTileDecoder</a>
 , <a class="el" href="interface_n_t_vector_tile_event_listener.html#a6cd6c2f0718c964eeb205a0241c57279">NTVectorTileEventListener</a>
+, <a class="el" href="interface_n_t_vector_tile_feature.html#a69c0b7184c7132df1ae6a0d3081dd67e">NTVectorTileFeature</a>
+, <a class="el" href="interface_n_t_vector_tile_feature_collection.html#a6685b3ad2d180143afa606c8cf9b22dc">NTVectorTileFeatureCollection</a>
 , <a class="el" href="interface_n_t_vector_tile_layer.html#aabdf8954d0995d4f7bfb870bef26bdf3">NTVectorTileLayer</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a0fbe8c92cf942b497a09a19369cfd6a8">NTVectorTileSearchService</a>
 , <a class="el" href="interface_n_t_zipped_asset_package.html#a07e441bdff0358f56b70ccff9d821b4d">NTZippedAssetPackage</a>
+</li>
+<li>swigGetRawPtr
+: <a class="el" href="interface_n_t_address.html#a62e37e3a8b6980c4dc206bcd041fe17f">NTAddress</a>
+, <a class="el" href="interface_n_t_animation_style.html#a3859b45c748fd6e262e654b989dea1a1">NTAnimationStyle</a>
+, <a class="el" href="interface_n_t_animation_style_builder.html#a42cd3387441335e603b7978fe3567b93">NTAnimationStyleBuilder</a>
+, <a class="el" href="interface_n_t_asset_package.html#aa82fbbf09fe8f9a65242ba974edb1037">NTAssetPackage</a>
+, <a class="el" href="interface_n_t_asset_tile_data_source.html#a823e9ad6a9c5072b243a5ff1d45916e4">NTAssetTileDataSource</a>
+, <a class="el" href="interface_n_t_balloon_popup.html#ac955345ab88f9937697a8b8f267a6117">NTBalloonPopup</a>
+, <a class="el" href="interface_n_t_balloon_popup_style.html#abf3fc37849d677b2380dfb415eb8013c">NTBalloonPopupStyle</a>
+, <a class="el" href="interface_n_t_balloon_popup_style_builder.html#acc8d374c91f638152c0322004f5645ef">NTBalloonPopupStyleBuilder</a>
+, <a class="el" href="interface_n_t_billboard.html#a7dae122296812ba2e1150a70bf1a6f15">NTBillboard</a>
+, <a class="el" href="interface_n_t_billboard_style.html#a94812d76d19c6f351b6f5bbc21e627de">NTBillboardStyle</a>
+, <a class="el" href="interface_n_t_billboard_style_builder.html#a54f0f7f53d3f53b023cd529636ad3612">NTBillboardStyleBuilder</a>
+, <a class="el" href="interface_n_t_binary_data.html#a163aaeeda8d707f6aaec6b0b0bd5e19c">NTBinaryData</a>
+, <a class="el" href="interface_n_t_bitmap.html#aa5c42de558fa2793bff89cca5663127b">NTBitmap</a>
+, <a class="el" href="interface_n_t_bitmap_overlay_raster_tile_data_source.html#a0b4c5635646fbeb8ef9df11a8bfd2d7d">NTBitmapOverlayRasterTileDataSource</a>
+, <a class="el" href="interface_n_t_cache_tile_data_source.html#ab3194a9a9f6901fe696e882f01b22629">NTCacheTileDataSource</a>
+, <a class="el" href="interface_n_t_carto_c_s_s_style_set.html#a19a32c65f26fb9f42b656f1dfa790561">NTCartoCSSStyleSet</a>
+, <a class="el" href="interface_n_t_carto_maps_service.html#a3c2a25d19596e5202821d00475c93ed6">NTCartoMapsService</a>
+, <a class="el" href="interface_n_t_carto_offline_vector_tile_layer.html#a3945133c842c160f92b04aa4f031bfeb">NTCartoOfflineVectorTileLayer</a>
+, <a class="el" href="interface_n_t_carto_online_raster_tile_layer.html#a54d5d542a6ae2ed45dde6f4c1da22d55">NTCartoOnlineRasterTileLayer</a>
+, <a class="el" href="interface_n_t_carto_online_routing_service.html#acf70afe83ab9ea5648f79ca15a7d45dc">NTCartoOnlineRoutingService</a>
+, <a class="el" href="interface_n_t_carto_online_tile_data_source.html#aec869bf726f066b331888c5f4b0eebaf">NTCartoOnlineTileDataSource</a>
+, <a class="el" href="interface_n_t_carto_online_vector_tile_layer.html#a01a0a5b165ab5880cf59ac65cfc91293">NTCartoOnlineVectorTileLayer</a>
+, <a class="el" href="interface_n_t_carto_package_manager.html#a7f993b5574c9705d6c61adc755d0a826">NTCartoPackageManager</a>
+, <a class="el" href="interface_n_t_carto_s_q_l_service.html#a858edf29e7328ff71d96f1f4ada609bc">NTCartoSQLService</a>
+, <a class="el" href="interface_n_t_carto_vector_tile_decoder.html#a57e8fffb77017f7ef894dccd4454e638">NTCartoVectorTileDecoder</a>
+, <a class="el" href="interface_n_t_carto_vector_tile_layer.html#a2ff49df8716f6e50d05b615d95a0d725">NTCartoVectorTileLayer</a>
+, <a class="el" href="interface_n_t_carto_vis_builder.html#a7af936e416c6e0c74eacd8a9ac5ae616">NTCartoVisBuilder</a>
+, <a class="el" href="interface_n_t_carto_vis_loader.html#ae8fcae25ac6d96234f7a1498479cc2bd">NTCartoVisLoader</a>
+, <a class="el" href="interface_n_t_clustered_vector_layer.html#a89dcfbf3f16e0aca0f5f29d62ee07a4f">NTClusteredVectorLayer</a>
+, <a class="el" href="interface_n_t_cluster_element_builder.html#a401d95020c0ab7205acc46aa2fbac7f0">NTClusterElementBuilder</a>
+, <a class="el" href="interface_n_t_color.html#a07199edeae2d15fe67fd91e69b4d2047">NTColor</a>
+, <a class="el" href="interface_n_t_combined_tile_data_source.html#afe32215e73529506887aeff7a5aaf3be">NTCombinedTileDataSource</a>
+, <a class="el" href="interface_n_t_compiled_style_set.html#a708f63dc27c5a3f4e8bac6a1aab5aef6">NTCompiledStyleSet</a>
+, <a class="el" href="interface_n_t_cull_state.html#af7eee25676367804276229dea9a13f09">NTCullState</a>
+, <a class="el" href="interface_n_t_custom_popup.html#a9fb8ed8d1a38f03201d2cb5ab1eb0768">NTCustomPopup</a>
+, <a class="el" href="interface_n_t_custom_popup_handler.html#aaf0297c161d2479c13608734d5a847b6">NTCustomPopupHandler</a>
+, <a class="el" href="interface_n_t_douglas_peucker_geometry_simplifier.html#adf8254f711c9f853ab1d9d48523bbf87">NTDouglasPeuckerGeometrySimplifier</a>
+, <a class="el" href="interface_n_t_editable_vector_layer.html#a015694967b13c4a77dced6c33d0232ff">NTEditableVectorLayer</a>
+, <a class="el" href="interface_n_t_e_p_s_g3857.html#a680fb1abf8e271fde854314b5e031875">NTEPSG3857</a>
+, <a class="el" href="interface_n_t_feature.html#a7ba0aef34ff828a81bb5d6e78906133e">NTFeature</a>
+, <a class="el" href="interface_n_t_feature_collection.html#ab9353cc3f43ed3048bf4483abba5ca39">NTFeatureCollection</a>
+, <a class="el" href="interface_n_t_feature_collection_search_service.html#ac44912ca8881e657cee1af20f196de11">NTFeatureCollectionSearchService</a>
+, <a class="el" href="interface_n_t_frustum.html#ab3acdaeda531740c90e67c40d8f1d66c">NTFrustum</a>
+, <a class="el" href="interface_n_t_geocoding_request.html#a9a92748612ea978dd1e89c1f10d20850">NTGeocodingRequest</a>
+, <a class="el" href="interface_n_t_geocoding_result.html#a5e1e887250100d5659764827b854ca63">NTGeocodingResult</a>
+, <a class="el" href="interface_n_t_geocoding_service.html#abc2c35688e816e27693b530560930b7b">NTGeocodingService</a>
+, <a class="el" href="interface_n_t_geometry.html#af4eedadcf30ab1af976cb4e18bde877b">NTGeometry</a>
+, <a class="el" href="interface_n_t_geometry_collection.html#a969836c372a2c56da895aba2f85d408b">NTGeometryCollection</a>
+, <a class="el" href="interface_n_t_geometry_collection_style.html#a7c39ffed0790a4cb7ab4ea6cc42d418b">NTGeometryCollectionStyle</a>
+, <a class="el" href="interface_n_t_geometry_collection_style_builder.html#a6d441e0f0c4451353cabe242a954c674">NTGeometryCollectionStyleBuilder</a>
+, <a class="el" href="interface_n_t_geometry_simplifier.html#a96e53cd7aff4480b885ddf00e4e4cf0f">NTGeometrySimplifier</a>
+, <a class="el" href="interface_n_t_h_t_t_p_tile_data_source.html#ac04ffb12f5bfccb9024572f2104e21df">NTHTTPTileDataSource</a>
+, <a class="el" href="interface_n_t_label.html#ac1713273f6db673fb21ada744c45c100">NTLabel</a>
+, <a class="el" href="interface_n_t_label_style.html#a6d1f8d8bff715432ecfef300b16b12cf">NTLabelStyle</a>
+, <a class="el" href="interface_n_t_label_style_builder.html#a58d1874d30c221ca247cfe168524154f">NTLabelStyleBuilder</a>
+, <a class="el" href="interface_n_t_layer.html#a144bc71076d50b409068ddf5612ac58a">NTLayer</a>
+, <a class="el" href="interface_n_t_layers.html#a8801b8c1513618079e58d8cbd2d133e2">NTLayers</a>
+, <a class="el" href="interface_n_t_license_manager_listener.html#a1e47ca505e4d796b8f54b8d77e75c6b5">NTLicenseManagerListener</a>
+, <a class="el" href="interface_n_t_line.html#a630bd549c5fdeae5aa8c96bd522db4c6">NTLine</a>
+, <a class="el" href="interface_n_t_line_geometry.html#a56f01463209a144d5abdeb31f42141ef">NTLineGeometry</a>
+, <a class="el" href="interface_n_t_line_style.html#a6fdf98757629085b80a3ebcff2bb7d6c">NTLineStyle</a>
+, <a class="el" href="interface_n_t_line_style_builder.html#ae032b9b8671eb72c5bba40f38085b124">NTLineStyleBuilder</a>
+, <a class="el" href="interface_n_t_local_vector_data_source.html#aea715ef8b93fea9ee09f5c003525c0bd">NTLocalVectorDataSource</a>
+, <a class="el" href="interface_n_t_log_event_listener.html#a9fdab07f26e17b667055e585f934f086">NTLogEventListener</a>
+, <a class="el" href="interface_n_t_map_bounds.html#ac0b751b99b09080b3c55fd829f6ef314">NTMapBounds</a>
+, <a class="el" href="interface_n_t_map_click_info.html#acbb02d43abb2b3036be3e3a40aff7912">NTMapClickInfo</a>
+, <a class="el" href="interface_n_t_map_envelope.html#acb3cc88b2901be0fc4494bb259943906">NTMapEnvelope</a>
+, <a class="el" href="interface_n_t_map_event_listener.html#abc1c8abc72d577e5f624e82298e60651">NTMapEventListener</a>
+, <a class="el" href="interface_n_t_map_pos.html#a05ba97310a62882c1b2dbe38a4b37485">NTMapPos</a>
+, <a class="el" href="interface_n_t_map_range.html#a45b64f64b7e945f70312a59769e0e94f">NTMapRange</a>
+, <a class="el" href="interface_n_t_map_renderer.html#a0ded62d53f93fcf8ff8ee1b15e550b60">NTMapRenderer</a>
+, <a class="el" href="interface_n_t_map_renderer_listener.html#a383e3543e26b4c176298b5388030cfe7">NTMapRendererListener</a>
+, <a class="el" href="interface_n_t_map_tile.html#aa52237bed2c4bda21ba4411d3f4a68c4">NTMapTile</a>
+, <a class="el" href="interface_n_t_map_vec.html#a73f17c4bb5682c97c0ed5b072a6596e7">NTMapVec</a>
+, <a class="el" href="interface_n_t_marker.html#aa65b0b75dd9423f34680676e76097974">NTMarker</a>
+, <a class="el" href="interface_n_t_marker_style.html#ace004963dd5704b02d41e7f6dd0da836">NTMarkerStyle</a>
+, <a class="el" href="interface_n_t_marker_style_builder.html#aa06951173d210927c364a5ace7ecf878">NTMarkerStyleBuilder</a>
+, <a class="el" href="interface_n_t_m_b_tiles_tile_data_source.html#a9847804bd7abfd1f336e87dba9188334">NTMBTilesTileDataSource</a>
+, <a class="el" href="interface_n_t_m_b_vector_tile_decoder.html#a330dd99630a832acf3cdbd08fc2e804d">NTMBVectorTileDecoder</a>
+, <a class="el" href="interface_n_t_memory_cache_tile_data_source.html#a29a0c1d66a1b416918a93a44182ec2e9">NTMemoryCacheTileDataSource</a>
+, <a class="el" href="interface_n_t_multi_geometry.html#a4ba47006555d8e8edc387b89e44ebd8d">NTMultiGeometry</a>
+, <a class="el" href="interface_n_t_multi_line_geometry.html#a660d8105d0a70f1ed5e6495edda1105d">NTMultiLineGeometry</a>
+, <a class="el" href="interface_n_t_multi_point_geometry.html#a59e9f80b408a8639195546a1412a88d6">NTMultiPointGeometry</a>
+, <a class="el" href="interface_n_t_multi_polygon_geometry.html#ab9d126fd4350328cc05ceac0aa60629e">NTMultiPolygonGeometry</a>
+, <a class="el" href="interface_n_t_n_m_l_model.html#ae4b0c5e6dd0a2dd747d33e464d9635a4">NTNMLModel</a>
+, <a class="el" href="interface_n_t_options.html#a1a2d5ea4b440c97e77514306cd39fe95">NTOptions</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_geocoding_service.html#a6ab6912181a8e3911a7417074faee805">NTOSMOfflineGeocodingService</a>
+, <a class="el" href="interface_n_t_o_s_m_offline_reverse_geocoding_service.html#a082d77c3e06be0666618fdbca0c3b342">NTOSMOfflineReverseGeocodingService</a>
+, <a class="el" href="interface_n_t_o_s_r_m_offline_routing_service.html#a3781181ad9421351cc78b13e99bf8350">NTOSRMOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_package_info.html#ac8d186fdce36bf30ed01239b71a41b19">NTPackageInfo</a>
+, <a class="el" href="interface_n_t_package_manager.html#a0c89b604636ce153074f066ec2b9428c">NTPackageManager</a>
+, <a class="el" href="interface_n_t_package_manager_geocoding_service.html#a49ba54ecb5132e85d31926545fe5bbb1">NTPackageManagerGeocodingService</a>
+, <a class="el" href="interface_n_t_package_manager_listener.html#af873045cc4918d2c1ce473bed27ba554">NTPackageManagerListener</a>
+, <a class="el" href="interface_n_t_package_manager_reverse_geocoding_service.html#aabd3ddfcb4d18ad0215a7ce95ba9a5cc">NTPackageManagerReverseGeocodingService</a>
+, <a class="el" href="interface_n_t_package_manager_routing_service.html#a595044e3969a898c495e4ad49dfaa2c5">NTPackageManagerRoutingService</a>
+, <a class="el" href="interface_n_t_package_manager_tile_data_source.html#a0da450054a5c212c4dd0449c28063abd">NTPackageManagerTileDataSource</a>
+, <a class="el" href="interface_n_t_package_manager_valhalla_routing_service.html#aa0e3e6be06c36bca8ced8bf3175ba206">NTPackageManagerValhallaRoutingService</a>
+, <a class="el" href="interface_n_t_package_meta_info.html#a03f319cacd19ba42d807277d282ced5d">NTPackageMetaInfo</a>
+, <a class="el" href="interface_n_t_package_status.html#a6876b9f2c2f7ca5b8f7fe9e5c2b34389">NTPackageStatus</a>
+, <a class="el" href="interface_n_t_package_tile_mask.html#a58abffbe729b64e5198c72efc351271f">NTPackageTileMask</a>
+, <a class="el" href="interface_n_t_pelias_online_geocoding_service.html#ace6e16b8e06064519058c57f52862712">NTPeliasOnlineGeocodingService</a>
+, <a class="el" href="interface_n_t_pelias_online_reverse_geocoding_service.html#add8909c8fb168c437db007438bd71755">NTPeliasOnlineReverseGeocodingService</a>
+, <a class="el" href="interface_n_t_persistent_cache_tile_data_source.html#aa1d6c2d190ee89a20bf141c01d132873">NTPersistentCacheTileDataSource</a>
+, <a class="el" href="interface_n_t_point.html#a6cb8c953e90e588ee5d3fbd74eb042ad">NTPoint</a>
+, <a class="el" href="interface_n_t_point_geometry.html#a7a9bec2f048100d9f33080969458d920">NTPointGeometry</a>
+, <a class="el" href="interface_n_t_point_style.html#a8b52498a391456e57b49628be82e1bb8">NTPointStyle</a>
+, <a class="el" href="interface_n_t_point_style_builder.html#a491cf8d2eee823a964042c1c89d96c54">NTPointStyleBuilder</a>
+, <a class="el" href="interface_n_t_polygon.html#aec97047d871a9e0eb834cc9c31dc0207">NTPolygon</a>
+, <a class="el" href="interface_n_t_polygon3_d.html#a65a6f6dea9b03da79afdac44fa876d5c">NTPolygon3D</a>
+, <a class="el" href="interface_n_t_polygon3_d_style.html#a210281f67991785e69d8af296b491c14">NTPolygon3DStyle</a>
+, <a class="el" href="interface_n_t_polygon3_d_style_builder.html#a0e6513104ae1c89be15f13de3866fd9a">NTPolygon3DStyleBuilder</a>
+, <a class="el" href="interface_n_t_polygon_geometry.html#ac91773d3b2c0cbf9bec27b6984a1ef6e">NTPolygonGeometry</a>
+, <a class="el" href="interface_n_t_polygon_style.html#a03a9c59df7fec5b45207f9b8ddcb306c">NTPolygonStyle</a>
+, <a class="el" href="interface_n_t_polygon_style_builder.html#a0b6079deacdd3f8aaf07ea65276323f3">NTPolygonStyleBuilder</a>
+, <a class="el" href="interface_n_t_popup.html#a85e79cf74e5a96cbff621bddc9898fd2">NTPopup</a>
+, <a class="el" href="interface_n_t_popup_click_info.html#aee06a41dc2a8514daeb65e04bd2a0085">NTPopupClickInfo</a>
+, <a class="el" href="interface_n_t_popup_draw_info.html#a6077a7a2b72aaface786253695adbc7a">NTPopupDrawInfo</a>
+, <a class="el" href="interface_n_t_popup_style.html#a159a8ae051a7912916b8dd006c37fc26">NTPopupStyle</a>
+, <a class="el" href="interface_n_t_popup_style_builder.html#ac0cd9fca478c29625d4d9318304261de">NTPopupStyleBuilder</a>
+, <a class="el" href="interface_n_t_projection.html#a960fc78c4256f76258aa977eda00c5a9">NTProjection</a>
+, <a class="el" href="interface_n_t_raster_tile_click_info.html#a3e45cac3850362593562a4ca1533e36e">NTRasterTileClickInfo</a>
+, <a class="el" href="interface_n_t_raster_tile_event_listener.html#a813fcc81fb78af7661c3a5894b0395d9">NTRasterTileEventListener</a>
+, <a class="el" href="interface_n_t_raster_tile_layer.html#addc1c52045ffbff1304e0a0bf4eaea66">NTRasterTileLayer</a>
+, <a class="el" href="interface_n_t_renderer_capture_listener.html#affe473499bd76088dfdb7e6c637e84e1">NTRendererCaptureListener</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_request.html#af528613b2886eb430bf76027c880b374">NTReverseGeocodingRequest</a>
+, <a class="el" href="interface_n_t_reverse_geocoding_service.html#a91308304118530dac16513a4340a8295">NTReverseGeocodingService</a>
+, <a class="el" href="interface_n_t_routing_instruction.html#a331bc9d21f922fddd1ad967d88364f10">NTRoutingInstruction</a>
+, <a class="el" href="interface_n_t_routing_request.html#a12e741389368c6a57a6f5fa97a5bceaf">NTRoutingRequest</a>
+, <a class="el" href="interface_n_t_routing_result.html#a94dc053dc819b4e758dab73df8affcdb">NTRoutingResult</a>
+, <a class="el" href="interface_n_t_routing_service.html#a818925c59f03b38ad8e16984ab718821">NTRoutingService</a>
+, <a class="el" href="interface_n_t_screen_bounds.html#a32704f4514522b50e3559ed35701a022">NTScreenBounds</a>
+, <a class="el" href="interface_n_t_screen_pos.html#a77d3767507d4b65526dc89cd9af6cb15">NTScreenPos</a>
+, <a class="el" href="interface_n_t_search_request.html#a88ec3ca18998b66930bb7cfa01385d87">NTSearchRequest</a>
+, <a class="el" href="interface_n_t_solid_layer.html#a1af7412356487db132e7efa03bd04e73">NTSolidLayer</a>
+, <a class="el" href="interface_n_t_style.html#ac0000c968c6f5d30289168591f186c7b">NTStyle</a>
+, <a class="el" href="interface_n_t_style_builder.html#a25e2621ad6cf43e1fcceab91951dd6d7">NTStyleBuilder</a>
+, <a class="el" href="interface_n_t_text.html#ac2277d07b1a59b8b42060e4f085fab66">NTText</a>
+, <a class="el" href="interface_n_t_text_style.html#aaf5e167f195da53a7483e820d319c800">NTTextStyle</a>
+, <a class="el" href="interface_n_t_text_style_builder.html#ab7c0d73cdcc8f927b0acd6ff4bcb66b3">NTTextStyleBuilder</a>
+, <a class="el" href="interface_n_t_tile_data.html#a1ef228d640412ef3fcb638d2e097ccfc">NTTileData</a>
+, <a class="el" href="interface_n_t_tile_data_source.html#ade9798c005021506759080bbecf53880">NTTileDataSource</a>
+, <a class="el" href="interface_n_t_tile_download_listener.html#a64fea660766bc0e2c3e7c894721a9d7d">NTTileDownloadListener</a>
+, <a class="el" href="interface_n_t_tile_layer.html#aa0f7882608f18c5cf0c2b62e8944c15e">NTTileLayer</a>
+, <a class="el" href="interface_n_t_tile_load_listener.html#a987a738c52ac02d9d0fc63207886ce48">NTTileLoadListener</a>
+, <a class="el" href="interface_n_t_torque_tile_decoder.html#ac9b5bfb5db5d207c0b17d7e295ac6840">NTTorqueTileDecoder</a>
+, <a class="el" href="interface_n_t_torque_tile_layer.html#a1598630d27399097082d7bca64728af4">NTTorqueTileLayer</a>
+, <a class="el" href="interface_n_t_u_t_f_grid_click_info.html#a09c48925c2cacababca8a86ba409c9ec">NTUTFGridClickInfo</a>
+, <a class="el" href="interface_n_t_u_t_f_grid_event_listener.html#a7ca26067ce6bb3441a8c3b7f67525ac3">NTUTFGridEventListener</a>
+, <a class="el" href="interface_n_t_valhalla_offline_routing_service.html#adfd1b91792ef3b539cb919ce4dcd0845">NTValhallaOfflineRoutingService</a>
+, <a class="el" href="interface_n_t_valhalla_online_routing_service.html#afbb05a602340c94d649734f6c8d7a9ba">NTValhallaOnlineRoutingService</a>
+, <a class="el" href="interface_n_t_variant.html#abb39195a7706630a21659b314c4098fc">NTVariant</a>
+, <a class="el" href="interface_n_t_variant_array_builder.html#abc792d2072505480857e3f4b0a0cb133">NTVariantArrayBuilder</a>
+, <a class="el" href="interface_n_t_variant_object_builder.html#ab8a59ceb107af1dd7eea6970015f979a">NTVariantObjectBuilder</a>
+, <a class="el" href="interface_n_t_vector_data.html#a51c3750ed6bc865f0fcdbb3c67f0cfa8">NTVectorData</a>
+, <a class="el" href="interface_n_t_vector_data_source.html#a0ccd000ddf83ccca1a3cd57d26c5e271">NTVectorDataSource</a>
+, <a class="el" href="interface_n_t_vector_edit_event_listener.html#a61059e31070d6771dc032ee75c48708a">NTVectorEditEventListener</a>
+, <a class="el" href="interface_n_t_vector_element.html#a1a741382e5467868208abffabd81019b">NTVectorElement</a>
+, <a class="el" href="interface_n_t_vector_element_click_info.html#aa0f975e951d777d6062dd13cb7a143f6">NTVectorElementClickInfo</a>
+, <a class="el" href="interface_n_t_vector_element_drag_info.html#a578b2aec8444f3de227f92ce6ab3b814">NTVectorElementDragInfo</a>
+, <a class="el" href="interface_n_t_vector_element_event_listener.html#ad9331d7ec9378eae709e12ee966f614a">NTVectorElementEventListener</a>
+, <a class="el" href="interface_n_t_vector_element_search_service.html#ac141766e3396ed5837a4e5cf5c18ec33">NTVectorElementSearchService</a>
+, <a class="el" href="interface_n_t_vector_layer.html#abf8fe19f4c19f972f36c94ede5ab238b">NTVectorLayer</a>
+, <a class="el" href="interface_n_t_vector_tile_click_info.html#ab962e54df339ceb3098b915499ecd7b9">NTVectorTileClickInfo</a>
+, <a class="el" href="interface_n_t_vector_tile_decoder.html#ad3b1f46e581b82a82c1addce98e1d51e">NTVectorTileDecoder</a>
+, <a class="el" href="interface_n_t_vector_tile_event_listener.html#af53202c9d87e142767027852e10c6b6d">NTVectorTileEventListener</a>
+, <a class="el" href="interface_n_t_vector_tile_feature.html#ac8683ca082cddbd77548fc81f7ab0c7b">NTVectorTileFeature</a>
+, <a class="el" href="interface_n_t_vector_tile_feature_collection.html#ae4bde038bc7ee5a2372e1cf77607c17f">NTVectorTileFeatureCollection</a>
+, <a class="el" href="interface_n_t_vector_tile_layer.html#ab5cd89e2e44cc9ccfe41b3ad1247e6a1">NTVectorTileLayer</a>
+, <a class="el" href="interface_n_t_vector_tile_search_service.html#a197ee052bdaac69742cb8ead8bf78459">NTVectorTileSearchService</a>
+, <a class="el" href="interface_n_t_view_state.html#a5f03edfc7e4dc73c05c7814ced14948a">NTViewState</a>
+, <a class="el" href="interface_n_t_zipped_asset_package.html#af51204fb8f018e7a5eb32e98938ebc0b">NTZippedAssetPackage</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -1040,7 +1394,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:11 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:05:00 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

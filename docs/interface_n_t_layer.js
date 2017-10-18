@@ -11,7 +11,9 @@ var interface_n_t_layer =
     [ "setUpdatePriority:", "interface_n_t_layer.html#acc8b38679ad10a62d97787e017966a60", null ],
     [ "setVisible:", "interface_n_t_layer.html#a29b66966eea8692dde4be8d7dfaf971e", null ],
     [ "setVisibleZoomRange:", "interface_n_t_layer.html#a32c97c75c58694b831a36f1d106c2f43", null ],
+    [ "simulateClick:screenPos:viewState:", "interface_n_t_layer.html#a963cd2a7d23365973c6a827ecd563c7a", null ],
     [ "swigGetClassName", "interface_n_t_layer.html#a0a534ed6d7c4c725ef8c8d3427ff2457", null ],
     [ "swigGetDirectorObject", "interface_n_t_layer.html#a9d9543d3e278a7a9414dffbdf5d5ce61", null ],
+    [ "swigGetRawPtr", "interface_n_t_layer.html#a144bc71076d50b409068ddf5612ac58a", null ],
     [ "update:", "interface_n_t_layer.html#a5b16de576bd3810be705a12444178f41", null ]
 ];

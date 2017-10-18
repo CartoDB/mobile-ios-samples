@@ -13,5 +13,6 @@ var interface_n_t_h_t_t_p_tile_data_source =
     [ "setSubdomains:", "interface_n_t_h_t_t_p_tile_data_source.html#ab284df71c52786d03f9a3a7e10c39b7a", null ],
     [ "setTMSScheme:", "interface_n_t_h_t_t_p_tile_data_source.html#a5fd380ce444fd88a070558352de7f7bd", null ],
     [ "swigGetClassName", "interface_n_t_h_t_t_p_tile_data_source.html#a4479d1c1146561c272656df16c746520", null ],
-    [ "swigGetDirectorObject", "interface_n_t_h_t_t_p_tile_data_source.html#af5f2e83418fca671790702898404d8b0", null ]
+    [ "swigGetDirectorObject", "interface_n_t_h_t_t_p_tile_data_source.html#af5f2e83418fca671790702898404d8b0", null ],
+    [ "swigGetRawPtr", "interface_n_t_h_t_t_p_tile_data_source.html#ac04ffb12f5bfccb9024572f2104e21df", null ]
 ];

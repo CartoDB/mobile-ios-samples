@@ -10,5 +10,6 @@ var interface_n_t_billboard =
     [ "setPos:", "interface_n_t_billboard.html#af2fef38d6d1e6785882b685c8ec4398a", null ],
     [ "setRotation:", "interface_n_t_billboard.html#a3f433fd3622826bf3c02b8b991f4598f", null ],
     [ "swigGetClassName", "interface_n_t_billboard.html#a681c7d9b77244492271318e0cec19cf2", null ],
-    [ "swigGetDirectorObject", "interface_n_t_billboard.html#ad7dd0ae793fc2c3412ee09b40c589c69", null ]
+    [ "swigGetDirectorObject", "interface_n_t_billboard.html#ad7dd0ae793fc2c3412ee09b40c589c69", null ],
+    [ "swigGetRawPtr", "interface_n_t_billboard.html#a7dae122296812ba2e1150a70bf1a6f15", null ]
 ];

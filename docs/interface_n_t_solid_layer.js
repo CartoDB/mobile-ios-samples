@@ -10,5 +10,6 @@ var interface_n_t_solid_layer =
     [ "setBitmapScale:", "interface_n_t_solid_layer.html#a51e317ca94af45978a0db1fb690dbf23", null ],
     [ "setColor:", "interface_n_t_solid_layer.html#a025275bee8aafa3ccfe3bd650c6a12fe", null ],
     [ "swigGetClassName", "interface_n_t_solid_layer.html#a12f7765fc1a2b065912a1de172eaa7f8", null ],
-    [ "swigGetDirectorObject", "interface_n_t_solid_layer.html#a1872e052d629ef155cd5e8219acf8e15", null ]
+    [ "swigGetDirectorObject", "interface_n_t_solid_layer.html#a1872e052d629ef155cd5e8219acf8e15", null ],
+    [ "swigGetRawPtr", "interface_n_t_solid_layer.html#a1af7412356487db132e7efa03bd04e73", null ]
 ];

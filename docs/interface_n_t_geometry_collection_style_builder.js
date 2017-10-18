@@ -9,5 +9,6 @@ var interface_n_t_geometry_collection_style_builder =
     [ "setPointStyle:", "interface_n_t_geometry_collection_style_builder.html#ac41e5dc426123e9a747e70d863f7b092", null ],
     [ "setPolygonStyle:", "interface_n_t_geometry_collection_style_builder.html#ac07b609d27304eed2c9372670a071b9f", null ],
     [ "swigGetClassName", "interface_n_t_geometry_collection_style_builder.html#ae0aac994fbd31993973e6ba09b0653bc", null ],
-    [ "swigGetDirectorObject", "interface_n_t_geometry_collection_style_builder.html#a319e989a16ec487270612eb3356e7fd9", null ]
+    [ "swigGetDirectorObject", "interface_n_t_geometry_collection_style_builder.html#a319e989a16ec487270612eb3356e7fd9", null ],
+    [ "swigGetRawPtr", "interface_n_t_geometry_collection_style_builder.html#a6d441e0f0c4451353cabe242a954c674", null ]
 ];

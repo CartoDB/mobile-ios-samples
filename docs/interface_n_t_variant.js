@@ -1,5 +1,6 @@
 var interface_n_t_variant =
 [
+    [ "containsObjectKey:", "interface_n_t_variant.html#a5fdb5b82a67e4da0d8ff2e1d203f84a8", null ],
     [ "description", "interface_n_t_variant.html#a6e73da44b506259a0cb14bc9908b4c02", null ],
     [ "getArrayElement:", "interface_n_t_variant.html#a7f5c6c1e09fb5c78d99485454578e996", null ],
     [ "getArraySize", "interface_n_t_variant.html#ac40f75db0d011adc30b7525c00bf9fff", null ],
@@ -20,5 +21,6 @@ var interface_n_t_variant =
     [ "initWithObject:", "interface_n_t_variant.html#af8003d606577eddcd404b0fe7382bdbb", null ],
     [ "initWithString:", "interface_n_t_variant.html#a14f83d07a3c682c358402f31eb7fa202", null ],
     [ "isEqual:", "interface_n_t_variant.html#afa4e6d2f5f1bcafe940e51b281856b18", null ],
-    [ "isEqualInternal:", "interface_n_t_variant.html#a0e58e8877dc3ec785fbf99d312a05df2", null ]
+    [ "isEqualInternal:", "interface_n_t_variant.html#a0e58e8877dc3ec785fbf99d312a05df2", null ],
+    [ "swigGetRawPtr", "interface_n_t_variant.html#abb39195a7706630a21659b314c4098fc", null ]
 ];

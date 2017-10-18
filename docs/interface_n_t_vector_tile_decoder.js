@@ -6,5 +6,6 @@ var interface_n_t_vector_tile_decoder =
     [ "isEqual:", "interface_n_t_vector_tile_decoder.html#a27424e7d1809f003e8a471826b652b8f", null ],
     [ "notifyDecoderChanged", "interface_n_t_vector_tile_decoder.html#a51c8ce2ece7cf1ad1ddbac20e4cda0e8", null ],
     [ "swigGetClassName", "interface_n_t_vector_tile_decoder.html#a8522178d6f02f5d43d9e1acac63c48ea", null ],
-    [ "swigGetDirectorObject", "interface_n_t_vector_tile_decoder.html#a359b1fc0f9b8fc067f4dc396a3bd270d", null ]
+    [ "swigGetDirectorObject", "interface_n_t_vector_tile_decoder.html#a359b1fc0f9b8fc067f4dc396a3bd270d", null ],
+    [ "swigGetRawPtr", "interface_n_t_vector_tile_decoder.html#ad3b1f46e581b82a82c1addce98e1d51e", null ]
 ];

@@ -13,5 +13,6 @@ var interface_n_t_bitmap =
     [ "getWidth", "interface_n_t_bitmap.html#a2828a10ed1c7d13238e8d07590640c6e", null ],
     [ "hash", "interface_n_t_bitmap.html#a4d43587b5d439f94f8fc4a1ebd5d6574", null ],
     [ "initWithPixelData:width:height:colorFormat:bytesPerRow:", "interface_n_t_bitmap.html#a86f2c72ba70a302292b5d5f8dc15ee6a", null ],
-    [ "isEqual:", "interface_n_t_bitmap.html#a483273c8bb218d931833bd2f929d7107", null ]
+    [ "isEqual:", "interface_n_t_bitmap.html#a483273c8bb218d931833bd2f929d7107", null ],
+    [ "swigGetRawPtr", "interface_n_t_bitmap.html#aa5c42de558fa2793bff89cca5663127b", null ]
 ];

@@ -11,5 +11,6 @@ var interface_n_t_balloon_popup =
     [ "setStyle:", "interface_n_t_balloon_popup.html#adba035816adde6e28115a82e3253447e", null ],
     [ "setTitle:", "interface_n_t_balloon_popup.html#ac527b63e84b120bc311b2a5d626d5a7e", null ],
     [ "swigGetClassName", "interface_n_t_balloon_popup.html#a95e3e9f4534af8f4164c6b25b06704e7", null ],
-    [ "swigGetDirectorObject", "interface_n_t_balloon_popup.html#abb8364adbc493a9b598f0f4813c9d8c1", null ]
+    [ "swigGetDirectorObject", "interface_n_t_balloon_popup.html#abb8364adbc493a9b598f0f4813c9d8c1", null ],
+    [ "swigGetRawPtr", "interface_n_t_balloon_popup.html#ac955345ab88f9937697a8b8f267a6117", null ]
 ];

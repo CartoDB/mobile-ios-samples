@@ -392,7 +392,11 @@
 
 - (void)addDefaultBaseLayer {
     NTCartoOnlineVectorTileLayer *layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
-    [[self.mapView getLayers] add:layer];
+    if ([[self.mapView getLayers] count] == 0) {
+        [[self.mapView getLayers] add:layer];
+    } else {
+        [[self.mapView getLayers] insert:0 layer:layer];
+    }
 }
 
 @end

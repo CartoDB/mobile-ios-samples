@@ -11,5 +11,6 @@ var interface_n_t_log_event_listener =
     [ "onWarnEvent:", "interface_n_t_log_event_listener.html#a0aeb842ed8bb5b0e5f0231c60e4c192c", null ],
     [ "onWarnEventSwigExplicitNTLogEventListener:", "interface_n_t_log_event_listener.html#add177e89e293b80ecbcc44b3d67e854a", null ],
     [ "swigGetClassName", "interface_n_t_log_event_listener.html#ab9c7807d91b7c87cf314f04e04c5c4bd", null ],
-    [ "swigGetDirectorObject", "interface_n_t_log_event_listener.html#a4bd9b5c14cdacdc3535fc7e64fad67c4", null ]
+    [ "swigGetDirectorObject", "interface_n_t_log_event_listener.html#a4bd9b5c14cdacdc3535fc7e64fad67c4", null ],
+    [ "swigGetRawPtr", "interface_n_t_log_event_listener.html#a9fdab07f26e17b667055e585f934f086", null ]
 ];

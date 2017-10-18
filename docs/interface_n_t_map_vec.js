@@ -20,5 +20,6 @@ var interface_n_t_map_vec =
     [ "isEqualInternal:", "interface_n_t_map_vec.html#ad25bcc7d43a9b152fd3419aa60771c7b", null ],
     [ "length", "interface_n_t_map_vec.html#a60e637f1a371c7feae7739047eb64e78", null ],
     [ "mul:", "interface_n_t_map_vec.html#a92e439f09ce86ae694219b32e264ebaa", null ],
-    [ "sub:", "interface_n_t_map_vec.html#a1c3fcec20e5cb488c0f89743f3f1867c", null ]
+    [ "sub:", "interface_n_t_map_vec.html#a1c3fcec20e5cb488c0f89743f3f1867c", null ],
+    [ "swigGetRawPtr", "interface_n_t_map_vec.html#a73f17c4bb5682c97c0ed5b072a6596e7", null ]
 ];

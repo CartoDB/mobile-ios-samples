@@ -9,5 +9,6 @@ var interface_n_t_map_event_listener =
     [ "onMapStable", "interface_n_t_map_event_listener.html#ad9c0444c859e48eb2f5cfe42187eb67e", null ],
     [ "onMapStableSwigExplicitNTMapEventListener", "interface_n_t_map_event_listener.html#a5afd8c32a16ea8352cbe54e38d478e9b", null ],
     [ "swigGetClassName", "interface_n_t_map_event_listener.html#a9ea36ac8692ab9830c79242f506c74a2", null ],
-    [ "swigGetDirectorObject", "interface_n_t_map_event_listener.html#acbafb9e8fb9005a284c38a45034feb1c", null ]
+    [ "swigGetDirectorObject", "interface_n_t_map_event_listener.html#acbafb9e8fb9005a284c38a45034feb1c", null ],
+    [ "swigGetRawPtr", "interface_n_t_map_event_listener.html#abc1c8abc72d577e5f624e82298e60651", null ]
 ];

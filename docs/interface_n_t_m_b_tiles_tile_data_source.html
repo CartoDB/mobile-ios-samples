@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -122,6 +122,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:ac7e1863e295997b1d375064bae10c8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adab6cfff07c6c6e700f7dedd3ace8ac0"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_tile_data.html">NTTileData</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_m_b_tiles_tile_data_source.html#adab6cfff07c6c6e700f7dedd3ace8ac0">loadTile:</a></td></tr>
 <tr class="separator:adab6cfff07c6c6e700f7dedd3ace8ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9847804bd7abfd1f336e87dba9188334"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_m_b_tiles_tile_data_source.html#a9847804bd7abfd1f336e87dba9188334">swigGetRawPtr</a></td></tr>
+<tr class="separator:a9847804bd7abfd1f336e87dba9188334"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64e94e7b49db5d9f0617f63b8953c909"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_m_b_tiles_tile_data_source.html#a64e94e7b49db5d9f0617f63b8953c909">swigGetClassName</a></td></tr>
 <tr class="separator:a64e94e7b49db5d9f0617f63b8953c909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03878356fa809cdeaf25509050e77d1f"><td class="memItemLeft" align="right" valign="top">(void *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_m_b_tiles_tile_data_source.html#a03878356fa809cdeaf25509050e77d1f">swigGetDirectorObject</a></td></tr>
@@ -135,6 +137,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:acd0d7b6149fae3e25793df8bba4a8c00 inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1adadabf9db1b3cc015c9cb3b7c851a inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#aa1adadabf9db1b3cc015c9cb3b7c851a">getMaxZoomSwigExplicitNTTileDataSource</a></td></tr>
 <tr class="separator:aa1adadabf9db1b3cc015c9cb3b7c851a inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae141386cca000aade293fd06f7045de5 inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_map_bounds.html">NTMapBounds</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#ae141386cca000aade293fd06f7045de5">getDataExtentSwigExplicitNTTileDataSource</a></td></tr>
+<tr class="separator:ae141386cca000aade293fd06f7045de5 inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accb37f687a2b2aafa5ec9acd28eb9789 inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_n_t_projection.html">NTProjection</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#accb37f687a2b2aafa5ec9acd28eb9789">getProjection</a></td></tr>
 <tr class="separator:accb37f687a2b2aafa5ec9acd28eb9789 inherit pub_methods_interface_n_t_tile_data_source"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84abbc725a042776ddbc92cab95d4f4f inherit pub_methods_interface_n_t_tile_data_source"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_tile_data_source.html#a84abbc725a042776ddbc92cab95d4f4f">notifyTilesChanged:</a></td></tr>
@@ -169,9 +173,12 @@ Class Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the extent of this data source. Extent is the minimal bounding box encompassing all the tiles at maximum zoom level.<br/>
+<p>Returns the extent of the tiles in this data source.<br/>
+ The bounds are in coordinate system of the projection of the data source.<br/>
  </p>
-<dl class="section return"><dt>Returns</dt><dd>The minimal bounding box for the tiles. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The extent of the data source. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="interface_n_t_tile_data_source.html#ab9a73570a27e8411eea609c16fa6ea45">NTTileDataSource</a>.</p>
 
 </div>
 </div>
@@ -350,6 +357,7 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Loads the specified tile.<br/>
+ Note: the tile coordinate system used here is vertically flipped relative to layer tile coordinate system.<br/>
  </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -441,9 +449,29 @@ Class Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9847804bd7abfd1f336e87dba9188334"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="interface_n_t_tile_data_source.html#ade9798c005021506759080bbecf53880">NTTileDataSource</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_m_b_tiles_tile_data_source_8h_source.html">NTMBTilesTileDataSource.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTMBTilesTileDataSource.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_m_b_tiles_tile_data_source_8h_source.html">NTMBTilesTileDataSource.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTMBTilesTileDataSource.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -451,7 +479,7 @@ Class Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_m_b_tiles_tile_data_source.html">NTMBTilesTileDataSource</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:09 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:55 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

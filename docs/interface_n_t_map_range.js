@@ -10,5 +10,6 @@ var interface_n_t_map_range =
     [ "inRange:", "interface_n_t_map_range.html#a63d5b7cf0e12ecc4c9d548e9e214f7be", null ],
     [ "isEqual:", "interface_n_t_map_range.html#a490df7921f2aaf4121a9d56c9bd93e20", null ],
     [ "isEqualInternal:", "interface_n_t_map_range.html#a1af194d0fcc880024733833dd5b50145", null ],
-    [ "length", "interface_n_t_map_range.html#a4992a4fe177484f85b6c2b8446cc3023", null ]
+    [ "length", "interface_n_t_map_range.html#a4992a4fe177484f85b6c2b8446cc3023", null ],
+    [ "swigGetRawPtr", "interface_n_t_map_range.html#a45b64f64b7e945f70312a59769e0e94f", null ]
 ];

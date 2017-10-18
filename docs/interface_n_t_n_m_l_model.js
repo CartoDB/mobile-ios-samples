@@ -11,5 +11,6 @@ var interface_n_t_n_m_l_model =
     [ "setRotation:angle:", "interface_n_t_n_m_l_model.html#aba6eb20668911c3fb0901b02cb8e6900", null ],
     [ "setScale:", "interface_n_t_n_m_l_model.html#a330f9b58b942472a9ef9bfa99460ed2f", null ],
     [ "swigGetClassName", "interface_n_t_n_m_l_model.html#a5345868c520f25de7af3ec7bc2a0f69c", null ],
-    [ "swigGetDirectorObject", "interface_n_t_n_m_l_model.html#ab13eb377a9e8d983781a011266205e53", null ]
+    [ "swigGetDirectorObject", "interface_n_t_n_m_l_model.html#ab13eb377a9e8d983781a011266205e53", null ],
+    [ "swigGetRawPtr", "interface_n_t_n_m_l_model.html#ae4b0c5e6dd0a2dd747d33e464d9635a4", null ]
 ];

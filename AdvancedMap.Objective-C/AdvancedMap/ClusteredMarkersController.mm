@@ -39,21 +39,12 @@
     [geoJsonReader setTargetProjection:projection];
     
     NTFeatureCollection* features = [geoJsonReader readFeatureCollection:json];
-    
-    // Initialize basic style, as it will later be overridden anyway
-    NTMarkerStyle *style = [[[NTMarkerStyleBuilder alloc] init] buildStyle];
-    
-    NTVectorElementVector *elements = [[NTVectorElementVector alloc]init];
-    
-    for (int i = 0; i < [features getFeatureCount]; i++) {
-        NTPointGeometry *geometry = (NTPointGeometry *)[[features getFeature:i] getGeometry];
-        
-        NTMarker *marker = [[NTMarker alloc] initWithGeometry:geometry style:style];
-        [elements add:marker];
-    }
-    
-    // Add them all at once to avoid flickering
-    [vectorDataSource addAll:elements];
+
+    // Create style for markers
+    NTMarkerStyle* style = [[[NTMarkerStyleBuilder alloc] init] buildStyle];
+
+    // Add the loaded feature collection to the data source
+    [vectorDataSource addFeatureCollection:features style:style];
 }
 
 @end
@@ -61,6 +52,7 @@
 @interface MyMarkerClusterElementBuilder ()
 
 @property NSMutableDictionary* markerStyles;
+@property UIImage* markerImage;
 
 @end
 
@@ -82,12 +74,14 @@
     
     if (!markerStyle) {
         
-        UIImage* image = [UIImage imageNamed:@"marker_black.png"];
+        if (!self.markerImage) {
+            self.markerImage = [UIImage imageNamed:@"marker_black.png"];
+        }
         
-        UIGraphicsBeginImageContext(image.size);
-        [image drawAtPoint:CGPointMake(0, 0)];
+        UIGraphicsBeginImageContext(self.markerImage.size);
+        [self.markerImage drawAtPoint:CGPointMake(0, 0)];
         
-        CGRect rect = CGRectMake(0, 15, image.size.width, image.size.height);
+        CGRect rect = CGRectMake(0, 15, self.markerImage.size.width, self.markerImage.size.height);
         [[UIColor blackColor] set];
         
         NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];

@@ -8,5 +8,6 @@ var interface_n_t_screen_pos =
     [ "init", "interface_n_t_screen_pos.html#acd89fb6525a5a915927e3eb31845d157", null ],
     [ "initWithX:y:", "interface_n_t_screen_pos.html#a4b5c7e58a76949a9034b3970763a565b", null ],
     [ "isEqual:", "interface_n_t_screen_pos.html#a4fe387d7277cec8b5ae80197f5f736da", null ],
-    [ "isEqualInternal:", "interface_n_t_screen_pos.html#abe772af5b2d8dccfffa8cd2a8fb2648b", null ]
+    [ "isEqualInternal:", "interface_n_t_screen_pos.html#abe772af5b2d8dccfffa8cd2a8fb2648b", null ],
+    [ "swigGetRawPtr", "interface_n_t_screen_pos.html#a77d3767507d4b65526dc89cd9af6cb15", null ]
 ];

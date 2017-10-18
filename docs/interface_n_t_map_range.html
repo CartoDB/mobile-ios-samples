@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -110,8 +110,6 @@ Instance Methods</h2></td></tr>
 <tr class="separator:af22eb02744ead10e6f7d5c307c5acdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b9e5776dba7c46e31165e5f28a98e1c"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#a2b9e5776dba7c46e31165e5f28a98e1c">initWithMin:max:</a></td></tr>
 <tr class="separator:a2b9e5776dba7c46e31165e5f28a98e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1af194d0fcc880024733833dd5b50145"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#a1af194d0fcc880024733833dd5b50145">isEqualInternal:</a></td></tr>
-<tr class="separator:a1af194d0fcc880024733833dd5b50145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3db365e60cb330ae81f0d3dfad8e0be"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#ac3db365e60cb330ae81f0d3dfad8e0be">getMin</a></td></tr>
 <tr class="separator:ac3db365e60cb330ae81f0d3dfad8e0be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c12fa5e78466630f7417fdbacdf9d71"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#a0c12fa5e78466630f7417fdbacdf9d71">getMax</a></td></tr>
@@ -120,10 +118,14 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a63d5b7cf0e12ecc4c9d548e9e214f7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4992a4fe177484f85b6c2b8446cc3023"><td class="memItemLeft" align="right" valign="top">(float)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#a4992a4fe177484f85b6c2b8446cc3023">length</a></td></tr>
 <tr class="separator:a4992a4fe177484f85b6c2b8446cc3023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af194d0fcc880024733833dd5b50145"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#a1af194d0fcc880024733833dd5b50145">isEqualInternal:</a></td></tr>
+<tr class="separator:a1af194d0fcc880024733833dd5b50145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c169e6a15e7b0a9c2c37f767ee99acf"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#a8c169e6a15e7b0a9c2c37f767ee99acf">hashInternal</a></td></tr>
 <tr class="separator:a8c169e6a15e7b0a9c2c37f767ee99acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af39f8e98761b5711a04af48e24f3edd7"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#af39f8e98761b5711a04af48e24f3edd7">description</a></td></tr>
 <tr class="separator:af39f8e98761b5711a04af48e24f3edd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b64f64b7e945f70312a59769e0e94f"><td class="memItemLeft" align="right" valign="top">(long long)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_n_t_map_range.html#a45b64f64b7e945f70312a59769e0e94f">swigGetRawPtr</a></td></tr>
+<tr class="separator:a45b64f64b7e945f70312a59769e0e94f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A container class that defines a half closed range of values using minimum and maximum values. </p>
@@ -365,9 +367,27 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a45b64f64b7e945f70312a59769e0e94f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (long long) swigGetRawPtr </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the raw pointer to the object. This is used internally by the SDK.<br/>
+ </p>
+<dl class="section return"><dt>Returns</dt><dd>The internal pointer of the object. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/<a class="el" href="_n_t_map_range_8h_source.html">NTMapRange.h</a></li>
-<li>/Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTMapRange.mm</li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/<a class="el" href="_n_t_map_range_8h_source.html">NTMapRange.h</a></li>
+<li>/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTMapRange.mm</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -375,7 +395,7 @@ Instance Methods</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="interface_n_t_map_range.html">NTMapRange</a></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:09 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:54 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

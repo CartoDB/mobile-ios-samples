@@ -6,5 +6,6 @@ var interface_n_t_marker =
     [ "initWithPos:style:", "interface_n_t_marker.html#ae7feb03b97802d3df05ffc2e8a804be2", null ],
     [ "setStyle:", "interface_n_t_marker.html#a3e49491a6cf30cbe6fe5dd31fab5a225", null ],
     [ "swigGetClassName", "interface_n_t_marker.html#af11421ced49bea4c0003f98ca5ae45af", null ],
-    [ "swigGetDirectorObject", "interface_n_t_marker.html#a2181526801df88338fdf38975ce42b4a", null ]
+    [ "swigGetDirectorObject", "interface_n_t_marker.html#a2181526801df88338fdf38975ce42b4a", null ],
+    [ "swigGetRawPtr", "interface_n_t_marker.html#aa65b0b75dd9423f34680676e76097974", null ]
 ];

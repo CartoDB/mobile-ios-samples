@@ -78,6 +78,9 @@
     [super viewWillDisappear:animated];
     
     [self.contentView.mapView setMapEventListener:nil];
+
+    [self.mapListener setRoutingController:nil];
+    [self.mapListener setRouteDataSource:nil];
 }
 
 -(void)setStart:(NTMapPos *)mapPos

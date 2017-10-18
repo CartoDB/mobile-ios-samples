@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>CARTO Mobile SDK iOS: /Users/Shared/Jenkins/Home/workspace/cartomobile sdk ios develop/build/doxygen/NTCacheTileDataSource.h Source File</title>
+<title>CARTO Mobile SDK iOS: /Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/doxygen/NTCacheTileDataSource.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">CARTO Mobile SDK iOS
-   &#160;<span id="projectnumber">4.0.0</span>
+   &#160;<span id="projectnumber">4.1.0</span>
    </div>
    <div id="projectbrief">Objective C API for iOS</div>
   </td>
@@ -111,46 +111,53 @@ $(document).ready(function(){initNavTree('_n_t_cache_tile_data_source_8h_source.
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#import &quot;NTMapTile.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTStringMap.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTTileDataSource.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTTileData.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="interface_n_t_cache_tile_data_source.html">   27</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_cache_tile_data_source.html">NTCacheTileDataSource</a> : <a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;-(void*)getCptr;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;+(<a class="code" href="interface_n_t_cache_tile_data_source.html">NTCacheTileDataSource</a>*)swigCreatePolymorphicInstance:(<span class="keywordtype">void</span>*)cPtr swigOwnCObject:(BOOL)cMemoryOwn;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;-(int)<a class="code" href="interface_n_t_cache_tile_data_source.html#a77bb867a37c5abdf3a7232f5df554cc7">getMinZoom</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;-(int)getMinZoomSwigExplicitNTCacheTileDataSource;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;-(int)<a class="code" href="interface_n_t_cache_tile_data_source.html#a3b129e693e1702758c652f5fd952beca">getMaxZoom</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;-(int)getMaxZoomSwigExplicitNTCacheTileDataSource;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;-(void)notifyTilesChanged: (BOOL)removeTiles;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;-(void)notifyTilesChangedSwigExplicitNTCacheTileDataSource: (BOOL)removeTiles;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;-(<a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a>*)<a class="code" href="interface_n_t_cache_tile_data_source.html#a16dcd49d12009e545649a575cf07f285">getDataSource</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;-(void)<a class="code" href="interface_n_t_cache_tile_data_source.html#af6f11f19afa8fac9e8fbaf05eebf951a">clear</a>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;-(<span class="keywordtype">unsigned</span> int)<a class="code" href="interface_n_t_cache_tile_data_source.html#a5a53d0b7db768fae30c2e2efc059ebf7">getCapacity</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;-(void)setCapacity: (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)capacityInBytes;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;-(id)initWithDataSource: (<a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a>*)dataSource;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;-(NSString*)<a class="code" href="interface_n_t_cache_tile_data_source.html#a311d38f8dea86f1b1ccb4c034a3c6f69">swigGetClassName</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;-(<span class="keywordtype">void</span> *)<a class="code" href="interface_n_t_cache_tile_data_source.html#a36a9a0111345a6fd64269db1166680eb">swigGetDirectorObject</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;-(void)dealloc;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor"></span>}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor"></span></div>
-<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a16dcd49d12009e545649a575cf07f285"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a16dcd49d12009e545649a575cf07f285">-[NTCacheTileDataSource getDataSource]</a></div><div class="ttdeci">NTTileDataSource * getDataSource()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:77</div></div>
-<div class="ttc" id="interface_n_t_tile_data_source_html"><div class="ttname"><a href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTTileDataSource.h:28</div></div>
-<div class="ttc" id="interface_n_t_cache_tile_data_source_html"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html">NTCacheTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.h:27</div></div>
-<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a5a53d0b7db768fae30c2e2efc059ebf7"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a5a53d0b7db768fae30c2e2efc059ebf7">-[NTCacheTileDataSource getCapacity]</a></div><div class="ttdeci">unsigned int getCapacity()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:93</div></div>
-<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a311d38f8dea86f1b1ccb4c034a3c6f69"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a311d38f8dea86f1b1ccb4c034a3c6f69">-[NTCacheTileDataSource swigGetClassName]</a></div><div class="ttdeci">NSString * swigGetClassName()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:111</div></div>
-<div class="ttc" id="interface_n_t_cache_tile_data_source_html_af6f11f19afa8fac9e8fbaf05eebf951a"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#af6f11f19afa8fac9e8fbaf05eebf951a">-[NTCacheTileDataSource clear]</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:88</div></div>
-<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a36a9a0111345a6fd64269db1166680eb"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a36a9a0111345a6fd64269db1166680eb">-[NTCacheTileDataSource swigGetDirectorObject]</a></div><div class="ttdeci">void * swigGetDirectorObject()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:116</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#import &quot;NTMapBounds.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#import &quot;NTStringMap.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#import &quot;NTTileDataSource.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#import &quot;NTTileData.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="interface_n_t_cache_tile_data_source.html">   28</a></span>&#160; <span class="keyword">@interface </span><a class="code" href="interface_n_t_cache_tile_data_source.html">NTCacheTileDataSource</a> : <a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;-(void*)getCptr;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;-(id)initWithCptr: (<span class="keywordtype">void</span>*)cptr swigOwnCObject: (BOOL)ownCObject;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;+(<a class="code" href="interface_n_t_cache_tile_data_source.html">NTCacheTileDataSource</a>*)swigCreatePolymorphicInstance:(<span class="keywordtype">void</span>*)cPtr swigOwnCObject:(BOOL)cMemoryOwn;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;-(int)<a class="code" href="interface_n_t_cache_tile_data_source.html#a77bb867a37c5abdf3a7232f5df554cc7">getMinZoom</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;-(int)getMinZoomSwigExplicitNTCacheTileDataSource;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;-(int)<a class="code" href="interface_n_t_cache_tile_data_source.html#a3b129e693e1702758c652f5fd952beca">getMaxZoom</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;-(int)getMaxZoomSwigExplicitNTCacheTileDataSource;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;-(<a class="code" href="interface_n_t_map_bounds.html">NTMapBounds</a>*)<a class="code" href="interface_n_t_cache_tile_data_source.html#ac94f90fdf7e352ee896b4b4634edf7d6">getDataExtent</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;-(<a class="code" href="interface_n_t_map_bounds.html">NTMapBounds</a>*)getDataExtentSwigExplicitNTCacheTileDataSource;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;-(void)notifyTilesChanged: (BOOL)removeTiles;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;-(void)notifyTilesChangedSwigExplicitNTCacheTileDataSource: (BOOL)removeTiles;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;-(<a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a>*)<a class="code" href="interface_n_t_cache_tile_data_source.html#a16dcd49d12009e545649a575cf07f285">getDataSource</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;-(void)<a class="code" href="interface_n_t_cache_tile_data_source.html#af6f11f19afa8fac9e8fbaf05eebf951a">clear</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;-(<span class="keywordtype">unsigned</span> int)<a class="code" href="interface_n_t_cache_tile_data_source.html#a5a53d0b7db768fae30c2e2efc059ebf7">getCapacity</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;-(void)setCapacity: (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)capacityInBytes;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;-(id)initWithDataSource: (<a class="code" href="interface_n_t_tile_data_source.html">NTTileDataSource</a>*)dataSource;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;-(<span class="keywordtype">long</span> long)<a class="code" href="interface_n_t_cache_tile_data_source.html#ab3194a9a9f6901fe696e882f01b22629">swigGetRawPtr</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;-(NSString*)<a class="code" href="interface_n_t_cache_tile_data_source.html#a311d38f8dea86f1b1ccb4c034a3c6f69">swigGetClassName</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;-(<span class="keywordtype">void</span> *)<a class="code" href="interface_n_t_cache_tile_data_source.html#a36a9a0111345a6fd64269db1166680eb">swigGetDirectorObject</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;-(void)dealloc;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor"></span>}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html_ac94f90fdf7e352ee896b4b4634edf7d6"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#ac94f90fdf7e352ee896b4b4634edf7d6">-[NTCacheTileDataSource getDataExtent]</a></div><div class="ttdeci">NTMapBounds * getDataExtent()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:67</div></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a16dcd49d12009e545649a575cf07f285"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a16dcd49d12009e545649a575cf07f285">-[NTCacheTileDataSource getDataSource]</a></div><div class="ttdeci">NTTileDataSource * getDataSource()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:87</div></div>
+<div class="ttc" id="interface_n_t_tile_data_source_html"><div class="ttname"><a href="interface_n_t_tile_data_source.html">NTTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTTileDataSource.h:29</div></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html">NTCacheTileDataSource</a></div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.h:28</div></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html_ab3194a9a9f6901fe696e882f01b22629"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#ab3194a9a9f6901fe696e882f01b22629">-[NTCacheTileDataSource swigGetRawPtr]</a></div><div class="ttdeci">long long swigGetRawPtr()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:121</div></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a5a53d0b7db768fae30c2e2efc059ebf7"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a5a53d0b7db768fae30c2e2efc059ebf7">-[NTCacheTileDataSource getCapacity]</a></div><div class="ttdeci">unsigned int getCapacity()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:103</div></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a311d38f8dea86f1b1ccb4c034a3c6f69"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a311d38f8dea86f1b1ccb4c034a3c6f69">-[NTCacheTileDataSource swigGetClassName]</a></div><div class="ttdeci">NSString * swigGetClassName()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:126</div></div>
+<div class="ttc" id="interface_n_t_map_bounds_html"><div class="ttname"><a href="interface_n_t_map_bounds.html">NTMapBounds</a></div><div class="ttdef"><b>Definition:</b> NTMapBounds.h:26</div></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html_af6f11f19afa8fac9e8fbaf05eebf951a"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#af6f11f19afa8fac9e8fbaf05eebf951a">-[NTCacheTileDataSource clear]</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:98</div></div>
+<div class="ttc" id="interface_n_t_cache_tile_data_source_html_a36a9a0111345a6fd64269db1166680eb"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a36a9a0111345a6fd64269db1166680eb">-[NTCacheTileDataSource swigGetDirectorObject]</a></div><div class="ttdeci">void * swigGetDirectorObject()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:131</div></div>
 <div class="ttc" id="interface_n_t_cache_tile_data_source_html_a77bb867a37c5abdf3a7232f5df554cc7"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a77bb867a37c5abdf3a7232f5df554cc7">-[NTCacheTileDataSource getMinZoom]</a></div><div class="ttdeci">int getMinZoom()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:47</div></div>
 <div class="ttc" id="interface_n_t_cache_tile_data_source_html_a3b129e693e1702758c652f5fd952beca"><div class="ttname"><a href="interface_n_t_cache_tile_data_source.html#a3b129e693e1702758c652f5fd952beca">-[NTCacheTileDataSource getMaxZoom]</a></div><div class="ttdeci">int getMaxZoom()</div><div class="ttdef"><b>Definition:</b> NTCacheTileDataSource.mm:57</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -159,7 +166,7 @@ $(document).ready(function(){initNavTree('_n_t_cache_tile_data_source_8h_source.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4fef79e7177ba769987a8da36c892c5f.html">build</a></li><li class="navelem"><a class="el" href="dir_b7825bbd13b32a8f5a7f6eb81b6582d9.html">doxygen</a></li><li class="navelem"><b>NTCacheTileDataSource.h</b></li>
-    <li class="footer">Generated on Mon Oct 24 2016 14:51:06 for CARTO Mobile SDK iOS by
+    <li class="footer">Generated on Fri Oct 13 2017 18:04:49 for CARTO Mobile SDK iOS by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

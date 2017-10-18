@@ -1,5 +1,6 @@
 var interface_n_t_vector_element =
 [
+    [ "containsMetaDataKey:", "interface_n_t_vector_element.html#ad8762d865303942099364bb43584b365", null ],
     [ "getBounds", "interface_n_t_vector_element.html#a7332e6e76dd9f34d74031cde85f513b4", null ],
     [ "getGeometry", "interface_n_t_vector_element.html#a4cf96a43d8b29a93e49e0746d0d79187", null ],
     [ "getId", "interface_n_t_vector_element.html#a7a8a3766f177ea07a981beaeba1fb1ed", null ],
@@ -14,5 +15,6 @@ var interface_n_t_vector_element =
     [ "setMetaDataElement:element:", "interface_n_t_vector_element.html#a6390e6d02b8d5ac9f77af4762f39b76e", null ],
     [ "setVisible:", "interface_n_t_vector_element.html#a151bb778e4021021dafee3e0df95a907", null ],
     [ "swigGetClassName", "interface_n_t_vector_element.html#a112d339c1a8dc7ba6947fe4506c404a1", null ],
-    [ "swigGetDirectorObject", "interface_n_t_vector_element.html#a559ed4e2eae6791968258697610a2134", null ]
+    [ "swigGetDirectorObject", "interface_n_t_vector_element.html#a559ed4e2eae6791968258697610a2134", null ],
+    [ "swigGetRawPtr", "interface_n_t_vector_element.html#a1a741382e5467868208abffabd81019b", null ]
 ];
