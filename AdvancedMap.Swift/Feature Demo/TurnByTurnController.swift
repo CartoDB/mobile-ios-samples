@@ -9,18 +9,23 @@
 import Foundation
 import CoreLocation
 
-class TurnByTurnController: BaseController, NextTurnDelegate {
+class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
     
-    let contentView = TurnByTurnView()
-
     var client: TurnByTurnClient!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        contentView = TurnByTurnView()
         view = contentView
         
         client = TurnByTurnClient(mapView: contentView.map)
+        
+        let source = Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE
+        let folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
+        contentView.manager = NTCartoPackageManager(source: source, dataFolder: folder)
+        
+        client.routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
     }
     
     override func viewWillAppear(_ animated: Bool) {

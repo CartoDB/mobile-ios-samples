@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TurnByTurnView : MapBaseView {
+class TurnByTurnView : PackageDownloadBaseView {
     
     var baseLayer: NTCartoOnlineVectorTileLayer!
     
@@ -16,6 +16,9 @@ class TurnByTurnView : MapBaseView {
         self.init(frame: CGRect.zero)
         
         initialize()
+        initializeDownloadContent(withSwitch: false)
+        initializePackageDownloadContent()
+        
         addBanner(visible: true)
         
         baseLayer = addBaseLayer()

@@ -34,12 +34,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         marker = LocationMarker(mapView: mapView)
         routing = Routing(mapView: mapView)
         
-        /*
-         * For offline use, this service should be NTPackageManagerValhallaRoutingService,
-         * using online mode out of convenience, to keep the code cleaner
-         */
-        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
-        
         manager.pausesLocationUpdatesAutomatically = false
         manager.desiredAccuracy = 1
         
@@ -185,7 +179,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         // Use true heading if it is valid.
         // TODO calculate heading to see whether the user should turn around or is facing the correct direction
 //        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
-        
     }
 }
 
