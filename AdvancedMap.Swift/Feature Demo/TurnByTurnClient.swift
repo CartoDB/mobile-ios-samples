@@ -119,6 +119,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     }
     
     var latest = CLLocation()
+    var latestLocations = NTMapPosVector()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -129,6 +130,22 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                 return
             }
         }
+        
+        let projection = self.mapView.getOptions().getBaseProjection()
+        let new = projection?.fromLat(latest.coordinate.latitude, lng: latest.coordinate.longitude)
+        
+        // Keep the max at five. Take four newest elements, store them in a temporary array
+        // and assign latestLocations the value of the newer elements
+        if (latestLocations?.size() == 5) {
+            let temp = NTMapPosVector()
+            for i in 1...4 {
+                temp?.add(latestLocations?.get(Int32(i)))
+            }
+            
+            latestLocations = temp
+        }
+        
+        latestLocations?.add(new)
         
         latest = location
         
