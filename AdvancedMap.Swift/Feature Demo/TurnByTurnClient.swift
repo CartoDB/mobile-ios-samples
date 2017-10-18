@@ -9,10 +9,9 @@
 import Foundation
 import CoreLocation
 
-class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate, RouteDelegate {
+class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate {
 
     var instructionDelegate: NextTurnDelegate?
-    var routeDelegate: RouteDelegate?
     
     let manager = CLLocationManager()
     
@@ -114,18 +113,9 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                     }
                     
                     self.instructionDelegate?.instructionFound(instruction: instruction)
-                    self.routeDelegate?.routeCalculated(points: (result?.getPoints())!)
                 }
             }
         }
-    }
-    
-    func routeCalculated(points: NTMapPosVector) {
-        let projection = mapView.getOptions().getBaseProjection()
-        let accuracy: Float = 0.0
-//        let request = NTRouteMatchingRequest(projection: projection, points: points, accuracy: accuracy)
-//        let result: NTRouteMatchingResult = (self.routing.service as! NTPackageManagerValhallaRoutingService).matchRoute(request)
-        
     }
     
     var latest = CLLocation()
@@ -175,12 +165,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
 protocol NextTurnDelegate {
     func instructionFound(instruction: NTRoutingInstruction)
 }
-
-protocol RouteDelegate {
-    func routeCalculated(points: NTMapPosVector)
-}
-
-
 
 
 

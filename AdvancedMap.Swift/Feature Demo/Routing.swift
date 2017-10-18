@@ -193,6 +193,21 @@ class Routing {
         stopMarker?.setPos(position)
         stopMarker?.setVisible(true)
     }
+    
+    func matchRoute(points: NTMapPosVector) -> NTMapPos? {
+        
+        if (!(self.service is NTPackageManagerValhallaRoutingService)) {
+            return nil
+        }
+        
+        let projection = mapView.getOptions().getBaseProjection()
+        let accuracy: Float = 10.0
+        let request = NTRouteMatchingRequest(projection: projection, points: points, accuracy: accuracy)
+        let result: NTRouteMatchingResult = (self.service as! NTPackageManagerValhallaRoutingService).matchRoute(request)
+        let points = result.getPoints()
+        
+        return points?.get(Int32((points?.size())! - 1))
+    }
 }
 
 
