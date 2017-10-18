@@ -120,6 +120,8 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                     }
                     
                     self.delegate?.instructionFound(instruction: instruction)
+                    
+                    self.routing.isPointOnRoute(point: NTMapPos(x: 0, y: 0))
                 }
             }
         }
@@ -176,8 +178,8 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
             return
         }
         
-        // Use true heading if it is valid.
         // TODO calculate heading to see whether the user should turn around or is facing the correct direction
+        // Use true heading if it is valid.
 //        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
     }
 }

@@ -208,6 +208,83 @@ class Routing {
         
         return points?.get(Int32((points?.size())! - 1))
     }
+    
+    func isPointOnRoute(point: NTMapPos) -> Bool {
+        
+        let line = getLine()
+        
+        return true
+    }
+    
+    func getLine() -> NTLine? {
+        
+        let elements = routeDataSource?.getAll()
+        let count: Int32 = Int32(elements!.size())
+        
+        for i in 0..<count {
+            let element = elements?.get(i)
+            
+            if (element is NTLine) {
+                return element as? NTLine
+            }
+        }
+        
+        return nil
+    }
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/a1a9c175867f3a47bd5eda2062a7d213c42da01a/all/native/utils/GeomUtils.cpp#L30
+     */
+    func distanceFromLineSegment(point: NTMapPos, start: NTMapPos, end: NTMapPos) -> Double {
+        let nearest = calculateNearestPointOnLineSegment(point: point, start: start, end: end)
+        return distanceFromPoint(point1: nearest, point2: point)
+    }
+    
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/a1a9c175867f3a47bd5eda2062a7d213c42da01a/all/native/utils/GeomUtils.cpp#L14
+     */
+    func distanceFromPoint(point1: NTMapPos, point2: NTMapPos) -> Double {
+        let diff = getDiff(a: point2, b: point1)
+        return sqrt(diff.dotProduct(diff))
+    }
+    
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/a1a9c175867f3a47bd5eda2062a7d213c42da01a/all/native/utils/GeomUtils.cpp#L35
+     */
+    func calculateNearestPointOnLineSegment(point: NTMapPos, start: NTMapPos, end: NTMapPos) -> NTMapPos {
+        
+        let startSum = start.getX() + start.getY()
+        let endSum = end.getX() + end.getY()
+        
+        if (startSum == endSum) {
+            return start
+        }
+        
+        let diff = getDiff(a: point, b: start)
+        let dir = getDiff(a: end, b: start)
+        
+        let u = clamp(value: diff.dotProduct(dir) / dir.dotProduct(diff), low: 0.0, high: 1.0)
+        
+        // TODO? unsure if correct
+        let x = (dir.getX() * u) + start.getX()
+        let y = (dir.getY() * u) + start.getY()
+        return NTMapPos(x: x, y: y)
+    }
+    
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/3b3b2fa1b91f1395ebd3e166a0609a762c95a9ea/all/native/utils/GeneralUtils.h#L19
+     */
+    func clamp(value: Double, low: Double, high: Double) -> Double {
+        return value < low ? low : (value > high ? high : value)
+    }
+    
+    // TODO? unsure if correct
+    func getDiff(a: NTMapPos, b: NTMapPos) -> NTMapVec {
+        return NTMapVec(x: a.getX() - b.getX(), y: a.getY() - b.getY())
+    }
 }
 
 
