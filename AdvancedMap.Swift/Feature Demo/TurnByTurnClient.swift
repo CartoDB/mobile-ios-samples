@@ -83,8 +83,21 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     func destinationSet(position: NTMapPos) {
         routing.setStopMarker(position: position)
         
-        if (latest.coordinate.latitude != 0 && latest.coordinate.longitude != 0) {
-            let start = marker.projection.fromLat(latest.coordinate.latitude, lng: latest.coordinate.longitude)
+        if (Int32(latestLocations!.size()) < 1) {
+            return
+        }
+        
+        let projection = self.mapView.getOptions().getBaseProjection()
+        
+        var latest = latestLocations?.get(Int32((latestLocations?.size())! - 1))
+        // Calculations are made in the projection's units, translate it back to latitude & longitude
+        latest = projection?.toLatLong(latest!.getX(), y: latest!.getY())
+        
+        let latitude = latest!.getX()
+        let longitude = latest!.getY()
+        
+        if (latitude != 0 && longitude != 0) {
+            let start = marker.projection.fromLat(latitude, lng: longitude)
             showRoute(start: start!, stop: position)
         }
     }
@@ -118,22 +131,15 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
     }
     
-    var latest = CLLocation()
     var latestLocations = NTMapPosVector()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations[0]
         
-        if (latest.coordinate.latitude == location.coordinate.latitude) {
-            if (latest.coordinate.longitude == location.coordinate.longitude) {
-                return
-            }
-        }
-        
         let projection = self.mapView.getOptions().getBaseProjection()
-        let new = projection?.fromLat(latest.coordinate.latitude, lng: latest.coordinate.longitude)
-        
+        let new = projection?.fromLat(location.coordinate.latitude, lng: location.coordinate.longitude)
+
         // Keep the max at five. Take four newest elements, store them in a temporary array
         // and assign latestLocations the value of the newer elements
         if (latestLocations?.size() == 5) {
@@ -147,12 +153,16 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         latestLocations?.add(new)
         
-        latest = location
+        var position = latestLocations?.get(Int32((latestLocations?.size())! - 1))
+        // Calculations are made in the projection's units, translate it back to latitude & longitude
+        position = projection?.toLatLong(position!.getX(), y: position!.getY())
         
-        let latitude = location.coordinate.latitude
-        let longitude = location.coordinate.longitude
+        let latitude = position!.getX()
+        let longitude = position!.getY()
+        // Navigation apps usually don't show accuracy, just have it be 0
+        let accuracy: Float = 0.0
         
-        marker.showAt(location: location)
+        marker.showAt(latitude: latitude, longitude: longitude, accuracy: accuracy)
         
         // Zoom & focus is enabled by default, disable after initial location is set
         marker.focus = false

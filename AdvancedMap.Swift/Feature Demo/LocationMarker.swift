@@ -37,6 +37,11 @@ class LocationMarker: NSObject {
         let longitude = Double(location.coordinate.longitude)
         let accuracy = Float(location.horizontalAccuracy)
         
+        showAt(latitude: latitude, longitude: longitude, accuracy: accuracy)
+    }
+    
+    func showAt(latitude: Double, longitude: Double, accuracy: Float) {
+        
         let position = projection?.fromWgs84(NTMapPos(x: longitude, y: latitude))
         
         if (focus) {
