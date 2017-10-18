@@ -47,6 +47,12 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         client.delegate = nil
     }
     
+    override func downloadComplete(sender: PackageListener, id: String) {
+        DispatchQueue.main.async {
+            self.contentView.banner.showInformation(text: "Download complete!", autoclose: true)
+        }
+    }
+    
     func routingFailed() {
         let text = "Routing failed. Are you sure you've downloaded the correct package?"
         DispatchQueue.main.async {

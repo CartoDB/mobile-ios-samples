@@ -115,6 +115,11 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
 
     
     func goOffline() {
+        
+        if (self.contentView.switchButton == nil) {
+            return
+        }
+        
         if (self.contentView.switchButton.isOnline()) {
             DispatchQueue.main.async {
                 self.contentView.switchButton.toggle()
