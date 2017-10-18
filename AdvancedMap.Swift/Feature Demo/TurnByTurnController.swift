@@ -63,7 +63,7 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
     func instructionFound(instruction: NTRoutingInstruction) {
         
         let action = instruction.getAction()
-        let distance = instruction.getDistance()
+        let distance = Double(round(instruction.getDistance() * 100) / 100)
         
         let distanceString = String(describing: distance) + " meters"
         
