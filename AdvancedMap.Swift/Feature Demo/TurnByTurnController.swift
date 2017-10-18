@@ -28,7 +28,7 @@ class TurnByTurnController: BaseController, NextTurnDelegate {
         
         contentView.addRecognizers()
         client.onResume()
-        client.delegate = self
+        client.instructionDelegate = self
         
         let text = "Long click on the map to set a destination"
         contentView.banner.showInformation(text: text, autoclose: false)
@@ -39,7 +39,7 @@ class TurnByTurnController: BaseController, NextTurnDelegate {
         
         contentView.removeRecognizers()
         client.onPause()
-        client.delegate = nil
+        client.instructionDelegate = nil
     }
     
     func instructionFound(instruction: NTRoutingInstruction) {
