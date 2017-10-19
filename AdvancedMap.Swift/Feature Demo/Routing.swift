@@ -229,6 +229,10 @@ class Routing {
                 let distance = distanceFromLineSegment(point: point, start: segmentStart, end: segmentEnd)
                 print("Distance: " + String(describing: distance))
                 
+                if (distance.isNaN) {
+                    return true
+                }
+                
                 if (distance < 60) {
                     return true
                 }
