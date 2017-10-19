@@ -120,8 +120,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                     }
                     
                     self.delegate?.instructionFound(instruction: instruction)
-                    
-                    self.routing.isPointOnRoute(point: NTMapPos(x: 0, y: 0))
                 }
             }
         }
@@ -149,16 +147,18 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         latestLocations?.add(new)
         
-        var position = routing.matchRoute(points: latestLocations!)
+        let mercator = routing.matchRoute(points: latestLocations!)
         // Calculations are made in the projection's units, translate it back to latitude & longitude
-        position = projection?.toLatLong(position!.getX(), y: position!.getY())
+        let latlon = projection?.toLatLong(mercator!.getX(), y: mercator!.getY())
         
-        let latitude = position!.getX()
-        let longitude = position!.getY()
+        let latitude = latlon!.getX()
+        let longitude = latlon!.getY()
         // Navigation apps usually don't show accuracy, just have it be 0
         let accuracy: Float = 0.0
         
         marker.showAt(latitude: latitude, longitude: longitude, accuracy: accuracy)
+        
+        routing.isPointOnRoute(point: mercator!)
         
         // Zoom & focus is enabled by default, disable after initial location is set
         marker.focus = false

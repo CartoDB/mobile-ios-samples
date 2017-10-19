@@ -213,7 +213,29 @@ class Routing {
         
         let line = getLine()
         
-        return true
+        if (line == nil) {
+            return false
+        }
+        
+        let positions = line?.getPoses()
+        let count = Int(positions!.size())
+        
+        for i in 0..<count {
+            
+            if (i < count - 1) {
+                let segmentStart = positions!.get(Int32(i))!
+                let segmentEnd = positions!.get(Int32(i + 1))!
+                
+                let distance = distanceFromLineSegment(point: point, start: segmentStart, end: segmentEnd)
+                print("Distance: " + String(describing: distance))
+                
+                if (distance < 3) {
+                    return true
+                }
+            }
+        }
+        
+        return false
     }
     
     func getLine() -> NTLine? {
@@ -255,10 +277,7 @@ class Routing {
      */
     func calculateNearestPointOnLineSegment(point: NTMapPos, start: NTMapPos, end: NTMapPos) -> NTMapPos {
         
-        let startSum = start.getX() + start.getY()
-        let endSum = end.getX() + end.getY()
-        
-        if (startSum == endSum) {
+        if (start.isEqual(end)) {
             return start
         }
         
