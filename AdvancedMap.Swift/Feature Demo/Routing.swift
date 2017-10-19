@@ -253,6 +253,7 @@ class Routing {
         
         return nil
     }
+    
     /*
      * Translated from:
      * https://github.com/CartoDB/mobile-sdk/blob/a1a9c175867f3a47bd5eda2062a7d213c42da01a/all/native/utils/GeomUtils.cpp#L30
@@ -300,7 +301,6 @@ class Routing {
         return value < low ? low : (value > high ? high : value)
     }
     
-    // TODO? unsure if correct
     func getDiff(a: NTMapPos, b: NTMapPos) -> NTMapVec {
         return NTMapVec(x: a.getX() - b.getX(), y: a.getY() - b.getY())
     }
