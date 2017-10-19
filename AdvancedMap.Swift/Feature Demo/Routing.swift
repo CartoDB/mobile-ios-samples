@@ -229,7 +229,7 @@ class Routing {
                 let distance = distanceFromLineSegment(point: point, start: segmentStart, end: segmentEnd)
                 print("Distance: " + String(describing: distance))
                 
-                if (distance < 3) {
+                if (distance < 60) {
                     return true
                 }
             }

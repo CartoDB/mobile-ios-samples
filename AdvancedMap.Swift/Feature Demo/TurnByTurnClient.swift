@@ -158,7 +158,9 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         marker.showAt(latitude: latitude, longitude: longitude, accuracy: accuracy)
         
-        routing.isPointOnRoute(point: mercator!)
+        if (routing.isPointOnRoute(point: mercator!)) {
+            return
+        }
         
         // Zoom & focus is enabled by default, disable after initial location is set
         marker.focus = false
