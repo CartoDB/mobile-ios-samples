@@ -27,7 +27,7 @@ class TurnByTurnView : PackageDownloadBaseView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let height: CGFloat = 80
+        let height: CGFloat = 60
         turnByTurnBanner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: height)
     }
     

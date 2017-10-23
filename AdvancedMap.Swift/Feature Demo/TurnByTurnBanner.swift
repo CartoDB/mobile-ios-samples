@@ -32,7 +32,7 @@ class TurnByTurnBanner: UIView {
         super.layoutSubviews()
         
         let padding: CGFloat = 10
-        let imageSize: CGFloat = frame.height / 2
+        let imageSize: CGFloat = frame.height - 2 * padding
         
         var x: CGFloat = padding
         let y = frame.height / 2 - imageSize / 2
@@ -66,23 +66,23 @@ class TurnByTurnBanner: UIView {
         // There are actually even more RoutingActions, but I've covered the most prominent ones
         switch (action) {
         case NTRoutingAction.ROUTING_ACTION_ENTER_ROUNDABOUT:
-            message = "Enter Roundabout in " + distanceString + " meters"
+            message = "Enter Roundabout in " + distanceString
         case NTRoutingAction.ROUTING_ACTION_FINISH:
-            message = "You'll arrive at your destination in " + distanceString + " meters"
+            message = "You'll arrive at your destination in " + distanceString
         case NTRoutingAction.ROUTING_ACTION_GO_STRAIGHT:
-            message = "Go straight for " + distanceString + " meters"
+            message = "Go straight for " + distanceString
         case NTRoutingAction.ROUTING_ACTION_LEAVE_ROUNDABOUT:
-            message = "Leave roundabout in " + distanceString + " meters"
+            message = "Leave roundabout in " + distanceString
         case NTRoutingAction.ROUTING_ACTION_STAY_ON_ROUNDABOUT:
-            message = "Stay on roundabout for " + distanceString + " meters"
+            message = "Stay on roundabout for " + distanceString
         case NTRoutingAction.ROUTING_ACTION_TURN_LEFT:
-            message = "Turn left in " + distanceString + " meters"
+            message = "Turn left in " + distanceString
             image = UIImage(named: "banner_icon_turn_left.png")
         case NTRoutingAction.ROUTING_ACTION_TURN_RIGHT:
-            message = "Turn right in " + distanceString + " meters"
+            message = "Turn right in " + distanceString
             image = UIImage(named: "banner_icon_turn_right.png")
         case NTRoutingAction.ROUTING_ACTION_UTURN:
-            message = "Make a U-Turn in " + distanceString + " meters"
+            message = "Make a U-Turn in " + distanceString
         case NTRoutingAction.ROUTING_ACTION_START_AT_END_OF_STREET:
             message = "Start at the end of the street"
         default:
@@ -91,9 +91,7 @@ class TurnByTurnBanner: UIView {
         
         DispatchQueue.main.async {
             self.label.text = message.uppercased()
-            if (image != nil) {
-                self.imageView.image = image
-            }
+            self.imageView.image = image
         }
         
     }
