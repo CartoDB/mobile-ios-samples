@@ -108,6 +108,8 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                 return
             }
             
+            self.delegate?.locationUpdated(result: result!)
+            
             let color = NTColor(r: 14, g: 122, b: 254, a: 150)
             DispatchQueue.main.async {
                 self.routing.show(result: result!, lineColor: color!, complete: {_ in })
@@ -159,15 +161,24 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         marker.showAt(latitude: latitude, longitude: longitude, accuracy: accuracy)
         
+        let destination = destinationListener?.destination
+        
         if (routing.isPointOnRoute(point: mercator!)) {
+            // If point is on route, don't render your new route,
+            // but still make the calculation internally, so we could update distance and time labels
+            DispatchQueue.global().async {
+                let result = self.routing.getResult(startPos: mercator!, stopPos: destination!)
+                
+                if (result != nil) {
+                    self.delegate?.locationUpdated(result: result!)
+                }
+            }
             return
         }
         
         // Zoom & focus is enabled by default, disable after initial location is set
         marker.focus = false
-        
-        let destination = destinationListener?.destination
-        
+
         if (destination != nil) {
             let position = marker.projection.fromLat(latitude, lng: longitude)
             showRoute(start: position!, stop: destination!)
@@ -192,6 +203,8 @@ protocol NextTurnDelegate {
     func instructionFound(instruction: NTRoutingInstruction)
     
     func routingFailed()
+    
+    func locationUpdated(result: NTRoutingResult)
 }
 
 

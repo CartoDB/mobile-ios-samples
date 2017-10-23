@@ -16,7 +16,7 @@ class TurnByTurnBanner: UIView {
     convenience init() {
         self.init(frame: CGRect.zero)
         
-        backgroundColor = Colors.transparentPredictionBlue
+        backgroundColor = Colors.transparentNavy
         
         addSubview(imageView)
         
