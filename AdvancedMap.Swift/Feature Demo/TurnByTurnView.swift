@@ -20,8 +20,6 @@ class TurnByTurnView : PackageDownloadBaseView {
         initializePackageDownloadContent()
         
         addBanner(visible: true)
-        
-        baseLayer = addBaseLayer()
     }
     
     override func layoutSubviews() {

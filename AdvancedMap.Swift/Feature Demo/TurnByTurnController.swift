@@ -21,11 +21,20 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         
         client = TurnByTurnClient(mapView: contentView.map)
         
-        let source = Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE
-        let folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
+        // Offline routing manager and mode
+        var source = Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE
+        var folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
         contentView.manager = NTCartoPackageManager(source: source, dataFolder: folder)
         
         client.routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
+        
+        // Offline map manager and mode
+//        source = Routing.MAP_SOURCE
+//        folder = Utils.createDirectory(name: "countrypackages")
+//        let manager = NTCartoPackageManager(source: source, dataFolder: folder)
+//        contentView.setOfflineMode(manager: manager!)
+        
+        contentView.setOnlineMode()
     }
     
     override func viewWillAppear(_ animated: Bool) {
