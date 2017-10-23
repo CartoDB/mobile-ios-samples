@@ -88,7 +88,7 @@ class TurnByTurnBanner: UIView {
         case NTRoutingAction.ROUTING_ACTION_UTURN:
             message = "Make a U-Turn in " + distanceString
         case NTRoutingAction.ROUTING_ACTION_START_AT_END_OF_STREET:
-            message = "Start at the end of the street"
+            message = "Start at the end of the street: " + distanceString
         default:
             break
         }

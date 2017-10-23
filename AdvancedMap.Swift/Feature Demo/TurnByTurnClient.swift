@@ -115,13 +115,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                 self.routing.show(result: result!, lineColor: color!, complete: {_ in })
                 
                 if (result!.getInstructions().size() > 0) {
-                    var instruction = result!.getInstructions().get(0)!
-                    
-                    if (instruction.getAction() == NTRoutingAction.ROUTING_ACTION_START_AT_END_OF_STREET && result!.getInstructions().size() > 1) {
-                        // We can ignore this instruction, as it's a pseudo-one, just telling you to start
-                       instruction = result!.getInstructions().get(1)!
-                    }
-                    
+                    let instruction = result!.getInstructions().get(0)!
                     self.delegate?.instructionFound(instruction: instruction)
                 }
             }
