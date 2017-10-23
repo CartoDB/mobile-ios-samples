@@ -10,6 +10,8 @@ import Foundation
 
 class TurnByTurnView : PackageDownloadBaseView {
     
+    var turnByTurnBanner = TurnByTurnBanner()
+    
     var baseLayer: NTCartoOnlineVectorTileLayer!
     
     convenience init() {
@@ -19,11 +21,14 @@ class TurnByTurnView : PackageDownloadBaseView {
         initializeDownloadContent(withSwitch: false)
         initializePackageDownloadContent()
         
-        addBanner(visible: true)
+        addSubview(turnByTurnBanner)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        let height: CGFloat = 80
+        turnByTurnBanner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: height)
     }
     
 }

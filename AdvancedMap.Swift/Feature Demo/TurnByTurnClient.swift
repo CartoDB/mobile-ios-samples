@@ -33,6 +33,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         marker = LocationMarker(mapView: mapView)
         routing = Routing(mapView: mapView)
+        routing.showTurns = false
         
         manager.pausesLocationUpdatesAutomatically = false
         manager.desiredAccuracy = 1

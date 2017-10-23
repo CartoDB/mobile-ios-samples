@@ -20,6 +20,9 @@
 		AD061BD01F1E4BED00F523B8 /* icon_wifi_on.png in Resources */ = {isa = PBXBuildFile; fileRef = AD061BCC1F1E4BED00F523B8 /* icon_wifi_on.png */; };
 		AD061BD21F1E57DC00F523B8 /* RotationResetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BD11F1E57DC00F523B8 /* RotationResetButton.swift */; };
 		AD061BD41F1E653300F523B8 /* LocationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD061BD31F1E653300F523B8 /* LocationExtensions.swift */; };
+		AD0A4E0A1F9DF08600C36DF4 /* TurnByTurnBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A4E091F9DF08600C36DF4 /* TurnByTurnBanner.swift */; };
+		AD0A4E0C1F9DF75300C36DF4 /* banner_icon_turn_right.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0A4E0B1F9DF75200C36DF4 /* banner_icon_turn_right.png */; };
+		AD0A4E0E1F9DF75A00C36DF4 /* banner_icon_turn_left.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0A4E0D1F9DF75A00C36DF4 /* banner_icon_turn_left.png */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD0D68051F84D073008738B0 /* style_image_here_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0D68031F84D073008738B0 /* style_image_here_normal.png */; };
 		AD0D68061F84D073008738B0 /* style_image_here_satellite.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0D68041F84D073008738B0 /* style_image_here_satellite.png */; };
@@ -165,6 +168,9 @@
 		AD061BCC1F1E4BED00F523B8 /* icon_wifi_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_wifi_on.png; sourceTree = "<group>"; };
 		AD061BD11F1E57DC00F523B8 /* RotationResetButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationResetButton.swift; sourceTree = "<group>"; };
 		AD061BD31F1E653300F523B8 /* LocationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationExtensions.swift; sourceTree = "<group>"; };
+		AD0A4E091F9DF08600C36DF4 /* TurnByTurnBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnByTurnBanner.swift; sourceTree = "<group>"; };
+		AD0A4E0B1F9DF75200C36DF4 /* banner_icon_turn_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_turn_right.png; sourceTree = "<group>"; };
+		AD0A4E0D1F9DF75A00C36DF4 /* banner_icon_turn_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_turn_left.png; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD0D68031F84D073008738B0 /* style_image_here_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_here_normal.png; sourceTree = "<group>"; };
 		AD0D68041F84D073008738B0 /* style_image_here_satellite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_here_satellite.png; sourceTree = "<group>"; };
@@ -319,6 +325,24 @@
 				AD01E6561F3483440001D8A3 /* OfflineRoutingView.swift */,
 			);
 			name = "Offline Routing";
+			sourceTree = "<group>";
+		};
+		AD0A4E071F9DE7F500C36DF4 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				ADF5A9481F8B569B008F17E3 /* TurnByTurnClient.swift */,
+				AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */,
+				AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		AD0A4E081F9DE80500C36DF4 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				AD0A4E091F9DF08600C36DF4 /* TurnByTurnBanner.swift */,
+			);
+			name = Subviews;
 			sourceTree = "<group>";
 		};
 		AD0CD3101EF420DE007E4378 /* Utils */ = {
@@ -688,6 +712,8 @@
 		ADE092ED1F00ECE200C569F9 /* Directions */ = {
 			isa = PBXGroup;
 			children = (
+				AD0A4E0D1F9DF75A00C36DF4 /* banner_icon_turn_left.png */,
+				AD0A4E0B1F9DF75200C36DF4 /* banner_icon_turn_right.png */,
 				ADE092EE1F00ECF500C569F9 /* direction_up.png */,
 				ADE092EF1F00ECF500C569F9 /* direction_upthenleft.png */,
 				ADE092F01F00ECF500C569F9 /* direction_upthenright.png */,
@@ -718,11 +744,10 @@
 		ADF5A9431F8B4EFB008F17E3 /* Turn by Turn */ = {
 			isa = PBXGroup;
 			children = (
+				AD0A4E081F9DE80500C36DF4 /* Subviews */,
+				AD0A4E071F9DE7F500C36DF4 /* Client */,
 				ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */,
 				ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */,
-				ADF5A9481F8B569B008F17E3 /* TurnByTurnClient.swift */,
-				AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */,
-				AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */,
 			);
 			name = "Turn by Turn";
 			sourceTree = "<group>";
@@ -862,6 +887,7 @@
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
 				AD1AAAE01F8B96D500602014 /* icon_sample_turn_by_turn.png in Resources */,
+				AD0A4E0E1F9DF75A00C36DF4 /* banner_icon_turn_left.png in Resources */,
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
 				AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */,
 				AD41231A1F03E1CE009874BD /* info.png in Resources */,
@@ -884,6 +910,7 @@
 				ADE092F31F00ECF500C569F9 /* direction_upthenright.png in Resources */,
 				AD9786C01EF822B7002912DF /* icon_marker_gray.png in Resources */,
 				ADC8B8EA1F052A2800B62852 /* icon_sample_styles.png in Resources */,
+				AD0A4E0C1F9DF75300C36DF4 /* banner_icon_turn_right.png in Resources */,
 				AD437ECE1EF933C5008CEA76 /* style_image_mapzen_bright.png in Resources */,
 				AD41231D1F03E1E1009874BD /* arrow.png in Resources */,
 				ADE4A0101F458F8500D6E05F /* icon_sample_route_search.png in Resources */,
@@ -955,6 +982,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0A4E0A1F9DF08600C36DF4 /* TurnByTurnBanner.swift in Sources */,
 				AD97869D1EF80740002912DF /* PopupButton.swift in Sources */,
 				AD9786AE1EF80CD5002912DF /* SlideInPopup.swift in Sources */,
 				AD437EBC1EF909C4008CEA76 /* LanguagePopupContent.swift in Sources */,
