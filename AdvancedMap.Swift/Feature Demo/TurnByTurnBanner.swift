@@ -20,7 +20,7 @@ class TurnByTurnBanner: UIView {
         
         addSubview(imageView)
         
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.textColor = UIColor.white
         label.font = UIFont(name: "HelveticaNeue", size: 12)
         label.numberOfLines = 0
@@ -31,18 +31,22 @@ class TurnByTurnBanner: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let padding: CGFloat = 10
-        let imageSize: CGFloat = frame.height - 2 * padding
+        let padding: CGFloat = frame.height / 6
+        let imagePadding: CGFloat = 1.5 * padding
+        let imageSize: CGFloat = frame.height - 2 * imagePadding
         
-        var x: CGFloat = padding
-        let y = frame.height / 2 - imageSize / 2
+        var x = imagePadding
+        var y = imagePadding
         var w = imageSize
-        let h = imageSize
+        var h = imageSize
         
         imageView.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        x += w + padding
-        w = frame.width - (2 * imageSize + 4 * padding)
+        x += w + imagePadding
+        
+        y = padding
+        w = frame.width - (2 * imagePadding + padding)
+        h = frame.height - 2 * padding
         
         label.frame = CGRect(x: x, y: y, width: w, height: h)
     }

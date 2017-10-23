@@ -23,6 +23,7 @@
 		AD0A4E0A1F9DF08600C36DF4 /* TurnByTurnBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A4E091F9DF08600C36DF4 /* TurnByTurnBanner.swift */; };
 		AD0A4E0C1F9DF75300C36DF4 /* banner_icon_turn_right.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0A4E0B1F9DF75200C36DF4 /* banner_icon_turn_right.png */; };
 		AD0A4E0E1F9DF75A00C36DF4 /* banner_icon_turn_left.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0A4E0D1F9DF75A00C36DF4 /* banner_icon_turn_left.png */; };
+		AD0A4E101F9E048700C36DF4 /* TurnByTurnInformationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A4E0F1F9E048700C36DF4 /* TurnByTurnInformationLabel.swift */; };
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD0D68051F84D073008738B0 /* style_image_here_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0D68031F84D073008738B0 /* style_image_here_normal.png */; };
 		AD0D68061F84D073008738B0 /* style_image_here_satellite.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0D68041F84D073008738B0 /* style_image_here_satellite.png */; };
@@ -171,6 +172,7 @@
 		AD0A4E091F9DF08600C36DF4 /* TurnByTurnBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnByTurnBanner.swift; sourceTree = "<group>"; };
 		AD0A4E0B1F9DF75200C36DF4 /* banner_icon_turn_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_turn_right.png; sourceTree = "<group>"; };
 		AD0A4E0D1F9DF75A00C36DF4 /* banner_icon_turn_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_icon_turn_left.png; sourceTree = "<group>"; };
+		AD0A4E0F1F9E048700C36DF4 /* TurnByTurnInformationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnByTurnInformationLabel.swift; sourceTree = "<group>"; };
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD0D68031F84D073008738B0 /* style_image_here_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_here_normal.png; sourceTree = "<group>"; };
 		AD0D68041F84D073008738B0 /* style_image_here_satellite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_here_satellite.png; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0A4E091F9DF08600C36DF4 /* TurnByTurnBanner.swift */,
+				AD0A4E0F1F9E048700C36DF4 /* TurnByTurnInformationLabel.swift */,
 			);
 			name = Subviews;
 			sourceTree = "<group>";
@@ -1016,6 +1019,7 @@
 				AD4123221F03F402009874BD /* ClusterBuilder.swift in Sources */,
 				ADA977FE1F0E8C5A0040E090 /* ReverseGeocodingEventListener.swift in Sources */,
 				ADB7B8861EF7B3EC00BB2550 /* GalleryRow.swift in Sources */,
+				AD0A4E101F9E048700C36DF4 /* TurnByTurnInformationLabel.swift in Sources */,
 				AD061BD21F1E57DC00F523B8 /* RotationResetButton.swift in Sources */,
 				AD9786991EF7FE81002912DF /* MapBaseView.swift in Sources */,
 				ADE093031F01080700C569F9 /* ProgressLabel.swift in Sources */,
