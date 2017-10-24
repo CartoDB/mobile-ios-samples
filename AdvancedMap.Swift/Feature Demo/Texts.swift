@@ -10,6 +10,13 @@ import Foundation
 
 class Texts {
     
+    static let turnByTurnInfoHeader = "TURN BY TURN NAVIGATION"
+    
+    static let turnByTurnInfoContainer =
+    "This is a proof-of-concept level native element that provides turn-by-turn navigation. \n\n" +
+    "In addition to routing, it implements map matching (the process to match a sequence of real world coordinates into a digital map), " +
+    "a new feature in CartoMobileSDK.\n\nThe calculation to determine whether the user is still on the route, or if a new route needs to be calculated, is done on the mobile-level."
+    
     static let basemapInfoHeader = "ONLINE BASE MAPS AND STYLES"
     
     static let basemapInfoContainer =

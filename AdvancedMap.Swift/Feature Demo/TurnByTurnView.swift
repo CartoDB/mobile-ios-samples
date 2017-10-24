@@ -24,6 +24,8 @@ class TurnByTurnView : PackageDownloadBaseView {
         
         addSubview(turnByTurnBanner)
         addSubview(turnByTurnFooter)
+        
+        infoContent.setText(headerText: Texts.turnByTurnInfoHeader, contentText: Texts.turnByTurnInfoContainer)
     }
     
     override func layoutSubviews() {
@@ -37,7 +39,9 @@ class TurnByTurnView : PackageDownloadBaseView {
         let w = progressLabel.frame.width
         let h = progressLabel.frame.height
         
-        turnByTurnFooter.frame = CGRect(x: x, y: y, width: w, height: h)
+        if (turnByTurnFooter.frame.isEmpty) {
+            turnByTurnFooter.frame = CGRect(x: x, y: y, width: w, height: h)
+        }
     }
     
 }
