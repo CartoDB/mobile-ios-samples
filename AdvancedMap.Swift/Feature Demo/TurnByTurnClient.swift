@@ -32,7 +32,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         self.mapView = mapView;
         
         marker = LocationMarker(mapView: mapView)
-//        marker.isNavigationPointer = true
+        marker.isNavigationPointer = true
         
         routing = Routing(mapView: mapView)
         routing.showTurns = false
@@ -191,7 +191,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         // Use true heading if it is valid.
         let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
-//        marker.rotate(rotation: heading)
+        marker.rotate(rotation: heading)
         print(heading)
     }
 }

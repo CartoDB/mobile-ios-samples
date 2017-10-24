@@ -57,7 +57,7 @@ class LocationMarker: NSObject {
                 let builder = NTMarkerStyleBuilder()
                 builder?.setBitmap(Utils.pathToBitmap(path: "icon_navigation_pointer.png"))
                 builder?.setSize(25.0)
-//                builder?.setOrientationMode(.BILLBOARD_ORIENTATION_GROUND)
+                builder?.setAnchorPointX(0, anchorPointY: 0)
                 builder?.setOrientationMode(.BILLBOARD_ORIENTATION_FACE_CAMERA_GROUND)
                 navigationPointer = NTMarker(pos: position, style: builder?.buildStyle())
                 
