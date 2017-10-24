@@ -32,7 +32,12 @@ class TurnByTurnView : PackageDownloadBaseView {
         let height: CGFloat = 60
         turnByTurnBanner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: height)
         
-        turnByTurnFooter.frame = progressLabel.frame
+        let x = progressLabel.frame.origin.x
+        let y = progressLabel.frame.origin.y + progressLabel.frame.height
+        let w = progressLabel.frame.width
+        let h = progressLabel.frame.height
+        
+        turnByTurnFooter.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
 }

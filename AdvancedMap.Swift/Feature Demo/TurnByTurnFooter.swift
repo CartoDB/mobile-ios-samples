@@ -26,6 +26,9 @@ class TurnByTurnFooter: UIView {
         
         let padding: CGFloat = 5
         label.frame = CGRect(x: padding, y: 0, width: frame.width - 2 * padding, height: frame.height)
+        
+        hiddenY = frame.origin.y
+        visibleY = hiddenY - frame.height
     }
     
     func update(result: NTRoutingResult) {
@@ -54,6 +57,25 @@ class TurnByTurnFooter: UIView {
         
         DispatchQueue.main.async {
             self.label.text = (parsedDistance + ". You'll arrive in " + parsedTime).uppercased()
+            self.show()
         }
     }
+    
+    var visibleY: CGFloat = 0
+    var hiddenY: CGFloat = 0
+    
+    func show() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.frame = CGRect(x: self.frame.origin.x, y:  self.visibleY, width:  self.frame.width, height:  self.frame.height)
+        })
+    }
+    
+    func hide() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.frame = CGRect(x:  self.frame.origin.x, y:  self.hiddenY, width:  self.frame.width, height:  self.frame.height)
+        })
+    }
 }
+
+
+
