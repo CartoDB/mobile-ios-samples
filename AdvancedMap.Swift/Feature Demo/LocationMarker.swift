@@ -57,7 +57,8 @@ class LocationMarker: NSObject {
                 let builder = NTMarkerStyleBuilder()
                 builder?.setBitmap(Utils.pathToBitmap(path: "icon_navigation_pointer.png"))
                 builder?.setSize(25.0)
-                builder?.setOrientationMode(.BILLBOARD_ORIENTATION_GROUND)
+//                builder?.setOrientationMode(.BILLBOARD_ORIENTATION_GROUND)
+                builder?.setOrientationMode(.BILLBOARD_ORIENTATION_FACE_CAMERA_GROUND)
                 navigationPointer = NTMarker(pos: position, style: builder?.buildStyle())
                 
                 source.add(navigationPointer)
@@ -96,6 +97,10 @@ class LocationMarker: NSObject {
         }
         
         userMarker.setPos(position)
+    }
+    
+    func rotate(rotation: Double) {
+        navigationPointer.setRotation(Float(exactly: rotation)!)
     }
     
     func getCirclePoints(latitude: Double, longitude: Double, accuracy: Float) -> NTMapPosVector {
