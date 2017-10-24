@@ -38,11 +38,12 @@ class TurnByTurnFooter: UIView {
         var parsedDistance = ""
         var parsedTime = ""
         
+        parsedDistance = Double(round(rawDistance * 10) / 10).description
         if (rawDistance > 1000) {
             // Use different unit of measurement if it's greater one kilometer
-            parsedDistance = Double(round(rawDistance * 10) / 10).description + " km"
+             parsedDistance = parsedDistance + " km"
         } else {
-            parsedDistance = Double(round(rawDistance * 10) / 10).description + " meters"
+            parsedDistance = parsedDistance + " meters"
         }
         
         parsedDistance = parsedDistance + " to destination"
@@ -50,11 +51,12 @@ class TurnByTurnFooter: UIView {
         let minute = 60.0
         let hour = 60.0 * minute
         
+        parsedTime = (Double(round(rawDistance * 100 / hour) / 100)).description
         if (rawTime > hour) {
             // Use different unit of measurement if it's greater than one hour
-            parsedTime = (Double(round(rawDistance * 100 / hour) / 100)).description + " hours"
+             parsedTime = parsedTime + " hours"
         } else {
-            parsedTime = (Double(round(rawDistance * 100 / minute) / 100)).description + " minutes"
+            parsedTime = parsedTime + " minutes"
         }
         
         DispatchQueue.main.async {
