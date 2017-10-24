@@ -73,6 +73,7 @@ class TurnByTurnBanner: UIView {
             message = "Enter Roundabout in " + distanceString
         case NTRoutingAction.ROUTING_ACTION_FINISH:
             message = "You'll arrive at your destination in " + distanceString
+            image = UIImage(named: "icon_navigation_finish.png")
         case NTRoutingAction.ROUTING_ACTION_GO_STRAIGHT:
             message = "Go straight for " + distanceString
         case NTRoutingAction.ROUTING_ACTION_LEAVE_ROUNDABOUT:
