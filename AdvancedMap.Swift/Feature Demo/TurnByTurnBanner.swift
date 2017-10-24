@@ -99,6 +99,9 @@ class TurnByTurnBanner: UIView {
                 case NTRoutingAction.ROUTING_ACTION_TURN_RIGHT:
                     message = "Turn right in " + distanceString
                     image = UIImage(named: "banner_icon_turn_right.png")
+                case NTRoutingAction.ROUTING_ACTION_FINISH:
+                    message = "You'll arrive at your destination in " + distanceString
+                    image = UIImage(named: "icon_navigation_finish.png")
                 default:
                     break
                 }
