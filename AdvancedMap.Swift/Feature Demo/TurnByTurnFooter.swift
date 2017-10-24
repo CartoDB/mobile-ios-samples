@@ -51,12 +51,11 @@ class TurnByTurnFooter: UIView {
         let minute = 60.0
         let hour = 60.0 * minute
         
-        parsedTime = (Double(round(rawDistance * 100 / hour) / 100)).description
         if (rawTime > hour) {
             // Use different unit of measurement if it's greater than one hour
-             parsedTime = parsedTime + " hours"
+            parsedTime = (Double(round(rawDistance * 100 / hour) / 100)).description + " hours"
         } else {
-            parsedTime = parsedTime + " minutes"
+            parsedTime = (Double(round(rawDistance * 100 / minute) / 100)).description + " minutes"
         }
         
         DispatchQueue.main.async {
