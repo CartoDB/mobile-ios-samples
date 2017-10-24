@@ -229,6 +229,13 @@ class Routing {
                 let distance = distanceFromLineSegment(point: point, start: segmentStart, end: segmentEnd)
                 print("Distance: " + String(describing: distance))
                 
+                // TODO: This doesn't seem to be right. There is a minor slip-up somewhere,
+                // the numbers it returns is ever so slightly larger than it should be.
+                // It shouldn't be <60 and perhaps should never be NaN.
+                
+                // Additional TODO: The number it returns should be translated further,
+                // due to the earth's curviture, it's smaller near the equator. Normalize it.
+                
                 if (distance.isNaN) {
                     return true
                 }
