@@ -115,8 +115,23 @@ class TurnByTurnBanner: UIView {
         DispatchQueue.main.async {
             self.label.text = message.uppercased()
             self.imageView.image = image
+            self.show()
         }
-        
+    }
+    
+    var visibleY: CGFloat = 0
+    var hiddenY: CGFloat = 0
+    
+    func show() {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.frame = CGRect(x: self.frame.origin.x, y:  self.visibleY, width:  self.frame.width, height:  self.frame.height)
+        })
+    }
+    
+    func hide() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.frame = CGRect(x:  self.frame.origin.x, y:  self.hiddenY, width:  self.frame.width, height:  self.frame.height)
+        })
     }
     
 }

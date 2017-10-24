@@ -26,18 +26,27 @@ class TurnByTurnView : PackageDownloadBaseView {
         addSubview(turnByTurnFooter)
         
         infoContent.setText(headerText: Texts.turnByTurnInfoHeader, contentText: Texts.turnByTurnInfoContainer)
+        
+        addBanner(visible: false)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
         let height: CGFloat = 60
-        turnByTurnBanner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: height)
         
-        let x = progressLabel.frame.origin.x
-        let y = progressLabel.frame.origin.y + progressLabel.frame.height
-        let w = progressLabel.frame.width
-        let h = progressLabel.frame.height
+        var x: CGFloat = 0
+        var y: CGFloat = Device.trueY0() - height
+        let w: CGFloat = frame.width
+        var h = height
+        
+        turnByTurnBanner.frame = CGRect(x: x, y: y, width: w, height: h)
+        turnByTurnBanner.hiddenY = y
+        turnByTurnBanner.visibleY = y + height
+        
+        x = progressLabel.frame.origin.x
+        y = progressLabel.frame.origin.y + progressLabel.frame.height
+        h = progressLabel.frame.height
         
         if (turnByTurnFooter.frame.isEmpty) {
             turnByTurnFooter.frame = CGRect(x: x, y: y, width: w, height: h)

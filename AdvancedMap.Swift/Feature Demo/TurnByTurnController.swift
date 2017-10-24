@@ -45,7 +45,7 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         client.delegate = self
         
         let text = "Long click on the map to set a destination"
-        (contentView as! TurnByTurnView).turnByTurnBanner.update(text: text)
+        contentView.banner.showInformation(text: text, autoclose: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

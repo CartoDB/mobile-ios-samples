@@ -68,7 +68,7 @@ class TurnByTurnFooter: UIView {
     var hiddenY: CGFloat = 0
     
     func show() {
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.4, animations: {
             self.frame = CGRect(x: self.frame.origin.x, y:  self.visibleY, width:  self.frame.width, height:  self.frame.height)
         })
     }
