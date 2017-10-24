@@ -74,7 +74,7 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
     }
     
     func locationUpdated(result: NTRoutingResult) {
-        (contentView as! TurnByTurnView).turnByTurnLabel.update(result: result)
+        (contentView as! TurnByTurnView).turnByTurnFooter.update(result: result)
     }
     
     

@@ -11,7 +11,7 @@ import Foundation
 class TurnByTurnView : PackageDownloadBaseView {
     
     let turnByTurnBanner = TurnByTurnBanner()
-    let turnByTurnLabel = TurnByTurnInformationLabel()
+    let turnByTurnFooter = TurnByTurnFooter()
     
     var baseLayer: NTCartoOnlineVectorTileLayer!
     
@@ -23,7 +23,7 @@ class TurnByTurnView : PackageDownloadBaseView {
         initializePackageDownloadContent()
         
         addSubview(turnByTurnBanner)
-        addSubview(turnByTurnLabel)
+        addSubview(turnByTurnFooter)
     }
     
     override func layoutSubviews() {
@@ -32,7 +32,7 @@ class TurnByTurnView : PackageDownloadBaseView {
         let height: CGFloat = 60
         turnByTurnBanner.frame = CGRect(x: 0, y: Device.trueY0(), width: frame.width, height: height)
         
-        turnByTurnLabel.frame = progressLabel.frame
+        turnByTurnFooter.frame = progressLabel.frame
     }
     
 }

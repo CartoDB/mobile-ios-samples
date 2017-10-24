@@ -186,9 +186,10 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
             return
         }
         
-        // TODO calculate heading to see whether the user should turn around or is facing the correct direction
         // Use true heading if it is valid.
-//        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
+        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
+        
+        print(heading)
     }
 }
 

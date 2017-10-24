@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TurnByTurnInformationLabel: UIView {
+class TurnByTurnFooter: UIView {
     
     let label = UILabel()
     
