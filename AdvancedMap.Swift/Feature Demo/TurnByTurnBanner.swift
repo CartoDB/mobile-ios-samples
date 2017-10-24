@@ -57,10 +57,10 @@ class TurnByTurnBanner: UIView {
         }
     }
     
-    func update(instruction: NTRoutingInstruction) {
+    func update(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
         
-        let action = instruction.getAction()
-        let distance = Double(round(instruction.getDistance() * 100) / 100)
+        let action = current.getAction()
+        let distance = Double(round(current.getDistance() * 100) / 100)
         
         let distanceString = String(describing: distance) + " meters"
         
@@ -88,7 +88,22 @@ class TurnByTurnBanner: UIView {
         case NTRoutingAction.ROUTING_ACTION_UTURN:
             message = "Make a U-Turn in " + distanceString
         case NTRoutingAction.ROUTING_ACTION_START_AT_END_OF_STREET:
-            message = "Start at the end of the street: " + distanceString
+
+            if (next != nil) {
+            let nextAction = next!.getAction()
+            
+                switch (nextAction) {
+                case NTRoutingAction.ROUTING_ACTION_TURN_LEFT:
+                    message = "Turn left in " + distanceString
+                    image = UIImage(named: "banner_icon_turn_left.png")
+                case NTRoutingAction.ROUTING_ACTION_TURN_RIGHT:
+                    message = "Turn right in " + distanceString
+                    image = UIImage(named: "banner_icon_turn_right.png")
+                default:
+                    break
+                }
+            }
+            
         default:
             break
         }

@@ -45,6 +45,8 @@ class TurnByTurnFooter: UIView {
             parsedDistance = Double(round(rawDistance * 10) / 10).description + " meters"
         }
         
+        parsedDistance = parsedDistance + " to destination"
+        
         let minute = 60.0
         let hour = 60.0 * minute
         

@@ -117,8 +117,9 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
                 self.routing.show(result: result!, lineColor: color!, complete: {_ in })
                 
                 if (result!.getInstructions().size() > 0) {
-                    let instruction = result!.getInstructions().get(0)!
-                    self.delegate?.instructionFound(instruction: instruction)
+                    let current = result!.getInstructions().get(0)!
+                    let next = result?.getInstructions().get(1)
+                    self.delegate?.instructionFound(current: current, next: next)
                 }
             }
         }
@@ -197,7 +198,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
 
 protocol NextTurnDelegate {
     
-    func instructionFound(instruction: NTRoutingInstruction)
+    func instructionFound(current: NTRoutingInstruction, next: NTRoutingInstruction?)
     
     func routingFailed()
     

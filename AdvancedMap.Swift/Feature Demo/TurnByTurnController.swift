@@ -69,8 +69,8 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         }
     }
     
-    func instructionFound(instruction: NTRoutingInstruction) {
-        (contentView as! TurnByTurnView).turnByTurnBanner.update(instruction: instruction)
+    func instructionFound(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
+        (contentView as! TurnByTurnView).turnByTurnBanner.update(current: current, next: next)
     }
     
     func locationUpdated(result: NTRoutingResult) {
