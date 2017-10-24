@@ -145,6 +145,7 @@
 		ADE4A00E1F45829B00D6E05F /* RouteSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE4A00D1F45829B00D6E05F /* RouteSearchView.swift */; };
 		ADE4A0101F458F8500D6E05F /* icon_sample_route_search.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE4A00F1F458F8500D6E05F /* icon_sample_route_search.png */; };
 		ADE6DCC21EF97D71002B2189 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE6DCC11EF97D71002B2189 /* Device.swift */; };
+		ADF210071F9F295500201870 /* icon_navigation_pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = ADF210061F9F295500201870 /* icon_navigation_pointer.png */; };
 		ADF5A9451F8B4F1C008F17E3 /* TurnByTurnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */; };
 		ADF5A9471F8B4F28008F17E3 /* TurnByTurnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */; };
 		ADF5A9491F8B569B008F17E3 /* TurnByTurnClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF5A9481F8B569B008F17E3 /* TurnByTurnClient.swift */; };
@@ -299,6 +300,7 @@
 		ADE4A00D1F45829B00D6E05F /* RouteSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSearchView.swift; sourceTree = "<group>"; };
 		ADE4A00F1F458F8500D6E05F /* icon_sample_route_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_route_search.png; sourceTree = "<group>"; };
 		ADE6DCC11EF97D71002B2189 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		ADF210061F9F295500201870 /* icon_navigation_pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_navigation_pointer.png; sourceTree = "<group>"; };
 		ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnByTurnController.swift; sourceTree = "<group>"; };
 		ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnByTurnView.swift; sourceTree = "<group>"; };
 		ADF5A9481F8B569B008F17E3 /* TurnByTurnClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurnByTurnClient.swift; sourceTree = "<group>"; };
@@ -715,6 +717,7 @@
 		ADE092ED1F00ECE200C569F9 /* Directions */ = {
 			isa = PBXGroup;
 			children = (
+				ADF210061F9F295500201870 /* icon_navigation_pointer.png */,
 				AD0A4E0D1F9DF75A00C36DF4 /* banner_icon_turn_left.png */,
 				AD0A4E0B1F9DF75200C36DF4 /* banner_icon_turn_right.png */,
 				ADE092EE1F00ECF500C569F9 /* direction_up.png */,
@@ -864,6 +867,7 @@
 			files = (
 				ADE092F21F00ECF500C569F9 /* direction_upthenleft.png in Resources */,
 				ADC8B8E61F05295F00B62852 /* icon_sample_route_download.png in Resources */,
+				ADF210071F9F295500201870 /* icon_navigation_pointer.png in Resources */,
 				AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */,
 				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
 				AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */,

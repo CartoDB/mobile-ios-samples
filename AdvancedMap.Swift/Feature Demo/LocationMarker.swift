@@ -28,8 +28,10 @@ class LocationMarker: NSObject {
     
     var userMarker: NTPoint!
     var accuracyMarker: NTPolygon!
+    var navigationPointer: NTMarker!
     
     var focus = true
+    var isNavigationPointer = false
     
     func showAt(location: CLLocation) {
         
@@ -47,6 +49,23 @@ class LocationMarker: NSObject {
         if (focus) {
             map.setFocus(position, durationSeconds: 1)
             map.setZoom(16, durationSeconds: 1)
+        }
+        
+        if (isNavigationPointer) {
+            
+            if (navigationPointer == nil) {
+                let builder = NTMarkerStyleBuilder()
+                builder?.setBitmap(Utils.pathToBitmap(path: "icon_navigation_pointer.png"))
+                builder?.setSize(25.0)
+                builder?.setOrientationMode(.BILLBOARD_ORIENTATION_GROUND)
+                navigationPointer = NTMarker(pos: position, style: builder?.buildStyle())
+                
+                source.add(navigationPointer)
+            }
+            
+            navigationPointer.setPos(position)
+            
+            return
         }
         
         let builder = NTPolygonStyleBuilder()
@@ -103,6 +122,7 @@ class LocationMarker: NSObject {
         
         return points!
     }
+
 }
 
 
