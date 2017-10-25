@@ -14,7 +14,8 @@ class TurnByTurnBanner: UIView {
     let instructionLabel = UILabel()
     let separator = UIView()
     
-    let routeInfoLabel = UILabel()
+    let routeDistanceInfoLabel = UILabel()
+    let routeTimeInfoLabel = UILabel()
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -33,15 +34,19 @@ class TurnByTurnBanner: UIView {
         separator.backgroundColor = UIColor.white
         addSubview(separator)
         
-        routeInfoLabel.textColor = UIColor.white
-        routeInfoLabel.font = UIFont(name: "HelveticaNeue", size: 11)
-        addSubview(routeInfoLabel)
+        routeDistanceInfoLabel.textColor = UIColor.white
+        routeDistanceInfoLabel.font = UIFont(name: "HelveticaNeue", size: 9)
+        addSubview(routeDistanceInfoLabel)
+        
+        routeTimeInfoLabel.textColor = UIColor.white
+        routeTimeInfoLabel.font = UIFont(name: "HelveticaNeue", size: 9)
+        addSubview(routeTimeInfoLabel)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let padding: CGFloat = 10
+        let padding: CGFloat = 8
         let topLabelHeight = (frame.height / 3 * 2) - padding
         
         let imageSize: CGFloat = topLabelHeight - 2 * padding
@@ -64,6 +69,17 @@ class TurnByTurnBanner: UIView {
         w = frame.width - 2 * padding
         
         separator.frame = CGRect(x: x, y: y, width: w, height: h)
+        
+        let smallPadding = padding / 2
+        y += h + smallPadding
+        
+        let remaining = frame.height - (y + smallPadding)
+        
+        h = remaining / 2
+        
+        routeDistanceInfoLabel.frame = CGRect(x: x, y: y, width: w, height: h)
+        y += h
+        routeTimeInfoLabel.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
     func updateInstruction(text: String) {
@@ -138,31 +154,37 @@ class TurnByTurnBanner: UIView {
         let rawDistance = result.getTotalDistance()
         let rawTime = result.getTotalTime()
         
-        var parsedDistance = ""
-        var parsedTime = ""
+        let parsedDistance = NSMutableAttributedString()
+        let parsedTime = NSMutableAttributedString()
         
-        parsedDistance = Double(round(rawDistance * 10) / 10).description
+        parsedDistance.bold(Double(round(rawDistance * 10) / 10).description)
+        
         if (rawDistance > 1000) {
             // Use different unit of measurement if it's greater one kilometer
-            parsedDistance = parsedDistance + " km"
+            parsedDistance.normal(" km".uppercased())
         } else {
-            parsedDistance = parsedDistance + " meters"
+            parsedDistance.normal(" meters".uppercased())
         }
         
-        parsedDistance = parsedDistance + " to destination"
+        parsedDistance.normal(" to destination".uppercased())
         
         let minute = 60.0
         let hour = 60.0 * minute
         
+        parsedTime.normal("You'll arrive in ".uppercased())
+        
         if (rawTime > hour) {
             // Use different unit of measurement if it's greater than one hour
-            parsedTime = (Double(round(rawDistance * 100 / hour) / 100)).description + " hours"
+            parsedTime.bold((Double(round(rawDistance * 100 / hour) / 100)).description)
+            parsedTime.normal(" hours".uppercased())
         } else {
-            parsedTime = (Double(round(rawDistance * 100 / minute) / 100)).description + " minutes"
+            parsedTime.bold((Double(round(rawDistance * 100 / minute) / 100)).description)
+            parsedTime.normal(" minutes".uppercased())
         }
         
         DispatchQueue.main.async {
-            self.routeInfoLabel.text = (parsedDistance + ". You'll arrive in " + parsedTime).uppercased()
+            self.routeDistanceInfoLabel.attributedText = parsedDistance
+            self.routeTimeInfoLabel.attributedText = parsedTime
             self.show()
         }
     }

@@ -47,6 +47,23 @@ extension String {
     }
 }
 
+// Snippet copied from:
+// https://stackoverflow.com/questions/28496093/making-text-bold-using-attributed-string-in-swift
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text:String) -> NSMutableAttributedString {
+        let attrs:[String:AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 9)!]
+        let boldString = NSMutableAttributedString(string:"\(text)", attributes:attrs)
+        self.append(boldString)
+        return self
+    }
+    
+    @discardableResult func normal(_ text:String)->NSMutableAttributedString {
+        let normal =  NSAttributedString(string: text)
+        self.append(normal)
+        return self
+    }
+}
+
 extension UIView {
     
     func addSquareShadow() {
