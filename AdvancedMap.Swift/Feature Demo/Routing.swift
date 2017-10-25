@@ -80,6 +80,20 @@ class Routing {
         instructionRight = markerBuilder?.buildStyle()
     }
     
+    func updateFinishMarker(icon: String, size: Float, color: NTColor? = nil) {
+        let builder = NTMarkerStyleBuilder()
+        builder?.setBitmap(NTBitmapFromString(path: icon))
+        builder?.setSize(size)
+        builder?.setHideIfOverlapped(false)
+        
+        if (color != nil) {
+            builder?.setColor(color)
+        }
+        
+        builder?.setAnchorPointX(0, anchorPointY: 0)
+        
+        stopMarker?.setStyle(builder?.buildStyle())
+    }
     func NTBitmapFromString(path: String) -> NTBitmap {
         let image = UIImage(named: path)
         return NTBitmapUtils.createBitmap(from: image)

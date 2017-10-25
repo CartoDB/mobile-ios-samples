@@ -37,6 +37,9 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         routing = Routing(mapView: mapView)
         routing.showTurns = false
         
+        let green = NTColor(r: 50, g: 200, b: 50, a: 255)
+        routing.updateFinishMarker(icon: "icon_navigation_finish.png", size: 50, color: green)
+        
         manager.pausesLocationUpdatesAutomatically = false
         manager.desiredAccuracy = 1
         
