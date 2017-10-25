@@ -39,7 +39,15 @@
 {
     self.currentOSM = source;
     self.currentSelection = selection;
-    
+
+    NSString* language = nil;
+    if ([self.currentLayer isKindOfClass:NTVectorTileLayer.class]) {
+        NTVectorTileLayer *layer = (NTVectorTileLayer *)self.currentLayer;
+        NTMBVectorTileDecoder *decoder = (NTMBVectorTileDecoder *)[layer getTileDecoder];
+        
+        language = [decoder getStyleParameter:@"lang"];
+    }
+
     if ([source isEqualToString: StylePopupContent.CartoVectorSource]) {
         
         if ([self.currentSelection isEqualToString:StylePopupContent.Voyager]) {
@@ -87,6 +95,10 @@
         self.currentLayer = [[NTRasterTileLayer alloc] initWithDataSource:source];
     }
     
+    if (language) {
+        [self updateLanguage:language];
+    }
+    
     [[self.mapView getLayers] clear];
     [[self.mapView getLayers] add:self.currentLayer];
     
@@ -129,7 +141,7 @@
         return;
     }
     
-    if ([self.currentLayer isKindOfClass:NTRasterTileLayer.class]) {
+    if (![self.currentLayer isKindOfClass:NTVectorTileLayer.class]) {
         // Raster tile language chance is not supported
         return;
     }

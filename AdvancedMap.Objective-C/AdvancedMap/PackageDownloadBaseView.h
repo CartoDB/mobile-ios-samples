@@ -29,6 +29,7 @@
 - (void)listDownloadComplete;
 - (void)statusChanged:(NSString *)identifier status: (NTPackageStatus *)status;
 - (void)downloadComplete:(NSString *)identifier;
+- (void)downloadFailed: (NTPackageErrorType *)error;
 
 - (NSArray *)getPackages;
 - (NSArray *)getCustomRegionPackages;
