@@ -21,7 +21,6 @@ class StyleChoiceView : MapBaseView {
     var currentSource: String = "carto.streets"
     var currentLayer: NTTileLayer!
 
-    
     convenience init() {
         
         self.init(frame: CGRect.zero)

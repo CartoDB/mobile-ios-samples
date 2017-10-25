@@ -80,7 +80,7 @@
 }
 
 - (void)downloadFailed:(NTPackageErrorType *)error {
-    
+    [self.contentView downloadFailed:error];
 }
 
 - (NSString *)createFolder:(NSString *)name {

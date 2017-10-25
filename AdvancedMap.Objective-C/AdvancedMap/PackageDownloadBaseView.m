@@ -158,6 +158,14 @@
     [self updateList];
 }
 
+- (void)downloadFailed: (NTPackageErrorType *)error {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.progressLabel completeWithMessage:@"Download failed"];
+    });
+    
+    [self updateList];
+}
+
 - (void)updateList {
     NSArray *packages = [self getPackages];
 
