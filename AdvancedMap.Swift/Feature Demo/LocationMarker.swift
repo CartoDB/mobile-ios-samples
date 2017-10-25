@@ -100,6 +100,11 @@ class LocationMarker: NSObject {
     }
     
     func rotate(rotation: Double) {
+        
+        if (navigationPointer == nil) {
+            return
+        }
+        
         navigationPointer.setRotation(Float(exactly: rotation)!)
     }
     
