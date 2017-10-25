@@ -11,53 +11,68 @@ import Foundation
 class TurnByTurnBanner: UIView {
     
     let imageView = UIImageView()
-    let label = UILabel()
+    let instructionLabel = UILabel()
+    let separator = UIView()
+    
+    let routeInfoLabel = UILabel()
     
     convenience init() {
         self.init(frame: CGRect.zero)
         
-        backgroundColor = Colors.transparentNavy
+        backgroundColor = Colors.navyLight
         
         addSubview(imageView)
         
-        label.textAlignment = .left
-        label.textColor = UIColor.white
-        label.font = UIFont(name: "HelveticaNeue", size: 12)
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        addSubview(label)
+        instructionLabel.textAlignment = .left
+        instructionLabel.textColor = UIColor.white
+        instructionLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
+        instructionLabel.numberOfLines = 0
+        instructionLabel.lineBreakMode = .byWordWrapping
+        addSubview(instructionLabel)
+        
+        separator.backgroundColor = UIColor.white
+        addSubview(separator)
+        
+        routeInfoLabel.textColor = UIColor.white
+        routeInfoLabel.font = UIFont(name: "HelveticaNeue", size: 11)
+        addSubview(routeInfoLabel)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let padding: CGFloat = frame.height / 6
-        let imagePadding: CGFloat = 1.5 * padding
-        let imageSize: CGFloat = frame.height - 2 * imagePadding
+        let padding: CGFloat = 10
+        let topLabelHeight = (frame.height / 3 * 2) - padding
         
-        var x = imagePadding
-        var y = imagePadding
+        let imageSize: CGFloat = topLabelHeight - 2 * padding
+        
+        var x = padding
+        var y = padding
         var w = imageSize
         var h = imageSize
         
         imageView.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        x += w + imagePadding
+        x += w + padding
+        w = frame.width - (3 * padding)
         
-        y = padding
-        w = frame.width - (2 * imagePadding + padding)
-        h = frame.height - 2 * padding
+        instructionLabel.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        label.frame = CGRect(x: x, y: y, width: w, height: h)
+        y += h + padding
+        x = padding
+        h = 1
+        w = frame.width - 2 * padding
+        
+        separator.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
-    func update(text: String) {
+    func updateInstruction(text: String) {
         DispatchQueue.main.async {
-            self.label.text = text.uppercased()
+            self.instructionLabel.text = text.uppercased()
         }
     }
     
-    func update(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
+    func updateInstruction(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
         
         let action = current.getAction()
         let distance = Double(round(current.getDistance() * 100) / 100)
@@ -81,10 +96,10 @@ class TurnByTurnBanner: UIView {
         case NTRoutingAction.ROUTING_ACTION_STAY_ON_ROUNDABOUT:
             message = "Stay on roundabout for " + distanceString
         case NTRoutingAction.ROUTING_ACTION_TURN_LEFT:
-            message = "Turn left in " + distanceString
+            message = "in " + distanceString
             image = UIImage(named: "banner_icon_turn_left.png")
         case NTRoutingAction.ROUTING_ACTION_TURN_RIGHT:
-            message = "Turn right in " + distanceString
+            message = "in " + distanceString
             image = UIImage(named: "banner_icon_turn_right.png")
         case NTRoutingAction.ROUTING_ACTION_UTURN:
             message = "Make a U-Turn in " + distanceString
@@ -95,10 +110,10 @@ class TurnByTurnBanner: UIView {
             
                 switch (nextAction) {
                 case NTRoutingAction.ROUTING_ACTION_TURN_LEFT:
-                    message = "Turn left in " + distanceString
+                    message = "in " + distanceString
                     image = UIImage(named: "banner_icon_turn_left.png")
                 case NTRoutingAction.ROUTING_ACTION_TURN_RIGHT:
-                    message = "Turn right in " + distanceString
+                    message = "in " + distanceString
                     image = UIImage(named: "banner_icon_turn_right.png")
                 case NTRoutingAction.ROUTING_ACTION_FINISH:
                     message = "You'll arrive at your destination in " + distanceString
@@ -113,8 +128,41 @@ class TurnByTurnBanner: UIView {
         }
         
         DispatchQueue.main.async {
-            self.label.text = message.uppercased()
+            self.instructionLabel.text = message.uppercased()
             self.imageView.image = image
+            self.show()
+        }
+    }
+    
+    func updateRouteInfo(result: NTRoutingResult) {
+        let rawDistance = result.getTotalDistance()
+        let rawTime = result.getTotalTime()
+        
+        var parsedDistance = ""
+        var parsedTime = ""
+        
+        parsedDistance = Double(round(rawDistance * 10) / 10).description
+        if (rawDistance > 1000) {
+            // Use different unit of measurement if it's greater one kilometer
+            parsedDistance = parsedDistance + " km"
+        } else {
+            parsedDistance = parsedDistance + " meters"
+        }
+        
+        parsedDistance = parsedDistance + " to destination"
+        
+        let minute = 60.0
+        let hour = 60.0 * minute
+        
+        if (rawTime > hour) {
+            // Use different unit of measurement if it's greater than one hour
+            parsedTime = (Double(round(rawDistance * 100 / hour) / 100)).description + " hours"
+        } else {
+            parsedTime = (Double(round(rawDistance * 100 / minute) / 100)).description + " minutes"
+        }
+        
+        DispatchQueue.main.async {
+            self.routeInfoLabel.text = (parsedDistance + ". You'll arrive in " + parsedTime).uppercased()
             self.show()
         }
     }

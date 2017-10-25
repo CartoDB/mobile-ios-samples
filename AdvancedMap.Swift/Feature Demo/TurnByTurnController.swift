@@ -22,16 +22,14 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         client = TurnByTurnClient(mapView: contentView.map)
         
         // Offline routing manager and mode
-        var source = Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE
-        var folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
+        let source = Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE
+        let folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
         contentView.manager = NTCartoPackageManager(source: source, dataFolder: folder)
         
         client.routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
         
         // Offline map manager and mode
-//        source = Routing.MAP_SOURCE
-//        folder = Utils.createDirectory(name: "countrypackages")
-//        let manager = NTCartoPackageManager(source: source, dataFolder: folder)
+//        let manager = NTCartoPackageManager(source: Routing.MAP_SOURCE, dataFolder: Utils.createDirectory(name: "countrypackages"))
 //        contentView.setOfflineMode(manager: manager!)
         
         contentView.setOnlineMode()
@@ -70,14 +68,12 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
     }
     
     func instructionFound(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
-        (contentView as! TurnByTurnView).turnByTurnBanner.update(current: current, next: next)
+        (contentView as! TurnByTurnView).turnByTurnBanner.updateInstruction(current: current, next: next)
     }
     
     func locationUpdated(result: NTRoutingResult) {
-        (contentView as! TurnByTurnView).turnByTurnFooter.update(result: result)
+        (contentView as! TurnByTurnView).turnByTurnBanner.updateRouteInfo(result: result)
     }
-    
-    
 }
 
 
