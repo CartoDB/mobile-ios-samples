@@ -255,11 +255,7 @@ class Routing {
                 
                 let distance = distanceFromLineSegment(point: point, start: segmentStart, end: segmentEnd)
                 print("Distance: " + String(describing: distance))
-                
-                // TODO: This doesn't seem to be right. There is a minor slip-up somewhere,
-                // the numbers it returns is ever so slightly larger than it should be.
-                // It shouldn't be <60 and perhaps should never be NaN.
-                
+
                 // Additional TODO: The number it returns should be translated further,
                 // due to the earth's curviture, it's smaller near the equator. Normalize it.
                 
@@ -323,9 +319,8 @@ class Routing {
         let diff = getDiff(a: point, b: start)
         let dir = getDiff(a: end, b: start)
         
-        let u = clamp(value: diff.dotProduct(dir) / dir.dotProduct(diff), low: 0.0, high: 1.0)
+        let u = clamp(value: diff.dotProduct(dir) / dir.dotProduct(dir), low: 0.0, high: 1.0)
         
-        // TODO? unsure if correct
         let x = (dir.getX() * u) + start.getX()
         let y = (dir.getY() * u) + start.getY()
         return NTMapPos(x: x, y: y)
