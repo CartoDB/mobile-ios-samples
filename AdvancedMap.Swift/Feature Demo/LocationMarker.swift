@@ -99,13 +99,13 @@ class LocationMarker: NSObject {
         userMarker.setPos(position)
     }
     
-    func rotate(rotation: Double) {
+    func rotate(rotation: Float) {
         
         if (navigationPointer == nil) {
             return
         }
         
-        navigationPointer.setRotation(Float(exactly: rotation)!)
+        navigationPointer.setRotation(rotation)
     }
     
     func getCirclePoints(latitude: Double, longitude: Double, accuracy: Float) -> NTMapPosVector {

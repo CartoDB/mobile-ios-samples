@@ -163,6 +163,16 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         let destination = destinationListener?.destination
         
+        // rotate marker, depending on marker graphics
+        // "180-course" is ok if it is "arrow down"
+        // additional adjustment is for mapView rotation, image keeps
+        // here correct course even if map is rotated
+        
+        let course = location.course;
+        let float = Float(exactly: course)!
+        let angle = 180 - float - mapView.getRotation();
+        marker.rotate(rotation: angle)
+        
         if (routing.isPointOnRoute(point: mercator!)) {
             // If point is on route, don't render your new route,
             // but still make the calculation internally, so we could update distance and time labels
@@ -193,9 +203,9 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
         
         // Use true heading if it is valid.
-        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
-        marker.rotate(rotation: heading)
-        
+//        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
+//        let angle = Float(exactly: heading)!
+//        marker.rotate(rotation: angle)
 //        let position = marker.navigationPointer.getBounds().getMin()
 //        mapView.setRotation(marker.navigationPointer.getRotation(), targetPos: position, durationSeconds: 0)
     }
