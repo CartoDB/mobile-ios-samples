@@ -256,14 +256,9 @@ class Routing {
                 let distance = distanceFromLineSegment(point: point, start: segmentStart, end: segmentEnd)
                 print("Distance: " + String(describing: distance))
 
-                // Additional TODO: The number it returns should be translated further,
+                // TODO: The number it returns should be translated further,
                 // due to the earth's curviture, it's smaller near the equator. Normalize it.
-                
-                if (distance.isNaN) {
-                    return true
-                }
-                
-                if (distance < 60) {
+                if (distance < 3) {
                     return true
                 }
             }

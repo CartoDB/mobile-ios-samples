@@ -53,7 +53,7 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         client.onPause()
         client.delegate = nil
     }
-    
+
     override func downloadComplete(sender: PackageListener, id: String) {
         DispatchQueue.main.async {
             self.contentView.banner.showInformation(text: "Download complete!", autoclose: true)
