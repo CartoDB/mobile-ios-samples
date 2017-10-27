@@ -130,6 +130,11 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     
     var latestLocations = NTMapPosVector()
     
+    var course: Float = -1
+    var hasCourse: Bool {
+        get { return course != -1 }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         let location = locations[0]
@@ -170,8 +175,14 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         let course = location.course;
         let float = Float(exactly: course)!
-        let angle = 180 - float - mapView.getRotation();
-        marker.rotate(rotation: angle)
+        self.course = float
+        
+        // Only use course if it's available,
+        // else update heading from didUpdateHeading function
+        if (hasCourse) {
+            let angle = 180 - float - mapView.getRotation();
+            marker.rotate(rotation: angle)
+        }
         
         if (routing.isPointOnRoute(point: mercator!)) {
             // If point is on route, don't render your new route,
@@ -202,12 +213,13 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
             return
         }
         
-        // Use true heading if it is valid.
-//        let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
-//        let angle = Float(exactly: heading)!
-//        marker.rotate(rotation: angle)
-//        let position = marker.navigationPointer.getBounds().getMin()
-//        mapView.setRotation(marker.navigationPointer.getRotation(), targetPos: position, durationSeconds: 0)
+        // Only use heading if course isn't available.
+        if (!hasCourse) {
+            // Use true heading if it is valid.
+            let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
+            let angle = Float(exactly: heading)!
+            marker.rotate(rotation: angle)
+        }
     }
 }
 
