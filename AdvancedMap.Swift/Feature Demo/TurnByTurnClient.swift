@@ -217,7 +217,7 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         if (!hasCourse) {
             // Use true heading if it is valid.
             let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
-            let angle = -Float(exactly: heading)!
+            let angle = 180 - Float(exactly: heading)! - mapView.getRotation()
             marker.rotate(rotation: angle)
         }
     }
