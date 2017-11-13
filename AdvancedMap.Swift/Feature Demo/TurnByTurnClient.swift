@@ -174,15 +174,15 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         // here correct course even if map is rotated
         
         let course = location.course;
-        let float = Float(exactly: course)!
+        let float = Float(course)
         self.course = float
         
         // Only use course if it's available,
         // else update heading from didUpdateHeading function
-        if (hasCourse) {
-            let angle = 180 - float - mapView.getRotation();
-            marker.rotate(rotation: angle)
-        }
+//        if (hasCourse) {
+//            let angle = 180 - float - mapView.getRotation();
+//            marker.rotate(rotation: angle)
+//        }
         
         if (routing.isPointOnRoute(point: mercator!)) {
             // If point is on route, don't render your new route,
@@ -214,12 +214,22 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
         
         // Only use heading if course isn't available.
-        if (!hasCourse) {
+//        if (!hasCourse) {
             // Use true heading if it is valid.
-            let heading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading)
-            let angle = 180 - Float(exactly: heading)! - mapView.getRotation()
+            let heading = (newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading
+//            let angle = 180 - Float(exactly: heading)! - mapView.getRotation()
+            var angle: Float = 0.0
+            
+            if (heading < 180.1) {
+                angle = -Float(heading) - mapView.getRotation();
+            } else {
+                angle = Float(exactly: heading)! - (180 + mapView.getRotation())
+            }
+            
+            print("Heading: " + heading.description)
+            print("Angle: " + angle.description)
             marker.rotate(rotation: angle)
-        }
+//        }
     }
 }
 
