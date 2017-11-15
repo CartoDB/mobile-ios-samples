@@ -199,9 +199,11 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
     }
     
-    // 0 means look directly at the horizon, 90 means look directly down.
-    let navigationTilt: Float = 60
-    let navigationZoom: Float = 18
+    /*
+     * Navigation mode with 60% tilt and 18 zoom,
+     * MapView user interaction is also disabled
+     */
+    var isInNavigationMode = false
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
@@ -212,14 +214,24 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         // Use true heading if it is valid.
         let heading = (newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading
-//        let angle = 180 - Float(exactly: heading)! - mapView.getRotation()
-        let angle = -Float(heading) - mapView.getRotation();
+
+        if (isInNavigationMode) {
+            let angle = -Float(heading)
+            mapView.setRotation(angle, durationSeconds: 0)
+            zoomAndTiltToPosition(duration: 0)
+        } else {
+//            let angle = 180 - Float(exactly: heading)! - mapView.getRotation()
+            let angle = -Float(heading) - mapView.getRotation();
+            print("Angle: " + angle.description)
+            marker.rotate(rotation: angle)
+        }
+    }
     
-        print("Heading: " + heading.description)
-        print("Angle: " + angle.description)
-        
-//        marker.rotate(rotation: angle)
-        mapView.setRotation(-Float(heading), durationSeconds: 0)
+    // 0 means look directly at the horizon, 90 means look directly down.
+    let navigationTilt: Float = 60
+    let navigationZoom: Float = 18
+    
+    func zoomAndTiltToPosition(duration: Float) {
         
         if (mapView.getTilt() != navigationTilt) {
             mapView.setTilt(navigationTilt, durationSeconds: 0)
@@ -228,6 +240,8 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
             let position = marker.navigationPointer.getBounds().getCenter()
             mapView.setFocus(position, durationSeconds: 0)
         }
+        
+        mapView.isUserInteractionEnabled = false
     }
 }
 
