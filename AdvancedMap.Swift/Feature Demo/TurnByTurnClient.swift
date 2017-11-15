@@ -199,6 +199,10 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
     }
     
+    // 0 means look directly at the horizon, 90 means look directly down.
+    let navigationTilt: Float = 60
+    let navigationZoom: Float = 18
+    
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
         if (newHeading.headingAccuracy < 0) {
@@ -213,7 +217,17 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     
         print("Heading: " + heading.description)
         print("Angle: " + angle.description)
-        marker.rotate(rotation: angle)
+        
+//        marker.rotate(rotation: angle)
+        mapView.setRotation(-Float(heading), durationSeconds: 0)
+        
+        if (mapView.getTilt() != navigationTilt) {
+            mapView.setTilt(navigationTilt, durationSeconds: 0)
+            mapView.setZoom(navigationZoom, durationSeconds: 0)
+            
+            let position = marker.navigationPointer.getBounds().getCenter()
+            mapView.setFocus(position, durationSeconds: 0)
+        }
     }
 }
 
