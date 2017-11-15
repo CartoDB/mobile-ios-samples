@@ -11,7 +11,8 @@ import Foundation
 class TurnByTurnView : PackageDownloadBaseView {
     
     let turnByTurnBanner = TurnByTurnBanner()
-
+    let startButton = NavigationStartButton()
+    
     var baseLayer: NTCartoOnlineVectorTileLayer!
     
     convenience init() {
@@ -22,7 +23,8 @@ class TurnByTurnView : PackageDownloadBaseView {
         initializePackageDownloadContent()
         
         addSubview(turnByTurnBanner)
-
+        addButton(button: startButton)
+        
         infoContent.setText(headerText: Texts.turnByTurnInfoHeader, contentText: Texts.turnByTurnInfoContainer)
         
         addBanner(visible: false)
