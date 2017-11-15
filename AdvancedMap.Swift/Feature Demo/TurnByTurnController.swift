@@ -42,6 +42,8 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         client.onResume()
         client.delegate = self
         
+        (contentView as! TurnByTurnView).startButton.delegate = self
+        
         let text = "Long click on the map to set a destination"
         contentView.banner.showInformation(text: text, autoclose: true)
     }
@@ -52,8 +54,14 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         contentView.removeRecognizers()
         client.onPause()
         client.delegate = nil
+        
+        (contentView as! TurnByTurnView).startButton.delegate = nil
     }
-
+    override func switchChanged() {
+        let value = (contentView as! TurnByTurnView).startButton.isStopped
+        client.startNavigationMode(start: value)
+    }
+    
     override func downloadComplete(sender: PackageListener, id: String) {
         DispatchQueue.main.async {
             self.contentView.banner.showInformation(text: "Download complete!", autoclose: true)

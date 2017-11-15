@@ -227,6 +227,23 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
     }
     
+    func startNavigationMode(start: Bool) {
+        
+        isInNavigationMode = start
+        
+        // User interaction is disabled in navigation mode
+        mapView.isUserInteractionEnabled = !start
+        
+        let duration: Float = 0.5
+        
+        if (start) {
+            zoomAndTiltToPosition(duration: duration)
+        } else {
+            mapView.setTilt(90, durationSeconds: duration)
+            mapView.setRotation(0, durationSeconds: duration)
+        }
+    }
+    
     // 0 means look directly at the horizon, 90 means look directly down.
     let navigationTilt: Float = 60
     let navigationZoom: Float = 18
@@ -234,11 +251,15 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     func zoomAndTiltToPosition(duration: Float) {
         
         if (mapView.getTilt() != navigationTilt) {
-            mapView.setTilt(navigationTilt, durationSeconds: 0)
-            mapView.setZoom(navigationZoom, durationSeconds: 0)
+            mapView.setTilt(navigationTilt, durationSeconds: duration)
+            mapView.setZoom(navigationZoom, durationSeconds: duration)
             
             let position = marker.navigationPointer.getBounds().getCenter()
-            mapView.setFocus(position, durationSeconds: 0)
+            mapView.setFocus(position, durationSeconds: duration)
+            
+            let angle = marker.navigationPointer.getRotation()
+            mapView.setRotation(angle, durationSeconds: 0.5)
+            marker.rotate(rotation: 0)
         }
         
         mapView.isUserInteractionEnabled = false

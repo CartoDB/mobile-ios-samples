@@ -14,6 +14,12 @@ class NavigationStartButton: PopupButton {
     
     let label = UILabel()
     
+    var isStopped: Bool {
+        get {
+            return label.text == startText
+        }
+    }
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         
@@ -37,15 +43,15 @@ class NavigationStartButton: PopupButton {
         label.frame = bounds
     }
     func switchChanged(_ sender: UITapGestureRecognizer) {
-        toggle()
         delegate?.switchChanged()
+        toggle()
     }
     
     let startText = "START"
     let stopText = "STOP"
     
     func toggle() {
-        if (label.text == startText) {
+        if (isStopped) {
             label.text = stopText
             backgroundColor = Colors.locationRed
         } else {
