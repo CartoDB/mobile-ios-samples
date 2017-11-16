@@ -245,24 +245,24 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     }
     
     // 0 means look directly at the horizon, 90 means look directly down.
-    let navigationTilt: Float = 60
+    let navigationTilt: Float = 30
     let navigationZoom: Float = 18
     
     func zoomAndTiltToPosition(duration: Float) {
-        
+    
         if (mapView.getTilt() != navigationTilt) {
             mapView.setTilt(navigationTilt, durationSeconds: duration)
             mapView.setZoom(navigationZoom, durationSeconds: duration)
             
-            let position = marker.navigationPointer.getBounds().getCenter()
-            mapView.setFocus(position, durationSeconds: duration)
-            
             let angle = marker.navigationPointer.getRotation()
-            mapView.setRotation(angle, durationSeconds: 0.5)
+            mapView.setRotation(angle, durationSeconds: duration)
             marker.rotate(rotation: 0)
         }
+    
+        let position = marker.navigationPointer.getBounds().getCenter()
+        mapView.setFocus(position, durationSeconds: duration)
         
-        mapView.isUserInteractionEnabled = false
+//        mapView.isUserInteractionEnabled = false
     }
 }
 
