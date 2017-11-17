@@ -28,6 +28,9 @@ class TurnByTurnView : PackageDownloadBaseView {
         infoContent.setText(headerText: Texts.turnByTurnInfoHeader, contentText: Texts.turnByTurnInfoContainer)
         
         addBanner(visible: false)
+        
+        let decoder = onlineLayer.getTileDecoder() as! NTMBVectorTileDecoder
+        decoder.setStyleParameter("buildings", value: "2")
     }
     
     override func layoutSubviews() {
