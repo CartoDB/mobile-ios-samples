@@ -72,11 +72,13 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         let modeContent = (self.contentView as! TurnByTurnView).modeContent
         
         if tableView == modeContent.table {
-            modeContent.highlightRow(at: indexPath)
+            let cell = modeContent.highlightRow(at: indexPath)
+            client.routing.updateMode(mode: cell.mode!.mode)
         } else {
             super.tableView(tableView, didSelectRowAt: indexPath)
         }
     }
+    
     override func downloadComplete(sender: PackageListener, id: String) {
         DispatchQueue.main.async {
             self.contentView.banner.showInformation(text: "Download complete!", autoclose: true)

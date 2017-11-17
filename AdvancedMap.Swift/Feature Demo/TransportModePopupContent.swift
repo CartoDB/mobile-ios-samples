@@ -70,7 +70,7 @@ class TransportModePopupContent: UIView, UITableViewDataSource {
     
     var previous: TransportModeCell?
     
-    func highlightRow(at: IndexPath) {
+    func highlightRow(at: IndexPath) -> TransportModeCell {
         
         for cell in table.visibleCells {
             (cell as! TransportModeCell).normalize()
@@ -78,6 +78,7 @@ class TransportModePopupContent: UIView, UITableViewDataSource {
         
         let cell = table.cellForRow(at: at) as! TransportModeCell
         cell.activate()
+        return cell
     }
 }
 
