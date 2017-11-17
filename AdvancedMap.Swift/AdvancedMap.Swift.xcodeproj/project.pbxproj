@@ -38,6 +38,7 @@
 		AD33A7B81F6AB5570098DF15 /* GeocodingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */; };
 		AD3C01F71F8B67F700F371D7 /* LocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */; };
 		AD3C01F91F8B866100F371D7 /* DestinationClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */; };
+		AD3C16681FBED2ED00A2459B /* icon_mode_of_transport.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
 		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
@@ -190,6 +191,7 @@
 		AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingResultCell.swift; sourceTree = "<group>"; };
 		AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMarker.swift; sourceTree = "<group>"; };
 		AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationClickListener.swift; sourceTree = "<group>"; };
+		AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_mode_of_transport.png; path = ../../../../icon_mode_of_transport.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
 		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 		AD9786B11EF8220F002912DF /* ButtonIcons */ = {
 			isa = PBXGroup;
 			children = (
+				AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */,
 				AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */,
 				AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */,
 				AD061BCB1F1E4BED00F523B8 /* icon_wifi_off.png */,
@@ -877,6 +880,7 @@
 				ADF210091F9F6C0800201870 /* icon_banner_finish.png in Resources */,
 				AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */,
 				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
+				AD3C16681FBED2ED00A2459B /* icon_mode_of_transport.png in Resources */,
 				AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */,

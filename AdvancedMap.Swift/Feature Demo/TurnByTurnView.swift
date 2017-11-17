@@ -11,6 +11,8 @@ import Foundation
 class TurnByTurnView : PackageDownloadBaseView {
     
     let turnByTurnBanner = TurnByTurnBanner()
+    
+    let modeButton = PopupButton(imageUrl: "icon_mode_of_transport.png")
     let startButton = NavigationStartButton()
     
     var baseLayer: NTCartoOnlineVectorTileLayer!
@@ -23,6 +25,9 @@ class TurnByTurnView : PackageDownloadBaseView {
         initializePackageDownloadContent()
         
         addSubview(turnByTurnBanner)
+        
+        modeButton.imagePadding = 5
+        addButton(button: modeButton)
         addButton(button: startButton)
         
         infoContent.setText(headerText: Texts.turnByTurnInfoHeader, contentText: Texts.turnByTurnInfoContainer)
@@ -47,5 +52,26 @@ class TurnByTurnView : PackageDownloadBaseView {
         turnByTurnBanner.hiddenY = y
         turnByTurnBanner.visibleY = y + height
     }
+    override func addRecognizers() {
+        super.addRecognizers()
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.modeButtonTapped(_:)))
+        modeButton.addGestureRecognizer(recognizer)
+    }
     
+    override func removeRecognizers() {
+        super.removeRecognizers()
+        modeButton.gestureRecognizers?.forEach(countryButton.removeGestureRecognizer)
+    }
+    
+    func modeButtonTapped(_ sender: UITapGestureRecognizer) {
+        popup.setContent(content: packageContent)
+        popup.popup.header.setText(text: "SELECT TRANSPORTATION MODE")
+        popup.show()
+    }
 }
+
+
+
+
+
+
