@@ -38,6 +38,8 @@ class TurnByTurnView : PackageDownloadBaseView {
         decoder.setStyleParameter("buildings", value: "2")
     }
     
+    var initialized = false
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -48,9 +50,12 @@ class TurnByTurnView : PackageDownloadBaseView {
         let w: CGFloat = frame.width
         let h = height
         
-        turnByTurnBanner.frame = CGRect(x: x, y: y, width: w, height: h)
-        turnByTurnBanner.hiddenY = y
-        turnByTurnBanner.visibleY = y + height
+        if (!initialized) {
+            turnByTurnBanner.frame = CGRect(x: x, y: y, width: w, height: h)
+            turnByTurnBanner.hiddenY = y
+            turnByTurnBanner.visibleY = y + height
+            initialized = true
+        }
     }
     override func addRecognizers() {
         super.addRecognizers()

@@ -44,7 +44,7 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         
         (contentView as! TurnByTurnView).startButton.delegate = self
         
-        let text = "Long click on the map to set a destination"
+        let text = "Download the region and long click on the map \n to set your navigation destination"
         contentView.banner.showInformation(text: text, autoclose: true)
         
         (self.contentView as! TurnByTurnView).modeContent.table.delegate = self
@@ -99,7 +99,20 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
     func locationUpdated(result: NTRoutingResult) {
         (contentView as! TurnByTurnView).turnByTurnBanner.updateRouteInfo(result: result)
     }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return UIInterfaceOrientation.portrait
+    }
 }
+
+
+
+
+
 
 
 

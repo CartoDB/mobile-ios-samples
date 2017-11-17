@@ -83,6 +83,8 @@ class Routing {
     func updateMode(mode: String) {
         // offline mode supports: auto, bicycle, pedestrian, multimodal
         // default: pedestrian
+        // reference: https://mapzen.com/documentation/mobility/turn-by-turn/api-reference/
+        // but our SDK uses an older version, where not all modes are available
         if let onlineService = service as? NTValhallaOnlineRoutingService {
             onlineService.setProfile(mode)
         } else if let offlineService = service as? NTPackageManagerValhallaRoutingService {
