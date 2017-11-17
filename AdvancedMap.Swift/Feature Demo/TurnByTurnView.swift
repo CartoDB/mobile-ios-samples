@@ -15,7 +15,7 @@ class TurnByTurnView : PackageDownloadBaseView {
     let modeButton = PopupButton(imageUrl: "icon_mode_of_transport.png")
     let startButton = NavigationStartButton()
     
-    var baseLayer: NTCartoOnlineVectorTileLayer!
+    let modeContent = TransportModePopupContent()
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -26,7 +26,7 @@ class TurnByTurnView : PackageDownloadBaseView {
         
         addSubview(turnByTurnBanner)
         
-        modeButton.imagePadding = 5
+        modeButton.imagePadding = 0
         addButton(button: modeButton)
         addButton(button: startButton)
         
@@ -64,7 +64,7 @@ class TurnByTurnView : PackageDownloadBaseView {
     }
     
     func modeButtonTapped(_ sender: UITapGestureRecognizer) {
-        popup.setContent(content: packageContent)
+        popup.setContent(content: modeContent)
         popup.popup.header.setText(text: "SELECT TRANSPORTATION MODE")
         popup.show()
     }

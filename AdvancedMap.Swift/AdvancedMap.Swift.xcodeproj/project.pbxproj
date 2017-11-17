@@ -39,6 +39,8 @@
 		AD3C01F71F8B67F700F371D7 /* LocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */; };
 		AD3C01F91F8B866100F371D7 /* DestinationClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */; };
 		AD3C16681FBED2ED00A2459B /* icon_mode_of_transport.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */; };
+		AD3C166A1FBED72100A2459B /* TransportModePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C16691FBED72100A2459B /* TransportModePopupContent.swift */; };
+		AD3C166C1FBEF89600A2459B /* icon_checkmark_green.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3C166B1FBEF89600A2459B /* icon_checkmark_green.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
 		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
@@ -192,6 +194,8 @@
 		AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMarker.swift; sourceTree = "<group>"; };
 		AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationClickListener.swift; sourceTree = "<group>"; };
 		AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_mode_of_transport.png; path = ../../../../icon_mode_of_transport.png; sourceTree = "<group>"; };
+		AD3C16691FBED72100A2459B /* TransportModePopupContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportModePopupContent.swift; sourceTree = "<group>"; };
+		AD3C166B1FBEF89600A2459B /* icon_checkmark_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_checkmark_green.png; path = ../../../../../Downloads/icon_checkmark_green.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
 		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
@@ -576,6 +580,7 @@
 				AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */,
 				AD73566F1F0277A800D4D6EF /* PackagePopupContent.swift */,
 				AD5B2AED1F03B27200EF738C /* PackageCell.swift */,
+				AD3C16691FBED72100A2459B /* TransportModePopupContent.swift */,
 			);
 			name = SlideInPopupContent;
 			sourceTree = "<group>";
@@ -707,6 +712,7 @@
 		ADC8B8DE1F05042D00B62852 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				AD3C166B1FBEF89600A2459B /* icon_checkmark_green.png */,
 				ADA9A9551F25DBF300B7D580 /* banner_icon_info.png */,
 				AD4252FE1F1F38140034BF2B /* icon_compass.png */,
 				AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */,
@@ -904,6 +910,7 @@
 				AD061BD01F1E4BED00F523B8 /* icon_wifi_on.png in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
+				AD3C166C1FBEF89600A2459B /* icon_checkmark_green.png in Resources */,
 				AD1AAAE01F8B96D500602014 /* icon_sample_turn_by_turn.png in Resources */,
 				AD0A4E0E1F9DF75A00C36DF4 /* banner_icon_turn_left.png in Resources */,
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
@@ -1016,6 +1023,7 @@
 				AD73566B1F02776400D4D6EF /* PackageDownloadController.swift in Sources */,
 				AD3C01F91F8B866100F371D7 /* DestinationClickListener.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
+				AD3C166A1FBED72100A2459B /* TransportModePopupContent.swift in Sources */,
 				ADF5A9491F8B569B008F17E3 /* TurnByTurnClient.swift in Sources */,
 				AD68C5751F26382900211087 /* RotationListener.swift in Sources */,
 				AD41232A1F040A2B009874BD /* VectorObjectEditingController.swift in Sources */,

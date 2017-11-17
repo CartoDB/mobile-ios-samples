@@ -46,6 +46,8 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         
         let text = "Long click on the map to set a destination"
         contentView.banner.showInformation(text: text, autoclose: true)
+        
+        (self.contentView as! TurnByTurnView).modeContent.table.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,12 +58,25 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         client.delegate = nil
         
         (contentView as! TurnByTurnView).startButton.delegate = nil
+        
+        (self.contentView as! TurnByTurnView).modeContent.table.delegate = nil
     }
+    
     override func switchChanged() {
         let value = (contentView as! TurnByTurnView).startButton.isStopped
         client.startNavigationMode(start: value)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let modeContent = (self.contentView as! TurnByTurnView).modeContent
+        
+        if tableView == modeContent.table {
+            modeContent.highlightRow(at: indexPath)
+        } else {
+            super.tableView(tableView, didSelectRowAt: indexPath)
+        }
+    }
     override func downloadComplete(sender: PackageListener, id: String) {
         DispatchQueue.main.async {
             self.contentView.banner.showInformation(text: "Download complete!", autoclose: true)

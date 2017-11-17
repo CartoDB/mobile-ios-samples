@@ -80,6 +80,16 @@ class Routing {
         instructionRight = markerBuilder?.buildStyle()
     }
     
+    func updateMode(mode: String) {
+        // offline mode supports: auto, bicycle, pedestrian, multimodal
+        // default: pedestrian
+        if let onlineService = service as? NTValhallaOnlineRoutingService {
+            onlineService.setProfile(mode)
+        } else if let offlineService = service as? NTPackageManagerValhallaRoutingService {
+            offlineService.setProfile(mode)
+        }
+    }
+    
     func updateFinishMarker(icon: String, size: Float, color: NTColor? = nil) {
         let builder = NTMarkerStyleBuilder()
         builder?.setBitmap(NTBitmapFromString(path: icon))
