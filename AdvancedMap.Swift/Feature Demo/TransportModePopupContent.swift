@@ -125,8 +125,8 @@ class TransportModeCell: UITableViewCell {
         
         titleLabel.frame = CGRect(x: x, y: y, width: w, height: h)
         
-        let checkHeight = h / 1.7
-        checkMark.frame = CGRect(x: frame.width - (checkHeight + padding), y: y, width: checkHeight, height: checkHeight)
+        let checkHeight = h / 1.3
+        checkMark.frame = CGRect(x: frame.width - (checkHeight + padding), y: y, width: checkHeight, height: checkHeight * 1.27)
         
         y += h
         

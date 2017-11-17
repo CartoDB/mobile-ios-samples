@@ -12,7 +12,7 @@ class TurnByTurnView : PackageDownloadBaseView {
     
     let turnByTurnBanner = TurnByTurnBanner()
     
-    let modeButton = PopupButton(imageUrl: "icon_mode_of_transport.png")
+    let modeButton = PopupButton(imageUrl: "icon_transportation_mode.png")
     let startButton = NavigationStartButton()
     
     let modeContent = TransportModePopupContent()

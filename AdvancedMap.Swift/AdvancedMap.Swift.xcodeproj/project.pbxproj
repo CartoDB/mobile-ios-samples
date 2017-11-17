@@ -26,6 +26,8 @@
 		AD0CD3121EF420FB007E4378 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CD3111EF420FB007E4378 /* Colors.swift */; };
 		AD0D68051F84D073008738B0 /* style_image_here_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0D68031F84D073008738B0 /* style_image_here_normal.png */; };
 		AD0D68061F84D073008738B0 /* style_image_here_satellite.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0D68041F84D073008738B0 /* style_image_here_satellite.png */; };
+		AD0FE7061FBF3AFB00AC2512 /* icon_checkmark_green.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0FE7051FBF3AFB00AC2512 /* icon_checkmark_green.png */; };
+		AD0FE7081FBF3B0300AC2512 /* icon_transportation_mode.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0FE7071FBF3B0200AC2512 /* icon_transportation_mode.png */; };
 		AD1AAAE01F8B96D500602014 /* icon_sample_turn_by_turn.png in Resources */ = {isa = PBXBuildFile; fileRef = AD1AAADF1F8B96D500602014 /* icon_sample_turn_by_turn.png */; };
 		AD24D7741F4D5DE300B0F78F /* ScaleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24D7731F4D5DE300B0F78F /* ScaleBar.swift */; };
 		AD251F2D1F14B43900B863BD /* PackageDownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */; };
@@ -38,9 +40,7 @@
 		AD33A7B81F6AB5570098DF15 /* GeocodingResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */; };
 		AD3C01F71F8B67F700F371D7 /* LocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */; };
 		AD3C01F91F8B866100F371D7 /* DestinationClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */; };
-		AD3C16681FBED2ED00A2459B /* icon_mode_of_transport.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */; };
 		AD3C166A1FBED72100A2459B /* TransportModePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3C16691FBED72100A2459B /* TransportModePopupContent.swift */; };
-		AD3C166C1FBEF89600A2459B /* icon_checkmark_green.png in Resources */ = {isa = PBXBuildFile; fileRef = AD3C166B1FBEF89600A2459B /* icon_checkmark_green.png */; };
 		AD4123141F03D69C009874BD /* milktruck.nml in Resources */ = {isa = PBXBuildFile; fileRef = AD4123131F03D5AC009874BD /* milktruck.nml */; };
 		AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */; };
 		AD4123181F03E1C8009874BD /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4123171F03E1C8009874BD /* info@2x.png */; };
@@ -181,6 +181,8 @@
 		AD0CD3111EF420FB007E4378 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AD0D68031F84D073008738B0 /* style_image_here_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_here_normal.png; sourceTree = "<group>"; };
 		AD0D68041F84D073008738B0 /* style_image_here_satellite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_here_satellite.png; sourceTree = "<group>"; };
+		AD0FE7051FBF3AFB00AC2512 /* icon_checkmark_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_checkmark_green.png; sourceTree = "<group>"; };
+		AD0FE7071FBF3B0200AC2512 /* icon_transportation_mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_transportation_mode.png; sourceTree = "<group>"; };
 		AD1AAADF1F8B96D500602014 /* icon_sample_turn_by_turn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_turn_by_turn.png; sourceTree = "<group>"; };
 		AD24D7731F4D5DE300B0F78F /* ScaleBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleBar.swift; sourceTree = "<group>"; };
 		AD251F2C1F14B43900B863BD /* PackageDownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageDownloadBaseView.swift; sourceTree = "<group>"; };
@@ -193,9 +195,7 @@
 		AD33A7B71F6AB5570098DF15 /* GeocodingResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeocodingResultCell.swift; sourceTree = "<group>"; };
 		AD3C01F61F8B67F700F371D7 /* LocationMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMarker.swift; sourceTree = "<group>"; };
 		AD3C01F81F8B866100F371D7 /* DestinationClickListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationClickListener.swift; sourceTree = "<group>"; };
-		AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_mode_of_transport.png; path = ../../../../icon_mode_of_transport.png; sourceTree = "<group>"; };
 		AD3C16691FBED72100A2459B /* TransportModePopupContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportModePopupContent.swift; sourceTree = "<group>"; };
-		AD3C166B1FBEF89600A2459B /* icon_checkmark_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_checkmark_green.png; path = ../../../../../Downloads/icon_checkmark_green.png; sourceTree = "<group>"; };
 		AD4123131F03D5AC009874BD /* milktruck.nml */ = {isa = PBXFileReference; lastKnownFileType = file; path = milktruck.nml; sourceTree = "<group>"; };
 		AD4123151F03D7A7009874BD /* VectorObjectClickListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectClickListener.swift; sourceTree = "<group>"; };
 		AD4123171F03E1C8009874BD /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info@2x.png"; sourceTree = "<group>"; };
@@ -544,7 +544,7 @@
 		AD9786B11EF8220F002912DF /* ButtonIcons */ = {
 			isa = PBXGroup;
 			children = (
-				AD3C16671FBED2ED00A2459B /* icon_mode_of_transport.png */,
+				AD0FE7071FBF3B0200AC2512 /* icon_transportation_mode.png */,
 				AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */,
 				AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */,
 				AD061BCB1F1E4BED00F523B8 /* icon_wifi_off.png */,
@@ -712,7 +712,7 @@
 		ADC8B8DE1F05042D00B62852 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				AD3C166B1FBEF89600A2459B /* icon_checkmark_green.png */,
+				AD0FE7051FBF3AFB00AC2512 /* icon_checkmark_green.png */,
 				ADA9A9551F25DBF300B7D580 /* banner_icon_info.png */,
 				AD4252FE1F1F38140034BF2B /* icon_compass.png */,
 				AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */,
@@ -886,7 +886,6 @@
 				ADF210091F9F6C0800201870 /* icon_banner_finish.png in Resources */,
 				AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */,
 				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
-				AD3C16681FBED2ED00A2459B /* icon_mode_of_transport.png in Resources */,
 				AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */,
@@ -910,7 +909,6 @@
 				AD061BD01F1E4BED00F523B8 /* icon_wifi_on.png in Resources */,
 				AD9786BF1EF822B7002912DF /* icon_marker_blue.png in Resources */,
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
-				AD3C166C1FBEF89600A2459B /* icon_checkmark_green.png in Resources */,
 				AD1AAAE01F8B96D500602014 /* icon_sample_turn_by_turn.png in Resources */,
 				AD0A4E0E1F9DF75A00C36DF4 /* banner_icon_turn_left.png in Resources */,
 				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
@@ -921,6 +919,7 @@
 				AD4123181F03E1C8009874BD /* info@2x.png in Resources */,
 				AD0D68051F84D073008738B0 /* style_image_here_normal.png in Resources */,
 				AD4123241F03F444009874BD /* marker_black.png in Resources */,
+				AD0FE7081FBF3B0300AC2512 /* icon_transportation_mode.png in Resources */,
 				AD99BFC81FA0C1A100C41145 /* icon_navigation_finish.png in Resources */,
 				ADC8B8E81F05299800B62852 /* icon_sample_city_download.png in Resources */,
 				AD4123141F03D69C009874BD /* milktruck.nml in Resources */,
@@ -930,6 +929,7 @@
 				AD4252FF1F1F38140034BF2B /* icon_compass.png in Resources */,
 				AD4123261F03FC8D009874BD /* cities15000.geojson in Resources */,
 				AD9786C11EF822B7002912DF /* icon_marker_green.png in Resources */,
+				AD0FE7061FBF3AFB00AC2512 /* icon_checkmark_green.png in Resources */,
 				AD251F311F14C9C000B863BD /* style_image_nutiteq_positron.png in Resources */,
 				AD561ABA1F02AD9A0059B1D5 /* icon_back_blue.png in Resources */,
 				AD01E6591F348AC40001D8A3 /* icon_sample_offline_routing.png in Resources */,
