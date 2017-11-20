@@ -95,9 +95,15 @@ class TurnByTurnBanner: UIView {
     func updateInstruction(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
         
         let action = current.getAction()
-        let distance = Int(round(current.getDistance()))
         
-        let distanceString = String(describing: distance) + " meters"
+        let distance = round(current.getDistance())
+        var distanceString = Int(distance).description + " meters"
+        
+        if (distance > km) {
+            // Round to nearest km unit if the distance is greater
+            let kilometers = round(distance / km)
+            distanceString = Int(kilometers).description + "kilometers"
+        }
         
         var message = ""
         var image: UIImage? = nil
