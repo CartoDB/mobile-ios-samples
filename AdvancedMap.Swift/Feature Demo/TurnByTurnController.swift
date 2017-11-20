@@ -94,6 +94,7 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
     
     func instructionFound(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
         (contentView as! TurnByTurnView).turnByTurnBanner.updateInstruction(current: current, next: next)
+        contentView.banner.hide()
     }
     
     func locationUpdated(result: NTRoutingResult) {
