@@ -223,7 +223,6 @@
 		AD437EC51EF933C5008CEA76 /* style_image_mapzen_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_positron.png; sourceTree = "<group>"; };
 		AD437EC61EF933C5008CEA76 /* style_image_mapzen_bright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_bright.png; sourceTree = "<group>"; };
 		AD437ED21EF93880008CEA76 /* Texts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
-		AD512C381FC3166C0081ABBC /* icon_arrow_3d */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon_arrow_3d; sourceTree = "<group>"; };
 		AD561AB91F02AD9A0059B1D5 /* icon_back_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_blue.png; sourceTree = "<group>"; };
 		AD5B2AEB1F03A60300EF738C /* icon_forward_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_forward_blue.png; sourceTree = "<group>"; };
 		AD5B2AED1F03B27200EF738C /* PackageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageCell.swift; sourceTree = "<group>"; };
@@ -567,7 +566,6 @@
 		AD9786BA1EF8229A002912DF /* Markers */ = {
 			isa = PBXGroup;
 			children = (
-				AD512C381FC3166C0081ABBC /* icon_arrow_3d */,
 				AD33A7B51F6A84310098DF15 /* marker.png */,
 				AD9786BB1EF822B7002912DF /* icon_marker_blue.png */,
 				AD9786BC1EF822B7002912DF /* icon_marker_gray.png */,
