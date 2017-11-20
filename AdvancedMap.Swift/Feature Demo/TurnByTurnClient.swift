@@ -26,13 +26,24 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     
     let destinationListener = DestinationClickListener()
     
+    var isHeadingAvailable: Bool {
+        get {
+            return CLLocationManager.headingAvailable()
+        }
+    }
+    
     init(mapView: NTMapView) {
         super.init()
         
         self.mapView = mapView;
         
         marker = LocationMarker(mapView: mapView)
-        marker.isNavigationPointer = true
+        
+        // Set as arrow where heaing is available,
+        // don't set marker as navigation pointer on devices where heading isn't available
+        if (isHeadingAvailable) {
+            marker.isNavigationPointer = true
+        }
         
         routing = Routing(mapView: mapView)
         routing.showTurns = false
