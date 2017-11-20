@@ -216,6 +216,13 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
      */
     var isInNavigationMode = false
     
+    /*
+     * Navigation mode pause is activated when in navigation mode and the user moves the map.
+     * This stops mapView autofocus on your location and the "stop" button is replaced by "resume"
+     * pressing "resume" unpauses auto-focus.
+     */
+    var isPaused = false
+    
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         
         if (newHeading.headingAccuracy < 0) {
