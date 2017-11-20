@@ -77,12 +77,24 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate, Map
             return
         }
         
-//        client.isPaused = true
+        if (!(contentView.map as! MapWithTouchEvents).isTouchInProgress) {
+            // Only pause if it's a user is manually moving the map,
+            // NTMapEventListener's onMapMoved is also called on animations
+            return
+        }
+        
+        client.isPaused = true
+        (contentView as! TurnByTurnView).startButton.pause()
     }
     
     override func switchChanged() {
-        let value = (contentView as! TurnByTurnView).startButton.isStopped
-        client.startNavigationMode(start: value)
+        
+        if (contentView as! TurnByTurnView).startButton.isPaused {
+            client.resumeNavigationMode()
+        } else {
+            let value = (contentView as! TurnByTurnView).startButton.isStopped
+            client.startNavigationMode(start: value)
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

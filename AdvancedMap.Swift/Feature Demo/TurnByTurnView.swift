@@ -20,7 +20,7 @@ class TurnByTurnView : PackageDownloadBaseView {
     convenience init() {
         self.init(frame: CGRect.zero)
         
-        initialize()
+        initialize(customMapView: MapWithTouchEvents())
         initializeDownloadContent(withSwitch: false)
         initializePackageDownloadContent()
         

@@ -20,6 +20,12 @@ class NavigationStartButton: PopupButton {
         }
     }
     
+    var isPaused: Bool {
+        get {
+            return label.text == resumeText
+        }
+    }
+    
     convenience init() {
         self.init(frame: CGRect.zero)
         
@@ -49,9 +55,11 @@ class NavigationStartButton: PopupButton {
     
     let startText = "START"
     let stopText = "STOP"
+    let resumeText = "RESUME"
     
     func toggle() {
-        if (isStopped) {
+        
+        if (isStopped || isPaused) {
             label.text = stopText
             backgroundColor = Colors.locationRed
         } else {
@@ -59,4 +67,14 @@ class NavigationStartButton: PopupButton {
             backgroundColor = Colors.green
         }
     }
+    
+    func pause() {
+        label.text = resumeText
+        backgroundColor = Colors.softOrange
+    }
 }
+
+
+
+
+

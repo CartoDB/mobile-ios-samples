@@ -259,12 +259,21 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
     }
     
+    func resumeNavigationMode() {
+        isPaused = false
+        zoomAndTiltToPosition(duration: 0.5)
+    }
+    
     // 0 means look directly at the horizon, 90 means look directly down.
     let navigationTilt: Float = 30
     let navigationZoom: Float = 18
     
     func zoomAndTiltToPosition(duration: Float) {
-    
+        
+        if (isPaused) {
+            return
+        }
+        
         if (mapView.getTilt() != navigationTilt) {
             mapView.setTilt(navigationTilt, durationSeconds: duration)
             mapView.setZoom(navigationZoom, durationSeconds: duration)

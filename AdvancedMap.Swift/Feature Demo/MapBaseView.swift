@@ -31,9 +31,14 @@ class MapBaseView : UIView {
         initialize()
     }
     
-    func initialize() {
+    func initialize(customMapView: NTMapView? = nil) {
         
-        map = NTMapView()
+        if (customMapView != nil) {
+            map = customMapView
+        } else {
+            map = NTMapView()
+        }
+        
         addSubview(map)
         
         map.getOptions().setZoomGestures(true)
