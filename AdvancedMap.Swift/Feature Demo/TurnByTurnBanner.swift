@@ -177,10 +177,10 @@ class TurnByTurnBanner: UIView {
         
         if (rawTime > hour) {
             // Use different unit of measurement if it's greater than one hour
-            parsedTime.bold((Double(round(rawDistance * 100 / hour) / 100)).description)
+            parsedTime.bold((Double(round(rawTime * 100 / hour) / 100)).description)
             parsedTime.normal(" hours".uppercased())
         } else {
-            parsedTime.bold((Double(round(rawDistance * 100 / minute) / 100)).description)
+            parsedTime.bold((Double(round(rawTime * 100 / minute) / 100)).description)
             parsedTime.normal(" minutes".uppercased())
         }
         
