@@ -157,13 +157,20 @@ class TurnByTurnBanner: UIView {
         let parsedDistance = NSMutableAttributedString()
         let parsedTime = NSMutableAttributedString()
         
-        if (rawDistance > 1000) {
-            parsedDistance.bold(Int(round(rawDistance / 1000)).description)
-            // Use different unit of measurement if it's greater one kilometer
+        let km = 1000.0
+        let minute = 60.0
+        let hour = 60.0 * minute
+        
+        if (rawDistance > km) {
+            // Use different unit of measurement if it's greater than one kilometer
+            
+            let kilometers = round(rawDistance / km)
+            let meters = round(rawDistance.truncatingRemainder(dividingBy: km))
+            
+            parsedDistance.bold(Int(kilometers).description)
             parsedDistance.normal(" km ".uppercased())
             
-            parsedDistance.bold(Int(round(rawDistance.truncatingRemainder(dividingBy: 1000))).description)
-            // Use different unit of measurement if it's greater one kilometer
+            parsedDistance.bold(Int(meters).description)
             parsedDistance.normal(" m".uppercased())
             
         } else {
@@ -174,17 +181,22 @@ class TurnByTurnBanner: UIView {
         
         parsedDistance.normal(" to destination".uppercased())
         
-        let minute = 60.0
-        let hour = 60.0 * minute
-        
         parsedTime.normal("You'll arrive in ".uppercased())
         
         if (rawTime > hour) {
             // Use different unit of measurement if it's greater than one hour
-            parsedTime.bold((Double(round(rawTime * 100 / hour) / 100)).description)
-            parsedTime.normal(" hours".uppercased())
+            
+            let hours = round(rawTime / hour)
+            let minutes = round(rawTime.truncatingRemainder(dividingBy: hour))
+            
+            parsedTime.bold(Int(hours).description)
+            parsedTime.normal(" hours and ".uppercased())
+            
+            parsedTime.bold(Int(minutes).description)
+            parsedTime.normal(" minutes".uppercased())
         } else {
-            parsedTime.bold((Double(round(rawTime * 100 / minute) / 100)).description)
+            let minutes = round(rawTime / minute)
+            parsedTime.bold(Int(minutes).description)
             parsedTime.normal(" minutes".uppercased())
         }
         
