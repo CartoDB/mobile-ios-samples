@@ -88,10 +88,14 @@ class TurnByTurnBanner: UIView {
         }
     }
     
+    let km = 1000.0
+    let minute = 60.0
+    let hour = 60.0 * 60.0
+    
     func updateInstruction(current: NTRoutingInstruction, next: NTRoutingInstruction?) {
         
         let action = current.getAction()
-        let distance = Double(round(current.getDistance() * 100) / 100)
+        let distance = Int(round(current.getDistance()))
         
         let distanceString = String(describing: distance) + " meters"
         
@@ -156,11 +160,7 @@ class TurnByTurnBanner: UIView {
         
         let parsedDistance = NSMutableAttributedString()
         let parsedTime = NSMutableAttributedString()
-        
-        let km = 1000.0
-        let minute = 60.0
-        let hour = 60.0 * minute
-        
+
         if (rawDistance > km) {
             // Use different unit of measurement if it's greater than one kilometer
             
