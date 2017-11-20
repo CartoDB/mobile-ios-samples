@@ -74,6 +74,7 @@
 		AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AF51F03CBB300EF738C /* VectorObjectView.swift */; };
 		AD5B2AF81F03CC1600EF738C /* ClusteringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AF71F03CC1600EF738C /* ClusteringController.swift */; };
 		AD5B2AFB1F03CC2F00EF738C /* ClusteringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5B2AFA1F03CC2F00EF738C /* ClusteringView.swift */; };
+		AD6110901FC2FB3600F601A9 /* MapMovedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61108F1FC2FB3600F601A9 /* MapMovedListener.swift */; };
 		AD68C5751F26382900211087 /* RotationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68C5741F26382900211087 /* RotationListener.swift */; };
 		AD7356601F0257D500D4D6EF /* CityPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */; };
 		AD7356621F02581F00D4D6EF /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356611F02581F00D4D6EF /* Cities.swift */; };
@@ -229,6 +230,7 @@
 		AD5B2AF51F03CBB300EF738C /* VectorObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorObjectView.swift; sourceTree = "<group>"; };
 		AD5B2AF71F03CC1600EF738C /* ClusteringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusteringController.swift; sourceTree = "<group>"; };
 		AD5B2AFA1F03CC2F00EF738C /* ClusteringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusteringView.swift; sourceTree = "<group>"; };
+		AD61108F1FC2FB3600F601A9 /* MapMovedListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMovedListener.swift; sourceTree = "<group>"; };
 		AD68C5741F26382900211087 /* RotationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationListener.swift; sourceTree = "<group>"; };
 		AD73565A1F024C0900D4D6EF /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
 		AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPopupContent.swift; sourceTree = "<group>"; };
@@ -769,6 +771,7 @@
 				AD0A4E071F9DE7F500C36DF4 /* Client */,
 				ADF5A9441F8B4F1C008F17E3 /* TurnByTurnController.swift */,
 				ADF5A9461F8B4F28008F17E3 /* TurnByTurnView.swift */,
+				AD61108F1FC2FB3600F601A9 /* MapMovedListener.swift */,
 			);
 			name = "Turn by Turn";
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */,
 				ADC8B8DD1F04F3B500B62852 /* EditEventListener.swift in Sources */,
 				ADC8B8DB1F04F35300B62852 /* VectorElementDeselectListener.swift in Sources */,
+				AD6110901FC2FB3600F601A9 /* MapMovedListener.swift in Sources */,
 				AD73566B1F02776400D4D6EF /* PackageDownloadController.swift in Sources */,
 				AD3C01F91F8B866100F371D7 /* DestinationClickListener.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,

@@ -249,9 +249,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         
         isInNavigationMode = start
         
-        // User interaction is disabled in navigation mode
-        mapView.isUserInteractionEnabled = !start
-        
         let duration: Float = 0.5
         
         if (start) {
@@ -279,8 +276,6 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
     
         let position = marker.navigationPointer.getBounds().getCenter()
         mapView.setFocus(position, durationSeconds: duration)
-        
-//        mapView.isUserInteractionEnabled = false
     }
 }
 
