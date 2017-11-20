@@ -157,14 +157,17 @@ class TurnByTurnBanner: UIView {
         let parsedDistance = NSMutableAttributedString()
         let parsedTime = NSMutableAttributedString()
         
-        
-        
         if (rawDistance > 1000) {
-            parsedDistance.bold(Double(round(rawDistance / 1000)).description)
+            parsedDistance.bold(round(rawDistance / 1000).description)
             // Use different unit of measurement if it's greater one kilometer
-            parsedDistance.normal(" km".uppercased())
+            parsedDistance.normal(" km ".uppercased())
+            
+            parsedDistance.bold(round(rawDistance.truncatingRemainder(dividingBy: 1000)).description)
+            // Use different unit of measurement if it's greater one kilometer
+            parsedDistance.normal(" m".uppercased())
+            
         } else {
-            parsedDistance.bold(Double(round(rawDistance)).description)
+            parsedDistance.bold(round(rawDistance).description)
             parsedDistance.normal(" meters".uppercased())
         }
         

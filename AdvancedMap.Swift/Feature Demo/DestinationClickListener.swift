@@ -26,9 +26,15 @@ class DestinationClickListener : NTMapEventListener {
         
         delegate?.destinationSet(position: destination)
     }
+    
+    override func onMapMoved() {
+        delegate?.mapMoved()
+    }
 }
 
 protocol DestinationDelegate {
     
     func destinationSet(position: NTMapPos)
+    
+    func mapMoved()
 }

@@ -9,10 +9,9 @@
 import Foundation
 import CoreLocation
 
-class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate, MapMovedDelegate {
+class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
     
     var client: TurnByTurnClient!
-    let loveListener = MapMovedListener()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +48,6 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate, Map
         contentView.banner.showInformation(text: text, autoclose: true)
         
         (self.contentView as! TurnByTurnView).modeContent.table.delegate = self
-        
-        loveListener?.delegate = self
-        contentView.map.setMapEventListener(loveListener)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -64,9 +60,6 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate, Map
         (contentView as! TurnByTurnView).startButton.delegate = nil
         
         (self.contentView as! TurnByTurnView).modeContent.table.delegate = nil
-        
-        loveListener?.delegate = nil
-        contentView.map.setMapEventListener(nil)
     }
     
     func mapMoved() {

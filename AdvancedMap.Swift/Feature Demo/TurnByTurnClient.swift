@@ -113,6 +113,10 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         }
     }
     
+    func mapMoved() {
+        delegate?.mapMoved()
+    }
+    
     func showRoute(start: NTMapPos, stop: NTMapPos) {
         
         DispatchQueue.global().async {
@@ -295,6 +299,8 @@ protocol NextTurnDelegate {
     func routingFailed()
     
     func locationUpdated(result: NTRoutingResult)
+    
+    func mapMoved()
 }
 
 
