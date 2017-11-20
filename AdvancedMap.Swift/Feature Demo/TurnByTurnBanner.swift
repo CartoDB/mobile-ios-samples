@@ -187,7 +187,7 @@ class TurnByTurnBanner: UIView {
             // Use different unit of measurement if it's greater than one hour
             
             let hours = round(rawTime / hour)
-            let minutes = round(rawTime.truncatingRemainder(dividingBy: hour))
+            let minutes = round((rawTime / minute).truncatingRemainder(dividingBy: minute))
             
             parsedTime.bold(Int(hours).description)
             parsedTime.normal(" hours and ".uppercased())
