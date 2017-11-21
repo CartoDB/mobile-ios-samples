@@ -238,8 +238,10 @@ class TurnByTurnClient: NSObject, CLLocationManagerDelegate, DestinationDelegate
         let heading = (newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading
 
         if (isInNavigationMode) {
-            let angle = -Float(heading)
-            mapView.setRotation(angle, durationSeconds: 0)
+            if (!isPaused) {
+                let angle = -Float(heading)
+                mapView.setRotation(angle, durationSeconds: 0)
+            }
             zoomAndTiltToPosition(duration: 0)
         } else {
 //            let angle = 180 - Float(exactly: heading)! - mapView.getRotation()

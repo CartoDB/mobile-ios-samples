@@ -28,8 +28,8 @@ class TransportModePopupContent: UIView, UITableViewDataSource {
         mode = TransportMode(title: "Bicycle", description: "Standard costing for travel by bicycle, with a slight preference for using cycleways or roads with bicycle lanes.", mode: "bicycle")
         modes.append(mode)
         
-        mode = TransportMode(title: "MultiModal", description: "Pedestrian and transit. In the future, multimodal will support a combination of all of the above.", mode: "multimodal")
-        modes.append(mode)
+//        mode = TransportMode(title: "MultiModal", description: "Pedestrian and transit. In the future, multimodal will support a combination of all of the above.", mode: "multimodal")
+//        modes.append(mode)
         
         table = UITableView()
         table.dataSource = self
