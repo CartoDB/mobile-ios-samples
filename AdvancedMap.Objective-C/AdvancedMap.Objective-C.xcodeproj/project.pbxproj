@@ -25,7 +25,6 @@
 		4DEB06D81A10CDC0003D111C /* BundledMapController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DEB06D71A10CDC0003D111C /* BundledMapController.mm */; };
 		4DFC6C6D1B6224D300AF8E06 /* ClusteredMarkersController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC6C6C1B6224D300AF8E06 /* ClusteredMarkersController.mm */; };
 		9A2A46DC69277B2945334956 /* libPods-AdvancedMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B16806BB0D561BC919810AEC /* libPods-AdvancedMap.Objective-C.a */; };
-		AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = AD031F231DCCE81400072781 /* styles_mapzen.zip */; };
 		AD2AD56F1F4B023D00F3C479 /* Package.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD56E1F4B023D00F3C479 /* Package.mm */; };
 		AD2AD5781F4B1ACC00F3C479 /* OfflineMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2AD5771F4B1ACC00F3C479 /* OfflineMapController.m */; };
 		AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */; };
@@ -112,9 +111,6 @@
 		ADC02EBA1F753C1B00849DBD /* style_image_carto_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB11F753C1B00849DBD /* style_image_carto_darkmatter.png */; };
 		ADC02EBB1F753C1B00849DBD /* style_image_carto_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB21F753C1B00849DBD /* style_image_carto_positron.png */; };
 		ADC02EBC1F753C1B00849DBD /* style_image_carto_voyager.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB31F753C1B00849DBD /* style_image_carto_voyager.png */; };
-		ADC02EBD1F753C1B00849DBD /* style_image_mapzen_bright.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB41F753C1B00849DBD /* style_image_mapzen_bright.png */; };
-		ADC02EBE1F753C1B00849DBD /* style_image_mapzen_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB51F753C1B00849DBD /* style_image_mapzen_darkmatter.png */; };
-		ADC02EBF1F753C1B00849DBD /* style_image_mapzen_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB61F753C1B00849DBD /* style_image_mapzen_positron.png */; };
 		ADC02EC01F753C1B00849DBD /* style_image_nutiteq_darkmatter.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB71F753C1B00849DBD /* style_image_nutiteq_darkmatter.png */; };
 		ADC02EC11F753C1B00849DBD /* style_image_nutiteq_positron.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB81F753C1B00849DBD /* style_image_nutiteq_positron.png */; };
 		ADC02EC21F753C1B00849DBD /* style_image_nutiteq_voyager.png in Resources */ = {isa = PBXBuildFile; fileRef = ADC02EB91F753C1B00849DBD /* style_image_nutiteq_voyager.png */; };
@@ -138,7 +134,6 @@
 		ADED5F231D92A31800AB2D13 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F041D92A31800AB2D13 /* info@2x.png */; };
 		ADED5F241D92A31800AB2D13 /* jefferson-building-ground-floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F051D92A31800AB2D13 /* jefferson-building-ground-floor.jpg */; };
 		ADED5F251D92A31800AB2D13 /* looseleaf.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F061D92A31800AB2D13 /* looseleaf.zip */; };
-		ADED5F261D92A31800AB2D13 /* mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F071D92A31800AB2D13 /* mapzen.zip */; };
 		ADED5F271D92A31800AB2D13 /* marker_black.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F081D92A31800AB2D13 /* marker_black.png */; };
 		ADED5F281D92A31800AB2D13 /* marker_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F091D92A31800AB2D13 /* marker_red.png */; };
 		ADED5F291D92A31800AB2D13 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = ADED5F0A1D92A31800AB2D13 /* marker.png */; };
@@ -195,7 +190,6 @@
 		4DFC6C6C1B6224D300AF8E06 /* ClusteredMarkersController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ClusteredMarkersController.mm; path = AdvancedMap/ClusteredMarkersController.mm; sourceTree = SOURCE_ROOT; };
 		65284DDA3D95F82D5DF6B11D /* Pods-AdvancedMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
 		AD02FEE866BAAE942D33FB01 /* Pods-AdvancedMap.Objective-C.UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests.release.xcconfig"; sourceTree = "<group>"; };
-		AD031F231DCCE81400072781 /* styles_mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = styles_mapzen.zip; path = ../../Assets/styles_mapzen.zip; sourceTree = "<group>"; };
 		AD2AD56D1F4B020C00F3C479 /* Package.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Package.h; sourceTree = "<group>"; };
 		AD2AD56E1F4B023D00F3C479 /* Package.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Package.mm; sourceTree = "<group>"; };
 		AD2AD5771F4B1ACC00F3C479 /* OfflineMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfflineMapController.m; sourceTree = "<group>"; };
@@ -294,9 +288,6 @@
 		ADC02EB11F753C1B00849DBD /* style_image_carto_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_darkmatter.png; sourceTree = "<group>"; };
 		ADC02EB21F753C1B00849DBD /* style_image_carto_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_positron.png; sourceTree = "<group>"; };
 		ADC02EB31F753C1B00849DBD /* style_image_carto_voyager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_carto_voyager.png; sourceTree = "<group>"; };
-		ADC02EB41F753C1B00849DBD /* style_image_mapzen_bright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_bright.png; sourceTree = "<group>"; };
-		ADC02EB51F753C1B00849DBD /* style_image_mapzen_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_darkmatter.png; sourceTree = "<group>"; };
-		ADC02EB61F753C1B00849DBD /* style_image_mapzen_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_mapzen_positron.png; sourceTree = "<group>"; };
 		ADC02EB71F753C1B00849DBD /* style_image_nutiteq_darkmatter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_darkmatter.png; sourceTree = "<group>"; };
 		ADC02EB81F753C1B00849DBD /* style_image_nutiteq_positron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_positron.png; sourceTree = "<group>"; };
 		ADC02EB91F753C1B00849DBD /* style_image_nutiteq_voyager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = style_image_nutiteq_voyager.png; sourceTree = "<group>"; };
@@ -324,7 +315,6 @@
 		ADED5F041D92A31800AB2D13 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "../../Assets/info@2x.png"; sourceTree = "<group>"; };
 		ADED5F051D92A31800AB2D13 /* jefferson-building-ground-floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "jefferson-building-ground-floor.jpg"; path = "../../Assets/jefferson-building-ground-floor.jpg"; sourceTree = "<group>"; };
 		ADED5F061D92A31800AB2D13 /* looseleaf.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = looseleaf.zip; path = ../../Assets/looseleaf.zip; sourceTree = "<group>"; };
-		ADED5F071D92A31800AB2D13 /* mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = mapzen.zip; path = ../../Assets/mapzen.zip; sourceTree = "<group>"; };
 		ADED5F081D92A31800AB2D13 /* marker_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_black.png; path = ../../Assets/marker_black.png; sourceTree = "<group>"; };
 		ADED5F091D92A31800AB2D13 /* marker_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_red.png; path = ../../Assets/marker_red.png; sourceTree = "<group>"; };
 		ADED5F0A1D92A31800AB2D13 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = ../../Assets/marker.png; sourceTree = "<group>"; };
@@ -564,9 +554,6 @@
 				ADC02EB11F753C1B00849DBD /* style_image_carto_darkmatter.png */,
 				ADC02EB21F753C1B00849DBD /* style_image_carto_positron.png */,
 				ADC02EB31F753C1B00849DBD /* style_image_carto_voyager.png */,
-				ADC02EB41F753C1B00849DBD /* style_image_mapzen_bright.png */,
-				ADC02EB51F753C1B00849DBD /* style_image_mapzen_darkmatter.png */,
-				ADC02EB61F753C1B00849DBD /* style_image_mapzen_positron.png */,
 				ADC02EB71F753C1B00849DBD /* style_image_nutiteq_darkmatter.png */,
 				ADC02EB81F753C1B00849DBD /* style_image_nutiteq_positron.png */,
 				ADC02EB91F753C1B00849DBD /* style_image_nutiteq_voyager.png */,
@@ -783,8 +770,6 @@
 				ADED5F041D92A31800AB2D13 /* info@2x.png */,
 				ADED5F051D92A31800AB2D13 /* jefferson-building-ground-floor.jpg */,
 				ADED5F061D92A31800AB2D13 /* looseleaf.zip */,
-				AD031F231DCCE81400072781 /* styles_mapzen.zip */,
-				ADED5F071D92A31800AB2D13 /* mapzen.zip */,
 				ADED5F081D92A31800AB2D13 /* marker_black.png */,
 				AD9B19B81DC1E5850025B767 /* cities15000.geojson */,
 				ADED5F091D92A31800AB2D13 /* marker_red.png */,
@@ -908,7 +893,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADED5F141D92A31800AB2D13 /* 852-map-toolbar.png in Resources */,
-				ADC02EBE1F753C1B00849DBD /* style_image_mapzen_darkmatter.png in Resources */,
 				AD46EB271F6FB317004B662F /* background_clusters.png in Resources */,
 				ADED5F271D92A31800AB2D13 /* marker_black.png in Resources */,
 				ADED5F191D92A31800AB2D13 /* basic.zip in Resources */,
@@ -917,13 +901,10 @@
 				AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */,
 				ADED5F251D92A31800AB2D13 /* looseleaf.zip in Resources */,
 				ADED5F2B1D92A31800AB2D13 /* menu@2x.png in Resources */,
-				ADC02EBF1F753C1B00849DBD /* style_image_mapzen_positron.png in Resources */,
 				2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */,
 				AD4F92191F6C250400139F79 /* icon_basemap.png in Resources */,
 				ADED5F2E1D92A31800AB2D13 /* nutibright-v3.zip in Resources */,
 				AD46EB2E1F6FB317004B662F /* background_basemaps.png in Resources */,
-				AD031F241DCCE81400072781 /* styles_mapzen.zip in Resources */,
-				ADED5F261D92A31800AB2D13 /* mapzen.zip in Resources */,
 				ADED5F291D92A31800AB2D13 /* marker.png in Resources */,
 				ADED5F171D92A31800AB2D13 /* arrow.png in Resources */,
 				ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */,
@@ -972,7 +953,6 @@
 				AD4F921A1F6C250400139F79 /* icon_global.png in Resources */,
 				ADED5F1A1D92A31800AB2D13 /* capitals_3857.geojson in Resources */,
 				ADED5F2D1D92A31800AB2D13 /* nutibright-contourstyle.zip in Resources */,
-				ADC02EBD1F753C1B00849DBD /* style_image_mapzen_bright.png in Resources */,
 				ADED5F211D92A31800AB2D13 /* fcd_auto.nml in Resources */,
 				ADED5F1B1D92A31800AB2D13 /* carto-fonts.zip in Resources */,
 				AD46EB481F701C27004B662F /* icon_forward_blue.png in Resources */,
