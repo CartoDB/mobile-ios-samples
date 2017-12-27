@@ -97,7 +97,7 @@ class ScaleBar: UIView {
         
         // Calculate distance with haversine formula
         // https://en.wikipedia.org/wiki/Haversine_formula
-        
+
         let latDistance = (pos1Wgs.getY() - pos2Wgs.getY()).toRadians
         let lonDistance = (pos1Wgs.getX() - pos2Wgs.getX()).toRadians
         

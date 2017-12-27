@@ -11,6 +11,7 @@ import UIKit
 class ViewController: GLKViewController {
     
     var mapView: NTMapView?;
+    var marker: NTMarker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +25,12 @@ class ViewController: GLKViewController {
         let projection = mapView?.getOptions().getBaseProjection();
         let tallinn = projection?.fromWgs84(NTMapPos(x: 24.646469, y: 59.426939));
         
-        let marker = mapView?.addMarkerToPostion(projection: projection!, position: tallinn!);
+        marker = mapView?.addMarkerToPostion(projection: projection!, position: tallinn!);
         
         mapView?.setFocus(tallinn, durationSeconds: 0);
-        mapView?.setZoom(15, durationSeconds: 2);
+        mapView?.setZoom(15, durationSeconds: 0);
         
         let listener = HelloMapListener(marker: marker!);
-        
         mapView?.setMapEventListener(listener);
         
         title = "Hello Map";
@@ -39,10 +39,9 @@ class ViewController: GLKViewController {
 
 public class HelloMapListener : NTMapEventListener
 {
-    var marker: NTMarker?;
-
-    convenience init(marker: NTMarker)
-    {
+    var marker: NTMarker?
+    
+    convenience init(marker: NTMarker) {
         self.init();
         self.marker = marker;
     }
