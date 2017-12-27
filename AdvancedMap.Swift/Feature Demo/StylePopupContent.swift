@@ -12,7 +12,6 @@ import UIKit
 class StylePopupContent : UIScrollView {
     
     static let CartoVectorSource = "carto.streets"
-    static let MapzenSource = "mapzen.osm"
     static let CartoRasterSource = "carto.osm"
     
     static let Bright = "BRIGHT"
@@ -31,7 +30,6 @@ class StylePopupContent : UIScrollView {
     static let DarkMatterUrl = "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png";
     
     var cartoVector: StylePopupContentSection!
-    var mapzen: StylePopupContentSection!
     var cartoRaster: StylePopupContentSection!
     
     convenience init() {
@@ -45,15 +43,6 @@ class StylePopupContent : UIScrollView {
         cartoVector.addItem(text: StylePopupContent.DarkMatter, imageUrl: "style_image_nutiteq_darkmatter.png")
         
         addSubview(cartoVector)
-        
-        mapzen = StylePopupContentSection()
-        mapzen.source = StylePopupContent.MapzenSource
-        mapzen.header.text = "MAPZEN VECTOR"
-        mapzen.addItem(text: StylePopupContent.Bright, imageUrl: "style_image_mapzen_bright.png")
-        mapzen.addItem(text: StylePopupContent.Positron, imageUrl: "style_image_mapzen_positron.png")
-        mapzen.addItem(text: StylePopupContent.DarkMatter, imageUrl: "style_image_mapzen_darkmatter.png")
-        
-        addSubview(mapzen)
         
         cartoRaster = StylePopupContentSection()
         cartoRaster.source = StylePopupContent.CartoRasterSource
@@ -76,11 +65,6 @@ class StylePopupContent : UIScrollView {
         var h: CGFloat = cartoVector.getHeight()
         
         cartoVector.frame = CGRect(x: x, y: y, width: w, height: h)
-        
-        y += h + headerPadding
-        h = mapzen.getHeight()
-        
-        mapzen.frame = CGRect(x: x, y: y, width: w, height: h)
         
         y += h + headerPadding
         h = cartoRaster.getHeight()
