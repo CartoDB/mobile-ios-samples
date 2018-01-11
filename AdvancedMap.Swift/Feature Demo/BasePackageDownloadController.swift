@@ -35,7 +35,9 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         contentView.packageContent.table.delegate = self
         contentView.popup.popup.header.backButton.delegate = self
         
-        contentView.switchButton.delegate = self
+        if (contentView.switchButton != nil) {
+            contentView.switchButton.delegate = self
+        }
         
         if (!contentView.hasLocalPackages()) {
             let text = "Click on the globe icon to download a package"
@@ -55,7 +57,9 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         contentView.manager?.setPackageManagerListener(nil)
         contentView.manager?.stop(false)
         
-        contentView.switchButton.delegate = nil
+        if (contentView.switchButton != nil) {
+            contentView.switchButton.delegate = nil
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -111,6 +115,11 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
 
     
     func goOffline() {
+        
+        if (self.contentView.switchButton == nil) {
+            return
+        }
+        
         if (self.contentView.switchButton.isOnline()) {
             DispatchQueue.main.async {
                 self.contentView.switchButton.toggle()

@@ -56,7 +56,7 @@ class Routing {
         markerBuilder?.setBitmap(start)
         markerBuilder?.setHideIfOverlapped(false)
         // Note: When setting the size on Android, you need to account for Resources.DisplayMetrics.Density
-        markerBuilder?.setSize(15)
+        markerBuilder?.setSize(20)
         
         let defaultPosition = NTMapPos(x: 0, y: 0)
         startMarker = NTMarker(pos: defaultPosition, style: markerBuilder?.buildStyle())
@@ -80,6 +80,32 @@ class Routing {
         instructionRight = markerBuilder?.buildStyle()
     }
     
+    func updateMode(mode: String) {
+        // offline mode supports: auto, bicycle, pedestrian, multimodal
+        // default: pedestrian
+        // reference: https://mapzen.com/documentation/mobility/turn-by-turn/api-reference/
+        // but our SDK uses an older version, where not all modes are available
+        if let onlineService = service as? NTValhallaOnlineRoutingService {
+            onlineService.setProfile(mode)
+        } else if let offlineService = service as? NTPackageManagerValhallaRoutingService {
+            offlineService.setProfile(mode)
+        }
+    }
+    
+    func updateFinishMarker(icon: String, size: Float, color: NTColor? = nil) {
+        let builder = NTMarkerStyleBuilder()
+        builder?.setBitmap(NTBitmapFromString(path: icon))
+        builder?.setSize(size)
+        builder?.setHideIfOverlapped(false)
+        
+        if (color != nil) {
+            builder?.setColor(color)
+        }
+        
+        builder?.setAnchorPointX(0, anchorPointY: 0)
+        
+        stopMarker?.setStyle(builder?.buildStyle())
+    }
     func NTBitmapFromString(path: String) -> NTBitmap {
         let image = UIImage(named: path)
         return NTBitmapUtils.createBitmap(from: image)
@@ -192,6 +218,131 @@ class Routing {
     func setStopMarker(position: NTMapPos) {
         stopMarker?.setPos(position)
         stopMarker?.setVisible(true)
+    }
+    
+    func matchRoute(points: NTMapPosVector) -> NTMapPos? {
+        
+        if (!(self.service is NTPackageManagerValhallaRoutingService)) {
+            return nil
+        }
+        
+//        return points.get(Int32(points.size() - 1))
+        
+        /*
+         * Route matching (NTRouteMatchingRequest & NTRouteMatchingResult)
+         * was introduced after the release of v4.1.0.
+         * You need a special debug build to match your route.
+         * Download the latest version from: https://github.com/CartoDB/mobile-sdk/wiki/Using-dev-build
+         * and simply replace (overwrite) CartoMobileSDK.framework file at
+         * mobile-ios-samples/AdvancedMap.Swift/Pods/CartoMobileSDK
+         *
+         * If you do not wish to use the latest dev build,
+         * simply comment out these lines and return the final element of the original list.
+         */
+        let projection = mapView.getOptions().getBaseProjection()
+        let accuracy: Float = 10.0
+        let request = NTRouteMatchingRequest(projection: projection, points: points, accuracy: accuracy)
+        let result: NTRouteMatchingResult = (self.service as! NTPackageManagerValhallaRoutingService).matchRoute(request)
+        let points = result.getPoints()
+ 
+        return points?.get(Int32((points?.size())! - 1))
+    }
+    
+    func isPointOnRoute(point: NTMapPos) -> Bool {
+        
+        let line = getLine()
+        
+        if (line == nil) {
+            return false
+        }
+        
+        let positions = line?.getPoses()
+        let count = Int(positions!.size())
+        
+        for i in 0..<count {
+            
+            if (i < count - 1) {
+                let segmentStart = positions!.get(Int32(i))!
+                let segmentEnd = positions!.get(Int32(i + 1))!
+                
+                let distance = distanceFromLineSegment(point: point, start: segmentStart, end: segmentEnd)
+                print("Distance: " + String(describing: distance))
+
+                // TODO: The number it returns should be translated further,
+                // due to the earth's curviture, it's smaller near the equator. Normalize it.
+                if (distance < 3) {
+                    return true
+                }
+            }
+        }
+        
+        return false
+    }
+    
+    func getLine() -> NTLine? {
+        
+        let elements = routeDataSource?.getAll()
+        let count: Int32 = Int32(elements!.size())
+        
+        for i in 0..<count {
+            let element = elements?.get(i)
+            
+            if (element is NTLine) {
+                return element as? NTLine
+            }
+        }
+        
+        return nil
+    }
+    
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/a1a9c175867f3a47bd5eda2062a7d213c42da01a/all/native/utils/GeomUtils.cpp#L30
+     */
+    func distanceFromLineSegment(point: NTMapPos, start: NTMapPos, end: NTMapPos) -> Double {
+        let nearest = calculateNearestPointOnLineSegment(point: point, start: start, end: end)
+        return distanceFromPoint(point1: nearest, point2: point)
+    }
+    
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/a1a9c175867f3a47bd5eda2062a7d213c42da01a/all/native/utils/GeomUtils.cpp#L14
+     */
+    func distanceFromPoint(point1: NTMapPos, point2: NTMapPos) -> Double {
+        let diff = getDiff(a: point2, b: point1)
+        return sqrt(diff.dotProduct(diff))
+    }
+    
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/a1a9c175867f3a47bd5eda2062a7d213c42da01a/all/native/utils/GeomUtils.cpp#L35
+     */
+    func calculateNearestPointOnLineSegment(point: NTMapPos, start: NTMapPos, end: NTMapPos) -> NTMapPos {
+        
+        if (start.isEqual(end)) {
+            return start
+        }
+        
+        let diff = getDiff(a: point, b: start)
+        let dir = getDiff(a: end, b: start)
+        
+        let u = clamp(value: diff.dotProduct(dir) / dir.dotProduct(dir), low: 0.0, high: 1.0)
+        
+        let x = (dir.getX() * u) + start.getX()
+        let y = (dir.getY() * u) + start.getY()
+        return NTMapPos(x: x, y: y)
+    }
+    
+    /*
+     * Translated from:
+     * https://github.com/CartoDB/mobile-sdk/blob/3b3b2fa1b91f1395ebd3e166a0609a762c95a9ea/all/native/utils/GeneralUtils.h#L19
+     */
+    func clamp(value: Double, low: Double, high: Double) -> Double {
+        return value < low ? low : (value > high ? high : value)
+    }
+    
+    func getDiff(a: NTMapPos, b: NTMapPos) -> NTMapVec {
+        return NTMapVec(x: a.getX() - b.getX(), y: a.getY() - b.getY())
     }
 }
 

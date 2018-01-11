@@ -25,7 +25,7 @@
     self.manager = [[CLLocationManager alloc] init];
     self.manager.pausesLocationUpdatesAutomatically = YES;
     self.manager.delegate = self;
-    self.manager.desiredAccuracy =kCLLocationAccuracyKilometer;
+    self.manager.desiredAccuracy = kCLLocationAccuracyKilometer;
     
     float OSVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     

@@ -143,7 +143,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
     
     func onPopupBackButtonClick() {
         
-        folder = folder.substring(to: folder.characters.count - 1)
+        folder = folder.substring(to: folder.count - 1)
         let lastslash = folder.lastIndexOf(s: "/")
         
         if (lastslash == -1) {
@@ -193,7 +193,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
                 continue;
             }
             
-            var modified = name?.substring(from: folder.characters.count)
+            var modified = name?.substring(from: folder.count)
             let index = modified?.index(of: "/")
             
             if (index == nil) {
@@ -368,7 +368,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
         
         for package in packages {
             
-            let split = package.getName().characters.split(separator: "/")
+            let split = package.getName().split(separator: "/")
             let shortName = split[split.count - 1]
             
             text += String(shortName)

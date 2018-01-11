@@ -28,6 +28,9 @@ class Banner: AlertBaseView {
         label.font = UIFont(name: "HelveticaNeue", size: 12)
         label.textAlignment = .center
         label.textColor = UIColor.white
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        
         addSubview(label)
     }
     
