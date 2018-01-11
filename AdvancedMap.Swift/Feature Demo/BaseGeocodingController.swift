@@ -40,6 +40,7 @@ class BaseGeocodingController : BasePackageDownloadController {
     }
 
     static let API_KEY = "mapzen-e2gmwsC"
+    static let MAPBOX_KEY = "pk.eyJ1IjoiamFha2wiLCJhIjoiR3FYNFJrRSJ9.n8PoOPy9tvnULFJ8h67pIA"
 }
 
 
