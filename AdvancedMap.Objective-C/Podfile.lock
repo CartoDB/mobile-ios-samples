@@ -1,15 +1,15 @@
 PODS:
-  - CartoMobileSDK (4.1.0)
+  - CartoMobileSDK (4.1.1)
   - Toast (3.1.0)
 
 DEPENDENCIES:
-  - CartoMobileSDK (= 4.1.0)
+  - CartoMobileSDK (= 4.1.1)
   - Toast (~> 3.0)
 
 SPEC CHECKSUMS:
-  CartoMobileSDK: 8203b31d289e85b93cf82f3bd1da7e162f184db2
+  CartoMobileSDK: 1bdfe16d50b532f40a3c94ae57a38ed0c5b90e97
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
-PODFILE CHECKSUM: c92f77fcf2497a12506e3e869d3fe04a3fdb1b9b
+PODFILE CHECKSUM: ff97b7a34d8c146fdea9bc54488f7761199538a8
 
 COCOAPODS: 1.2.0
