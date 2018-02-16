@@ -110,7 +110,7 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
             if (self.service is NTPackageManagerGeocodingService) {
                 (self.service as! NTPackageManagerGeocodingService).setAutocomplete(autocomplete)
             } else {
-                (self.service as! NTPeliasOnlineGeocodingService).setAutocomplete(autocomplete)
+                (self.service as! NTMapBoxOnlineGeocodingService).setAutocomplete(autocomplete)
             }
             
             let results = self.service.calculateAddresses(request)
@@ -155,7 +155,8 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
     
     override func setOnlineMode() {
         super.setOnlineMode()
-        service = NTPeliasOnlineGeocodingService(apiKey: BaseGeocodingController.API_KEY)
+        service = NTMapBoxOnlineGeocodingService(accessToken: BaseGeocodingController.MAPBOX_KEY)
+        (self.service as! NTMapBoxOnlineGeocodingService).setCustomServiceURL("https://api.tiles.mapbox.com/geocoding/v5/mapbox.places-permanent/{query}.json?access_token={access_token}")
         
         (contentView as! GeocodingView).showSearchBar()
     }

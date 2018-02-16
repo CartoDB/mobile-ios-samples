@@ -63,7 +63,10 @@ class ReverseGecodingController : BaseGeocodingController, ReverseGeocodingEvent
     
     override func setOnlineMode() {
         super.setOnlineMode()
-        geocodingListener.service = NTPeliasOnlineReverseGeocodingService(apiKey: BaseGeocodingController.API_KEY)
+        geocodingListener.service = NTMapBoxOnlineReverseGeocodingService(accessToken: BaseGeocodingController.MAPBOX_KEY)
+        
+        // set custom URL. Does not work for mapbox.places-permanent specifically (known issue with SDK 4.1.2)
+        // (geocodingListener.service as! NTMapBoxOnlineReverseGeocodingService).setCustomServiceURL("https://api.tiles.mapbox.com/geocoding/v5/mapbox.places-permanent/{query}.json?access_token={access_token}")
     }
     
     override func setOfflineMode() {
