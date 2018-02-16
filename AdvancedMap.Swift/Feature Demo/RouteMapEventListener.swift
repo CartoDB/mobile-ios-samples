@@ -13,7 +13,6 @@ import Foundation
  */
 class RouteMapEventListener : NTMapEventListener {
     
-    
     var delegate: RouteMapEventDelegate?
     
     var startPosition, stopPosition: NTMapPos!

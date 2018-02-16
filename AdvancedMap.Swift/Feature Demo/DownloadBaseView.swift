@@ -66,12 +66,19 @@ class DownloadBaseView : MapBaseView {
             map.getLayers().remove(offlineLayer)
         }
         
+        if (onlineLayer == nil) {
+            onlineLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_VOYAGER)
+        }
+        
         map.getLayers().insert(0, layer: onlineLayer)
     }
     
     func setOfflineMode(manager: NTCartoPackageManager) {
-        map.getLayers().remove(onlineLayer)
-
+        
+        if (onlineLayer != nil) {
+            map.getLayers().remove(onlineLayer)
+        }
+        
         if (offlineLayer == nil) {
             offlineLayer = NTCartoOfflineVectorTileLayer(packageManager: manager, style: .CARTO_BASEMAP_STYLE_VOYAGER)
             offlineLayer?.setPreloading(true)

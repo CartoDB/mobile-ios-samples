@@ -47,15 +47,18 @@ class PopupButton : UIView {
         alpha = 0.5
     }
     
+    var imagePadding: CGFloat = -1
+    
     override func layoutSubviews() {
-
         super.layoutSubviews()
         
         layer.cornerRadius = frame.width / 2
         
-        let padding: CGFloat = frame.height / 3.5
+        if (imagePadding == -1) {
+            imagePadding = frame.height / 3.5
+        }
         
-        imageView.frame = CGRect(x: padding, y: padding, width: frame.width - 2 * padding, height: frame.height - 2 * padding)
+        imageView.frame = CGRect(x: imagePadding, y: imagePadding, width: frame.width - 2 * imagePadding, height: frame.height - 2 * imagePadding)
         
         addRoundShadow()
     }

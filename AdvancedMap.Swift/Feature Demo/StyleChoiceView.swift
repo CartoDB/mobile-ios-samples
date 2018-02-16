@@ -99,30 +99,6 @@ class StyleChoiceView : MapBaseView {
             } else if (selection == StylePopupContent.Voyager) {
                 currentLayer = NTCartoOnlineVectorTileLayer(style: .CARTO_BASEMAP_STYLE_VOYAGER)
             }
-            
-        } else if (source == StylePopupContent.MapzenSource) {
-            
-            let asset = NTAssetUtils.loadAsset("styles_mapzen.zip")
-
-            let package = NTZippedAssetPackage(zip: asset)
-            
-            var name = ""
-            
-            if (selection == StylePopupContent.Bright) {
-                name = "style"
-            } else if (selection == StylePopupContent.Positron) {
-                name = "positron"
-            } else if (selection == StylePopupContent.DarkMatter) {
-                name = "positron_dark"
-            }
-            
-            let styleSet = NTCompiledStyleSet(assetPackage: package, styleName: name)
-            
-            let datasource = NTCartoOnlineTileDataSource(source: source)
-            let decoder = NTMBVectorTileDecoder(compiledStyleSet: styleSet)
-            
-            currentLayer = NTVectorTileLayer(dataSource: datasource, decoder: decoder)
-            
         } else if (source == StylePopupContent.CartoRasterSource) {
             
             if (selection == StylePopupContent.HereSatelliteDaySource) {

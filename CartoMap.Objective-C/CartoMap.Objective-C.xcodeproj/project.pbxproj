@@ -65,7 +65,6 @@
 		ADCA45541D9293C600814350 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45351D9293C600814350 /* info@2x.png */; };
 		ADCA45551D9293C600814350 /* jefferson-building-ground-floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45361D9293C600814350 /* jefferson-building-ground-floor.jpg */; };
 		ADCA45561D9293C600814350 /* looseleaf.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45371D9293C600814350 /* looseleaf.zip */; };
-		ADCA45571D9293C600814350 /* mapzen.zip in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45381D9293C600814350 /* mapzen.zip */; };
 		ADCA45581D9293C600814350 /* marker_black.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45391D9293C600814350 /* marker_black.png */; };
 		ADCA45591D9293C600814350 /* marker_red.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA453A1D9293C600814350 /* marker_red.png */; };
 		ADCA455A1D9293C600814350 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA453B1D9293C600814350 /* marker.png */; };
@@ -176,7 +175,6 @@
 		ADCA45351D9293C600814350 /* info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info@2x.png"; path = "../../Assets/info@2x.png"; sourceTree = "<group>"; };
 		ADCA45361D9293C600814350 /* jefferson-building-ground-floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "jefferson-building-ground-floor.jpg"; path = "../../Assets/jefferson-building-ground-floor.jpg"; sourceTree = "<group>"; };
 		ADCA45371D9293C600814350 /* looseleaf.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = looseleaf.zip; path = ../../Assets/looseleaf.zip; sourceTree = "<group>"; };
-		ADCA45381D9293C600814350 /* mapzen.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = mapzen.zip; path = ../../Assets/mapzen.zip; sourceTree = "<group>"; };
 		ADCA45391D9293C600814350 /* marker_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_black.png; path = ../../Assets/marker_black.png; sourceTree = "<group>"; };
 		ADCA453A1D9293C600814350 /* marker_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker_red.png; path = ../../Assets/marker_red.png; sourceTree = "<group>"; };
 		ADCA453B1D9293C600814350 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = marker.png; path = ../../Assets/marker.png; sourceTree = "<group>"; };
@@ -428,7 +426,6 @@
 				ADCA45351D9293C600814350 /* info@2x.png */,
 				ADCA45361D9293C600814350 /* jefferson-building-ground-floor.jpg */,
 				ADCA45371D9293C600814350 /* looseleaf.zip */,
-				ADCA45381D9293C600814350 /* mapzen.zip */,
 				ADCA45391D9293C600814350 /* marker_black.png */,
 				ADCA453A1D9293C600814350 /* marker_red.png */,
 				ADCA453B1D9293C600814350 /* marker.png */,
@@ -552,7 +549,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADCA45571D9293C600814350 /* mapzen.zip in Resources */,
 				ADA5A8BA1F7D01D70078FDB3 /* icon_sample_countries_vis.png in Resources */,
 				ADA5A8B71F7D01D70078FDB3 /* icon_sample_vector_tile.png in Resources */,
 				ADCA455C1D9293C600814350 /* menu@2x.png in Resources */,

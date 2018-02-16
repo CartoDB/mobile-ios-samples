@@ -45,7 +45,6 @@
     [view addRecognizer:self view:view.languageButton action:@selector(languageButtonTap:)];
     
     view.styleContent.cartoVector.delegate = self;
-    view.styleContent.mapzen.delegate = self;
     view.styleContent.cartoRaster.delegate = self;
     
     view.languageContent.table.delegate = self;
@@ -61,7 +60,6 @@
     [view removeRecognizerFrom: view.languageButton];
     
     view.styleContent.cartoVector.delegate = nil;
-    view.styleContent.mapzen.delegate = nil;
     view.styleContent.cartoRaster.delegate = nil;
     
     view.languageContent.table.delegate = nil;

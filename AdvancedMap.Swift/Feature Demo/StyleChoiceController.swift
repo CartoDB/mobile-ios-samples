@@ -32,7 +32,6 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         contentView.languageContent.table.delegate = self
         
         contentView.baseMapContent.cartoVector.delegate = self
-        contentView.baseMapContent.mapzen.delegate = self
         contentView.baseMapContent.cartoRaster.delegate = self
     }
     
@@ -44,7 +43,6 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         contentView.languageContent.table.delegate = nil
         
         contentView.baseMapContent.cartoVector.delegate = nil
-        contentView.baseMapContent.mapzen.delegate = nil
         contentView.baseMapContent.cartoRaster.delegate = nil
     }
     

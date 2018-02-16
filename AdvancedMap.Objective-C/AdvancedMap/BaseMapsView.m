@@ -57,28 +57,6 @@
         } else if ([self.currentSelection isEqualToString:StylePopupContent.DarkMatter]) {
             self.currentLayer  = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_DARKMATTER];
         }
-    } else if ([source isEqualToString: StylePopupContent.MapzenSource]) {
-        
-        NSString *fileName = @"styles_mapzen.zip";
-        NSString *styleName = @"";
-        
-        if ([selection isEqualToString: StylePopupContent.Bright]) {
-            styleName = @"style";
-        } else if ([selection isEqualToString: StylePopupContent.Positron]) {
-            styleName = @"positron";
-        } else if ([selection isEqualToString: StylePopupContent.DarkMatter]) {
-            styleName = @"positron_dark";
-        }
-            
-        NTBinaryData *styleAsset = [NTAssetUtils loadAsset:fileName];
-        NTZippedAssetPackage *package = [[NTZippedAssetPackage alloc] initWithZipData:styleAsset];
-        NTCompiledStyleSet *set = [[NTCompiledStyleSet alloc] initWithAssetPackage:package styleName:styleName];
-            
-        NTCartoOnlineTileDataSource *source = [[NTCartoOnlineTileDataSource alloc] initWithSource:self.currentOSM];
-        NTMBVectorTileDecoder *decoder = [[NTMBVectorTileDecoder alloc] initWithCompiledStyleSet:set];
-            
-        self.currentLayer = [[NTVectorTileLayer alloc] initWithDataSource:source decoder:decoder];
-        
     } else if ([source isEqualToString: StylePopupContent.CartoRasterSource]) {
 
         NSString *url = @"";
