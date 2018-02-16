@@ -18,6 +18,14 @@
     [super viewDidLoad];
     
     self.service = [[NTPeliasOnlineReverseGeocodingService alloc]initWithApiKey:MAPZEN_API_KEY];
+
+    [self hidePackageDownloadButton];
+
+    // Zoom to Washington
+    NTProjection* proj = [[self.contentView.mapView getOptions] getBaseProjection];
+    NTMapPos* pos = [proj fromWgs84:[[NTMapPos alloc] initWithX:-77.004590 y:38.888702]];
+    [self.contentView.mapView setFocusPos:pos durationSeconds:0];
+    [self.contentView.mapView setZoom: 16.0f durationSeconds:0];
 }
 
 - (void)hidePackageDownloadButton {

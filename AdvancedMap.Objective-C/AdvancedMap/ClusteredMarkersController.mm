@@ -41,7 +41,9 @@
     NTFeatureCollection* features = [geoJsonReader readFeatureCollection:json];
 
     // Create style for markers
-    NTMarkerStyle* style = [[[NTMarkerStyleBuilder alloc] init] buildStyle];
+    NTMarkerStyleBuilder* markerStyleBuilder = [[NTMarkerStyleBuilder alloc] init];
+    [markerStyleBuilder setSize: 14.0f];
+    NTMarkerStyle* style = [markerStyleBuilder buildStyle];
 
     // Add the loaded feature collection to the data source
     [vectorDataSource addFeatureCollection:features style:style];
@@ -84,10 +86,10 @@
         CGRect rect = CGRectMake(0, 15, self.markerImage.size.width, self.markerImage.size.height);
         [[UIColor blackColor] set];
         
-        NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        NSMutableParagraphStyle* style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
         [style setAlignment:NSTextAlignmentCenter];
         
-        NSDictionary *attr = [NSDictionary dictionaryWithObject:style forKey:NSParagraphStyleAttributeName];
+        NSDictionary* attr = [NSDictionary dictionaryWithObject:style forKey:NSParagraphStyleAttributeName];
         [styleKey drawInRect:CGRectIntegral(rect) withAttributes:attr];
         
         UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
