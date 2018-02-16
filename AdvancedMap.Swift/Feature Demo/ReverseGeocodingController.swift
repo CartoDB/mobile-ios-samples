@@ -49,7 +49,10 @@ class ReverseGecodingController : BaseGeocodingController, ReverseGeocodingEvent
     func foundResult(result: NTGeocodingResult!) {
 
         if (result == nil) {
-            alert(message: "Couldn't find any addresses. Are you sure you have downloaded the region you're trying to reverse geocode?")
+            DispatchQueue.main.async {
+                let text = "Couldn't find any addresses. Are you sure you have downloaded the region you're trying to reverse geocode?"
+                self.contentView.banner.showInformation(text: text, autoclose: true)
+            }
             return
         }
         
