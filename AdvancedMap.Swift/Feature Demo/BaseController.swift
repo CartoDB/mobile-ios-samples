@@ -8,22 +8,14 @@
 
 import Foundation
 import UIKit
-import Toast_Swift
 
 class BaseController : UIViewController {
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
     }
     
     func onCellSelected(item: NSObject) {
         
-    }
-    
-    func alert(message: String) {
-        DispatchQueue.main.async {
-            self.view.makeToast(message)
-        }
     }
 }

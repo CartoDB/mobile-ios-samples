@@ -3,6 +3,8 @@
 * Official docs: https://carto.com/docs/carto-engine/mobile-sdk/
 * Reference: http://cartodb.github.io/mobile-ios-samples/
 
+[![Build Status](https://travis-ci.org/CartoDB/mobile-ios-samples.svg?branch=master)](https://travis-ci.org/CartoDB/mobile-ios-samples)
+
 ## Installation Guide
   
 * Via manually downloading the SDK:
