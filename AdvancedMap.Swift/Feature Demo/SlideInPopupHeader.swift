@@ -67,7 +67,7 @@ class SlideInPopupHeader : UIView {
         layoutSubviews()
     }
     
-    func closeTapped(_ sender: UITapGestureRecognizer) {
+    @objc func closeTapped(_ sender: UITapGestureRecognizer) {
         (superview?.superview as? SlideInPopup)?.hide()
     }
 }
@@ -135,7 +135,7 @@ class PopupBackButton : UIView {
         text.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
-    func backTapped(_ sender: UITapGestureRecognizer) {
+    @objc func backTapped(_ sender: UITapGestureRecognizer) {
         delegate?.click(sender: self)
     }
 }

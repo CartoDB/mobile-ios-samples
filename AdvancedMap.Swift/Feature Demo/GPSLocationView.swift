@@ -80,14 +80,14 @@ class GPSLocationView : MapBaseView {
     let rotationDuration: Float = 0.4
     var isRotationInProgress = false
     
-    func rotationButtonTapped(_ sender: UITapGestureRecognizer) {
+    @objc func rotationButtonTapped(_ sender: UITapGestureRecognizer) {
         isRotationInProgress = true
         map.setRotation(0, durationSeconds: rotationDuration)
         rotationResetButton.reset()
         Timer.scheduledTimer(timeInterval: TimeInterval(rotationDuration + 0.1), target: self, selector: #selector(onRotationCompleted), userInfo: nil, repeats: false)
     }
     
-    func onRotationCompleted() {
+    @objc func onRotationCompleted() {
         isRotationInProgress = false
     }
 

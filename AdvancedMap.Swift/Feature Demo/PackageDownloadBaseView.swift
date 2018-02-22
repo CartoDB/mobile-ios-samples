@@ -47,7 +47,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
         countryButton.gestureRecognizers?.forEach(countryButton.removeGestureRecognizer)
     }
     
-    func countryButtonTapped(_ sender: UITapGestureRecognizer) {
+    @objc func countryButtonTapped(_ sender: UITapGestureRecognizer) {
         
         if (countryButton.isEnabled) {
             popup.setContent(content: packageContent)

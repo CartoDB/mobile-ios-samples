@@ -65,7 +65,7 @@ class VectorObjectEditingController : BaseController, VectorElementSelectDelegat
         contentView.trashCan.gestureRecognizers?.forEach(contentView.trashCan.removeGestureRecognizer)
     }
     
-    func deleteClick(_ sender: UITapGestureRecognizer) {
+    @objc func deleteClick(_ sender: UITapGestureRecognizer) {
         contentView.editSource.remove(contentView.editLayer.getSelectedVectorElement())
     }
     
