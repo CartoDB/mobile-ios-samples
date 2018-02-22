@@ -24,7 +24,7 @@ class MainView: UIScrollView {
         addGestureRecognizer(recognizer)
     }
     
-    func tapped(_ sender: UITapGestureRecognizer) {
+    @objc func tapped(_ sender: UITapGestureRecognizer) {
         
         let location = sender.location(in: self)
         
