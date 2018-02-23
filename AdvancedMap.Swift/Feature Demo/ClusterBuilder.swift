@@ -36,10 +36,10 @@ class ClusterBuilder : NTClusterElementBuilder {
             paragraphStyle.alignment = .center
             paragraphStyle.lineBreakMode = .byWordWrapping
             
-            let attributes: [String: AnyObject]? = [
-                NSForegroundColorAttributeName: UIColor.black,
-                NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 10)!,
-                NSParagraphStyleAttributeName: paragraphStyle
+            let attributes: [NSAttributedStringKey: AnyObject]? = [
+                NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.black,
+                NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): UIFont(name: "HelveticaNeue", size: 10)!,
+                NSAttributedStringKey(rawValue: NSAttributedStringKey.paragraphStyle.rawValue): paragraphStyle
             ]
             
             let y: CGFloat = image.size.height / 4

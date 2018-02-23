@@ -61,7 +61,7 @@ class StyleChoiceView : MapBaseView {
         baseMapButton.gestureRecognizers?.forEach(baseMapButton.removeGestureRecognizer)
     }
     
-    func languageButtonTapped(_ sender: UITapGestureRecognizer) {
+    @objc func languageButtonTapped(_ sender: UITapGestureRecognizer) {
         
         if (languageButton.isEnabled) {
             popup.setContent(content: languageContent)
@@ -70,7 +70,7 @@ class StyleChoiceView : MapBaseView {
         }
     }
     
-    func mapButtonTapped(_ sender: UITapGestureRecognizer) {
+    @objc func mapButtonTapped(_ sender: UITapGestureRecognizer) {
         popup.setContent(content: baseMapContent)
         popup.popup.header.setText(text: "SELECT A BASEMAP")
         popup.show()

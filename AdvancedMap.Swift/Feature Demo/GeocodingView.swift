@@ -20,9 +20,9 @@ class GeocodingView : BaseGeocodingView, UIGestureRecognizerDelegate {
     convenience init() {
         self.init(frame: CGRect.zero)
         
-        let attributes: [String: AnyObject]? = [
-            NSForegroundColorAttributeName: Colors.fromRgba(red: 200, green: 200, blue: 200, alpha: 255),
-            NSFontAttributeName: font
+        let attributes: [NSAttributedStringKey: AnyObject]? = [
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): Colors.fromRgba(red: 200, green: 200, blue: 200, alpha: 255),
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue): font
         ]
         
         initializeGeocodingView(popupTitle: Texts.geocodingInfoHeader, popupDescription: Texts.geocodingInfoContainer)
@@ -87,7 +87,7 @@ class GeocodingView : BaseGeocodingView, UIGestureRecognizerDelegate {
         super.removeRecognizers()
     }
     
-    func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         inputField.resignFirstResponder()
         resultTable.isHidden = true
     }

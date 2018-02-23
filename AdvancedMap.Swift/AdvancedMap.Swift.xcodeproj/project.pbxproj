@@ -838,12 +838,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = CARTO;
 				TargetAttributes = {
 					ADB27EA91EF416C6004198D3 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 79LP8BB5PK;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -875,8 +876,6 @@
 				ADC8B8E61F05295F00B62852 /* icon_sample_route_download.png in Resources */,
 				ADF210071F9F295500201870 /* icon_navigation_pointer.png in Resources */,
 				ADF210091F9F6C0800201870 /* icon_banner_finish.png in Resources */,
-				AD437ECD1EF933C5008CEA76 /* style_image_mapzen_positron.png in Resources */,
-				AD437EC01EF91F0A008CEA76 /* styles_mapzen.zip in Resources */,
 				AD251F321F14C9C000B863BD /* style_image_nutiteq_darkmatter.png in Resources */,
 				AD9786B91EF82284002912DF /* icon_language.png in Resources */,
 				ADA978061F0FB1000040E090 /* icon_sample_geocoding.png in Resources */,
@@ -902,7 +901,6 @@
 				ADE092F11F00ECF500C569F9 /* direction_up.png in Resources */,
 				AD1AAAE01F8B96D500602014 /* icon_sample_turn_by_turn.png in Resources */,
 				AD0A4E0E1F9DF75A00C36DF4 /* banner_icon_turn_left.png in Resources */,
-				AD437ECC1EF933C5008CEA76 /* style_image_mapzen_darkmatter.png in Resources */,
 				AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */,
 				AD41231A1F03E1CE009874BD /* info.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
@@ -928,7 +926,6 @@
 				AD9786C01EF822B7002912DF /* icon_marker_gray.png in Resources */,
 				ADC8B8EA1F052A2800B62852 /* icon_sample_styles.png in Resources */,
 				AD0A4E0C1F9DF75300C36DF4 /* banner_icon_turn_right.png in Resources */,
-				AD437ECE1EF933C5008CEA76 /* style_image_mapzen_bright.png in Resources */,
 				AD41231D1F03E1E1009874BD /* arrow.png in Resources */,
 				ADE4A0101F458F8500D6E05F /* icon_sample_route_search.png in Resources */,
 				ADAFCD2B1EFC0745005F53CB /* icon_download.png in Resources */,
@@ -953,7 +950,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1CB7CC0F645AD9057BFFDE6A /* [CP] Copy Pods Resources */ = {
@@ -963,7 +960,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/HockeySDK/HockeySDKResources.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/HockeySDK/HockeySDKResources.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -1099,7 +1096,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1107,7 +1106,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1150,7 +1153,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1158,7 +1163,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1196,7 +1205,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carto.advanced.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1211,7 +1221,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carto.advanced.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

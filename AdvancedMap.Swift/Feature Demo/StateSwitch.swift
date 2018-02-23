@@ -52,7 +52,7 @@ class StateSwitch : UIView {
         _switch.isUserInteractionEnabled = false
     }
     
-    func tapped(_ sender: UITapGestureRecognizer) {
+    @objc func tapped(_ sender: UITapGestureRecognizer) {
         _switch.isOn = !_switch.isOn
         delegate?.switchChanged()
     }

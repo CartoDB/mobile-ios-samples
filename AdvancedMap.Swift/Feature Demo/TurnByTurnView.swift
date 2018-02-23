@@ -68,7 +68,7 @@ class TurnByTurnView : PackageDownloadBaseView {
         modeButton.gestureRecognizers?.forEach(countryButton.removeGestureRecognizer)
     }
     
-    func modeButtonTapped(_ sender: UITapGestureRecognizer) {
+    @objc func modeButtonTapped(_ sender: UITapGestureRecognizer) {
         popup.setContent(content: modeContent)
         popup.popup.header.setText(text: "SELECT TRANSPORTATION MODE")
         popup.show()

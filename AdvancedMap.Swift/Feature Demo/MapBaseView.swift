@@ -95,7 +95,7 @@ class MapBaseView : UIView {
         infoButton.gestureRecognizers?.forEach(infoButton.removeGestureRecognizer)
     }
     
-    func infoButtonTapped(_ sender: UITapGestureRecognizer) {
+    @objc func infoButtonTapped(_ sender: UITapGestureRecognizer) {
         popup.setContent(content: infoContent)
         popup.popup.header.setText(text: "INFORMATION")
         popup.show()

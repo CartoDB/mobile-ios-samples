@@ -29,7 +29,7 @@ class SwitchButton : PopupButton {
         addGestureRecognizer(recognizer)
     }
     
-    func switchChanged(_ sender: UITapGestureRecognizer) {
+    @objc func switchChanged(_ sender: UITapGestureRecognizer) {
         toggle()
         delegate?.switchChanged()
     }

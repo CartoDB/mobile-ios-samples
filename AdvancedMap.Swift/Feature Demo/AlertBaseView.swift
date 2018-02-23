@@ -14,7 +14,7 @@ class AlertBaseView: UIView {
         return self.alpha == 1
     }
     
-    func hide() {
+    @objc func hide() {
         if (isVisible()) {
             animateAlpha(alpha: 0)
         }

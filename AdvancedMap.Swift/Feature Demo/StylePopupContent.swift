@@ -163,7 +163,7 @@ class StylePopupContentSection : UIView {
         return rowHeight + extra
     }
     
-    func itemTapped(_ sender: UITapGestureRecognizer) {
+    @objc func itemTapped(_ sender: UITapGestureRecognizer) {
         
         let location = sender.location(in: self)
         

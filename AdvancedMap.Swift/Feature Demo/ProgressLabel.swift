@@ -63,7 +63,7 @@ class ProgressLabel : AlertBaseView {
         Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(onTimerCompleted), userInfo: nil, repeats: false)
     }
     
-    func onTimerCompleted() {
+    @objc func onTimerCompleted() {
         hide()
     }
     

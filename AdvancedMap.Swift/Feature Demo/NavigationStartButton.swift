@@ -48,7 +48,7 @@ class NavigationStartButton: PopupButton {
         super.layoutSubviews()
         label.frame = bounds
     }
-    func switchChanged(_ sender: UITapGestureRecognizer) {
+    @objc func switchChanged(_ sender: UITapGestureRecognizer) {
         delegate?.switchChanged()
         toggle()
     }

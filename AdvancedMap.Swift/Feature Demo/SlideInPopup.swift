@@ -89,7 +89,7 @@ class SlideInPopup : UIView {
         }
     }
     
-    func backgroundTapped(_ sender: UITapGestureRecognizer) {
+    @objc func backgroundTapped(_ sender: UITapGestureRecognizer) {
         hide()
     }
 

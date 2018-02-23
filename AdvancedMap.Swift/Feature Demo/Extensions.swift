@@ -51,7 +51,10 @@ extension String {
 // https://stackoverflow.com/questions/28496093/making-text-bold-using-attributed-string-in-swift
 extension NSMutableAttributedString {
     @discardableResult func bold(_ text:String) -> NSMutableAttributedString {
-        let attrs:[String:AnyObject] = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 9)!]
+        let attrs:[NSAttributedStringKey : AnyObject] = [
+            NSAttributedStringKey(rawValue: NSAttributedStringKey.font.rawValue) : UIFont(name: "HelveticaNeue-Bold", size: 9)!
+        ]
+        
         let boldString = NSMutableAttributedString(string:"\(text)", attributes:attrs)
         self.append(boldString)
         return self
