@@ -14,7 +14,7 @@
     <a title="NTStringCartoCSSStyleSetMap Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (66% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (76% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -96,6 +96,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTCartoOfflineVectorTileLayer.html">NTCartoOfflineVectorTileLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTCartoOnlineRasterTileLayer.html">NTCartoOnlineRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTCartoOnlineRoutingService.html">NTCartoOnlineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTCartoOnlineTileDataSource.html">NTCartoOnlineTileDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTCartoOnlineVectorTileLayer.html">NTCartoOnlineVectorTileLayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTCartoPackageManager.html">NTCartoPackageManager</a>
@@ -750,10 +762,14 @@
                 <div class="language">
                   <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTStringCartoCSSStyleSetMap</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithArg0</span><span class="p">:</span> <span class="p">(</span><span class="n">NTStringCartoCSSStyleSetMap</span><span class="o">*</span><span class="p">)</span><span class="nv">arg0</span><span class="p">;</span>
@@ -778,124 +794,6 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTStringCartoCSSStyleSetMap@swigCPtr"></a>
-                    <a name="//apple_ref/objc/Ivar/swigCPtr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTStringCartoCSSStyleSetMap@swigCPtr">swigCPtr</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTStringCartoCSSStyleSetMap@swigCMemOwn"></a>
-                    <a name="//apple_ref/objc/Ivar/swigCMemOwn" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTStringCartoCSSStyleSetMap@swigCMemOwn">swigCMemOwn</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="n">BOOL</span> <span class="n">swigCMemOwn</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTStringCartoCSSStyleSetMap(im)getCptr"></a>
-                    <a name="//apple_ref/objc/Method/-getCptr" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTStringCartoCSSStyleSetMap(im)getCptr">-getCptr</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getCptr</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutableRawPointer</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTStringCartoCSSStyleSetMap(im)initWithCptr:swigOwnCObject:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithCptr:swigOwnCObject:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTStringCartoCSSStyleSetMap(im)initWithCptr:swigOwnCObject:">-initWithCptr:swigOwnCObject:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">cptr</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="o">!</span><span class="p">,</span> <span class="n">swigOwnCObject</span> <span class="nv">ownCObject</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -1253,7 +1151,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-02-15)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-02-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
