@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PackageDownloadController : BasePackageDownloadController {
+class OfflineMapController : BasePackageDownloadController {
     
     var mapPackageListener: MapPackageListener!
     
@@ -17,7 +17,7 @@ class PackageDownloadController : BasePackageDownloadController {
         
         super.viewDidLoad()
         
-        contentView = PackageDownloadView()
+        contentView = OfflineMapView()
         view = contentView
         
         let folder = Utils.createDirectory(name: "countrypackages")

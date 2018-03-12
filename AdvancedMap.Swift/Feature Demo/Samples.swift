@@ -44,7 +44,7 @@ class Samples {
         sample.title = "OFFLINE MAP"
         sample.description = "Download existing map packages for offline use"
         sample.imageResource = folder + "icon_sample_package_download.png"
-        sample.controller = PackageDownloadController()
+        sample.controller = OfflineMapController()
         
         list.append(sample)
         
