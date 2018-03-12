@@ -13,7 +13,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">CartoMobileSDK Docs</a> (66% documented)</p>
+        <p><a href="index.html">CartoMobileSDK Docs</a> (76% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -95,6 +95,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NTCartoOfflineVectorTileLayer.html">NTCartoOfflineVectorTileLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NTCartoOnlineRasterTileLayer.html">NTCartoOnlineRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NTCartoOnlineRoutingService.html">NTCartoOnlineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NTCartoOnlineTileDataSource.html">NTCartoOnlineTileDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NTCartoOnlineVectorTileLayer.html">NTCartoOnlineVectorTileLayer</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NTCartoPackageManager.html">NTCartoPackageManager</a>
@@ -1571,10 +1583,14 @@ fonts and other resources can be loaded from the asset package.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTStringCartoCSSStyleSetMap</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithArg0</span><span class="p">:</span> <span class="p">(</span><span class="n">NTStringCartoCSSStyleSetMap</span><span class="o">*</span><span class="p">)</span><span class="nv">arg0</span><span class="p">;</span>
@@ -1678,6 +1694,164 @@ vector tiles as simple as possible.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NTCartoOfflineVectorTileLayer</span> <span class="p">:</span> <span class="kt"><a href="Classes/NTCartoVectorTileLayer.html">NTCartoVectorTileLayer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTCartoOnlineRasterTileLayer"></a>
+                    <a name="//apple_ref/objc/Class/NTCartoOnlineRasterTileLayer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTCartoOnlineRasterTileLayer">NTCartoOnlineRasterTileLayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specialized online raster tile layer that connects to Carto online tile server.
+This layer is intended as a &lsquo;shortcut&rsquo; to make using Carto online service and
+raster tiles as simple as possible.</p>
+
+                        <a href="Classes/NTCartoOnlineRasterTileLayer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">NTCartoOnlineRasterTileLayer</span> <span class="p">:</span> <span class="nc"><a href="Classes/NTRasterTileLayer.html">NTRasterTileLayer</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NTCartoOnlineRasterTileLayer</span> <span class="p">:</span> <span class="kt"><a href="Classes/NTRasterTileLayer.html">NTRasterTileLayer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTCartoOnlineRoutingService"></a>
+                    <a name="//apple_ref/objc/Class/NTCartoOnlineRoutingService" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTCartoOnlineRoutingService">NTCartoOnlineRoutingService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An online routing service that connects to Carto-provided routing server.</p>
+
+                        <a href="Classes/NTCartoOnlineRoutingService.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">NTCartoOnlineRoutingService</span> <span class="p">:</span> <span class="nc"><a href="Classes/NTRoutingService.html">NTRoutingService</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NTCartoOnlineRoutingService</span> <span class="p">:</span> <span class="kt"><a href="Classes/NTRoutingService.html">NTRoutingService</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTCartoOnlineTileDataSource"></a>
+                    <a name="//apple_ref/objc/Class/NTCartoOnlineTileDataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTCartoOnlineTileDataSource">NTCartoOnlineTileDataSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An online tile data source that connects to Carto tile server.
+This data source can be used with both vector and raster tiles,
+depending on the specified source id.</p>
+
+                        <a href="Classes/NTCartoOnlineTileDataSource.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">NTCartoOnlineTileDataSource</span> <span class="p">:</span> <span class="nc"><a href="Classes/NTTileDataSource.html">NTTileDataSource</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NTCartoOnlineTileDataSource</span> <span class="p">:</span> <span class="kt"><a href="Classes/NTTileDataSource.html">NTTileDataSource</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTCartoOnlineVectorTileLayer"></a>
+                    <a name="//apple_ref/objc/Class/NTCartoOnlineVectorTileLayer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTCartoOnlineVectorTileLayer">NTCartoOnlineVectorTileLayer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specialized online vector tile layer that connects to Carto online tile server.
+This layer is intended as a &lsquo;shortcut&rsquo; to make using Carto online service and
+vector tiles as simple as possible.</p>
+
+                        <a href="Classes/NTCartoOnlineVectorTileLayer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">NTCartoOnlineVectorTileLayer</span> <span class="p">:</span> <span class="nc"><a href="Classes/NTCartoVectorTileLayer.html">NTCartoVectorTileLayer</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NTCartoOnlineVectorTileLayer</span> <span class="p">:</span> <span class="kt"><a href="Classes/NTCartoVectorTileLayer.html">NTCartoVectorTileLayer</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2400,10 +2574,14 @@ Z-coordinate denotes height in meters.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTFeatureVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -2418,6 +2596,7 @@ Z-coordinate denotes height in meters.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -2746,10 +2925,14 @@ Supports both 2D and 3D coordinate serialization.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTGeocodingResultVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -2880,10 +3063,14 @@ Supports both 2D and 3D coordinate serialization.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTGeometryVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -2898,6 +3085,7 @@ Supports both 2D and 3D coordinate serialization.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -3139,10 +3327,14 @@ x = 1 and y = 3, then the tile will be loaded from the following URL: <q>http://
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTIntVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -3157,6 +3349,7 @@ x = 1 and y = 3, then the tile will be loaded from the following URL: <q>http://
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -3351,10 +3544,14 @@ x = 1 and y = 3, then the tile will be loaded from the following URL: <q>http://
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTLayerVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -3369,6 +3566,7 @@ x = 1 and y = 3, then the tile will be loaded from the following URL: <q>http://
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -3572,10 +3770,14 @@ they will be sorted from back to front and drawn in that order on top of all oth
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTLineGeometryVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -3590,6 +3792,7 @@ they will be sorted from back to front and drawn in that order on top of all oth
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -4205,10 +4408,14 @@ For example, in EPSG:4326 x is used for latitude, y for longitude and z for heig
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTMapPosVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -4223,6 +4430,7 @@ For example, in EPSG:4326 x is used for latitude, y for longitude and z for heig
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -4262,10 +4470,14 @@ For example, in EPSG:4326 x is used for latitude, y for longitude and z for heig
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTMapPosVectorVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -4280,6 +4492,7 @@ For example, in EPSG:4326 x is used for latitude, y for longitude and z for heig
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -5313,10 +5526,14 @@ online service and uses custom protocol.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTPackageInfoVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -5331,6 +5548,7 @@ online service and uses custom protocol.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -5978,10 +6196,14 @@ Default cache capacity is 50MB.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTPointGeometryVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -5996,6 +6218,7 @@ Default cache capacity is 50MB.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -6303,10 +6526,14 @@ Polygons can be concave and have multiple overlapping holes.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTPolygonGeometryVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -6321,6 +6548,7 @@ Polygons can be concave and have multiple overlapping holes.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -7082,10 +7310,14 @@ a popup.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTRoutingInstructionVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -7100,6 +7332,7 @@ a popup.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -7344,10 +7577,14 @@ a popup.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTScreenPosVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -7362,6 +7599,7 @@ a popup.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -7486,10 +7724,14 @@ and a custom SQL-like search filter.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTStringMap</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithArg0</span><span class="p">:</span> <span class="p">(</span><span class="n">NTStringMap</span><span class="o">*</span><span class="p">)</span><span class="nv">arg0</span><span class="p">;</span>
@@ -7543,10 +7785,14 @@ and a custom SQL-like search filter.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTStringVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">long</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -7561,6 +7807,7 @@ and a custom SQL-like search filter.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -8280,10 +8527,14 @@ Note: this class is experimental and may change or even be removed in future SDK
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTVariantVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -8298,6 +8549,7 @@ Note: this class is experimental and may change or even be removed in future SDK
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -8337,10 +8589,14 @@ Note: this class is experimental and may change or even be removed in future SDK
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTStringVariantMap</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithArg0</span><span class="p">:</span> <span class="p">(</span><span class="n">NTStringVariantMap</span><span class="o">*</span><span class="p">)</span><span class="nv">arg0</span><span class="p">;</span>
@@ -8356,6 +8612,7 @@ Note: this class is experimental and may change or even be removed in future SDK
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -8646,10 +8903,14 @@ during map editing interactions.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTVectorElementVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -8664,6 +8925,7 @@ during map editing interactions.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -9068,10 +9330,14 @@ a vector element or vector element vertex.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NTVectorTileFeatureVector</span> <span class="p">:</span> <span class="nc">NSObject</span>
 <span class="p">{</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="kt">void</span> <span class="o">*</span><span class="n">swigCPtr</span><span class="p">;</span>
+	<span class="cm">/** @internal:nodoc: */</span>
 	<span class="n">BOOL</span> <span class="n">swigCMemOwn</span><span class="p">;</span>
 <span class="p">}</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="o">-</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="n">getCptr</span><span class="p">;</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCptr</span><span class="p">:</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="nv">cptr</span> <span class="nf">swigOwnCObject</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ownCObject</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">size</span><span class="p">;</span>
@@ -9086,6 +9352,7 @@ a vector element or vector element vertex.</p>
  * Returns the raw pointer to the object. This is used internally by the SDK.
  * @return The internal pointer of the object.
  */</span>
+<span class="cm">/** @internal:nodoc: */</span>
 <span class="k">-</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span><span class="p">)</span><span class="n">swigGetRawPtr</span><span class="p">;</span>
 
 <span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span>
@@ -9508,7 +9775,7 @@ Only deflate-based ZIP archives are supported.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-02-15)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-02-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
