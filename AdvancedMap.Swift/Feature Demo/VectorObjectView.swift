@@ -167,6 +167,27 @@ class VectorObjectView : MapBaseView {
         customPopup?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Howdy!"))
         customPopup?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "And I'm an entirely custom popup. I'm awesome!"))
         source?.add(customPopup)
+        
+        /*
+         * Text with border and line break
+         */
+        position = projection?.fromWgs84(NTMapPos(x: longitude - 0.01, y: latitude + 0.01))
+        
+        let textBuilder = NTTextStyleBuilder()
+        textBuilder?.setBreakLines(true)
+        textBuilder?.setBorderColor(Colors.green.toNTColor())
+        textBuilder?.setTextMargins(NTTextMargins(left: 5, top: 5, right: 5, bottom: 5))
+        textBuilder?.setColor(UIColor.black.toNTColor())
+        textBuilder?.setFontSize(12.0)
+        textBuilder?.setBackgroundColor(UIColor.white.toNTColor())
+        textBuilder?.setBorderWidth(2.0)
+        textBuilder?.setHideIfOverlapped(false)
+        
+        let text = "Look at me\nI'm broken in three lines\nand have a green border";
+        let textElement = NTText(pos: position, style: textBuilder?.buildStyle(), text: text)
+        source?.add(textElement)
+        
+        
     }
     
     override func addRecognizers() {
