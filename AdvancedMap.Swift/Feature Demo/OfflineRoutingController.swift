@@ -79,7 +79,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
                     self.contentView.progressLabel.complete(message: self.routing.getMessage(result: result!))
                 }
                 
-                let color = NTColor(r: 14, g: 122, b: 254, a: 150)
+                let color = NTColor(r: 14, g: 122, b: 254, a: 255)
                 self.routing.show(result: result!, lineColor: color!, complete: {
                     (route: Route) in
                     
@@ -90,7 +90,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
     
     override func setOnlineMode() {
         super.setOnlineMode()
-        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
+        routing.service = NTCartoOnlineRoutingService(source: "nutiteq.osm.car")
     }
     
     override func setOfflineMode() {

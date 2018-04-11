@@ -20,7 +20,7 @@ class Routing {
     var startMarker, stopMarker: NTMarker?
     var instructionUp, instructionLeft, instructionRight: NTMarkerStyle?
     
-    var routeDataSource, routeStartStopDataSource: NTLocalVectorDataSource?
+    var routeDataSource, routeIntructionSource, routeStartStopDataSource: NTLocalVectorDataSource?
     
     var mapView: NTMapView!
     var projection: NTProjection!
@@ -43,6 +43,10 @@ class Routing {
         routeDataSource = NTLocalVectorDataSource(projection: projection)
         let routeLayer = NTVectorLayer(dataSource: routeDataSource)
         mapView.getLayers().add(routeLayer)
+        
+        routeIntructionSource = NTLocalVectorDataSource(projection: projection)
+        let routeInstructionLayer = NTVectorLayer(dataSource: routeIntructionSource)
+        mapView.getLayers().add(routeInstructionLayer)
         
         // Define layer and datasource for route start and stop markers
         routeStartStopDataSource = NTLocalVectorDataSource(projection: projection)
@@ -78,16 +82,17 @@ class Routing {
         
         markerBuilder?.setBitmap(upright)
         instructionRight = markerBuilder?.buildStyle()
+        
+        routeLayer?.setOpacity(0.5)
     }
     
     func updateMode(mode: String) {
-        // offline mode supports: auto, bicycle, pedestrian, multimodal
-        // default: pedestrian
-        // reference: https://mapzen.com/documentation/mobility/turn-by-turn/api-reference/
-        // but our SDK uses an older version, where not all modes are available
-        if let onlineService = service as? NTValhallaOnlineRoutingService {
-            onlineService.setProfile(mode)
-        } else if let offlineService = service as? NTPackageManagerValhallaRoutingService {
+        
+        if let offlineService = service as? NTPackageManagerValhallaRoutingService {
+            // offline mode supports: auto, bicycle, pedestrian, multimodal
+            // default: pedestrian
+            // reference: https://mapzen.com/documentation/mobility/turn-by-turn/api-reference/
+            // but our SDK uses an older version, where not all modes are available
             offlineService.setProfile(mode)
         }
     }
@@ -134,7 +139,7 @@ class Routing {
             let position = result.getPoints().get(index)
             
             if (showTurns) {
-                createRoutePoint(position: position!, instruction: instruction!, source: routeDataSource!)
+                createRoutePoint(position: position!, instruction: instruction!, source: routeIntructionSource!)
             }
             
             vector?.add(position)
@@ -203,7 +208,7 @@ class Routing {
     func createPolyLine(result: NTRoutingResult, color: NTColor) -> NTLine {
         let builder = NTLineStyleBuilder()
         builder?.setColor(color)
-        builder?.setWidth(7)
+        builder?.setWidth(10)
         
         return NTLine(poses: result.getPoints(), style: builder?.buildStyle())
     }
