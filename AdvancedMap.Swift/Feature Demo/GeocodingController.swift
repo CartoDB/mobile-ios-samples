@@ -113,6 +113,9 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
                 (self.service as! NTMapBoxOnlineGeocodingService).setAutocomplete(autocomplete)
             }
             
+            //request?.setLocation(self.contentView.projection.fromWgs84(NTMapPos(x: -1.0861967, y: 61.2675)))
+            //request?.setLocationRadius(10000000.0)
+            
             let results = self.service.calculateAddresses(request)
             
             let duration = NSDate.timeIntervalSinceReferenceDate - start
@@ -156,7 +159,6 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
     override func setOnlineMode() {
         super.setOnlineMode()
         service = NTMapBoxOnlineGeocodingService(accessToken: BaseGeocodingController.MAPBOX_KEY)
-        (self.service as! NTMapBoxOnlineGeocodingService).setCustomServiceURL("https://api.tiles.mapbox.com/geocoding/v5/mapbox.places-permanent/{query}.json?access_token={access_token}")
         
         (contentView as! GeocodingView).showSearchBar()
     }
