@@ -6,7 +6,7 @@
 //  Copyright © 2017 CARTO. All rights reserved.
 //
 
-class PackageDownloadView : PackageDownloadBaseView {
+class OfflineMapView : PackageDownloadBaseView {
 
     convenience init() {
         self.init(frame: CGRect.zero)

@@ -76,8 +76,8 @@
 		AD7356621F02581F00D4D6EF /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356611F02581F00D4D6EF /* Cities.swift */; };
 		AD7356641F02621C00D4D6EF /* DownloadBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356631F02621C00D4D6EF /* DownloadBaseView.swift */; };
 		AD7356661F02679200D4D6EF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356651F02679200D4D6EF /* Utils.swift */; };
-		AD73566B1F02776400D4D6EF /* PackageDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566A1F02776400D4D6EF /* PackageDownloadController.swift */; };
-		AD73566D1F02777500D4D6EF /* PackageDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566C1F02777500D4D6EF /* PackageDownloadView.swift */; };
+		AD73566B1F02776400D4D6EF /* OfflineMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566A1F02776400D4D6EF /* OfflineMapController.swift */; };
+		AD73566D1F02777500D4D6EF /* OfflineMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566C1F02777500D4D6EF /* OfflineMapView.swift */; };
 		AD7356701F0277A800D4D6EF /* PackagePopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73566F1F0277A800D4D6EF /* PackagePopupContent.swift */; };
 		AD7356721F0277F700D4D6EF /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356711F0277F700D4D6EF /* Package.swift */; };
 		AD7356741F0291E000D4D6EF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7356731F0291E000D4D6EF /* Extensions.swift */; };
@@ -229,8 +229,8 @@
 		AD7356611F02581F00D4D6EF /* Cities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		AD7356631F02621C00D4D6EF /* DownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadBaseView.swift; sourceTree = "<group>"; };
 		AD7356651F02679200D4D6EF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		AD73566A1F02776400D4D6EF /* PackageDownloadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageDownloadController.swift; sourceTree = "<group>"; };
-		AD73566C1F02777500D4D6EF /* PackageDownloadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackageDownloadView.swift; sourceTree = "<group>"; };
+		AD73566A1F02776400D4D6EF /* OfflineMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineMapController.swift; sourceTree = "<group>"; };
+		AD73566C1F02777500D4D6EF /* OfflineMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineMapView.swift; sourceTree = "<group>"; };
 		AD73566F1F0277A800D4D6EF /* PackagePopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagePopupContent.swift; sourceTree = "<group>"; };
 		AD7356711F0277F700D4D6EF /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		AD7356731F0291E000D4D6EF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -431,13 +431,13 @@
 			name = Clustering;
 			sourceTree = "<group>";
 		};
-		AD7356691F02760800D4D6EF /* Package Download */ = {
+		AD7356691F02760800D4D6EF /* Offline Map */ = {
 			isa = PBXGroup;
 			children = (
-				AD73566A1F02776400D4D6EF /* PackageDownloadController.swift */,
-				AD73566C1F02777500D4D6EF /* PackageDownloadView.swift */,
+				AD73566A1F02776400D4D6EF /* OfflineMapController.swift */,
+				AD73566C1F02777500D4D6EF /* OfflineMapView.swift */,
 			);
-			name = "Package Download";
+			name = "Offline Map";
 			sourceTree = "<group>";
 		};
 		AD9786831EF7DA7C002912DF /* Sections */ = {
@@ -452,7 +452,7 @@
 				AD4123271F040A10009874BD /* Vector Object Editing */,
 				AD5B2AF21F03CB9D00EF738C /* Clustering */,
 				AD5B2AF11F03CB9300EF738C /* Vector Objects */,
-				AD7356691F02760800D4D6EF /* Package Download */,
+				AD7356691F02760800D4D6EF /* Offline Map */,
 				AD9786841EF7DA8C002912DF /* Styles */,
 				AD97868B1EF7F145002912DF /* Base */,
 			);
@@ -989,7 +989,7 @@
 				ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */,
 				ADC8B8DD1F04F3B500B62852 /* EditEventListener.swift in Sources */,
 				ADC8B8DB1F04F35300B62852 /* VectorElementDeselectListener.swift in Sources */,
-				AD73566B1F02776400D4D6EF /* PackageDownloadController.swift in Sources */,
+				AD73566B1F02776400D4D6EF /* OfflineMapController.swift in Sources */,
 				AD3C01F91F8B866100F371D7 /* DestinationClickListener.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD3C166A1FBED72100A2459B /* TransportModePopupContent.swift in Sources */,
@@ -1023,7 +1023,7 @@
 				AD7356621F02581F00D4D6EF /* Cities.swift in Sources */,
 				AD01E6521F3479250001D8A3 /* OfflineRoutingController.swift in Sources */,
 				AD061BC81F1E2F2300F523B8 /* SwitchButton.swift in Sources */,
-				AD73566D1F02777500D4D6EF /* PackageDownloadView.swift in Sources */,
+				AD73566D1F02777500D4D6EF /* OfflineMapView.swift in Sources */,
 				AD7356721F0277F700D4D6EF /* Package.swift in Sources */,
 				ADE092FE1F00F36300C569F9 /* BoundingBox.swift in Sources */,
 				AD7356641F02621C00D4D6EF /* DownloadBaseView.swift in Sources */,

@@ -115,7 +115,7 @@
         if (string.length > 0) {
             string = [string stringByAppendingString:@", "];
         }
-        string = [string stringByAppendingString: [address getStreet]];
+        string = [string stringByAppendingString: [address getNeighbourhood]];
     }
     
     if ([address getLocality].length > 0) {
