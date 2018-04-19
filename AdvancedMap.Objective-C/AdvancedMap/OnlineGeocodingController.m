@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.service = [[NTPeliasOnlineGeocodingService alloc]initWithApiKey:MAPZEN_API_KEY];
+    self.service = [[NTMapBoxOnlineGeocodingService alloc] initWithAccessToken:MAPBOX_API_KEY];
     
     [self hidePackageDownloadButton];
 }

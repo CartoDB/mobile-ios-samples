@@ -88,14 +88,14 @@
     
     sample = [[Sample alloc] init];
     sample.title = @"ONLINE REVERSE GEOCODING";
-    sample.subtitle = @"Online reverse geocoding with Pelias geocoder";
+    sample.subtitle = @"Online reverse geocoding with Mapbox geocoder";
     sample.imageUrl = @"background_online_reverse_geocoding.png";
     sample.controller = @"OnlineReverseGeocodingController";
     [array addObject: sample];
     
     sample = [[Sample alloc] init];
     sample.title = @"ONLINE GEOCODING";
-    sample.subtitle = @"Online geocoding with Pelias geocoder";
+    sample.subtitle = @"Online geocoding with Mapbox geocoder";
     sample.imageUrl = @"background_online_geocoding.png";
     sample.controller = @"OnlineGeocodingController";
     [array addObject: sample];
