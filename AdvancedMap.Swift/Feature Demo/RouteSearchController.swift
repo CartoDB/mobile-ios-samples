@@ -32,7 +32,8 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
         contentView.map.setFocus(washingtonDC, durationSeconds: 0)
         contentView.map.setZoom(14, durationSeconds: 0)
         
-        routing.service = NTValhallaOnlineRoutingService(apiKey: BaseGeocodingController.API_KEY)
+        routing.service = NTCartoOnlineRoutingService(source: "nutiteq.osm.car")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
