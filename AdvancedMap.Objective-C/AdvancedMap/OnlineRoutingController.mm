@@ -13,11 +13,7 @@
     [super viewDidLoad];
     
     // Create also online routing service if no offline package is yet downloaded
-    self.service = [[NTValhallaOnlineRoutingService alloc]initWithApiKey:MAPZEN_API_KEY];
-    
-    // Valhalla has various profiles,
-    // cf: https://mapzen.com/documentation/mobility/turn-by-turn/api-reference/#costing-models
-    [((NTValhallaOnlineRoutingService *)self.service) setProfile:@"auto"];
+    self.service = [[NTCartoOnlineRoutingService alloc] initWithSource:@"nutiteq.osm.car"];
     
     [self hidePackageDownloadButton];
 }

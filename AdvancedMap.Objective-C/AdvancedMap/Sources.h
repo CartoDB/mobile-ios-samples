@@ -24,6 +24,6 @@ extern NSString * const OFFLINE_ROUTING_SOURCE;
 extern NSString * const GEOCODING_TAG;
 extern NSString * const OFFLINE_GEOCODING_SOURCE;
 
-extern NSString * const MAPZEN_API_KEY;
+extern NSString * const MAPBOX_API_KEY;
 
 @end

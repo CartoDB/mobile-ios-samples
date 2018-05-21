@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.service = [[NTPeliasOnlineReverseGeocodingService alloc]initWithApiKey:MAPZEN_API_KEY];
+    self.service = [[NTMapBoxOnlineReverseGeocodingService alloc] initWithAccessToken:MAPBOX_API_KEY];
 
     [self hidePackageDownloadButton];
 
