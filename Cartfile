@@ -1,2 +1,1 @@
-binary "https://dl.dropboxusercontent.com/s/20fzz7svn3ethf1/CartoMobileSDK.json" ~> 4.1.3
-
+binary "https://nutifront.s3.amazonaws.com/sdk_carthage/CartoMobileSDK.json" ~> 4.1.3
