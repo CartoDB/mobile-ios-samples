@@ -158,6 +158,9 @@
                 <a href="../Classes/NTEditableVectorLayer.html">NTEditableVectorLayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTExceptionWrapper.html">NTExceptionWrapper</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTFeature.html">NTFeature</a>
               </li>
               <li class="nav-group-task">
@@ -548,6 +551,9 @@
                 <a href="../Classes/NTText.html">NTText</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTTextMargins.html">NTTextMargins</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTTextStyle.html">NTTextStyle</a>
               </li>
               <li class="nav-group-task">
@@ -567,6 +573,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTTileLoadListener.html">NTTileLoadListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTTomTomOnlineGeocodingService.html">NTTomTomOnlineGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTTomTomOnlineReverseGeocodingService.html">NTTomTomOnlineReverseGeocodingService</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTTorqueTileDecoder.html">NTTorqueTileDecoder</a>
@@ -953,6 +965,11 @@ they will be sorted from back to front and drawn in that order on top of all oth
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the layer at the specified index.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If the index is out of range.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -989,8 +1006,7 @@ they will be sorted from back to front and drawn in that order on top of all oth
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The layer at the specified index.
-@throws NSException If the index is out of range.</p>
+                        <p>The layer at the specified index.</p>
                       </div>
                     </section>
                   </div>
@@ -1045,6 +1061,11 @@ they will be sorted from back to front and drawn in that order on top of all oth
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Replaces the layer at the specified index.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If the index is out of range.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1084,8 +1105,7 @@ they will be sorted from back to front and drawn in that order on top of all oth
                               </td>
                               <td>
                                 <div>
-                                  <p>The new layer.
-@throws NSException If the index is out of range.</p>
+                                  <p>The new layer.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1161,6 +1181,11 @@ they will be sorted from back to front and drawn in that order on top of all oth
                       <div class="abstract">
                         <p>Inserts a new layer at the specified position.
 All previous layers starting from this index will be moved to the next position.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If the index is out of range.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1200,8 +1225,7 @@ All previous layers starting from this index will be moved to the next position.
                               </td>
                               <td>
                                 <div>
-                                  <p>The new layer.
-@throws NSException If the index is out of range.</p>
+                                  <p>The new layer.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1446,11 +1470,6 @@ All previous layers starting from this index will be moved to the next position.
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dealloc</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1460,7 +1479,7 @@ All previous layers starting from this index will be moved to the next position.
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-02-22)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-05-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

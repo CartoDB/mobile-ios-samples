@@ -158,6 +158,9 @@
                 <a href="../Classes/NTEditableVectorLayer.html">NTEditableVectorLayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTExceptionWrapper.html">NTExceptionWrapper</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTFeature.html">NTFeature</a>
               </li>
               <li class="nav-group-task">
@@ -548,6 +551,9 @@
                 <a href="../Classes/NTText.html">NTText</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTTextMargins.html">NTTextMargins</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTTextStyle.html">NTTextStyle</a>
               </li>
               <li class="nav-group-task">
@@ -567,6 +573,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTTileLoadListener.html">NTTileLoadListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTTomTomOnlineGeocodingService.html">NTTomTomOnlineGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTTomTomOnlineReverseGeocodingService.html">NTTomTomOnlineReverseGeocodingService</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTTorqueTileDecoder.html">NTTorqueTileDecoder</a>
@@ -989,6 +1001,94 @@ using explicit SQL queries.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NTCartoSQLService(im)getAPIKey"></a>
+                    <a name="//apple_ref/objc/Method/-getAPIKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTCartoSQLService(im)getAPIKey">-getAPIKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the API key used when accessing the online service.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getAPIKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getAPIKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The API key used when accessing the online service.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTCartoSQLService(im)setAPIKey:"></a>
+                    <a name="//apple_ref/objc/Method/-setAPIKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTCartoSQLService(im)setAPIKey:">-setAPIKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the optional API key used when accessing the online service.
+Usually this is not needed and can be left blank.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setAPIKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">apiKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The optional API key used when accessing the online service.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NTCartoSQLService(im)getAPITemplate"></a>
                     <a name="//apple_ref/objc/Method/-getAPITemplate" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NTCartoSQLService(im)getAPITemplate">-getAPITemplate</a>
@@ -1089,6 +1189,11 @@ By default cartodb.com endpoint is used. This needs to be redefined only for on-
                       <div class="abstract">
                         <p>Connects to the online service and performs the specified query,
 The resulting JSON is deserialized into a Variant that is returned.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If IO error occured during the operation.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1125,8 +1230,7 @@ The resulting JSON is deserialized into a Variant that is returned.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The query result. If query fails, null variant is returned.
-@throws NSException If IO error occured during the operation.</p>
+                        <p>The query result. If query fails, null variant is returned.</p>
                       </div>
                     </section>
                   </div>
@@ -1146,6 +1250,11 @@ The resulting JSON is deserialized into a Variant that is returned.</p>
                       <div class="abstract">
                         <p>Connects to the online service and performs the specified query.
 The resulting JSON is deserialized into a FeatureCollection that is returned.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If IO error occured during the operation.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1195,8 +1304,7 @@ The resulting JSON is deserialized into a FeatureCollection that is returned.</p
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The query result as feature collection. If query fails, null feature collection is returned.
-@throws NSException If IO error occured during the operation.</p>
+                        <p>The query result as feature collection. If query fails, null feature collection is returned.</p>
                       </div>
                     </section>
                   </div>
@@ -1224,11 +1332,6 @@ The resulting JSON is deserialized into a FeatureCollection that is returned.</p
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dealloc</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1238,7 +1341,7 @@ The resulting JSON is deserialized into a FeatureCollection that is returned.</p
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-02-22)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-05-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

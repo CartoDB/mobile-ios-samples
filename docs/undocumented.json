@@ -394,7 +394,7 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTCartoMapsService.h",
-      "line": 188,
+      "line": 199,
       "symbol": "NTCartoMapsService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -471,7 +471,7 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTCartoSQLService.h",
-      "line": 102,
+      "line": 113,
       "symbol": "NTCartoSQLService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -1136,84 +1136,84 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 145,
+      "line": 155,
       "symbol": "NTLayer.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 156,
+      "line": 166,
       "symbol": "NTLayerVector",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 167,
+      "line": 177,
       "symbol": "NTLayerVector.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 168,
+      "line": 178,
       "symbol": "NTLayerVector.-size",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 169,
+      "line": 179,
       "symbol": "NTLayerVector.-capacity",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 170,
+      "line": 180,
       "symbol": "NTLayerVector.-reserve:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 171,
+      "line": 181,
       "symbol": "NTLayerVector.-isEmpty",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 172,
+      "line": 182,
       "symbol": "NTLayerVector.-clear",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 173,
+      "line": 183,
       "symbol": "NTLayerVector.-add:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 174,
+      "line": 184,
       "symbol": "NTLayerVector.-get:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 175,
+      "line": 185,
       "symbol": "NTLayerVector.-set:val:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTLayer.h",
-      "line": 183,
+      "line": 193,
       "symbol": "NTLayerVector.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -1927,42 +1927,42 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTOSMOfflineGeocodingService.h",
-      "line": 60,
+      "line": 70,
       "symbol": "NTOSMOfflineGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTOSMOfflineGeocodingService.h",
-      "line": 61,
+      "line": 71,
       "symbol": "NTOSMOfflineGeocodingService.-calculateAddressesSwigExplicitNTOSMOfflineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTOSMOfflineGeocodingService.h",
-      "line": 81,
+      "line": 91,
       "symbol": "NTOSMOfflineGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTOSMOfflineReverseGeocodingService.h",
-      "line": 49,
+      "line": 59,
       "symbol": "NTOSMOfflineReverseGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTOSMOfflineReverseGeocodingService.h",
-      "line": 50,
+      "line": 60,
       "symbol": "NTOSMOfflineReverseGeocodingService.-calculateAddressesSwigExplicitNTOSMOfflineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTOSMOfflineReverseGeocodingService.h",
-      "line": 70,
+      "line": 80,
       "symbol": "NTOSMOfflineReverseGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -2109,21 +2109,21 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPackageManagerGeocodingService.h",
-      "line": 59,
+      "line": 69,
       "symbol": "NTPackageManagerGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPackageManagerGeocodingService.h",
-      "line": 60,
+      "line": 70,
       "symbol": "NTPackageManagerGeocodingService.-calculateAddressesSwigExplicitNTPackageManagerGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPackageManagerGeocodingService.h",
-      "line": 80,
+      "line": 90,
       "symbol": "NTPackageManagerGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -2144,21 +2144,21 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPackageManagerReverseGeocodingService.h",
-      "line": 48,
+      "line": 58,
       "symbol": "NTPackageManagerReverseGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPackageManagerReverseGeocodingService.h",
-      "line": 49,
+      "line": 59,
       "symbol": "NTPackageManagerReverseGeocodingService.-calculateAddressesSwigExplicitNTPackageManagerReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPackageManagerReverseGeocodingService.h",
-      "line": 69,
+      "line": 79,
       "symbol": "NTPackageManagerReverseGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -2249,42 +2249,42 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 75,
+      "line": 85,
       "symbol": "NTPeliasOnlineGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 76,
+      "line": 86,
       "symbol": "NTPeliasOnlineGeocodingService.-calculateAddressesSwigExplicitNTPeliasOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 96,
+      "line": 106,
       "symbol": "NTPeliasOnlineGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 63,
+      "line": 73,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 64,
+      "line": 74,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-calculateAddressesSwigExplicitNTPeliasOnlineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 84,
+      "line": 94,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -3152,14 +3152,56 @@
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyle.h",
-      "line": 89,
+      "line": 36,
+      "symbol": "NTTextMargins.-initWithLeft:top:right:bottom:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyle.h",
+      "line": 37,
+      "symbol": "NTTextMargins.-getLeft",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyle.h",
+      "line": 38,
+      "symbol": "NTTextMargins.-getTop",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyle.h",
+      "line": 39,
+      "symbol": "NTTextMargins.-getRight",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyle.h",
+      "line": 40,
+      "symbol": "NTTextMargins.-getBottom",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyle.h",
+      "line": 48,
+      "symbol": "NTTextMargins.-dealloc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyle.h",
+      "line": 148,
       "symbol": "NTTextStyle.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTextStyleBuilder.h",
-      "line": 120,
+      "line": 172,
       "symbol": "NTTextStyleBuilder.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -3217,6 +3259,48 @@
       "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTileLoadListener.h",
       "line": 80,
       "symbol": "NTTileLoadListener.-dealloc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTomTomOnlineGeocodingService.h",
+      "line": 85,
+      "symbol": "NTTomTomOnlineGeocodingService.-calculateAddresses:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTomTomOnlineGeocodingService.h",
+      "line": 86,
+      "symbol": "NTTomTomOnlineGeocodingService.-calculateAddressesSwigExplicitNTTomTomOnlineGeocodingService:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTomTomOnlineGeocodingService.h",
+      "line": 106,
+      "symbol": "NTTomTomOnlineGeocodingService.-dealloc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
+      "line": 73,
+      "symbol": "NTTomTomOnlineReverseGeocodingService.-calculateAddresses:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
+      "line": 74,
+      "symbol": "NTTomTomOnlineReverseGeocodingService.-calculateAddressesSwigExplicitNTTomTomOnlineReverseGeocodingService:",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/nutiteq/jenkins/workspace/cartomobile sdk ios master/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
+      "line": 94,
+      "symbol": "NTTomTomOnlineReverseGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },

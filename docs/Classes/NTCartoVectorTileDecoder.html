@@ -158,6 +158,9 @@
                 <a href="../Classes/NTEditableVectorLayer.html">NTEditableVectorLayer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTExceptionWrapper.html">NTExceptionWrapper</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTFeature.html">NTFeature</a>
               </li>
               <li class="nav-group-task">
@@ -548,6 +551,9 @@
                 <a href="../Classes/NTText.html">NTText</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTTextMargins.html">NTTextMargins</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTTextStyle.html">NTTextStyle</a>
               </li>
               <li class="nav-group-task">
@@ -567,6 +573,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTTileLoadListener.html">NTTileLoadListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTTomTomOnlineGeocodingService.html">NTTomTomOnlineGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTTomTomOnlineReverseGeocodingService.html">NTTomTomOnlineReverseGeocodingService</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTTorqueTileDecoder.html">NTTorqueTileDecoder</a>
@@ -785,6 +797,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Constructs a decoder for Carto vector tiles based on specified CartoCSS style set.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If the decoder could not be created or there are issues with the style set.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -825,8 +842,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The CartoCSS style sets for the layers.
-@throws NSException If the decoder could not be created or there are issues with the style set.</p>
+                                  <p>The CartoCSS style sets for the layers.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1004,6 +1020,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the CartoCSS style set used by the decoder for the specified layer.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If the layer id is not valid.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1040,8 +1061,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The given layer CartoCSS style.
-@throws NSException If the layer id is not valid.</p>
+                        <p>The given layer CartoCSS style.</p>
                       </div>
                     </section>
                   </div>
@@ -1060,6 +1080,16 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Sets the CartoCSS style set used by the decoder for the specified layer.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If the decoder could not be updated or there are issues with the CartoCSS.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws NSException If the layer id is not valid.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1100,9 +1130,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The new style set to use.
-@throws NSException If the decoder could not be updated or there are issues with the CartoCSS.
-@throws NSException If the layer id is not valid.</p>
+                                  <p>The new style set to use.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1199,11 +1227,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">dealloc</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">dealloc</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1213,7 +1236,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-02-22)</p>
+          <p>&copy; 2018 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2018-05-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
