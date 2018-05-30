@@ -7,15 +7,34 @@
 
 ## Installation Guide
   
-* Via manually downloading the SDK:
+*Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in Xcode point of view.*
+  
+#### Manually downloading the SDK:
+
   1. Get SDK package latest dev build: [sdk4-ios-snapshot-latest.zip](https://nutifront.s3.amazonaws.com/sdk_snapshots/sdk4-ios-snapshot-latest.zip)
   1. Unzip it and copy *CartoMobileSDK.framework*  to the xCode project root folder
 
-* Via CocoaPods:
-  1. Navigate to a project's folder in the **Terminal**. *Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in Xcode point of view.*
-  2. Type `pod install` to download the SDK 
+Please note that this is not the preferred method, as the SDK itelf is too large to be uploaded to Github.
+
+#### Via CocoaPods:
+
+The following steps assume you know what Cocoapods are and have the CL tool installed on your system.
+
+  1. Navigate to a project's folder in the **Terminal**.
+  2. Type `pod install` to download the SDK 
   3. Run the project via the **.xcworkspace** file
 
+#### Via Carthage:
+
+The following steps assume you know what Carthage is and have the CL tool installed on your system.
+
+ 1. Move `Cartfile` in the root of this repository to a specific project
+ 2. Navigate to a project's folder in the **Terminal**.
+ 3. Type `carthage update` to download the SDK 
+ 2. Add `$(SRCROOT)/Carthage/Build/iOS` to XCode Framework Search paths (Project properties > Build )
+ 3. Add `Carthage/Build/iOS/CartoMobileSDK.framework` to XCode Embedded Binaries (Project properties > General)
+
+	
 ## Sample structure
 
 1. **Hello Map**
