@@ -76,6 +76,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
             let action = package.getActionText()
             
             if (action == Package.ACTION_DOWNLOAD) {
+                AppDelegate.printTimeWithMessage(message: "Download button clicked at")
                 manager.startPackageDownload(package.id)
                 progressLabel.show()
                 enqueue(package: package)
@@ -102,6 +103,8 @@ class PackageDownloadBaseView  : DownloadBaseView {
             let download: Package? = self.getCurrentDownload()
             
             if (download != nil) {
+                
+                AppDelegate.printTimeWithMessage(message: "Download status change " + String(describing: Int(status.getProgress())) + "at")
                 
                 if (status.getProgress() == 100) {
                     let text = "Download complete"

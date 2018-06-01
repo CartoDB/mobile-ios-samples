@@ -14,6 +14,8 @@ class BaseGeocodingController : BasePackageDownloadController {
         contentView.downloadComplete(id: id)
         
         DispatchQueue.main.async {
+            
+            AppDelegate.printTimeWithMessage(message: "Download finished at")
             let package = self.contentView.manager?.getLocalPackage(id)
             
             if (package == nil) {

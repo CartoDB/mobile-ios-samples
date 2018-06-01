@@ -25,6 +25,9 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
         view = contentView
   
         let folder = Utils.createDirectory(name: BaseGeocodingView.PACKAGE_FOLDER)
+        
+//        let source = "http://137.117.212.254/maparea/v2/carto.streets/1/{tilemask}.mbtiles?appToken=9dd6ef62-c1b2-4e8c-b3ff-90fbf979c87b"
+//        contentView.manager = NTCartoPackageManager(source: source, dataFolder: folder)
         contentView.manager = NTCartoPackageManager(source: BaseGeocodingView.SOURCE, dataFolder: folder)
         
         setOnlineMode()

@@ -52,6 +52,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    static func printTimeWithMessage(message: String) {
+        // get the current date and time
+        let currentDateTime = Date()
+        
+        // initialize the date formatter and set the style
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        formatter.dateStyle = .long
+        
+        print(message + ": " + formatter.string(from: currentDateTime))
+        
+    }
 }
 
 class CustomNavigationController : UINavigationController {
