@@ -45,6 +45,11 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         } else {
             goOffline()
         }
+        
+//        let berlin = Cities.list[0].boundingBox.toString()
+        let newYork = Cities.list[1].boundingBox.toString()
+        contentView.manager.startPackageDownload(newYork)
+        AppDelegate.printTimeWithMessage(message: "Download started at: ")
     }
     
     override func viewWillDisappear(_ animated: Bool) {

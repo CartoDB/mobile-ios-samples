@@ -104,7 +104,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
             
             if (download != nil) {
                 
-                AppDelegate.printTimeWithMessage(message: "Download status change " + String(describing: Int(status.getProgress())) + "at")
+                AppDelegate.printTimeWithMessage(message: "Download status change (" + String(describing: Int(status.getProgress())) + "%) at")
                 
                 if (status.getProgress() == 100) {
                     let text = "Download complete"
