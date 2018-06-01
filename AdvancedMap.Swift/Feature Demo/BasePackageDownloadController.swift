@@ -45,10 +45,7 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         } else {
             goOffline()
         }
-        
-//        let berlin = Cities.list[0].boundingBox.toString()
-        let newYork = Cities.list[1].boundingBox.toString()
-        contentView.manager.startPackageDownload(newYork)
+
         AppDelegate.printTimeWithMessage(message: "Download started at: ")
     }
     
@@ -101,11 +98,15 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
     
     func switchChanged() {
         
-        if (contentView.switchButton.isOnline()) {
-            setOnlineMode()
-        } else {
-            setOfflineMode()
-        }
+        
+//        let berlin = Cities.list[0].boundingBox.toString()
+        let newYork = Cities.list[1].boundingBox.toString()
+        contentView.manager.startPackageDownload(newYork)
+//        if (contentView.switchButton.isOnline()) {
+//            setOnlineMode()
+//        } else {
+//            setOfflineMode()
+//        }
     }
     
     func setOnlineMode() {
