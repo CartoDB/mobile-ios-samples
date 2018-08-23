@@ -34,7 +34,18 @@ The following steps assume you know what Carthage is and have the CL tool instal
  2. Add `$(SRCROOT)/Carthage/Build/iOS` to XCode Framework Search paths (Project properties > Build )
  3. Add `Carthage/Build/iOS/CartoMobileSDK.framework` to XCode Embedded Binaries (Project properties > General)
 
-	
+## Cocoapod Removal
+
+These samples are, by default, designed to work with Cocoapods. In order to deintegrate Cocoapods, do the following:
+
+  1. Navigate to a project's folder in the **Terminal**.
+  2. `sudo gem install cocoapods-deintegrate cocoapods-clean`
+  3. `pod deintegrate`
+  4. `pod clean`
+  5. Under Build Phases > Link Binary With Libraries, remove CardoMobileSDK.framework
+
+Furthermore, note that trying to run Carthage on a project that was previously configured with cocoapoads may or may not result in errors, cf. [this](https://stackoverflow.com/questions/34642165/this-applications-bundle-identifier-does-not-match-its-code-signing-identifier) post
+
 ## Sample structure
 
 1. **Hello Map**
