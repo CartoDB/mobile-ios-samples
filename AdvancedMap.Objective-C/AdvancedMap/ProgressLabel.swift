@@ -11,8 +11,8 @@ import UIKit
 
 @objc class ProgressLabel : AlertBaseView {
     
-    var label: UILabel!
-    var progressBar: UIView!
+    @objc var label: UILabel!
+    @objc var progressBar: UIView!
     
     var height: CGFloat!
 
@@ -38,7 +38,7 @@ import UIKit
         label.frame = bounds
     }
 
-    func update(text: String, progress: CGFloat) {
+    @objc func update(text: String, progress: CGFloat) {
         
         if (!isVisible()) {
             show()
@@ -48,11 +48,11 @@ import UIKit
         updateProgressBar(progress: progress)
     }
     
-    func update(text: String) {
+    @objc func update(text: String) {
         label.text = text
     }
     
-    func complete(message: String) {
+    @objc func complete(message: String) {
         
         if (!isVisible()) {
             show()
@@ -63,11 +63,11 @@ import UIKit
         Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(onTimerCompleted), userInfo: nil, repeats: false)
     }
     
-    func onTimerCompleted() {
+    @objc func onTimerCompleted() {
         hide()
     }
     
-    func updateProgressBar(progress: CGFloat) {
+    @objc func updateProgressBar(progress: CGFloat) {
         
         let width: CGFloat = (frame.width * progress) / 100
         let height: CGFloat = 3

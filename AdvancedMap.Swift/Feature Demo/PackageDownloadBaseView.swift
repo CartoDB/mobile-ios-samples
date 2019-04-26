@@ -204,7 +204,7 @@ class PackageDownloadBaseView  : DownloadBaseView {
                 package.info = info
             } else {
                 // This is a package group
-                modified = modified?.substring(to: index!)
+                modified = String(modified![..<index!])
                 
                 // Try n' find an existing package from the list
                 let found = packages.filter({ $0.name == modified })

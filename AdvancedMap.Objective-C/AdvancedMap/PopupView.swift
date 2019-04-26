@@ -11,8 +11,8 @@ import UIKit
 
 @objc class PopupView : UIView {
     
-    var header: SlideInPopupHeader!
-    var separator: UIView!
+    @objc var header: SlideInPopupHeader!
+    @objc var separator: UIView!
     
     convenience init() {
         self.init(frame: CGRect.zero)

@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class LanguagePopupContent : UIView, UITableViewDataSource {
+@objc class LanguagePopupContent : UIView, UITableViewDataSource {
     
-    var table: UITableView!
+    @objc var table: UITableView!
     
-    var languages: [Language] = [Language]()
+    @objc var languages: [Language] = [Language]()
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -28,7 +28,7 @@ class LanguagePopupContent : UIView, UITableViewDataSource {
         table.frame = bounds
     }
     
-    func addLanguages(languages: [Language]) {
+    @objc func addLanguages(languages: [Language]) {
         self.languages = languages
         table.reloadData()
     }
@@ -46,6 +46,6 @@ class LanguagePopupContent : UIView, UITableViewDataSource {
     }
 }
 
-class LanguageCell : UITableViewCell {
+@objc class LanguageCell : UITableViewCell {
     
 }

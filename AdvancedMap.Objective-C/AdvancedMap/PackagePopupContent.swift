@@ -10,9 +10,9 @@ class PackagePopupContent : UIView, UITableViewDataSource {
     
     let IDENTIFIER = "CountryCell"
     
-    var table: UITableView!
+    @objc var table: UITableView!
     
-    var packages: [Package] = [Package]()
+    @objc var packages: [Package] = [Package]()
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -28,13 +28,13 @@ class PackagePopupContent : UIView, UITableViewDataSource {
         table.frame = bounds
     }
     
-    func addPackages(packages: [Package]) {
+    @objc func addPackages(packages: [Package]) {
         self.packages = packages
         table.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,23 +51,23 @@ class PackagePopupContent : UIView, UITableViewDataSource {
         return cell!
     }
     
-    func findAndUpdate(package: Package, progress: CGFloat) {
+    @objc func findAndUpdate(package: Package, progress: CGFloat) {
         find(package: package)?.update(package: package, progress: progress)
     }
     
-    func findAndUpdate(package: Package) {
+    @objc func findAndUpdate(package: Package) {
         find(package: package)?.update(package: package)
     }
 
-    func findAndUpdate(id: String, status: NTPackageStatus) {
+    @objc func findAndUpdate(id: String, status: NTPackageStatus) {
         find(id: id)?.update(status: status)
     }
     
-    func find(package: Package) -> PackageCell? {
+    @objc func find(package: Package) -> PackageCell? {
         return find(id: package.identifier)
     }
     
-    func find(id: String) -> PackageCell? {
+    @objc func find(id: String) -> PackageCell? {
         for cell in table.visibleCells {
             let packageCell = cell as? PackageCell
             

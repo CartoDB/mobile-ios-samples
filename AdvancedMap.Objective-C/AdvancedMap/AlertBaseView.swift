@@ -15,13 +15,13 @@ import UIKit
         return self.alpha == 1
     }
     
-    func hide() {
+    @objc func hide() {
         if (isVisible()) {
             animateAlpha(alpha: 0)
         }
     }
     
-    func show() {
+    @objc func show() {
         if (!isVisible()) {
             animateAlpha(alpha: 1)
         }

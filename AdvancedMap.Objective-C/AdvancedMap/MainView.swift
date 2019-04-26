@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class MainView: UIScrollView {
+@objc class MainView: UIScrollView {
     
-    var galleryDelegate: GalleryDelegate?
+    @objc var galleryDelegate: GalleryDelegate?
     
-    var views: [GalleryRow] = [GalleryRow]()
+    @objc var views: [GalleryRow] = [GalleryRow]()
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -24,7 +24,7 @@ class MainView: UIScrollView {
         addGestureRecognizer(recognizer)
     }
     
-    func tapped(_ sender: UITapGestureRecognizer) {
+    @objc func tapped(_ sender: UITapGestureRecognizer) {
         
         let location = sender.location(in: self)
         
@@ -79,7 +79,7 @@ class MainView: UIScrollView {
         }
     }
     
-    func addRows(rows: [Sample]) {
+    @objc func addRows(rows: [Sample]) {
         
         views.removeAll()
         

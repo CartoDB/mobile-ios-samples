@@ -11,11 +11,11 @@ import UIKit
 
 @objc class SlideInPopupHeader : UIView {
     
-    var height: CGFloat = 40
+    @objc var backButton: PopupBackButton!
+    @objc var label: UILabel!
+    @objc var closeButton: PopupCloseButton!
     
-    var backButton: PopupBackButton!
-    var label: UILabel!
-    var closeButton: PopupCloseButton!
+    @objc var height: CGFloat = 40
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -43,7 +43,6 @@ import UIKit
     }
     
     override func layoutSubviews() {
-        
         let padding: CGFloat = 15
         
         var x: CGFloat = padding
@@ -61,20 +60,20 @@ import UIKit
         closeButton.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
-    func setText(text: String) {
+    @objc func setText(text: String) {
         label.text = text
         label.sizeToFit()
         layoutSubviews()
     }
     
-    func closeTapped(_ sender: UITapGestureRecognizer) {
+    @objc func closeTapped(_ sender: UITapGestureRecognizer) {
         (superview?.superview as? SlideInPopup)?.hide()
     }
 }
 
 class PopupCloseButton : UIView {
     
-    var imageView: UIImageView!
+    @objc var imageView: UIImageView!
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -95,10 +94,10 @@ class PopupCloseButton : UIView {
 
 class PopupBackButton : UIView {
     
-    var delegate: ClickDelegate?
+    @objc var delegate: ClickDelegate?
     
-    var button: UIImageView!
-    var text: UILabel!
+    @objc var button: UIImageView!
+    @objc var text: UILabel!
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -135,7 +134,7 @@ class PopupBackButton : UIView {
         text.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
-    func backTapped(_ sender: UITapGestureRecognizer) {
+    @objc func backTapped(_ sender: UITapGestureRecognizer) {
         delegate?.click(sender: self)
     }
 }

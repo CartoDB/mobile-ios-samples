@@ -9,25 +9,25 @@
 import Foundation
 import UIKit
 
-class StylePopupContent : UIScrollView {
+@objc class StylePopupContent : UIScrollView {
     
-    static let CartoVectorSource = "carto.streets"
-    static let CartoRasterSource = "carto.osm"
+    @objc static let CartoVectorSource = "carto.streets"
+    @objc static let CartoRasterSource = "carto.osm"
     
-    static let Bright = "BRIGHT"
-    static let Gray = "GRAY"
-    static let Dark = "DARK"
+    @objc static let Bright = "BRIGHT"
+    @objc static let Gray = "GRAY"
+    @objc static let Dark = "DARK"
     
-    static let Positron = "POSITRON"
-    static let DarkMatter = "DARKMATTER"
-    static let Voyager = "VOYAGER"
+    @objc static let Positron = "POSITRON"
+    @objc static let DarkMatter = "DARKMATTER"
+    @objc static let Voyager = "VOYAGER"
     
-    static let VoyagerUrl = "http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png";
-    static let PositronUrl = "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
-    static let DarkMatterUrl = "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png";
+    @objc static let VoyagerUrl = "http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png";
+    @objc static let PositronUrl = "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png";
+    @objc static let DarkMatterUrl = "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png";
     
-    var cartoVector: StylePopupContentSection!
-    var cartoRaster: StylePopupContentSection!
+    @objc var cartoVector: StylePopupContentSection!
+    @objc var cartoRaster: StylePopupContentSection!
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -71,30 +71,30 @@ class StylePopupContent : UIScrollView {
         contentSize = CGSize(width: frame.width, height: y + h + padding)
     }
     
-    func highlightDefault() {
+    @objc func highlightDefault() {
         getDefault().highlight()
     }
     
-    func normalizeDefaultHighlight() {
+    @objc func normalizeDefaultHighlight() {
         getDefault().normalize()
     }
     
-    func getDefault() -> StylePopupContentSectionItem {
+    @objc func getDefault() -> StylePopupContentSectionItem {
         return cartoVector.list[0]
     }
     
 }
 
-class StylePopupContentSection : UIView {
+@objc class StylePopupContentSection : UIView {
     
-    var header: UILabel!
-    var separator: UIView!
+    @objc var header: UILabel!
+    @objc var separator: UIView!
     
-    var list = [StylePopupContentSectionItem]()
+    @objc var list = [StylePopupContentSectionItem]()
     
-    var delegate: StyleUpdateDelegate!
+    @objc var delegate: StyleUpdateDelegate!
     
-    var source: String!
+    @objc var source: String!
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -146,7 +146,7 @@ class StylePopupContentSection : UIView {
     
     let rowHeight: CGFloat = 110
     
-    func getHeight() -> CGFloat {
+    @objc func getHeight() -> CGFloat {
         
         let extra = headerHeight - CGFloat(Int(list.count / 3 * 2) * Int(padding))
         
@@ -161,7 +161,7 @@ class StylePopupContentSection : UIView {
         return rowHeight + extra
     }
     
-    func itemTapped(_ sender: UITapGestureRecognizer) {
+    @objc func itemTapped(_ sender: UITapGestureRecognizer) {
         
         let location = sender.location(in: self)
         
@@ -181,10 +181,10 @@ class StylePopupContentSection : UIView {
     }
 }
 
-class StylePopupContentSectionItem : UIView {
+@objc class StylePopupContentSectionItem : UIView {
     
-    var imageView: UIImageView!
-    var label: UILabel!
+    @objc var imageView: UIImageView!
+    @objc var label: UILabel!
     
     convenience init(text: String, imageUrl: String) {
         self.init(frame: CGRect.zero)
@@ -222,11 +222,11 @@ class StylePopupContentSectionItem : UIView {
         label.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
-    func highlight() {
+    @objc func highlight() {
         imageView.layer.borderWidth = 3
     }
     
-    func normalize() {
+    @objc func normalize() {
         imageView.layer.borderWidth = 0
     }
 }

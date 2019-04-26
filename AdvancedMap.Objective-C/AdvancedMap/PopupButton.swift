@@ -16,7 +16,7 @@ import UIKit
     var imageView: UIImageView!
     var image: UIImage!
     
-    convenience init(imageUrl: String) {
+    @objc convenience init(imageUrl: String) {
         self.init(frame: CGRect.zero)
         
         initialize(imageUrl: imageUrl)

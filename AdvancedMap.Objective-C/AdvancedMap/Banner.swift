@@ -58,22 +58,22 @@ import UIKit
         label.frame = CGRect(x: x, y: y, width: w, height: h)
     }
     
-    func addRightItem(item: UIImageView) {
+    @objc func addRightItem(item: UIImageView) {
         rightItem = item
         addSubview(rightItem!)
         layoutSubviews()
     }
     
-    func show(text: String) {
+    @objc func show(text: String) {
         label.text = text
         show()
     }
     
-    func showInformation(text: String, autoclose: Bool) {
+    @objc func showInformation(text: String, autoclose: Bool) {
         show(text: text)
         
         if (superview != nil) {
-            superview?.bringSubview(toFront: self)
+            superview?.bringSubviewToFront(self)
         }
         
         if (autoclose) {

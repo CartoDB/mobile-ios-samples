@@ -45,7 +45,7 @@ class ClusteringController : BaseController {
             let reader = NTGeoJSONGeometryReader()
             reader?.setTargetProjection(self.contentView.map.getOptions().getBaseProjection())
             
-            let features = reader?.readFeatureCollection(json as String!)
+            let features = reader?.readFeatureCollection(json as String)
             
             let elements = NTVectorElementVector()
             let total = Int((features?.getFeatureCount())!)

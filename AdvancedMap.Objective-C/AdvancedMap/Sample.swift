@@ -8,13 +8,13 @@
 
 import Foundation
 
-class Sample : NSObject {
+@objc class Sample : NSObject {
     
-    var imageUrl: String!
+    @objc var imageUrl: String!
     
-    var title: String!
+    @objc var title: String!
     
-    var subtitle: String!
+    @objc var subtitle: String!
     
-    var controller: String!
+    @objc var controller: String!
 }

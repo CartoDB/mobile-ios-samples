@@ -23,7 +23,7 @@ class PackageCell : UITableViewCell {
     let titleFont = UIFont(name: "HelveticaNeue-Bold", size: 13)
     let titleColor = Colors.navy
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none

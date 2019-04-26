@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class GalleryRow : UIView {
+@objc class GalleryRow : UIView {
     
-    var imageView: UIImageView!
-    var titleView: UILabel!
-    var descriptionView: UILabel!
+    @objc var imageView: UIImageView!
+    @objc var titleView: UILabel!
+    @objc var descriptionView: UILabel!
     
-    var sample: Sample!
+    @objc var sample: Sample!
     
     convenience init() {
         
@@ -98,7 +98,7 @@ class GalleryRow : UIView {
         super.touchesCancelled(touches, with: event)
     }
     
-    func update(sample: Sample) {
+    @objc func update(sample: Sample) {
         
         self.sample = sample
         

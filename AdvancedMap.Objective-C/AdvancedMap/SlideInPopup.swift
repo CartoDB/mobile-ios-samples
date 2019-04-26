@@ -11,13 +11,12 @@ import UIKit
 
 @objc class SlideInPopup : UIView {
     
-    var transparentArea: UIView!
-    var popup: PopupView!
-
+    @objc var transparentArea: UIView!
+    @objc var popup: PopupView!
+    @objc var content: UIView!
+    
     var hiddenY: CGFloat!
     var visibleY: CGFloat!
-    
-    var content: UIView!
     
     convenience init() {
         self.init(frame: CGRect.zero)
@@ -88,11 +87,11 @@ import UIKit
         }
     }
     
-    func backgroundTapped(_ sender: UITapGestureRecognizer) {
+    @objc func backgroundTapped(_ sender: UITapGestureRecognizer) {
         hide()
     }
 
-    func setContent(content: UIView) {
+    @objc func setContent(content: UIView) {
         
         if (self.content != nil) {
             self.content.removeFromSuperview()
@@ -105,16 +104,16 @@ import UIKit
         layoutSubviews()
     }
     
-    func show() {
-        superview?.bringSubview(toFront: self)
+    @objc func show() {
+        superview?.bringSubviewToFront(self)
         slidePopupTo(y: visibleY)
     }
     
-    func hide() {
+    @objc func hide() {
         slidePopupTo(y: hiddenY)
     }
     
-    func slidePopupTo(y: CGFloat) {
+    @objc func slidePopupTo(y: CGFloat) {
 
         UIView.animate(withDuration: 0.3, animations: {
             
@@ -129,7 +128,7 @@ import UIKit
         }, completion: { (finished: Bool) -> Void in
             
             if (y.isEqual(to: self.hiddenY)) {
-                self.superview?.sendSubview(toBack: self)
+                self.superview?.sendSubviewToBack(self)
             }
             
         })

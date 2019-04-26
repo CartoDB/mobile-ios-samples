@@ -11,23 +11,23 @@ import UIKit
 
 @objc class Device : NSObject {
     
-    static func isLandscape() -> Bool {
+    @objc static func isLandscape() -> Bool {
         return UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight
     }
     
-    static func isTablet() -> Bool {
+    @objc static func isTablet() -> Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
     
-    static func navigationbarHeight() -> CGFloat {
+    @objc static func navigationbarHeight() -> CGFloat {
         return ((UIApplication.shared.delegate as! AppDelegate).navigationController?.navigationBar.frame.height)!
     }
     
-    static func statusBarHeight() -> CGFloat {
+    @objc static func statusBarHeight() -> CGFloat {
         return UIApplication.shared.statusBarFrame.height
     }
     
-    static func trueY0() -> CGFloat {
+    @objc static func trueY0() -> CGFloat {
         return navigationbarHeight() + statusBarHeight()
     }
 }
