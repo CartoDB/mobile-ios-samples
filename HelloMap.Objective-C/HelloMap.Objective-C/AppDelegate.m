@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSString* License = @"XTUMwQ0ZRQ3VqQkgxQ3RSVjlLNlNSUmZFOXR0VDlWdzc3Z0lVWEZMQ1hIVis5Njc5Y1lYWHE1TXJOYXY2TEQ0PQoKYXBwVG9rZW49NzkwODczNmUtMmFmNS00YTg4LWI1NGItNGVmNWI1MzRlNjA5CmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmhlbGxvbWFwLm9iagpvbmxpbmVMaWNlbnNlPTEKcHJvZHVjdHM9c2RrLWlvcy00LioKd2F0ZXJtYXJrPWN1c3RvbQo=";
+    NSString* License = @"XTUN3Q0ZFTWNwNlBVTGw0SEk1bHZNMmF6MEVqYnN5VkZBaFFUWW5URXRDMStoYlNCNS9EZFl0bTN5M2NyM3c9PQoKYXBwVG9rZW49ZWQ4YmVlYjktNmMwMy00MjcwLWJjMWEtZGFjYjZiMDk4Y2MyCmJ1bmRsZUlkZW50aWZpZXI9Y29tLm51dGl0ZXEuaGVsbG9tYXAub2JqCm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg==";
     
     // The initial step: register your license.
     // This must be done before using MapView

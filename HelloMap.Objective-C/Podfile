@@ -1,5 +1,5 @@
 platform :ios, '9.0'
 
 target 'HelloMap.Objective-C' do
-  pod 'CartoMobileSDK', '4.1.4-rc.1'
+  pod 'CartoMobileSDK', '4.1.6'
 end
