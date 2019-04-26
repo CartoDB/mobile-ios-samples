@@ -14,11 +14,10 @@ NSString *const CARTO_VECTOR_SOURCE = @"carto.streets";
 NSString *const MAPZEN_SOURCE = @"mapzen.osm";
 NSString *const CARTO_RASTER_SOURCE = @"carto.osm";
 
-NSString *const OFFLINE_ROUTING_SOURCE = @"carto.streets";
-NSString *const ONLINE_ROUTING_SOURCE = @"nutiteq.osm";
+NSString *const OFFLINE_ROUTING_SOURCE = @"nutiteq.osm.car";
+NSString *const ONLINE_ROUTING_SOURCE = @"nutiteq.osm.car";
 
 NSString *const ROUTING_TAG = @"routing:";
-NSString *const TRANSPORT_MODE_CAR = @".car";
 
 NSString *const GEOCODING_TAG = @"geocoding:";
 NSString *const OFFLINE_GEOCODING_SOURCE = @"carto.streets";

@@ -11,7 +11,7 @@ import Foundation
 class Routing {
     
     static let ROUTING_TAG = "routing:"
-    static let OFFLINE_ROUTING_SOURCE = "carto.streets"
+    static let OFFLINE_ROUTING_SOURCE = "nutiteq.osm.car"
 
     static let MAP_SOURCE = "carto.streets"
     

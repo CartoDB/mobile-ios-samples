@@ -42,6 +42,14 @@ class Samples {
         list.append(sample)
         
         sample = Sample()
+        sample.title = "OFFLINE ROUTING"
+        sample.description = "Download existing routing packages for offline use"
+        sample.imageResource = folder + "icon_sample_offline_routing.png"
+        sample.controller = OfflineRoutingController()
+        
+        list.append(sample)
+        
+        sample = Sample()
         sample.title = "VECTOR ELEMENTS"
         sample.description = "Different popups, polygons and a NMLModel"
         sample.imageResource = folder + "icon_sample_vector_objects.png"

@@ -19,12 +19,12 @@
 {
     [super viewDidLoad];
     
-    NSString *source = [ROUTING_TAG stringByAppendingString: CARTO_VECTOR_SOURCE];
-    NSString *folder = [self createFolder:@"com.carto.routingpackages"];
+    NSString *source = [ROUTING_TAG stringByAppendingString: OFFLINE_ROUTING_SOURCE];
+    NSString *folder = [self createFolder:@"com.carto.osrmroutingpackages"];
     
     [self.contentView setManager:source folder:folder];
     
-    self.service = [[NTPackageManagerValhallaRoutingService alloc] initWithPackageManager:self.contentView.manager];
+    self.service = [[NTPackageManagerRoutingService alloc] initWithPackageManager:self.contentView.manager];
 }
 
 - (void)viewWillAppear:(BOOL)animated

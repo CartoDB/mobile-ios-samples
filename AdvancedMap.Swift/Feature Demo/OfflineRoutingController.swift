@@ -95,7 +95,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
     
     override func setOfflineMode() {
         super.setOfflineMode()
-        routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
+        routing.service = NTPackageManagerRoutingService(packageManager: contentView.manager)
     }
 }
 

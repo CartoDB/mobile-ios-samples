@@ -37,8 +37,7 @@ class ViewController: GLKViewController {
     }
 }
 
-public class HelloMapListener : NTMapEventListener
-{
+public class HelloMapListener : NTMapEventListener {
     var marker: NTMarker?
     
     convenience init(marker: NTMarker) {
