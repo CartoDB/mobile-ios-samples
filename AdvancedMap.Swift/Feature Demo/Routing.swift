@@ -87,11 +87,7 @@ class Routing {
     }
     
     func updateMode(mode: String) {
-        if service is NTCartoOnlineRoutingService {
-            // one fixed mode for NTCartoOnlineRoutingService
-        } else if let offlineService = service as? NTPackageManagerValhallaRoutingService {
-            offlineService.setProfile(mode)
-        }
+
     }
     
     func updateFinishMarker(icon: String, size: Float, color: NTColor? = nil) {
@@ -222,34 +218,7 @@ class Routing {
         stopMarker?.setVisible(true)
     }
     
-    func matchRoute(points: NTMapPosVector) -> NTMapPos? {
         
-        if (!(self.service is NTPackageManagerValhallaRoutingService)) {
-            return nil
-        }
-        
-//        return points.get(Int32(points.size() - 1))
-        
-        /*
-         * Route matching (NTRouteMatchingRequest & NTRouteMatchingResult)
-         * was introduced after the release of v4.1.0.
-         * You need a special debug build to match your route.
-         * Download the latest version from: https://github.com/CartoDB/mobile-sdk/wiki/Using-dev-build
-         * and simply replace (overwrite) CartoMobileSDK.framework file at
-         * mobile-ios-samples/AdvancedMap.Swift/Pods/CartoMobileSDK
-         *
-         * If you do not wish to use the latest dev build,
-         * simply comment out these lines and return the final element of the original list.
-         */
-        let projection = mapView.getOptions().getBaseProjection()
-        let accuracy: Float = 10.0
-        let request = NTRouteMatchingRequest(projection: projection, points: points, accuracy: accuracy)
-        let result: NTRouteMatchingResult = (self.service as! NTPackageManagerValhallaRoutingService).matchRoute(request)
-        let points = result.getPoints()
- 
-        return points?.get(Int32((points?.size())! - 1))
-    }
-    
     func isPointOnRoute(point: NTMapPos) -> Bool {
         
         let line = getLine()

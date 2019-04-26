@@ -12,7 +12,7 @@ import HockeySDK
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let license = "XTUN3Q0ZHdnljVlVQSGV0SUFKSHpMQ2E2d2lqSHBkOWVBaFFzWHQ3aHBKWno1RGJHZ0NlaFFUem5pc3hLanc9PQoKYXBwVG9rZW49ZTJjMTBmMGItYzFkNy00MDkwLWEwNTQtNTcxMDQ5NDk2NjViCmJ1bmRsZUlkZW50aWZpZXI9Y29tLmNhcnRvLmFkdmFuY2VkLnN3aWZ0Cm9ubGluZUxpY2Vuc2U9MQpwcm9kdWN0cz1zZGstaW9zLTQuKgp3YXRlcm1hcms9Y3VzdG9tCg=="
+    let license = "XTUMwQ0ZRQ3JlQnYreUIzWkZ3Q0Y3V0ZicVVCa0FpTFVwd0lVVFQ2OC93U1pqUWlDRyt1TEIrUisvWUhob0ZNPQoKYXBwVG9rZW49MWVmZDM2ZDQtMjQ0Yi00YjI2LTgyMmUtNWY5NWZjY2ExOTdkCmJ1bmRsZUlkZW50aWZpZXI9amFhay5hZHZhbmNlZC5zd2lmdApvbmxpbmVMaWNlbnNlPTEKcHJvZHVjdHM9c2RrLWlvcy00LioKd2F0ZXJtYXJrPWN1c3RvbQo="
     let identifier = "aea1fd9cdece4a779420c5310fc7b5f5"
     
     var window: UIWindow?

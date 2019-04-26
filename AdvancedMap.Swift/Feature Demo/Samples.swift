@@ -17,14 +17,7 @@ class Samples {
         let folder = ""
         
         var sample = Sample()
-        sample.title = "TURN-BY-TURN"
-        sample.description = "Online routing with Turn-By-Turn instructions"
-        sample.imageResource = folder + "icon_sample_turn_by_turn.png"
-        sample.controller = TurnByTurnController()
         
-        list.append(sample)
-        
-        sample = Sample()
         sample.title = "BASEMAP STYLES"
         sample.description = "Various samples of different CARTO Base Maps"
         sample.imageResource = folder + "icon_sample_styles.png"
@@ -45,14 +38,6 @@ class Samples {
         sample.description = "Download existing map packages for offline use"
         sample.imageResource = folder + "icon_sample_package_download.png"
         sample.controller = OfflineMapController()
-        
-        list.append(sample)
-        
-        sample = Sample()
-        sample.title = "OFFLINE ROUTING"
-        sample.description = "Download existing routing packages for offline use"
-        sample.imageResource = folder + "icon_sample_offline_routing.png"
-        sample.controller = OfflineRoutingController()
         
         list.append(sample)
         

@@ -21,16 +21,6 @@ class TurnByTurnController: BasePackageDownloadController, NextTurnDelegate {
         
         client = TurnByTurnClient(mapView: contentView.map)
         
-        // Offline routing manager and mode
-        let source = Routing.ROUTING_TAG + Routing.OFFLINE_ROUTING_SOURCE
-        let folder = Utils.createDirectory(name: PackageDownloadBaseView.ROUTING_FOLDER)
-        contentView.manager = NTCartoPackageManager(source: source, dataFolder: folder)
-        
-        client.routing.service = NTPackageManagerValhallaRoutingService(packageManager: contentView.manager)
-        
-        // Offline map manager and mode
-//        let manager = NTCartoPackageManager(source: Routing.MAP_SOURCE, dataFolder: Utils.createDirectory(name: "countrypackages"))
-//        contentView.setOfflineMode(manager: manager!)
         
         contentView.setOnlineMode()
     }
