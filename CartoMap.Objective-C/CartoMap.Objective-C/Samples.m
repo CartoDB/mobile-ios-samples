@@ -21,20 +21,6 @@
     Sample *sample = [[Sample alloc] init];
     
     sample = [[Sample alloc] init];
-    sample.title = @"L-train Area Vis";
-    sample.subtitle = @"L-train travel area analysis visualisation";
-    sample.controller = @"TrainVisController";
-    sample.imageUrl = @"image_viz_subway.png";
-    [list addObject:sample];
-    
-    sample = [[Sample alloc] init];
-    sample.title = @"Store Locations Vis";
-    sample.subtitle = @"Predicted store locations analysis";
-    sample.controller = @"StoresVisController";
-    sample.imageUrl = @"image_viz_store.png";
-    [list addObject:sample];
-    
-    sample = [[Sample alloc] init];
     sample.title = @"Raster Tile";
     sample.subtitle = @"PostGIS Raster in CARTO as anonymous map";
     sample.controller = @"AnonymousRasterTableController";
