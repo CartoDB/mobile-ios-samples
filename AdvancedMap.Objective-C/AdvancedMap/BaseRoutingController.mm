@@ -3,8 +3,7 @@
 
 @implementation BaseRoutingController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.contentView = [[PackageDownloadBaseView alloc] init];
@@ -64,8 +63,7 @@
     [self.mapListener setRouteDataSource:_routeDataSource];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [self.contentView.mapView setMapEventListener:self.mapListener];
@@ -73,8 +71,7 @@
 //    [self alert:@"Long click on the map to set the start and end position"];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     [self.contentView.mapView setMapEventListener:nil];
@@ -83,41 +80,38 @@
     [self.mapListener setRouteDataSource:nil];
 }
 
--(void)setStart:(NTMapPos *)mapPos
-{
+- (void)setStart:(NTMapPos *)mapPos {
     [_routeDataSource clear];
     [_stopMarker setVisible:NO];
     [_startMarker setPos:mapPos];
     [_startMarker setVisible:YES];
 }
 
--(void)setStop:(NTMapPos *)mapPos
-{
+- (void)setStop:(NTMapPos *)mapPos {
     [_stopMarker setPos:mapPos];
     [_stopMarker setVisible:YES];
     [self showRoute: [[_startMarker getGeometry] getCenterPos] stopPos: [[_stopMarker getGeometry] getCenterPos]];
 }
 
 // Calculate route, show on map
--(void)showRoute: (NTMapPos *)startPos stopPos:(NTMapPos *)stopPos
-{
-    NTMapPosVector* poses = [[NTMapPosVector alloc] init];
+- (void)showRoute: (NTMapPos *)startPos stopPos:(NTMapPos *)stopPos {
+    NTMapPosVector *poses = [[NTMapPosVector alloc] init];
     [poses add:startPos];
     [poses add:stopPos];
     
     NTProjection *projection = [[self.contentView.mapView getOptions] getBaseProjection];
-    NTRoutingRequest* request = [[NTRoutingRequest alloc] initWithProjection:projection points:poses];
+    NTRoutingRequest *request = [[NTRoutingRequest alloc] initWithProjection:projection points:poses];
     
     NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
     
     // Calculation should be in background thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        NTRoutingResult* route = nil;
+        NTRoutingResult *route = nil;
         @try {
             route = [self.service calculateRoute:request];
         }
-        @catch (NSException* ex) {
+        @catch (NSException *ex) {
             NSLog(@"Exception while routing: %@", ex);
         }
         
@@ -126,7 +120,6 @@
             NSTimeInterval duration = [NSDate timeIntervalSinceReferenceDate] - start;
             
             if (route == nil) {
-//                [self alert:@"route error"];
                 return;
             }
             
@@ -135,8 +128,6 @@
             [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
             
             NSString* routeDesc = [NSString stringWithFormat:@"Route: %0.3f km, travel %@. Calculation took %0.3f s", [route getTotalDistance]/1000.0, [dateFormatter stringFromDate: [NSDate dateWithTimeIntervalSince1970:[route getTotalTime]]], duration];
-            
-//            [self alert:[NSString stringWithFormat:@"%@",routeDesc]];
             
             // Show line
             NTLine* routeLine = [self calculateRouteLine: route];
@@ -160,8 +151,7 @@
     });
 }
 
--(NTMarker*) createRoutePoint: (NTRoutingInstruction*) instruction point:(NTMapPos*) pos
-{
+- (NTMarker*) createRoutePoint: (NTRoutingInstruction*) instruction point:(NTMapPos*) pos {
     NTMarkerStyle* style = _instructionUp;
     NSString* str = @"";
     
@@ -236,8 +226,7 @@
     return marker;
 }
 
--(NTLine*) calculateRouteLine: (NTRoutingResult*) result
-{
+- (NTLine*) calculateRouteLine: (NTRoutingResult*) result {
     // Style for the line
     NTLineStyleBuilder* lineStyleBuilder = [[NTLineStyleBuilder alloc] init];
     [lineStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFF888888]];

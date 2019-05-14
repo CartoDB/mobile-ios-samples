@@ -15,6 +15,7 @@
 @property Banner * _Nonnull banner;
 @property NTMapView * _Nonnull mapView;
 @property SlideInPopup * _Nonnull popup;
+@property UIView * _Nullable previousContentView;
 
 @property NSMutableArray * _Nonnull buttons;
 

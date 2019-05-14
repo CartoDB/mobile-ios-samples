@@ -64,11 +64,20 @@
     // Scan the results list. If we found relatively close point-based match,
     // use this instead of the first result.
     // In case of POIs within buildings, this allows us to hightlight POI instead of the building
-    NTGeocodingResultVector *results = [self.controller.service calculateAddresses: request];
+    NTGeocodingResultVector *results;
+    @try {
+        results = [self.controller.service calculateAddresses: request];
+    }
+    @catch (NSException *ex) {
+        NSLog(@"Reverse geocoding failed: %@", ex);
+    }
+    if (results == nil) {
+        return;
+    }
     
-    NTGeocodingResult *result;
     int count = (int)[results size];
     
+    NTGeocodingResult *result = nil;
     if (count > 0) {
         result = [results get:0];
     }

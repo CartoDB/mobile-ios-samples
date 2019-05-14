@@ -17,6 +17,7 @@
     [self addSubview:self.banner];
     
     self.mapView = [[NTMapView alloc] init];
+    [[self.mapView getOptions] setZoomGestures:YES];
     [self addSubview:self.mapView];
     
     self.popup = [[SlideInPopup alloc] init];
@@ -82,12 +83,10 @@
     [[self.mapView getLayers] add:layer];
 }
 
-UIView *previous;
-
 - (void)setContent: (UIView *)content {
     
-    if (previous != nil) {
-        [previous removeFromSuperview];
+    if (self.previousContentView != nil) {
+        [self.previousContentView removeFromSuperview];
     }
     
     [self.popup.popup addSubview:content];
@@ -99,7 +98,7 @@ UIView *previous;
     
     [content setFrame:CGRectMake(x, y, w, h)];
     
-    previous = content;
+    self.previousContentView = content;
 }
 
 @end

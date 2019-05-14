@@ -8,8 +8,7 @@
 
 @implementation OnlineRoutingController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     // Create also online routing service if no offline package is yet downloaded

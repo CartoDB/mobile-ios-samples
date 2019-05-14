@@ -121,7 +121,17 @@
         
         NTGeocodingRequest *request = [[NTGeocodingRequest alloc]initWithProjection:[[self getGeocodingView] getProjection] query:text];
         
-        NTGeocodingResultVector *results = [self.service calculateAddresses:request];
+        NTGeocodingResultVector *results = nil;
+        @try {
+            results = [self.service calculateAddresses:request];
+        }
+        @catch (NSException *ex) {
+            NSLog(@"Geocoding failed: %@", ex);
+        }
+        if (results == nil) {
+            return;
+        }
+        
         int count = [results size];
         
         dispatch_async(dispatch_get_main_queue(), ^{

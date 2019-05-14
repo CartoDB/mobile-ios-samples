@@ -15,8 +15,7 @@
 
 @implementation OfflineRoutingController
 
--(void)viewDidLoad
-{
+-(void)viewDidLoad {
     [super viewDidLoad];
     
     NSString *source = [ROUTING_TAG stringByAppendingString: OFFLINE_ROUTING_SOURCE];
@@ -27,8 +26,7 @@
     self.service = [[NTPackageManagerRoutingService alloc] initWithPackageManager:self.contentView.manager];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     if ([self.contentView hasLocalPackages]) {

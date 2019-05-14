@@ -101,7 +101,7 @@
         [markerStyleBuilder setBitmap:markerBitmap];
         [markerStyleBuilder setSize:30];
         [markerStyleBuilder setHideIfOverlapped:NO];
-        [markerStyleBuilder setPlacementPriority:-(int)[elements size]];
+        [markerStyleBuilder setPlacementPriority:(int)[elements size]];
         
         markerStyle = [markerStyleBuilder buildStyle];
         [self.markerStyles setValue:markerStyle forKey:styleKey];

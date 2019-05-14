@@ -25,8 +25,7 @@
     self.service = [[NTPackageManagerReverseGeocodingService alloc] initWithPackageManager: self.contentView.manager];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     if ([self.contentView hasLocalPackages]) {
