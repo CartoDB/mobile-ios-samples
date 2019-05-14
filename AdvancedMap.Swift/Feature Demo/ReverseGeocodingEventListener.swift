@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CartoMobileSDK
 
 class ReverseGeocodingEventListener: NTMapEventListener {
     
@@ -24,7 +25,16 @@ class ReverseGeocodingEventListener: NTMapEventListener {
         let meters: Float = 125.0
         request?.setSearchRadius(meters)
         
-        let results = service.calculateAddresses(request)
+        var results:NTGeocodingResultVector?
+        do {
+            try NTExceptionWrapper.catchException {
+                results = self.service.calculateAddresses(request)
+            }
+        }
+        catch {
+            NSLog("Failed to calculate reverse geocoding")
+            return
+        }
         
         // Scan the results list. If we found relatively close point-based match,
         // use this instead of the first result.

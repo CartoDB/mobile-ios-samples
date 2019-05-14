@@ -6,6 +6,10 @@
 //  Copyright © 2017 CARTO. All rights reserved.
 //
 
+import Foundation
+import UIKit
+import CartoMobileSDK
+
 extension String {
     func index(from: Int) -> Index {
         return self.index(startIndex, offsetBy: from)

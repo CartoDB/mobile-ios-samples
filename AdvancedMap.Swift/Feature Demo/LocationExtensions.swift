@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 extension Double {
     var toRadians: CGFloat { return CGFloat(self * .pi / 180) }

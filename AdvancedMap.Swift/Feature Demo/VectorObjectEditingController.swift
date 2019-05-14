@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CartoMobileSDK
 
 class VectorObjectEditingController : BaseController, VectorElementSelectDelegate, VectorElementDeselectDelegate, EditEventDelegate {
     

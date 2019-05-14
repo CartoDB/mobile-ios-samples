@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import  UIKit
+import UIKit
 
 class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDelegate {
     

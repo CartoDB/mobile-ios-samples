@@ -6,6 +6,9 @@
 //  Copyright © 2017 CARTO. All rights reserved.
 //
 
+import Foundation
+import UIKit
+
 class OfflineMapView : PackageDownloadBaseView {
 
     convenience init() {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CartoMobileSDK
 
 class PackageListener : NTPackageManagerListener {
     

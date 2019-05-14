@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import CartoMobileSDK
 
 class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITextFieldDelegate {
 
@@ -116,7 +118,16 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
             //request?.setLocation(self.contentView.projection.fromWgs84(NTMapPos(x: -1.0861967, y: 61.2675)))
             //request?.setLocationRadius(10000000.0)
             
-            let results = self.service.calculateAddresses(request)
+            var results: NTGeocodingResultVector?
+            do {
+                try NTExceptionWrapper.catchException {
+                    results = self.service.calculateAddresses(request)
+                }
+            }
+            catch {
+                NSLog("Failed to geocode")
+                return
+            }
             
             let duration = NSDate.timeIntervalSinceReferenceDate - start
             let count: Int = Int((results?.size())!)
@@ -131,7 +142,6 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
                         let result = (results?.get(Int32(i)))!
                         self.addresses.append(result)
                         i += 1
-                        
                     }
                     
                     (self.contentView as! GeocodingView).resultTable.reloadData()
@@ -139,7 +149,6 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
                 }
                 
                 if (count > 0) {
-                    
                     self.showResult(result: results?.get(0))
                 }
                 

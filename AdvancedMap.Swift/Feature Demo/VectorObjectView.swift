@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CartoMobileSDK
 
 class VectorObjectView : MapBaseView {
     

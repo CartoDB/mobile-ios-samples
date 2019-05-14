@@ -8,6 +8,7 @@
 
 import UIKit
 import HockeySDK
+import CartoMobileSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

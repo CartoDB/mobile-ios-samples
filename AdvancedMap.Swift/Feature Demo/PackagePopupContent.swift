@@ -6,6 +6,9 @@
 //  Copyright © 2017 CARTO. All rights reserved.
 //
 
+import UIKit
+import CartoMobileSDK
+
 class PackagePopupContent : UIView, UITableViewDataSource {
     
     let IDENTIFIER = "CountryCell"

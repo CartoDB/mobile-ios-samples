@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CartoMobileSDK
 
 class Routing {
     
@@ -164,22 +165,16 @@ class Routing {
         
         var result: NTRoutingResult?
         
-        /*
-         * Swift handles exceptions differently from Objective-C.
-         * Native exceptions cannot be caught with Swift's do-catch method.
-         *
-         * Created custom ExceptionHandler.h and imported it in the bridging header in order to catch them natively
-         * cf https://stackoverflow.com/questions/34956002/how-to-properly-handle-nsfilehandle-exceptions-in-swift-2-0/35003095#35003095
-         */
-        let exception = tryBlock {
-            result = self.service?.calculateRoute(request)
+        do {
+            try NTExceptionWrapper.catchException {
+                result = self.service?.calculateRoute(request)
+            }
+            return result
         }
-
-        if (exception != nil) {
+        catch {
+            NSLog("Failed to calculate route")
             return nil
         }
-        
-        return result
     }
     
     func createRoutePoint(position: NTMapPos, instruction: NTRoutingInstruction, source: NTLocalVectorDataSource) {

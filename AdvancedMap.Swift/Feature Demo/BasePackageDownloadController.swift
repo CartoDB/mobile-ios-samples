@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CartoMobileSDK
 
 class BasePackageDownloadController : BaseController, UITableViewDelegate, PackageDownloadDelegate, ClickDelegate, SwitchDelegate {
     

@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import UIKit
 import CoreLocation
+import UIKit
+import CartoMobileSDK
 
 class GPSLocationView : MapBaseView {
     

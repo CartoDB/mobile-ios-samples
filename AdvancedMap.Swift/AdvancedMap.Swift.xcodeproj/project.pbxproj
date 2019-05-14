@@ -214,7 +214,6 @@
 		AD5B2AF71F03CC1600EF738C /* ClusteringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusteringController.swift; sourceTree = "<group>"; };
 		AD5B2AFA1F03CC2F00EF738C /* ClusteringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClusteringView.swift; sourceTree = "<group>"; };
 		AD68C5741F26382900211087 /* RotationListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationListener.swift; sourceTree = "<group>"; };
-		AD73565A1F024C0900D4D6EF /* ExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExceptionHandler.h; sourceTree = "<group>"; };
 		AD73565F1F0257D500D4D6EF /* CityPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPopupContent.swift; sourceTree = "<group>"; };
 		AD7356611F02581F00D4D6EF /* Cities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		AD7356631F02621C00D4D6EF /* DownloadBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadBaseView.swift; sourceTree = "<group>"; };
@@ -228,7 +227,6 @@
 		AD9786871EF7DACF002912DF /* StyleChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleChoiceView.swift; sourceTree = "<group>"; };
 		AD9786891EF7EB34002912DF /* GalleryDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
 		AD97868C1EF7F152002912DF /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
-		AD9786911EF7F744002912DF /* Feature-Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Feature-Demo-Bridging-Header.h"; path = "../Feature-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD9786921EF7F81B002912DF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		AD9786941EF7F843002912DF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		AD9786961EF7F84F002912DF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -603,7 +601,6 @@
 			children = (
 				AD4123121F03D431009874BD /* Assets */,
 				AD97869A1EF806D5002912DF /* Components */,
-				AD9786911EF7F744002912DF /* Feature-Demo-Bridging-Header.h */,
 				AD9786831EF7DA7C002912DF /* Sections */,
 				ADB168E31EF7BBDC0022F2F7 /* Resources */,
 				ADB7B8871EF7B47200BB2550 /* Model */,
@@ -612,7 +609,6 @@
 				ADB27EAD1EF416C6004198D3 /* AppDelegate.swift */,
 				ADB27EB41EF416C6004198D3 /* Assets.xcassets */,
 				ADB27EB91EF416C6004198D3 /* Info.plist */,
-				AD73565A1F024C0900D4D6EF /* ExceptionHandler.h */,
 			);
 			name = AdvancedMap.Swift;
 			path = "Feature Demo";
@@ -1127,9 +1123,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jaak.advanced.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Feature-Demo-Bridging-Header.h";
-				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1146,9 +1142,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jaak.advanced.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Feature-Demo-Bridging-Header.h";
-				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
