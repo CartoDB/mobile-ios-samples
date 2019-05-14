@@ -18,9 +18,13 @@
     
     self.languageButton = [[PopupButton alloc] initWithImageUrl:@"icon_language.png"];
     [self addButton:self.languageButton];
-    
+
+    self.mapOptionsButton = [[PopupButton alloc] initWithImageUrl:@"icon_switches.png"];
+    [self addButton:self.mapOptionsButton];
+
     self.styleContent = [[StylePopupContent alloc] init];
     self.languageContent = [[LanguagePopupContent alloc] init];
+    self.mapOptionsContent = [[MapOptionsPopupContent alloc] init];
     
     self.currentLayer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
     [[self.mapView getLayers] add:self.currentLayer];
@@ -35,8 +39,11 @@
     [self setContent:self.styleContent];
 }
 
-- (void)updateBaseLayer:(NSString *)selection :(NSString *)source
-{
+- (void)setMapOptionsContent {
+    [self setContent:self.mapOptionsContent];
+}
+
+- (void)updateBaseLayer:(NSString *)selection :(NSString *)source {
     self.currentOSM = source;
     self.currentSelection = selection;
 
@@ -84,8 +91,7 @@
 }
 
 
-- (void)initializeVectorTileListener
-{
+- (void)initializeVectorTileListener {
     if (self.vectorLayer == nil) {
         NTProjection *projection = [[self.mapView getOptions]getBaseProjection];
         NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc]initWithProjection:projection];
@@ -99,8 +105,7 @@
     [self updateListener];
 }
 
-- (void)updateListener
-{
+- (void)updateListener {
     NTLayer *layer = [[self.mapView getLayers] get:0];
     
     if ([layer isKindOfClass:NTVectorTileLayer.class]) {
@@ -113,8 +118,7 @@
     }
 }
 
-- (void)updateLanguage:(NSString *)code
-{
+- (void)updateLanguage:(NSString *)code {
     if (self.currentLayer == nil) {
         return;
     }
@@ -128,6 +132,30 @@
     NTMBVectorTileDecoder *decoder = (NTMBVectorTileDecoder *)[layer getTileDecoder];
     
     [decoder setStyleParameter:@"lang" value:code];
+}
+
+- (void)updateMapOption:(NSString *)option :(BOOL)value {
+    if (self.currentLayer == nil) {
+        return;
+    }
+    
+    if (![self.currentLayer isKindOfClass:NTVectorTileLayer.class]) {
+        // Raster tile language chance is not supported
+        return;
+    }
+    
+    NTVectorTileLayer *layer = (NTVectorTileLayer *)self.currentLayer;
+    NTMBVectorTileDecoder *decoder = (NTMBVectorTileDecoder *)[layer getTileDecoder];
+
+    if ([option isEqualToString:@"buildings3d"]) {
+        [decoder setStyleParameter:@"buildings" value:(value ? @"2" : @"1")];
+    }
+    if ([option isEqualToString:@"texts3d"]) {
+        [decoder setStyleParameter:@"texts3d" value:(value ? @"1" : @"0")];
+    }
+    if ([option isEqualToString:@"globe"]) {
+        [[self.mapView getOptions] setRenderProjectionMode:(value ? NT_RENDER_PROJECTION_MODE_SPHERICAL : NT_RENDER_PROJECTION_MODE_PLANAR)];
+    }
 }
 
 @end

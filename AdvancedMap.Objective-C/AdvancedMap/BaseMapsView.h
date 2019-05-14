@@ -20,15 +20,20 @@
 
 @property PopupButton *styleButton;
 @property PopupButton *languageButton;
+@property PopupButton *mapOptionsButton;
 
 @property StylePopupContent *styleContent;
 @property LanguagePopupContent *languageContent;
+@property MapOptionsPopupContent *mapOptionsContent;
 
 - (void)setLanguageContent;
 - (void)setBasemapContent;
+- (void)setMapOptionsContent;
 
 - (void)updateBaseLayer:(NSString *)selection :(NSString *)source;
 
 - (void)updateLanguage:(NSString *)code;
+
+- (void)updateMapOption:(NSString *)option :(BOOL)value;
 
 @end

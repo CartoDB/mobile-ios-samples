@@ -3,9 +3,10 @@
 #import "Sources.h"
 #import "BaseMapsView.h"
 #import "Languages.h"
+#import "MapOptions.h"
 
 /** BaseMapsController **/
-@interface BaseMapsController : MapBaseController <UITableViewDelegate, StyleUpdateDelegate>
+@interface BaseMapsController : MapBaseController <UITableViewDelegate, StyleUpdateDelegate, MapOptionsUpdateDelegate>
 
 @property StylePopupContentSectionItem *previousSelection;
 
@@ -13,8 +14,7 @@
 
 @implementation BaseMapsController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     self.contentView = [[BaseMapsView alloc] init];
@@ -32,26 +32,30 @@
     NSMutableArray *languages = [Languages getList];
     [view.languageContent addLanguagesWithLanguages:languages];
     
+    NSMutableArray* mapOptions = [MapOptions getList];
+    [view.mapOptionsContent addOptionsWithMapOptions:mapOptions];
+    
     [view.styleContent highlightDefault];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
     
     [view addRecognizer:self view:view.styleButton action:@selector(styleButtonTap:)];
     [view addRecognizer:self view:view.languageButton action:@selector(languageButtonTap:)];
-    
+    [view addRecognizer:self view:view.mapOptionsButton action:@selector(mapOptionsButtonTap:)];
+
     view.styleContent.cartoVector.delegate = self;
     view.styleContent.cartoRaster.delegate = self;
     
     view.languageContent.table.delegate = self;
+    
+    view.mapOptionsContent.delegate = self;
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
@@ -79,6 +83,13 @@
     [self.contentView.popup show];
 }
 
+- (void)mapOptionsButtonTap:(UITapGestureRecognizer *)recognizer {
+    
+    [((BaseMapsView *)self.contentView) setMapOptionsContent];
+    
+    [self.contentView.popup show];
+}
+
 - (void)styleClickedWithSelection:(StylePopupContentSectionItem *)selection source:(NSString *)source {
     
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
@@ -96,6 +107,14 @@
     self.previousSelection = selection;
 }
 
+- (void)optionClickedWithOption:(NSString *)option turnOn:(BOOL)turnOn {
+    BaseMapsView *view = ((BaseMapsView *)self.contentView);
+    
+    [view.popup hide];
+
+    [view updateMapOption:option :turnOn];
+}
+
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
@@ -107,7 +126,3 @@
 }
 
 @end
-
-
-
-

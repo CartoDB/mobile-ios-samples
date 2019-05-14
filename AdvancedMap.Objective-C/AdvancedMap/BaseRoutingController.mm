@@ -89,7 +89,6 @@
     [_stopMarker setVisible:NO];
     [_startMarker setPos:mapPos];
     [_startMarker setVisible:YES];
-    
 }
 
 -(void)setStop:(NTMapPos *)mapPos
@@ -114,7 +113,13 @@
     // Calculation should be in background thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        NTRoutingResult* route = [self.service calculateRoute:request];
+        NTRoutingResult* route = nil;
+        @try {
+            route = [self.service calculateRoute:request];
+        }
+        @catch (NSException* ex) {
+            NSLog(@"Exception while routing: %@", ex);
+        }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -201,6 +206,15 @@
             break;
         case NT_ROUTING_ACTION_START_AT_END_OF_STREET:
             str = @"start at end of street";
+            break;
+        case NT_ROUTING_ACTION_WAIT:
+            str = @"wait";
+            break;
+        case NT_ROUTING_ACTION_GO_UP:
+            str = @"go up";
+            break;
+        case NT_ROUTING_ACTION_GO_DOWN:
+            str = @"go down";
             break;
     }
     

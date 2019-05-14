@@ -10,8 +10,6 @@
 		0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC811AE1DABD6A4005A5C4F /* NamedMapController.m */; };
 		0CC811B11DAD0609005A5C4F /* cartocss.css in Resources */ = {isa = PBXBuildFile; fileRef = 0CC811B01DAD0607005A5C4F /* cartocss.css */; };
 		7B2F3A07726C0B2C44F46F2C /* libPods-CartoMap.Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */; };
-		AD1A15171DC24599009DBC0B /* TrainVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15161DC24599009DBC0B /* TrainVisController.m */; };
-		AD1A15191DC245A5009DBC0B /* StoresVisController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15181DC245A5009DBC0B /* StoresVisController.m */; };
 		AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A151F1DC24933009DBC0B /* SQLServiceController.m */; };
 		AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */; };
 		AD4111501E698A7F00C96535 /* TorqueView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD41114F1E698A7F00C96535 /* TorqueView.m */; };
@@ -39,14 +37,11 @@
 		ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */; };
 		ADBFDA7B1D787494003DCBC9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7A1D787494003DCBC9 /* GLKit.framework */; };
 		ADBFDA7D1D7874B8003DCBC9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */; };
-		ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */; };
 		ADC28F761D782FB300796134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F751D782FB300796134 /* main.m */; };
 		ADC28F791D782FB300796134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC28F781D782FB300796134 /* AppDelegate.m */; };
 		ADC28F811D782FB300796134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F801D782FB300796134 /* Assets.xcassets */; };
 		ADC28F841D782FB300796134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC28F821D782FB300796134 /* LaunchScreen.storyboard */; };
 		ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */ = {isa = PBXBuildFile; fileRef = ADC2B3351D79673200841945 /* AnonymousRasterTableController.mm */; };
-		ADCA0AE11F87C2C500B6243F /* image_viz_store.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA0ADF1F87C2C500B6243F /* image_viz_store.png */; };
-		ADCA0AE21F87C2C500B6243F /* image_viz_subway.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA0AE01F87C2C500B6243F /* image_viz_subway.png */; };
 		ADCA45451D9293C600814350 /* 852-map-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45261D9293C600814350 /* 852-map-toolbar.png */; };
 		ADCA45461D9293C600814350 /* 852-map-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45271D9293C600814350 /* 852-map-toolbar@2x.png */; };
 		ADCA45471D9293C600814350 /* 852-map-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADCA45281D9293C600814350 /* 852-map-toolbar@3x.png */; };
@@ -101,9 +96,6 @@
 		3022808712AB7D58DC1CEAD2 /* libPods-CartoMap.Objective-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CartoMap.Objective-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5956079C5E02A95EC51535A0 /* Pods-CartoMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		A01264D38691F2C85F35513E /* Pods-CartoMap.Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CartoMap.Objective-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C.release.xcconfig"; sourceTree = "<group>"; };
-		AD1A15161DC24599009DBC0B /* TrainVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainVisController.m; sourceTree = "<group>"; };
-		AD1A15181DC245A5009DBC0B /* StoresVisController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoresVisController.m; sourceTree = "<group>"; };
-		AD1A151C1DC245FE009DBC0B /* BaseVisController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVisController.h; sourceTree = "<group>"; };
 		AD1A151F1DC24933009DBC0B /* SQLServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLServiceController.m; sourceTree = "<group>"; };
 		AD1A15211DC249DC009DBC0B /* AnonymousVectorTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnonymousVectorTableController.m; sourceTree = "<group>"; };
 		AD41114E1E698A6B00C96535 /* TorqueView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorqueView.h; sourceTree = "<group>"; };
@@ -140,7 +132,6 @@
 		ADA5A8B21F7D01D70078FDB3 /* icon_sample_dots_vis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_dots_vis.png; sourceTree = "<group>"; };
 		ADA5A8B31F7D01D70078FDB3 /* icon_sample_countries_vis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sample_countries_vis.png; sourceTree = "<group>"; };
 		ADBFDA701D786E94003DCBC9 /* CartoMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CartoMobileSDK.framework; sourceTree = "<group>"; };
-		ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseVisController.mm; sourceTree = "<group>"; };
 		ADBFDA781D7873E6003DCBC9 /* MapBaseController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MapBaseController.mm; sourceTree = "<group>"; };
 		ADBFDA7A1D787494003DCBC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		ADBFDA7C1D7874B8003DCBC9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -155,8 +146,6 @@
 		ADC28F8A1D782FB400796134 /* CartoMap.Objective-CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CartoMap.Objective-CTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC28F951D782FB400796134 /* CartoMap.Objective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CartoMap.Objective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC2B3351D79673200841945 /* AnonymousRasterTableController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AnonymousRasterTableController.mm; sourceTree = "<group>"; };
-		ADCA0ADF1F87C2C500B6243F /* image_viz_store.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_viz_store.png; sourceTree = "<group>"; };
-		ADCA0AE01F87C2C500B6243F /* image_viz_subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_viz_subway.png; sourceTree = "<group>"; };
 		ADCA45261D9293C600814350 /* 852-map-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar.png"; path = "../../Assets/852-map-toolbar.png"; sourceTree = "<group>"; };
 		ADCA45271D9293C600814350 /* 852-map-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@2x.png"; path = "../../Assets/852-map-toolbar@2x.png"; sourceTree = "<group>"; };
 		ADCA45281D9293C600814350 /* 852-map-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "852-map-toolbar@3x.png"; path = "../../Assets/852-map-toolbar@3x.png"; sourceTree = "<group>"; };
@@ -237,23 +226,11 @@
 		AD1A15101DC242D1009DBC0B /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				AD1A15111DC242E6009DBC0B /* CARTO.js API */,
 				AD1A15151DC24307009DBC0B /* Maps API */,
 				AD1A15141DC24301009DBC0B /* SQL API */,
 				AD1A15131DC242FB009DBC0B /* Torque API */,
 			);
 			name = Sections;
-			sourceTree = "<group>";
-		};
-		AD1A15111DC242E6009DBC0B /* CARTO.js API */ = {
-			isa = PBXGroup;
-			children = (
-				AD1A151C1DC245FE009DBC0B /* BaseVisController.h */,
-				ADBFDA761D78705E003DCBC9 /* BaseVisController.mm */,
-				AD1A15161DC24599009DBC0B /* TrainVisController.m */,
-				AD1A15181DC245A5009DBC0B /* StoresVisController.m */,
-			);
-			name = "CARTO.js API";
 			sourceTree = "<group>";
 		};
 		AD1A15131DC242FB009DBC0B /* Torque API */ = {
@@ -328,8 +305,6 @@
 		ADA5A8AC1F7CFAF50078FDB3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ADCA0ADF1F87C2C500B6243F /* image_viz_store.png */,
-				ADCA0AE01F87C2C500B6243F /* image_viz_subway.png */,
 				ADA5A8AD1F7D01D70078FDB3 /* icon_sample_torque.png */,
 				ADA5A8AE1F7D01D70078FDB3 /* icon_sample_sql_service.png */,
 				ADA5A8AF1F7D01D70078FDB3 /* icon_sample_named_map.png */,
@@ -452,9 +427,6 @@
 				ADC28F6D1D782FB300796134 /* Sources */,
 				ADC28F6E1D782FB300796134 /* Frameworks */,
 				ADC28F6F1D782FB300796134 /* Resources */,
-				FC8690569F4480B56AFBB95A /* [CP] Embed Pods Frameworks */,
-				98C7077214573B02FACC85A8 /* [CP] Copy Pods Resources */,
-				64944D0F68C30D80CFA5691E /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -529,6 +501,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -555,7 +528,6 @@
 				ADCA45451D9293C600814350 /* 852-map-toolbar.png in Resources */,
 				ADA5A8B61F7D01D70078FDB3 /* icon_sample_named_map.png in Resources */,
 				ADCA45601D9293C600814350 /* nutiteq-dark.zip in Resources */,
-				ADCA0AE21F87C2C500B6243F /* image_viz_subway.png in Resources */,
 				ADCA455A1D9293C600814350 /* marker.png in Resources */,
 				ADCA45501D9293C600814350 /* direction_upthenleft.png in Resources */,
 				ADCA45551D9293C600814350 /* jefferson-building-ground-floor.jpg in Resources */,
@@ -590,7 +562,6 @@
 				ADCA455B1D9293C600814350 /* menu.png in Resources */,
 				ADCA454B1D9293C600814350 /* capitals_3857.geojson in Resources */,
 				ADCA45541D9293C600814350 /* info@2x.png in Resources */,
-				ADCA0AE11F87C2C500B6243F /* image_viz_store.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,36 +582,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		64944D0F68C30D80CFA5691E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		98C7077214573B02FACC85A8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AC893398305C4C4C810C55E7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -656,22 +597,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FC8690569F4480B56AFBB95A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CartoMap.Objective-C/Pods-CartoMap.Objective-C-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -686,13 +612,11 @@
 				ADA5A8A41F7CDF2F0078FDB3 /* MainView.m in Sources */,
 				ADA5A8A11F7CDC200078FDB3 /* Samples.m in Sources */,
 				AD1A15201DC24933009DBC0B /* SQLServiceController.m in Sources */,
-				ADBFDAA81D788127003DCBC9 /* BaseVisController.mm in Sources */,
 				AD70D9821F866CDE00D5F0C6 /* VectorTileListener.mm in Sources */,
 				ADC28F791D782FB300796134 /* AppDelegate.m in Sources */,
 				AD1A15221DC249DC009DBC0B /* AnonymousVectorTableController.m in Sources */,
 				AD70D9851F86782300D5F0C6 /* MapEventListener.m in Sources */,
 				AD4111561E6997E500C96535 /* HistogramView.m in Sources */,
-				AD1A15191DC245A5009DBC0B /* StoresVisController.m in Sources */,
 				AD41115C1E69B6C000C96535 /* TorqueCounter.m in Sources */,
 				0CC811AF1DABD6A4005A5C4F /* NamedMapController.m in Sources */,
 				AD4111521E698C7B00C96535 /* TorqueHistogram.m in Sources */,
@@ -700,7 +624,6 @@
 				ADC2B3361D79673200841945 /* AnonymousRasterTableController.mm in Sources */,
 				ADC28F761D782FB300796134 /* main.m in Sources */,
 				ADA5A8AB1F7CF0220078FDB3 /* MainViewController.m in Sources */,
-				AD1A15171DC24599009DBC0B /* TrainVisController.m in Sources */,
 				AD41115F1E69BF4600C96535 /* TorqueIndicator.m in Sources */,
 				ADBFDA791D7873E6003DCBC9 /* MapBaseController.mm in Sources */,
 				AD4111591E69B1D200C96535 /* TorqueButton.m in Sources */,
