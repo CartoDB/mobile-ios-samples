@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0CE47F4722722580000A024F /* LocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE47F4622722580000A024F /* LocationMarker.swift */; };
+		2F466D12228AED0D006D27EC /* OfflineRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D10228AED0D006D27EC /* OfflineRoutingView.swift */; };
+		2F466D13228AED0D006D27EC /* OfflineRoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D11228AED0D006D27EC /* OfflineRoutingController.swift */; };
 		668C4E9E700C4C0DB448B390 /* Pods_AdvancedMap_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */; };
 		AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */; };
 		AD01E6591F348AC40001D8A3 /* icon_sample_offline_routing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD01E6581F348AC40001D8A3 /* icon_sample_offline_routing.png */; };
@@ -149,6 +151,8 @@
 		08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvancedMap_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F7D6002F3BF75664417F0B /* Pods-Feature Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.release.xcconfig"; sourceTree = "<group>"; };
 		0CE47F4622722580000A024F /* LocationMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMarker.swift; sourceTree = "<group>"; };
+		2F466D10228AED0D006D27EC /* OfflineRoutingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingView.swift; sourceTree = "<group>"; };
+		2F466D11228AED0D006D27EC /* OfflineRoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingController.swift; sourceTree = "<group>"; };
 		64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Feature Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -397,6 +401,7 @@
 		AD9786831EF7DA7C002912DF /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				ADAFCD231EFBF920005F53CB /* Routing */,
 				ADE4A00A1F45828000D6E05F /* Route Search */,
 				ADA977F31F0E897D0040E090 /* Reverse Geocoding */,
 				ADA977F81F0E8A7A0040E090 /* Geocoding */,
@@ -551,6 +556,8 @@
 		ADAFCD231EFBF920005F53CB /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				2F466D11228AED0D006D27EC /* OfflineRoutingController.swift */,
+				2F466D10228AED0D006D27EC /* OfflineRoutingView.swift */,
 				ADE092F41F00EF2A00C569F9 /* Listener */,
 				ADAFCD241EFBF945005F53CB /* Routing.swift */,
 				0CE47F4622722580000A024F /* LocationMarker.swift */,
@@ -595,7 +602,6 @@
 			isa = PBXGroup;
 			children = (
 				AD4123121F03D431009874BD /* Assets */,
-				ADAFCD231EFBF920005F53CB /* Routing */,
 				AD97869A1EF806D5002912DF /* Components */,
 				AD9786911EF7F744002912DF /* Feature-Demo-Bridging-Header.h */,
 				AD9786831EF7DA7C002912DF /* Sections */,
@@ -931,6 +937,7 @@
 				ADC8B8DD1F04F3B500B62852 /* EditEventListener.swift in Sources */,
 				ADC8B8DB1F04F35300B62852 /* VectorElementDeselectListener.swift in Sources */,
 				AD73566B1F02776400D4D6EF /* OfflineMapController.swift in Sources */,
+				2F466D12228AED0D006D27EC /* OfflineRoutingView.swift in Sources */,
 				ADB27EAE1EF416C6004198D3 /* AppDelegate.swift in Sources */,
 				AD3C166A1FBED72100A2459B /* TransportModePopupContent.swift in Sources */,
 				AD68C5751F26382900211087 /* RotationListener.swift in Sources */,
@@ -964,6 +971,7 @@
 				AD7356721F0277F700D4D6EF /* Package.swift in Sources */,
 				ADE092FE1F00F36300C569F9 /* BoundingBox.swift in Sources */,
 				AD7356641F02621C00D4D6EF /* DownloadBaseView.swift in Sources */,
+				2F466D13228AED0D006D27EC /* OfflineRoutingController.swift in Sources */,
 				AD9786861EF7DAAB002912DF /* StyleChoiceController.swift in Sources */,
 				ADB7B8891EF7B48500BB2550 /* Samples.swift in Sources */,
 				AD4123161F03D7A7009874BD /* VectorObjectClickListener.swift in Sources */,

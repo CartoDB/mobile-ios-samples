@@ -28,6 +28,7 @@ class ViewController: GLKViewController {
         let proj = NTEPSG4326()
         mapView?.getOptions()?.setBaseProjection(proj)
         mapView?.getOptions()?.setRenderProjectionMode(NTRenderProjectionMode.RENDER_PROJECTION_MODE_SPHERICAL)
+        mapView?.getOptions()?.setZoomGestures(true)
         
         // Create base map layer
         let baseLayer = NTCartoOnlineVectorTileLayer(style: NTCartoBaseMapStyle.CARTO_BASEMAP_STYLE_VOYAGER)

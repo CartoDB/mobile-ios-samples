@@ -146,8 +146,3 @@ class MapBaseView : UIView {
         }
     }
 }
-
-
-
-
-
