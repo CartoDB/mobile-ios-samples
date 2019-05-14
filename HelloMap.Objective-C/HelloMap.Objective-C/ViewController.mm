@@ -41,8 +41,8 @@
     [[mapView getOptions] setBaseProjection:proj];
 
     // Add base layer
-    NTVectorTileLayer* layer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_POSITRON];
-    [[mapView getLayers] add:layer];
+    NTVectorTileLayer* baseLayer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_POSITRON];
+    [[mapView getLayers] add:baseLayer];
     
     // Animate zoom to Tallinn, Estonia
     NTMapPos* tallinn = [[NTMapPos alloc] initWithX:24.646469 y:59.426939];
