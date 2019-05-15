@@ -31,7 +31,7 @@ class MapOptions {
         mapOption = MapOption()
         mapOption.name = "3D texts"
         mapOption.tag = "texts3d"
-        mapOption.value = false
+        mapOption.value = true
         
         list.append(mapOption)
     }

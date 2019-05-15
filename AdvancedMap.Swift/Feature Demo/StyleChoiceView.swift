@@ -24,7 +24,7 @@ class StyleChoiceView : MapBaseView {
     var currentSource: String = "carto.streets"
     var currentLayer: NTTileLayer!
     var buildings3D: Bool = false
-    var texts3D: Bool = false
+    var texts3D: Bool = true
 
     convenience init() {
         

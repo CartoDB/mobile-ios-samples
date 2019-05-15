@@ -30,6 +30,8 @@
     [[self.mapView getLayers] add:self.currentLayer];
 
     self.currentLanguage = @"en";
+    self.buildings3D = NO;
+    self.texts3D = YES;
     return self;
 }
 
