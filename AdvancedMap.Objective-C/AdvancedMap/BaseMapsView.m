@@ -28,6 +28,8 @@
     
     self.currentLayer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_VOYAGER];
     [[self.mapView getLayers] add:self.currentLayer];
+
+    self.currentLanguage = @"en";
     return self;
 }
 
@@ -43,17 +45,9 @@
     [self setContent:self.mapOptionsContent];
 }
 
-- (void)updateBaseLayer:(NSString *)selection :(NSString *)source {
+- (void)updateBaseLayer:(NSString *)selection source:(NSString *)source {
     self.currentOSM = source;
     self.currentSelection = selection;
-
-    NSString* language = nil;
-    if ([self.currentLayer isKindOfClass:NTVectorTileLayer.class]) {
-        NTVectorTileLayer *layer = (NTVectorTileLayer *)self.currentLayer;
-        NTMBVectorTileDecoder *decoder = (NTMBVectorTileDecoder *)[layer getTileDecoder];
-        
-        language = [decoder getStyleParameter:@"lang"];
-    }
 
     if ([source isEqualToString: StylePopupContent.CartoVectorSource]) {
         
@@ -80,12 +74,12 @@
         self.currentLayer = [[NTRasterTileLayer alloc] initWithDataSource:source];
     }
     
-    if (language) {
-        [self updateLanguage:language];
-    }
-    
     [[self.mapView getLayers] clear];
     [[self.mapView getLayers] add:self.currentLayer];
+    
+    [self updateLanguage:self.currentLanguage];
+    [self updateMapOption:@"buildings3d" value:self.buildings3D];
+    [self updateMapOption:@"texts3d" value:self.texts3D];
     
     [self initializeVectorTileListener];
 }
@@ -119,6 +113,8 @@
 }
 
 - (void)updateLanguage:(NSString *)code {
+    self.currentLanguage = code;
+
     if (self.currentLayer == nil) {
         return;
     }
@@ -134,7 +130,12 @@
     [decoder setStyleParameter:@"lang" value:code];
 }
 
-- (void)updateMapOption:(NSString *)option :(BOOL)value {
+- (void)updateMapOption:(NSString *)option value:(BOOL)value {
+    if ([option isEqualToString:@"globe"]) {
+        [[self.mapView getOptions] setRenderProjectionMode:(value ? NT_RENDER_PROJECTION_MODE_SPHERICAL : NT_RENDER_PROJECTION_MODE_PLANAR)];
+        return;
+    }
+
     if (self.currentLayer == nil) {
         return;
     }
@@ -148,18 +149,13 @@
     NTMBVectorTileDecoder *decoder = (NTMBVectorTileDecoder *)[layer getTileDecoder];
 
     if ([option isEqualToString:@"buildings3d"]) {
+        self.buildings3D = value;
         [decoder setStyleParameter:@"buildings" value:(value ? @"2" : @"1")];
     }
     if ([option isEqualToString:@"texts3d"]) {
+        self.texts3D = value;
         [decoder setStyleParameter:@"texts3d" value:(value ? @"1" : @"0")];
-    }
-    if ([option isEqualToString:@"globe"]) {
-        [[self.mapView getOptions] setRenderProjectionMode:(value ? NT_RENDER_PROJECTION_MODE_SPHERICAL : NT_RENDER_PROJECTION_MODE_PLANAR)];
     }
 }
 
 @end
-
-
-
-

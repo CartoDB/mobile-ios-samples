@@ -10,6 +10,9 @@
 		0CE47F4722722580000A024F /* LocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE47F4622722580000A024F /* LocationMarker.swift */; };
 		2F466D12228AED0D006D27EC /* OfflineRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D10228AED0D006D27EC /* OfflineRoutingView.swift */; };
 		2F466D13228AED0D006D27EC /* OfflineRoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D11228AED0D006D27EC /* OfflineRoutingController.swift */; };
+		2F466D15228BFA9E006D27EC /* MapOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D14228BFA9E006D27EC /* MapOptions.swift */; };
+		2F466D17228BFC38006D27EC /* MapOptionsPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D16228BFC38006D27EC /* MapOptionsPopupContent.swift */; };
+		2F466D19228BFC75006D27EC /* icon_switches.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F466D18228BFC75006D27EC /* icon_switches.png */; };
 		668C4E9E700C4C0DB448B390 /* Pods_AdvancedMap_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F291A8E9C424CC4784657D /* Pods_AdvancedMap_Swift.framework */; };
 		AD01E6541F3479740001D8A3 /* BasePackageDownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD01E6531F3479740001D8A3 /* BasePackageDownloadController.swift */; };
 		AD01E6591F348AC40001D8A3 /* icon_sample_offline_routing.png in Resources */ = {isa = PBXBuildFile; fileRef = AD01E6581F348AC40001D8A3 /* icon_sample_offline_routing.png */; };
@@ -153,6 +156,9 @@
 		0CE47F4622722580000A024F /* LocationMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMarker.swift; sourceTree = "<group>"; };
 		2F466D10228AED0D006D27EC /* OfflineRoutingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingView.swift; sourceTree = "<group>"; };
 		2F466D11228AED0D006D27EC /* OfflineRoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfflineRoutingController.swift; sourceTree = "<group>"; };
+		2F466D14228BFA9E006D27EC /* MapOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOptions.swift; sourceTree = "<group>"; };
+		2F466D16228BFC38006D27EC /* MapOptionsPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOptionsPopupContent.swift; sourceTree = "<group>"; };
+		2F466D18228BFC75006D27EC /* icon_switches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_switches.png; sourceTree = "<group>"; };
 		64EA1F7960E346AD8B188728 /* libPods-Feature Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Feature Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854CD8920F9F87DA871DA981 /* Pods-Feature Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Feature Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Feature Demo/Pods-Feature Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A55980E3BE767E6FEEBC0934 /* Pods-AdvancedMap.Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -490,6 +496,7 @@
 		AD9786B11EF8220F002912DF /* ButtonIcons */ = {
 			isa = PBXGroup;
 			children = (
+				2F466D18228BFC75006D27EC /* icon_switches.png */,
 				AD0FE7071FBF3B0200AC2512 /* icon_transportation_mode.png */,
 				AD061BC91F1E4BED00F523B8 /* icon_track_location_off.png */,
 				AD061BCA1F1E4BED00F523B8 /* icon_track_location_on.png */,
@@ -520,6 +527,7 @@
 		AD9786C91EF82D3C002912DF /* SlideInPopupContent */ = {
 			isa = PBXGroup;
 			children = (
+				2F466D16228BFC38006D27EC /* MapOptionsPopupContent.swift */,
 				AD9786CA1EF82D54002912DF /* InformationPopupContent.swift */,
 				AD437EBB1EF909C4008CEA76 /* LanguagePopupContent.swift */,
 				AD437EBD1EF91D98008CEA76 /* StylePopupContent.swift */,
@@ -640,6 +648,7 @@
 				AD437EB91EF907D1008CEA76 /* Languages.swift */,
 				AD437ED21EF93880008CEA76 /* Texts.swift */,
 				AD7356611F02581F00D4D6EF /* Cities.swift */,
+				2F466D14228BFA9E006D27EC /* MapOptions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -847,6 +856,7 @@
 				AD061BCD1F1E4BED00F523B8 /* icon_track_location_off.png in Resources */,
 				AD41231A1F03E1CE009874BD /* info.png in Resources */,
 				ADB27EB51EF416C6004198D3 /* Assets.xcassets in Resources */,
+				2F466D19228BFC75006D27EC /* icon_switches.png in Resources */,
 				ADC8B8E41F05209B00B62852 /* icon_sample_gps_location.png in Resources */,
 				AD4123181F03E1C8009874BD /* info@2x.png in Resources */,
 				AD0D68051F84D073008738B0 /* style_image_here_normal.png in Resources */,
@@ -929,6 +939,7 @@
 				AD9786B01EF80E7C002912DF /* PopupView.swift in Sources */,
 				AD061BD41F1E653300F523B8 /* LocationExtensions.swift in Sources */,
 				ADB27EC11EF41754004198D3 /* MainView.swift in Sources */,
+				2F466D15228BFA9E006D27EC /* MapOptions.swift in Sources */,
 				ADAFCD251EFBF945005F53CB /* Routing.swift in Sources */,
 				ADC8B8DD1F04F3B500B62852 /* EditEventListener.swift in Sources */,
 				ADC8B8DB1F04F35300B62852 /* VectorElementDeselectListener.swift in Sources */,
@@ -984,6 +995,7 @@
 				AD4123311F040A7C009874BD /* GPSLocationView.swift in Sources */,
 				ADF6725C1F335CBE00527D49 /* BaseGeocodingController.swift in Sources */,
 				AD5B2AF61F03CBB300EF738C /* VectorObjectView.swift in Sources */,
+				2F466D17228BFC38006D27EC /* MapOptionsPopupContent.swift in Sources */,
 				AD7356701F0277A800D4D6EF /* PackagePopupContent.swift in Sources */,
 				AD5B2AF81F03CC1600EF738C /* ClusteringController.swift in Sources */,
 				AD437ED31EF93880008CEA76 /* Texts.swift in Sources */,

@@ -102,18 +102,3 @@ class Texts {
         "all attractions along the route within 500 meters. These Points of Interests are then " +
     "shown as clickable red dots.\n\n"
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

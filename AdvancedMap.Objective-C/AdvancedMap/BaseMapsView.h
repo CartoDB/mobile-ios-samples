@@ -14,6 +14,9 @@
 @property NSString *currentOSM;
 @property NSString *currentSelection;
 @property NTTileLayer *currentLayer;
+@property NSString *currentLanguage;
+@property BOOL buildings3D;
+@property BOOL texts3D;
 
 @property NTVectorLayer *vectorLayer;
 @property VectorTileListener *listener;
@@ -30,10 +33,10 @@
 - (void)setBasemapContent;
 - (void)setMapOptionsContent;
 
-- (void)updateBaseLayer:(NSString *)selection :(NSString *)source;
+- (void)updateBaseLayer:(NSString *)selection source:(NSString *)source;
 
 - (void)updateLanguage:(NSString *)code;
 
-- (void)updateMapOption:(NSString *)option :(BOOL)value;
+- (void)updateMapOption:(NSString *)option value:(BOOL)value;
 
 @end

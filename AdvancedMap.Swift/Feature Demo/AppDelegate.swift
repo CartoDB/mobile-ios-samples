@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Samples.initialize()
         Languages.initialize()
         Cities.initialize()
+        MapOptions.initialize()
         
         BITHockeyManager.shared().configure(withIdentifier: identifier)
         BITHockeyManager.shared().start()

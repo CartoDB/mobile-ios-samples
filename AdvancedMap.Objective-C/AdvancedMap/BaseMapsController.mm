@@ -95,7 +95,7 @@
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
     
     [view.popup hide];
-    [view updateBaseLayer:selection.label.text :source];
+    [view updateBaseLayer:selection.label.text source:source];
     
     if (self.previousSelection != nil) {
         [self.previousSelection normalize];
@@ -107,12 +107,12 @@
     self.previousSelection = selection;
 }
 
-- (void)optionClickedWithOption:(NSString *)option turnOn:(BOOL)turnOn {
+- (void)optionClickedWithOption:(NSString *)option turnOn:(BOOL)value {
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
     
     [view.popup hide];
 
-    [view updateMapOption:option :turnOn];
+    [view updateMapOption:option value:value];
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

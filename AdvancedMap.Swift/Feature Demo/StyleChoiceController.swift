@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDelegate {
+class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDelegate, MapOptionsUpdateDelegate {
     
     var contentView: StyleChoiceView!
     
@@ -22,6 +22,7 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         view = contentView
         
         contentView.languageContent.addLanguages(languages: Languages.list)
+        contentView.mapOptionsContent.addOptions(mapOptions: MapOptions.list)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +34,8 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         
         contentView.baseMapContent.cartoVector.delegate = self
         contentView.baseMapContent.cartoRaster.delegate = self
+        
+        contentView.mapOptionsContent.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -44,6 +47,8 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         
         contentView.baseMapContent.cartoVector.delegate = nil
         contentView.baseMapContent.cartoRaster.delegate = nil
+        
+        contentView.mapOptionsContent.delegate = nil
     }
     
     var previous: StylePopupContentSectionItem!
@@ -62,6 +67,11 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
         previous = selection
     }
     
+    func optionClicked(option: String, turnOn: Bool) {
+        contentView.popup.hide()
+        contentView.updateMapOption(option: option, value: turnOn)
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let language = contentView.languageContent.languages[indexPath.row]
         contentView.popup.hide()
@@ -69,8 +79,3 @@ class StyleChoiceController : BaseController, UITableViewDelegate, StyleUpdateDe
     }
     
 }
-
-
-
-
-
