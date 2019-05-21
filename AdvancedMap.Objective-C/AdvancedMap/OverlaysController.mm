@@ -106,12 +106,18 @@
 	[balloonPopupStyleBuilder setRightImage:[NTBitmapUtils createBitmapFromUIImage:arrowImage]];
 	[balloonPopupStyleBuilder setRightMargins:[[NTBalloonPopupMargins alloc] initWithLeft:2 top:6 right:12 bottom:6]];
 	[balloonPopupStyleBuilder setPlacementPriority:1];
-	pos = [self.projection fromWgs84:[[NTMapPos alloc] initWithX:24.655662 y:59.425521]];
+    pos = [self.projection fromWgs84:[[NTMapPos alloc] initWithX:24.655662 y:59.425521]];
 	// Add to datasource
 	NTBalloonPopup* popup1 = [[NTBalloonPopup alloc] initWithPos:pos style:[balloonPopupStyleBuilder buildStyle] title:@"Popup with pos" desc:@"Images, round"];
 	[popup1 setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"Popup nr 1"]];
 	[self.source add:popup1];
-	
+    // Add button to the popup
+    NTBalloonPopupButtonStyleBuilder* balloonPopupButtonStyleBuilder = [[NTBalloonPopupButtonStyleBuilder alloc] init];
+    [balloonPopupButtonStyleBuilder setColor:[[NTColor alloc] initWithColor:0xff000000]];
+    [balloonPopupButtonStyleBuilder setTextColor:[[NTColor alloc] initWithColor:0xffffffff]];
+    NTBalloonPopupButton* balloonPopupButton1 = [[NTBalloonPopupButton alloc] initWithStyle:[balloonPopupButtonStyleBuilder buildStyle] text:@"Button1"];
+    [popup1 addButton: balloonPopupButton1];
+
 	// Second popup, but instead of giving it a position attach it to a marker
 	balloonPopupStyleBuilder = [[NTBalloonPopupStyleBuilder alloc] init];
 	[balloonPopupStyleBuilder setColor:[[NTColor alloc] initWithColor:0xFF000000]];

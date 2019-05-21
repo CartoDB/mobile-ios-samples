@@ -43,13 +43,17 @@ class VectorObjectClickListener : NTVectorElementEventListener {
         
         let style = builder?.buildStyle()
         
+        if !(element!.containsMetaDataKey(VectorObjectClickListener.CLICK_TITLE)) {
+            return true
+        }
+        
         let title = element?.getMetaDataElement(VectorObjectClickListener.CLICK_TITLE).getString()
         let description = element?.getMetaDataElement(VectorObjectClickListener.CLICK_DESCRIPTION).getString()
         
         
         var popup: NTBalloonPopup?
         
-        if let billboard = element as? NTBalloonPopup {
+        if let billboard = element as? NTBillboard {
             popup = NTBalloonPopup(baseBillboard: billboard as NTBillboard, style: style, title: title, desc: description)
         } else {
             popup = NTBalloonPopup(pos: clickInfo.getClickPos(), style: style, title: title, desc: description)

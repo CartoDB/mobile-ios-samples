@@ -89,9 +89,9 @@
 
 - (void)initializeVectorTileListener {
     if (self.vectorLayer == nil) {
-        NTProjection *projection = [[self.mapView getOptions]getBaseProjection];
-        NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc]initWithProjection:projection];
-        self.vectorLayer = [[NTVectorLayer alloc]initWithDataSource:source];
+        NTProjection *projection = [[self.mapView getOptions] getBaseProjection];
+        NTLocalVectorDataSource *source = [[NTLocalVectorDataSource alloc] initWithProjection:projection];
+        self.vectorLayer = [[NTVectorLayer alloc] initWithDataSource:source];
     } else {
         [[self.mapView getLayers] remove:self.vectorLayer];
     }
@@ -106,7 +106,7 @@
     
     if ([layer isKindOfClass:NTVectorTileLayer.class]) {
         if (self.listener == nil) {
-            self.listener = [[VectorTileListener alloc]init];
+            self.listener = [[VectorTileListener alloc] init];
         }
         
         self.listener.vectorLayer = self.vectorLayer;

@@ -103,6 +103,11 @@ class VectorObjectView : MapBaseView {
         balloonPopup?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "You'd better not try that again"))
         source?.add(balloonPopup)
         
+        let balloonPopupButtonBuilder = NTBalloonPopupButtonStyleBuilder()
+        balloonPopupButtonBuilder?.setColor(Colors.transparentGray.toNTColor())
+        let balloonPopupButton = NTBalloonPopupButton(style: balloonPopupButtonBuilder?.buildStyle(), text: "Button 1")
+        balloonPopup?.add(balloonPopupButton)
+        
         positions?.clear()
         
         /*
@@ -186,9 +191,9 @@ class VectorObjectView : MapBaseView {
         
         let text = "Look at me\nI'm broken in three lines\nand have a green border";
         let textElement = NTText(pos: position, style: textBuilder?.buildStyle(), text: text)
+        textElement?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Text"))
+        textElement?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "This is just a text"))
         source?.add(textElement)
-        
-        
     }
     
     override func addRecognizers() {

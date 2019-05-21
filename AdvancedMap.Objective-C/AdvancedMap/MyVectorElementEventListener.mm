@@ -26,8 +26,17 @@
     // Make sure this label is shown on top all other labels
     [styleBuilder setPlacementPriority:10];
     
+    // Add animation to the style
+    NTAnimationStyleBuilder* animStyleBuilder = [[NTAnimationStyleBuilder alloc] init];
+    [animStyleBuilder setSizeAnimationType:NT_ANIMATION_TYPE_SPRING];
+    [animStyleBuilder setPhaseInDuration:0.3f];
+    [styleBuilder setAnimationStyle:[animStyleBuilder buildStyle]];
+    
     // Check the type of vector element
     NTVectorElement* vectorElement = [clickInfo getVectorElement];
+    if (![vectorElement containsMetaDataKey:@"ClickText"]) {
+        return YES;
+    }
     
     NSString* clickText = [[vectorElement getMetaDataElement:@"ClickText"] getString];
     

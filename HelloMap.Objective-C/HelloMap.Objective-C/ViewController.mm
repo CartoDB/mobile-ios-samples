@@ -32,13 +32,11 @@
     // The storyboard has NTMapView connected as a view
     NTMapView* mapView = (NTMapView*) self.view;
     
-    // Set map view options
-    [[mapView getOptions] setZoomGestures:YES]; // enable zooming on clicks/double clicks
-    [[mapView getOptions] setRenderProjectionMode:NT_RENDER_PROJECTION_MODE_SPHERICAL]; // comment this line to switch to default planar mode
-
-    // Use EPSG4326 projection for coordinates. This allows us to use longitude/latitude coordinates directly.
+    // Set common map view options. Use EPSG4326 projection for coordinates. This allows us to use longitude/latitude coordinates directly.
     NTProjection* proj = [[NTEPSG4326 alloc] init];
     [[mapView getOptions] setBaseProjection:proj];
+    [[mapView getOptions] setZoomGestures:YES]; // enable zooming on clicks/double clicks
+    [[mapView getOptions] setRenderProjectionMode:NT_RENDER_PROJECTION_MODE_SPHERICAL]; // comment this line to switch to default planar mode
 
     // Add base layer
     NTVectorTileLayer* baseLayer = [[NTCartoOnlineVectorTileLayer alloc] initWithStyle:NT_CARTO_BASEMAP_STYLE_POSITRON];

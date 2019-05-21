@@ -25,7 +25,7 @@
     position = [[[self.contentView.mapView getOptions] getBaseProjection] fromWgs84:position];
     
     [self.contentView.mapView setFocusPos:position durationSeconds:0];
-    [self.contentView.mapView setZoom:5 durationSeconds:0];
+    [self.contentView.mapView setZoom:1 durationSeconds:0];
     
     BaseMapsView *view = ((BaseMapsView *)self.contentView);
     
@@ -62,11 +62,14 @@
     
     [view removeRecognizerFrom: view.styleButton];
     [view removeRecognizerFrom: view.languageButton];
+    [view removeRecognizerFrom: view.mapOptionsButton];
     
     view.styleContent.cartoVector.delegate = nil;
     view.styleContent.cartoRaster.delegate = nil;
     
     view.languageContent.table.delegate = nil;
+    
+    view.mapOptionsContent.delegate = nil;
 }
 
 - (void)styleButtonTap:(UITapGestureRecognizer *)recognizer {
