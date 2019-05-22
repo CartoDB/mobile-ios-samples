@@ -59,6 +59,13 @@
     [array addObject: sample];
     
     sample = [[Sample alloc] init];
+    sample.title = @"INDOOR ROUTING";
+    sample.subtitle = @"Indoor offline routing";
+    sample.imageUrl = @"background_routing_indoor.png";
+    sample.controller = @"IndoorRoutingController";
+    [array addObject: sample];
+    
+    sample = [[Sample alloc] init];
     sample.title = @"WMS MAP";
     sample.subtitle = @"WMS raster map on top of vector base map";
     sample.imageUrl = @"background_wms.png";

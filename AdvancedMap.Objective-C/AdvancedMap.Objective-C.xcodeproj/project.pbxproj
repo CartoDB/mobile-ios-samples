@@ -16,6 +16,18 @@
 		2F466D08228AB813006D27EC /* icon_switches.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F466D07228AB813006D27EC /* icon_switches.png */; };
 		2F466D0B228ABE2F006D27EC /* MapOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D09228ABE2F006D27EC /* MapOptions.m */; };
 		2F466D0F228ACAB9006D27EC /* MapOptionsPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D0E228ACAB9006D27EC /* MapOptionsPopupContent.swift */; };
+		2F66E3572295666400C3FAAA /* direction_upthenleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3532295666400C3FAAA /* direction_upthenleft.png */; };
+		2F66E3582295666400C3FAAA /* direction_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3542295666400C3FAAA /* direction_down.png */; };
+		2F66E3592295666400C3FAAA /* direction_upthenright.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3552295666400C3FAAA /* direction_upthenright.png */; };
+		2F66E35A2295666400C3FAAA /* direction_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3562295666400C3FAAA /* direction_up.png */; };
+		2F66E35D2295667700C3FAAA /* floor1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E35B2295667700C3FAAA /* floor1.geojson */; };
+		2F66E35E2295667700C3FAAA /* floor0.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E35C2295667700C3FAAA /* floor0.geojson */; };
+		2F66E3602295668100C3FAAA /* sgreconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E35F2295668100C3FAAA /* sgreconfig.json */; };
+		2F66E364229566BC00C3FAAA /* IndoorRoutingController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F66E362229566BC00C3FAAA /* IndoorRoutingController.mm */; };
+		2F66E3662295696A00C3FAAA /* background_routing_indoor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3652295696A00C3FAAA /* background_routing_indoor.png */; };
+		2F66E36922956FE600C3FAAA /* icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E36722956FE500C3FAAA /* icon_2.png */; };
+		2F66E36A22956FE600C3FAAA /* icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E36822956FE500C3FAAA /* icon_1.png */; };
+		2F66E36C2295797E00C3FAAA /* floors_routing.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E36B2295797D00C3FAAA /* floors_routing.geojson */; };
 		34B4A0362985542DCAC73775 /* libPods-AdvancedMap.Objective-C.UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E918DC6CE207EA525F4C3D2C /* libPods-AdvancedMap.Objective-C.UITests.a */; };
 		4D13E2801A6EB72600FA74DC /* CustomPopupController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E27F1A6EB72600FA74DC /* CustomPopupController.mm */; };
 		4D13E2831A6EB80200FA74DC /* MyCustomPopupHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D13E2821A6EB80200FA74DC /* MyCustomPopupHandler.mm */; };
@@ -180,6 +192,18 @@
 		2F466D09228ABE2F006D27EC /* MapOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOptions.m; sourceTree = "<group>"; };
 		2F466D0A228ABE2F006D27EC /* MapOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOptions.h; sourceTree = "<group>"; };
 		2F466D0E228ACAB9006D27EC /* MapOptionsPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOptionsPopupContent.swift; sourceTree = "<group>"; };
+		2F66E3532295666400C3FAAA /* direction_upthenleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_upthenleft.png; sourceTree = "<group>"; };
+		2F66E3542295666400C3FAAA /* direction_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_down.png; sourceTree = "<group>"; };
+		2F66E3552295666400C3FAAA /* direction_upthenright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_upthenright.png; sourceTree = "<group>"; };
+		2F66E3562295666400C3FAAA /* direction_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_up.png; sourceTree = "<group>"; };
+		2F66E35B2295667700C3FAAA /* floor1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = floor1.geojson; sourceTree = "<group>"; };
+		2F66E35C2295667700C3FAAA /* floor0.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = floor0.geojson; sourceTree = "<group>"; };
+		2F66E35F2295668100C3FAAA /* sgreconfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sgreconfig.json; sourceTree = "<group>"; };
+		2F66E362229566BC00C3FAAA /* IndoorRoutingController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IndoorRoutingController.mm; sourceTree = "<group>"; };
+		2F66E3652295696A00C3FAAA /* background_routing_indoor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_routing_indoor.png; sourceTree = "<group>"; };
+		2F66E36722956FE500C3FAAA /* icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_2.png; sourceTree = "<group>"; };
+		2F66E36822956FE500C3FAAA /* icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_1.png; sourceTree = "<group>"; };
+		2F66E36B2295797D00C3FAAA /* floors_routing.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = floors_routing.geojson; sourceTree = "<group>"; };
 		41488110D30CDAF74B940709 /* Pods-AdvancedMap.Objective-C.UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C.UITests/Pods-AdvancedMap.Objective-C.UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		434F72035F7288C218D7B435 /* Pods-AdvancedMap.Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvancedMap.Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvancedMap.Objective-C/Pods-AdvancedMap.Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		4D13E27F1A6EB72600FA74DC /* CustomPopupController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomPopupController.mm; path = AdvancedMap/CustomPopupController.mm; sourceTree = SOURCE_ROOT; };
@@ -561,6 +585,9 @@
 		AD4F92141F6C24F900139F79 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F66E36822956FE500C3FAAA /* icon_1.png */,
+				2F66E36722956FE500C3FAAA /* icon_2.png */,
+				2F66E3652295696A00C3FAAA /* background_routing_indoor.png */,
 				ADC02EB11F753C1B00849DBD /* style_image_carto_darkmatter.png */,
 				ADC02EB21F753C1B00849DBD /* style_image_carto_positron.png */,
 				ADC02EB31F753C1B00849DBD /* style_image_carto_voyager.png */,
@@ -625,6 +652,7 @@
 				ADFC102D1E76F3E4009DC903 /* Base */,
 				AD90F9481E096C8200E6EF51 /* OnlineRoutingController.mm */,
 				ADFC102B1E76F190009DC903 /* OfflineRoutingController.mm */,
+				2F66E362229566BC00C3FAAA /* IndoorRoutingController.mm */,
 			);
 			name = Routing;
 			sourceTree = "<group>";
@@ -758,6 +786,14 @@
 		ADED5EF41D92A30200AB2D13 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2F66E36B2295797D00C3FAAA /* floors_routing.geojson */,
+				2F66E35F2295668100C3FAAA /* sgreconfig.json */,
+				2F66E35C2295667700C3FAAA /* floor0.geojson */,
+				2F66E35B2295667700C3FAAA /* floor1.geojson */,
+				2F66E3542295666400C3FAAA /* direction_down.png */,
+				2F66E3562295666400C3FAAA /* direction_up.png */,
+				2F66E3532295666400C3FAAA /* direction_upthenleft.png */,
+				2F66E3552295666400C3FAAA /* direction_upthenright.png */,
 				2F466D07228AB813006D27EC /* icon_switches.png */,
 				AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */,
 				ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */,
@@ -906,14 +942,19 @@
 				ADED5F191D92A31800AB2D13 /* basic.zip in Resources */,
 				AD9B19B91DC1E5850025B767 /* cities15000.geojson in Resources */,
 				ADED5F2A1D92A31800AB2D13 /* menu.png in Resources */,
+				2F66E3592295666400C3FAAA /* direction_upthenright.png in Resources */,
 				AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */,
 				ADED5F251D92A31800AB2D13 /* looseleaf.zip in Resources */,
 				ADED5F2B1D92A31800AB2D13 /* menu@2x.png in Resources */,
 				2AD24F8518FEDB89000969F4 /* Images.xcassets in Resources */,
 				AD4F92191F6C250400139F79 /* icon_basemap.png in Resources */,
 				ADED5F2E1D92A31800AB2D13 /* nutibright-v3.zip in Resources */,
+				2F66E36922956FE600C3FAAA /* icon_2.png in Resources */,
+				2F66E3662295696A00C3FAAA /* background_routing_indoor.png in Resources */,
 				AD46EB2E1F6FB317004B662F /* background_basemaps.png in Resources */,
 				ADED5F291D92A31800AB2D13 /* marker.png in Resources */,
+				2F66E3602295668100C3FAAA /* sgreconfig.json in Resources */,
+				2F66E3572295666400C3FAAA /* direction_upthenleft.png in Resources */,
 				ADED5F171D92A31800AB2D13 /* arrow.png in Resources */,
 				ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */,
 				AD46EB251F6FB317004B662F /* background_object_editing.png in Resources */,
@@ -933,12 +974,16 @@
 				ADED5F301D92A31800AB2D13 /* positron.zip in Resources */,
 				AD3D62A11DD07F0F00C97356 /* icon_more.png in Resources */,
 				ADED5F2C1D92A31800AB2D13 /* milktruck.nml in Resources */,
+				2F66E35E2295667700C3FAAA /* floor0.geojson in Resources */,
 				ADED5F231D92A31800AB2D13 /* info@2x.png in Resources */,
 				AD46EB321F6FB317004B662F /* background_advanced_package_manager.png in Resources */,
 				AD46EB291F6FB317004B662F /* background_routing_offline.png in Resources */,
 				ADED5F201D92A31800AB2D13 /* direction_upthenright.png in Resources */,
 				AD46EB2C1F6FB317004B662F /* background_ground_overlay.png in Resources */,
+				2F66E35A2295666400C3FAAA /* direction_up.png in Resources */,
 				AD46EB2A1F6FB317004B662F /* background_routing_online.png in Resources */,
+				2F66E36C2295797E00C3FAAA /* floors_routing.geojson in Resources */,
+				2F66E36A22956FE600C3FAAA /* icon_1.png in Resources */,
 				AD46EB241F6FB317004B662F /* background_online_reverse_geocoding.png in Resources */,
 				AD46EB211F6FB317004B662F /* background_offline_geocoding.png in Resources */,
 				AD46EB261F6FB317004B662F /* background_overlays.png in Resources */,
@@ -952,6 +997,7 @@
 				AD46EB4A1F701C99004B662F /* icon_back_blue.png in Resources */,
 				AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */,
 				AD46EB201F6FB317004B662F /* background_bundled_map.png in Resources */,
+				2F66E3582295666400C3FAAA /* direction_down.png in Resources */,
 				AD46EB2D1F6FB317004B662F /* background_custom_raster_source.png in Resources */,
 				AD46EB1F1F6FB317004B662F /* background_basic_package_manager.png in Resources */,
 				AD46EB221F6FB317004B662F /* background_offline_reverse_geocoding.png in Resources */,
@@ -967,6 +1013,7 @@
 				AD46EB481F701C27004B662F /* icon_forward_blue.png in Resources */,
 				ADC02EBB1F753C1B00849DBD /* style_image_carto_positron.png in Resources */,
 				AD32AF711F5EF49700ACF8AC /* rome_carto-streets.mbtiles in Resources */,
+				2F66E35D2295667700C3FAAA /* floor1.geojson in Resources */,
 				ADED5F1C1D92A31800AB2D13 /* cartodark.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1067,6 +1114,7 @@
 				AD4F91FF1F6BEFCE00139F79 /* Colors.swift in Sources */,
 				AD2AD5781F4B1ACC00F3C479 /* OfflineMapController.m in Sources */,
 				AD4F91FB1F6BE9D600139F79 /* ProgressLabel.swift in Sources */,
+				2F66E364229566BC00C3FAAA /* IndoorRoutingController.mm in Sources */,
 				4DC850121A0E7DC500C5124F /* CustomRasterDataSourceController.mm in Sources */,
 				ADFBF6CF1F4C349100F98741 /* OfflineGeocodingController.m in Sources */,
 				AD443BC41DD0877E00EE65A9 /* VectorTileListener.mm in Sources */,
