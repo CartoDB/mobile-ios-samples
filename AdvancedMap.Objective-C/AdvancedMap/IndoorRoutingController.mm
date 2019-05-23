@@ -90,7 +90,7 @@
 
     NSArray* floors = @[@"floor0", @"floor1"];
     for (int level = 0; level < [floors count]; level++) {
-        NTVariant* floorGeoJSON = [self loadGeoJSON: floors[level]];
+        NSString* floorGeoJSON = [self loadJSON: floors[level] type:@"geojson"];
 
         NTVectorLayer* floorLayer = [self createFloorLayer: floorGeoJSON level:level];
         [floorLayers addObject: floorLayer];
@@ -109,11 +109,8 @@
     self.routeLayers = [routeLayers copy];
 
     // Create routing service
-    NSString* configPath = [[NSBundle mainBundle] pathForResource:@"sgreconfig" ofType:@"json"];
-    NSString* configString = [NSString stringWithContentsOfFile:configPath encoding:NSUTF8StringEncoding error:nil];
-    NTVariant* config = [NTVariant fromString:configString];
-
-    NTVariant* routingGeoJSON = [self loadGeoJSON:@"floors_routing"];
+    NTVariant* config = [NTVariant fromString:[self loadJSON:@"sgreconfig" type:@"json"]];
+    NTVariant* routingGeoJSON = [NTVariant fromString:[self loadJSON:@"floors_routing" type:@"geojson"]];
     self.service = [[NTSGREOfflineRoutingService alloc] initWithGeoJSON:routingGeoJSON config:config];
     
     // Select floor 0 and create UI
@@ -125,10 +122,20 @@
     [mapView setZoom: 16.0f durationSeconds:1.0f];
 }
 
--(NTVariant*) loadGeoJSON:(NSString*)name {
-    NSString* path = [[NSBundle mainBundle] pathForResource:name ofType:@"geojson"];
-    NSString* geoJSONString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    return [NTVariant fromString:geoJSONString];
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.contentView.banner showInformationWithText:@"Long Click on the floorplan to set route positions. There are 2 connected floors." autoclose:YES];
+    
+    [self.mapView setMapEventListener:self.mapListener];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.mapView setMapEventListener:nil];
+    
+    [self.mapListener setRoutingController:nil];
 }
 
 -(void) createMarkers {
@@ -170,13 +177,13 @@
     self.selectedFloor = level;
 }
 
--(NTVectorLayer*) createFloorLayer:(NTVariant*)geojson level:(int)level {
+-(NTVectorLayer*) createFloorLayer:(NSString*)geojson level:(int)level {
     NTProjection* proj = [[self.mapView getOptions] getBaseProjection];
 
     // Load feature collection
     NTGeoJSONGeometryReader* reader = [[NTGeoJSONGeometryReader alloc] init];
     [reader setTargetProjection:proj];
-    NTFeatureCollection* collection = [reader readFeatureCollection:[geojson description]];
+    NTFeatureCollection* collection = [reader readFeatureCollection:geojson];
 
     // Initialize style
     NTGeometryCollectionStyleBuilder* builder = [[NTGeometryCollectionStyleBuilder alloc] init];
@@ -218,22 +225,6 @@
     [[self.mapView getLayers] add:vectorLayer];
     
     return vectorLayer;
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.contentView.banner showInformationWithText:@"Long Click on the floorplan to set route positions. There are 2 connected floors." autoclose:YES];
-
-    [self.mapView setMapEventListener:self.mapListener];
-}
-
--(void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    [self.mapView setMapEventListener:nil];
-
-    [self.mapListener setRoutingController:nil];
 }
 
 -(void) floorButtonClicked:(UITapGestureRecognizer *)recognizer {
@@ -324,7 +315,7 @@
             // Show instructions as popups
             for (int i = 0; i < [instructions size]; i++) {
                 NTRoutingInstruction* instruction = [instructions get:i];
-                NTMapPos* mapPos3D = [points get:i];
+                NTMapPos* mapPos3D = [points get:[instruction getPointIndex]];
                 NTMapPos* mapPos = [[NTMapPos alloc] initWithX:[mapPos3D getX] y:[mapPos3D getY] z:0];
                 int level = (int)([mapPos3D getZ] / FLOOR_HEIGHT);
                 
@@ -349,15 +340,6 @@
     NSString* str = @"";
     
     switch ([instruction getAction]) {
-        case NT_ROUTING_ACTION_WAIT:
-            str = @"wait";
-            break;
-        case NT_ROUTING_ACTION_HEAD_ON:
-            str = @"head on";
-            break;
-        case NT_ROUTING_ACTION_FINISH:
-            str = @"finish";
-            break;
         case NT_ROUTING_ACTION_TURN_LEFT:
             style = _instructionLeft;
             str = @"turn left";
@@ -374,32 +356,7 @@
             style = _instructionDown;
             str = @"go up";
             break;
-        case NT_ROUTING_ACTION_UTURN:
-            str = @"u turn";
-            break;
-        case NT_ROUTING_ACTION_NO_TURN:
-        case NT_ROUTING_ACTION_GO_STRAIGHT:
-            str = @"continue";
-            break;
-        case NT_ROUTING_ACTION_REACH_VIA_LOCATION:
-            str = @"stopover";
-            break;
-        case NT_ROUTING_ACTION_ENTER_AGAINST_ALLOWED_DIRECTION:
-            str = @"enter against allowed direction";
-            break;
-        case NT_ROUTING_ACTION_LEAVE_AGAINST_ALLOWED_DIRECTION:
-            break;
-        case NT_ROUTING_ACTION_ENTER_ROUNDABOUT:
-            str = @"enter roundabout";
-            break;
-        case NT_ROUTING_ACTION_STAY_ON_ROUNDABOUT:
-            str = @"stay on roundabout";
-            break;
-        case NT_ROUTING_ACTION_LEAVE_ROUNDABOUT:
-            str = @"leave roundabout";
-            break;
-        case NT_ROUTING_ACTION_START_AT_END_OF_STREET:
-            str = @"start at end of street";
+        default:
             break;
     }
     
@@ -417,15 +374,16 @@
     return marker;
 }
 
+-(NSString*) loadJSON:(NSString*)name type:(NSString*)type {
+    NSString* path = [[NSBundle mainBundle] pathForResource:name ofType:type];
+    return [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+}
+
 @end
 
 // RouteClickListener handles all user interaction - setting start/end markers, property popups, etc
 
 @implementation MapClickListener
-
--(void)onMapMoved {
-    // do nothing
-}
 
 -(void)onMapClicked:(NTMapClickInfo*)mapClickInfo {
     if ([mapClickInfo getClickType] == NT_CLICK_TYPE_LONG) {
