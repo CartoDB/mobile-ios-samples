@@ -6,7 +6,7 @@ target 'AdvancedMap.Objective-C' do
 
   target 'AdvancedMap.Objective-C.UITests' do
   	inherit! :search_paths
-  	pod 'CartoMobileSDK', '4.2.0-rc.2'
+  	pod 'CartoMobileSDK', '4.2.0'
   	pod 'Toast', '~> 3.0'
   end
 
