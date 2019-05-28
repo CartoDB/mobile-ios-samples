@@ -16,10 +16,6 @@
 		2F466D08228AB813006D27EC /* icon_switches.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F466D07228AB813006D27EC /* icon_switches.png */; };
 		2F466D0B228ABE2F006D27EC /* MapOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D09228ABE2F006D27EC /* MapOptions.m */; };
 		2F466D0F228ACAB9006D27EC /* MapOptionsPopupContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F466D0E228ACAB9006D27EC /* MapOptionsPopupContent.swift */; };
-		2F66E3572295666400C3FAAA /* direction_upthenleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3532295666400C3FAAA /* direction_upthenleft.png */; };
-		2F66E3582295666400C3FAAA /* direction_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3542295666400C3FAAA /* direction_down.png */; };
-		2F66E3592295666400C3FAAA /* direction_upthenright.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3552295666400C3FAAA /* direction_upthenright.png */; };
-		2F66E35A2295666400C3FAAA /* direction_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E3562295666400C3FAAA /* direction_up.png */; };
 		2F66E35D2295667700C3FAAA /* floor1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E35B2295667700C3FAAA /* floor1.geojson */; };
 		2F66E35E2295667700C3FAAA /* floor0.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E35C2295667700C3FAAA /* floor0.geojson */; };
 		2F66E3602295668100C3FAAA /* sgreconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F66E35F2295668100C3FAAA /* sgreconfig.json */; };
@@ -192,10 +188,6 @@
 		2F466D09228ABE2F006D27EC /* MapOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOptions.m; sourceTree = "<group>"; };
 		2F466D0A228ABE2F006D27EC /* MapOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOptions.h; sourceTree = "<group>"; };
 		2F466D0E228ACAB9006D27EC /* MapOptionsPopupContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOptionsPopupContent.swift; sourceTree = "<group>"; };
-		2F66E3532295666400C3FAAA /* direction_upthenleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_upthenleft.png; sourceTree = "<group>"; };
-		2F66E3542295666400C3FAAA /* direction_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_down.png; sourceTree = "<group>"; };
-		2F66E3552295666400C3FAAA /* direction_upthenright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_upthenright.png; sourceTree = "<group>"; };
-		2F66E3562295666400C3FAAA /* direction_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = direction_up.png; sourceTree = "<group>"; };
 		2F66E35B2295667700C3FAAA /* floor1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = floor1.geojson; sourceTree = "<group>"; };
 		2F66E35C2295667700C3FAAA /* floor0.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = floor0.geojson; sourceTree = "<group>"; };
 		2F66E35F2295668100C3FAAA /* sgreconfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sgreconfig.json; sourceTree = "<group>"; };
@@ -790,10 +782,6 @@
 				2F66E35F2295668100C3FAAA /* sgreconfig.json */,
 				2F66E35C2295667700C3FAAA /* floor0.geojson */,
 				2F66E35B2295667700C3FAAA /* floor1.geojson */,
-				2F66E3542295666400C3FAAA /* direction_down.png */,
-				2F66E3562295666400C3FAAA /* direction_up.png */,
-				2F66E3532295666400C3FAAA /* direction_upthenleft.png */,
-				2F66E3552295666400C3FAAA /* direction_upthenright.png */,
 				2F466D07228AB813006D27EC /* icon_switches.png */,
 				AD32AF701F5EF41400ACF8AC /* rome_carto-streets.mbtiles */,
 				ADED5EF51D92A31800AB2D13 /* 852-map-toolbar.png */,
@@ -942,7 +930,6 @@
 				ADED5F191D92A31800AB2D13 /* basic.zip in Resources */,
 				AD9B19B91DC1E5850025B767 /* cities15000.geojson in Resources */,
 				ADED5F2A1D92A31800AB2D13 /* menu.png in Resources */,
-				2F66E3592295666400C3FAAA /* direction_upthenright.png in Resources */,
 				AD54BF371DCB6C9900B0C190 /* icon_more@2x.png in Resources */,
 				ADED5F251D92A31800AB2D13 /* looseleaf.zip in Resources */,
 				ADED5F2B1D92A31800AB2D13 /* menu@2x.png in Resources */,
@@ -954,7 +941,6 @@
 				AD46EB2E1F6FB317004B662F /* background_basemaps.png in Resources */,
 				ADED5F291D92A31800AB2D13 /* marker.png in Resources */,
 				2F66E3602295668100C3FAAA /* sgreconfig.json in Resources */,
-				2F66E3572295666400C3FAAA /* direction_upthenleft.png in Resources */,
 				ADED5F171D92A31800AB2D13 /* arrow.png in Resources */,
 				ADED5F151D92A31800AB2D13 /* 852-map-toolbar@2x.png in Resources */,
 				AD46EB251F6FB317004B662F /* background_object_editing.png in Resources */,
@@ -980,7 +966,6 @@
 				AD46EB291F6FB317004B662F /* background_routing_offline.png in Resources */,
 				ADED5F201D92A31800AB2D13 /* direction_upthenright.png in Resources */,
 				AD46EB2C1F6FB317004B662F /* background_ground_overlay.png in Resources */,
-				2F66E35A2295666400C3FAAA /* direction_up.png in Resources */,
 				AD46EB2A1F6FB317004B662F /* background_routing_online.png in Resources */,
 				2F66E36C2295797E00C3FAAA /* floors_routing.geojson in Resources */,
 				2F66E36A22956FE600C3FAAA /* icon_1.png in Resources */,
@@ -997,7 +982,6 @@
 				AD46EB4A1F701C99004B662F /* icon_back_blue.png in Resources */,
 				AD3D62A21DD07F0F00C97356 /* icon_more@3x.png in Resources */,
 				AD46EB201F6FB317004B662F /* background_bundled_map.png in Resources */,
-				2F66E3582295666400C3FAAA /* direction_down.png in Resources */,
 				AD46EB2D1F6FB317004B662F /* background_custom_raster_source.png in Resources */,
 				AD46EB1F1F6FB317004B662F /* background_basic_package_manager.png in Resources */,
 				AD46EB221F6FB317004B662F /* background_offline_reverse_geocoding.png in Resources */,
