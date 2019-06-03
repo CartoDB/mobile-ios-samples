@@ -55,17 +55,20 @@ class VectorObjectView : MapBaseView {
          * Milktruck NML Model
          */
         let data = NTAssetUtils.loadAsset("milktruck.nml")
-        let model = NTNMLModel(pos: washingtonDC, sourceModelData: data)
-        model?.setScale(20)
-        model?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Milktruck"))
-        model?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "This is an nml file loaded from bundled assets"))
-        source?.add(model)
+        let builderNMLModel = NTNMLModelStyleBuilder()
+        builderNMLModel?.setModelAsset(data)
+
+        let nmlModel = NTNMLModel(pos: washingtonDC, style: builderNMLModel?.buildStyle())
+        nmlModel?.setScale(20)
+        nmlModel?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Milktruck"))
+        nmlModel?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "This is an nml file loaded from bundled assets"))
+        source?.add(nmlModel)
         
         /*
          * 3D Polygon
          */
-        let builder3D = NTPolygon3DStyleBuilder()
-        builder3D?.setColor(Colors.transparentNavy.toNTColor())
+        let builderPolygon3D = NTPolygon3DStyleBuilder()
+        builderPolygon3D?.setColor(Colors.transparentNavy.toNTColor())
         
         let positions = NTMapPosVector()
         positions?.add(projection?.fromWgs84(NTMapPos(x: longitude + 0.001, y: latitude - 0.001)))
@@ -77,7 +80,7 @@ class VectorObjectView : MapBaseView {
         
         let holes = NTMapPosVectorVector()
         
-        let polygon = NTPolygon3D(poses: positions, holes: holes, style: builder3D?.buildStyle(), height: 150)
+        let polygon = NTPolygon3D(poses: positions, holes: holes, style: builderPolygon3D?.buildStyle(), height: 150)
         polygon?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "3D Polygon"))
         polygon?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "This a gray 3D polygon"))
         source?.add(polygon)

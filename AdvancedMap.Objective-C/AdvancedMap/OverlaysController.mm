@@ -309,12 +309,13 @@
 {
     // Add a single 3D model to map
     NSString* asset = [@[@"fcd_auto.nml"] objectAtIndex:0];
-    int counter = 0;
-    
     NTBinaryData* modelData = [NTAssetUtils loadAsset:asset];
-    float dx = (counter++) * 0.001f;
-    NTMapPos* pos = [self.projection fromWgs84:[[NTMapPos alloc] initWithX:24.646469+dx y:59.424939]];
-    NTNMLModel* model = [[NTNMLModel alloc] initWithPos:pos sourceModelData:modelData];
+    NTNMLModelStyleBuilder* nmlModelStyleBuilder = [[NTNMLModelStyleBuilder alloc] init];
+    [nmlModelStyleBuilder setModelAsset:modelData];
+    
+    // Add a single model to the map with the given style
+    NTMapPos* pos = [self.projection fromWgs84:[[NTMapPos alloc] initWithX:24.646469 y:59.424939]];
+    NTNMLModel* model = [[NTNMLModel alloc] initWithPos:pos style:[nmlModelStyleBuilder buildStyle]];
     [model setMetaDataElement:@"ClickText" element:[[NTVariant alloc] initWithString:@"NMLModel"]];
     
     // oversize it 100x, just to make it more visible
