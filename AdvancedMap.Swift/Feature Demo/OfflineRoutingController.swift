@@ -13,7 +13,7 @@ class OfflineRoutingController: BasePackageDownloadController, RouteMapEventDele
     
     var routing: Routing!
     
-    var mapListener: RouteMapEventListener!;
+    var mapListener: RouteMapEventListener!
     
     override func viewDidLoad() {
         super.viewDidLoad()

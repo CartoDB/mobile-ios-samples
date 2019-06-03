@@ -11,7 +11,7 @@ import CartoMobileSDK
 
 class RouteSearchController : BaseController, RouteMapEventDelegate {
     
-    let contentView = RouteSearchView()
+    var contentView: RouteSearchView!
     
     var routing: Routing!
     
@@ -21,6 +21,7 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        contentView = RouteSearchView()
         view = contentView
         
         routing = Routing(mapView: contentView.map)
@@ -34,7 +35,6 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
         contentView.map.setZoom(14, durationSeconds: 0)
         
         routing.service = NTCartoOnlineRoutingService(source: "nutiteq.osm.car")
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -131,8 +131,3 @@ class RouteSearchController : BaseController, RouteMapEventDelegate {
         }
     }
 }
-
-
-
-
-

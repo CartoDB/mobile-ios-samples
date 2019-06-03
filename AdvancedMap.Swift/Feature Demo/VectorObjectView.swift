@@ -13,6 +13,7 @@ import CartoMobileSDK
 class VectorObjectView : MapBaseView {
     
     var baseLayer: NTCartoOnlineVectorTileLayer!
+    var vectorLayer: NTVectorLayer!
     var source: NTLocalVectorDataSource!
     
     convenience init() {
@@ -20,7 +21,7 @@ class VectorObjectView : MapBaseView {
         
         initialize()
         baseLayer = addBaseLayer()
-        
+ 
         infoContent.setText(headerText: Texts.vectorElementsInfoHeader, contentText: Texts.vectorElementsInfoContainer)
         
         let projection = map.getOptions().getBaseProjection()
@@ -28,7 +29,7 @@ class VectorObjectView : MapBaseView {
         let source = NTLocalVectorDataSource(projection: projection);
         
         // Initialize a vector layer with the previous data source
-        let vectorLayer = NTVectorLayer(dataSource: source);
+        vectorLayer = NTVectorLayer(dataSource: source);
         map.getLayers().add(vectorLayer)
         
         // Set vector object listener to receive vector object click event
@@ -197,6 +198,13 @@ class VectorObjectView : MapBaseView {
         textElement?.setMetaData(VectorObjectClickListener.CLICK_TITLE, element: NTVariant(string: "Text"))
         textElement?.setMetaData(VectorObjectClickListener.CLICK_DESCRIPTION, element: NTVariant(string: "This is just a text"))
         source?.add(textElement)
+    }
+    
+    deinit {
+        (vectorLayer.getVectorElementEventListener() as? VectorObjectClickListener)?.source = nil
+        (map.getMapEventListener() as? VectorObjectMapListener)?.objectListener = nil
+        vectorLayer.setVectorElementEventListener(nil)
+        map.setMapEventListener(nil)
     }
     
     override func addRecognizers() {

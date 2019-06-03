@@ -34,8 +34,7 @@ class MainViewController: UIViewController, GalleryDelegate {
     }
     
     func galleryItemClick(item: GalleryRow) {
-        
-        let controller = item.sample.controller!
+        let controller = item.sample.controller?.init() as! BaseController
         controller.title = item.sample.title
         
         navigationController?.pushViewController(controller, animated: true)

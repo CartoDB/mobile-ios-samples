@@ -58,6 +58,9 @@ class BasePackageDownloadController : BaseController, UITableViewDelegate, Packa
         contentView.manager?.setPackageManagerListener(nil)
         contentView.manager?.stop(false)
         
+        contentView.packageContent.table.delegate = nil
+        contentView.popup.popup.header.backButton.delegate = nil
+
         if (contentView.switchButton != nil) {
             contentView.switchButton.delegate = nil
         }
