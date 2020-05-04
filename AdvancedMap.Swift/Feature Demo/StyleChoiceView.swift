@@ -25,6 +25,7 @@ class StyleChoiceView : MapBaseView {
     var currentLayer: NTTileLayer!
     var buildings3D: Bool = false
     var texts3D: Bool = true
+    var pois: Bool = false
 
     convenience init() {
         
@@ -131,6 +132,7 @@ class StyleChoiceView : MapBaseView {
         updateMapLanguage(language: currentLanguage)
         updateMapOption(option: "buildings3d", value: buildings3D)
         updateMapOption(option: "texts3d", value: texts3D)
+        updateMapOption(option: "pois", value: pois)
     }
     
     func updateMapOption(option:String!, value:Bool) {
@@ -148,6 +150,11 @@ class StyleChoiceView : MapBaseView {
         if (option == "texts3d") {
             texts3D = value
             decoder?.setStyleParameter("texts3d", value: value ? "1" : "0")
+        }
+        if (option == "pois") {
+            pois = value
+            let cartoLayer = currentLayer as? NTCartoVectorTileLayer
+            cartoLayer?.setPOIRenderMode(value ? NTCartoBaseMapPOIRenderMode.CARTO_BASEMAP_POI_RENDER_MODE_FULL : NTCartoBaseMapPOIRenderMode.CARTO_BASEMAP_POI_RENDER_MODE_NONE)
         }
     }
 }

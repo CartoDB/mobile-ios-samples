@@ -32,6 +32,7 @@
         [list addObject:[[MapOption alloc] initWithName:@"Globe view" tag:@"globe" value:NO]];
         [list addObject:[[MapOption alloc] initWithName:@"3D buildings" tag:@"buildings3d" value:NO]];
         [list addObject:[[MapOption alloc] initWithName:@"3D texts" tag:@"texts3d" value:YES]];
+        [list addObject:[[MapOption alloc] initWithName:@"POIs" tag:@"pois" value:NO]];
     }
     
     return list;

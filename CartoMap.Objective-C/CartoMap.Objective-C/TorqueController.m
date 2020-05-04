@@ -58,8 +58,16 @@
     [service setDefaultVectorLayerMode:isVector];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
-    
-        NTLayerVector *layers = [service buildNamedMap:mapname templateParams:[[NTStringVariantMap alloc]init]];
+        NTLayerVector *layers = nil;
+        @try {
+            layers = [service buildNamedMap:mapname templateParams:[[NTStringVariantMap alloc] init]];
+        } @catch(NSException *exception) {
+            NSString *message = exception.reason;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.view makeToast:message];
+            });
+            return;
+        }
         
         // NB! This update priority only works for the map tpl_a108ee2b_6699_43bc_aa71_3b0bc962acf9
         // It may make loading worse or even break it when tried with other maps

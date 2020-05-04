@@ -1,6 +1,7 @@
 platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'CartoMap.Objective-C' do
-  pod 'CartoMobileSDK', '4.2.2'
+  pod 'CartoMobileSDK', '4.3.0'
   pod 'Toast', '~> 3.0'
 end

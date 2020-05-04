@@ -912,7 +912,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -921,7 +921,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdvancedMap.Swift/Pods-AdvancedMap.Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

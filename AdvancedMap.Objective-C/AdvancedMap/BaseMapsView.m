@@ -32,6 +32,7 @@
     self.currentLanguage = @"en";
     self.buildings3D = NO;
     self.texts3D = YES;
+    self.pois = NO;
     return self;
 }
 
@@ -82,7 +83,8 @@
     [self updateLanguage:self.currentLanguage];
     [self updateMapOption:@"buildings3d" value:self.buildings3D];
     [self updateMapOption:@"texts3d" value:self.texts3D];
-    
+    [self updateMapOption:@"pois" value:self.pois];
+
     [self initializeVectorTileListener];
 }
 
@@ -157,6 +159,11 @@
     if ([option isEqualToString:@"texts3d"]) {
         self.texts3D = value;
         [decoder setStyleParameter:@"texts3d" value:(value ? @"1" : @"0")];
+    }
+    if ([option isEqualToString:@"pois"] && [layer isKindOfClass:NTCartoVectorTileLayer.class]) {
+        self.texts3D = value;
+        NTCartoVectorTileLayer *cartoLayer = (NTCartoVectorTileLayer *)layer;
+        [cartoLayer setPOIRenderMode:(value ? NT_CARTO_BASEMAP_POI_RENDER_MODE_FULL : NT_CARTO_BASEMAP_POI_RENDER_MODE_NONE)];
     }
 }
 

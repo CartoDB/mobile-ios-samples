@@ -17,6 +17,7 @@
 @property NSString *currentLanguage;
 @property BOOL buildings3D;
 @property BOOL texts3D;
+@property BOOL pois;
 
 @property NTVectorLayer *vectorLayer;
 @property VectorTileListener *listener;

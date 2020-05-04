@@ -34,6 +34,13 @@ class MapOptions {
         mapOption.value = true
         
         list.append(mapOption)
+
+        mapOption = MapOption()
+        mapOption.name = "POIs"
+        mapOption.tag = "pois"
+        mapOption.value = false
+        
+        list.append(mapOption)
     }
 }
 
