@@ -9,8 +9,8 @@
 import UIKit
 import CartoMobileSDK
 
-class ViewController: GLKViewController {
-    
+class ViewController: UIViewController {
+
     var mapView: NTMapView?
     
     override func viewDidLoad() {
@@ -18,7 +18,6 @@ class ViewController: GLKViewController {
         
         // Miminal sample code follows
         title = "Hello Map"
-        preferredFramesPerSecond = 60
         
         // Create NTMapView
         mapView = NTMapView()

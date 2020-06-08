@@ -26,9 +26,6 @@
 
     // Minimal map definition code follows with some tweaks
     
-    // Smoother UI/animations
-    [self setPreferredFramesPerSecond:60];
-
     // The storyboard has NTMapView connected as a view
     NTMapView* mapView = (NTMapView*) self.view;
     

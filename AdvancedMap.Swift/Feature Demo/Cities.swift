@@ -65,7 +65,7 @@ class Cities {
         
         city = City(name: "Rome")
         // use 'standard' bbox string format as input from bboxfinder.com etc
-        var boxString = "12.43935,41.85283,12.55333,41.92516".components(separatedBy: ",")
+        let boxString = "12.43935,41.85283,12.55333,41.92516".components(separatedBy: ",")
         box = BoundingBox(minLon: Double(boxString[0])!, maxLon: Double(boxString[2])!, minLat: Double(boxString[1])!, maxLat: Double(boxString[3])!)
         
         city.boundingBox = box

@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CartoMobileSDK/CartoMobileSDK.h>
-#include <stdlib.h>
 
-@interface ViewController : GLKViewController
+@interface ViewController : UIViewController
 
 
 @end

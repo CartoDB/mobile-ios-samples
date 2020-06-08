@@ -147,7 +147,7 @@
 				TargetAttributes = {
 					ADBFDA4C1D7840B1003DCBC9 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8P5LFSMKJW;
+						DevelopmentTeam = XULUY39T35;
 					};
 				};
 			};
@@ -348,7 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8P5LFSMKJW;
+				DEVELOPMENT_TEAM = XULUY39T35;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "HelloMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -363,7 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8P5LFSMKJW;
+				DEVELOPMENT_TEAM = XULUY39T35;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "HelloMap.Objective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
