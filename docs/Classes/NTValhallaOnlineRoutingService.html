@@ -14,7 +14,7 @@
     <a title="NTValhallaOnlineRoutingService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -835,11 +868,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithApiKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">apiKey</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -854,93 +882,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                               <td>
                                 <div>
                                   <p>The API key (access token) to use registered with MapBox.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)getProfile"></a>
-                    <a name="//apple_ref/objc/Method/-getProfile" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)getProfile">-getProfile</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the current routing profile.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getProfile</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getProfile</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The current routing profile. Can be either &ldquo;auto&rdquo;, &ldquo;auto_shorter&rdquo;, &ldquo;bicycle&rdquo;, &ldquo;bus&rdquo;, &ldquo;hov&rdquo;, &ldquo;pedestrian&rdquo;, &ldquo;wheelchair&rdquo; or &ldquo;multimodal&rdquo;. The default is &ldquo;pedestrian&rdquo;.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)setProfile:"></a>
-                    <a name="//apple_ref/objc/Method/-setProfile:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)setProfile:">-setProfile:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the current routing profile.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setProfile</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">profile</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setProfile</span><span class="p">(</span><span class="n">_</span> <span class="nv">profile</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>profile</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The new profile. Can be either &ldquo;auto&rdquo;, &ldquo;auto_shorter&rdquo;, &ldquo;bicycle&rdquo;, &ldquo;bus&rdquo;, &ldquo;hov&rdquo;, &ldquo;pedestrian&rdquo;, &ldquo;wheelchair&rdquo; or &ldquo;multimodal&rdquo;.</p>
                                 </div>
                               </td>
                             </tr>
@@ -973,11 +914,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getCustomServiceURL</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getCustomServiceURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1000,7 +936,8 @@ Note: this class is experimental and may change or even be removed in future SDK
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Sets the custom backend service URL. 
-The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted with the set API key.</p>
+The custom URL should contain tag &ldquo;{service}&rdquo;, it will be substituted by the SDK by the service type the SDK needs to perform (&ldquo;route&rdquo; or &ldquo;trace_route&rdquo;).
+The custom URL may also contain tag &ldquo;{api_key}&rdquo; which will be substituted with the set API key.</p>
 
                       </div>
                       <div class="declaration">
@@ -1008,11 +945,6 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCustomServiceURL</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">serviceURL</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCustomServiceURL</span><span class="p">(</span><span class="n">_</span> <span class="nv">serviceURL</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1041,6 +973,114 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)getProfile"></a>
+                    <a name="//apple_ref/objc/Method/-getProfile" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)getProfile">-getProfile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getProfile</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)getProfileSwigExplicitNTValhallaOnlineRoutingService"></a>
+                    <a name="//apple_ref/objc/Method/-getProfileSwigExplicitNTValhallaOnlineRoutingService" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)getProfileSwigExplicitNTValhallaOnlineRoutingService">-getProfileSwigExplicitNTValhallaOnlineRoutingService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">getProfileSwigExplicitNTValhallaOnlineRoutingService</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)setProfile:"></a>
+                    <a name="//apple_ref/objc/Method/-setProfile:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)setProfile:">-setProfile:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setProfile</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">profile</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)setProfileSwigExplicitNTValhallaOnlineRoutingService:"></a>
+                    <a name="//apple_ref/objc/Method/-setProfileSwigExplicitNTValhallaOnlineRoutingService:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)setProfileSwigExplicitNTValhallaOnlineRoutingService:">-setProfileSwigExplicitNTValhallaOnlineRoutingService:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setProfileSwigExplicitNTValhallaOnlineRoutingService</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">profile</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)matchRoute:"></a>
                     <a name="//apple_ref/objc/Method/-matchRoute:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)matchRoute:">-matchRoute:</a>
@@ -1051,12 +1091,7 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Matches specified points to the points on road network.</p>
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    Throws NSException If IO error occured during the route matching.
-
-</div>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
@@ -1066,34 +1101,33 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTRouteMatchingResult.html">NTRouteMatchingResult</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">matchRoute</span><span class="p">:(</span><span class="n"><a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTValhallaOnlineRoutingService(im)matchRouteSwigExplicitNTValhallaOnlineRoutingService:"></a>
+                    <a name="//apple_ref/objc/Method/-matchRouteSwigExplicitNTValhallaOnlineRoutingService:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTValhallaOnlineRoutingService(im)matchRouteSwigExplicitNTValhallaOnlineRoutingService:">-matchRouteSwigExplicitNTValhallaOnlineRoutingService:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
                         <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">matchRoute</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTRouteMatchingResult.html">NTRouteMatchingResult</a></span><span class="o">!</span></code></pre>
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n"><a href="../Classes/NTRouteMatchingResult.html">NTRouteMatchingResult</a></span><span class="o">*</span><span class="p">)</span><span class="nf">matchRouteSwigExplicitNTValhallaOnlineRoutingService</span><span class="p">:</span> <span class="p">(</span><span class="n"><a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a></span><span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>request</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The matching request.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The matching result or null if route matching failed.</p>
                       </div>
                     </section>
                   </div>
@@ -1121,11 +1155,6 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTRoutingResult.html">NTRoutingResult</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">calculateRoute</span><span class="p">:(</span><span class="n"><a href="../Classes/NTRoutingRequest.html">NTRoutingRequest</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateRoute</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTRoutingRequest.html">NTRoutingRequest</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTRoutingResult.html">NTRoutingResult</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1151,11 +1180,6 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n"><a href="../Classes/NTRoutingResult.html">NTRoutingResult</a></span><span class="o">*</span><span class="p">)</span><span class="nf">calculateRouteSwigExplicitNTValhallaOnlineRoutingService</span><span class="p">:</span> <span class="p">(</span><span class="n"><a href="../Classes/NTRoutingRequest.html">NTRoutingRequest</a></span><span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateRouteSwigExplicitNTValhallaOnlineRoutingService</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTRoutingRequest.html">NTRoutingRequest</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTRoutingResult.html">NTRoutingResult</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1194,7 +1218,7 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

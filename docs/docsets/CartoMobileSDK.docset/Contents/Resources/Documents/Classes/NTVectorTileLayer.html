@@ -14,7 +14,7 @@
     <a title="NTVectorTileLayer Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -831,11 +864,6 @@
                  <span class="nf">decoder</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVectorTileDecoder.html">NTVectorTileDecoder</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">decoder</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">dataSource</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTTileDataSource.html">NTTileDataSource</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTVectorTileDecoder.html">NTVectorTileDecoder</a></span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -894,11 +922,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTVectorTileDecoder.html">NTVectorTileDecoder</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getTileDecoder</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTileDecoder</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTVectorTileDecoder.html">NTVectorTileDecoder</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -928,11 +951,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="n">getTileCacheCapacity</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTileCacheCapacity</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
 
                         </div>
                       </div>
@@ -969,11 +987,6 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTileCacheCapacity</span><span class="p">:(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">)</span><span class="nv">capacityInBytes</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTileCacheCapacity</span><span class="p">(</span><span class="n">_</span> <span class="nv">capacityInBytes</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1022,11 +1035,6 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span><span class="p">)</span><span class="n">getLabelRenderOrder</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLabelRenderOrder</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1056,11 +1064,6 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLabelRenderOrder</span><span class="p">:(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span><span class="p">)</span><span class="nv">renderOrder</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setLabel</span><span class="p">(</span><span class="n">_</span> <span class="nv">renderOrder</span><span class="p">:</span> <span class="kt"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1109,11 +1112,6 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span><span class="p">)</span><span class="n">getBuildingRenderOrder</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBuildingRenderOrder</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1145,11 +1143,6 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setBuildingRenderOrder</span><span class="p">:(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span><span class="p">)</span><span class="nv">renderOrder</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setBuilding</span><span class="p">(</span><span class="n">_</span> <span class="nv">renderOrder</span><span class="p">:</span> <span class="kt"><a href="../Enums/NTVectorTileRenderOrder.html">NTVectorTileRenderOrder</a></span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1164,6 +1157,86 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                               <td>
                                 <div>
                                   <p>The new display order of the labels.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTVectorTileLayer(im)getClickRadius"></a>
+                    <a name="//apple_ref/objc/Method/-getClickRadius" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTVectorTileLayer(im)getClickRadius">-getClickRadius</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the click radius of vector tile features.
+Units are screen density independent pixels (DP or DIP).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getClickRadius</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The click radius of vector tile features.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTVectorTileLayer(im)setClickRadius:"></a>
+                    <a name="//apple_ref/objc/Method/-setClickRadius:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTVectorTileLayer(im)setClickRadius:">-setClickRadius:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the click radius of vector tile features.
+The click radius is applied as an extra buffer to the vector tile features to make clicking on small features less sensitive.
+Units are screen density independent pixels (DP or DIP).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setClickRadius</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">radius</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>radius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new click radius of vector tile features. The default value is 4.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1196,11 +1269,6 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTVectorTileEventListener.html">NTVectorTileEventListener</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getVectorTileEventListener</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getVectorTileEventListener</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTVectorTileEventListener.html">NTVectorTileEventListener</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1230,11 +1298,6 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setVectorTileEventListener</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVectorTileEventListener.html">NTVectorTileEventListener</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">eventListener</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setVectorTileEventListener</span><span class="p">(</span><span class="n">_</span> <span class="nv">eventListener</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTVectorTileEventListener.html">NTVectorTileEventListener</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1292,7 +1355,7 @@ disabled, the cache size should be reduced by the user to conserve memory.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

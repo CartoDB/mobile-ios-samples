@@ -14,7 +14,7 @@
     <a title="NTLayer Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -833,11 +866,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqual</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -888,15 +916,246 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">hash</span><span class="p">;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The hash value of this object.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTLayer(im)getMetaData"></a>
+                    <a name="//apple_ref/objc/Method/-getMetaData" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTLayer(im)getMetaData">-getMetaData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a copy of the layer meta data map. The changes you make to this map are NOT reflected in the actual meta data of the layer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
                         <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hash</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTStringVariantMap.html">NTStringVariantMap</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getMetaData</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The hash value of this object.</p>
+                        <p>A copy of the layer meta data map.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTLayer(im)setMetaData:"></a>
+                    <a name="//apple_ref/objc/Method/-setMetaData:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTLayer(im)setMetaData:">-setMetaData:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a new meta data map for the layer. Old meta data values will be lost.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMetaData</span><span class="p">:(</span><span class="n"><a href="../Classes/NTStringVariantMap.html">NTStringVariantMap</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">metaData</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metaData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new meta data map for this layer.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTLayer(im)containsMetaDataKey:"></a>
+                    <a name="//apple_ref/objc/Method/-containsMetaDataKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTLayer(im)containsMetaDataKey:">-containsMetaDataKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns true if the specified key exists in the layer meta data map.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">containsMetaDataKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key to check.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>True if the meta data element exists.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTLayer(im)getMetaDataElement:"></a>
+                    <a name="//apple_ref/objc/Method/-getMetaDataElement:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTLayer(im)getMetaDataElement:">-getMetaDataElement:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a layer meta data element corresponding to the key. If no value is found null variant is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTVariant.html">NTVariant</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getMetaDataElement</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key to use.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The value corresponding to the key from the meta data map. If the key does not exist, empty variant is returned.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTLayer(im)setMetaDataElement:element:"></a>
+                    <a name="//apple_ref/objc/Method/-setMetaDataElement:element:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTLayer(im)setMetaDataElement:element:">-setMetaDataElement:element:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a new key-value pair to the layer meta data map. If the key already exists in the map,
+it&rsquo;s value will be replaced by the new value.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMetaDataElement</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span> <span class="nf">element</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVariant.html">NTVariant</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">element</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>element</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -922,11 +1181,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getUpdatePriority</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getUpdatePriority</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -960,11 +1214,6 @@ don&rsquo;t compete with each other for task queue access. The default is 0.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setUpdatePriority</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">priority</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setUpdatePriority</span><span class="p">(</span><span class="n">_</span> <span class="nv">priority</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1015,11 +1264,6 @@ on layer type.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCullDelay</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">delay</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCullDelay</span><span class="p">(</span><span class="n">_</span> <span class="nv">delay</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1066,11 +1310,6 @@ on layer type.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getOpacity</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getOpacity</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1100,11 +1339,6 @@ on layer type.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setOpacity</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">opacity</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setOpacity</span><span class="p">(</span><span class="n">_</span> <span class="nv">opacity</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1153,11 +1387,6 @@ on layer type.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isVisible</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isVisible</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1187,11 +1416,6 @@ on layer type.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setVisible</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">visible</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setVisible</span><span class="p">(</span><span class="n">_</span> <span class="nv">visible</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1240,11 +1464,6 @@ on layer type.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapRange.html">NTMapRange</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getVisibleZoomRange</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getVisibleZoomRange</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapRange.html">NTMapRange</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1275,11 +1494,6 @@ This range is half-open, thus layer is visible if range.min &lt;= ZOOMLEVEL &lt;
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setVisibleZoomRange</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapRange.html">NTMapRange</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">range</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setVisibleZoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">range</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapRange.html">NTMapRange</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1328,11 +1542,6 @@ This range is half-open, thus layer is visible if range.min &lt;= ZOOMLEVEL &lt;
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isUpdateInProgress</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isUpdateInProgress</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1363,11 +1572,6 @@ The visibilty info is saved, so the data can be refreshed later.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">update</span><span class="p">:(</span><span class="n"><a href="../Classes/NTCullState.html">NTCullState</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">cullState</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">_</span> <span class="nv">cullState</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTCullState.html">NTCullState</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1417,11 +1621,6 @@ changes.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">refresh</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">refresh</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1449,11 +1648,6 @@ changes.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">simulateClick</span><span class="p">:(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTClickType.html">NTClickType</a></span><span class="p">)</span><span class="nv">clickType</span>
             <span class="nf">screenPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">screenPos</span>
             <span class="nf">viewState</span><span class="p">:(</span><span class="n"><a href="../Classes/NTViewState.html">NTViewState</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">viewState</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">simulateClick</span><span class="p">(</span><span class="n">_</span> <span class="nv">clickType</span><span class="p">:</span> <span class="kt"><a href="../Enums/NTClickType.html">NTClickType</a></span><span class="p">,</span> <span class="nv">screenPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">viewState</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTViewState.html">NTViewState</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1535,7 +1729,7 @@ changes.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

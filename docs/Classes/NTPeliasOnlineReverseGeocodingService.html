@@ -14,7 +14,7 @@
     <a title="NTPeliasOnlineReverseGeocodingService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -835,11 +868,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithApiKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">apiKey</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -854,93 +882,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                               <td>
                                 <div>
                                   <p>The API key to use (registered with Mapzen).</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)getLanguage"></a>
-                    <a name="//apple_ref/objc/Method/-getLanguage" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)getLanguage">-getLanguage</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the language of the expected results.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getLanguage</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLanguage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The language of the expected results. As BCP47 code or empty string.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)setLanguage:"></a>
-                    <a name="//apple_ref/objc/Method/-setLanguage:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)setLanguage:">-setLanguage:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the language of the expected results.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLanguage</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">lang</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setLanguage</span><span class="p">(</span><span class="n">_</span> <span class="nv">lang</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lang</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The language to use as BCP47 code. Empty string can be used for default language.</p>
                                 </div>
                               </td>
                             </tr>
@@ -971,11 +912,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getCustomServiceURL</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getCustomServiceURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1010,11 +946,6 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCustomServiceURL</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">serviceURL</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCustomServiceURL</span><span class="p">(</span><span class="n">_</span> <span class="nv">serviceURL</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1034,6 +965,114 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)getLanguage"></a>
+                    <a name="//apple_ref/objc/Method/-getLanguage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)getLanguage">-getLanguage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getLanguage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)getLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService"></a>
+                    <a name="//apple_ref/objc/Method/-getLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)getLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService">-getLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">getLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)setLanguage:"></a>
+                    <a name="//apple_ref/objc/Method/-setLanguage:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)setLanguage:">-setLanguage:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLanguage</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">lang</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)setLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService:"></a>
+                    <a name="//apple_ref/objc/Method/-setLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineReverseGeocodingService(im)setLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService:">-setLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">lang</span><span class="p">;</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1062,11 +1101,6 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
     <span class="p">(</span><span class="n"><a href="../Classes/NTReverseGeocodingRequest.html">NTReverseGeocodingRequest</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateAddresses</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTReverseGeocodingRequest.html">NTReverseGeocodingRequest</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTGeocodingResultVector.html">NTGeocodingResultVector</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1092,11 +1126,6 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n"><a href="../Classes/NTGeocodingResultVector.html">NTGeocodingResultVector</a></span><span class="o">*</span><span class="p">)</span><span class="nf">calculateAddressesSwigExplicitNTPeliasOnlineReverseGeocodingService</span><span class="p">:</span> <span class="p">(</span><span class="n"><a href="../Classes/NTReverseGeocodingRequest.html">NTReverseGeocodingRequest</a></span><span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateAddressesSwigExplicitNTPeliasOnlineReverseGeocodingService</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTReverseGeocodingRequest.html">NTReverseGeocodingRequest</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTGeocodingResultVector.html">NTGeocodingResultVector</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1135,7 +1164,7 @@ The custom URL may contain tag &ldquo;{api_key}&rdquo; which will be substituted
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

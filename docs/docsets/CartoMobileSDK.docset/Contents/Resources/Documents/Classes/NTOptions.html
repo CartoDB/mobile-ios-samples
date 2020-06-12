@@ -14,7 +14,7 @@
     <a title="NTOptions Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -833,11 +866,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqual</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -888,11 +916,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">hash</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hash</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -922,11 +945,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getAmbientLightColor</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getAmbientLightColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -959,11 +977,6 @@ Ambient light affects all lighting enabled models in the scene equally, it has n
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setAmbientLightColor</span><span class="p">:(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">color</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setAmbientLightColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1012,11 +1025,6 @@ Ambient light affects all lighting enabled models in the scene equally, it has n
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getMainLightColor</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getMainLightColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1047,11 +1055,6 @@ in the scene equally from a certain direction. This light can be used to simulat
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMainLightColor</span><span class="p">:(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">color</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setMainLightColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1100,11 +1103,6 @@ in the scene equally from a certain direction. This light can be used to simulat
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapVec.html">NTMapVec</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getMainLightDirection</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getMainLightDirection</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapVec.html">NTMapVec</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1127,7 +1125,8 @@ in the scene equally from a certain direction. This light can be used to simulat
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Sets the direction of the main light. The main light affects all lighting enabled models
-in the scene equally from a certain direction. This light can be used to simulate sun or moon light.</p>
+in the scene equally from a certain direction. This light can be used to simulate sun or moon light.
+The direction is always measured based on the local tangent frame of the focus point. </p>
 
                       </div>
                       <div class="declaration">
@@ -1135,11 +1134,6 @@ in the scene equally from a certain direction. This light can be used to simulat
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMainLightDirection</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapVec.html">NTMapVec</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">direction</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setMainLightDirection</span><span class="p">(</span><span class="n">_</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapVec.html">NTMapVec</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1189,11 +1183,6 @@ in the scene equally from a certain direction. This light can be used to simulat
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a></span><span class="p">)</span><span class="n">getRenderProjectionMode</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getRenderProjectionMode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1224,11 +1213,6 @@ in the scene equally from a certain direction. This light can be used to simulat
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRenderProjectionMode</span><span class="p">:</span>
     <span class="p">(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a></span><span class="p">)</span><span class="nv">renderProjectionMode</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRenderProjectionMode</span><span class="p">(</span><span class="n">_</span> <span class="nv">renderProjectionMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1277,11 +1261,6 @@ in the scene equally from a certain direction. This light can be used to simulat
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isClickTypeDetection</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isClickTypeDetection</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1313,11 +1292,6 @@ require this functionality, it can be turned off. The default is true.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setClickTypeDetection</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setClickTypeDetection</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1366,11 +1340,6 @@ require this functionality, it can be turned off. The default is true.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getTileDrawSize</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTileDrawSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1401,11 +1370,6 @@ can be used to compensate for bigger or smaller tiles than default. The default 
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTileDrawSize</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">tileDrawSize</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTileDrawSize</span><span class="p">(</span><span class="n">_</span> <span class="nv">tileDrawSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1454,11 +1418,6 @@ can be used to compensate for bigger or smaller tiles than default. The default 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getDPI</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDPI</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1490,11 +1449,6 @@ so that the map remains readable.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setDPI</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">dpi</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setDPI</span><span class="p">(</span><span class="n">_</span> <span class="nv">dpi</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1543,11 +1497,6 @@ so that the map remains readable.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getDrawDistance</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDrawDistance</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1580,11 +1529,6 @@ if online map is used. The default is 16.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setDrawDistance</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">drawDistance</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setDrawDistance</span><span class="p">(</span><span class="n">_</span> <span class="nv">drawDistance</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1633,11 +1577,6 @@ if online map is used. The default is 16.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getFieldOfViewY</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFieldOfViewY</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1668,11 +1607,6 @@ additional perspective distortion. The default is 70.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setFieldOfViewY</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">fovY</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setFieldOfViewY</span><span class="p">(</span><span class="n">_</span> <span class="nv">fovY</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1721,11 +1655,6 @@ additional perspective distortion. The default is 70.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTPanningMode.html">NTPanningMode</a></span><span class="p">)</span><span class="n">getPanningMode</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getPanningMode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/NTPanningMode.html">NTPanningMode</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1755,11 +1684,6 @@ additional perspective distortion. The default is 70.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPanningMode</span><span class="p">:(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTPanningMode.html">NTPanningMode</a></span><span class="p">)</span><span class="nv">panningMode</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setPanningMode</span><span class="p">(</span><span class="n">_</span> <span class="nv">panningMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/NTPanningMode.html">NTPanningMode</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1808,11 +1732,6 @@ additional perspective distortion. The default is 70.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTPivotMode.html">NTPivotMode</a></span><span class="p">)</span><span class="n">getPivotMode</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getPivotMode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/NTPivotMode.html">NTPivotMode</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1842,11 +1761,6 @@ additional perspective distortion. The default is 70.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPivotMode</span><span class="p">:(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTPivotMode.html">NTPivotMode</a></span><span class="p">)</span><span class="nv">pivotMode</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setPivotMode</span><span class="p">(</span><span class="n">_</span> <span class="nv">pivotMode</span><span class="p">:</span> <span class="kt"><a href="../Enums/NTPivotMode.html">NTPivotMode</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1895,11 +1809,6 @@ additional perspective distortion. The default is 70.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isSeamlessPanning</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isSeamlessPanning</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1930,11 +1839,6 @@ the left side of the map to the right, and the other way around. The default is 
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setSeamlessPanning</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setSeamlessPanning</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1983,11 +1887,6 @@ the left side of the map to the right, and the other way around. The default is 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isRestrictedPanning</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isRestrictedPanning</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2020,11 +1919,6 @@ will be adjusted to display as little empty background as possible. The default 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRestrictedPanning</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRestrictedPanning</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -2050,11 +1944,6 @@ will be adjusted to display as little empty background as possible. The default 
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isTiltGestureReversed</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isTiltGestureReversed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -2086,11 +1975,6 @@ will be adjusted to display as little empty background as possible. The default 
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTiltGestureReversed</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">reversed</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTiltGestureReversed</span><span class="p">(</span><span class="n">_</span> <span class="nv">reversed</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2139,11 +2023,6 @@ will be adjusted to display as little empty background as possible. The default 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isZoomGestures</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isZoomGestures</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2173,11 +2052,6 @@ will be adjusted to display as little empty background as possible. The default 
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setZoomGestures</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setZoomGestures</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2226,11 +2100,6 @@ will be adjusted to display as little empty background as possible. The default 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getEnvelopeThreadPoolSize</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getEnvelopeThreadPoolSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2261,11 +2130,6 @@ are executed in parallel. This might speed up the data query, but may cause perf
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setEnvelopeThreadPoolSize</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">poolSize</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setEnvelopeThreadPoolSize</span><span class="p">(</span><span class="n">_</span> <span class="nv">poolSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2314,11 +2178,6 @@ are executed in parallel. This might speed up the data query, but may cause perf
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getTileThreadPoolSize</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTileThreadPoolSize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2349,11 +2208,6 @@ are executed in parallel. This might speed up the data query, but may cause perf
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTileThreadPoolSize</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">poolSize</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTileThreadPoolSize</span><span class="p">(</span><span class="n">_</span> <span class="nv">poolSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2403,11 +2257,6 @@ By default, this is white. It should be set to (0, 0, 0, 0) if transparent MapVi
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getClearColor</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getClearColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2437,11 +2286,6 @@ By default, this is white. It should be set to (0, 0, 0, 0) if transparent MapVi
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setClearColor</span><span class="p">:(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">color</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setClear</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2490,11 +2334,6 @@ By default, this is white. It should be set to (0, 0, 0, 0) if transparent MapVi
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getSkyColor</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getSkyColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2524,11 +2363,6 @@ By default, this is white. It should be set to (0, 0, 0, 0) if transparent MapVi
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setSkyColor</span><span class="p">:(</span><span class="n"><a href="../Classes/NTColor.html">NTColor</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">color</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setSkyColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTColor.html">NTColor</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2577,11 +2411,6 @@ By default, this is white. It should be set to (0, 0, 0, 0) if transparent MapVi
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTBitmap.html">NTBitmap</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getBackgroundBitmap</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBackgroundBitmap</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTBitmap.html">NTBitmap</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2616,11 +2445,6 @@ The default is &ldquo;default_background.png&rdquo;.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setBackgroundBitmap</span><span class="p">:(</span><span class="n"><a href="../Classes/NTBitmap.html">NTBitmap</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">backgroundBitmap</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setBackgroundBitmap</span><span class="p">(</span><span class="n">_</span> <span class="nv">backgroundBitmap</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTBitmap.html">NTBitmap</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2669,11 +2493,6 @@ The default is &ldquo;default_background.png&rdquo;.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getWatermarkAlignmentX</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getWatermarkAlignmentX</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2703,11 +2522,6 @@ The default is &ldquo;default_background.png&rdquo;.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setWatermarkAlignmentX</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">alignmentX</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setWatermarkAlignmentX</span><span class="p">(</span><span class="n">_</span> <span class="nv">alignmentX</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2757,11 +2571,6 @@ The default is &ldquo;default_background.png&rdquo;.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getWatermarkAlignmentY</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getWatermarkAlignmentY</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2791,11 +2600,6 @@ The default is &ldquo;default_background.png&rdquo;.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setWatermarkAlignmentY</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">alignmentY</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setWatermarkAlignmentY</span><span class="p">(</span><span class="n">_</span> <span class="nv">alignmentY</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2845,11 +2649,6 @@ The default is &ldquo;default_background.png&rdquo;.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getWatermarkScale</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getWatermarkScale</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2880,11 +2679,6 @@ This method can be used to change this.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setWatermarkScale</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">scale</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setWatermarkScale</span><span class="p">(</span><span class="n">_</span> <span class="nv">scale</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2933,11 +2727,6 @@ This method can be used to change this.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTBitmap.html">NTBitmap</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getWatermarkBitmap</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getWatermarkBitmap</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTBitmap.html">NTBitmap</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2968,11 +2757,6 @@ on top of the map view in a user chosen corner. If null is passed no watermark w
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setWatermarkBitmap</span><span class="p">:(</span><span class="n"><a href="../Classes/NTBitmap.html">NTBitmap</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">watermarkBitmap</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setWatermarkBitmap</span><span class="p">(</span><span class="n">_</span> <span class="nv">watermarkBitmap</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTBitmap.html">NTBitmap</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3021,11 +2805,6 @@ on top of the map view in a user chosen corner. If null is passed no watermark w
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getWatermarkPadding</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getWatermarkPadding</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3055,11 +2834,6 @@ on top of the map view in a user chosen corner. If null is passed no watermark w
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setWatermarkPadding</span><span class="p">:(</span><span class="n"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">padding</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setWatermarkPadding</span><span class="p">(</span><span class="n">_</span> <span class="nv">padding</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3108,11 +2882,6 @@ on top of the map view in a user chosen corner. If null is passed no watermark w
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isUserInput</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isUserInput</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3143,11 +2912,6 @@ programmatic map panning using MapView methods is still possible. The default is
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setUserInput</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setUserInput</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3196,11 +2960,6 @@ programmatic map panning using MapView methods is still possible. The default is
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isKineticPan</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isKineticPan</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3232,11 +2991,6 @@ Default is true.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setKineticPan</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setKineticPan</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3285,11 +3039,6 @@ Default is true.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isKineticRotation</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isKineticRotation</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3321,11 +3070,6 @@ Default is true.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setKineticRotation</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setKineticRotation</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3374,11 +3118,6 @@ Default is true.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isKineticZoom</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isKineticZoom</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3410,11 +3149,6 @@ Default is true.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setKineticZoom</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setKineticZoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3463,11 +3197,6 @@ Default is true.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isRotatable</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isRotatable</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3497,11 +3226,6 @@ Default is true.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRotatable</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRotatable</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3550,11 +3274,6 @@ Default is true.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapRange.html">NTMapRange</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getTiltRange</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTiltRange</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapRange.html">NTMapRange</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3587,11 +3306,6 @@ The default value is MapRange(30, 90).</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTiltRange</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapRange.html">NTMapRange</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">tiltRange</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTiltRange</span><span class="p">(</span><span class="n">_</span> <span class="nv">tiltRange</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapRange.html">NTMapRange</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3640,11 +3354,6 @@ The default value is MapRange(30, 90).</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapRange.html">NTMapRange</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getZoomRange</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getZoomRange</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapRange.html">NTMapRange</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3677,11 +3386,6 @@ The default value is MapRange(0, 24).</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setZoomRange</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapRange.html">NTMapRange</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">zoomRange</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setZoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">zoomRange</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapRange.html">NTMapRange</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3731,11 +3435,6 @@ projection&rsquo;s coordinate system.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getPanBounds</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getPanBounds</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3769,11 +3468,6 @@ whole world.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPanBounds</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">panBounds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setPanBounds</span><span class="p">(</span><span class="n">_</span> <span class="nv">panBounds</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3822,11 +3516,6 @@ whole world.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getFocusPointOffset</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFocusPointOffset</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3856,11 +3545,6 @@ whole world.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setFocusPointOffset</span><span class="p">:(</span><span class="n"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">offset</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setFocusPointOffset</span><span class="p">(</span><span class="n">_</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -3909,11 +3593,6 @@ whole world.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTProjection.html">NTProjection</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getBaseProjection</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBaseProjection</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTProjection.html">NTProjection</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -3946,11 +3625,6 @@ The default is EPSG3857.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setBaseProjection</span><span class="p">:(</span><span class="n"><a href="../Classes/NTProjection.html">NTProjection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">baseProjection</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setBaseProjection</span><span class="p">(</span><span class="n">_</span> <span class="nv">baseProjection</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTProjection.html">NTProjection</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -4008,7 +3682,7 @@ The default is EPSG3857.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

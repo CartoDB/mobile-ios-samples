@@ -14,7 +14,7 @@
     <a title="NTRouteMatchingResult Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -833,11 +866,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqual</span><span class="p">:(</span><span class="n">id</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -888,11 +916,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">hash</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">hash</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -904,9 +927,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NTRouteMatchingResult(im)initWithProjection:points:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithProjection:points:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTRouteMatchingResult(im)initWithProjection:points:">-initWithProjection:points:</a>
+                    <a name="/c:objc(cs)NTRouteMatchingResult(im)initWithProjection:matchingPoints:matchingEdges:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithProjection:matchingPoints:matchingEdges:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTRouteMatchingResult(im)initWithProjection:matchingPoints:matchingEdges:">-initWithProjection:matchingPoints:matchingEdges:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -922,12 +945,8 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithProjection</span><span class="p">:(</span><span class="n"><a href="../Classes/NTProjection.html">NTProjection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">projection</span>
-                  <span class="nf">points</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPosVector.html">NTMapPosVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">points</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">projection</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTProjection.html">NTProjection</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">points</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapPosVector.html">NTMapPosVector</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+          <span class="nf">matchingPoints</span><span class="p">:(</span><span class="n"><a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">matchingPoints</span>
+           <span class="nf">matchingEdges</span><span class="p">:(</span><span class="n"><a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">matchingEdges</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
@@ -950,12 +969,24 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>points</em>
+                                <em>matchingPoints</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The points corresponding to the requested points snapped to road network.</p>
+                                  <p>The matched points corresponding to the requested points snapped to road network.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>matchingEdges</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The matched edges that are referenced through matching points.</p>
                                 </div>
                               </td>
                             </tr>
@@ -986,11 +1017,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTProjection.html">NTProjection</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getProjection</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getProjection</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTProjection.html">NTProjection</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1024,15 +1050,72 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapPosVector.html">NTMapPosVector</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getPoints</span><span class="p">;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The point list of the result.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTRouteMatchingResult(im)getMatchingEdges"></a>
+                    <a name="//apple_ref/objc/Method/-getMatchingEdges" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTRouteMatchingResult(im)getMatchingEdges">-getMatchingEdges</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the list with details of the matched edges.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
                         <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getPoints</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapPosVector.html">NTMapPosVector</a></span><span class="o">!</span></code></pre>
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getMatchingEdges</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The point list of the result.</p>
+                        <p>The list with details of the matched edges.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTRouteMatchingResult(im)getMatchingPoints"></a>
+                    <a name="//apple_ref/objc/Method/-getMatchingPoints" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTRouteMatchingResult(im)getMatchingPoints">-getMatchingPoints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the list with details of the matched points.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getMatchingPoints</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The list with details of the matched points.</p>
                       </div>
                     </section>
                   </div>
@@ -1058,11 +1141,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">description</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">description</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1105,7 +1183,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

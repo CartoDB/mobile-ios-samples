@@ -14,7 +14,7 @@
     <a title="NTMapView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -830,11 +863,6 @@
                           <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">void</span><span class="o">*</span> <span class="n">nativeMapView</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nativeMapView</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -860,11 +888,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -894,11 +917,6 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithCoder</span><span class="p">:(</span><span class="n">NSCoder</span> <span class="o">*</span><span class="p">)</span><span class="nv">aDecoder</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -924,11 +942,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithFrame</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">frame</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -957,11 +970,6 @@ creating any actual MapView instances.<br></p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">registerLicense</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">licenseKey</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">registerLicense</span><span class="p">(</span><span class="n">_</span> <span class="nv">licenseKey</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1010,11 +1018,6 @@ creating any actual MapView instances.<br></p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTLayers.html">NTLayers</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getLayers</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLayers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTLayers.html">NTLayers</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1044,11 +1047,6 @@ creating any actual MapView instances.<br></p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTOptions.html">NTOptions</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getOptions</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getOptions</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTOptions.html">NTOptions</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1082,11 +1080,6 @@ creating any actual MapView instances.<br></p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapRenderer.html">NTMapRenderer</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getMapRenderer</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getMapRenderer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapRenderer.html">NTMapRenderer</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1116,11 +1109,6 @@ creating any actual MapView instances.<br></p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getFocusPos</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFocusPos</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1154,11 +1142,6 @@ creating any actual MapView instances.<br></p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getRotation</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getRotation</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1188,11 +1171,6 @@ creating any actual MapView instances.<br></p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getTilt</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getTilt</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
 
                         </div>
                       </div>
@@ -1225,11 +1203,6 @@ values describe some level of zoom.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getZoom</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getZoom</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float</span></code></pre>
 
                         </div>
                       </div>
@@ -1266,11 +1239,6 @@ values describe some level of zoom.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pan</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapVec.html">NTMapVec</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">deltaPos</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pan</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapVec.html">NTMapVec</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1336,11 +1304,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setFocusPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">pos</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setFocus</span><span class="p">(</span><span class="n">_</span> <span class="nv">pos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1402,11 +1365,6 @@ values describe some level of zoom.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">rotate</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">deltaAngle</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1474,11 +1432,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">rotate</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">deltaAngle</span>
           <span class="nf">targetPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">targetPos</span>
     <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">rotate</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaAngle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">targetPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1556,11 +1509,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRotation</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">angle</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRotation</span><span class="p">(</span><span class="n">_</span> <span class="nv">angle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1626,11 +1574,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRotation</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">angle</span>
           <span class="nf">targetPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">targetPos</span>
     <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setRotation</span><span class="p">(</span><span class="n">_</span> <span class="nv">angle</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">targetPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1708,11 +1651,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">tilt</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">deltaTilt</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">tilt</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaTilt</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1776,11 +1714,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setTilt</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">tilt</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setTilt</span><span class="p">(</span><span class="n">_</span> <span class="nv">tilt</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1841,11 +1774,6 @@ values describe some level of zoom.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">zoom</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">deltaZoom</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">zoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaZoom</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1912,11 +1840,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">zoom</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">deltaZoom</span>
           <span class="nf">targetPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">targetPos</span>
     <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">zoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">deltaZoom</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">targetPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1994,11 +1917,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setZoom</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">zoom</span> <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setZoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">zoom</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -2064,11 +1982,6 @@ values describe some level of zoom.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setZoom</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">zoom</span>
           <span class="nf">targetPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">targetPos</span>
     <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setZoom</span><span class="p">(</span><span class="n">_</span> <span class="nv">zoom</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">targetPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2143,11 +2056,6 @@ This method does not work before the screen size is set.</p>
            <span class="nf">screenBounds</span><span class="p">:(</span><span class="n"><a href="../Classes/NTScreenBounds.html">NTScreenBounds</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">screenBounds</span>
             <span class="nf">integerZoom</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">integerZoom</span>
         <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">move</span><span class="p">(</span><span class="n">toFit</span> <span class="nv">mapBounds</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">screenBounds</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTScreenBounds.html">NTScreenBounds</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">integerZoom</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2237,11 +2145,6 @@ This method does not work before the screen size is set.</p>
           <span class="nf">resetRotation</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">resetRotation</span>
               <span class="nf">resetTilt</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">resetTilt</span>
         <span class="nf">durationSeconds</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">durationSeconds</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">move</span><span class="p">(</span><span class="n">toFit</span> <span class="nv">mapBounds</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">screenBounds</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTScreenBounds.html">NTScreenBounds</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">integerZoom</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">resetRotation</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">resetTilt</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">durationSeconds</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2350,11 +2253,6 @@ This method does not work before the screen size is set.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapEventListener.html">NTMapEventListener</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getMapEventListener</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getMapEventListener</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapEventListener.html">NTMapEventListener</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -2384,11 +2282,6 @@ This method does not work before the screen size is set.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMapEventListener</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapEventListener.html">NTMapEventListener</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapEventListener</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setMapEventListener</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapEventListener</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapEventListener.html">NTMapEventListener</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2435,11 +2328,6 @@ This method does not work before the screen size is set.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">screenToMap</span><span class="p">:(</span><span class="n"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">screenPos</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">screen</span><span class="p">(</span><span class="n">toMap</span> <span class="nv">screenPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -2490,11 +2378,6 @@ This method does not work before the screen size is set.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">mapToScreen</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">mapPos</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">map</span><span class="p">(</span><span class="n">toScreen</span> <span class="nv">mapPos</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTMapPos.html">NTMapPos</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTScreenPos.html">NTScreenPos</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -2548,11 +2431,6 @@ may continue until they finish. Tasks that are added after this method call are 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">cancelAllTasks</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cancelAllTasks</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -2580,11 +2458,6 @@ fetched again.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">clearPreloadingCaches</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clearPreloadingCaches</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2615,11 +2488,6 @@ including the visible area.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">clearAllCaches</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clearAllCaches</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -2629,7 +2497,7 @@ including the visible area.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

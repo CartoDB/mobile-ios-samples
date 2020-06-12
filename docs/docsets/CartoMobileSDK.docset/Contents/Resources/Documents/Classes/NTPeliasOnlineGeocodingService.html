@@ -14,7 +14,7 @@
     <a title="NTPeliasOnlineGeocodingService Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -835,11 +868,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithApiKey</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">apiKey</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -854,181 +882,6 @@ Note: this class is experimental and may change or even be removed in future SDK
                               <td>
                                 <div>
                                   <p>The API key to use (registered with Mapzen).</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)isAutocomplete"></a>
-                    <a name="//apple_ref/objc/Method/-isAutocomplete" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)isAutocomplete">-isAutocomplete</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the autocomplete flag of the service.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isAutocomplete</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isAutocomplete</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The autocomplete flag of the service.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setAutocomplete:"></a>
-                    <a name="//apple_ref/objc/Method/-setAutocomplete:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setAutocomplete:">-setAutocomplete:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the autocomplete flag of the service.
-By default this flag is off.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setAutocomplete</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">autocomplete</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setAutocomplete</span><span class="p">(</span><span class="n">_</span> <span class="nv">autocomplete</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>autocomplete</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The new value for autocomplete flag.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)getLanguage"></a>
-                    <a name="//apple_ref/objc/Method/-getLanguage" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)getLanguage">-getLanguage</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the language of the expected results.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getLanguage</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getLanguage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The language of the expected results. As BCP47 code or empty string.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setLanguage:"></a>
-                    <a name="//apple_ref/objc/Method/-setLanguage:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setLanguage:">-setLanguage:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the language of the expected results.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLanguage</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">lang</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setLanguage</span><span class="p">(</span><span class="n">_</span> <span class="nv">lang</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>lang</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The language to use as BCP47 code. Empty string can be used for default language.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1059,11 +912,6 @@ By default this flag is off.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getCustomServiceURL</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getCustomServiceURL</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1099,11 +947,6 @@ The custom URL should contain tag &ldquo;{mode}&rdquo; which will be set either 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setCustomServiceURL</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">serviceURL</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setCustomServiceURL</span><span class="p">(</span><span class="n">_</span> <span class="nv">serviceURL</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1123,6 +966,330 @@ The custom URL should contain tag &ldquo;{mode}&rdquo; which will be set either 
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)isAutocomplete"></a>
+                    <a name="//apple_ref/objc/Method/-isAutocomplete" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)isAutocomplete">-isAutocomplete</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isAutocomplete</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)isAutocompleteSwigExplicitNTPeliasOnlineGeocodingService"></a>
+                    <a name="//apple_ref/objc/Method/-isAutocompleteSwigExplicitNTPeliasOnlineGeocodingService" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)isAutocompleteSwigExplicitNTPeliasOnlineGeocodingService">-isAutocompleteSwigExplicitNTPeliasOnlineGeocodingService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isAutocompleteSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setAutocomplete:"></a>
+                    <a name="//apple_ref/objc/Method/-setAutocomplete:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setAutocomplete:">-setAutocomplete:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setAutocomplete</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">autocomplete</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setAutocompleteSwigExplicitNTPeliasOnlineGeocodingService:"></a>
+                    <a name="//apple_ref/objc/Method/-setAutocompleteSwigExplicitNTPeliasOnlineGeocodingService:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setAutocompleteSwigExplicitNTPeliasOnlineGeocodingService:">-setAutocompleteSwigExplicitNTPeliasOnlineGeocodingService:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setAutocompleteSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">:</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">autocomplete</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)getLanguage"></a>
+                    <a name="//apple_ref/objc/Method/-getLanguage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)getLanguage">-getLanguage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getLanguage</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)getLanguageSwigExplicitNTPeliasOnlineGeocodingService"></a>
+                    <a name="//apple_ref/objc/Method/-getLanguageSwigExplicitNTPeliasOnlineGeocodingService" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)getLanguageSwigExplicitNTPeliasOnlineGeocodingService">-getLanguageSwigExplicitNTPeliasOnlineGeocodingService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="n">getLanguageSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setLanguage:"></a>
+                    <a name="//apple_ref/objc/Method/-setLanguage:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setLanguage:">-setLanguage:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLanguage</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">lang</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setLanguageSwigExplicitNTPeliasOnlineGeocodingService:"></a>
+                    <a name="//apple_ref/objc/Method/-setLanguageSwigExplicitNTPeliasOnlineGeocodingService:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setLanguageSwigExplicitNTPeliasOnlineGeocodingService:">-setLanguageSwigExplicitNTPeliasOnlineGeocodingService:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setLanguageSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">:</span> <span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">lang</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)getMaxResults"></a>
+                    <a name="//apple_ref/objc/Method/-getMaxResults" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)getMaxResults">-getMaxResults</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getMaxResults</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)getMaxResultsSwigExplicitNTPeliasOnlineGeocodingService"></a>
+                    <a name="//apple_ref/objc/Method/-getMaxResultsSwigExplicitNTPeliasOnlineGeocodingService" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)getMaxResultsSwigExplicitNTPeliasOnlineGeocodingService">-getMaxResultsSwigExplicitNTPeliasOnlineGeocodingService</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">getMaxResultsSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setMaxResults:"></a>
+                    <a name="//apple_ref/objc/Method/-setMaxResults:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setMaxResults:">-setMaxResults:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMaxResults</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">maxResults</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTPeliasOnlineGeocodingService(im)setMaxResultsSwigExplicitNTPeliasOnlineGeocodingService:"></a>
+                    <a name="//apple_ref/objc/Method/-setMaxResultsSwigExplicitNTPeliasOnlineGeocodingService:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTPeliasOnlineGeocodingService(im)setMaxResultsSwigExplicitNTPeliasOnlineGeocodingService:">-setMaxResultsSwigExplicitNTPeliasOnlineGeocodingService:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setMaxResultsSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="nv">maxResults</span><span class="p">;</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1150,11 +1317,6 @@ The custom URL should contain tag &ldquo;{mode}&rdquo; which will be set either 
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTGeocodingResultVector.html">NTGeocodingResultVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">calculateAddresses</span><span class="p">:(</span><span class="n"><a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateAddresses</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTGeocodingResultVector.html">NTGeocodingResultVector</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1180,11 +1342,6 @@ The custom URL should contain tag &ldquo;{mode}&rdquo; which will be set either 
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n"><a href="../Classes/NTGeocodingResultVector.html">NTGeocodingResultVector</a></span><span class="o">*</span><span class="p">)</span><span class="nf">calculateAddressesSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">:</span> <span class="p">(</span><span class="n"><a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a></span><span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateAddressesSwigExplicitNTPeliasOnlineGeocodingService</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTGeocodingResultVector.html">NTGeocodingResultVector</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1223,7 +1380,7 @@ The custom URL should contain tag &ldquo;{mode}&rdquo; which will be set either 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

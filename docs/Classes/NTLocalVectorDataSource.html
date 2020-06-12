@@ -14,7 +14,7 @@
     <a title="NTLocalVectorDataSource Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -835,11 +868,6 @@ This makes it suitable for cases where there are a large number of static vector
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithProjection</span><span class="p">:(</span><span class="n"><a href="../Classes/NTProjection.html">NTProjection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">projection</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">projection</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTProjection.html">NTProjection</a></span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -885,11 +913,6 @@ This makes it suitable for cases where there are a large number of static vector
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithProjection</span><span class="p">:(</span><span class="n"><a href="../Classes/NTProjection.html">NTProjection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">projection</span>
         <span class="nf">spatialIndexType</span><span class="p">:(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTLocalSpatialIndexType.html">NTLocalSpatialIndexType</a></span><span class="p">)</span><span class="nv">spatialIndexType</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">projection</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTProjection.html">NTProjection</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">spatialIndexType</span><span class="p">:</span> <span class="kt"><a href="../Enums/NTLocalSpatialIndexType.html">NTLocalSpatialIndexType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -950,11 +973,6 @@ This makes it suitable for cases where there are a large number of static vector
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">clear</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -980,11 +998,6 @@ This makes it suitable for cases where there are a large number of static vector
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getAll</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getAll</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1016,11 +1029,6 @@ This makes it suitable for cases where there are a large number of static vector
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setAll</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">elements</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1071,11 +1079,6 @@ no effect on the order they get rendered.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">add</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVectorElement.html">NTVectorElement</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">element</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTVectorElement.html">NTVectorElement</a></span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1124,11 +1127,6 @@ no effect on the order they get rendered.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addAll</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">elements</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span><span class="o">!</span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1173,11 +1171,6 @@ no effect on the order they get rendered.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">remove</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVectorElement.html">NTVectorElement</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">element</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTVectorElement.html">NTVectorElement</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1230,11 +1223,6 @@ no effect on the order they get rendered.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">removeAll</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">elements</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removeAll</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTVectorElementVector.html">NTVectorElementVector</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1285,11 +1273,6 @@ no effect on the order they get rendered.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTGeometrySimplifier.html">NTGeometrySimplifier</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getGeometrySimplifier</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getGeometrySimplifier</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTGeometrySimplifier.html">NTGeometrySimplifier</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1319,11 +1302,6 @@ no effect on the order they get rendered.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setGeometrySimplifier</span><span class="p">:(</span><span class="n"><a href="../Classes/NTGeometrySimplifier.html">NTGeometrySimplifier</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">simplifier</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setGeometrySimplifier</span><span class="p">(</span><span class="n">_</span> <span class="nv">simplifier</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTGeometrySimplifier.html">NTGeometrySimplifier</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1372,11 +1350,6 @@ no effect on the order they get rendered.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTFeatureCollection.html">NTFeatureCollection</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getFeatureCollection</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getFeatureCollection</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTFeatureCollection.html">NTFeatureCollection</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1407,11 +1380,6 @@ no effect on the order they get rendered.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addFeatureCollection</span><span class="p">:(</span><span class="n"><a href="../Classes/NTFeatureCollection.html">NTFeatureCollection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">featureCollection</span>
                        <span class="nf">style</span><span class="p">:(</span><span class="n"><a href="../Classes/NTStyle.html">NTStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">style</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">_</span> <span class="nv">featureCollection</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTFeatureCollection.html">NTFeatureCollection</a></span><span class="o">!</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTStyle.html">NTStyle</a></span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1472,11 +1440,6 @@ no effect on the order they get rendered.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getDataExtent</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDataExtent</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1502,11 +1465,6 @@ no effect on the order they get rendered.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span><span class="o">*</span><span class="p">)</span><span class="n">getDataExtentSwigExplicitNTLocalVectorDataSource</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDataExtentSwigExplicitNTLocalVectorDataSource</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTMapBounds.html">NTMapBounds</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1536,11 +1494,6 @@ no effect on the order they get rendered.</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTVectorData.html">NTVectorData</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">loadElements</span><span class="p">:(</span><span class="n"><a href="../Classes/NTCullState.html">NTCullState</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">cullState</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">loadElements</span><span class="p">(</span><span class="n">_</span> <span class="nv">cullState</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTCullState.html">NTCullState</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTVectorData.html">NTVectorData</a></span><span class="o">!</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1566,11 +1519,6 @@ no effect on the order they get rendered.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span><span class="p">(</span><span class="n"><a href="../Classes/NTVectorData.html">NTVectorData</a></span><span class="o">*</span><span class="p">)</span><span class="nf">loadElementsSwigExplicitNTLocalVectorDataSource</span><span class="p">:</span> <span class="p">(</span><span class="n"><a href="../Classes/NTCullState.html">NTCullState</a></span><span class="o">*</span><span class="p">)</span><span class="nv">cullState</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">loadElementsSwigExplicitNTLocalVectorDataSource</span><span class="p">(</span><span class="n">_</span> <span class="nv">cullState</span><span class="p">:</span> <span class="kt"><a href="../Classes/NTCullState.html">NTCullState</a></span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/NTVectorData.html">NTVectorData</a></span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1609,7 +1557,7 @@ no effect on the order they get rendered.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

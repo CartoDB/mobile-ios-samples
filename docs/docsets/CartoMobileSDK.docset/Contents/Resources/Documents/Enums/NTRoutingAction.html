@@ -14,7 +14,7 @@
     <a title="NTRoutingAction Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (75% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -227,6 +227,9 @@
                 <a href="../Classes/NTHTTPTileDataSource.html">NTHTTPTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTHillshadeRasterTileLayer.html">NTHillshadeRasterTileLayer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTIntVector.html">NTIntVector</a>
               </li>
               <li class="nav-group-task">
@@ -419,6 +422,9 @@
                 <a href="../Classes/NTPackageManagerTileDataSource.html">NTPackageManagerTileDataSource</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTPackageManagerValhallaRoutingService.html">NTPackageManagerValhallaRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTPackageMetaInfo.html">NTPackageMetaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -513,6 +519,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTReverseGeocodingService.html">NTReverseGeocodingService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdge.html">NTRouteMatchingEdge</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingEdgeVector.html">NTRouteMatchingEdgeVector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPoint.html">NTRouteMatchingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTRouteMatchingPointVector.html">NTRouteMatchingPointVector</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTRouteMatchingRequest.html">NTRouteMatchingRequest</a>
@@ -620,6 +638,9 @@
                 <a href="../Classes/NTUTFGridEventListener.html">NTUTFGridEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTValhallaOfflineRoutingService.html">NTValhallaOfflineRoutingService</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTValhallaOnlineRoutingService.html">NTValhallaOnlineRoutingService</a>
               </li>
               <li class="nav-group-task">
@@ -721,6 +742,12 @@
                 <a href="../Enums/NTBillboardScaling.html">NTBillboardScaling</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapBuildingRenderMode.html">NTCartoBaseMapBuildingRenderMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTCartoBaseMapPOIRenderMode.html">NTCartoBaseMapPOIRenderMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTCartoBaseMapStyle.html">NTCartoBaseMapStyle</a>
               </li>
               <li class="nav-group-task">
@@ -763,7 +790,13 @@
                 <a href="../Enums/NTPivotMode.html">NTPivotMode</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/NTRasterTileFilterMode.html">NTRasterTileFilterMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/NTRenderProjectionMode.html">NTRenderProjectionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/NTRouteMatchingPointType.html">NTRouteMatchingPointType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/NTRoutingAction.html">NTRoutingAction</a>
@@ -829,11 +862,6 @@
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_HEAD_ON</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_HEAD_ON</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -859,11 +887,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_FINISH</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_FINISH</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
@@ -893,11 +916,6 @@
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_NO_TURN</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_NO_TURN</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -923,11 +941,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_GO_STRAIGHT</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_GO_STRAIGHT</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
 
                         </div>
                       </div>
@@ -957,11 +970,6 @@
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_TURN_RIGHT</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_TURN_RIGHT</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -987,11 +995,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_UTURN</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_UTURN</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
 
                         </div>
                       </div>
@@ -1021,11 +1024,6 @@
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_TURN_LEFT</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_TURN_LEFT</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1053,11 +1051,6 @@
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_REACH_VIA_LOCATION</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_REACH_VIA_LOCATION</span> <span class="o">=</span> <span class="mi">7</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -1075,7 +1068,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enter roundabout.</p>
+                        <p>Enter roundabout. Used by Valhalla and OSRM.</p>
 
                       </div>
                       <div class="declaration">
@@ -1083,11 +1076,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_ENTER_ROUNDABOUT</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_ENTER_ROUNDABOUT</span> <span class="o">=</span> <span class="mi">8</span></code></pre>
 
                         </div>
                       </div>
@@ -1107,7 +1095,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Leave roundabout.</p>
+                        <p>Leave roundabout. Used by Valhalla and OSRM.</p>
 
                       </div>
                       <div class="declaration">
@@ -1115,11 +1103,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_LEAVE_ROUNDABOUT</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_LEAVE_ROUNDABOUT</span> <span class="o">=</span> <span class="mi">9</span></code></pre>
 
                         </div>
                       </div>
@@ -1139,7 +1122,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Continue along the roundabout.</p>
+                        <p>Continue along the roundabout. Only used by OSRM.</p>
 
                       </div>
                       <div class="declaration">
@@ -1147,11 +1130,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_STAY_ON_ROUNDABOUT</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_STAY_ON_ROUNDABOUT</span> <span class="o">=</span> <span class="mi">10</span></code></pre>
 
                         </div>
                       </div>
@@ -1171,7 +1149,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start at the end of the street.</p>
+                        <p>Start at the end of the street. Currently used only by OSRM.</p>
 
                       </div>
                       <div class="declaration">
@@ -1179,11 +1157,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_START_AT_END_OF_STREET</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_START_AT_END_OF_STREET</span> <span class="o">=</span> <span class="mi">11</span></code></pre>
 
                         </div>
                       </div>
@@ -1203,7 +1176,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enter street while moving against the allowed direction.</p>
+                        <p>Enter street while moving against the allowed direction. Only used by OSRM.</p>
 
                       </div>
                       <div class="declaration">
@@ -1211,11 +1184,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_ENTER_AGAINST_ALLOWED_DIRECTION</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_ENTER_AGAINST_ALLOWED_DIRECTION</span> <span class="o">=</span> <span class="mi">12</span></code></pre>
 
                         </div>
                       </div>
@@ -1235,7 +1203,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Leave the street while moving aginst the allowed direction.</p>
+                        <p>Leave the street while moving aginst the allowed direction. Only used by OSRM.</p>
 
                       </div>
                       <div class="declaration">
@@ -1243,11 +1211,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_LEAVE_AGAINST_ALLOWED_DIRECTION</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_LEAVE_AGAINST_ALLOWED_DIRECTION</span> <span class="o">=</span> <span class="mi">13</span></code></pre>
 
                         </div>
                       </div>
@@ -1267,7 +1230,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Go up.</p>
+                        <p>Go up. Only used by the SGRE.</p>
 
                       </div>
                       <div class="declaration">
@@ -1275,11 +1238,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_GO_UP</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_GO_UP</span> <span class="o">=</span> <span class="mi">14</span></code></pre>
 
                         </div>
                       </div>
@@ -1299,7 +1257,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Go down.</p>
+                        <p>Go down. Only used by SGRE.</p>
 
                       </div>
                       <div class="declaration">
@@ -1307,11 +1265,6 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_GO_DOWN</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_GO_DOWN</span> <span class="o">=</span> <span class="mi">15</span></code></pre>
 
                         </div>
                       </div>
@@ -1331,7 +1284,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Wait.</p>
+                        <p>Wait. Only used by SGRE.</p>
 
                       </div>
                       <div class="declaration">
@@ -1341,9 +1294,58 @@
                           <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_WAIT</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@NTRoutingAction@NT_ROUTING_ACTION_ENTER_FERRY"></a>
+                    <a name="//apple_ref/objc/Case/NT_ROUTING_ACTION_ENTER_FERRY" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@NTRoutingAction@NT_ROUTING_ACTION_ENTER_FERRY">NT_ROUTING_ACTION_ENTER_FERRY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enter ferry. Only used by Valhalla.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
                         <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">ROUTING_ACTION_WAIT</span> <span class="o">=</span> <span class="mi">16</span></code></pre>
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_ENTER_FERRY</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@NTRoutingAction@NT_ROUTING_ACTION_LEAVE_FERRY"></a>
+                    <a name="//apple_ref/objc/Case/NT_ROUTING_ACTION_LEAVE_FERRY" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@NTRoutingAction@NT_ROUTING_ACTION_LEAVE_FERRY">NT_ROUTING_ACTION_LEAVE_FERRY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Leave ferry. Only used by Valhalla.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">NT_ROUTING_ACTION_LEAVE_FERRY</span></code></pre>
 
                         </div>
                       </div>
@@ -1355,7 +1357,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2019-12-12)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
