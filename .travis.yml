@@ -11,6 +11,6 @@ env:
    - DIR=CartoMap.Objective-C
    - DIR=AdvancedMap.Swift
 
-script: travis_wait 30 cd $DIR && pod update && xcodebuild -workspace $DIR.xcworkspace -scheme $DIR -sdk iphonesimulator -arch "x86_64" ONLY_ACTIVE_ARCH=NO VALID_ARCHS="x86_64" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean install
+script: cd $DIR && travis_wait 30 pod update && xcodebuild -workspace $DIR.xcworkspace -scheme $DIR -sdk iphonesimulator -arch "x86_64" ONLY_ACTIVE_ARCH=NO VALID_ARCHS="x86_64" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean install
 
 # script: cd $DIR && pod update && xcodebuild -enableCodeCoverage YES -workspace $DIR.xcworkspace -scheme $DIR -sdk iphonesimulator -arch "x86_64" ONLY_ACTIVE_ARCH=NO -sdk iphonesimulator9.3
