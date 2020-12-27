@@ -7,15 +7,8 @@
 
 ## Installation Guide
   
-*Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in Xcode point of view.*
+* Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in Xcode point of view.*
   
-#### Manually downloading the SDK:
-
-  1. Get SDK package latest dev build: [sdk4-ios-snapshot-latest.zip](https://nutifront.s3.amazonaws.com/sdk_snapshots/sdk4-ios-snapshot-latest.zip)
-  1. Unzip it and copy *CartoMobileSDK.framework*  to the xCode project root folder
-
-Please note that this is not the preferred method, as the SDK itelf is too large to be uploaded to Github.
-
 #### Via CocoaPods:
 
 The following steps assume you know what Cocoapods are and have the CL tool installed on your system.
