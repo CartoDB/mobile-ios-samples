@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTAddress.h",
-      "line": 140,
+      "line": 142,
       "symbol": "NTAddress.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -226,7 +226,7 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTBitmap.h",
-      "line": 191,
+      "line": 185,
       "symbol": "NTBitmap.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -457,63 +457,63 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 48,
+      "line": 51,
       "symbol": "NTCartoOnlineRoutingService.-getProfile",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 49,
+      "line": 52,
       "symbol": "NTCartoOnlineRoutingService.-getProfileSwigExplicitNTCartoOnlineRoutingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 50,
+      "line": 53,
       "symbol": "NTCartoOnlineRoutingService.-setProfile:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 51,
+      "line": 54,
       "symbol": "NTCartoOnlineRoutingService.-setProfileSwigExplicitNTCartoOnlineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 52,
+      "line": 55,
       "symbol": "NTCartoOnlineRoutingService.-matchRoute:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 53,
+      "line": 56,
       "symbol": "NTCartoOnlineRoutingService.-matchRouteSwigExplicitNTCartoOnlineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 54,
+      "line": 57,
       "symbol": "NTCartoOnlineRoutingService.-calculateRoute:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 55,
+      "line": 58,
       "symbol": "NTCartoOnlineRoutingService.-calculateRouteSwigExplicitNTCartoOnlineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTCartoOnlineRoutingService.h",
-      "line": 75,
+      "line": 78,
       "symbol": "NTCartoOnlineRoutingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -974,6 +974,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTGeocodingAddress.h",
+      "line": 55,
+      "symbol": "NTGeocodingAddress.-dealloc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTGeocodingRequest.h",
       "line": 114,
       "symbol": "NTGeocodingRequest.-dealloc",
@@ -1227,7 +1234,7 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTHillshadeRasterTileLayer.h",
-      "line": 86,
+      "line": 107,
       "symbol": "NTHillshadeRasterTileLayer.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -1668,154 +1675,154 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 63,
+      "line": 64,
       "symbol": "NTMapBoxOnlineGeocodingService.-isAutocomplete",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 64,
+      "line": 65,
       "symbol": "NTMapBoxOnlineGeocodingService.-isAutocompleteSwigExplicitNTMapBoxOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 65,
+      "line": 66,
       "symbol": "NTMapBoxOnlineGeocodingService.-setAutocomplete:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 66,
+      "line": 67,
       "symbol": "NTMapBoxOnlineGeocodingService.-setAutocompleteSwigExplicitNTMapBoxOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 67,
+      "line": 68,
       "symbol": "NTMapBoxOnlineGeocodingService.-getLanguage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 68,
+      "line": 69,
       "symbol": "NTMapBoxOnlineGeocodingService.-getLanguageSwigExplicitNTMapBoxOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 69,
+      "line": 70,
       "symbol": "NTMapBoxOnlineGeocodingService.-setLanguage:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 70,
+      "line": 71,
       "symbol": "NTMapBoxOnlineGeocodingService.-setLanguageSwigExplicitNTMapBoxOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 71,
+      "line": 72,
       "symbol": "NTMapBoxOnlineGeocodingService.-getMaxResults",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 72,
+      "line": 73,
       "symbol": "NTMapBoxOnlineGeocodingService.-getMaxResultsSwigExplicitNTMapBoxOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 73,
+      "line": 74,
       "symbol": "NTMapBoxOnlineGeocodingService.-setMaxResults:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 74,
+      "line": 75,
       "symbol": "NTMapBoxOnlineGeocodingService.-setMaxResultsSwigExplicitNTMapBoxOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 75,
+      "line": 76,
       "symbol": "NTMapBoxOnlineGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 76,
+      "line": 77,
       "symbol": "NTMapBoxOnlineGeocodingService.-calculateAddressesSwigExplicitNTMapBoxOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineGeocodingService.h",
-      "line": 96,
+      "line": 97,
       "symbol": "NTMapBoxOnlineGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineReverseGeocodingService.h",
-      "line": 63,
+      "line": 64,
       "symbol": "NTMapBoxOnlineReverseGeocodingService.-getLanguage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineReverseGeocodingService.h",
-      "line": 64,
+      "line": 65,
       "symbol": "NTMapBoxOnlineReverseGeocodingService.-getLanguageSwigExplicitNTMapBoxOnlineReverseGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineReverseGeocodingService.h",
-      "line": 65,
+      "line": 66,
       "symbol": "NTMapBoxOnlineReverseGeocodingService.-setLanguage:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineReverseGeocodingService.h",
-      "line": 66,
+      "line": 67,
       "symbol": "NTMapBoxOnlineReverseGeocodingService.-setLanguageSwigExplicitNTMapBoxOnlineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineReverseGeocodingService.h",
-      "line": 67,
+      "line": 68,
       "symbol": "NTMapBoxOnlineReverseGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineReverseGeocodingService.h",
-      "line": 68,
+      "line": 69,
       "symbol": "NTMapBoxOnlineReverseGeocodingService.-calculateAddressesSwigExplicitNTMapBoxOnlineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapBoxOnlineReverseGeocodingService.h",
-      "line": 88,
+      "line": 89,
       "symbol": "NTMapBoxOnlineReverseGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -1836,15 +1843,22 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapEventListener.h",
-      "line": 115,
+      "line": 136,
       "symbol": "NTMapEventListener.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapEventListener.h",
-      "line": 117,
+      "line": 138,
       "symbol": "NTMapEventListener.-dealloc",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapInteractionInfo.h",
+      "line": 75,
+      "symbol": "NTMapInteractionInfo.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
@@ -2025,14 +2039,14 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapRendererListener.h",
-      "line": 84,
+      "line": 98,
       "symbol": "NTMapRendererListener.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTMapRendererListener.h",
-      "line": 86,
+      "line": 100,
       "symbol": "NTMapRendererListener.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -2256,7 +2270,7 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTNMLModel.h",
-      "line": 139,
+      "line": 133,
       "symbol": "NTNMLModel.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -2305,14 +2319,14 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTNMLModelStyle.h",
-      "line": 60,
+      "line": 75,
       "symbol": "NTNMLModelStyle.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTNMLModelStyleBuilder.h",
-      "line": 79,
+      "line": 99,
       "symbol": "NTNMLModelStyleBuilder.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -3054,154 +3068,154 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 64,
+      "line": 65,
       "symbol": "NTPeliasOnlineGeocodingService.-isAutocomplete",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 65,
+      "line": 66,
       "symbol": "NTPeliasOnlineGeocodingService.-isAutocompleteSwigExplicitNTPeliasOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 66,
+      "line": 67,
       "symbol": "NTPeliasOnlineGeocodingService.-setAutocomplete:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 67,
+      "line": 68,
       "symbol": "NTPeliasOnlineGeocodingService.-setAutocompleteSwigExplicitNTPeliasOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 68,
+      "line": 69,
       "symbol": "NTPeliasOnlineGeocodingService.-getLanguage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 69,
+      "line": 70,
       "symbol": "NTPeliasOnlineGeocodingService.-getLanguageSwigExplicitNTPeliasOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 70,
+      "line": 71,
       "symbol": "NTPeliasOnlineGeocodingService.-setLanguage:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 71,
+      "line": 72,
       "symbol": "NTPeliasOnlineGeocodingService.-setLanguageSwigExplicitNTPeliasOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 72,
+      "line": 73,
       "symbol": "NTPeliasOnlineGeocodingService.-getMaxResults",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 73,
+      "line": 74,
       "symbol": "NTPeliasOnlineGeocodingService.-getMaxResultsSwigExplicitNTPeliasOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 74,
+      "line": 75,
       "symbol": "NTPeliasOnlineGeocodingService.-setMaxResults:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 75,
+      "line": 76,
       "symbol": "NTPeliasOnlineGeocodingService.-setMaxResultsSwigExplicitNTPeliasOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 76,
+      "line": 77,
       "symbol": "NTPeliasOnlineGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 77,
+      "line": 78,
       "symbol": "NTPeliasOnlineGeocodingService.-calculateAddressesSwigExplicitNTPeliasOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineGeocodingService.h",
-      "line": 97,
+      "line": 98,
       "symbol": "NTPeliasOnlineGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 63,
+      "line": 64,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-getLanguage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 64,
+      "line": 65,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-getLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 65,
+      "line": 66,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-setLanguage:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 66,
+      "line": 67,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-setLanguageSwigExplicitNTPeliasOnlineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 67,
+      "line": 68,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 68,
+      "line": 69,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-calculateAddressesSwigExplicitNTPeliasOnlineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTPeliasOnlineReverseGeocodingService.h",
-      "line": 88,
+      "line": 89,
       "symbol": "NTPeliasOnlineReverseGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -3600,7 +3614,7 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRasterTileLayer.h",
-      "line": 121,
+      "line": 131,
       "symbol": "NTRasterTileLayer.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -3831,91 +3845,91 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 199,
+      "line": 206,
       "symbol": "NTRoutingInstruction.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 207,
+      "line": 214,
       "symbol": "NTRoutingInstructionVector",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 218,
+      "line": 225,
       "symbol": "NTRoutingInstructionVector.-init",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 219,
+      "line": 226,
       "symbol": "NTRoutingInstructionVector.-size",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 220,
+      "line": 227,
       "symbol": "NTRoutingInstructionVector.-capacity",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 221,
+      "line": 228,
       "symbol": "NTRoutingInstructionVector.-reserve:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 222,
+      "line": 229,
       "symbol": "NTRoutingInstructionVector.-isEmpty",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 223,
+      "line": 230,
       "symbol": "NTRoutingInstructionVector.-clear",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 224,
+      "line": 231,
       "symbol": "NTRoutingInstructionVector.-add:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 225,
+      "line": 232,
       "symbol": "NTRoutingInstructionVector.-get:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 226,
+      "line": 233,
       "symbol": "NTRoutingInstructionVector.-set:val:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingInstruction.h",
-      "line": 234,
+      "line": 241,
       "symbol": "NTRoutingInstructionVector.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTRoutingRequest.h",
-      "line": 123,
+      "line": 109,
       "symbol": "NTRoutingRequest.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -3936,63 +3950,63 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 62,
+      "line": 74,
       "symbol": "NTSGREOfflineRoutingService.-getProfile",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 63,
+      "line": 75,
       "symbol": "NTSGREOfflineRoutingService.-getProfileSwigExplicitNTSGREOfflineRoutingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 64,
+      "line": 76,
       "symbol": "NTSGREOfflineRoutingService.-setProfile:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 65,
+      "line": 77,
       "symbol": "NTSGREOfflineRoutingService.-setProfileSwigExplicitNTSGREOfflineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 66,
+      "line": 78,
       "symbol": "NTSGREOfflineRoutingService.-matchRoute:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 67,
+      "line": 79,
       "symbol": "NTSGREOfflineRoutingService.-matchRouteSwigExplicitNTSGREOfflineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 68,
+      "line": 80,
       "symbol": "NTSGREOfflineRoutingService.-calculateRoute:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 69,
+      "line": 81,
       "symbol": "NTSGREOfflineRoutingService.-calculateRouteSwigExplicitNTSGREOfflineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSGREOfflineRoutingService.h",
-      "line": 89,
+      "line": 101,
       "symbol": "NTSGREOfflineRoutingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -4097,14 +4111,14 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSolidLayer.h",
-      "line": 81,
+      "line": 82,
       "symbol": "NTSolidLayer.-isUpdateInProgress",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTSolidLayer.h",
-      "line": 101,
+      "line": 102,
       "symbol": "NTSolidLayer.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -4188,7 +4202,7 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTStringMap.h",
-      "line": 40,
+      "line": 46,
       "symbol": "NTStringMap.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -4419,154 +4433,154 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 64,
+      "line": 65,
       "symbol": "NTTomTomOnlineGeocodingService.-isAutocomplete",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 65,
+      "line": 66,
       "symbol": "NTTomTomOnlineGeocodingService.-isAutocompleteSwigExplicitNTTomTomOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 66,
+      "line": 67,
       "symbol": "NTTomTomOnlineGeocodingService.-setAutocomplete:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 67,
+      "line": 68,
       "symbol": "NTTomTomOnlineGeocodingService.-setAutocompleteSwigExplicitNTTomTomOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 68,
+      "line": 69,
       "symbol": "NTTomTomOnlineGeocodingService.-getLanguage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 69,
+      "line": 70,
       "symbol": "NTTomTomOnlineGeocodingService.-getLanguageSwigExplicitNTTomTomOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 70,
+      "line": 71,
       "symbol": "NTTomTomOnlineGeocodingService.-setLanguage:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 71,
+      "line": 72,
       "symbol": "NTTomTomOnlineGeocodingService.-setLanguageSwigExplicitNTTomTomOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 72,
+      "line": 73,
       "symbol": "NTTomTomOnlineGeocodingService.-getMaxResults",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 73,
+      "line": 74,
       "symbol": "NTTomTomOnlineGeocodingService.-getMaxResultsSwigExplicitNTTomTomOnlineGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 74,
+      "line": 75,
       "symbol": "NTTomTomOnlineGeocodingService.-setMaxResults:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 75,
+      "line": 76,
       "symbol": "NTTomTomOnlineGeocodingService.-setMaxResultsSwigExplicitNTTomTomOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 76,
+      "line": 77,
       "symbol": "NTTomTomOnlineGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 77,
+      "line": 78,
       "symbol": "NTTomTomOnlineGeocodingService.-calculateAddressesSwigExplicitNTTomTomOnlineGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineGeocodingService.h",
-      "line": 97,
+      "line": 98,
       "symbol": "NTTomTomOnlineGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
-      "line": 63,
+      "line": 64,
       "symbol": "NTTomTomOnlineReverseGeocodingService.-getLanguage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
-      "line": 64,
+      "line": 65,
       "symbol": "NTTomTomOnlineReverseGeocodingService.-getLanguageSwigExplicitNTTomTomOnlineReverseGeocodingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
-      "line": 65,
+      "line": 66,
       "symbol": "NTTomTomOnlineReverseGeocodingService.-setLanguage:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
-      "line": 66,
+      "line": 67,
       "symbol": "NTTomTomOnlineReverseGeocodingService.-setLanguageSwigExplicitNTTomTomOnlineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
-      "line": 67,
+      "line": 68,
       "symbol": "NTTomTomOnlineReverseGeocodingService.-calculateAddresses:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
-      "line": 68,
+      "line": 69,
       "symbol": "NTTomTomOnlineReverseGeocodingService.-calculateAddressesSwigExplicitNTTomTomOnlineReverseGeocodingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTTomTomOnlineReverseGeocodingService.h",
-      "line": 88,
+      "line": 89,
       "symbol": "NTTomTomOnlineReverseGeocodingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -4692,63 +4706,63 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 65,
+      "line": 66,
       "symbol": "NTValhallaOnlineRoutingService.-getProfile",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 66,
+      "line": 67,
       "symbol": "NTValhallaOnlineRoutingService.-getProfileSwigExplicitNTValhallaOnlineRoutingService",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 67,
+      "line": 68,
       "symbol": "NTValhallaOnlineRoutingService.-setProfile:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 68,
+      "line": 69,
       "symbol": "NTValhallaOnlineRoutingService.-setProfileSwigExplicitNTValhallaOnlineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 69,
+      "line": 70,
       "symbol": "NTValhallaOnlineRoutingService.-matchRoute:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 70,
+      "line": 71,
       "symbol": "NTValhallaOnlineRoutingService.-matchRouteSwigExplicitNTValhallaOnlineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 71,
+      "line": 72,
       "symbol": "NTValhallaOnlineRoutingService.-calculateRoute:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 72,
+      "line": 73,
       "symbol": "NTValhallaOnlineRoutingService.-calculateRouteSwigExplicitNTValhallaOnlineRoutingService:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTValhallaOnlineRoutingService.h",
-      "line": 92,
+      "line": 93,
       "symbol": "NTValhallaOnlineRoutingService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -5077,7 +5091,7 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTVectorElementSearchService.h",
-      "line": 101,
+      "line": 104,
       "symbol": "NTVectorElementSearchService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -5217,14 +5231,14 @@
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTVectorTileLayer.h",
-      "line": 150,
+      "line": 170,
       "symbol": "NTVectorTileLayer.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTVectorTileSearchService.h",
-      "line": 131,
+      "line": 134,
       "symbol": "NTVectorTileSearchService.-dealloc",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
@@ -5289,34 +5303,6 @@
       "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/NTZippedAssetPackage.h",
       "line": 75,
       "symbol": "NTZippedAssetPackage.-dealloc",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/ui/MapView.h",
-      "line": 43,
-      "symbol": "NTMapView.nativeMapView",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/ui/MapView.h",
-      "line": 45,
-      "symbol": "NTMapView.-init",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/ui/MapView.h",
-      "line": 46,
-      "symbol": "NTMapView.-initWithCoder:",
-      "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/carto/Projects/mobile-sdk-release/build/jazzy/ui/MapView.h",
-      "line": 47,
-      "symbol": "NTMapView.-initWithFrame:",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.method.instance",
       "warning": "undocumented"
     }

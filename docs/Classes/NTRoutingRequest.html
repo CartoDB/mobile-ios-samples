@@ -14,7 +14,7 @@
     <a title="NTRoutingRequest Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (72% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -170,9 +170,6 @@
                 <a href="../Classes/NTEditableVectorLayer.html">NTEditableVectorLayer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/NTExceptionWrapper.html">NTExceptionWrapper</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/NTFeature.html">NTFeature</a>
               </li>
               <li class="nav-group-task">
@@ -192,6 +189,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeoJSONVectorTileDataSource.html">NTGeoJSONVectorTileDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTGeocodingAddress.html">NTGeocodingAddress</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a>
@@ -299,6 +299,9 @@
                 <a href="../Classes/NTMapEventListener.html">NTMapEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTMapInteractionInfo.html">NTMapInteractionInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTMapPos.html">NTMapPos</a>
               </li>
               <li class="nav-group-task">
@@ -324,9 +327,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMapVec.html">NTMapVec</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NTMapView.html">NTMapView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMarker.html">NTMarker</a>
@@ -1292,87 +1292,6 @@ In addition to Valhalla, SGRE routing engine supports &lsquo;geometry_tag_filter
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NTRoutingRequest(im)getGeometryTagFilters"></a>
-                    <a name="//apple_ref/objc/Method/-getGeometryTagFilters" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTRoutingRequest(im)getGeometryTagFilters">-getGeometryTagFilters</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the geometry tag filter list of the request.
-This method is now deprecated, getPointParameter method should be used instead.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Classes/NTVariantVector.html">NTVariantVector</a></span> <span class="o">*</span><span class="p">)</span><span class="n">getGeometryTagFilters</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The geometry tag filter list of the request.
-@deprecated</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTRoutingRequest(im)setGeometryTagFilters:"></a>
-                    <a name="//apple_ref/objc/Method/-setGeometryTagFilters:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTRoutingRequest(im)setGeometryTagFilters:">-setGeometryTagFilters:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the geometry tag filter list for the request.
-This method is now deprecated, setPointParameter method should be used instead.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setGeometryTagFilters</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVariantVector.html">NTVariantVector</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">filters</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>filters</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The new filter list for the request.
-@deprecated</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(cs)NTRoutingRequest(im)description"></a>
                     <a name="//apple_ref/objc/Method/-description" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NTRoutingRequest(im)description">-description</a>
@@ -1433,7 +1352,7 @@ This method is now deprecated, setPointParameter method should be used instead.<
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2021-07-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

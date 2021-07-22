@@ -14,7 +14,7 @@
     <a title="NTRoutingInstruction Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (72% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -170,9 +170,6 @@
                 <a href="../Classes/NTEditableVectorLayer.html">NTEditableVectorLayer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/NTExceptionWrapper.html">NTExceptionWrapper</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/NTFeature.html">NTFeature</a>
               </li>
               <li class="nav-group-task">
@@ -192,6 +189,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeoJSONVectorTileDataSource.html">NTGeoJSONVectorTileDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTGeocodingAddress.html">NTGeocodingAddress</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a>
@@ -299,6 +299,9 @@
                 <a href="../Classes/NTMapEventListener.html">NTMapEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTMapInteractionInfo.html">NTMapInteractionInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTMapPos.html">NTMapPos</a>
               </li>
               <li class="nav-group-task">
@@ -324,9 +327,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMapVec.html">NTMapVec</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NTMapView.html">NTMapView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMarker.html">NTMarker</a>
@@ -954,9 +954,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NTRoutingInstruction(im)initWithAction:pointIndex:streetName:turnAngle:azimuth:distance:time:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithAction:pointIndex:streetName:turnAngle:azimuth:distance:time:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTRoutingInstruction(im)initWithAction:pointIndex:streetName:turnAngle:azimuth:distance:time:">-initWithAction:pointIndex:streetName:turnAngle:azimuth:distance:time:</a>
+                    <a name="/c:objc(cs)NTRoutingInstruction(im)initWithAction:pointIndex:streetName:instruction:turnAngle:azimuth:distance:time:geometryTag:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithAction:pointIndex:streetName:instruction:turnAngle:azimuth:distance:time:geometryTag:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTRoutingInstruction(im)initWithAction:pointIndex:streetName:instruction:turnAngle:azimuth:distance:time:geometryTag:">-initWithAction:pointIndex:streetName:instruction:turnAngle:azimuth:distance:time:geometryTag:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -974,10 +974,12 @@
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithAction</span><span class="p">:(</span><span class="k">enum</span> <span class="n"><a href="../Enums/NTRoutingAction.html">NTRoutingAction</a></span><span class="p">)</span><span class="nv">action</span>
           <span class="nf">pointIndex</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">pointIndex</span>
           <span class="nf">streetName</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">streetName</span>
+         <span class="nf">instruction</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">instruction</span>
            <span class="nf">turnAngle</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">turnAngle</span>
              <span class="nf">azimuth</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">azimuth</span>
             <span class="nf">distance</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">distance</span>
-                <span class="nf">time</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">time</span><span class="p">;</span></code></pre>
+                <span class="nf">time</span><span class="p">:(</span><span class="kt">double</span><span class="p">)</span><span class="nv">time</span>
+         <span class="nf">geometryTag</span><span class="p">:(</span><span class="n"><a href="../Classes/NTVariant.html">NTVariant</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">geometryTag</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
@@ -1018,6 +1020,18 @@
                               <td>
                                 <div>
                                   <p>Street name.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>instruction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The optional instruction description.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1066,6 +1080,18 @@
                               <td>
                                 <div>
                                   <p>The approximate duration of the instruction in seconds.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>geometryTag</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The geometry tag associated with the instruction.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1164,6 +1190,37 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The name of the street.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTRoutingInstruction(im)getInstruction"></a>
+                    <a name="//apple_ref/objc/Method/-getInstruction" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTRoutingInstruction(im)getInstruction">-getInstruction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the optional instruction description. This info is dependent on the routing engine (can be empty) and may be localized.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">getInstruction</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The optional instruction description.</p>
                       </div>
                     </section>
                   </div>
@@ -1386,7 +1443,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2021-07-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

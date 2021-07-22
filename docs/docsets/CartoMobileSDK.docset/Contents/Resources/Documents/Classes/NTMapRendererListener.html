@@ -14,7 +14,7 @@
     <a title="NTMapRendererListener Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (72% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -170,9 +170,6 @@
                 <a href="../Classes/NTEditableVectorLayer.html">NTEditableVectorLayer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/NTExceptionWrapper.html">NTExceptionWrapper</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/NTFeature.html">NTFeature</a>
               </li>
               <li class="nav-group-task">
@@ -192,6 +189,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeoJSONVectorTileDataSource.html">NTGeoJSONVectorTileDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTGeocodingAddress.html">NTGeocodingAddress</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a>
@@ -299,6 +299,9 @@
                 <a href="../Classes/NTMapEventListener.html">NTMapEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTMapInteractionInfo.html">NTMapInteractionInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTMapPos.html">NTMapPos</a>
               </li>
               <li class="nav-group-task">
@@ -324,9 +327,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMapVec.html">NTMapVec</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NTMapView.html">NTMapView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMarker.html">NTMarker</a>
@@ -846,6 +846,67 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)NTMapRendererListener(im)onSurfaceChanged:height:"></a>
+                    <a name="//apple_ref/objc/Method/-onSurfaceChanged:height:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTMapRendererListener(im)onSurfaceChanged:height:">-onSurfaceChanged:height:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Listener method that gets called when the rendering surface initialized and its size is updated.
+The method can be used to check when it is safe to call methods that depend on view size,
+like moveToFitBounds, screenToMap, mapToScreen.
+This method is called from GL renderer thread, not from main thread.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onSurfaceChanged</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">width</span> <span class="nf">height</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">height</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTMapRendererListener(im)onSurfaceChangedSwigExplicitNTMapRendererListener:height:"></a>
+                    <a name="//apple_ref/objc/Method/-onSurfaceChangedSwigExplicitNTMapRendererListener:height:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTMapRendererListener(im)onSurfaceChangedSwigExplicitNTMapRendererListener:height:">-onSurfaceChangedSwigExplicitNTMapRendererListener:height:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Listener method that gets called when the rendering surface initialized and its size is updated.
+The method can be used to check when it is safe to call methods that depend on view size,
+like moveToFitBounds, screenToMap, mapToScreen.
+This method is called from GL renderer thread, not from main thread.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">onSurfaceChangedSwigExplicitNTMapRendererListener</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">width</span>
+                                                   <span class="nf">height</span><span class="p">:(</span><span class="kt">int</span><span class="p">)</span><span class="nv">height</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)NTMapRendererListener(im)onBeforeDrawFrame"></a>
                     <a name="//apple_ref/objc/Method/-onBeforeDrawFrame" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)NTMapRendererListener(im)onBeforeDrawFrame">-onBeforeDrawFrame</a>
@@ -856,7 +917,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Listener method that gets called at the start of the rendering process.
+                        <p>Listener method that gets called at the start of the rendering frame.
 The method can be used to synchronize vector elements with renderer state, for example
 to force marker to be always at the center of the screen (focus point).
 This method is called from GL renderer thread, not from main thread.</p>
@@ -886,7 +947,7 @@ This method is called from GL renderer thread, not from main thread.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Listener method that gets called at the start of the rendering process.
+                        <p>Listener method that gets called at the start of the rendering frame.
 The method can be used to synchronize vector elements with renderer state, for example
 to force marker to be always at the center of the screen (focus point).
 This method is called from GL renderer thread, not from main thread.</p>
@@ -916,7 +977,7 @@ This method is called from GL renderer thread, not from main thread.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Listener method that gets called at the end of the rendering process.
+                        <p>Listener method that gets called at the end of the rendering frame.
 This method is called from GL renderer thread, not from main thread.</p>
 
                       </div>
@@ -944,7 +1005,7 @@ This method is called from GL renderer thread, not from main thread.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Listener method that gets called at the end of the rendering process.
+                        <p>Listener method that gets called at the end of the rendering frame.
 This method is called from GL renderer thread, not from main thread.</p>
 
                       </div>
@@ -1018,7 +1079,7 @@ This method is called from GL renderer thread, not from main thread.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2021-07-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

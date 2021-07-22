@@ -14,7 +14,7 @@
     <a title="NTNMLModel Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">CartoMobileSDK Docs</a> (71% documented)</p>
+        <p><a href="../index.html">CartoMobileSDK Docs</a> (72% documented)</p>
         <p class="header-right"><a href="https://github.com/cartodb/mobile-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -170,9 +170,6 @@
                 <a href="../Classes/NTEditableVectorLayer.html">NTEditableVectorLayer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/NTExceptionWrapper.html">NTExceptionWrapper</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/NTFeature.html">NTFeature</a>
               </li>
               <li class="nav-group-task">
@@ -192,6 +189,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeoJSONVectorTileDataSource.html">NTGeoJSONVectorTileDataSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NTGeocodingAddress.html">NTGeocodingAddress</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTGeocodingRequest.html">NTGeocodingRequest</a>
@@ -299,6 +299,9 @@
                 <a href="../Classes/NTMapEventListener.html">NTMapEventListener</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/NTMapInteractionInfo.html">NTMapInteractionInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/NTMapPos.html">NTMapPos</a>
               </li>
               <li class="nav-group-task">
@@ -324,9 +327,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMapVec.html">NTMapVec</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NTMapView.html">NTMapView</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NTMarker.html">NTMarker</a>
@@ -830,7 +830,7 @@
               <div class="declaration">
                 <div class="language">
                   <pre class="highlight objective_c"><code>
-<span class="k">@interface</span> <span class="nc">NTNMLModel</span> <span class="p">:</span> <span class="nc"><a href="../Classes/NTVectorElement.html">NTVectorElement</a></span></code></pre>
+<span class="k">@interface</span> <span class="nc">NTNMLModel</span> <span class="p">:</span> <span class="nc"><a href="../Classes/NTBillboard.html">NTBillboard</a></span></code></pre>
 
                 </div>
               </div>
@@ -843,6 +843,65 @@ NML models are optimized for fast loading and rendering.</p>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)NTNMLModel(im)initWithBaseBillboard:style:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBaseBillboard:style:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)initWithBaseBillboard:style:">-initWithBaseBillboard:style:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Constructs a NMLModel object with the specified style and attaches it to a billboard element.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithBaseBillboard</span><span class="p">:(</span><span class="n"><a href="../Classes/NTBillboard.html">NTBillboard</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">baseBillboard</span>
+                      <span class="nf">style</span><span class="p">:(</span><span class="n"><a href="../Classes/NTNMLModelStyle.html">NTNMLModelStyle</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">style</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseBillboard</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The billboard this model will be attached to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The style for this model.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -891,7 +950,7 @@ NML models are optimized for fast loading and rendering.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The style to used for this model.</p>
+                                  <p>The style for this model.</p>
                                 </div>
                               </td>
                             </tr>
@@ -949,7 +1008,7 @@ NML models are optimized for fast loading and rendering.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The style to used for this model.</p>
+                                  <p>The style for this model.</p>
                                 </div>
                               </td>
                             </tr>
@@ -962,9 +1021,9 @@ NML models are optimized for fast loading and rendering.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NTNMLModel(im)initWithGeometry:sourceModelData:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithGeometry:sourceModelData:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)initWithGeometry:sourceModelData:">-initWithGeometry:sourceModelData:</a>
+                    <a name="/c:objc(cs)NTNMLModel(im)getRotationAngle"></a>
+                    <a name="//apple_ref/objc/Method/-getRotationAngle" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)getRotationAngle">-getRotationAngle</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -972,49 +1031,21 @@ NML models are optimized for fast loading and rendering.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Constructs a NMLModel object from a geometry object and serialized model data.</p>
+                        <p>Returns the rotation angle of this model. This is deprecated. Use getRotation instead.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithGeometry</span><span class="p">:(</span><span class="n"><a href="../Classes/NTGeometry.html">NTGeometry</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">geometry</span>
-       <span class="nf">sourceModelData</span><span class="p">:(</span><span class="n"><a href="../Classes/NTBinaryData.html">NTBinaryData</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceModelData</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getRotationAngle</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>geometry</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The geometry object that defines the location of this model.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sourceModelData</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Serialized data for 3D model.
+                        <h4>Return Value</h4>
+                        <p>The rotation angle of this model in degrees.
 @deprecated</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -1022,9 +1053,9 @@ NML models are optimized for fast loading and rendering.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NTNMLModel(im)initWithPos:sourceModelData:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithPos:sourceModelData:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)initWithPos:sourceModelData:">-initWithPos:sourceModelData:</a>
+                    <a name="/c:objc(cs)NTNMLModel(im)setRotationAngle:"></a>
+                    <a name="//apple_ref/objc/Method/-setRotationAngle:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)setRotationAngle:">-setRotationAngle:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1032,15 +1063,14 @@ NML models are optimized for fast loading and rendering.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Constructs a NMLModel object from a map position and serialized model data.</p>
+                        <p>Sets the rotation angle of this model. This is deprecated. Use setRotation instead.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="nf">initWithPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">pos</span>
-    <span class="nf">sourceModelData</span><span class="p">:(</span><span class="n"><a href="../Classes/NTBinaryData.html">NTBinaryData</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceModelData</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRotationAngle</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">angle</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
@@ -1051,117 +1081,13 @@ NML models are optimized for fast loading and rendering.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>pos</em>
+                                <em>angle</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The map position that defines the location of this model.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>sourceModelData</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Serialized data for 3D model.
+                                  <p>The new rotation angle in degrees.
 @deprecated</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTNMLModel(im)setGeometry:"></a>
-                    <a name="//apple_ref/objc/Method/-setGeometry:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)setGeometry:">-setGeometry:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the location for this model.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setGeometry</span><span class="p">:(</span><span class="n"><a href="../Classes/NTGeometry.html">NTGeometry</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">geometry</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>geometry</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The new geometry object that defines the location of this model.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NTNMLModel(im)setPos:"></a>
-                    <a name="//apple_ref/objc/Method/-setPos:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)setPos:">-setPos:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Sets the location for this model.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setPos</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapPos.html">NTMapPos</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">pos</span><span class="p">;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>pos</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The new map position that defines the location of this model.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1205,9 +1131,9 @@ NML models are optimized for fast loading and rendering.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NTNMLModel(im)getRotationAngle"></a>
-                    <a name="//apple_ref/objc/Method/-getRotationAngle" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)getRotationAngle">-getRotationAngle</a>
+                    <a name="/c:objc(cs)NTNMLModel(im)setRotationAxis:"></a>
+                    <a name="//apple_ref/objc/Method/-setRotationAxis:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)NTNMLModel(im)setRotationAxis:">-setRotationAxis:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1215,20 +1141,35 @@ NML models are optimized for fast loading and rendering.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the rotation angle of this model.</p>
+                        <p>Sets the rotation axis of this model.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">getRotationAngle</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setRotationAxis</span><span class="p">:(</span><span class="n"><a href="../Classes/NTMapVec.html">NTMapVec</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">axis</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
                       <div>
-                        <h4>Return Value</h4>
-                        <p>The rotation angle of this model in degrees.</p>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>axis</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new axis of rotation.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1477,7 +1418,7 @@ NML models are optimized for fast loading and rendering.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2020-06-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.carto.com" target="_blank" rel="external">CARTO</a>. All rights reserved. (Last updated: 2021-07-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
