@@ -19,13 +19,13 @@ The following steps assume you know what Cocoapods are and have the CL tool inst
 
 #### Via Carthage:
 
-The following steps assume you know what Carthage is and have the CL tool installed on your system.
+The following steps assume you know what Carthage is and have the CL tool installed on your system. Note that as SDK 4.4.0 and newer versions
+are distributed as xcframeworks, you need **Carthage 0.38 or later**.
 
- 1. Move `Cartfile` in the root of this repository to a specific project
- 2. Navigate to a project's folder in the **Terminal**.
- 3. Type `carthage update` to download the SDK 
+ 1. Type `carthage update --use-xcframeworks` to download the SDK 
  2. Add `$(SRCROOT)/Carthage/Build/iOS` to XCode Framework Search paths (Project properties > Build )
- 3. Add `Carthage/Build/iOS/CartoMobileSDK.framework` to XCode Embedded Binaries (Project properties > General)
+ 3. Add `Carthage/Build/iOS/CartoMobileSDK.xcframework` to XCode Embedded Binaries (Project properties > General)
+ 4. Remove Cocoapods references from project structure, including 'Build Phases' inside XCode IDE.
 
 ## Cocoapod Removal
 
