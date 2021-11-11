@@ -12,8 +12,9 @@ import CartoMobileSDK
 
 class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITextFieldDelegate {
 
-    var searchQueueSize: Int = 0
-    
+    var searchRequestId: Int = 0
+    var displayRequestId: Int = 0
+
     var addresses = [NTGeocodingResult]()
     
     static let identifier = "AutocompleteRowId"
@@ -93,17 +94,16 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
     }
     
     func geocode(text: String, autocomplete: Bool) {
-        
-        searchQueueSize += 1
+        let syncQueue = DispatchQueue(label: "com.carto.GeocodingControllerQueue")
+        var currentRequestId: Int = 0
+
+        syncQueue.sync {
+            self.searchRequestId += 1
+            currentRequestId = self.searchRequestId
+        }
         
         DispatchQueue.global().async {
-            if (self.searchQueueSize - 1 > 0) {
-                // Cancel the request if we have additional pending requests queued
-                print("Gecoding: pending request, skipping")
-                return
-            }
-            
-            self.searchQueueSize -= 1
+            self.service.setAutocomplete(autocomplete)
             
             let start = NSDate.timeIntervalSinceReferenceDate
             
@@ -127,6 +127,13 @@ class GeocodingController : BaseGeocodingController, UITableViewDataSource, UITe
             catch {
                 NSLog("Failed to geocode")
                 return
+            }
+            
+            syncQueue.sync {
+                if (self.displayRequestId > currentRequestId) {
+                    return // a newer request has already been processed
+                }
+                self.displayRequestId = currentRequestId
             }
             
             let duration = NSDate.timeIntervalSinceReferenceDate - start

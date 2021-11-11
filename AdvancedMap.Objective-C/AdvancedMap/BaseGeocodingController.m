@@ -107,20 +107,17 @@
 }
 
 - (void)geoCode:(NSString *)text autoComplete:(BOOL)autocomplete {
-    
-    self.searchQueueSize += 1;
+    id controller = self;
+    int currentRequestId = 0;
+    @synchronized (controller) {
+        currentRequestId = ++self.searchRequestId;
+    }
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-    
-        if (self.searchQueueSize - 1 > 0) {
-            // Cancel the request if we have additional pending requests queued
-            return;
-        }
-        
-        self.searchQueueSize -= 1;
+        [self.service setAutocomplete:autocomplete];
         
         NTGeocodingRequest *request = [[NTGeocodingRequest alloc]initWithProjection:[[self getGeocodingView] getProjection] query:text];
-        
+
         NTGeocodingResultVector *results = nil;
         @try {
             results = [self.service calculateAddresses:request];
@@ -130,6 +127,13 @@
         }
         if (results == nil) {
             return;
+        }
+        
+        @synchronized (controller) {
+            if (self.displayRequestId > currentRequestId) {
+                return; // a newer request is already processed
+            }
+            self.displayRequestId = currentRequestId;
         }
         
         int count = [results size];

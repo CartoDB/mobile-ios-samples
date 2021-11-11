@@ -17,7 +17,8 @@
 
 @property NTGeocodingService *service;
 
-@property int searchQueueSize;
+@property int searchRequestId;
+@property int displayRequestId;
 
 - (void)geoCode:(NSString *)text autoComplete:(BOOL)autocomplete;
 
