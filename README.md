@@ -8,7 +8,9 @@
 ## Installation Guide
   
 * Note that we have several subprojects, for different languages (Objective-C or Swift) and level of complexity (from HelloMap to AdvancedMap), each is separate projects in Xcode point of view.*
-  
+
+* Set your key in `License` value of `AppDelegate.swift` before build.
+
 #### Via CocoaPods:
 
 The following steps assume you know what Cocoapods are and have the CL tool installed on your system.
